@@ -81,7 +81,7 @@ dnsv3.com
 zdnscloud.com
 wsdns.top
 
-===== Mainland Entities =====
+# ===== Mainland Entities =====
 pinduoduo.com
 zhihu.com
 zhimg.com
@@ -95,8 +95,20 @@ zhidemai.com
 10010.com
 10086.cn
 189.cn
+
+# ===== Government & Education =====
+# Root domains (no DNS resolution, kept for reference)
 gov.cn
 edu.cn
+# Resolvable subdomains
+www.gov.cn
+www.moe.edu.cn
+www.miit.gov.cn
+www.mps.gov.cn
+www.ndrc.gov.cn
+www.mof.gov.cn
+www.customs.gov.cn
+www.pbc.gov.cn
 
 === Auto-expanded from mainland brand families ===
 126.com
