@@ -1,9 +1,8 @@
-# China Domain List - Seed File
-# Format: domain
-# These are manually curated seed domains representing core Chinese internet entities
-# Last updated: 2025-03
+China Domain List - Seed File (Mainland Focus)
+Format: domain
+Last updated: 2025-03
 
-# ===== Alibaba Ecosystem =====
+===== Alibaba Ecosystem =====
 alibaba.com
 alibabacloud.com
 aliyun.com
@@ -14,20 +13,22 @@ tmall.com
 aliyundrive.com
 alicdn.com
 1688.com
+cainiao-inc.com
+amap.com
+gaode.com
 
-# ===== Tencent Ecosystem =====
+===== Tencent Ecosystem =====
 tencent.com
 tencentcloud.com
 qq.com
-wechat.com
 weixin.com
 qqmail.com
 tencentcos.com
 tencentclb.com
-tencentvideo.com
 qcloud.com
+dnspod.cn
 
-# ===== Baidu Ecosystem =====
+===== Baidu Ecosystem =====
 baidu.com
 baidubce.com
 bdstatic.com
@@ -35,24 +36,22 @@ baiducloud.com
 baidupcs.com
 iqiyi.com
 
-# ===== ByteDance Ecosystem =====
+===== ByteDance Ecosystem =====
 bytedance.com
 douyin.com
 toutiao.com
 douyincdn.com
 iesdouyin.com
-douyinvod.com
 douyinstatic.com
 
-# ===== JD.com Ecosystem =====
+===== JD.com Ecosystem =====
 jd.com
 jdcloud.com
 jdpay.com
 jdl.com
 jdcdn.com
-jdcloudcs.com
 
-# ===== Xiaomi Ecosystem =====
+===== Xiaomi Ecosystem =====
 xiaomi.com
 mi.com
 miui.com
@@ -62,55 +61,51 @@ mi-img.com
 mihoyogame.com
 mihoyo.com
 
-# ===== Huawei Ecosystem =====
+===== Huawei Ecosystem =====
 huawei.com
 huaweicloud.com
 myhuaweicloud.com
 hicloud.com
 huaweidevice.com
 
-# ===== Meituan =====
-meituan.com
-meituan.net
+===== Infrastructure & CDN (High-Value) =====
+staticfile.net
+qiniucdn.com
+qiniudns.com
+upaiyun.com
+0101cdn.com
+cthcdn.net
+dnsv1.com
+dnsv2.com
+dnsv3.com
+zdnscloud.com
+wsdns.top
 
-# ===== NetEase =====
-163.com
-126.com
-netease.com
-yeah.net
-
-# ===== Weibo =====
-weibo.com
-weibo.cn
-sinaimg.cn
-
-# ===== Bilibili =====
-bilibili.com
-bilibili.net
-bilicomic.com
-biligame.com
-
-# ===== DJI =====
-dji.com
-djistatic.com
-
-# ===== Other Major CN Entities =====
+===== Mainland Entities =====
 pinduoduo.com
-jingdong.com
-youku.com
-tudou.com
 zhihu.com
+zhimg.com
 xiaohongshu.com
 kuaishou.com
-ksapisrv.com
+360.cn
+so.com
+sohu.com
+tianyancha.com
+zhidemai.com
+10010.com
+10086.cn
+189.cn
+gov.cn
+edu.cn
 
-# === Auto-expanded from brand families ===
+=== Auto-expanded from mainland brand families ===
+126.com
+163.com
 163yun.com
 360buy.com
 acgvideo.com
 alibabagroup.com
 alicdngslb.com
-alipay.hk
 alipay.net
 alipayobjects.com
 alipayplus.com
@@ -118,51 +113,44 @@ aliyun-inc.com
 ant.design
 antgroup.com
 appgallery.cloud
-baidu.jp
 baidupcs.net
 biliapi.com
-bilibili.tv
-bilicomics.com
-biligame.net
+bilibili.com
+bilibili.net
+bilicomic.com
+biligame.com
 bytedance.net
-capcut.com
-daraz.pk
 dianping.com
-djicreator.com
-dnspod.cn
 dnspod.com
+douyinvod.com
 feishu.cn
 gifshow.com
 hdslb.com
-hoyolab.com
-huawei.eu
-huawei.ru
 iesdouyin.net
-iqiyipic.com
 ixigua.com
 jd.hk
 jdcloudapi.com
 jddj.com
+ksapisrv.com
 kuaishoucdn.com
-kwai.com
-larksuite.com
-lazada.com
+meituan.com
+meituan.net
 meituanmaicai.com
+mi-cdn.com
+miyun.com
 mybank.cn
-pgyer.com
+netease.com
 pinduoduo.net
 qianfan.cloud
-qiyi.com
-qiyipic.com
 qiyukf.com
 qq.net
 sankuai.com
 sina.com
 sina.com.cn
+sinaimg.cn
 sinaimgfx.com
 sinajs.cn
 taobao.net
-temu.com
 tencent-cloud.com
 tencent-cloud.net
 tencent.net
@@ -170,16 +158,16 @@ tencentcloudapi.com
 tencentgames.com
 tencentmeeting.com
 tencentmusic.com
-tiktok.com
+tencentvideo.com
 tmallgenie.com
-ulikecam.com
 vmall.com
-wechatpay.com
+wechatpay.com.cn
+weibo.cn
+weibo.com
 weibocdn.com
 wenxin.cloud
-xhscdn.com
-xhslink.com
 xiaoai.com
 xiaomi.net
+xiaomiprint.com
 yangkeduo.com
-zhimg.com
+yeah.net
