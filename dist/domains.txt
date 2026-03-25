@@ -1,6 +1,6 @@
 # DomainNova - Mainland China Strategic Assets
 # Generated: 2026-03-25
-# Total: 83 high-confidence domains
+# Total: 88 high-confidence domains
 # Criteria: Mainland DNS + Infrastructure Verified
 # Source: https://github.com/harryheros/domainnova
 #
@@ -79,6 +79,11 @@ weibo.cn
 weibo.com
 weibocdn.com
 weixin.com
+www.customs.gov.cn
+www.miit.gov.cn
+www.moe.edu.cn
+www.mps.gov.cn
+www.pbc.gov.cn
 xhscdn.com
 xhslink.com
 xiaomi.com

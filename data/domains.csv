@@ -3,55 +3,55 @@ china domain list - seed file (mainland focus),0,0,0,,,0,0,0,0,,,seed,2026-03-25
 format: domain,0,0,0,,,0,0,0,0,,,seed,2026-03-25
 last updated: 2025-03,0,0,0,,,0,0,0,0,,,seed,2026-03-25
 ===== alibaba ecosystem =====,0,0,0,,,0,0,0,0,,,seed,2026-03-25
-alibaba.com,0,0,4,,,0,1,0,0,47.246.136.156|47.246.136.52|47.246.131.198,Alibaba Cloud LLC,seed,2026-03-25
-alibabacloud.com,0,0,27,,,0,0,0,0,47.88.251.175|47.88.198.40|47.88.198.24,Alibaba.com LLC,seed,2026-03-25
-aliyun.com,1,6,6,Baidu_Cloud_CN,Cloud,0,1,0,80,106.11.172.9|140.205.135.3|106.11.249.99,"Zhejiang Taobao Network Co., Ltd",seed,2026-03-25
+alibaba.com,0,0,4,,,0,1,0,0,47.246.136.52|47.246.137.105|47.246.136.156,Alibaba Cloud LLC,seed,2026-03-25
+alibabacloud.com,0,0,27,,,0,0,0,0,47.88.251.170|47.88.251.178|47.88.128.163,Alibaba.com LLC,seed,2026-03-25
+aliyun.com,1,6,6,Baidu_Cloud_CN,Cloud,0,1,0,80,106.11.248.146|106.11.172.9|106.11.253.83,"Zhejiang Taobao Network Co., Ltd",seed,2026-03-25
 aliyuncs.com,1,1,1,Baidu_Cloud_CN,Cloud,0,1,0,80,106.15.148.44,"Aliyun Computing Co., LTD",seed,2026-03-25
 alipay.com,1,2,2,Baidu_Cloud_CN,Cloud,0,1,0,80,110.75.130.45|110.76.8.255,"Zhejiang Ant Small And Micro Financial Services, Group",seed,2026-03-25
-taobao.com,1,8,8,Baidu_Cloud_CN,Cloud,0,1,0,80,59.82.121.163|59.82.122.140|59.82.43.239,"Hangzhou Alibaba Advertising Co., Ltd.",seed,2026-03-25
-tmall.com,1,8,8,Baidu_Cloud_CN,Cloud,0,1,0,80,59.82.43.82|59.82.133.159|59.82.44.54,"China Internet Network Information Center; Hangzhou Alibaba Advertising Co., Ltd.",seed,2026-03-25
+taobao.com,1,8,8,Baidu_Cloud_CN,Cloud,0,1,0,80,59.82.122.165|59.82.43.239|59.82.44.240,"Hangzhou Alibaba Advertising Co., Ltd.",seed,2026-03-25
+tmall.com,1,8,8,Baidu_Cloud_CN,Cloud,0,1,0,80,59.82.133.133|59.82.44.30|59.82.43.82,"China Internet Network Information Center; Hangzhou Alibaba Advertising Co., Ltd.",seed,2026-03-25
 aliyundrive.com,1,1,1,Baidu_Cloud_CN,Cloud,0,1,0,80,123.56.218.176,"Aliyun Computing Co., LTD",seed,2026-03-25
-alicdn.com,1,2,2,Baidu_Cloud_CN; Generic_CN,Cloud; Edge,0,1,0,80,115.238.23.240|140.205.77.240,"Hangzhou Taobao Netwoks Co., Ltd.; Zhejiang Taobao Network Co., Ltd",seed,2026-03-25
+alicdn.com,1,2,2,Baidu_Cloud_CN; Generic_CN,Cloud; Edge,0,1,0,80,140.205.77.240|115.238.23.240,"Hangzhou Taobao Netwoks Co., Ltd.; Zhejiang Taobao Network Co., Ltd",seed,2026-03-25
 1688.com,1,1,1,Baidu_Cloud_CN,Cloud,0,1,0,80,140.205.174.2,"Zhejiang Taobao Network Co., Ltd",seed,2026-03-25
-cainiao-inc.com,1,4,4,Baidu_Cloud_CN,Cloud,0,1,0,80,59.82.17.163|59.82.29.3|59.82.17.162,"Hangzhou Alibaba Advertising Co., Ltd.",seed,2026-03-25
-amap.com,1,2,2,Baidu_Cloud_CN,Cloud,0,1,0,80,182.92.251.86|182.92.205.225,"Aliyun Computing Co., LTD",seed,2026-03-25
-gaode.com,1,2,2,Baidu_Cloud_CN,Cloud,0,1,0,80,182.92.251.86|182.92.205.225,"Aliyun Computing Co., LTD",seed,2026-03-25
+cainiao-inc.com,1,4,4,Baidu_Cloud_CN,Cloud,0,1,0,80,59.82.17.162|59.82.17.163|59.82.29.6,"Hangzhou Alibaba Advertising Co., Ltd.",seed,2026-03-25
+amap.com,1,2,2,Baidu_Cloud_CN,Cloud,0,1,0,80,182.92.205.225|182.92.251.86,"Aliyun Computing Co., LTD",seed,2026-03-25
+gaode.com,1,2,2,Baidu_Cloud_CN,Cloud,0,1,0,80,182.92.205.225|182.92.251.86,"Aliyun Computing Co., LTD",seed,2026-03-25
 ===== tencent ecosystem =====,0,0,0,,,0,0,0,0,,,seed,2026-03-25
 tencent.com,1,1,1,Alibaba_Cloud_CN,Cloud,0,0,0,70,43.137.211.13,"Tencent Cloud Computing (Beijing) Co., Ltd",seed,2026-03-25
 tencentcloud.com,0,0,1,,,0,0,0,0,43.152.182.46,,seed,2026-03-25
-qq.com,1,2,3,China Telecom; Generic_CN,Core; Edge,0,0,0,80,123.150.76.218|203.205.254.157|113.108.81.189,Chinanet GD; Chinanet TJ,seed,2026-03-25
-weixin.com,1,2,2,China Telecom,Core,0,0,0,80,183.47.103.67|183.47.102.225,Chinanet GD,seed,2026-03-25
+qq.com,1,2,3,China Telecom; Generic_CN,Core; Edge,0,0,0,80,123.150.76.218|113.108.81.189|203.205.254.157,Chinanet GD; Chinanet TJ,seed,2026-03-25
+weixin.com,1,2,2,China Telecom,Core,0,0,0,80,183.47.102.225|183.47.103.67,Chinanet GD,seed,2026-03-25
 qqmail.com,0,0,0,,,0,0,0,0,,,seed,2026-03-25
 tencentcos.com,0,0,1,,,0,0,0,0,0.0.0.1,,seed,2026-03-25
 tencentclb.com,0,0,0,,,0,0,0,0,,,seed,2026-03-25
 qcloud.com,1,1,1,Alibaba_Cloud_CN,Cloud,0,0,0,70,43.140.1.158,"Tencent Cloud Computing (Beijing) Co., Ltd",seed,2026-03-25
 dnspod.cn,0,0,1,,,0,0,0,0,43.152.182.46,,seed,2026-03-25
 ===== baidu ecosystem =====,0,0,0,,,0,0,0,0,,,seed,2026-03-25
-baidu.com,1,4,4,China Telecom; China Unicom; Generic_CN,Core; Edge,0,0,0,80,111.63.65.247|111.63.65.103|110.242.74.102,China Mobile; Chinanet HE,seed,2026-03-25
+baidu.com,1,4,4,China Telecom; China Unicom; Generic_CN,Core; Edge,0,0,0,80,111.63.65.247|111.63.65.103|124.237.177.164,China Mobile; Chinanet HE,seed,2026-03-25
 baidubce.com,0,1,2,China Telecom,Core,0,0,0,0,14.215.189.29|10.58.144.74,Chinanet GD,seed,2026-03-25
-bdstatic.com,1,2,2,China Mobile; Generic_CN,Core; Edge,0,0,0,80,39.156.70.37|220.181.7.203,China Mobile,seed,2026-03-25
-baiducloud.com,0,0,2,,,0,0,0,0,5.22.145.121|5.22.145.16,Key-Systems GmbH,seed,2026-03-25
+bdstatic.com,1,2,2,China Mobile; Generic_CN,Core; Edge,0,0,0,80,220.181.7.203|39.156.70.37,China Mobile,seed,2026-03-25
+baiducloud.com,0,0,2,,,0,0,0,0,5.22.145.16|5.22.145.121,Key-Systems GmbH,seed,2026-03-25
 baidupcs.com,1,1,1,Generic_CN,Edge,0,0,0,70,140.249.34.71,Chinanet SD,seed,2026-03-25
-iqiyi.com,1,7,7,China Unicom; Generic_CN,Core; Edge,0,1,0,90,110.242.75.42|202.108.14.124|110.242.75.41,,seed,2026-03-25
+iqiyi.com,1,7,7,China Unicom; Generic_CN,Core; Edge,0,1,0,90,202.108.14.130|202.108.14.124|110.242.75.40,,seed,2026-03-25
 ===== bytedance ecosystem =====,0,0,0,,,0,0,0,0,,,seed,2026-03-25
-bytedance.com,1,2,2,China Mobile,Core,0,1,0,90,122.14.229.102|122.14.229.7,BeiJing Teamsun Technology Co.,seed,2026-03-25
-douyin.com,1,6,6,China Mobile; Generic_CN,Core; Edge,0,1,0,90,122.14.229.58|122.14.229.64|101.126.56.165,BeiJing Teamsun Technology Co.; China Internet Network Information Center,seed,2026-03-25
-toutiao.com,1,2,2,China Mobile,Core,0,1,0,90,122.14.229.38|122.14.229.39,BeiJing Teamsun Technology Co.,seed,2026-03-25
+bytedance.com,1,2,2,China Mobile,Core,0,1,0,90,122.14.229.7|122.14.229.102,BeiJing Teamsun Technology Co.,seed,2026-03-25
+douyin.com,1,6,6,China Mobile; Generic_CN,Core; Edge,0,1,0,90,122.14.229.58|122.14.229.63|122.14.236.45,BeiJing Teamsun Technology Co.; China Internet Network Information Center,seed,2026-03-25
+toutiao.com,1,2,2,China Mobile,Core,0,1,0,90,122.14.229.39|122.14.229.38,BeiJing Teamsun Technology Co.,seed,2026-03-25
 douyincdn.com,0,0,0,,,0,1,0,0,,,seed,2026-03-25
 iesdouyin.com,0,0,0,,,0,1,0,0,,,seed,2026-03-25
 douyinstatic.com,0,0,0,,,0,1,0,0,,,seed,2026-03-25
 ===== jd.com ecosystem =====,0,0,0,,,0,0,0,0,,,seed,2026-03-25
-jd.com,1,4,4,China Mobile; Generic_CN,Core; Edge,0,0,0,80,211.144.27.126|211.144.24.218|106.39.171.134,Bgtelecom; China Mobile,seed,2026-03-25
+jd.com,1,4,4,China Mobile; Generic_CN,Core; Edge,0,0,0,80,111.13.149.108|106.39.171.134|211.144.27.126,Bgtelecom; China Mobile,seed,2026-03-25
 jdcloud.com,1,1,1,Generic_CN,Edge,0,0,0,70,116.198.4.24,"Beijing Jingdong 360 Degree E-commerce Co., Ltd.",seed,2026-03-25
-jdpay.com,1,3,3,Generic_CN,Edge,0,0,0,70,111.202.65.19|123.182.167.95|211.152.0.69,Chinanet HE; Chuang lian NetCom Inc.,seed,2026-03-25
-jdl.com,1,3,3,China Mobile; Generic_CN,Core; Edge,0,0,0,80,111.13.28.217|106.39.170.40|111.206.228.66,China Mobile; Chinanet BJ,seed,2026-03-25
+jdpay.com,1,3,3,Generic_CN,Edge,0,0,0,70,123.182.167.95|211.152.0.69|111.202.65.19,Chinanet HE; Chuang lian NetCom Inc.,seed,2026-03-25
+jdl.com,1,3,3,China Mobile; Generic_CN,Core; Edge,0,0,0,80,106.39.170.40|111.206.228.66|111.13.28.217,China Mobile; Chinanet BJ,seed,2026-03-25
 jdcdn.com,0,0,0,,,0,0,0,0,,,seed,2026-03-25
 ===== xiaomi ecosystem =====,0,0,0,,,0,0,0,0,,,seed,2026-03-25
 xiaomi.com,1,1,1,Generic_CN,Edge,0,1,0,80,124.251.34.141,21ViaNet,seed,2026-03-25
-mi.com,0,0,2,,,0,0,0,0,161.117.94.231|161.117.97.92,Alicloud,seed,2026-03-25
+mi.com,0,0,2,,,0,0,0,0,161.117.97.92|161.117.94.231,Alicloud,seed,2026-03-25
 miui.com,1,1,1,Generic_CN,Edge,0,1,0,80,124.251.100.193,21ViaNet,seed,2026-03-25
 mipush.com,0,0,0,,,0,1,0,0,,,seed,2026-03-25
-miwifi.com,0,0,2,,,0,0,0,0,47.245.120.226|47.236.153.203,Alibaba.com LLC,seed,2026-03-25
+miwifi.com,0,0,2,,,0,0,0,0,47.236.153.203|47.245.120.226,Alibaba.com LLC,seed,2026-03-25
 mi-img.com,0,0,0,,,0,1,0,0,,,seed,2026-03-25
 mihoyogame.com,0,0,0,,,0,1,0,0,,,seed,2026-03-25
 mihoyo.com,1,2,2,Baidu_Cloud_CN,Cloud,0,1,0,80,106.15.95.47|106.14.8.107,"Aliyun Computing Co., LTD",seed,2026-03-25
@@ -73,26 +73,33 @@ dnsv2.com,0,0,0,,,0,1,0,0,,,seed,2026-03-25
 dnsv3.com,0,0,0,,,0,1,0,0,,,seed,2026-03-25
 zdnscloud.com,0,0,0,,,0,0,0,0,,,seed,2026-03-25
 wsdns.top,0,0,0,,,0,0,0,0,,,seed,2026-03-25
-===== mainland entities =====,0,0,0,,,0,0,0,0,,,seed,2026-03-25
 pinduoduo.com,0,0,1,,,0,0,0,0,124.156.123.148,,seed,2026-03-25
 zhihu.com,0,0,1,,,0,1,0,0,43.135.83.2,Tencent Cloud Computing,seed,2026-03-25
 zhimg.com,0,0,0,,,0,1,0,0,,,seed,2026-03-25
 xiaohongshu.com,0,0,1,,,0,1,0,0,43.159.24.58,Aceville Pte.ltd,seed,2026-03-25
-kuaishou.com,1,4,4,Generic_CN,Edge,0,0,0,70,103.107.217.26|103.102.202.144|103.102.202.106,"Beijing Kuaishou Technology Co., Ltd.; Reach Best Co., Ltd.",seed,2026-03-25
-360.cn,1,2,2,Generic_CN,Edge,0,0,0,70,36.99.171.154|106.63.103.5,Chinanet HA; Chinatelecom Cloudy company,seed,2026-03-25
+kuaishou.com,1,4,4,Generic_CN,Edge,0,0,0,70,103.107.217.26|103.102.202.125|103.102.202.106,"Beijing Kuaishou Technology Co., Ltd.; Reach Best Co., Ltd.",seed,2026-03-25
+360.cn,1,2,2,Generic_CN,Edge,0,0,0,70,106.63.103.5|36.99.171.154,Chinanet HA; Chinatelecom Cloudy company,seed,2026-03-25
 so.com,0,0,1,,,0,1,0,0,104.192.110.226,QiHU 360 Inc.,seed,2026-03-25
 sohu.com,1,1,1,Generic_CN,Edge,0,0,0,70,61.135.164.50,,seed,2026-03-25
 tianyancha.com,1,1,1,Huawei_Cloud_CN,Cloud,0,1,0,80,116.205.76.152,Huawei Cloud Service,seed,2026-03-25
 zhidemai.com,1,1,1,Generic_CN,Edge,0,1,0,80,106.75.126.245,Shanghai UCloud Information Technology Company Limited,seed,2026-03-25
 10010.com,1,1,1,Generic_CN,Edge,0,0,0,70,123.125.96.156,,seed,2026-03-25
-10086.cn,1,2,2,China Mobile,Core,0,0,0,80,183.207.44.251|36.160.2.81,China Mobile Communications Corporation,seed,2026-03-25
+10086.cn,1,2,2,China Mobile,Core,0,0,0,80,36.160.2.81|183.207.44.251,China Mobile Communications Corporation,seed,2026-03-25
 189.cn,1,1,1,Generic_CN,Edge,0,0,0,70,117.89.29.19,Chinanet JS,seed,2026-03-25
 gov.cn,0,0,0,,,1,0,0,0,,,seed,2026-03-25
 edu.cn,0,0,0,,,1,0,0,0,,,seed,2026-03-25
+www.gov.cn,0,0,3,,,1,0,0,0,156.225.111.238|156.225.111.237|156.225.111.236,Edgenext Legend Dynasty Pte. Ltd.,seed,2026-03-25
+www.moe.edu.cn,1,1,1,Generic_CN,Edge,1,0,0,90,114.247.107.20,,seed,2026-03-25
+www.miit.gov.cn,1,1,1,Generic_CN,Edge,1,0,0,90,36.158.231.210,China Mobile Communications Corporation,seed,2026-03-25
+www.mps.gov.cn,1,2,2,Generic_CN,Edge,1,0,0,90,116.211.128.121|36.158.231.188,China Mobile Communications Corporation; Chinanet HB,seed,2026-03-25
+www.ndrc.gov.cn,0,0,3,,,1,0,0,0,156.225.111.238|156.225.111.237|156.225.111.236,Edgenext Legend Dynasty Pte. Ltd.,seed,2026-03-25
+www.mof.gov.cn,0,0,1,,,1,0,0,0,140.150.3.185,Meteverse,seed,2026-03-25
+www.customs.gov.cn,1,2,2,Generic_CN,Edge,1,0,0,90,124.238.251.150|36.158.231.195,China Mobile Communications Corporation; Chinanet HE,seed,2026-03-25
+www.pbc.gov.cn,1,1,1,Generic_CN,Edge,1,0,0,90,27.155.70.231,Chinanet FJ,seed,2026-03-25
 === auto-expanded from mainland brand families ===,0,0,0,,,0,0,0,0,,,seed,2026-03-25
 126.com,1,1,1,Generic_CN,Edge,0,0,0,70,111.124.203.38,Chinanet GZ,seed,2026-03-25
 163.com,1,1,1,Generic_CN,Edge,0,0,0,70,59.111.160.244,"Guangzhou NetEase Computer System Co., Ltd",seed,2026-03-25
-163yun.com,1,2,2,Generic_CN,Edge,0,1,0,80,111.124.195.142|111.124.195.143,Chinanet GZ,seed,2026-03-25
+163yun.com,1,2,2,Generic_CN,Edge,0,1,0,80,111.124.195.143|111.124.195.142,Chinanet GZ,seed,2026-03-25
 360buy.com,0,0,0,,,0,0,0,0,,,seed,2026-03-25
 acgvideo.com,1,1,1,Generic_CN,Edge,0,0,0,70,58.220.29.72,Chinanet JS,seed,2026-03-25
 alibabagroup.com,0,0,2,,,0,1,0,0,47.246.173.142|47.246.131.152,Alibaba Cloud LLC; Alibaba.com LLC,seed,2026-03-25
@@ -101,12 +108,12 @@ alipay.net,1,2,2,Baidu_Cloud_CN,Cloud,0,1,0,80,110.75.129.5|110.75.139.5,"Zhejia
 alipayobjects.com,1,2,2,Baidu_Cloud_CN,Cloud,0,1,0,80,110.75.130.45|110.76.8.255,"Zhejiang Ant Small And Micro Financial Services, Group",seed,2026-03-25
 alipayplus.com,0,0,1,,,0,1,0,0,47.236.61.162,Alibaba.com LLC,seed,2026-03-25
 aliyun-inc.com,0,0,0,,,0,1,0,0,,,seed,2026-03-25
-ant.design,0,0,2,,,0,0,0,0,104.20.21.15|172.66.175.111,"Cloudflare, Inc.",seed,2026-03-25
-antgroup.com,1,2,2,Baidu_Cloud_CN,Cloud,0,1,0,80,110.75.130.45|110.76.8.255,"Zhejiang Ant Small And Micro Financial Services, Group",seed,2026-03-25
+ant.design,0,0,2,,,0,0,0,0,172.66.175.111|104.20.21.15,"Cloudflare, Inc.",seed,2026-03-25
+antgroup.com,1,2,2,Baidu_Cloud_CN,Cloud,0,1,0,80,110.76.8.255|110.75.130.45,"Zhejiang Ant Small And Micro Financial Services, Group",seed,2026-03-25
 appgallery.cloud,0,0,0,,,0,0,0,0,,,seed,2026-03-25
 baidupcs.net,0,0,0,,,0,0,0,0,,,seed,2026-03-25
 biliapi.com,0,0,0,,,0,1,0,0,,,seed,2026-03-25
-bilibili.com,1,4,4,Baidu_Cloud_CN; Huawei_Cloud_CN,Cloud,0,1,0,80,47.103.24.173|8.134.50.24|119.3.70.188,"Alibaba.com LLC; Aliyun Computing Co., LTD",seed,2026-03-25
+bilibili.com,1,4,4,Baidu_Cloud_CN; Huawei_Cloud_CN,Cloud,0,1,0,80,119.3.70.188|139.159.241.37|8.134.50.24,"Alibaba.com LLC; Aliyun Computing Co., LTD",seed,2026-03-25
 bilibili.net,0,0,0,,,0,1,0,0,,,seed,2026-03-25
 bilicomic.com,1,2,2,Generic_CN,Edge,0,1,0,80,180.163.29.38|140.207.188.224,Chinanet SH,seed,2026-03-25
 biligame.com,1,1,1,Alibaba_Cloud_CN,Cloud,0,1,0,80,212.64.117.140,"Tencent Cloud Computing (Beijing) Co., Ltd",seed,2026-03-25
@@ -129,7 +136,7 @@ meituan.net,1,2,2,Generic_CN,Edge,0,0,0,70,101.236.69.15|103.37.152.31,"Beijing 
 meituanmaicai.com,0,0,1,,,0,0,0,0,122.10.71.38,,seed,2026-03-25
 mi-cdn.com,0,0,0,,,0,1,0,0,,,seed,2026-03-25
 miyun.com,0,0,0,,,0,1,0,0,,,seed,2026-03-25
-mybank.cn,1,2,2,Baidu_Cloud_CN,Cloud,0,0,0,70,119.42.247.138|119.42.240.130,"Zhejiang Ant Small And Micro Financial Services, Group",seed,2026-03-25
+mybank.cn,1,2,2,Baidu_Cloud_CN,Cloud,0,0,0,70,119.42.240.130|119.42.247.138,"Zhejiang Ant Small And Micro Financial Services, Group",seed,2026-03-25
 netease.com,1,1,1,Generic_CN,Edge,0,0,0,70,115.236.118.54,Guangzhou NetEase Computer System Co. Ltd.,seed,2026-03-25
 pinduoduo.net,1,1,1,Alibaba_Cloud_CN,Cloud,0,0,0,70,150.158.224.195,"Tencent Cloud Computing (Beijing) Co., Ltd",seed,2026-03-25
 qianfan.cloud,0,0,0,,,0,0,0,0,,,seed,2026-03-25
@@ -150,46 +157,47 @@ tencentgames.com,0,0,0,,,0,0,0,0,,,seed,2026-03-25
 tencentmeeting.com,0,0,1,,,0,1,0,0,0.0.0.1,,seed,2026-03-25
 tencentmusic.com,0,0,1,,,0,0,0,0,127.0.0.1,,seed,2026-03-25
 tencentvideo.com,0,0,1,,,0,0,0,0,38.165.90.112,PEG Tech Inc,seed,2026-03-25
-tmallgenie.com,1,8,8,China Telecom,Core,0,1,0,90,58.218.215.68|58.218.215.73|58.218.215.67,Chinanet JS,seed,2026-03-25
+tmallgenie.com,1,1,1,Generic_CN,Edge,0,1,0,80,61.160.192.101,Chinanet JS,seed,2026-03-25
 vmall.com,1,2,2,Generic_CN; Huawei_Cloud_CN,Cloud; Edge,0,0,0,70,49.4.19.39|49.4.40.184,Huawei Cloud Service; Huawei Public Cloud Service,seed,2026-03-25
 wechatpay.com.cn,0,0,0,,,0,0,0,0,,,seed,2026-03-25
-weibo.cn,1,2,2,Generic_CN,Edge,0,0,0,70,36.51.224.126|36.51.224.123,,seed,2026-03-25
-weibo.com,1,2,2,Generic_CN,Edge,0,1,0,80,36.51.224.126|36.51.224.123,,seed,2026-03-25
+weibo.cn,1,2,2,Generic_CN,Edge,0,0,0,70,36.51.224.123|36.51.224.126,,seed,2026-03-25
+weibo.com,1,2,2,Generic_CN,Edge,0,1,0,80,36.51.224.123|36.51.224.126,,seed,2026-03-25
 weibocdn.com,1,1,1,Generic_CN,Edge,0,0,0,70,49.7.37.18,"ChinaTelecom Group Beijing Ltd, Co",seed,2026-03-25
 wenxin.cloud,0,0,0,,,0,0,0,0,,,seed,2026-03-25
 xiaoai.com,0,0,1,,,0,0,0,0,206.119.166.88,Solustack Limited,seed,2026-03-25
-xiaomi.net,1,2,2,Generic_CN,Edge,0,0,0,70,124.251.34.141|183.84.7.241,21ViaNet,seed,2026-03-25
-xiaomiprint.com,0,0,6,,,0,0,0,0,20.33.2.81|20.153.150.56|20.33.2.102,Microsoft Azure Cloud (westeurope),seed,2026-03-25
+xiaomi.net,1,2,2,Generic_CN,Edge,0,0,0,70,183.84.7.241|124.251.34.141,21ViaNet,seed,2026-03-25
+xiaomiprint.com,0,0,6,,,0,0,0,0,20.33.2.102|20.153.154.22|20.157.123.121,Microsoft Azure Cloud (westeurope),seed,2026-03-25
 yangkeduo.com,1,1,1,Alibaba_Cloud_CN,Cloud,0,1,0,80,118.126.69.55,"Tencent cloud computing (Beijing) Co., Ltd.",seed,2026-03-25
 yeah.net,1,1,1,Generic_CN,Edge,0,0,0,70,111.124.203.39,Chinanet GZ,seed,2026-03-25
 alipay.hk,0,0,1,,,0,0,0,0,198.11.186.8,Alibaba Cloud LLC,seed,2026-03-25
 baidu.jp,0,0,1,,,0,0,0,0,119.63.198.132,Baidu Japan Inc.,seed,2026-03-25
-bilibili.tv,0,2,4,Generic_CN,Edge,0,0,0,0,192.254.90.179|103.151.151.134|192.254.90.178,Bilibili HK Limited; ZENLA,seed,2026-03-25
+bilibili.tv,0,2,4,Generic_CN,Edge,0,0,0,0,192.254.90.179|103.151.151.133|192.254.90.178,Bilibili HK Limited; ZENLA,seed,2026-03-25
 bilicomics.com,1,2,2,Generic_CN,Edge,0,1,0,80,180.163.29.38|140.207.188.224,Chinanet SH,seed,2026-03-25
 biligame.net,0,0,0,,,0,1,0,0,,,seed,2026-03-25
-capcut.com,0,0,2,,,0,0,0,0,23.198.6.26|23.198.6.37,"Akamai Technologies, Inc.",seed,2026-03-25
-daraz.pk,0,0,4,,,0,0,0,0,47.246.174.148|47.246.174.23|47.246.167.168,Alibaba.com LLC,seed,2026-03-25
-dji.com,0,0,4,,,0,1,0,0,18.160.10.77|18.160.10.105|18.160.10.52,AWS CloudFront (GLOBAL),seed,2026-03-25
+capcut.com,0,0,2,,,0,0,0,0,23.212.251.26|23.212.251.8,"Akamai Technologies, Inc.",seed,2026-03-25
+daraz.pk,0,0,4,,,0,0,0,0,47.246.167.168|47.246.174.23|47.246.174.148,Alibaba.com LLC,seed,2026-03-25
+dji.com,0,0,4,,,0,1,0,0,18.160.10.77|18.160.10.62|18.160.10.105,AWS CloudFront (GLOBAL),seed,2026-03-25
 djicreator.com,0,0,0,,,0,0,0,0,,,seed,2026-03-25
 djistatic.com,0,0,1,,,0,1,0,0,47.89.50.120,ALICLOUD-HK,seed,2026-03-25
-hoyolab.com,0,0,4,,,0,0,0,0,3.167.37.73|3.167.37.115|3.167.37.50,AWS CloudFront (GLOBAL),seed,2026-03-25
+hoyolab.com,0,0,4,,,0,0,0,0,3.167.37.73|3.167.37.25|3.167.37.50,AWS CloudFront (GLOBAL),seed,2026-03-25
 huawei.eu,0,0,1,,,0,0,0,0,119.8.242.30,,seed,2026-03-25
 huawei.ru,0,0,1,,,0,0,0,0,159.138.201.206,,seed,2026-03-25
-iqiyipic.com,1,7,7,China Unicom; Generic_CN,Core; Edge,0,1,0,90,110.242.75.42|202.108.14.124|110.242.75.41,,seed,2026-03-25
-kwai.com,0,0,4,,,0,0,0,0,103.167.26.134|103.167.27.137|103.167.26.74,Joyo Technology Pte. LTD,seed,2026-03-25
+iqiyipic.com,1,7,7,China Unicom; Generic_CN,Core; Edge,0,1,0,90,202.108.14.130|202.108.14.124|110.242.75.40,,seed,2026-03-25
+kwai.com,0,0,4,,,0,0,0,0,103.167.27.137|103.167.27.74|103.167.26.74,Joyo Technology Pte. LTD,seed,2026-03-25
 larksuite.com,0,0,1,,,0,1,0,0,18.215.79.72,AWS EC2 (us-east-1),seed,2026-03-25
-lazada.com,0,0,8,,,0,0,0,0,47.246.167.7|47.246.167.254|47.246.165.110,Alibaba.com LLC,seed,2026-03-25
-pgyer.com,0,0,8,,,0,1,0,0,163.181.60.208|163.181.60.203|163.181.60.205,Alibaba.com LLC,seed,2026-03-25
-qiyi.com,1,7,7,China Unicom; Generic_CN,Core; Edge,0,1,0,90,110.242.75.42|202.108.14.124|110.242.75.41,,seed,2026-03-25
-qiyipic.com,1,7,7,China Unicom; Generic_CN,Core; Edge,0,1,0,90,110.242.75.42|202.108.14.124|110.242.75.41,,seed,2026-03-25
+lazada.com,0,0,8,,,0,0,0,0,47.246.165.39|47.246.167.7|47.246.165.110,Alibaba.com LLC,seed,2026-03-25
+pgyer.com,0,0,8,,,0,1,0,0,163.181.60.204|163.181.60.207|163.181.60.202,Alibaba.com LLC,seed,2026-03-25
+qiyi.com,1,7,7,China Unicom; Generic_CN,Core; Edge,0,1,0,90,202.108.14.130|202.108.14.124|110.242.75.40,,seed,2026-03-25
+qiyipic.com,1,7,7,China Unicom; Generic_CN,Core; Edge,0,1,0,90,202.108.14.130|202.108.14.124|110.242.75.40,,seed,2026-03-25
 temu.com,0,0,2,,,0,0,0,0,151.101.2.58|151.101.66.58,"Fastly, Inc.",seed,2026-03-25
-tiktok.com,0,0,4,,,0,0,0,0,23.198.6.14|23.198.6.56|23.198.6.23,"Akamai Technologies, Inc.",seed,2026-03-25
+tiktok.com,0,0,8,,,0,0,0,0,23.212.250.21|23.212.250.4|23.212.250.12,"Akamai Technologies, Inc.",seed,2026-03-25
 ulikecam.com,1,1,1,Baidu_Cloud_CN,Cloud,0,1,0,80,47.94.108.134,"Aliyun Computing Co., LTD",seed,2026-03-25
-wechat.com,0,0,2,,,0,0,0,0,43.163.178.94|43.163.181.74,Tencent Cloud Computing,seed,2026-03-25
+wechat.com,0,0,2,,,0,0,0,0,43.163.181.74|43.163.178.94,Tencent Cloud Computing,seed,2026-03-25
 wechatpay.com,0,0,0,,,0,0,0,0,,,seed,2026-03-25
 xhscdn.com,1,1,1,Alibaba_Cloud_CN,Cloud,0,1,0,80,118.25.163.88,"Tencent Cloud Computing (Beijing) Co., Ltd",seed,2026-03-25
 xhslink.com,1,2,2,Alibaba_Cloud_CN,Cloud,0,0,0,70,106.54.99.69|118.195.253.242,"Tencent Cloud Computing (Beijing) Co., Ltd; Tencent cloud computing (Beijing) Co., Ltd.",seed,2026-03-25
+===== mainland entities =====,0,0,0,,,0,0,0,0,,,seed,2026-03-25
 jdcloudcs.com,0,0,0,,,0,0,0,0,,,seed,2026-03-25
-jingdong.com,0,0,2,,,0,0,0,0,172.28.56.22|172.18.255.229,,seed,2026-03-25
-youku.com,1,1,1,Baidu_Cloud_CN,Cloud,0,1,0,80,106.11.43.183,"Zhejiang Taobao Network Co., Ltd",seed,2026-03-25
+jingdong.com,0,0,2,,,0,0,0,0,172.18.255.229|172.28.56.22,,seed,2026-03-25
+youku.com,1,1,1,Baidu_Cloud_CN,Cloud,0,1,0,80,106.11.35.97,"Zhejiang Taobao Network Co., Ltd",seed,2026-03-25
 tudou.com,1,1,1,Baidu_Cloud_CN,Cloud,0,1,0,80,106.11.43.215,"Zhejiang Taobao Network Co., Ltd",seed,2026-03-25
