@@ -1,0 +1,105 @@
+# China Domain List - Seed File
+# Format: domain
+# These are manually curated seed domains representing core Chinese internet entities
+# Last updated: 2025-03
+
+# ===== Alibaba Ecosystem =====
+alibaba.com
+alibabacloud.com
+aliyun.com
+aliyuncs.com
+alipay.com
+taobao.com
+tmall.com
+aliyundrive.com
+alicdn.com
+1688.com
+
+# ===== Tencent Ecosystem =====
+tencent.com
+tencentcloud.com
+qq.com
+wechat.com
+weixin.com
+qqmail.com
+tencentcos.com
+tencentclb.com
+tencentvideo.com
+qcloud.com
+
+# ===== Baidu Ecosystem =====
+baidu.com
+baidubce.com
+bdstatic.com
+baiducloud.com
+baidupcs.com
+iqiyi.com
+
+# ===== ByteDance Ecosystem =====
+bytedance.com
+douyin.com
+toutiao.com
+douyincdn.com
+iesdouyin.com
+douyinvod.com
+douyinstatic.com
+
+# ===== JD.com Ecosystem =====
+jd.com
+jdcloud.com
+jdpay.com
+jdl.com
+jdcdn.com
+jdcloudcs.com
+
+# ===== Xiaomi Ecosystem =====
+xiaomi.com
+mi.com
+miui.com
+mipush.com
+miwifi.com
+mi-img.com
+mihoyogame.com
+mihoyo.com
+
+# ===== Huawei Ecosystem =====
+huawei.com
+huaweicloud.com
+myhuaweicloud.com
+hicloud.com
+huaweidevice.com
+
+# ===== Meituan =====
+meituan.com
+meituan.net
+
+# ===== NetEase =====
+163.com
+126.com
+netease.com
+yeah.net
+
+# ===== Weibo =====
+weibo.com
+weibo.cn
+sinaimg.cn
+
+# ===== Bilibili =====
+bilibili.com
+bilibili.net
+bilicomic.com
+biligame.com
+
+# ===== DJI =====
+dji.com
+djistatic.com
+
+# ===== Other Major CN Entities =====
+pinduoduo.com
+jingdong.com
+youku.com
+tudou.com
+zhihu.com
+xiaohongshu.com
+kuaishou.com
+ksapisrv.com

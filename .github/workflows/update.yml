@@ -1,0 +1,52 @@
+name: Update China Domain List
+
+on:
+  schedule:
+    # Every Monday at 02:00 UTC
+    - cron: "0 2 * * 1"
+  workflow_dispatch:  # allow manual trigger
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Step 1 - Expand brand families into seeds
+        run: python sources/scripts/1_expand.py
+
+      - name: Step 2 - DNS check (resolve + ASN lookup)
+        run: python sources/scripts/2_dns_check.py
+
+      - name: Step 3 - WHOIS / RDAP registrar lookup
+        run: python sources/scripts/3_whois.py
+
+      - name: Step 4 - Score and generate dist/domains.txt
+        run: python sources/scripts/4_score.py
+
+      - name: Show stats
+        run: |
+          echo "=== Stats ==="
+          cat data/stats.json
+          echo ""
+          echo "=== dist/domains.txt (first 20 lines) ==="
+          head -20 dist/domains.txt
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/domains.csv data/stats.json dist/domains.txt sources/manual/seed.txt
+          git diff --cached --quiet && echo "No changes." || (
+            git commit -m "chore: auto-update $(date -u +%Y-%m-%d)"
+            git push
+          )
