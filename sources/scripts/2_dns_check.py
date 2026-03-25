@@ -1,23 +1,27 @@
 #!/usr/bin/env python3
 """
-2_dns_check.py - DNS resolution + ASN lookup for China detection
+2_dns_check.py - Advanced DNS Intelligence & Asset Profiling
 
 For each domain:
   1. Resolve to IP(s) via DNS
   2. Query ASN/org via ip-api.com (free, no API key required)
-  3. Flag dns_cn=1 only if MAJORITY of resolved IPs are in CN ASN
-     (not just any single IP - avoids false positives from CDN edge nodes)
-
-Output: updates data/domains.csv
+  3. Cross-reference with constants.py to tag provider and infrastructure layer
+  4. Flag dns_cn=1 only if MAJORITY of IPs are in mainland CN
+     (excludes HK/MO/TW and known non-mainland regions)
 """
 
 import csv
 import json
 import socket
+import sys
 import time
 import urllib.request
 from pathlib import Path
 from datetime import date
+
+# Add scripts dir to path so constants.py can be imported
+sys.path.insert(0, str(Path(__file__).parent))
+from constants import CN_BACKBONE, CN_CLOUD_ASNS, NON_MAINLAND_REGIONS
 
 ROOT       = Path(__file__).resolve().parents[2]
 INPUT_CSV  = ROOT / "data" / "domains.csv"
@@ -74,6 +78,33 @@ def query_ips_batch(ips: list[str]) -> dict[str, dict]:
         return {}
 
 
+def get_asset_profile(as_str: str, domain: str) -> dict:
+    """
+    Classify an IP's AS into provider and infrastructure layer.
+    Returns dict with keys: provider, infra_layer, is_strategic
+    """
+    as_num = as_str.split()[0].replace("AS", "") if as_str else ""
+
+    profile = {
+        "provider":     "Generic_CN",
+        "infra_layer":  "Edge",
+        "is_strategic": "0",
+    }
+
+    if as_num in CN_BACKBONE:
+        entry = CN_BACKBONE[as_num]
+        profile["provider"]    = entry["isp"]
+        profile["infra_layer"] = entry.get("level", "Core")
+    elif as_num in CN_CLOUD_ASNS:
+        profile["provider"]    = CN_CLOUD_ASNS[as_num]
+        profile["infra_layer"] = "Cloud"
+
+    if ".gov.cn" in domain or ".edu.cn" in domain:
+        profile["is_strategic"] = "1"
+
+    return profile
+
+
 def run():
     today    = date.today().isoformat()
     existing = load_existing(INPUT_CSV)
@@ -102,25 +133,32 @@ def run():
                 ip_data.update(query_ips_batch(unique_ips[j : j + 100]))
 
         for domain in batch:
-            ips = domain_ips[domain]
-            cn_count = 0
-            as_orgs  = set()
+            ips         = domain_ips[domain]
+            cn_count    = 0
+            as_orgs     = set()
+            providers   = set()
+            infra_layers = set()
+            is_strategic = "0"
 
             for ip in ips:
                 info    = ip_data.get(ip, {})
                 country = info.get("countryCode", "")
                 org     = info.get("org", info.get("as", ""))
-                if country == "CN":
+
+                # Only count as CN if not in non-mainland region
+                if country == "CN" and country not in NON_MAINLAND_REGIONS:
+                    profile = get_asset_profile(info.get("as", ""), domain)
                     cn_count += 1
+                    providers.add(profile["provider"])
+                    infra_layers.add(profile["infra_layer"])
+                    if profile["is_strategic"] == "1":
+                        is_strategic = "1"
+
                 if org:
                     as_orgs.add(org)
 
-            # Require MAJORITY of resolved IPs to be CN
-            # Single IP: must be CN. Multiple IPs: more than half must be CN.
-            if len(ips) > 0:
-                dns_cn = (cn_count / len(ips)) > 0.5
-            else:
-                dns_cn = False
+            # Majority rule: more than half of resolved IPs must be CN
+            dns_cn = (cn_count / len(ips) > 0.5) if ips else False
 
             prev = existing.get(domain, {})
 
@@ -129,8 +167,12 @@ def run():
                 "dns_cn":        "1" if dns_cn else "0",
                 "dns_cn_count":  str(cn_count),
                 "dns_total":     str(len(ips)),
+                "provider":      "; ".join(sorted(providers)) if providers else "",
+                "infra_layer":   "; ".join(sorted(infra_layers)) if infra_layers else "",
+                "is_strategic":  is_strategic,
                 "resolved_ips":  "|".join(ips[:3]),
                 "as_org":        "; ".join(sorted(as_orgs)[:2]),
+                # Preserve WHOIS signals from previous run
                 "registrar_cn":  prev.get("registrar_cn", ""),
                 "registrant_cn": prev.get("registrant_cn", ""),
                 "score":         "",
@@ -142,8 +184,9 @@ def run():
 
     fieldnames = [
         "domain", "dns_cn", "dns_cn_count", "dns_total",
+        "provider", "infra_layer", "is_strategic",
         "registrar_cn", "registrant_cn", "score",
-        "resolved_ips", "as_org", "source", "updated"
+        "resolved_ips", "as_org", "source", "updated",
     ]
     OUTPUT_CSV.parent.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_CSV, "w", newline="", encoding="utf-8") as f:
@@ -154,7 +197,7 @@ def run():
                 writer.writerow(results[domain])
 
     cn_count = sum(1 for r in results.values() if r["dns_cn"] == "1")
-    print(f"\nDone. {cn_count}/{len(results)} domains have majority CN IPs.")
+    print(f"\nDone. {cn_count}/{len(results)} domains have majority mainland CN IPs.")
     print(f"Output: {OUTPUT_CSV}")
 
 
