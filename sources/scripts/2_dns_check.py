@@ -19,7 +19,6 @@ import urllib.request
 from pathlib import Path
 from datetime import date
 
-# Add scripts dir to path so constants.py can be imported
 sys.path.insert(0, str(Path(__file__).parent))
 from constants import CN_BACKBONE, CN_CLOUD_ASNS, NON_MAINLAND_REGIONS
 
@@ -79,10 +78,6 @@ def query_ips_batch(ips: list[str]) -> dict[str, dict]:
 
 
 def get_asset_profile(as_str: str, domain: str) -> dict:
-    """
-    Classify an IP's AS into provider and infrastructure layer.
-    Returns dict with keys: provider, infra_layer, is_strategic
-    """
     as_num = as_str.split()[0].replace("AS", "") if as_str else ""
 
     profile = {
@@ -99,7 +94,8 @@ def get_asset_profile(as_str: str, domain: str) -> dict:
         profile["provider"]    = CN_CLOUD_ASNS[as_num]
         profile["infra_layer"] = "Cloud"
 
-    if ".gov.cn" in domain or ".edu.cn" in domain:
+    if (domain.endswith(".gov.cn") or domain == "gov.cn"
+            or domain.endswith(".edu.cn") or domain == "edu.cn"):
         profile["is_strategic"] = "1"
 
     return profile
@@ -133,10 +129,10 @@ def run():
                 ip_data.update(query_ips_batch(unique_ips[j : j + 100]))
 
         for domain in batch:
-            ips         = domain_ips[domain]
-            cn_count    = 0
-            as_orgs     = set()
-            providers   = set()
+            ips          = domain_ips[domain]
+            cn_count     = 0
+            as_orgs      = set()
+            providers    = set()
             infra_layers = set()
             is_strategic = "0"
 
@@ -145,7 +141,6 @@ def run():
                 country = info.get("countryCode", "")
                 org     = info.get("org", info.get("as", ""))
 
-                # Only count as CN if not in non-mainland region
                 if country == "CN" and country not in NON_MAINLAND_REGIONS:
                     profile = get_asset_profile(info.get("as", ""), domain)
                     cn_count += 1
@@ -157,7 +152,11 @@ def run():
                 if org:
                     as_orgs.add(org)
 
-            # Majority rule: more than half of resolved IPs must be CN
+            # Also flag strategic even if dns_cn=0 (e.g. gov.cn behind CDN)
+            if (domain.endswith(".gov.cn") or domain == "gov.cn"
+                    or domain.endswith(".edu.cn") or domain == "edu.cn"):
+                is_strategic = "1"
+
             dns_cn = (cn_count / len(ips) > 0.5) if ips else False
 
             prev = existing.get(domain, {})
@@ -172,7 +171,6 @@ def run():
                 "is_strategic":  is_strategic,
                 "resolved_ips":  "|".join(ips[:3]),
                 "as_org":        "; ".join(sorted(as_orgs)[:2]),
-                # Preserve WHOIS signals from previous run
                 "registrar_cn":  prev.get("registrar_cn", ""),
                 "registrant_cn": prev.get("registrant_cn", ""),
                 "score":         "",
