@@ -1,13 +1,18 @@
 # DomainNova - Mainland China Strategic Assets
 # Generated: 2026-03-25
-# Total: 70 high-confidence domains
+# Total: 83 high-confidence domains
 # Criteria: Mainland DNS + Infrastructure Verified
 # Source: https://github.com/harryheros/domainnova
 #
+0101cdn.com
+10010.com
+10086.cn
 126.com
 163.com
 163yun.com
 1688.com
+189.cn
+360.cn
 acgvideo.com
 alicdn.com
 alipay.com
@@ -16,6 +21,7 @@ alipayobjects.com
 aliyun.com
 aliyuncs.com
 aliyundrive.com
+amap.com
 antgroup.com
 baidu.com
 baidupcs.com
@@ -25,9 +31,11 @@ bilicomic.com
 bilicomics.com
 biligame.com
 bytedance.com
+cainiao-inc.com
 dianping.com
 douyin.com
 feishu.cn
+gaode.com
 gifshow.com
 huawei.com
 huaweicloud.com
@@ -48,6 +56,7 @@ mybank.cn
 netease.com
 pinduoduo.net
 qcloud.com
+qiniudns.com
 qiyi.com
 qiyipic.com
 qiyukf.com
@@ -55,13 +64,16 @@ qq.com
 sankuai.com
 sina.com.cn
 sinaimg.cn
+sohu.com
 taobao.com
 tencent.com
+tianyancha.com
 tmall.com
 tmallgenie.com
 toutiao.com
 tudou.com
 ulikecam.com
+upaiyun.com
 vmall.com
 weibo.cn
 weibo.com
@@ -74,3 +86,4 @@ xiaomi.net
 yangkeduo.com
 yeah.net
 youku.com
+zhidemai.com
