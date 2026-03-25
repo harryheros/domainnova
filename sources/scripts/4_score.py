@@ -3,9 +3,10 @@
 4_score.py - Multi-signal scoring + generate dist/domains.txt
 
 Scoring model (0-100):
-  dns_cn   = 1  ->  +60 pts  (server physically resolves to China IP)
-  whois_cn = 1  ->  +30 pts  (registrar/registrant is a Chinese entity)
-  cn_tld        ->  +10 pts  (domain uses a Chinese TLD)
+  dns_cn        = 1  ->  +60 pts  (majority of IPs resolve to CN ASN)
+  registrar_cn  = 1  ->  +20 pts  (domain registered via Chinese registrar)
+  registrant_cn = 1  ->  +20 pts  (registrant country is CN)
+  cn_tld             ->  +10 pts  (domain uses a Chinese TLD)
 
 Threshold: score >= 60 -> included in dist/domains.txt
 """
@@ -20,15 +21,13 @@ DATA_CSV   = ROOT / "data" / "domains.csv"
 DIST_TXT   = ROOT / "dist" / "domains.txt"
 STATS_JSON = ROOT / "data" / "stats.json"
 
-CN_TLDS = {
-    "cn", "xn--fiqs8sirgfmh", "xn--fiqz9s",  # .中国 punycode variants
-    "xn--55qx5d", "xn--io0a7i",               # .公司 .网络
-}
+CN_TLDS = {"cn", "xn--fiqs8sirgfmh", "xn--fiqz9s", "xn--55qx5d", "xn--io0a7i"}
 
 SCORE_WEIGHTS = {
-    "dns_cn":   60,
-    "whois_cn": 30,
-    "cn_tld":   10,
+    "dns_cn":        60,
+    "registrar_cn":  20,
+    "registrant_cn": 20,
+    "cn_tld":        10,
 }
 
 INCLUDE_THRESHOLD = 60
@@ -43,8 +42,10 @@ def compute_score(row: dict) -> int:
     score = 0
     if row.get("dns_cn") == "1":
         score += SCORE_WEIGHTS["dns_cn"]
-    if row.get("whois_cn") == "1":
-        score += SCORE_WEIGHTS["whois_cn"]
+    if row.get("registrar_cn") == "1":
+        score += SCORE_WEIGHTS["registrar_cn"]
+    if row.get("registrant_cn") == "1":
+        score += SCORE_WEIGHTS["registrant_cn"]
     if get_tld(row.get("domain", "")) in CN_TLDS:
         score += SCORE_WEIGHTS["cn_tld"]
     return min(score, 100)
@@ -60,17 +61,18 @@ def run():
 
     today    = date.today().isoformat()
     included = []
-    score_dist = {"100": 0, "90": 0, "60": 0, "30": 0, "0": 0}
+    score_dist = {"100": 0, "80": 0, "60": 0, "40": 0, "20": 0, "0": 0}
 
     for row in rows:
         s = compute_score(row)
         row["score"] = str(s)
 
-        if s >= 100:   score_dist["100"] += 1
-        elif s >= 90:  score_dist["90"]  += 1
-        elif s >= 60:  score_dist["60"]  += 1
-        elif s >= 30:  score_dist["30"]  += 1
-        else:          score_dist["0"]   += 1
+        if s >= 100:  score_dist["100"] += 1
+        elif s >= 80: score_dist["80"]  += 1
+        elif s >= 60: score_dist["60"]  += 1
+        elif s >= 40: score_dist["40"]  += 1
+        elif s >= 20: score_dist["20"]  += 1
+        else:         score_dist["0"]   += 1
 
         if s >= INCLUDE_THRESHOLD:
             included.append(row["domain"])
@@ -101,8 +103,9 @@ def run():
         "threshold":        INCLUDE_THRESHOLD,
         "score_distribution": score_dist,
         "signals": {
-            "dns_cn":   sum(1 for r in rows if r.get("dns_cn")   == "1"),
-            "whois_cn": sum(1 for r in rows if r.get("whois_cn") == "1"),
+            "dns_cn":        sum(1 for r in rows if r.get("dns_cn")        == "1"),
+            "registrar_cn":  sum(1 for r in rows if r.get("registrar_cn")  == "1"),
+            "registrant_cn": sum(1 for r in rows if r.get("registrant_cn") == "1"),
         }
     }
     with open(STATS_JSON, "w", encoding="utf-8") as f:

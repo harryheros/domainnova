@@ -1,14 +1,13 @@
 #!/usr/bin/env python3
 """
-3_whois.py - WHOIS/RDAP registrar lookup for China detection
+3_whois.py - WHOIS/RDAP lookup for China detection
 
 Uses RDAP (modern replacement for WHOIS) - no external libraries needed.
-IANA bootstrap file tells us which RDAP server handles each TLD.
+IANA bootstrap file maps TLDs to their RDAP servers.
 
-Signals checked:
-  - Registrar country == CN
-  - Registrar name matches known Chinese registrars
-  - Registrant country == CN
+Two separate signals:
+  registrar_cn  - the domain registrar is a known Chinese company
+  registrant_cn - the domain registrant/owner claims CN country
 """
 
 import csv
@@ -58,21 +57,28 @@ def rdap_lookup(domain: str, tld_map: dict) -> dict:
     parts = domain.rsplit(".", 1)
     if len(parts) < 2:
         return {}
-    tld = parts[1].lower()
-    base = tld_map.get(tld)
+    base = tld_map.get(parts[1].lower())
     if not base:
         return {}
     return fetch_json(f"{base}/domain/{domain}") or {}
 
 
-def extract_cn_signals(rdap: dict) -> tuple[bool, str]:
+def extract_signals(rdap: dict) -> tuple[bool, bool]:
+    """
+    Returns (registrar_cn, registrant_cn).
+    registrar_cn  = True if the domain registrar is a Chinese company
+    registrant_cn = True if the registrant country is CN
+    """
     if not rdap:
-        return False, ""
+        return False, False
+
+    registrar_cn  = False
+    registrant_cn = False
 
     for entity in rdap.get("entities", []):
-        roles  = entity.get("roles", [])
-        vcard  = entity.get("vcardArray", [])
-        name   = ""
+        roles = entity.get("roles", [])
+        vcard = entity.get("vcardArray", [])
+        name    = ""
         country = ""
 
         if isinstance(vcard, list) and len(vcard) > 1:
@@ -88,14 +94,14 @@ def extract_cn_signals(rdap: dict) -> tuple[bool, str]:
         if "registrar" in roles:
             name_lower = name.lower()
             if any(kw in name_lower for kw in CN_REGISTRAR_KEYWORDS):
-                return True, name
-            if country == "CN":
-                return True, name
+                registrar_cn = True
+            elif country == "CN":
+                registrar_cn = True
 
         if "registrant" in roles and country == "CN":
-            return True, f"registrant:CN ({name})"
+            registrant_cn = True
 
-    return False, ""
+    return registrar_cn, registrant_cn
 
 
 def run():
@@ -124,19 +130,23 @@ def run():
     for i, row in enumerate(rows):
         domain = row["domain"]
 
-        if row.get("whois_cn") and row.get("updated") == today:
+        already_checked = (
+            row.get("registrar_cn") != "" and
+            row.get("registrant_cn") != "" and
+            row.get("updated") == today
+        )
+        if already_checked:
             continue
 
         if i % 20 == 0:
-            print(f"  WHOIS {i}/{len(rows)}: {domain}")
+            print(f"  RDAP {i}/{len(rows)}: {domain}")
 
-        rdap   = rdap_lookup(domain, tld_map)
-        is_cn, registrar = extract_cn_signals(rdap)
+        rdap = rdap_lookup(domain, tld_map)
+        registrar_cn, registrant_cn = extract_signals(rdap)
 
-        row["whois_cn"] = "1" if is_cn else "0"
-        if registrar and not row.get("as_org"):
-            row["as_org"] = registrar
-        row["updated"] = today
+        row["registrar_cn"]  = "1" if registrar_cn  else "0"
+        row["registrant_cn"] = "1" if registrant_cn else "0"
+        row["updated"]       = today
         updated += 1
 
         time.sleep(SLEEP)
@@ -147,7 +157,9 @@ def run():
         writer.writeheader()
         writer.writerows(rows)
 
-    print(f"\nDone. Updated {updated} rows.")
+    reg_cn  = sum(1 for r in rows if r.get("registrar_cn")  == "1")
+    regt_cn = sum(1 for r in rows if r.get("registrant_cn") == "1")
+    print(f"\nDone. registrar_cn={reg_cn}, registrant_cn={regt_cn}, updated={updated} rows.")
 
 
 if __name__ == "__main__":
