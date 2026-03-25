@@ -1,0 +1,30 @@
+{
+  "updated": "2026-03-25",
+  "summary": {
+    "total": 153,
+    "providers": {
+      "Baidu_Cloud_CN": 16,
+      "Baidu_Cloud_CN; Generic_CN": 1,
+      "Alibaba_Cloud_CN": 7,
+      "China Telecom; Generic_CN": 1,
+      "China Telecom": 2,
+      "China Telecom; China Unicom; Generic_CN": 1,
+      "China Mobile; Generic_CN": 5,
+      "Generic_CN": 26,
+      "China Unicom; Generic_CN": 4,
+      "China Mobile": 3,
+      "Huawei_Cloud_CN": 2,
+      "Baidu_Cloud_CN; Huawei_Cloud_CN": 1,
+      "Generic_CN; Huawei_Cloud_CN": 1
+    },
+    "layers": {
+      "Cloud": 26,
+      "Cloud; Edge": 2,
+      "Core; Edge": 11,
+      "Core": 5,
+      "Edge": 26
+    },
+    "strategic_count": 0
+  },
+  "threshold": 60
+}
