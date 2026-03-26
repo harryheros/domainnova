@@ -42,13 +42,17 @@ def load_existing(path: Path) -> dict:
     return rows
 
 
-def load_seeds(path: Path) -> list[str]:
+def load_seeds(*paths: Path) -> list[str]:
     domains = []
-    with open(path, encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if line and not line.startswith("#"):
-                domains.append(line.lower())
+    for path in paths:
+        if not path.exists():
+            print(f"  [info] {path.name} not found, skipping.")
+            continue
+        with open(path, encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith("#"):
+                    domains.append(line.lower())
     return domains
 
 
@@ -104,7 +108,10 @@ def get_asset_profile(as_str: str, domain: str) -> dict:
 def run():
     today    = date.today().isoformat()
     existing = load_existing(INPUT_CSV)
-    seeds    = load_seeds(SEED_FILE)
+    seeds = load_seeds(
+        SEED_FILE,
+        ROOT / "sources" / "manual" / "extended.txt",
+    )
 
     all_domains = list(dict.fromkeys(seeds + list(existing.keys())))
     print(f"Total domains to process: {len(all_domains)}")
