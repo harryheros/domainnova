@@ -1,34 +1,33 @@
 #!/usr/bin/env python3
 """
-DomainNova v2 builder
-Repository-aligned pipeline for:
+DomainNova unified build pipeline.
+
+Reads:
 - sources/manual/seed.txt
 - sources/manual/extended.txt
 
-Outputs:
+Writes:
 - data/domains.csv
 - data/stats.json
 - dist/domains.txt
 
-Signals:
-- dns_cn   (0/1)
-- whois_cn (0/1)
-- cn_tld   (0/1)
-- score
+Scoring:
+- dns_cn: 60
+- registrar_cn: 20
+- registrant_cn: 20
 
 Notes:
-- DNS/ASN is primary and weighted at 60.
-- WHOIS/RDAP is conservative and optional.
-- Designed to fit the current DomainNova repo structure.
+- ASN classification uses constants.py as the source of truth.
+- IDNs are normalized to ASCII (IDNA / punycode) before processing.
+- CN_TLDS uses ASCII-only punycode labels to avoid encoding issues.
 """
 
 from __future__ import annotations
 
-import argparse
 import csv
-import ipaddress
 import json
 import socket
+import sys
 import time
 from collections import Counter
 from dataclasses import dataclass, asdict
@@ -38,84 +37,38 @@ from urllib.parse import urlparse
 
 import requests
 
+from constants import CN_BACKBONE, CN_CLOUD_ASNS, NON_MAINLAND_REGIONS
+
 IP_API_BATCH_URL = "http://ip-api.com/batch"
 IP_API_FIELDS = "status,message,country,countryCode,as,asname,query"
+RDAP_BOOTSTRAP_URL = "https://data.iana.org/rdap/dns.json"
 
-RDAP_BOOTSTRAP = "https://data.iana.org/rdap/dns.json"
+DNS_WEIGHT = 60
+REGISTRAR_WEIGHT = 20
+REGISTRANT_WEIGHT = 20
 
-DNS_CN_WEIGHT = 60
-WHOIS_CN_WEIGHT = 30
-CN_TLD_WEIGHT = 10
+# ASCII-only, encoding-safe IDN TLDs:
+# .xn--fiqs8s  -> .中国
+# .xn--55qx5d  -> .公司
+# .xn--io0a7i  -> .网络
+CN_TLDS = (".cn", ".xn--fiqs8s", ".xn--55qx5d", ".xn--io0a7i")
 
-CN_COUNTRY_CODES = {"CN"}
-
-CN_ASN_HINTS = (
-    "CHINA TELECOM",
-    "CHINA UNICOM",
-    "CHINA MOBILE",
-    "ALIBABA",
-    "TENCENT",
-    "BAIDU",
-    "HUAWEI",
-    "UCLOUD",
-    "KINGSOFT",
-    "WANGSU",
-    "CHINANETCENTER",
-    "CERNET",
-    "CSTNET",
-    "CTGNET",
-)
-
-CN_TLDS = (".cn", ".中国", ".公司", ".网络")
-
-CN_REGISTRAR_HINTS = (
-    "ALIBABA",
-    "XIN NET",
-    "XINNET",
-    "WEST263",
-    "WEST",
-    "DNSPOD",
-    "EJEE",
-    "35 TECHNOLOGY",
-    "HICHINA",
-    "WANWANG",
-    "BIZCN",
-    "ENAME",
-    "22.CN",
-    "CNNIC",
-    "BEIJING",
-    "SHANGHAI",
-    "HANGZHOU",
-    "GUANGZHOU",
-    "SHENZHEN",
-    "CHINA",
-)
-
-CN_RDAP_HOST_HINTS = (
-    ".cn",
-    "cnnic",
-    "alidns",
-    "west.cn",
-    "xinnet",
-    "dns.com.cn",
-    "hichina",
-)
-
-USER_AGENT = "DomainNova/2.0 (+https://github.com/harryheros/domainnova)"
+USER_AGENT = "DomainNova/BuildPipeline (+https://github.com/harryheros/domainnova)"
 
 
 @dataclass
-class DomainRow:
+class DomainRecord:
     domain: str
     dns_cn: int
-    whois_cn: int
-    cn_tld: int
+    dns_cn_count: int
+    dns_total: int
+    registrar_cn: int
+    registrant_cn: int
     score: int
     resolved_ips: str
     as_org: str
     source: str
     updated: str
-    reasons: str
 
 
 def chunked(items: List[str], size: int) -> Iterable[List[str]]:
@@ -123,253 +76,263 @@ def chunked(items: List[str], size: int) -> Iterable[List[str]]:
         yield items[i:i + size]
 
 
+def normalize_asn(value: str) -> str:
+    text = (value or "").strip().upper()
+    if text.startswith("AS"):
+        text = text[2:]
+    return "".join(ch for ch in text if ch.isdigit())
+
+
+def normalize_domain(domain: str) -> str:
+    """
+    Normalize a domain to lowercase ASCII using IDNA.
+    Returns the original lowercase value if IDNA conversion fails.
+    """
+    raw = (domain or "").strip().rstrip(".").lower()
+    if not raw:
+        return raw
+    try:
+        return raw.encode("idna").decode("ascii")
+    except UnicodeError:
+        return raw
+
+
+def is_cn_asn(asn_text: str) -> bool:
+    asn = normalize_asn(asn_text)
+    return asn in CN_BACKBONE or asn in CN_CLOUD_ASNS
+
+
+def is_non_mainland_country(country_code: str) -> bool:
+    return (country_code or "").upper() in set(NON_MAINLAND_REGIONS)
+
+
+def cn_tld(domain: str) -> int:
+    ascii_domain = normalize_domain(domain)
+    return int(ascii_domain.endswith(CN_TLDS))
+
+
 def load_domains(path: Path) -> List[str]:
-    domains: List[str] = []
     if not path.exists():
-        return domains
+        return []
+
+    items: List[str] = []
     for raw in path.read_text(encoding="utf-8").splitlines():
         line = raw.strip()
         if not line or line.startswith("#"):
             continue
-        domains.append(line.lower())
+        items.append(normalize_domain(line))
+
     seen = set()
-    out = []
-    for d in domains:
-        if d not in seen:
-            seen.add(d)
-            out.append(d)
+    out: List[str] = []
+    for item in items:
+        if item and item not in seen:
+            seen.add(item)
+            out.append(item)
     return out
 
 
-def resolve_domain(domain: str, family: int) -> List[str]:
+def resolve_domain(domain: str) -> List[str]:
+    domain = normalize_domain(domain)
     ips = set()
-    try:
-        infos = socket.getaddrinfo(domain, None, family, socket.SOCK_STREAM)
-        for info in infos:
-            sockaddr = info[4]
-            if sockaddr:
-                ips.add(sockaddr[0])
-    except socket.gaierror:
-        pass
+    for family in (socket.AF_INET, socket.AF_INET6):
+        try:
+            infos = socket.getaddrinfo(domain, None, family, socket.SOCK_STREAM)
+            for info in infos:
+                sockaddr = info[4]
+                if sockaddr:
+                    ips.add(sockaddr[0])
+        except socket.gaierror:
+            pass
     return sorted(ips)
 
 
 def ip_api_lookup(ips: List[str], session: requests.Session) -> Dict[str, dict]:
-    results: Dict[str, dict] = {}
+    result: Dict[str, dict] = {}
     for batch in chunked(ips, 100):
         payload = [{"query": ip, "fields": IP_API_FIELDS} for ip in batch]
-        resp = session.post(IP_API_BATCH_URL, json=payload, timeout=30)
-        resp.raise_for_status()
-        rows = resp.json()
+        response = session.post(IP_API_BATCH_URL, json=payload, timeout=30)
+        response.raise_for_status()
+        rows = response.json()
         for row in rows:
             query = row.get("query")
             if query:
-                results[query] = row
+                result[query] = row
         time.sleep(1.6)
-    return results
-
-
-def cn_tld(domain: str) -> int:
-    return int(domain.endswith(CN_TLDS))
-
-
-def is_cn_asn(as_text: str, asname: str) -> bool:
-    hay = f"{as_text} {asname}".upper()
-    return any(hint in hay for hint in CN_ASN_HINTS)
-
-
-def dns_cn_signal(ips: List[str], ip_meta: Dict[str, dict]) -> Tuple[int, str, str]:
-    if not ips:
-        return 0, "", "no_dns"
-
-    cn_hits = 0
-    as_orgs = []
-    reasons = []
-
-    for ip in ips:
-        meta = ip_meta.get(ip, {})
-        cc = meta.get("countryCode", "")
-        as_text = meta.get("as", "")
-        asname = meta.get("asname", "")
-        org = asname or as_text
-        if org:
-            as_orgs.append(org)
-        if cc in CN_COUNTRY_CODES or is_cn_asn(as_text, asname):
-            cn_hits += 1
-
-    ratio = cn_hits / max(len(ips), 1)
-    if ratio >= 0.6:
-        reasons.append(f"dns_cn_ratio={ratio:.2f}")
-        return 1, ";".join(ips), ";".join(sorted(set(as_orgs))[:5]), ";".join(reasons)
-
-    if ratio > 0:
-        reasons.append(f"partial_dns_cn_ratio={ratio:.2f}")
-    else:
-        reasons.append("dns_not_cn")
-    return 0, ";".join(ips), ";".join(sorted(set(as_orgs))[:5]), ";".join(reasons)
+    return result
 
 
 def fetch_rdap_bootstrap(session: requests.Session) -> dict:
-    resp = session.get(RDAP_BOOTSTRAP, headers={"User-Agent": USER_AGENT}, timeout=30)
-    resp.raise_for_status()
-    return resp.json()
+    response = session.get(RDAP_BOOTSTRAP_URL, headers={"User-Agent": USER_AGENT}, timeout=30)
+    response.raise_for_status()
+    return response.json()
 
 
 def find_rdap_base(domain: str, bootstrap: dict) -> Optional[str]:
-    labels = domain.lower().split(".")
-    tld = labels[-1]
-    service_entries = bootstrap.get("services", [])
-    for entry in service_entries:
-        suffixes, urls = entry
+    ascii_domain = normalize_domain(domain)
+    if "." not in ascii_domain:
+        return None
+    tld = ascii_domain.rsplit(".", 1)[-1].lower()
+    for service in bootstrap.get("services", []):
+        suffixes, urls = service
         if tld in suffixes and urls:
             return urls[0]
     return None
 
 
 def rdap_lookup(domain: str, session: requests.Session, bootstrap: dict) -> Optional[dict]:
-    base = find_rdap_base(domain, bootstrap)
+    ascii_domain = normalize_domain(domain)
+    base = find_rdap_base(ascii_domain, bootstrap)
     if not base:
         return None
-    url = base.rstrip("/") + "/domain/" + domain
+    url = base.rstrip("/") + "/domain/" + ascii_domain
     try:
-        resp = session.get(url, headers={"User-Agent": USER_AGENT}, timeout=25)
-        if resp.status_code == 200:
-            return resp.json()
+        response = session.get(url, headers={"User-Agent": USER_AGENT}, timeout=25)
+        if response.status_code == 200:
+            return response.json()
     except requests.RequestException:
         return None
     return None
 
 
-def whois_cn_signal(domain: str, rdap: Optional[dict]) -> Tuple[int, str]:
-    reasons: List[str] = []
-    if domain.endswith(".cn"):
-        reasons.append("cn_tld_registrar_context")
+def extract_rdap_text(rdap: dict) -> str:
+    parts: List[str] = []
 
+    def collect(node):
+        if isinstance(node, dict):
+            for value in node.values():
+                collect(value)
+        elif isinstance(node, list):
+            for value in node:
+                collect(value)
+        elif isinstance(node, str):
+            parts.append(value_to_ascii(node))
+
+    collect(rdap)
+    return " ".join(parts).upper()
+
+
+def value_to_ascii(value: str) -> str:
+    try:
+        return value.encode("utf-8", errors="ignore").decode("utf-8", errors="ignore")
+    except Exception:
+        return value
+
+
+def registrar_cn_signal(rdap: Optional[dict]) -> int:
     if not rdap:
-        return 0, "no_rdap"
+        return 0
 
-    entities = rdap.get("entities", []) or []
-    registrarish = []
-    for ent in entities:
-        vcard = ent.get("vcardArray", [])
-        if isinstance(vcard, list) and len(vcard) == 2:
-            fields = vcard[1]
-            for field in fields:
-                if not isinstance(field, list) or len(field) < 4:
-                    continue
-                key = str(field[0]).lower()
-                value = field[3]
-                if key in {"fn", "org"}:
-                    registrarish.append(str(value))
-                if key == "adr":
-                    registrarish.append(json.dumps(value, ensure_ascii=False))
-                if key == "email":
-                    registrarish.append(str(value))
+    text = extract_rdap_text(rdap)
+    cn_hints = (
+        "ALIBABA",
+        "HICHINA",
+        "XINNET",
+        "XIN NET",
+        "WEST263",
+        "WEST.CN",
+        "DNSPOD",
+        "BIZCN",
+        "ENAME",
+        "22.CN",
+        "CNNIC",
+        "CHINA",
+        "BEIJING",
+        "SHANGHAI",
+        "GUANGZHOU",
+        "SHENZHEN",
+        "HANGZHOU",
+    )
+    if any(hint in text for hint in cn_hints):
+        return 1
 
-    text = " ".join(registrarish).upper()
-    if any(h in text for h in CN_REGISTRAR_HINTS):
-        reasons.append("rdap_cn_entity")
-        return 1, ";".join(reasons)
-
-    links = rdap.get("links", []) or []
-    for link in links:
+    for link in rdap.get("links", []) or []:
         href = str(link.get("href", ""))
         host = urlparse(href).netloc.lower()
-        if any(h in host for h in CN_RDAP_HOST_HINTS):
-            reasons.append("rdap_cn_host")
-            return 1, ";".join(reasons)
+        if any(token in host for token in ("cnnic", "west.cn", "xinnet", "dns.com.cn", "alidns", "hichina")):
+            return 1
 
-    return 0, "rdap_non_cn_or_unknown"
-
-
-def build_rows(
-    seed_domains: List[str],
-    extended_domains: List[str],
-    session: requests.Session,
-) -> List[DomainRow]:
-    combined: List[Tuple[str, str]] = []
-    seen = set()
-
-    for d in seed_domains:
-        if d not in seen:
-            combined.append((d, "seed"))
-            seen.add(d)
-    for d in extended_domains:
-        if d not in seen:
-            combined.append((d, "extended"))
-            seen.add(d)
-
-    resolved: Dict[str, List[str]] = {}
-    all_ips = set()
-
-    for domain, _source in combined:
-        a = resolve_domain(domain, socket.AF_INET)
-        aaaa = resolve_domain(domain, socket.AF_INET6)
-        ips = sorted(set(a + aaaa))
-        resolved[domain] = ips
-        all_ips.update(ips)
-
-    ip_meta = ip_api_lookup(sorted(all_ips), session) if all_ips else {}
-    bootstrap = fetch_rdap_bootstrap(session)
-
-    updated = time.strftime("%Y-%m-%d")
-    rows: List[DomainRow] = []
-
-    for domain, source in combined:
-        ips = resolved[domain]
-        dns_cn, resolved_ips, as_org, dns_reason = dns_cn_signal(ips, ip_meta)
-        rdap = rdap_lookup(domain, session, bootstrap)
-        whois_cn, whois_reason = whois_cn_signal(domain, rdap)
-        tld_sig = cn_tld(domain)
-
-        score = dns_cn * DNS_CN_WEIGHT + whois_cn * WHOIS_CN_WEIGHT + tld_sig * CN_TLD_WEIGHT
-
-        reasons = [dns_reason, whois_reason]
-        if tld_sig:
-            reasons.append("cn_tld")
-
-        rows.append(
-            DomainRow(
-                domain=domain,
-                dns_cn=dns_cn,
-                whois_cn=whois_cn,
-                cn_tld=tld_sig,
-                score=score,
-                resolved_ips=resolved_ips,
-                as_org=as_org,
-                source=source,
-                updated=updated,
-                reasons=";".join(x for x in reasons if x),
-            )
-        )
-
-    return rows
+    return 0
 
 
-def write_csv(path: Path, rows: List[DomainRow]) -> None:
+def registrant_cn_signal(rdap: Optional[dict]) -> int:
+    if not rdap:
+        return 0
+
+    text = extract_rdap_text(rdap)
+    wrapped = f" {text} "
+    country_hits = (
+        " COUNTRY CN ",
+        '"CN"',
+        " CHINA ",
+        " PEOPLE'S REPUBLIC OF CHINA ",
+        " PRC ",
+    )
+    return int(any(hit in wrapped for hit in country_hits))
+
+
+def build_dns_signal(ips: List[str], ip_meta: Dict[str, dict]) -> Tuple[int, int, int, str]:
+    if not ips:
+        return 0, 0, 0, ""
+
+    cn_count = 0
+    as_orgs = []
+
+    for ip in ips:
+        meta = ip_meta.get(ip, {})
+        country_code = (meta.get("countryCode") or "").upper()
+        as_text = meta.get("as") or ""
+        as_name = meta.get("asname") or ""
+        org = as_name or as_text
+        if org:
+            as_orgs.append(org)
+
+        if is_cn_asn(as_text) and not is_non_mainland_country(country_code):
+            cn_count += 1
+
+    dns_total = len(ips)
+    dns_cn = int(dns_total > 0 and (cn_count / dns_total) >= 0.60)
+    as_org = "|".join(sorted(dict.fromkeys(as_orgs))[:5])
+
+    return dns_cn, cn_count, dns_total, as_org
+
+
+def score_record(dns_cn: int, registrar_cn: int, registrant_cn: int) -> int:
+    return (
+        dns_cn * DNS_WEIGHT
+        + registrar_cn * REGISTRAR_WEIGHT
+        + registrant_cn * REGISTRANT_WEIGHT
+    )
+
+
+def write_csv(path: Path, rows: List[DomainRecord]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=list(asdict(rows[0]).keys()))
+    if not rows:
+        path.write_text("", encoding="utf-8")
+        return
+
+    with path.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(asdict(rows[0]).keys()))
         writer.writeheader()
         for row in rows:
             writer.writerow(asdict(row))
 
 
-def write_dist(path: Path, rows: List[DomainRow]) -> None:
+def write_dist(path: Path, rows: List[DomainRecord]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    domains = [r.domain for r in rows if r.score >= 60]
+    domains = [row.domain for row in rows if row.score >= 60]
     path.write_text("\n".join(domains) + ("\n" if domains else ""), encoding="utf-8")
 
 
-def write_stats(path: Path, rows: List[DomainRow]) -> None:
+def write_stats(path: Path, rows: List[DomainRecord]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     score_bands = Counter()
     source_counts = Counter()
-    for r in rows:
-        source_counts[r.source] += 1
-        if r.score >= 60:
+
+    for row in rows:
+        source_counts[row.source] += 1
+        if row.score >= 60:
             score_bands["cn"] += 1
-        elif r.score >= 30:
+        elif row.score >= 30:
             score_bands["gray"] += 1
         else:
             score_bands["non_cn"] += 1
@@ -383,31 +346,69 @@ def write_stats(path: Path, rows: List[DomainRow]) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-def main() -> None:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--repo-root", type=Path, default=Path("."))
-    parser.add_argument("--seed", type=Path, default=None)
-    parser.add_argument("--extended", type=Path, default=None)
-    parser.add_argument("--data-csv", type=Path, default=None)
-    parser.add_argument("--stats-json", type=Path, default=None)
-    parser.add_argument("--dist-txt", type=Path, default=None)
-    args = parser.parse_args()
-
-    repo = args.repo_root.resolve()
-
-    seed_path = args.seed or (repo / "sources" / "manual" / "seed.txt")
-    extended_path = args.extended or (repo / "sources" / "manual" / "extended.txt")
-    data_csv = args.data_csv or (repo / "data" / "domains.csv")
-    stats_json = args.stats_json or (repo / "data" / "stats.json")
-    dist_txt = args.dist_txt or (repo / "dist" / "domains.txt")
+def build(repo_root: Path) -> None:
+    seed_path = repo_root / "sources" / "manual" / "seed.txt"
+    extended_path = repo_root / "sources" / "manual" / "extended.txt"
+    data_csv = repo_root / "data" / "domains.csv"
+    stats_json = repo_root / "data" / "stats.json"
+    dist_txt = repo_root / "dist" / "domains.txt"
 
     seed_domains = load_domains(seed_path)
     extended_domains = load_domains(extended_path)
 
+    combined: List[Tuple[str, str]] = []
+    seen = set()
+    for domain in seed_domains:
+        if domain not in seen:
+            combined.append((domain, "seed"))
+            seen.add(domain)
+    for domain in extended_domains:
+        if domain not in seen:
+            combined.append((domain, "extended"))
+            seen.add(domain)
+
+    resolved_ips_by_domain: Dict[str, List[str]] = {}
+    all_ips = set()
+
+    for domain, _source in combined:
+        ips = resolve_domain(domain)
+        resolved_ips_by_domain[domain] = ips
+        all_ips.update(ips)
+
     session = requests.Session()
     session.headers.update({"User-Agent": USER_AGENT})
+    ip_meta = ip_api_lookup(sorted(all_ips), session) if all_ips else {}
+    bootstrap = fetch_rdap_bootstrap(session)
 
-    rows = build_rows(seed_domains, extended_domains, session)
+    updated = time.strftime("%Y-%m-%d")
+    rows: List[DomainRecord] = []
+
+    for domain, source in combined:
+        ips = resolved_ips_by_domain[domain]
+        dns_cn, dns_cn_count, dns_total, as_org = build_dns_signal(ips, ip_meta)
+        rdap = rdap_lookup(domain, session, bootstrap)
+        registrar_cn = registrar_cn_signal(rdap)
+        registrant_cn = registrant_cn_signal(rdap)
+        _cn_tld = cn_tld(domain)
+
+        score = score_record(dns_cn, registrar_cn, registrant_cn)
+
+        rows.append(
+            DomainRecord(
+                domain=domain,
+                dns_cn=dns_cn,
+                dns_cn_count=dns_cn_count,
+                dns_total=dns_total,
+                registrar_cn=registrar_cn,
+                registrant_cn=registrant_cn,
+                score=score,
+                resolved_ips="|".join(ips),
+                as_org=as_org,
+                source=source,
+                updated=updated,
+            )
+        )
+
     write_csv(data_csv, rows)
     write_stats(stats_json, rows)
     write_dist(dist_txt, rows)
@@ -416,15 +417,20 @@ def main() -> None:
         "seed_count": len(seed_domains),
         "extended_count": len(extended_domains),
         "total_unique": len(rows),
-        "cn_domains": sum(1 for r in rows if r.score >= 60),
-        "gray_domains": sum(1 for r in rows if 30 <= r.score < 60),
-        "non_cn_domains": sum(1 for r in rows if r.score < 30),
-        "data_csv": str(data_csv),
-        "stats_json": str(stats_json),
-        "dist_txt": str(dist_txt),
+        "cn_domains": sum(1 for row in rows if row.score >= 60),
+        "gray_domains": sum(1 for row in rows if 30 <= row.score < 60),
+        "non_cn_domains": sum(1 for row in rows if row.score < 30),
     }
     print(json.dumps(summary, ensure_ascii=False, indent=2))
 
 
+def main() -> None:
+    repo_root = Path(__file__).resolve().parents[2]
+    build(repo_root)
+
+
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except KeyboardInterrupt:
+        sys.exit(130)
