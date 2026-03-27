@@ -1,15 +1,15 @@
 {
   "total_domains": 1072,
-  "dist_domains": 1072,
+  "dist_domains": 510,
   "seed_domains": 545,
   "extended_domains": 527,
   "score_bands": {
-    "non_cn": 718,
-    "cn": 354
+    "non_cn": 562,
+    "cn": 510
   },
   "source_counts": {
     "seed": 545,
     "extended": 527
   },
-  "generated_at": "2026-03-27T08:47:19Z"
+  "generated_at": "2026-03-27T14:16:44Z"
 }

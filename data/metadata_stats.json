@@ -1,0 +1,42 @@
+{
+  "total": 1072,
+  "by_source": {
+    "seed": 545,
+    "extended": 527
+  },
+  "by_ecosystem": {
+    "unknown": 837,
+    "government-cn": 38,
+    "finance-banking": 25,
+    "alibaba": 24,
+    "tencent": 21,
+    "security-network": 18,
+    "baidu": 16,
+    "bytedance": 15,
+    "telecom-backbone": 13,
+    "cdn-storage": 11,
+    "huawei": 9,
+    "cloud-idc": 9,
+    "jd": 8,
+    "consumer-devices": 8,
+    "xiaomi": 7,
+    "dns-domain": 5,
+    "pinduoduo": 4,
+    "developer-platforms": 4
+  },
+  "by_category": {
+    "uncategorized": 837,
+    "platform": 88,
+    "government": 38,
+    "finance": 25,
+    "security_network": 18,
+    "telecom_backbone": 13,
+    "cdn_storage": 11,
+    "cloud_device": 9,
+    "cloud_idc": 9,
+    "consumer_device": 8,
+    "consumer_tech": 7,
+    "dns_domain": 5,
+    "developer_platform": 4
+  }
+}
