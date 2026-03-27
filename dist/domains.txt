@@ -79,6 +79,7 @@ wangsucloud.com
 baishancloud.com
 chinacache.com
 qiniu.com
+upyun.com
 upaiyun.com
 alidns.com
 xinnet.com
@@ -144,6 +145,7 @@ psbc.com
 cmbchina.com
 pingan.com
 ecitic.com
+sse.com.cn
 szse.cn
 eastmoney.com
 10jqka.com.cn
@@ -361,7 +363,6 @@ cntic.com.cn
 cqrcb.com
 cqvip.com
 crcc.cn
-crecg.com
 cs.com.cn
 czbank.com
 dahe.cn
@@ -473,7 +474,6 @@ shineway.com.cn
 shobserver.com
 smic.com.cn
 smzdm.com
-sogou.com
 sogoucdn.com
 sohu.com
 sohucs.com
