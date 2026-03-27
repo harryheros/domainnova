@@ -13,8 +13,6 @@ Outputs:
   data/domains_metadata.csv
   data/metadata_stats.json
   data/manual_source_validation.json
-  dist/seed_domains.txt
-  dist/extended_domains.txt
 
 FIXES / UPGRADES (v2):
   - YAML output no longer depends on PyYAML; uses a lightweight inline writer
@@ -44,8 +42,6 @@ OUT_YAML       = ROOT / "data" / "domains_metadata.yaml"
 OUT_CSV        = ROOT / "data" / "domains_metadata.csv"
 OUT_STATS      = ROOT / "data" / "metadata_stats.json"
 OUT_VALIDATION = ROOT / "data" / "manual_source_validation.json"
-DIST_SEED      = ROOT / "dist" / "seed_domains.txt"
-DIST_EXTENDED  = ROOT / "dist" / "extended_domains.txt"
 
 HEADER_RE = re.compile(r"^#\s*=+\s*(.*?)\s*=+\s*$")
 DOM_RE    = re.compile(r"^[A-Za-z0-9.-]+$")
@@ -231,7 +227,6 @@ def run(write_all: bool = True, validate_only: bool = False) -> None:
 
     # ---- Write outputs ----
     ROOT.joinpath("data").mkdir(parents=True, exist_ok=True)
-    ROOT.joinpath("dist").mkdir(parents=True, exist_ok=True)
 
     # JSON
     OUT_JSON.write_text(
@@ -269,17 +264,7 @@ def run(write_all: bool = True, validate_only: bool = False) -> None:
         json.dumps(stats, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
 
-    # dist plain lists
-    DIST_SEED.write_text(
-        "\n".join(e.domain for e in entries if e.source == "seed") + "\n",
-        encoding="utf-8",
-    )
-    DIST_EXTENDED.write_text(
-        "\n".join(e.domain for e in entries if e.source == "extended") + "\n",
-        encoding="utf-8",
-    )
-
-    print(f"\n[+] Wrote {len(entries)} entries to data/ and dist/")
+    print(f"\n[+] Wrote {len(entries)} entries to data/")
 
 
 def main() -> None:

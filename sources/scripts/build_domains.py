@@ -219,21 +219,103 @@ def ip_in_cn_cidrs(ip_str: str, cidr_lookup: dict) -> Optional[str]:
 
 
 # ---------------------------------------------------------------------------
-# DNS resolution
+# DNS resolution (using mainland CN DNS servers)
 # ---------------------------------------------------------------------------
+
+# Multiple CN public DNS servers for load distribution and fallback.
+# Queried in order; if one times out the next is tried.
+CN_DNS_SERVERS = [
+    "223.5.5.5",    # Alibaba DNS
+    "223.6.6.6",    # Alibaba DNS (secondary)
+    "114.114.114.114",  # 114DNS (China Telecom)
+    "114.114.115.115",  # 114DNS (secondary)
+    "119.29.29.29",     # DNSPod / Tencent
+    "180.76.76.76",     # Baidu DNS
+]
+DNS_TIMEOUT = 5  # seconds per server attempt
+
+
 def resolve_domain(domain: str) -> List[str]:
+    """
+    Resolve a domain using mainland CN DNS servers.
+    Falls back through the CN_DNS_SERVERS list; if all fail,
+    falls back to the system resolver.
+    Returns sorted list of unique IPv4 addresses only
+    (ipnova CN.txt is IPv4-only).
+    """
+    import struct
+
     domain = normalize_domain(domain)
-    ips: set[str] = set()
-    for family in (socket.AF_INET, socket.AF_INET6):
+    if not domain:
+        return []
+
+    def query_udp(server: str, qname: str) -> List[str]:
+        """Minimal DNS A-record query over UDP."""
+        import os, struct, socket as _socket
+
+        # Build a minimal DNS query for A records
+        tx_id = int.from_bytes(os.urandom(2), "big")
+        name_encoded = b"".join(
+            len(part).to_bytes(1, "big") + part.encode()
+            for part in qname.split(".")
+        ) + b"\x00"
+        header = struct.pack(">HHHHHH", tx_id, 0x0100, 1, 0, 0, 0)
+        question = name_encoded + struct.pack(">HH", 1, 1)  # QTYPE=A, QCLASS=IN
+        packet = header + question
+
+        sock = _socket.socket(_socket.AF_INET, _socket.SOCK_DGRAM)
+        sock.settimeout(DNS_TIMEOUT)
         try:
-            infos = socket.getaddrinfo(domain, None, family, socket.SOCK_STREAM)
-            for info in infos:
-                sockaddr = info[4]
-                if sockaddr:
-                    ips.add(sockaddr[0])
+            sock.sendto(packet, (server, 53))
+            data, _ = sock.recvfrom(512)
+        finally:
+            sock.close()
+
+        # Parse answer section
+        ips: List[str] = []
+        offset = 12  # skip header
+        # Skip question section
+        while offset < len(data) and data[offset] != 0:
+            offset += data[offset] + 1
+        offset += 5  # null byte + QTYPE + QCLASS
+
+        ancount = struct.unpack(">H", data[6:8])[0]
+        for _ in range(ancount):
+            if offset >= len(data):
+                break
+            # Skip name (may be pointer)
+            if data[offset] & 0xC0 == 0xC0:
+                offset += 2
+            else:
+                while offset < len(data) and data[offset] != 0:
+                    offset += data[offset] + 1
+                offset += 1
+            if offset + 10 > len(data):
+                break
+            rtype, _, _, rdlen = struct.unpack(">HHIH", data[offset:offset+10])
+            offset += 10
+            if rtype == 1 and rdlen == 4:  # A record
+                ip = ".".join(str(b) for b in data[offset:offset+4])
+                ips.append(ip)
+            offset += rdlen
+
+        return ips
+
+    # Try each CN DNS server
+    for server in CN_DNS_SERVERS:
+        try:
+            ips = query_udp(server, domain)
+            if ips:
+                return sorted(set(ips))
         except OSError:
-            pass
-    return sorted(ips)
+            continue
+
+    # Final fallback: system resolver (IPv4 only)
+    try:
+        infos = socket.getaddrinfo(domain, None, socket.AF_INET, socket.SOCK_STREAM)
+        return sorted({info[4][0] for info in infos})
+    except OSError:
+        return []
 
 
 # ---------------------------------------------------------------------------

@@ -55,9 +55,7 @@ jobs:
             data/domains_metadata.csv \
             data/metadata_stats.json \
             data/manual_source_validation.json \
-            dist/domains.txt \
-            dist/seed_domains.txt \
-            dist/extended_domains.txt
+            dist/domains.txt
           git diff --cached --quiet && echo "No changes." || (
             git commit -m "chore: auto-update $(date -u +%Y-%m-%d)"
             git push
