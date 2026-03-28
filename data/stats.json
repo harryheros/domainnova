@@ -1,5 +1,15 @@
 {
-  "total": 1072,
-  "dist": 551,
-  "timestamp": "2026-03-27T15:21:05Z"
+  "total_domains": 1205,
+  "dist_domains": 641,
+  "seed_domains": 545,
+  "extended_domains": 660,
+  "score_bands": {
+    "cn": 641,
+    "non_cn": 564
+  },
+  "source_counts": {
+    "seed": 545,
+    "extended": 660
+  },
+  "generated_at": "2026-03-28T12:00:43Z"
 }
