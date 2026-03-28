@@ -11,10 +11,9 @@ Checks:
 Output: JSON to stdout  +  data/manual_source_validation.json
 
 FIXES (v2):
-  - Also writes result to data/manual_source_validation.json
-    (previously stdout-only).
-  - Exit code 1 if any duplicates or invalid domains are found
-    (makes it suitable as a CI pre-flight check).
+  - Also writes result to data/manual_source_validation.json.
+  - Exit code 1 only for genuine errors (duplicates within a file, invalid format).
+  - Cross-source overlap is NOT an error – build_domains.py deduplicates automatically.
 """
 from __future__ import annotations
 
@@ -41,11 +40,11 @@ def parse(path: Path) -> dict:
     if not path.exists():
         return {"error": f"{path} not found"}
 
-    section    = "Unsectioned"
-    domains:   list[tuple[str, str]] = []
-    invalid:   list[str] = []
+    section      = "Unsectioned"
+    domains:     list[tuple[str, str]] = []
+    invalid:     list[str] = []
     unsectioned: list[str] = []
-    counts:    Counter = Counter()
+    counts:      Counter = Counter()
 
     for raw in path.read_text(encoding="utf-8").splitlines():
         line = raw.strip()
@@ -77,14 +76,6 @@ def main() -> None:
     parsed = {name: parse(path) for name, path in FILES.items()}
 
     # Cross-source overlap
-    membership: defaultdict[str, list[str]] = defaultdict(list)
-    for source_name, data in parsed.items():
-        if "error" in data:
-            continue
-        for domain, _section in []:   # parse() doesn't return domain list anymore
-            membership[domain].append(source_name)
-
-    # Re-parse to get domain lists for overlap detection
     domain_sets: dict[str, set[str]] = {}
     for name, path in FILES.items():
         if not path.exists():
@@ -103,28 +94,30 @@ def main() -> None:
     )
 
     result = {
-        "seed":               parsed.get("seed", {}),
-        "extended":           parsed.get("extended", {}),
+        "seed":                 parsed.get("seed", {}),
+        "extended":             parsed.get("extended", {}),
         "cross_source_overlap": overlaps,
     }
 
     output = json.dumps(result, ensure_ascii=False, indent=2)
     print(output)
 
-    # Save to file
     OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
     OUT_JSON.write_text(output + "\n", encoding="utf-8")
 
-    # Exit 1 if there are any issues (useful for CI)
-    has_issues = (
+    # Exit 1 only for genuine errors: duplicates within a file, or invalid format.
+    # Cross-source overlap is NOT an error – build_domains.py deduplicates (seed wins).
+    has_errors = (
         bool(result.get("seed",     {}).get("duplicates"))
         or bool(result.get("extended", {}).get("duplicates"))
         or bool(result.get("seed",     {}).get("invalid"))
         or bool(result.get("extended", {}).get("invalid"))
-        or bool(overlaps)
     )
-    if has_issues:
-        print("\n[!] Validation found issues – see above.", file=sys.stderr)
+    if overlaps:
+        print(f"\n[i] {len(overlaps)} domain(s) in both seed and extended "
+              f"(deduplicated at build time, seed wins).", file=sys.stderr)
+    if has_errors:
+        print("\n[!] Validation found errors – see above.", file=sys.stderr)
         sys.exit(1)
     else:
         print("\n[✓] All checks passed.", file=sys.stderr)

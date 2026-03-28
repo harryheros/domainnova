@@ -1,4 +1,4 @@
-# New extended domains: 574
+# New extended domains: 733
 114la.com
 120ask.com
 126.com
@@ -575,9 +575,6 @@ zoomlion.com
 zs-hospital.sh.cn
 
 # === Supplements from extended.txt ===
-vip.com
-dangdang.com
-kaola.com
 xgimi.net
 zhimi.com
 chunmi.com
@@ -604,7 +601,6 @@ remixai.com
 spacemit.com
 neoremind.com
 yizumi.com
-
 # ===== Additional CN Domains =====
 10099.com.cn
 11467.com
