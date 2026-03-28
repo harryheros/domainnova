@@ -45,6 +45,8 @@ jobs:
           mkdir -p sources/discovery_agents
           echo "[+] Running upstream fetch agent..."
           python sources/discovery_agents/agent_upstream_fetch.py
+          echo "[+] Running IP neighbor agent..."
+          python sources/discovery_agents/agent_ip_neighbor.py
         continue-on-error: true
 
       - name: Build domain artifacts
