@@ -2,7 +2,7 @@
 """
 build_domains.py - DomainNova unified build pipeline.
 
-v2.0 - Self-Evolving Intelligence System
+v5.0 - Stable Production Release
 
 Three-tier architecture:
   Core      (seed.txt)       read-only, manually curated, absolute trust
@@ -62,12 +62,18 @@ JITTER_MAX           = 0.15   # seconds
 # ---------------------------------------------------------------------------
 IPNOVA_CN_URL = "https://raw.githubusercontent.com/harryheros/ipnova/main/output/CN.txt"
 
-# DoH upstreams - round-robin to distribute load
+# DoH upstream - Google only (avoids CN DoH servers for security/attribution reasons)
 DOH_UPSTREAMS = [
     "https://dns.google/resolve",
-    "https://cloudflare-dns.com/dns-query",
 ]
-ECS_SUBNET = "114.114.114.0/24"
+
+# ECS subnets - rotate across major CN ISP regions for accurate GeoDNS responses
+ECS_SUBNETS = [
+    "106.120.151.0/24",  # Beijing Telecom
+    "101.226.4.0/24",    # Shanghai Telecom
+    "121.14.96.0/24",    # Guangdong Telecom
+    "123.125.114.0/24",  # Beijing Unicom
+]
 
 DNS_WEIGHT        = 60
 REGISTRAR_WEIGHT  = 20
@@ -154,6 +160,11 @@ def next_doh_upstream() -> str:
         url = DOH_UPSTREAMS[_doh_index % len(DOH_UPSTREAMS)]
         _doh_index += 1
     return url
+
+
+def random_ecs_subnet() -> str:
+    """Pick a random CN ISP subnet for ECS to get region-accurate GeoDNS responses."""
+    return random.choice(ECS_SUBNETS)
 
 
 # ---------------------------------------------------------------------------
@@ -299,7 +310,7 @@ def resolve_domain(domain: str, session: requests.Session) -> List[str]:
     params = {
         "name":               domain,
         "type":               "A",
-        "edns_client_subnet": ECS_SUBNET,
+        "edns_client_subnet": random_ecs_subnet(),
     }
     try:
         time.sleep(random.uniform(JITTER_MIN, JITTER_MAX))
