@@ -1,13 +1,7 @@
 {
   "seed": {
-    "count": 550,
-    "duplicates": [
-      "dazhongdianping.com",
-      "dnspod.cn",
-      "dnspod.com",
-      "iqiyi.com",
-      "lianjia.com"
-    ],
+    "count": 545,
+    "duplicates": [],
     "invalid": [],
     "unsectioned": []
   },
