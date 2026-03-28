@@ -228,7 +228,6 @@ sjtu.edu.cn
 smartisan.com
 snssdk.com
 spic.com.cn
-sse.com.cn
 suning.com
 swu.edu.cn
 sysu.edu.cn
@@ -272,6 +271,7 @@ xiaomi.net
 ximalaya.com
 xinhua.org
 xinnet.com
+xizang.gov.cn
 xuexi.cn
 yangkeduo.com
 yeah.net
@@ -451,6 +451,7 @@ kpc.com.cn
 kunlun.com
 lagou.com
 laoganma.com
+leader.cn
 leju.com
 lelecha.com
 letv.com
