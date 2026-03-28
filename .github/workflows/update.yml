@@ -47,6 +47,8 @@ jobs:
           python sources/discovery_agents/agent_upstream_fetch.py
           echo "[+] Running IP neighbor agent..."
           python sources/discovery_agents/agent_ip_neighbor.py
+          echo "[+] Running CT logs agent..."
+          python sources/discovery_agents/agent_ct_logs.py
         continue-on-error: true
 
       - name: Build domain artifacts
