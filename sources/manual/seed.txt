@@ -157,8 +157,6 @@ upyun.com
 upaiyun.com
 
 # ===== DNS & Domain =====
-dnspod.cn
-dnspod.com
 alidns.com
 xinnet.com
 west.cn
@@ -438,7 +436,6 @@ kuaishoucdn.com
 ximalaya.com
 douban.com
 douban.fm
-iqiyi.com
 youku.com
 mgtv.com
 huya.com
@@ -469,7 +466,6 @@ yundaex.com
 meituan.com
 meituan.net
 dianping.com
-dazhongdianping.com
 sankuai.com
 ele.me
 didiglobal.com
@@ -572,7 +568,6 @@ vanke.com
 longfor.com
 greenland-group.com
 poly-real-estate.com.cn
-lianjia.com
 beike.com
 
 # ===== Business Intelligence =====
