@@ -1,20 +1,20 @@
 {
   "total_domains": 1505,
-  "dist_domains": 775,
+  "dist_domains": 721,
   "seed_domains": 545,
   "extended_domains": 660,
   "discovery_domains": 300,
   "score_bands": {
-    "cn": 775,
-    "cn_tld_fallback": 251,
-    "non_cn": 479
+    "cn": 721,
+    "cn_tld_fallback": 243,
+    "non_cn": 541
   },
   "source_counts": {
     "seed": 545,
     "extended": 660,
     "discovery": 300
   },
-  "generated_at": "2026-03-28T21:51:44Z",
+  "generated_at": "2026-03-28T22:06:39Z",
   "auto_purged": 0,
   "auto_promoted": 0,
   "processing_errors": 0,
