@@ -43,24 +43,25 @@ IP classification is performed against [IPNova](https://github.com/harryheros/ip
 ## Three-Tier Architecture
 
 ```
-┌─────────────────────────────────────────────────┐
-│  Core (seed.txt)          - manually curated    │
-│  Reliable (extended.txt)  - stable + promoted   │
-│  Discovery (discovery.txt)- auto-harvested      │
-└─────────────────────────────────────────────────┘
-         │ priority: seed > extended > discovery
-         ▼
-┌─────────────────────────────────────────────────┐
-│  Build Pipeline (parallel, 20 workers)          │
-│  Google DoH + ECS → ipnova CIDR match → score  │
-└─────────────────────────────────────────────────┘
-         │
-         ▼
-┌──────────────────┐    ┌──────────────────────────┐
-│  dist/domains.txt│    │  Discovery Lifecycle      │
-│  (score >= 60)   │    │  fail x2  → auto-purge   │
-└──────────────────┘    │  pass x4  → auto-promote │
-                        └──────────────────────────┘
+┌──────────────────────────────────────────────────┐
+│  Core      (seed.txt)       - manually curated   │
+│  Reliable  (extended.txt)   - stable + promoted  │
+│  Discovery (discovery.txt)  - auto-harvested     │
+└──────────────────────────────────────────────────┘
+              │ seed > extended > discovery
+              ▼
+┌──────────────────────────────────────────────────┐
+│  Build Pipeline (parallel, 20 workers)           │
+│  Google DoH + ECS -> ipnova CIDR match -> score  │
+└──────────────────────────────────────────────────┘
+              │
+      ┌───────┴────────┐
+      ▼                ▼
+┌─────────────┐  ┌──────────────────────┐
+│ dist/       │  │ Discovery Lifecycle  │
+│ domains.txt │  │ fail ×2 → purge      │
+│ score >= 60 │  │ pass ×4 → promote    │
+└─────────────┘  └──────────────────────┘
 ```
 
 **Discovery capacity limits:**
