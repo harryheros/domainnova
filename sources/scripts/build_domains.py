@@ -2,7 +2,7 @@
 """
 build_domains.py - DomainNova unified build pipeline.
 
-v5.0 - Stable Production Release
+v2.0 - Self-Evolving Intelligence System
 
 Three-tier architecture:
   Core      (seed.txt)       read-only, manually curated, absolute trust
