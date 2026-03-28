@@ -348,14 +348,27 @@ def build_dns_signal(
 def score_record(
     dns_cn: int, registrar_cn: int, registrant_cn: int, cn_tld: int
 ) -> int:
-    if not dns_cn:
-        return 0
-    return min(100,
-        dns_cn        * DNS_WEIGHT
-        + registrar_cn  * REGISTRAR_WEIGHT
-        + registrant_cn * REGISTRANT_WEIGHT
-        + cn_tld        * CN_TLD_WEIGHT
-    )
+    """
+    Scoring model:
+      Normal path (dns_cn=1): 60 + up to 40 bonus = max 100
+      CN TLD fallback (dns_cn=0, cn_tld=1): fixed 40 pts
+        - .cn domains require ICP filing under MIIT regulation,
+          confirming mainland CN business entity regardless of CDN placement.
+        - Score 40 keeps them in domains.csv for reference but below the
+          dist threshold (60), so they do NOT appear in dist/domains.txt.
+      No signal: 0
+    """
+    if dns_cn:
+        return min(100,
+            dns_cn        * DNS_WEIGHT
+            + registrar_cn  * REGISTRAR_WEIGHT
+            + registrant_cn * REGISTRANT_WEIGHT
+            + cn_tld        * CN_TLD_WEIGHT
+        )
+    if cn_tld:
+        # ICP-backed fallback: retained in CSV, excluded from dist
+        return 40
+    return 0
 
 
 # ---------------------------------------------------------------------------
@@ -549,6 +562,8 @@ def write_stats(path: Path, rows: List[DomainRecord], extra: dict) -> None:
         source_counts[r.source] += 1
         if r.score >= 60:
             score_bands["cn"] += 1
+        elif r.score == 40:
+            score_bands["cn_tld_fallback"] += 1  # .cn ICP-backed, not in dist
         elif r.score >= 30:
             score_bands["gray"] += 1
         else:
