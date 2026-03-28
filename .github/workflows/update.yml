@@ -2,10 +2,15 @@ name: Update China Domain List
 
 on:
   schedule:
-    - cron: "0 2 * * 1"   # Every Monday at 02:00 UTC
+    - cron: "0 2 * * 1"    # Weekly: every Monday 02:00 UTC (build)
+    - cron: "0 3 1 * *"    # Monthly: 1st of month 03:00 UTC (discovery agents)
   workflow_dispatch:
+    inputs:
+      run_agents:
+        description: "Run discovery agents (yes/no)"
+        required: false
+        default: "no"
 
-# Clean up logs and set Node version env
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
@@ -31,6 +36,17 @@ jobs:
         run: python sources/scripts/validate_manual_sources.py
         continue-on-error: true
 
+      # Discovery agents - run monthly or on manual trigger
+      - name: Run discovery agents
+        if: |
+          github.event.schedule == '0 3 1 * *' ||
+          github.event.inputs.run_agents == 'yes'
+        run: |
+          mkdir -p sources/discovery_agents
+          echo "[+] Running upstream fetch agent..."
+          python sources/discovery_agents/agent_upstream_fetch.py
+        continue-on-error: true
+
       - name: Build domain artifacts
         run: python sources/scripts/build_domains.py
 
@@ -44,20 +60,26 @@ jobs:
           echo ""
           echo "=== dist/domains.txt (first 20 lines) ==="
           [ -f dist/domains.txt ] && head -20 dist/domains.txt || echo "domains.txt missing"
+          echo ""
+          echo "=== discovery.txt count ==="
+          [ -f sources/manual/discovery.txt ] && \
+            grep -v "^#" sources/manual/discovery.txt | grep -v "^$" | wc -l || \
+            echo "discovery.txt missing"
 
       - name: Commit and push if changed
         run: |
-          git config user.name "github-actions[bot]"
+          git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          # Add all potential output files
-          git add data/*.json data/*.csv data/*.yaml dist/*.txt
-
-          # Improved logic: Check if there are staged changes
+          git add \
+            data/*.json \
+            data/*.csv \
+            data/*.yaml \
+            dist/*.txt \
+            sources/manual/discovery.txt \
+            sources/manual/extended.txt
           if git diff --cached --quiet; then
             echo "No changes detected. Skipping commit."
           else
-            echo "Changes detected. Committing..."
             git commit -m "chore: auto-update $(date -u +%Y-%m-%d)"
             git push
           fi
