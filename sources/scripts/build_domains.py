@@ -2,7 +2,7 @@
 """
 build_domains.py - DomainNova unified build pipeline.
 
-v5.0 - Stable Production Release
+v6.0 - Reliability & Accuracy Overhaul
 
 Three-tier architecture:
   Core      (seed.txt)       read-only, manually curated, absolute trust
@@ -11,7 +11,8 @@ Three-tier architecture:
 
 Discovery lifecycle rules:
   - Max capacity:    2000 domains (oldest purged when exceeded)
-  - Auto-purge:      removed after 2 consecutive CN-check failures
+  - Auto-purge:      removed after 5 consecutive *definitive* CN-check failures
+                     (empty DNS results are NOT counted as failures)
   - Auto-promote:    moved to extended after 4 consecutive CN-check passes
   - Promote suspend: when extended.txt reaches 3000 domains
 
@@ -21,8 +22,16 @@ Performance boundaries:
   - Per-request jitter:  0.05-0.15s
   - Discovery sample:    300 domains per run (rotated)
 
-DNS: Google DoH + Cloudflare DoH (round-robin) with ECS 114.114.114.0/24
+DNS: Google DoH (primary) + Cloudflare DoH + Quad9 ECS DoH (fallback)
+     with ECS using CN Telecom DNS IPs for accurate GeoDNS.
+     Note: Cloudflare does not support custom ECS param (privacy policy)
+           but its anycast PoPs in CN still provide useful results.
 IP classification: ipnova APNIC-sourced CN CIDR dataset
+
+Scoring:
+  - dns_cn=1 (≥60% of IPs in CN CIDR): base 60 pts + bonus
+  - CN TLD fallback (.cn etc, requires ICP filing): 60 pts (included in dist)
+  - No signal: 0 pts
 """
 
 from __future__ import annotations
@@ -51,7 +60,7 @@ from urllib3.util.retry import Retry
 DISCOVERY_MAX        = 2000   # max domains in discovery.txt
 DISCOVERY_SAMPLE     = 300    # domains sampled from discovery per run
 EXTENDED_MAX         = 3000   # suspend auto-promote when extended reaches this
-PURGE_AFTER_FAILURES = 2      # consecutive CN failures before purge
+PURGE_AFTER_FAILURES = 5      # consecutive CN failures before purge
 PROMOTE_AFTER_PASSES = 4      # consecutive CN passes before promotion
 MAX_WORKERS          = 20     # DoH thread pool size
 JITTER_MIN           = 0.05   # seconds
@@ -62,17 +71,31 @@ JITTER_MAX           = 0.15   # seconds
 # ---------------------------------------------------------------------------
 IPNOVA_CN_URL = "https://raw.githubusercontent.com/harryheros/ipnova/main/output/CN.txt"
 
-# DoH upstream - Google only (avoids CN DoH servers for security/attribution reasons)
+# DoH upstreams - primary Google, fallback Cloudflare & Quad9 ECS
+# Note: Cloudflare (1.1.1.1) does NOT support custom edns_client_subnet param
+#       but is included as a fallback for availability; its CN PoPs still help.
+#       Quad9 ECS (dns11.quad9.net) follows Google's JSON schema and supports ECS.
 DOH_UPSTREAMS = [
-    "https://dns.google/resolve",
+    "https://dns.google/dns-query",
+    "https://cloudflare-dns.com/dns-query",
+    "https://dns11.quad9.net/dns-query",
 ]
 
-# ECS subnets - rotate across major CN ISP regions for accurate GeoDNS responses
+# Which upstreams support the edns_client_subnet query parameter?
+# Cloudflare ignores it (privacy policy), so we skip sending it there.
+DOH_ECS_SUPPORT = {
+    "https://dns.google/dns-query":              True,
+    "https://cloudflare-dns.com/dns-query":      False,
+    "https://dns11.quad9.net/dns-query":         True,
+}
+
+# ECS subnets - use actual China Telecom recursive DNS IPs as ECS hints.
+# These are real ISP DNS server addresses that accurately represent
+# the geographic location for GeoDNS purposes.
 ECS_SUBNETS = [
-    "106.120.151.0/24",  # Beijing Telecom
-    "101.226.4.0/24",    # Shanghai Telecom
-    "121.14.96.0/24",    # Guangdong Telecom
-    "123.125.114.0/24",  # Beijing Unicom
+    "219.141.140.0/24",  # Beijing Telecom DNS
+    "116.228.111.0/24",  # Shanghai Telecom DNS
+    "202.96.128.0/24",   # Guangdong Telecom DNS
 ]
 
 DNS_WEIGHT        = 60
@@ -80,6 +103,7 @@ REGISTRAR_WEIGHT  = 20
 REGISTRANT_WEIGHT = 20
 CN_TLD_WEIGHT     = 10
 INCLUDE_THRESHOLD = 60
+CN_TLD_FALLBACK_SCORE = 60  # .cn requires ICP filing → strong CN signal
 
 ENABLE_RDAP = os.getenv("DOMAINNOVA_RDAP", "0") == "1"
 
@@ -300,18 +324,14 @@ def load_all_sources(repo_root: Path) -> List[Tuple[str, str]]:
 
 
 # ---------------------------------------------------------------------------
-# DNS resolution (Google/Cloudflare DoH + ECS)
+# DNS resolution (Google / Cloudflare / Quad9 DoH + ECS)
 # ---------------------------------------------------------------------------
-def resolve_domain(domain: str, session: requests.Session) -> List[str]:
-    domain = normalize_domain(domain)
-    if not domain:
-        return []
-    upstream = next_doh_upstream()
-    params = {
-        "name":               domain,
-        "type":               "A",
-        "edns_client_subnet": random_ecs_subnet(),
-    }
+def _do_resolve(domain: str, upstream: str, session: requests.Session) -> List[str]:
+    """Single-upstream resolve attempt."""
+    params: dict = {"name": domain, "type": "A"}
+    if DOH_ECS_SUPPORT.get(upstream, False):
+        params["edns_client_subnet"] = random_ecs_subnet()
+    # Cloudflare requires Accept header for JSON mode (already set in session)
     try:
         time.sleep(random.uniform(JITTER_MIN, JITTER_MAX))
         resp = session.get(upstream, params=params, timeout=10)
@@ -324,9 +344,28 @@ def resolve_domain(domain: str, session: requests.Session) -> List[str]:
             if ans.get("type") == 1
         ]
         return sorted(set(ips))
-    except requests.RequestException as exc:
-        log(f"  [warn] DoH failed for {domain}: {exc}")
+    except requests.RequestException:
         return []
+
+
+def resolve_domain(domain: str, session: requests.Session) -> List[str]:
+    domain = normalize_domain(domain)
+    if not domain:
+        return []
+    # Try primary upstream first, then fall back through the list
+    primary = next_doh_upstream()
+    ips = _do_resolve(domain, primary, session)
+    if ips:
+        return ips
+    # Fallback: try remaining upstreams in order
+    for upstream in DOH_UPSTREAMS:
+        if upstream == primary:
+            continue
+        ips = _do_resolve(domain, upstream, session)
+        if ips:
+            return ips
+    log(f"  [warn] All DoH upstreams failed for {domain}")
+    return []
 
 
 # ---------------------------------------------------------------------------
@@ -357,16 +396,16 @@ def build_dns_signal(
 
 
 def score_record(
-    dns_cn: int, registrar_cn: int, registrant_cn: int, cn_tld: int
+    dns_cn: int, registrar_cn: int, registrant_cn: int, cn_tld: int,
+    has_ips: bool = True,
 ) -> int:
     """
     Scoring model:
       Normal path (dns_cn=1): 60 + up to 40 bonus = max 100
-      CN TLD fallback (dns_cn=0, cn_tld=1): fixed 40 pts
+      CN TLD fallback (dns_cn=0, cn_tld=1): CN_TLD_FALLBACK_SCORE (60)
         - .cn domains require ICP filing under MIIT regulation,
           confirming mainland CN business entity regardless of CDN placement.
-        - Score 40 keeps them in domains.csv for reference but below the
-          dist threshold (60), so they do NOT appear in dist/domains.txt.
+        - Score 60 includes them in dist/domains.txt (ICP is strong signal).
       No signal: 0
     """
     if dns_cn:
@@ -377,8 +416,8 @@ def score_record(
             + cn_tld        * CN_TLD_WEIGHT
         )
     if cn_tld:
-        # ICP-backed fallback: retained in CSV, excluded from dist
-        return 40
+        # ICP-backed fallback: .cn requires government filing → strong CN signal
+        return CN_TLD_FALLBACK_SCORE
     return 0
 
 
@@ -395,7 +434,7 @@ def process_domain(
     ips = resolve_domain(domain, session)
     dns_cn, dns_cn_count, dns_total, matched_cidr = build_dns_signal(ips, cidr_lookup)
     tld_flag = cn_tld_flag(domain)
-    score    = score_record(dns_cn, 0, 0, tld_flag)
+    score    = score_record(dns_cn, 0, 0, tld_flag, has_ips=bool(ips))
     return DomainRecord(
         domain=domain,
         dns_cn=dns_cn,
@@ -484,8 +523,13 @@ def manage_discovery_lifecycle(
                 promoted.append(domain)
                 hit_counts.pop(domain, None)
                 fail_counts.pop(domain, None)
+        elif row.dns_total == 0:
+            # DNS returned nothing (timeout / NXDOMAIN / all upstreams failed)
+            # Treat as "unknown" — do NOT count as a failure.
+            # This prevents legitimate domains with flaky DNS from being purged.
+            pass
         else:
-            # Failed CN check
+            # Resolved to IPs but none matched CN CIDRs → definitive failure
             fail_counts[domain] = fail_counts.get(domain, 0) + 1
             hit_counts.pop(domain, None)
 
@@ -572,9 +616,10 @@ def write_stats(path: Path, rows: List[DomainRecord], extra: dict) -> None:
     for r in rows:
         source_counts[r.source] += 1
         if r.score >= 60:
-            score_bands["cn"] += 1
-        elif r.score == 40:
-            score_bands["cn_tld_fallback"] += 1  # .cn ICP-backed, not in dist
+            if r.dns_cn == 1:
+                score_bands["cn_dns"] += 1
+            else:
+                score_bands["cn_tld"] += 1  # .cn ICP-backed, included in dist
         elif r.score >= 30:
             score_bands["gray"] += 1
         else:
