@@ -1,20 +1,20 @@
 {
   "total_domains": 1547,
-  "dist_domains": 1132,
+  "dist_domains": 1050,
   "seed_domains": 545,
   "extended_domains": 702,
   "discovery_domains": 300,
   "score_bands": {
-    "cn_dns": 779,
-    "cn_tld": 353,
-    "non_cn": 415
+    "cn_dns": 806,
+    "cn_tld": 244,
+    "non_cn": 497
   },
   "source_counts": {
     "seed": 545,
     "extended": 702,
     "discovery": 300
   },
-  "generated_at": "2026-04-06T04:40:08Z",
+  "generated_at": "2026-04-08T04:57:16Z",
   "auto_purged": 0,
   "auto_promoted": 0,
   "processing_errors": 0,
