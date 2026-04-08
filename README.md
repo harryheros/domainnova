@@ -2,6 +2,9 @@
 
 > Self-evolving dataset of domains associated with Chinese internet infrastructure, ranked by confidence.
 
+DomainNova is an open intelligence dataset and tooling layer for domain, network, and infrastructure analysis.  
+Core data infrastructure, large-scale scanning systems, and attribution engine are not open-sourced.
+
 [![Update](https://github.com/harryheros/domainnova/actions/workflows/update.yml/badge.svg)](https://github.com/harryheros/domainnova/actions/workflows/update.yml)
 [![Version](https://img.shields.io/badge/version-v2.0-blue)](https://github.com/harryheros/domainnova/releases/tag/v2.0)
 
@@ -9,7 +12,7 @@
 
 ## What this is
 
-A **self-evolving intelligence dataset**, not a proxy ruleset.
+A **self-evolving intelligence dataset for infrastructure attribution**, not a proxy or filtering ruleset.
 
 Each domain is evaluated across multiple independent signals to assess whether its infrastructure is physically located in mainland China or operated by a Chinese-registered entity. The goal is infrastructure attribution, not corporate ownership attribution.
 
@@ -42,7 +45,7 @@ IP classification is performed against [IPNova](https://github.com/harryheros/ip
 
 ## Three-Tier Architecture
 
-```
+```text
 ┌──────────────────────────────────────────────────┐
 │  Core      (seed.txt)       - manually curated   │
 │  Reliable  (extended.txt)   - stable + promoted  │
@@ -87,7 +90,7 @@ All agent output feeds into `discovery.txt` and is verified by the build pipelin
 
 ## Files
 
-```
+```text
 dist/domains.txt                    plain domain list (score >= 60), updated weekly
 data/domains.csv                    full structured database (all signals + score)
 data/stats.json                     build statistics and lifecycle counters
@@ -108,9 +111,7 @@ sources/discovery_agents/           discovery agent scripts
 
 ## Data Format
 
-`data/domains.csv`:
-
-```
+```csv
 domain,dns_cn,dns_cn_count,dns_total,registrar_cn,registrant_cn,cn_tld,score,resolved_ips,matched_cidr,source,updated
 baidu.com,1,3,3,0,0,0,60,110.242.68.66|...,1.0.1.0/24,seed,2026-03-28
 gov.cn,0,0,0,0,0,1,40,,,seed,2026-03-28
@@ -119,7 +120,7 @@ gov.cn,0,0,0,0,0,1,40,,,seed,2026-03-28
 Key fields:
 - `dns_cn` — 1 if majority of resolved IPs are in CN CIDRs
 - `matched_cidr` — the CN CIDR range(s) matched (pipe-separated, up to 5)
-- `cn_tld` — 1 if domain uses a CN TLD (.cn, .中国, etc.)
+- `cn_tld` — 1 if domain uses a CN TLD (`.cn`, `.中国`, etc.)
 - `score` — composite score; 60+ in dist, 40 = ICP fallback, 0 = excluded
 - `source` — `seed`, `extended`, or `discovery`
 
@@ -163,7 +164,7 @@ python sources/scripts/validate_manual_sources.py
 
 ## Contributing
 
-To add domains: edit `sources/manual/seed.txt` or `sources/manual/extended.txt` and open a PR.
+To add domains, edit `sources/manual/seed.txt` or `sources/manual/extended.txt` and open a PR.
 
 Discovery candidates are managed automatically — do not edit `sources/manual/discovery.txt` manually.
 
@@ -171,8 +172,11 @@ Discovery candidates are managed automatically — do not edit `sources/manual/d
 
 ## License
 
-Data: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) — public domain.
+Data: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) — public domain.  
 Scripts: MIT.
+
+This repository contains the public dataset and tooling layer of DomainNova.  
+Core data infrastructure, large-scale scanning systems, and attribution engine are not open-sourced.
 
 ---
 
