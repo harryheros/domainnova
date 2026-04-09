@@ -76,10 +76,14 @@ IPNOVA_CN_URL = "https://raw.githubusercontent.com/harryheros/ipnova/main/output
 #       but is included as a fallback for availability; its CN PoPs still help.
 #       Quad9 ECS (dns11.quad9.net) follows Google's JSON schema and supports ECS.
 # DoH upstreams - tiered by ECS capability
+# Tier 0: self-hosted HK node with CN DNS upstream - rescues CN-only domains
+#         whose authoritative servers refuse queries from overseas recursors.
 # Primary pool: upstreams that honor our edns_client_subnet parameter.
 #               These are queried first (round-robin) for accurate GeoDNS.
 # Fallback pool: upstreams that ignore ECS but still resolve DNS.
 #                Only used if ALL primaries fail for a given domain.
+DOH_RESCUE = "https://nova.iohope.com/dns-query"  # HK node, CN upstreams
+
 DOH_PRIMARIES = [
     "https://dns.google/resolve",           # Google JSON API (ECS)
     "https://dns11.quad9.net/dns-query",    # Quad9 Secure with ECS
@@ -89,15 +93,21 @@ DOH_FALLBACKS = [
     "https://cloudflare-dns.com/dns-query", # Cloudflare (no ECS, privacy)
 ]
 
-# Combined list (primaries first) - kept for backward compat with any iterators
-DOH_UPSTREAMS = DOH_PRIMARIES + DOH_FALLBACKS
+# Combined list (rescue + primaries + fallbacks) - for iteration/reference
+DOH_UPSTREAMS = [DOH_RESCUE] + DOH_PRIMARIES + DOH_FALLBACKS
 
 # Which upstreams support the edns_client_subnet query parameter?
 DOH_ECS_SUPPORT = {
+    DOH_RESCUE:                                  True,   # self-hosted, passes through
     "https://dns.google/resolve":                True,
     "https://dns11.quad9.net/dns-query":         True,
     "https://cloudflare-dns.com/dns-query":      False,
 }
+
+# Runtime-detected mode for the rescue endpoint: "json", "wire", or None (untested)
+# Auto-detected on first use, then locked for the rest of the run.
+_rescue_mode: Optional[str] = None
+_rescue_mode_lock = Lock()
 
 # ECS subnets - use actual China Telecom recursive DNS IPs as ECS hints.
 # These are real ISP DNS server addresses that accurately represent
@@ -175,15 +185,13 @@ def make_session() -> requests.Session:
         total=3,
         backoff_factor=0.5,
         status_forcelist=[429, 500, 502, 503, 504],
-        allowed_methods=["GET"],
+        allowed_methods=["GET", "POST"],
     )
     adapter = HTTPAdapter(max_retries=retry)
     session = requests.Session()
     session.mount("https://", adapter)
-    session.headers.update({
-        "User-Agent":  USER_AGENT,
-        "Accept":      "application/dns-json",
-    })
+    # Accept header is set per-request (JSON vs wireformat differs)
+    session.headers.update({"User-Agent": USER_AGENT})
     return session
 
 
@@ -334,34 +342,201 @@ def load_all_sources(repo_root: Path) -> List[Tuple[str, str]]:
 
 
 # ---------------------------------------------------------------------------
-# DNS resolution (Google / Cloudflare / Quad9 DoH + ECS)
+# DNS resolution (Rescue + Google / Quad9 / Cloudflare DoH + ECS)
 # ---------------------------------------------------------------------------
-def _do_resolve(domain: str, upstream: str, session: requests.Session) -> List[str]:
-    """Single-upstream resolve attempt."""
+def _encode_dns_wire_query(domain: str, ecs_subnet: Optional[str] = None) -> bytes:
+    """
+    Build a minimal RFC 1035 DNS query for A record, with optional ECS (RFC 7871).
+    Returns raw wireformat bytes suitable for RFC 8484 DoH POST/GET.
+    """
+    import struct
+    # Header: ID=0 (DoH caches by content), flags=0x0100 (RD), QD=1, AN=0, NS=0, AR=1 if ECS else 0
+    ar_count = 1 if ecs_subnet else 0
+    header = struct.pack(">HHHHHH", 0, 0x0100, 1, 0, 0, ar_count)
+
+    # Question section: QNAME + QTYPE(A=1) + QCLASS(IN=1)
+    qname = b""
+    for label in domain.rstrip(".").split("."):
+        lb = label.encode("ascii")
+        qname += bytes([len(lb)]) + lb
+    qname += b"\x00"
+    question = qname + struct.pack(">HH", 1, 1)
+
+    # Optional OPT RR with ECS option
+    additional = b""
+    if ecs_subnet:
+        ip_str, _, prefix_str = ecs_subnet.partition("/")
+        prefix = int(prefix_str) if prefix_str else 32
+        ip_bytes = ipaddress.IPv4Address(ip_str).packed
+        # Truncate address bytes to cover the prefix (round up to whole bytes)
+        addr_bytes_needed = (prefix + 7) // 8
+        addr_payload = ip_bytes[:addr_bytes_needed]
+        # ECS option data: family(IPv4=1) + source_prefix + scope_prefix(0) + address
+        ecs_data = struct.pack(">HBB", 1, prefix, 0) + addr_payload
+        # OPT option: code(ECS=8) + length + data
+        opt_rdata = struct.pack(">HH", 8, len(ecs_data)) + ecs_data
+        # OPT RR: name=root + type=OPT(41) + class=udp_size(4096)
+        #         + ttl(ext_rcode+version+flags=0) + rdlength + rdata
+        additional = b"\x00" + struct.pack(">HHIH", 41, 4096, 0, len(opt_rdata)) + opt_rdata
+
+    return header + question + additional
+
+
+def _decode_dns_wire_answer(data: bytes) -> List[str]:
+    """
+    Parse a DNS wireformat response and extract A record IPs.
+    Minimal implementation - handles name compression for answer names.
+    """
+    import struct
+    if len(data) < 12:
+        return []
+    _id, flags, qdcount, ancount, _nscount, _arcount = struct.unpack(">HHHHHH", data[:12])
+    # Check RCODE (low 4 bits of flags) - non-zero means error
+    if flags & 0x000F:
+        return []
+    pos = 12
+
+    # Skip question section
+    for _ in range(qdcount):
+        # Skip QNAME
+        while pos < len(data):
+            length = data[pos]
+            if length == 0:
+                pos += 1
+                break
+            if length & 0xC0:  # compression pointer
+                pos += 2
+                break
+            pos += length + 1
+        pos += 4  # QTYPE + QCLASS
+
+    # Parse answer section
+    ips: List[str] = []
+    for _ in range(ancount):
+        if pos + 12 > len(data):
+            break
+        # Skip NAME (may be a pointer)
+        if data[pos] & 0xC0:
+            pos += 2
+        else:
+            while pos < len(data):
+                length = data[pos]
+                if length == 0:
+                    pos += 1
+                    break
+                if length & 0xC0:
+                    pos += 2
+                    break
+                pos += length + 1
+        if pos + 10 > len(data):
+            break
+        rtype, _rclass, _ttl, rdlength = struct.unpack(">HHIH", data[pos:pos + 10])
+        pos += 10
+        if rtype == 1 and rdlength == 4 and pos + 4 <= len(data):
+            ip = ".".join(str(b) for b in data[pos:pos + 4])
+            ips.append(ip)
+        pos += rdlength
+    return sorted(set(ips))
+
+
+def _resolve_via_json(domain: str, upstream: str, session: requests.Session,
+                     use_ecs: bool) -> Tuple[bool, List[str]]:
+    """
+    Query a DoH upstream using JSON API format.
+    Returns (http_ok, ips). http_ok=False means the server rejected JSON mode.
+    """
     params: dict = {"name": domain, "type": "A"}
-    if DOH_ECS_SUPPORT.get(upstream, False):
+    if use_ecs:
         params["edns_client_subnet"] = random_ecs_subnet()
-    # Cloudflare requires Accept header for JSON mode (already set in session)
     try:
         time.sleep(random.uniform(JITTER_MIN, JITTER_MAX))
-        resp = session.get(upstream, params=params, timeout=10)
+        resp = session.get(upstream, params=params, timeout=10,
+                           headers={"Accept": "application/dns-json"})
         if resp.status_code != 200:
-            return []
+            return False, []
         data = resp.json()
-        ips = [
+        ips = sorted(set(
             ans["data"]
             for ans in data.get("Answer", [])
             if ans.get("type") == 1
-        ]
-        return sorted(set(ips))
+        ))
+        return True, ips
+    except (requests.RequestException, ValueError):
+        return False, []
+
+
+def _resolve_via_wire(domain: str, upstream: str, session: requests.Session,
+                      use_ecs: bool) -> Tuple[bool, List[str]]:
+    """
+    Query a DoH upstream using RFC 8484 wireformat (POST).
+    Returns (http_ok, ips).
+    """
+    ecs = random_ecs_subnet() if use_ecs else None
+    try:
+        wire = _encode_dns_wire_query(domain, ecs_subnet=ecs)
+        time.sleep(random.uniform(JITTER_MIN, JITTER_MAX))
+        resp = session.post(upstream, data=wire, timeout=10,
+                            headers={
+                                "Accept":       "application/dns-message",
+                                "Content-Type": "application/dns-message",
+                            })
+        if resp.status_code != 200:
+            return False, []
+        return True, _decode_dns_wire_answer(resp.content)
     except requests.RequestException:
-        return []
+        return False, []
+
+
+def _resolve_rescue(domain: str, session: requests.Session) -> List[str]:
+    """
+    Query the rescue (self-hosted HK) DoH endpoint.
+    Auto-detects JSON vs wireformat mode on first successful call, then locks.
+    """
+    global _rescue_mode
+    mode = _rescue_mode
+    use_ecs = DOH_ECS_SUPPORT.get(DOH_RESCUE, False)
+
+    if mode == "json":
+        _ok, ips = _resolve_via_json(domain, DOH_RESCUE, session, use_ecs)
+        return ips
+    if mode == "wire":
+        _ok, ips = _resolve_via_wire(domain, DOH_RESCUE, session, use_ecs)
+        return ips
+
+    # Mode not yet detected - try JSON first, then wire
+    ok, ips = _resolve_via_json(domain, DOH_RESCUE, session, use_ecs)
+    if ok:
+        with _rescue_mode_lock:
+            if _rescue_mode is None:
+                _rescue_mode = "json"
+                log(f"  [info] Rescue endpoint mode detected: JSON API")
+        return ips
+    ok, ips = _resolve_via_wire(domain, DOH_RESCUE, session, use_ecs)
+    if ok:
+        with _rescue_mode_lock:
+            if _rescue_mode is None:
+                _rescue_mode = "wire"
+                log(f"  [info] Rescue endpoint mode detected: RFC 8484 wireformat")
+        return ips
+    return []
+
+
+def _do_resolve(domain: str, upstream: str, session: requests.Session) -> List[str]:
+    """Single-upstream resolve attempt (JSON API mode, for public DoH)."""
+    _ok, ips = _resolve_via_json(
+        domain, upstream, session, DOH_ECS_SUPPORT.get(upstream, False)
+    )
+    return ips
 
 
 def resolve_domain(domain: str, session: requests.Session) -> List[str]:
     domain = normalize_domain(domain)
     if not domain:
         return []
+    # Tier 0: self-hosted HK rescue endpoint (CN upstreams, highest priority)
+    ips = _resolve_rescue(domain, session)
+    if ips:
+        return ips
     # Tier 1: try ECS-capable primary (round-robin selection)
     primary = next_doh_upstream()
     ips = _do_resolve(domain, primary, session)
