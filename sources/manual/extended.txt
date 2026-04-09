@@ -504,7 +504,6 @@ tourismchina.org
 tp-link.com.cn
 truliva.com.cn
 u8.cn
-umeng.com
 uni-president.com.cn
 utour.com
 uxin.com
@@ -707,7 +706,6 @@ pic.cn
 qcloudcdn.com
 qidian.com
 qihucdn.com
-qpic.cn
 qyer.com
 renren.com
 runoob.com
