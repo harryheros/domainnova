@@ -82,7 +82,7 @@ IPNOVA_CN_URL = "https://raw.githubusercontent.com/harryheros/ipnova/main/output
 #               These are queried first (round-robin) for accurate GeoDNS.
 # Fallback pool: upstreams that ignore ECS but still resolve DNS.
 #                Only used if ALL primaries fail for a given domain.
-DOH_RESCUE = "https://nova.iohope.com/dns-query"  # HK node, CN upstreams
+DOH_RESCUE = "https://nova.iohope.com/query"  # HK node, CN upstreams
 
 DOH_PRIMARIES = [
     "https://dns.google/resolve",           # Google JSON API (ECS)
