@@ -1,12 +1,12 @@
 {
   "seed": {
-    "count": 545,
+    "count": 556,
     "duplicates": [],
     "invalid": [],
     "unsectioned": []
   },
   "extended": {
-    "count": 775,
+    "count": 773,
     "duplicates": [],
     "invalid": [],
     "unsectioned": [
@@ -515,7 +515,6 @@
       "tp-link.com.cn",
       "truliva.com.cn",
       "u8.cn",
-      "umeng.com",
       "uni-president.com.cn",
       "utour.com",
       "uxin.com",

@@ -23,6 +23,8 @@ amap.com,seed,Alibaba Ecosystem,alibaba,Alibaba Group / Ant Group,platform
 gaode.com,seed,Alibaba Ecosystem,alibaba,Alibaba Group / Ant Group,platform
 fliggy.com,seed,Alibaba Ecosystem,alibaba,Alibaba Group / Ant Group,platform
 dazhongdianping.com,seed,Alibaba Ecosystem,alibaba,Alibaba Group / Ant Group,platform
+umeng.com,seed,Alibaba Ecosystem,alibaba,Alibaba Group / Ant Group,platform
+umengcloud.com,seed,Alibaba Ecosystem,alibaba,Alibaba Group / Ant Group,platform
 tencent.com,seed,Tencent Ecosystem,tencent,Tencent,platform
 tencentcloud.com,seed,Tencent Ecosystem,tencent,Tencent,platform
 tencentcloudapi.com,seed,Tencent Ecosystem,tencent,Tencent,platform
@@ -41,7 +43,9 @@ foxmail.com,seed,Tencent Ecosystem,tencent,Tencent,platform
 weixin.com,seed,Tencent Ecosystem,tencent,Tencent,platform
 wechat.com,seed,Tencent Ecosystem,tencent,Tencent,platform
 wechatpay.com,seed,Tencent Ecosystem,tencent,Tencent,platform
+tenpay.com,seed,Tencent Ecosystem,tencent,Tencent,platform
 qcloud.com,seed,Tencent Ecosystem,tencent,Tencent,platform
+qpic.cn,seed,Tencent Ecosystem,tencent,Tencent,platform
 dnspod.cn,seed,Tencent Ecosystem,tencent,Tencent,platform
 dnspod.com,seed,Tencent Ecosystem,tencent,Tencent,platform
 baidu.com,seed,Baidu Ecosystem,baidu,Baidu,platform
@@ -74,6 +78,7 @@ iesdouyin.com,seed,ByteDance Ecosystem,bytedance,ByteDance,platform
 iesdouyin.net,seed,ByteDance Ecosystem,bytedance,ByteDance,platform
 feishu.cn,seed,ByteDance Ecosystem,bytedance,ByteDance,platform
 larkoffice.com,seed,ByteDance Ecosystem,bytedance,ByteDance,platform
+volcengine.com,seed,ByteDance Ecosystem,bytedance,ByteDance,platform
 volccdn.com,seed,ByteDance Ecosystem,bytedance,ByteDance,platform
 jd.com,seed,JD.com Ecosystem,jd,JD.com,platform
 jdcloud.com,seed,JD.com Ecosystem,jd,JD.com,platform
@@ -146,6 +151,7 @@ chinatelecom.com.cn,seed,Telecom & Backbone,telecom-backbone,National Backbone,t
 chinatelecom.cn,seed,Telecom & Backbone,telecom-backbone,National Backbone,telecom_backbone
 10000.com,seed,Telecom & Backbone,telecom-backbone,National Backbone,telecom_backbone
 189.cn,seed,Telecom & Backbone,telecom-backbone,National Backbone,telecom_backbone
+cbn.cn,seed,Telecom & Backbone,telecom-backbone,National Backbone,telecom_backbone
 cernet.edu.cn,seed,Telecom & Backbone,telecom-backbone,National Backbone,telecom_backbone
 cstnet.cn,seed,Telecom & Backbone,telecom-backbone,National Backbone,telecom_backbone
 caict.ac.cn,seed,Telecom & Backbone,telecom-backbone,National Backbone,telecom_backbone
@@ -245,6 +251,8 @@ liuyang.gov.cn,seed,Provincial Government,unknown,Unknown,uncategorized
 unionpay.com,seed,Finance & Banking,finance-banking,Multi-institution,finance
 unionpayintl.com,seed,Finance & Banking,finance-banking,Multi-institution,finance
 95516.com,seed,Finance & Banking,finance-banking,Multi-institution,finance
+netsunion.com,seed,Finance & Banking,finance-banking,Multi-institution,finance
+nucc.com.cn,seed,Finance & Banking,finance-banking,Multi-institution,finance
 icbc.com,seed,Finance & Banking,finance-banking,Multi-institution,finance
 icbc.com.cn,seed,Finance & Banking,finance-banking,Multi-institution,finance
 boc.cn,seed,Finance & Banking,finance-banking,Multi-institution,finance
@@ -363,6 +371,8 @@ xinhua.org,seed,State Media,unknown,Unknown,uncategorized
 people.com.cn,seed,State Media,unknown,Unknown,uncategorized
 cctv.com,seed,State Media,unknown,Unknown,uncategorized
 cgtn.com,seed,State Media,unknown,Unknown,uncategorized
+cri.cn,seed,State Media,unknown,Unknown,uncategorized
+china.com.cn,seed,State Media,unknown,Unknown,uncategorized
 chinadaily.com.cn,seed,State Media,unknown,Unknown,uncategorized
 rmrb.com.cn,seed,State Media,unknown,Unknown,uncategorized
 gmw.cn,seed,State Media,unknown,Unknown,uncategorized
@@ -455,6 +465,7 @@ youngor.com,seed,Consumer Brands - Apparel,unknown,Unknown,uncategorized
 septwolves.com,seed,Consumer Brands - Apparel,unknown,Unknown,uncategorized
 erdos.com,seed,Consumer Brands - Apparel,unknown,Unknown,uncategorized
 byd.com,seed,Auto & EV,unknown,Unknown,uncategorized
+bydauto.com.cn,seed,Auto & EV,unknown,Unknown,uncategorized
 geely.com,seed,Auto & EV,unknown,Unknown,uncategorized
 nio.cn,seed,Auto & EV,unknown,Unknown,uncategorized
 xpeng.com,seed,Auto & EV,unknown,Unknown,uncategorized
@@ -987,7 +998,6 @@ tourismchina.org,extended,Unsectioned,unknown,Unknown,uncategorized
 tp-link.com.cn,extended,Unsectioned,unknown,Unknown,uncategorized
 truliva.com.cn,extended,Unsectioned,unknown,Unknown,uncategorized
 u8.cn,extended,Unsectioned,unknown,Unknown,uncategorized
-umeng.com,extended,Unsectioned,unknown,Unknown,uncategorized
 uni-president.com.cn,extended,Unsectioned,unknown,Unknown,uncategorized
 utour.com,extended,Unsectioned,unknown,Unknown,uncategorized
 uxin.com,extended,Unsectioned,unknown,Unknown,uncategorized
@@ -1176,7 +1186,6 @@ pic.cn,extended,Additional CN Domains,unknown,Unknown,uncategorized
 qcloudcdn.com,extended,Additional CN Domains,unknown,Unknown,uncategorized
 qidian.com,extended,Additional CN Domains,unknown,Unknown,uncategorized
 qihucdn.com,extended,Additional CN Domains,unknown,Unknown,uncategorized
-qpic.cn,extended,Additional CN Domains,unknown,Unknown,uncategorized
 qyer.com,extended,Additional CN Domains,unknown,Unknown,uncategorized
 renren.com,extended,Additional CN Domains,unknown,Unknown,uncategorized
 runoob.com,extended,Additional CN Domains,unknown,Unknown,uncategorized
