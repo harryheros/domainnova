@@ -75,18 +75,28 @@ IPNOVA_CN_URL = "https://raw.githubusercontent.com/harryheros/ipnova/main/output
 # Note: Cloudflare (1.1.1.1) does NOT support custom edns_client_subnet param
 #       but is included as a fallback for availability; its CN PoPs still help.
 #       Quad9 ECS (dns11.quad9.net) follows Google's JSON schema and supports ECS.
-DOH_UPSTREAMS = [
-    "https://dns.google/dns-query",
-    "https://cloudflare-dns.com/dns-query",
-    "https://dns11.quad9.net/dns-query",
+# DoH upstreams - tiered by ECS capability
+# Primary pool: upstreams that honor our edns_client_subnet parameter.
+#               These are queried first (round-robin) for accurate GeoDNS.
+# Fallback pool: upstreams that ignore ECS but still resolve DNS.
+#                Only used if ALL primaries fail for a given domain.
+DOH_PRIMARIES = [
+    "https://dns.google/resolve",           # Google JSON API (ECS)
+    "https://dns11.quad9.net/dns-query",    # Quad9 Secure with ECS
 ]
 
+DOH_FALLBACKS = [
+    "https://cloudflare-dns.com/dns-query", # Cloudflare (no ECS, privacy)
+]
+
+# Combined list (primaries first) - kept for backward compat with any iterators
+DOH_UPSTREAMS = DOH_PRIMARIES + DOH_FALLBACKS
+
 # Which upstreams support the edns_client_subnet query parameter?
-# Cloudflare ignores it (privacy policy), so we skip sending it there.
 DOH_ECS_SUPPORT = {
-    "https://dns.google/dns-query":              True,
-    "https://cloudflare-dns.com/dns-query":      False,
+    "https://dns.google/resolve":                True,
     "https://dns11.quad9.net/dns-query":         True,
+    "https://cloudflare-dns.com/dns-query":      False,
 }
 
 # ECS subnets - use actual China Telecom recursive DNS IPs as ECS hints.
@@ -178,10 +188,10 @@ def make_session() -> requests.Session:
 
 
 def next_doh_upstream() -> str:
-    """Round-robin across DoH upstreams."""
+    """Round-robin across ECS-capable primary DoH upstreams."""
     global _doh_index
     with COUNTER_LOCK:
-        url = DOH_UPSTREAMS[_doh_index % len(DOH_UPSTREAMS)]
+        url = DOH_PRIMARIES[_doh_index % len(DOH_PRIMARIES)]
         _doh_index += 1
     return url
 
@@ -352,15 +362,21 @@ def resolve_domain(domain: str, session: requests.Session) -> List[str]:
     domain = normalize_domain(domain)
     if not domain:
         return []
-    # Try primary upstream first, then fall back through the list
+    # Tier 1: try ECS-capable primary (round-robin selection)
     primary = next_doh_upstream()
     ips = _do_resolve(domain, primary, session)
     if ips:
         return ips
-    # Fallback: try remaining upstreams in order
-    for upstream in DOH_UPSTREAMS:
+    # Tier 2: try the other ECS-capable primary
+    for upstream in DOH_PRIMARIES:
         if upstream == primary:
             continue
+        ips = _do_resolve(domain, upstream, session)
+        if ips:
+            return ips
+    # Tier 3: fallback to non-ECS upstreams (Cloudflare etc.)
+    # These won't have GeoDNS accuracy but prevent total resolution failure.
+    for upstream in DOH_FALLBACKS:
         ips = _do_resolve(domain, upstream, session)
         if ips:
             return ips
