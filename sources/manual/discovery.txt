@@ -1516,7 +1516,6 @@ hanascitygas.com
 meigeinc.com
 
 # --- ip-neighbor:47.107.51.11 2026-03-28 ---
-bydauto.com.cn
 cms-prod-back.byd.com
 tengshiauto.com
 yangwangauto.com

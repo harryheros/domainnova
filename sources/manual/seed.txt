@@ -27,6 +27,8 @@ amap.com
 gaode.com
 fliggy.com
 dazhongdianping.com
+umeng.com
+umengcloud.com
 
 # ===== Tencent Ecosystem =====
 tencent.com
@@ -47,7 +49,9 @@ foxmail.com
 weixin.com
 wechat.com
 wechatpay.com
+tenpay.com
 qcloud.com
+qpic.cn
 dnspod.cn
 dnspod.com
 
@@ -84,6 +88,7 @@ iesdouyin.com
 iesdouyin.net
 feishu.cn
 larkoffice.com
+volcengine.com
 volccdn.com
 
 # ===== JD.com Ecosystem =====
@@ -174,6 +179,7 @@ chinatelecom.com.cn
 chinatelecom.cn
 10000.com
 189.cn
+cbn.cn
 cernet.edu.cn
 cstnet.cn
 caict.ac.cn
@@ -283,6 +289,8 @@ liuyang.gov.cn
 unionpay.com
 unionpayintl.com
 95516.com
+netsunion.com
+nucc.com.cn
 icbc.com
 icbc.com.cn
 boc.cn
@@ -413,6 +421,8 @@ xinhua.org
 people.com.cn
 cctv.com
 cgtn.com
+cri.cn
+china.com.cn
 chinadaily.com.cn
 rmrb.com.cn
 gmw.cn
@@ -521,6 +531,7 @@ erdos.com
 
 # ===== Auto & EV =====
 byd.com
+bydauto.com.cn
 geely.com
 nio.cn
 xpeng.com
