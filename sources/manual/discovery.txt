@@ -2064,3 +2064,6 @@ wordlm.com
 qdsrmyy.com
 shuntongtong.com
 wanwan4399.com
+
+# --- upstream:felixonmars-accelerated 2026-04-09 ---
+pinjiesj.com

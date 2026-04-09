@@ -143,6 +143,18 @@
   ecosystem: alibaba
   entity:    Alibaba Group / Ant Group
   category:  platform
+- domain:    umeng.com
+  source:    seed
+  section:   Alibaba Ecosystem
+  ecosystem: alibaba
+  entity:    Alibaba Group / Ant Group
+  category:  platform
+- domain:    umengcloud.com
+  source:    seed
+  section:   Alibaba Ecosystem
+  ecosystem: alibaba
+  entity:    Alibaba Group / Ant Group
+  category:  platform
 - domain:    tencent.com
   source:    seed
   section:   Tencent Ecosystem
@@ -251,7 +263,19 @@
   ecosystem: tencent
   entity:    Tencent
   category:  platform
+- domain:    tenpay.com
+  source:    seed
+  section:   Tencent Ecosystem
+  ecosystem: tencent
+  entity:    Tencent
+  category:  platform
 - domain:    qcloud.com
+  source:    seed
+  section:   Tencent Ecosystem
+  ecosystem: tencent
+  entity:    Tencent
+  category:  platform
+- domain:    qpic.cn
   source:    seed
   section:   Tencent Ecosystem
   ecosystem: tencent
@@ -444,6 +468,12 @@
   entity:    ByteDance
   category:  platform
 - domain:    larkoffice.com
+  source:    seed
+  section:   ByteDance Ecosystem
+  ecosystem: bytedance
+  entity:    ByteDance
+  category:  platform
+- domain:    volcengine.com
   source:    seed
   section:   ByteDance Ecosystem
   ecosystem: bytedance
@@ -876,6 +906,12 @@
   entity:    National Backbone
   category:  telecom_backbone
 - domain:    189.cn
+  source:    seed
+  section:   Telecom & Backbone
+  ecosystem: telecom-backbone
+  entity:    National Backbone
+  category:  telecom_backbone
+- domain:    cbn.cn
   source:    seed
   section:   Telecom & Backbone
   ecosystem: telecom-backbone
@@ -1470,6 +1506,18 @@
   entity:    Multi-institution
   category:  finance
 - domain:    95516.com
+  source:    seed
+  section:   Finance & Banking
+  ecosystem: finance-banking
+  entity:    Multi-institution
+  category:  finance
+- domain:    netsunion.com
+  source:    seed
+  section:   Finance & Banking
+  ecosystem: finance-banking
+  entity:    Multi-institution
+  category:  finance
+- domain:    nucc.com.cn
   source:    seed
   section:   Finance & Banking
   ecosystem: finance-banking
@@ -2183,6 +2231,18 @@
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
+- domain:    cri.cn
+  source:    seed
+  section:   State Media
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    china.com.cn
+  source:    seed
+  section:   State Media
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
 - domain:    chinadaily.com.cn
   source:    seed
   section:   State Media
@@ -2730,6 +2790,12 @@
   entity:    Unknown
   category:  uncategorized
 - domain:    byd.com
+  source:    seed
+  section:   Auto & EV
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    bydauto.com.cn
   source:    seed
   section:   Auto & EV
   ecosystem: unknown
@@ -5927,12 +5993,6 @@
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
-- domain:    umeng.com
-  source:    extended
-  section:   Unsectioned
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
 - domain:    uni-president.com.cn
   source:    extended
   section:   Unsectioned
@@ -7056,12 +7116,6 @@
   entity:    Unknown
   category:  uncategorized
 - domain:    qihucdn.com
-  source:    extended
-  section:   Additional CN Domains
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
-- domain:    qpic.cn
   source:    extended
   section:   Additional CN Domains
   ecosystem: unknown
