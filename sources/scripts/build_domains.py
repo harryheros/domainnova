@@ -154,6 +154,7 @@ class DomainRecord:
     matched_cidr:  str
     source:        str
     updated:       str
+    sticky:        int = 0   # 1 if score was retained from previous run (DNS flake protection)
 
 
 # ---------------------------------------------------------------------------
@@ -614,6 +615,52 @@ def score_record(
 
 
 # ---------------------------------------------------------------------------
+# Previous-run loader (for sticky score fallback on DNS flakes)
+# ---------------------------------------------------------------------------
+def load_previous_rows(path: Path) -> Dict[str, DomainRecord]:
+    """
+    Load the previous run's data/domains.csv into a {domain: DomainRecord} map.
+
+    Used by process_domain() to protect against DNS flakes: if a domain that
+    previously scored >= INCLUDE_THRESHOLD suddenly fails to resolve in the
+    current run, we retain the previous score and mark the row as sticky=1
+    instead of dropping it from dist/domains.txt.
+
+    Returns an empty dict if the file does not exist or is unreadable, so the
+    first-ever build (or a wiped data dir) still works.
+    """
+    if not path.exists():
+        return {}
+    prev: Dict[str, DomainRecord] = {}
+    try:
+        with path.open("r", encoding="utf-8", newline="") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                try:
+                    prev[row["domain"]] = DomainRecord(
+                        domain=row["domain"],
+                        dns_cn=int(row.get("dns_cn", 0) or 0),
+                        dns_cn_count=int(row.get("dns_cn_count", 0) or 0),
+                        dns_total=int(row.get("dns_total", 0) or 0),
+                        registrar_cn=int(row.get("registrar_cn", 0) or 0),
+                        registrant_cn=int(row.get("registrant_cn", 0) or 0),
+                        cn_tld=int(row.get("cn_tld", 0) or 0),
+                        score=int(row.get("score", 0) or 0),
+                        resolved_ips=row.get("resolved_ips", "") or "",
+                        matched_cidr=row.get("matched_cidr", "") or "",
+                        source=row.get("source", "") or "",
+                        updated=row.get("updated", "") or "",
+                        sticky=int(row.get("sticky", 0) or 0),
+                    )
+                except (ValueError, KeyError):
+                    # Skip malformed row; never let one bad line break the build
+                    continue
+    except OSError:
+        return {}
+    return prev
+
+
+# ---------------------------------------------------------------------------
 # Per-domain processor (runs in thread pool)
 # ---------------------------------------------------------------------------
 def process_domain(
@@ -622,11 +669,39 @@ def process_domain(
     session: requests.Session,
     cidr_lookup: dict,
     updated: str,
+    previous: Optional[Dict[str, DomainRecord]] = None,
 ) -> DomainRecord:
     ips = resolve_domain(domain, session)
     dns_cn, dns_cn_count, dns_total, matched_cidr = build_dns_signal(ips, cidr_lookup)
     tld_flag = cn_tld_flag(domain)
     score    = score_record(dns_cn, 0, 0, tld_flag, has_ips=bool(ips))
+
+    # Sticky fallback: if this run couldn't resolve any IPs AND the previous
+    # run had the domain qualified (score >= threshold), keep the old signals.
+    # This prevents transient DNS outages from wiping good domains out of dist.
+    # We only stick on a hard resolution failure (no IPs) — if we DID resolve
+    # IPs but they're no longer in CN CIDRs, that's a real signal change and
+    # we let it through.
+    sticky_flag = 0
+    if previous and not ips:
+        prev = previous.get(domain)
+        if prev and prev.score >= INCLUDE_THRESHOLD:
+            return DomainRecord(
+                domain=domain,
+                dns_cn=prev.dns_cn,
+                dns_cn_count=prev.dns_cn_count,
+                dns_total=prev.dns_total,
+                registrar_cn=prev.registrar_cn,
+                registrant_cn=prev.registrant_cn,
+                cn_tld=prev.cn_tld,
+                score=prev.score,
+                resolved_ips=prev.resolved_ips,
+                matched_cidr=prev.matched_cidr,
+                source=source,          # source may have been reclassified
+                updated=prev.updated,   # keep stale date to signal non-refresh
+                sticky=1,
+            )
+
     return DomainRecord(
         domain=domain,
         dns_cn=dns_cn,
@@ -640,6 +715,7 @@ def process_domain(
         matched_cidr=matched_cidr,
         source=source,
         updated=updated,
+        sticky=sticky_flag,
     )
 
 
@@ -1005,6 +1081,11 @@ def build(repo_root: Path) -> None:
     cn_networks = fetch_cn_cidrs(session)
     cidr_lookup = build_cidr_lookup(cn_networks)
 
+    # Load previous run for sticky fallback (protects against DNS flakes)
+    previous = load_previous_rows(data_csv)
+    if previous:
+        log(f"[+] Loaded {len(previous)} previous records for sticky fallback")
+
     domains = load_all_sources(repo_root)
     log(f"[+] Processing {len(domains)} domains with {MAX_WORKERS} workers...")
 
@@ -1015,7 +1096,7 @@ def build(repo_root: Path) -> None:
     with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
         future_map = {
             executor.submit(
-                process_domain, domain, source, session, cidr_lookup, updated
+                process_domain, domain, source, session, cidr_lookup, updated, previous
             ): domain
             for domain, source in domains
         }
@@ -1048,17 +1129,21 @@ def build(repo_root: Path) -> None:
 
     write_csv(data_csv, rows)
     write_dist(dist_txt, rows)
+    sticky_count = sum(1 for r in rows if r.sticky)
     write_stats(stats_json, rows, extra={
         "auto_purged":        len(purged),
         "auto_promoted":      len(promoted),
         "auto_dead_removed":  len(dead),
         "processing_errors":  errors,
+        "sticky_retained":    sticky_count,
         "workers":            MAX_WORKERS,
         "discovery_sample":   DISCOVERY_SAMPLE,
     })
 
     dist_count = sum(1 for r in rows if r.score >= INCLUDE_THRESHOLD)
     log(f"[+] Build complete: {dist_count} CN domains -> dist/domains.txt")
+    if sticky_count:
+        log(f"[+] {sticky_count} rows retained via sticky fallback (DNS flake protection)")
 
 
 if __name__ == "__main__":
