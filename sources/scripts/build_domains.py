@@ -62,7 +62,7 @@ DISCOVERY_SAMPLE     = 300    # domains sampled from discovery per run
 EXTENDED_MAX         = 3000   # suspend auto-promote when extended reaches this
 PURGE_AFTER_FAILURES = 5      # consecutive CN failures before purge
 PROMOTE_AFTER_PASSES = 4      # consecutive CN passes before promotion
-DEAD_STREAK_THRESHOLD = 3     # consecutive empty-DNS runs before NS confirmation
+DEAD_STREAK_THRESHOLD = 6     # consecutive empty-DNS runs before NS confirmation
 MAX_WORKERS          = 20     # DoH thread pool size
 JITTER_MIN           = 0.05   # seconds
 JITTER_MAX           = 0.15   # seconds
@@ -924,6 +924,14 @@ def detect_dead_domains(
             continue
 
         domain = row.domain
+        if row.sticky:
+            # Sticky rows are protected: this run had a DNS flake but we
+            # retained the previous qualified score. Do NOT count this as
+            # a dead-streak increment, otherwise transient resolver issues
+            # (e.g. a VPS line change) will accumulate and trigger physical
+            # removal from extended.txt / discovery.txt.
+            dead_streak.pop(domain, None)
+            continue
         if row.dns_total == 0:
             # No IPs at all this run
             dead_streak[domain] = dead_streak.get(domain, 0) + 1
