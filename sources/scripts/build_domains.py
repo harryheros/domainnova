@@ -62,6 +62,7 @@ DISCOVERY_SAMPLE     = 300    # domains sampled from discovery per run
 EXTENDED_MAX         = 3000   # suspend auto-promote when extended reaches this
 PURGE_AFTER_FAILURES = 5      # consecutive CN failures before purge
 PROMOTE_AFTER_PASSES = 4      # consecutive CN passes before promotion
+DEAD_STREAK_THRESHOLD = 3     # consecutive empty-DNS runs before NS confirmation
 MAX_WORKERS          = 20     # DoH thread pool size
 JITTER_MIN           = 0.05   # seconds
 JITTER_MAX           = 0.15   # seconds
@@ -778,6 +779,167 @@ def manage_discovery_lifecycle(
 
 
 # ---------------------------------------------------------------------------
+# Dead domain auto-detection
+# ---------------------------------------------------------------------------
+def _query_ns_record(domain: str, session: requests.Session) -> bool:
+    """
+    Check if a domain has ANY NS record via overseas DoH.
+    Returns True if NS records exist (domain is registered), False otherwise.
+
+    NS records are returned by the TLD servers themselves, so they are NOT
+    subject to the geo-blocking that affects A records. If Google DoH cannot
+    find any NS record for a domain, it means the domain is truly dead
+    (expired, deleted, or never existed).
+
+    Uses Google DoH JSON API directly (type=NS). Short timeout to avoid
+    blocking the pipeline on dead domains.
+    """
+    try:
+        time.sleep(random.uniform(JITTER_MIN, JITTER_MAX))
+        resp = session.get(
+            "https://dns.google/resolve",
+            params={"name": domain, "type": "NS"},
+            timeout=5,
+            headers={"Accept": "application/dns-json"},
+        )
+        if resp.status_code != 200:
+            return True  # On HTTP error, play safe and assume alive
+        data = resp.json()
+        # Status 0 = NOERROR, 3 = NXDOMAIN
+        status = data.get("Status", 0)
+        if status == 3:
+            return False  # NXDOMAIN: definitively dead
+        # Look for NS records in Answer or Authority section
+        # (some TLDs return NS in Authority rather than Answer)
+        for section in ("Answer", "Authority"):
+            for rec in data.get(section, []):
+                if rec.get("type") == 2:  # NS record type
+                    return True
+        return False
+    except (requests.RequestException, ValueError):
+        # On network error, play safe and assume alive (don't accidentally purge)
+        return True
+
+
+def detect_dead_domains(
+    repo_root: Path,
+    rows: List[DomainRecord],
+    session: requests.Session,
+) -> List[str]:
+    """
+    Detect and remove truly dead domains from extended.txt and discovery.txt.
+
+    Dead = dns_total==0 for DEAD_STREAK_THRESHOLD consecutive runs AND
+           NS record confirmation also fails (domain not registered at all).
+
+    Seed.txt is NEVER touched - seed is hand-curated, absolute trust.
+
+    Returns: list of removed domain names.
+    """
+    stats = load_discovery_stats(repo_root)
+    dead_streak: dict = stats.get("dead_streak", {})
+
+    # 1. Update dead_streak counters based on this run's results
+    candidates_for_ns_check: List[str] = []
+    for row in rows:
+        if row.source == "seed":
+            continue  # Never touch seed
+        if row.source not in ("extended", "discovery"):
+            continue
+
+        domain = row.domain
+        if row.dns_total == 0:
+            # No IPs at all this run
+            dead_streak[domain] = dead_streak.get(domain, 0) + 1
+            if dead_streak[domain] >= DEAD_STREAK_THRESHOLD:
+                candidates_for_ns_check.append(domain)
+        else:
+            # Got some IPs - definitely alive, reset streak
+            dead_streak.pop(domain, None)
+
+    if not candidates_for_ns_check:
+        stats["dead_streak"] = dead_streak
+        save_discovery_stats(repo_root, stats)
+        return []
+
+    log(f"[+] Dead domain check: {len(candidates_for_ns_check)} candidates "
+        f"(streak >= {DEAD_STREAK_THRESHOLD})")
+
+    # 2. Parallel NS queries to confirm which are truly dead
+    confirmed_dead: List[str] = []
+    rescued: List[str] = []
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+        future_map = {
+            executor.submit(_query_ns_record, d, session): d
+            for d in candidates_for_ns_check
+        }
+        for future in concurrent.futures.as_completed(future_map):
+            domain = future_map[future]
+            try:
+                has_ns = future.result()
+            except Exception:
+                has_ns = True  # On error, play safe
+            if has_ns:
+                # Domain is registered, just geo-blocked. Rescue it.
+                rescued.append(domain)
+                dead_streak.pop(domain, None)
+            else:
+                # NS query confirmed: domain is truly dead
+                confirmed_dead.append(domain)
+                dead_streak.pop(domain, None)
+
+    if rescued:
+        log(f"  [info] Rescued {len(rescued)} domains (NS records exist, "
+            f"treating as geo-blocked not dead)")
+
+    if not confirmed_dead:
+        stats["dead_streak"] = dead_streak
+        save_discovery_stats(repo_root, stats)
+        return []
+
+    # 3. Remove confirmed-dead domains from extended.txt and discovery.txt
+    dead_set = set(confirmed_dead)
+    dead_by_source: Dict[str, List[str]] = {"extended": [], "discovery": []}
+    for row in rows:
+        if row.domain in dead_set and row.source in dead_by_source:
+            dead_by_source[row.source].append(row.domain)
+
+    for source_name, file_name in [("extended", "extended.txt"),
+                                    ("discovery", "discovery.txt")]:
+        to_remove = set(dead_by_source[source_name])
+        if not to_remove:
+            continue
+        path = repo_root / "sources" / "manual" / file_name
+        if not path.exists():
+            continue
+        lines = path.read_text(encoding="utf-8").splitlines()
+        kept = []
+        for line in lines:
+            stripped = line.strip()
+            if stripped.startswith("#") or not stripped:
+                kept.append(line)
+            elif normalize_domain(stripped) not in to_remove:
+                kept.append(line)
+        path.write_text("\n".join(kept) + "\n", encoding="utf-8")
+        log(f"  [info] Removed {len(to_remove)} dead domains from {file_name}")
+
+    # 4. Append to dead_domains.log for audit trail
+    log_path = repo_root / "data" / "dead_domains.log"
+    log_path.parent.mkdir(parents=True, exist_ok=True)
+    timestamp = time.strftime("%Y-%m-%d %H:%M:%SZ", time.gmtime())
+    with log_path.open("a", encoding="utf-8") as f:
+        for domain in sorted(confirmed_dead):
+            # Find the source this domain came from
+            src = next((s for s in ("extended", "discovery")
+                        if domain in dead_by_source[s]), "unknown")
+            f.write(f"{timestamp}\t{src}\t{domain}\n")
+
+    stats["dead_streak"] = dead_streak
+    save_discovery_stats(repo_root, stats)
+    return confirmed_dead
+
+
+# ---------------------------------------------------------------------------
 # Writers
 # ---------------------------------------------------------------------------
 def write_csv(path: Path, rows: List[DomainRecord]) -> None:
@@ -879,11 +1041,17 @@ def build(repo_root: Path) -> None:
     if promoted:
         log(f"[+] Promoted {len(promoted)} discovery domains -> extended")
 
+    # Dead domain auto-detection (NS-confirmed)
+    dead = detect_dead_domains(repo_root, rows, session)
+    if dead:
+        log(f"[+] Removed {len(dead)} dead domains (NS confirmed non-existent)")
+
     write_csv(data_csv, rows)
     write_dist(dist_txt, rows)
     write_stats(stats_json, rows, extra={
         "auto_purged":        len(purged),
         "auto_promoted":      len(promoted),
+        "auto_dead_removed":  len(dead),
         "processing_errors":  errors,
         "workers":            MAX_WORKERS,
         "discovery_sample":   DISCOVERY_SAMPLE,
