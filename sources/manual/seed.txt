@@ -3,23 +3,18 @@
 # Institutionally anchored: ICP-mandated, MLPS-regulated, data-residency enforced
 
 # ===== Alibaba Ecosystem =====
-alibaba.com
-alibabacloud.com
 alibabacloud.net
-alibabagroup.com
 aliyun.com
 aliyun.cn
 aliyuncs.com
 aliyundrive.com
 alipay.com
-alipay.hk
 alipay.net
 alipayobjects.com
 alipayplus.com
 taobao.com
 taobao.net
 tmall.com
-tmall.hk
 1688.com
 antgroup.com
 dingtalk.com
@@ -32,7 +27,6 @@ umengcloud.com
 
 # ===== Tencent Ecosystem =====
 tencent.com
-tencentcloud.com
 tencentcloudapi.com
 tencentcos.com
 tencentclb.com
@@ -47,7 +41,6 @@ qq.com
 qqmusic.com
 foxmail.com
 weixin.com
-wechat.com
 wechatpay.com
 tenpay.com
 qcloud.com
@@ -74,7 +67,6 @@ qiyi.com
 qiyipic.com
 
 # ===== ByteDance Ecosystem =====
-bytedance.com
 bytedance.net
 douyin.com
 douyincdn.com
@@ -105,14 +97,12 @@ jddj.com
 xiaomi.com
 xiaomi.net
 mi.com
-miui.com
 mipush.com
 miwifi.com
 xiaoai.com
 
 # ===== Huawei Ecosystem =====
 huawei.com
-huaweicloud.com
 myhuaweicloud.com
 hwclouds.com
 hicloud.com
@@ -125,10 +115,7 @@ obs.cn-north-1.myhuaweicloud.com
 oppo.com
 vivo.com
 meizu.com
-oneplus.com
-realme.com
 smartisan.com
-honor.com
 honorchina.com
 
 # ===== Pinduoduo =====
@@ -287,7 +274,6 @@ liuyang.gov.cn
 
 # ===== Finance & Banking =====
 unionpay.com
-unionpayintl.com
 95516.com
 netsunion.com
 nucc.com.cn
@@ -478,7 +464,6 @@ meituan.net
 dianping.com
 sankuai.com
 ele.me
-didiglobal.com
 
 # ===== E-commerce & Retail =====
 vip.com
@@ -518,7 +503,6 @@ fotile.com
 supor.com
 joyoung.com
 ecovacs.com
-roborock.com
 dreame.com
 
 # ===== Consumer Brands - Apparel =====
@@ -557,7 +541,6 @@ sany.com.cn
 cssc.net
 baosteel.com
 foxconn.com
-dji.com
 
 # ===== Jewelry & Tea =====
 chowtaifook.com
@@ -612,7 +595,6 @@ hdslb.com
 gifshow.com
 ksapisrv.com
 ixigua.com
-larksuite.com
 meituanmaicai.com
 mi-img.com
 mihoyo.com
@@ -628,8 +610,87 @@ tmallgenie.com
 wenxin.cloud
 xhslink.com
 zhimg.com
-jd.hk
 jdcdn.com
 jdl.com
 djicreator.com
 djistatic.com
+
+# ===== User batch additions =====
+17k.com
+22.cn
+35.com
+4.cn
+a9vg.com
+abc.com.cn
+acfun.com
+baihe.com
+bookschina.com
+bugly.qq.com
+cf.qq.com
+china.org.cn
+chinabyte.com
+chuangkit.com
+cloud.tencent.com
+comic.qq.com
+cowtransfer.com
+dnf.qq.com
+doc88.com
+docer.com
+donews.com
+duokan.com
+ename.net
+gaoding.com
+geekpark.net
+hichina.com
+huoshan.com
+iconfont.cn
+icourse163.org
+imooc.com
+ip138.com
+ireader.com
+iteye.com
+itools.cn
+juejin.cn
+juming.com
+kongfz.com
+lanhuapp.com
+leetcode.cn
+leiphone.com
+lenovo.com
+lol.qq.com
+manhuagui.com
+manhuatai.com
+modao.cc
+newsmth.net
+nga.cn
+okbuy.com
+pcpop.com
+pgyer.com
+pingwest.com
+pp.cn
+processon.com
+readnovel.com
+ruochu.com
+shimo.im
+smth.org
+tapd.cn
+teambition.com
+techweb.com.cn
+tongbu.com
+tower.im
+u17.com
+uuu9.com
+vgtime.com
+weishi.com
+weixin.qq.com
+wenku.baidu.com
+wiz.cn
+xin.net
+xs8.cn
+xuetangx.com
+yanxuan.com
+yinxiang.com
+yoho.cn
+yohobuy.com
+yuque.com
+zhihuishu.com

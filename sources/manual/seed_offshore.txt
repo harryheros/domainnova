@@ -1,0 +1,9 @@
+# ===== DomainNova - Seed Domains (Offshore / International) =====
+# Domains operated by PRC-incorporated companies but whose infrastructure
+# is physically located outside Greater China (typically Singapore, US, EU).
+# These are NOT subject to PRC cyberlaw enforcement on their primary endpoints.
+# Examples: overseas editions of Chinese tech giants (international cloud,
+# international apps, investor-relations sites registered in Cayman/BVI).
+
+bytedance.com
+wechat.com

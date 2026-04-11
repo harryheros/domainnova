@@ -1,0 +1,5 @@
+# ===== DomainNova - Seed Domains (Taiwan) =====
+# Manually curated high-confidence TW infrastructure domains.
+# APNIC region: TW. Governed by Taiwan Personal Data Protection Act.
+# Placeholder - entries to be populated by discovery agents and manual review.
+

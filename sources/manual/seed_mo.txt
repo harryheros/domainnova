@@ -1,0 +1,5 @@
+# ===== DomainNova - Seed Domains (Macau) =====
+# Manually curated high-confidence MO infrastructure domains.
+# APNIC region: MO. Governed by Macau Personal Data Protection Act.
+# Placeholder - entries to be populated by discovery agents and manual review.
+
