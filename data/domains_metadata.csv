@@ -1,21 +1,16 @@
 domain,source,section,ecosystem,entity,category
-alibaba.com,seed,Alibaba Ecosystem,alibaba,Alibaba Group / Ant Group,platform
-alibabacloud.com,seed,Alibaba Ecosystem,alibaba,Alibaba Group / Ant Group,platform
 alibabacloud.net,seed,Alibaba Ecosystem,alibaba,Alibaba Group / Ant Group,platform
-alibabagroup.com,seed,Alibaba Ecosystem,alibaba,Alibaba Group / Ant Group,platform
 aliyun.com,seed,Alibaba Ecosystem,alibaba,Alibaba Group / Ant Group,platform
 aliyun.cn,seed,Alibaba Ecosystem,alibaba,Alibaba Group / Ant Group,platform
 aliyuncs.com,seed,Alibaba Ecosystem,alibaba,Alibaba Group / Ant Group,platform
 aliyundrive.com,seed,Alibaba Ecosystem,alibaba,Alibaba Group / Ant Group,platform
 alipay.com,seed,Alibaba Ecosystem,alibaba,Alibaba Group / Ant Group,platform
-alipay.hk,seed,Alibaba Ecosystem,alibaba,Alibaba Group / Ant Group,platform
 alipay.net,seed,Alibaba Ecosystem,alibaba,Alibaba Group / Ant Group,platform
 alipayobjects.com,seed,Alibaba Ecosystem,alibaba,Alibaba Group / Ant Group,platform
 alipayplus.com,seed,Alibaba Ecosystem,alibaba,Alibaba Group / Ant Group,platform
 taobao.com,seed,Alibaba Ecosystem,alibaba,Alibaba Group / Ant Group,platform
 taobao.net,seed,Alibaba Ecosystem,alibaba,Alibaba Group / Ant Group,platform
 tmall.com,seed,Alibaba Ecosystem,alibaba,Alibaba Group / Ant Group,platform
-tmall.hk,seed,Alibaba Ecosystem,alibaba,Alibaba Group / Ant Group,platform
 1688.com,seed,Alibaba Ecosystem,alibaba,Alibaba Group / Ant Group,platform
 antgroup.com,seed,Alibaba Ecosystem,alibaba,Alibaba Group / Ant Group,platform
 dingtalk.com,seed,Alibaba Ecosystem,alibaba,Alibaba Group / Ant Group,platform
@@ -26,7 +21,6 @@ dazhongdianping.com,seed,Alibaba Ecosystem,alibaba,Alibaba Group / Ant Group,pla
 umeng.com,seed,Alibaba Ecosystem,alibaba,Alibaba Group / Ant Group,platform
 umengcloud.com,seed,Alibaba Ecosystem,alibaba,Alibaba Group / Ant Group,platform
 tencent.com,seed,Tencent Ecosystem,tencent,Tencent,platform
-tencentcloud.com,seed,Tencent Ecosystem,tencent,Tencent,platform
 tencentcloudapi.com,seed,Tencent Ecosystem,tencent,Tencent,platform
 tencentcos.com,seed,Tencent Ecosystem,tencent,Tencent,platform
 tencentclb.com,seed,Tencent Ecosystem,tencent,Tencent,platform
@@ -41,7 +35,6 @@ qq.com,seed,Tencent Ecosystem,tencent,Tencent,platform
 qqmusic.com,seed,Tencent Ecosystem,tencent,Tencent,platform
 foxmail.com,seed,Tencent Ecosystem,tencent,Tencent,platform
 weixin.com,seed,Tencent Ecosystem,tencent,Tencent,platform
-wechat.com,seed,Tencent Ecosystem,tencent,Tencent,platform
 wechatpay.com,seed,Tencent Ecosystem,tencent,Tencent,platform
 tenpay.com,seed,Tencent Ecosystem,tencent,Tencent,platform
 qcloud.com,seed,Tencent Ecosystem,tencent,Tencent,platform
@@ -64,7 +57,6 @@ iqiyi.com,seed,Baidu Ecosystem,baidu,Baidu,platform
 iqiyipic.com,seed,Baidu Ecosystem,baidu,Baidu,platform
 qiyi.com,seed,Baidu Ecosystem,baidu,Baidu,platform
 qiyipic.com,seed,Baidu Ecosystem,baidu,Baidu,platform
-bytedance.com,seed,ByteDance Ecosystem,bytedance,ByteDance,platform
 bytedance.net,seed,ByteDance Ecosystem,bytedance,ByteDance,platform
 douyin.com,seed,ByteDance Ecosystem,bytedance,ByteDance,platform
 douyincdn.com,seed,ByteDance Ecosystem,bytedance,ByteDance,platform
@@ -91,12 +83,10 @@ jddj.com,seed,JD.com Ecosystem,jd,JD.com,platform
 xiaomi.com,seed,Xiaomi Ecosystem,xiaomi,Xiaomi,consumer_tech
 xiaomi.net,seed,Xiaomi Ecosystem,xiaomi,Xiaomi,consumer_tech
 mi.com,seed,Xiaomi Ecosystem,xiaomi,Xiaomi,consumer_tech
-miui.com,seed,Xiaomi Ecosystem,xiaomi,Xiaomi,consumer_tech
 mipush.com,seed,Xiaomi Ecosystem,xiaomi,Xiaomi,consumer_tech
 miwifi.com,seed,Xiaomi Ecosystem,xiaomi,Xiaomi,consumer_tech
 xiaoai.com,seed,Xiaomi Ecosystem,xiaomi,Xiaomi,consumer_tech
 huawei.com,seed,Huawei Ecosystem,huawei,Huawei,cloud_device
-huaweicloud.com,seed,Huawei Ecosystem,huawei,Huawei,cloud_device
 myhuaweicloud.com,seed,Huawei Ecosystem,huawei,Huawei,cloud_device
 hwclouds.com,seed,Huawei Ecosystem,huawei,Huawei,cloud_device
 hicloud.com,seed,Huawei Ecosystem,huawei,Huawei,cloud_device
@@ -107,10 +97,7 @@ obs.cn-north-1.myhuaweicloud.com,seed,Huawei Ecosystem,huawei,Huawei,cloud_devic
 oppo.com,seed,Consumer Devices,consumer-devices,Multi-brand,consumer_device
 vivo.com,seed,Consumer Devices,consumer-devices,Multi-brand,consumer_device
 meizu.com,seed,Consumer Devices,consumer-devices,Multi-brand,consumer_device
-oneplus.com,seed,Consumer Devices,consumer-devices,Multi-brand,consumer_device
-realme.com,seed,Consumer Devices,consumer-devices,Multi-brand,consumer_device
 smartisan.com,seed,Consumer Devices,consumer-devices,Multi-brand,consumer_device
-honor.com,seed,Consumer Devices,consumer-devices,Multi-brand,consumer_device
 honorchina.com,seed,Consumer Devices,consumer-devices,Multi-brand,consumer_device
 pinduoduo.com,seed,Pinduoduo,pinduoduo,Pinduoduo,platform
 pinduoduo.net,seed,Pinduoduo,pinduoduo,Pinduoduo,platform
@@ -249,7 +236,6 @@ tianjin.gov.cn,seed,Provincial Government,unknown,Unknown,uncategorized
 yiwu.gov.cn,seed,Provincial Government,unknown,Unknown,uncategorized
 liuyang.gov.cn,seed,Provincial Government,unknown,Unknown,uncategorized
 unionpay.com,seed,Finance & Banking,finance-banking,Multi-institution,finance
-unionpayintl.com,seed,Finance & Banking,finance-banking,Multi-institution,finance
 95516.com,seed,Finance & Banking,finance-banking,Multi-institution,finance
 netsunion.com,seed,Finance & Banking,finance-banking,Multi-institution,finance
 nucc.com.cn,seed,Finance & Banking,finance-banking,Multi-institution,finance
@@ -422,7 +408,6 @@ meituan.net,seed,O2O & Local Services,unknown,Unknown,uncategorized
 dianping.com,seed,O2O & Local Services,unknown,Unknown,uncategorized
 sankuai.com,seed,O2O & Local Services,unknown,Unknown,uncategorized
 ele.me,seed,O2O & Local Services,unknown,Unknown,uncategorized
-didiglobal.com,seed,O2O & Local Services,unknown,Unknown,uncategorized
 vip.com,seed,E-commerce & Retail,unknown,Unknown,uncategorized
 dangdang.com,seed,E-commerce & Retail,unknown,Unknown,uncategorized
 suning.com,seed,E-commerce & Retail,unknown,Unknown,uncategorized
@@ -456,7 +441,6 @@ fotile.com,seed,Consumer Brands - Appliances,unknown,Unknown,uncategorized
 supor.com,seed,Consumer Brands - Appliances,unknown,Unknown,uncategorized
 joyoung.com,seed,Consumer Brands - Appliances,unknown,Unknown,uncategorized
 ecovacs.com,seed,Consumer Brands - Appliances,unknown,Unknown,uncategorized
-roborock.com,seed,Consumer Brands - Appliances,unknown,Unknown,uncategorized
 dreame.com,seed,Consumer Brands - Appliances,unknown,Unknown,uncategorized
 anta.com,seed,Consumer Brands - Apparel,unknown,Unknown,uncategorized
 lining.com,seed,Consumer Brands - Apparel,unknown,Unknown,uncategorized
@@ -487,7 +471,6 @@ sany.com.cn,seed,Manufacturing & Industry,unknown,Unknown,uncategorized
 cssc.net,seed,Manufacturing & Industry,unknown,Unknown,uncategorized
 baosteel.com,seed,Manufacturing & Industry,unknown,Unknown,uncategorized
 foxconn.com,seed,Manufacturing & Industry,unknown,Unknown,uncategorized
-dji.com,seed,Manufacturing & Industry,unknown,Unknown,uncategorized
 chowtaifook.com,seed,Jewelry & Tea,unknown,Unknown,uncategorized
 chow-tai-fook.com,seed,Jewelry & Tea,unknown,Unknown,uncategorized
 laofengxiang.com,seed,Jewelry & Tea,unknown,Unknown,uncategorized
@@ -534,7 +517,6 @@ hdslb.com,seed,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 gifshow.com,seed,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 ksapisrv.com,seed,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 ixigua.com,seed,Additional brand ecosystem domains,unknown,Unknown,uncategorized
-larksuite.com,seed,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 meituanmaicai.com,seed,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 mi-img.com,seed,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 mihoyo.com,seed,Additional brand ecosystem domains,unknown,Unknown,uncategorized
@@ -550,11 +532,88 @@ tmallgenie.com,seed,Additional brand ecosystem domains,unknown,Unknown,uncategor
 wenxin.cloud,seed,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 xhslink.com,seed,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 zhimg.com,seed,Additional brand ecosystem domains,unknown,Unknown,uncategorized
-jd.hk,seed,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 jdcdn.com,seed,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 jdl.com,seed,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 djicreator.com,seed,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 djistatic.com,seed,Additional brand ecosystem domains,unknown,Unknown,uncategorized
+17k.com,seed,User batch additions,unknown,Unknown,uncategorized
+22.cn,seed,User batch additions,unknown,Unknown,uncategorized
+35.com,seed,User batch additions,unknown,Unknown,uncategorized
+4.cn,seed,User batch additions,unknown,Unknown,uncategorized
+a9vg.com,seed,User batch additions,unknown,Unknown,uncategorized
+abc.com.cn,seed,User batch additions,unknown,Unknown,uncategorized
+acfun.com,seed,User batch additions,unknown,Unknown,uncategorized
+baihe.com,seed,User batch additions,unknown,Unknown,uncategorized
+bookschina.com,seed,User batch additions,unknown,Unknown,uncategorized
+bugly.qq.com,seed,User batch additions,unknown,Unknown,uncategorized
+cf.qq.com,seed,User batch additions,unknown,Unknown,uncategorized
+china.org.cn,seed,User batch additions,unknown,Unknown,uncategorized
+chinabyte.com,seed,User batch additions,unknown,Unknown,uncategorized
+chuangkit.com,seed,User batch additions,unknown,Unknown,uncategorized
+cloud.tencent.com,seed,User batch additions,unknown,Unknown,uncategorized
+comic.qq.com,seed,User batch additions,unknown,Unknown,uncategorized
+cowtransfer.com,seed,User batch additions,unknown,Unknown,uncategorized
+dnf.qq.com,seed,User batch additions,unknown,Unknown,uncategorized
+doc88.com,seed,User batch additions,unknown,Unknown,uncategorized
+docer.com,seed,User batch additions,unknown,Unknown,uncategorized
+donews.com,seed,User batch additions,unknown,Unknown,uncategorized
+duokan.com,seed,User batch additions,unknown,Unknown,uncategorized
+ename.net,seed,User batch additions,unknown,Unknown,uncategorized
+gaoding.com,seed,User batch additions,unknown,Unknown,uncategorized
+geekpark.net,seed,User batch additions,unknown,Unknown,uncategorized
+hichina.com,seed,User batch additions,unknown,Unknown,uncategorized
+huoshan.com,seed,User batch additions,unknown,Unknown,uncategorized
+iconfont.cn,seed,User batch additions,unknown,Unknown,uncategorized
+icourse163.org,seed,User batch additions,unknown,Unknown,uncategorized
+imooc.com,seed,User batch additions,unknown,Unknown,uncategorized
+ip138.com,seed,User batch additions,unknown,Unknown,uncategorized
+ireader.com,seed,User batch additions,unknown,Unknown,uncategorized
+iteye.com,seed,User batch additions,unknown,Unknown,uncategorized
+itools.cn,seed,User batch additions,unknown,Unknown,uncategorized
+juejin.cn,seed,User batch additions,unknown,Unknown,uncategorized
+juming.com,seed,User batch additions,unknown,Unknown,uncategorized
+kongfz.com,seed,User batch additions,unknown,Unknown,uncategorized
+lanhuapp.com,seed,User batch additions,unknown,Unknown,uncategorized
+leetcode.cn,seed,User batch additions,unknown,Unknown,uncategorized
+leiphone.com,seed,User batch additions,unknown,Unknown,uncategorized
+lenovo.com,seed,User batch additions,unknown,Unknown,uncategorized
+lol.qq.com,seed,User batch additions,unknown,Unknown,uncategorized
+manhuagui.com,seed,User batch additions,unknown,Unknown,uncategorized
+manhuatai.com,seed,User batch additions,unknown,Unknown,uncategorized
+modao.cc,seed,User batch additions,unknown,Unknown,uncategorized
+newsmth.net,seed,User batch additions,unknown,Unknown,uncategorized
+nga.cn,seed,User batch additions,unknown,Unknown,uncategorized
+okbuy.com,seed,User batch additions,unknown,Unknown,uncategorized
+pcpop.com,seed,User batch additions,unknown,Unknown,uncategorized
+pgyer.com,seed,User batch additions,unknown,Unknown,uncategorized
+pingwest.com,seed,User batch additions,unknown,Unknown,uncategorized
+pp.cn,seed,User batch additions,unknown,Unknown,uncategorized
+processon.com,seed,User batch additions,unknown,Unknown,uncategorized
+readnovel.com,seed,User batch additions,unknown,Unknown,uncategorized
+ruochu.com,seed,User batch additions,unknown,Unknown,uncategorized
+shimo.im,seed,User batch additions,unknown,Unknown,uncategorized
+smth.org,seed,User batch additions,unknown,Unknown,uncategorized
+tapd.cn,seed,User batch additions,unknown,Unknown,uncategorized
+teambition.com,seed,User batch additions,unknown,Unknown,uncategorized
+techweb.com.cn,seed,User batch additions,unknown,Unknown,uncategorized
+tongbu.com,seed,User batch additions,unknown,Unknown,uncategorized
+tower.im,seed,User batch additions,unknown,Unknown,uncategorized
+u17.com,seed,User batch additions,unknown,Unknown,uncategorized
+uuu9.com,seed,User batch additions,unknown,Unknown,uncategorized
+vgtime.com,seed,User batch additions,unknown,Unknown,uncategorized
+weishi.com,seed,User batch additions,unknown,Unknown,uncategorized
+weixin.qq.com,seed,User batch additions,unknown,Unknown,uncategorized
+wenku.baidu.com,seed,User batch additions,unknown,Unknown,uncategorized
+wiz.cn,seed,User batch additions,unknown,Unknown,uncategorized
+xin.net,seed,User batch additions,unknown,Unknown,uncategorized
+xs8.cn,seed,User batch additions,unknown,Unknown,uncategorized
+xuetangx.com,seed,User batch additions,unknown,Unknown,uncategorized
+yanxuan.com,seed,User batch additions,unknown,Unknown,uncategorized
+yinxiang.com,seed,User batch additions,unknown,Unknown,uncategorized
+yoho.cn,seed,User batch additions,unknown,Unknown,uncategorized
+yohobuy.com,seed,User batch additions,unknown,Unknown,uncategorized
+yuque.com,seed,User batch additions,unknown,Unknown,uncategorized
+zhihuishu.com,seed,User batch additions,unknown,Unknown,uncategorized
 0536qz.com,extended,Unsectioned,unknown,Unknown,uncategorized
 10099.com.cn,extended,Unsectioned,unknown,Unknown,uncategorized
 11467.com,extended,Unsectioned,unknown,Unknown,uncategorized
@@ -1038,6 +1097,7 @@ kuku.me,extended,Unsectioned,unknown,Unknown,uncategorized
 kunlun.com,extended,Unsectioned,unknown,Unknown,uncategorized
 lagou.com,extended,Unsectioned,unknown,Unknown,uncategorized
 laoganma.com,extended,Unsectioned,unknown,Unknown,uncategorized
+larksuite.com,extended,Unsectioned,unknown,Unknown,uncategorized
 le-wan.com,extended,Unsectioned,unknown,Unknown,uncategorized
 leader.cn,extended,Unsectioned,unknown,Unknown,uncategorized
 leju.com,extended,Unsectioned,unknown,Unknown,uncategorized
@@ -1531,3 +1591,19 @@ xiaoshituina.vip,extended,Auto-promoted 2026-04-10,unknown,Unknown,uncategorized
 yiqihuihui.com,extended,Auto-promoted 2026-04-10,unknown,Unknown,uncategorized
 zjkeling.com,extended,Auto-promoted 2026-04-10,unknown,Unknown,uncategorized
 zuidaima.com,extended,Auto-promoted 2026-04-10,unknown,Unknown,uncategorized
+app.jsxzhrss.gov.cn,extended,Auto-promoted 2026-04-11,unknown,Unknown,uncategorized
+english.gzhsfy.gov.cn,extended,Auto-promoted 2026-04-11,unknown,Unknown,uncategorized
+hbrc.gov.cn,extended,Auto-promoted 2026-04-11,unknown,Unknown,uncategorized
+ks.gdycjy.gov.cn,extended,Auto-promoted 2026-04-11,unknown,Unknown,uncategorized
+lhsr.sh.gov.cn,extended,Auto-promoted 2026-04-11,unknown,Unknown,uncategorized
+neris.csrc.gov.cn,extended,Auto-promoted 2026-04-11,unknown,Unknown,uncategorized
+sso.singlewindow.gov.cn,extended,Auto-promoted 2026-04-11,unknown,Unknown,uncategorized
+www.gdczt.gov.cn,extended,Auto-promoted 2026-04-11,unknown,Unknown,uncategorized
+www.gdsy.gov.cn,extended,Auto-promoted 2026-04-11,unknown,Unknown,uncategorized
+www.lueyang.gov.cn,extended,Auto-promoted 2026-04-11,unknown,Unknown,uncategorized
+www.sditds.gov.cn,extended,Auto-promoted 2026-04-11,unknown,Unknown,uncategorized
+www.xzq.gov.cn,extended,Auto-promoted 2026-04-11,unknown,Unknown,uncategorized
+xjkunlun.gov.cn,extended,Auto-promoted 2026-04-11,unknown,Unknown,uncategorized
+xzsp.nea.gov.cn,extended,Auto-promoted 2026-04-11,unknown,Unknown,uncategorized
+yunyang.gov.cn,extended,Auto-promoted 2026-04-11,unknown,Unknown,uncategorized
+zjgqt.org,extended,Auto-promoted 2026-04-11,unknown,Unknown,uncategorized
