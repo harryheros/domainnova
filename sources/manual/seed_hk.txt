@@ -1,0 +1,8 @@
+# ===== DomainNova - Seed Domains (Hong Kong) =====
+# Manually curated high-confidence HK infrastructure domains.
+# APNIC region: HK. Governed by PDPO (Hong Kong), not PRC cyberlaw.
+# Scoring signals: dns_hk, hk_tld, registrar_hk, registrant_hk (see PROPOSAL_MULTI_REGION.md)
+
+alipay.hk
+jd.hk
+tmall.hk
