@@ -335,5 +335,86 @@ class TestIpnovaCidrNoiseRegression(unittest.TestCase):
         self.assertEqual(rec.score, 100)
 
 
+class TestStickyBucketRepair(unittest.TestCase):
+    """P1 fix v2.1: sticky fallback auto-repairs empty bucket for seed sources.
+
+    The bug this fixes: during the P1 upgrade, some seed domains continuously
+    fail DoH resolution and therefore always take the sticky-fallback path.
+    Their sticky records came from a pre-P1 CSV that had no bucket column, so
+    load_previous_rows populated bucket='' and sticky fallback propagated it.
+    Result: 105 seed CN domains in production had bucket='' and were dropped
+    from dist/domains_cn.txt despite having score=60 and being in seed.txt.
+
+    Fix: when the sticky record has empty bucket AND the current source is a
+    seed family (seed/seed_hk/seed_mo/seed_tw), re-apply seed-force at sticky
+    time.
+    """
+
+    def setUp(self):
+        self.lookup = build_region_lookup({
+            "CN": [ipaddress.IPv4Network("1.0.0.0/16")],
+            "HK": [ipaddress.IPv4Network("2.0.0.0/16")],
+            "MO": [], "TW": [],
+        })
+        self._orig = bd.resolve_domain
+        bd.resolve_domain = lambda d, s: []  # always fail resolution
+
+    def tearDown(self):
+        bd.resolve_domain = self._orig
+
+    def _stale_prev(self, domain, source, bucket=""):
+        return DomainRecord(
+            domain=domain, dns_cn=1, dns_cn_count=1, dns_total=1,
+            registrar_cn=0, registrant_cn=0, cn_tld=1, score=60,
+            resolved_ips="", matched_cidr="",
+            source=source, updated="2026-04-01T00:00:00Z",
+            sticky=1, bucket=bucket,
+        )
+
+    def test_seed_cn_empty_bucket_repaired_to_CN(self):
+        prev = self._stale_prev("12315.gov.cn", "seed", bucket="")
+        rec = process_domain("12315.gov.cn", "seed", session=None,
+                             region_lookup=self.lookup, updated="now",
+                             previous={"12315.gov.cn": prev})
+        self.assertEqual(rec.sticky, 1)
+        self.assertEqual(rec.bucket, "CN")
+        self.assertEqual(rec.score, 60)  # sticky preserves prev score
+
+    def test_seed_hk_empty_bucket_repaired_to_HK(self):
+        prev = self._stale_prev("some.hk", "seed_hk", bucket="")
+        rec = process_domain("some.hk", "seed_hk", session=None,
+                             region_lookup=self.lookup, updated="now",
+                             previous={"some.hk": prev})
+        self.assertEqual(rec.sticky, 1)
+        self.assertEqual(rec.bucket, "HK")
+
+    def test_non_seed_empty_bucket_stays_empty(self):
+        # extended/discovery have no seed-force path; can't re-derive without IPs
+        prev = self._stale_prev("foo.com", "extended", bucket="")
+        rec = process_domain("foo.com", "extended", session=None,
+                             region_lookup=self.lookup, updated="now",
+                             previous={"foo.com": prev})
+        self.assertEqual(rec.sticky, 1)
+        self.assertEqual(rec.bucket, "")  # stays empty — no signal to rebuild
+
+    def test_existing_sticky_bucket_preserved(self):
+        # If prev.bucket is already set, don't touch it (respect prior decision)
+        prev = self._stale_prev("foo.cn", "seed", bucket="CN")
+        rec = process_domain("foo.cn", "seed", session=None,
+                             region_lookup=self.lookup, updated="now",
+                             previous={"foo.cn": prev})
+        self.assertEqual(rec.bucket, "CN")
+
+    def test_seed_force_not_triggered_when_no_previous(self):
+        # No previous at all → normal path, not sticky; bucket comes from
+        # decide_bucket (which forces CN for source=seed even with no IPs)
+        rec = process_domain("brand.new", "seed", session=None,
+                             region_lookup=self.lookup, updated="now",
+                             previous=None)
+        self.assertEqual(rec.sticky, 0)
+        self.assertEqual(rec.bucket, "CN")
+        self.assertEqual(rec.score, 100)  # normal path gets full seed-force
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
