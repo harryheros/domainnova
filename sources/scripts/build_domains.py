@@ -553,15 +553,24 @@ def load_all_sources(repo_root: Path) -> List[Tuple[str, str]]:
     Total domains processed per run is capped at seed+extended full + 300 discovery.
     """
     seed_path      = repo_root / "sources" / "manual" / "seed.txt"
+    seed_hk_path   = repo_root / "sources" / "manual" / "seed_hk.txt"
+    seed_mo_path   = repo_root / "sources" / "manual" / "seed_mo.txt"
+    seed_tw_path   = repo_root / "sources" / "manual" / "seed_tw.txt"
     extended_path  = repo_root / "sources" / "manual" / "extended.txt"
     discovery_path = repo_root / "sources" / "manual" / "discovery.txt"
 
-    seed_domains     = load_file_domains(seed_path)
-    extended_domains = load_file_domains(extended_path)
-    discovery_all    = load_file_domains(discovery_path)
+    seed_domains      = load_file_domains(seed_path)
+    seed_hk_domains   = load_file_domains(seed_hk_path)
+    seed_mo_domains   = load_file_domains(seed_mo_path)
+    seed_tw_domains   = load_file_domains(seed_tw_path)
+    extended_domains  = load_file_domains(extended_path)
+    discovery_all     = load_file_domains(discovery_path)
 
-    log(f"[+] Sources: seed={len(seed_domains)} extended={len(extended_domains)} "
-        f"discovery={len(discovery_all)}")
+    log(
+        f"[+] Sources: seed={len(seed_domains)} "
+        f"hk={len(seed_hk_domains)} mo={len(seed_mo_domains)} tw={len(seed_tw_domains)} "
+        f"extended={len(extended_domains)} discovery={len(discovery_all)}"
+    )
 
     # Load rotation offset from stats
     stats_path = repo_root / "data" / "discovery_stats.json"
@@ -585,10 +594,22 @@ def load_all_sources(repo_root: Path) -> List[Tuple[str, str]]:
 
     stats["discovery_offset"] = next_offset
 
-    # Priority deduplication
+    # Priority deduplication. Region-specific seeds (seed_hk/mo/tw) take the
+    # HIGHEST priority because they encode an explicit jurisdictional claim
+    # that overrides the legacy mainland seed if a domain ever appears in both.
+    # Order: seed_hk > seed_mo > seed_tw > seed (CN) > extended > discovery.
     domain_map: Dict[str, str] = {}
+    for domain in seed_hk_domains:
+        domain_map[domain] = "seed_hk"
+    for domain in seed_mo_domains:
+        if domain not in domain_map:
+            domain_map[domain] = "seed_mo"
+    for domain in seed_tw_domains:
+        if domain not in domain_map:
+            domain_map[domain] = "seed_tw"
     for domain in seed_domains:
-        domain_map[domain] = "seed"
+        if domain not in domain_map:
+            domain_map[domain] = "seed"
     for domain in extended_domains:
         if domain not in domain_map:
             domain_map[domain] = "extended"
@@ -1080,6 +1101,16 @@ def process_domain(
     score    = score_record(dns_cn, 0, 0, tld_flag, has_ips=bool(ips))
     bucket   = decide_bucket(domain, source, per_ip_buckets, dns_cn)
 
+    # P1 fix: region-specific seeds (seed_hk/mo/tw) are human-curated and get
+    # full trust regardless of IP-based scoring. The current score_record() only
+    # rewards CN signals (dns_cn / cn_tld), so without this override an HK seed
+    # like alipay.hk would compute score=0 and be filtered out by
+    # write_dist_buckets even though decide_bucket correctly assigns bucket=HK.
+    # Mainland "seed" is intentionally NOT overridden — it still earns its
+    # score the normal way so seed_health_check has signal to detect drift.
+    if source in ("seed_hk", "seed_mo", "seed_tw"):
+        score = 100
+
     # Sticky fallback: if this run couldn't resolve any IPs AND the previous
     # run had the domain qualified (score >= threshold), keep the old signals.
     # This prevents transient DNS outages from wiping good domains out of dist.
@@ -1461,10 +1492,24 @@ def write_dist_buckets(dist_dir: Path, rows: List[DomainRecord]) -> Dict[str, in
     generated_at = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
 
     for bucket in ("CN", "HK", "MO", "TW"):
-        included = sorted(
-            r.domain for r in rows
-            if r.bucket == bucket and r.score >= INCLUDE_THRESHOLD
-        )
+        if bucket == "CN":
+            # CN preserves the legacy INCLUDE_THRESHOLD scoring gate, ensuring
+            # byte-level continuity with the pre-P1 dist/domains.txt contract.
+            included = sorted(
+                r.domain for r in rows
+                if r.bucket == bucket and r.score >= INCLUDE_THRESHOLD
+            )
+        else:
+            # Non-CN buckets currently lack a per-bucket scoring model
+            # (score_record only rewards CN signals). For now, bucket assignment
+            # by decide_bucket IS the trust signal — anything that decide_bucket
+            # was confident enough to label HK/MO/TW belongs in dist. This is a
+            # P1.5 simplification; P2 will introduce score_record_for_bucket()
+            # and reunify the gate.
+            included = sorted(
+                r.domain for r in rows
+                if r.bucket == bucket
+            )
         path = dist_dir / f"domains_{bucket.lower()}.txt"
         header = (
             f"# DomainNova - {bucket} domains\n"
@@ -1532,11 +1577,17 @@ def write_stats(
         if bucket_counts is not None:
             buckets_payload[b]["included"] = bucket_counts.get(b, 0)
         else:
-            # Fallback: derive from rows directly (should match write_dist_buckets)
-            buckets_payload[b]["included"] = sum(
-                1 for r in rows
-                if r.bucket.lower() == b and r.score >= INCLUDE_THRESHOLD
-            )
+            # Fallback: mirror write_dist_buckets exactly. CN uses the legacy
+            # INCLUDE_THRESHOLD gate; non-CN buckets accept any classified row.
+            if b == "cn":
+                buckets_payload[b]["included"] = sum(
+                    1 for r in rows
+                    if r.bucket.lower() == b and r.score >= INCLUDE_THRESHOLD
+                )
+            else:
+                buckets_payload[b]["included"] = sum(
+                    1 for r in rows if r.bucket.lower() == b
+                )
     buckets_payload["unclassified"] = unclassified_count  # type: ignore[assignment]
 
     # `dist_domains` semantic per PROPOSAL v1.1 §5.3: sum of included across
