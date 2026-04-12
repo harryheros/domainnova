@@ -1,0 +1,33 @@
+{
+  "checked_at": "2026-04-12T08:35:43Z",
+  "results": {
+    "seed.txt": {
+      "region": "CN",
+      "sampled": 20,
+      "consistent": 10,
+      "rate": 0.9091,
+      "status": "ok"
+    },
+    "seed_hk.txt": {
+      "region": "HK",
+      "sampled": 3,
+      "consistent": 2,
+      "rate": 0.6667,
+      "status": "ok"
+    },
+    "seed_mo.txt": {
+      "region": "MO",
+      "sampled": 0,
+      "consistent": 0,
+      "rate": 0.0,
+      "status": "skipped"
+    },
+    "seed_tw.txt": {
+      "region": "TW",
+      "sampled": 0,
+      "consistent": 0,
+      "rate": 0.0,
+      "status": "skipped"
+    }
+  }
+}
