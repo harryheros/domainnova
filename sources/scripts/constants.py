@@ -85,14 +85,16 @@ INFRA_KEYWORDS: dict[str, list[str]] = {
 }
 
 # ---------------------------------------------------------------------------
-# Geo-Fencing: Negative Signals
+# Geo-Fencing: Negative Signals (for the CN bucket only)
+#
 # Country codes that should NOT be counted as mainland CN even if ASN is CN.
-# Expanded to cover common overseas CDN PoP country codes seen in ip-api results.
+# As of P1 (multi-region), HK/MO/TW are REMOVED from this list — they are no
+# longer "negative" signals globally; they are positive signals for their own
+# buckets and only negative for the CN bucket. The CN scoring path treats this
+# whole list as "definitely-not-CN" countries; bucket assignment (decide_bucket)
+# uses HK/MO/TW positively.
 # ---------------------------------------------------------------------------
 NON_MAINLAND_REGIONS: list[str] = [
-    "HK",  # Hong Kong
-    "MO",  # Macao
-    "TW",  # Taiwan
     "US",  # United States
     "JP",  # Japan
     "SG",  # Singapore
@@ -104,3 +106,35 @@ NON_MAINLAND_REGIONS: list[str] = [
     "CA",  # Canada
     "FR",  # France
 ]
+
+# ---------------------------------------------------------------------------
+# P1 Multi-region: Bucket definitions
+# ---------------------------------------------------------------------------
+# The set of recognized region buckets. A domain is assigned to exactly one
+# of these (or to "" / unclassified). See docs/PROPOSAL_MULTI_REGION.md §2.
+REGION_BUCKETS: set[str] = {"CN", "HK", "MO", "TW"}
+
+# ipnova multi-region CIDR data source. Self-owned upstream → use main branch;
+# no supply-chain pinning required (see PROPOSAL §3.1).
+IPNOVA_BASE: str = "https://raw.githubusercontent.com/harryheros/ipnova/main/output"
+
+REGION_CIDR_URLS: dict[str, str] = {
+    "CN": f"{IPNOVA_BASE}/CN.txt",
+    "HK": f"{IPNOVA_BASE}/HK.txt",
+    "MO": f"{IPNOVA_BASE}/MO.txt",
+    "TW": f"{IPNOVA_BASE}/TW.txt",
+}
+
+# Sanity-check threshold: ipnova region files with fewer than this many lines
+# are treated as transport corruption (truncated 502, partial response, etc.)
+# and the affected bucket is degraded to empty for the current build.
+# Macao is the smallest legitimate region; even MO.txt has hundreds of CIDRs.
+IPNOVA_MIN_LINES: int = 50
+
+# Map TLD suffix -> bucket. Used as +1 vote in decide_bucket().
+TLD_TO_BUCKET: dict[str, str] = {
+    ".cn": "CN",
+    ".hk": "HK",
+    ".mo": "MO",
+    ".tw": "TW",
+}
