@@ -494,22 +494,33 @@ def seed_health_check(
             sample_size = min(SEED_HEALTH_SAMPLE_SIZE, len(domains))
             sample = rng.sample(domains, sample_size)
 
-            consistent = 0
-            resolved   = 0
-            for d in sample:
+            # P1 fix v2.1: concurrent DoH probes. Sampling 20 domains serially
+            # through resolve_domain's rescue+3-DoH fallback chain costs 20-40s
+            # per seed file. With a small thread pool this drops to ~2-5s since
+            # most queries complete in parallel. Keeps behavior identical:
+            # same sample, same stats, same error handling — just faster.
+            def _probe(d):
                 try:
                     ips = resolve_domain(d, session)
-                except Exception as e:  # noqa: BLE001 — never let one DNS error abort
-                    log(f"[WARN] seed_health: resolve {d} raised {type(e).__name__}: {e}")
-                    continue
-                if not ips:
-                    continue
-                resolved += 1
-                # Use first valid IP for the consistency probe (cheap; the
-                # check is statistical, not exhaustive).
-                bucket = ip_to_bucket(ips[0], region_lookup)
-                if bucket == expected_region:
-                    consistent += 1
+                    return (d, ips, None)
+                except Exception as e:  # noqa: BLE001
+                    return (d, [], e)
+
+            consistent = 0
+            resolved   = 0
+            workers = min(10, sample_size)
+            with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as ex:
+                for d, ips, err in ex.map(_probe, sample):
+                    if err is not None:
+                        log(f"[WARN] seed_health: resolve {d} raised "
+                            f"{type(err).__name__}: {err}")
+                        continue
+                    if not ips:
+                        continue
+                    resolved += 1
+                    bucket = ip_to_bucket(ips[0], region_lookup)
+                    if bucket == expected_region:
+                        consistent += 1
 
             if resolved == 0:
                 log(f"[WARN] seed_health: {filename} sampled {sample_size}, "
@@ -1127,6 +1138,15 @@ def process_domain(
     if previous and not ips:
         prev = previous.get(domain)
         if prev and prev.score >= INCLUDE_THRESHOLD:
+            # P1 fix v2.1: if the sticky record has an empty bucket (legacy
+            # CSV migration residue, or a sticky chain that spans the P1 upgrade
+            # from before bucket existed), re-apply the seed-force rule using
+            # the CURRENT source. This recovers domains that persistently fail
+            # DoH but are known-good seeds. Non-seed sources stay unclassified
+            # because we have no way to re-derive their bucket without IPs.
+            sticky_bucket = prev.bucket
+            if not sticky_bucket and source in _SEED_SOURCE_TO_BUCKET:
+                sticky_bucket = _SEED_SOURCE_TO_BUCKET[source]
             return DomainRecord(
                 domain=domain,
                 dns_cn=prev.dns_cn,
@@ -1141,7 +1161,7 @@ def process_domain(
                 source=source,          # source may have been reclassified
                 updated=prev.updated,   # keep stale date to signal non-refresh
                 sticky=1,
-                bucket=prev.bucket,     # restore previous bucket
+                bucket=sticky_bucket,   # restore (and possibly repair) bucket
             )
 
     return DomainRecord(
