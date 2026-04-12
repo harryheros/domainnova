@@ -62,9 +62,17 @@ jobs:
           echo "=== Stats ==="
           [ -f data/stats.json ] && cat data/stats.json || echo "stats.json missing"
           echo ""
-          echo "=== dist/domains.txt (first 20 lines) ==="
-          [ -f dist/domains.txt ] && head -20 dist/domains.txt || echo "domains.txt missing"
-          echo ""
+          for region in cn hk mo tw; do
+            f="dist/domains_${region}.txt"
+            echo "=== $f (first 10 lines) ==="
+            if [ -f "$f" ]; then
+              head -10 "$f"
+              echo "  -- total lines: $(grep -cv '^#' "$f" | head -1)"
+            else
+              echo "$f missing"
+            fi
+            echo ""
+          done
           echo "=== discovery.txt count ==="
           [ -f sources/manual/discovery.txt ] && \
             grep -v "^#" sources/manual/discovery.txt | grep -v "^$" | wc -l || \

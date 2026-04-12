@@ -54,6 +54,24 @@ import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
+# P1 multi-region: bucket constants. Imported lazily-tolerant — if the script
+# is invoked from an unusual cwd, fall back to a path-based import.
+try:
+    from constants import (
+        TLD_TO_BUCKET,
+        REGION_BUCKETS,
+        REGION_CIDR_URLS,
+        IPNOVA_MIN_LINES,
+    )
+except ImportError:
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from constants import (  # type: ignore[no-redef]
+        TLD_TO_BUCKET,
+        REGION_BUCKETS,
+        REGION_CIDR_URLS,
+        IPNOVA_MIN_LINES,
+    )
+
 # ---------------------------------------------------------------------------
 # Hard limits (do not exceed these values)
 # ---------------------------------------------------------------------------
@@ -155,6 +173,7 @@ class DomainRecord:
     source:        str
     updated:       str
     sticky:        int = 0   # 1 if score was retained from previous run (DNS flake protection)
+    bucket:        str = ""  # P1: "CN" | "HK" | "MO" | "TW" | "" (unclassified). See decide_bucket().
 
 
 # ---------------------------------------------------------------------------
@@ -261,6 +280,120 @@ def ip_in_cn_cidrs(ip_str: str, cidr_lookup: dict) -> Optional[str]:
 
 
 # ---------------------------------------------------------------------------
+# P1 Multi-region: ipnova multi-region CIDR loader (Step 4)
+# ---------------------------------------------------------------------------
+# Type alias for the per-region lookup map: {bucket: cidr_lookup}
+# where cidr_lookup is the structure produced by build_cidr_lookup().
+RegionLookup = Dict[str, dict]
+
+
+def _parse_cidr_text(text: str) -> List[ipaddress.IPv4Network]:
+    """Parse a newline-delimited CIDR list (ipnova format). Lines starting
+    with '#' or blank are skipped. Invalid CIDRs are silently dropped."""
+    networks: List[ipaddress.IPv4Network] = []
+    for line in text.splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        try:
+            networks.append(ipaddress.IPv4Network(line, strict=False))
+        except ValueError:
+            continue
+    return networks
+
+
+def _count_cidr_lines(text: str) -> int:
+    """Count non-blank, non-comment lines for the sanity-check threshold."""
+    n = 0
+    for line in text.splitlines():
+        s = line.strip()
+        if s and not s.startswith("#"):
+            n += 1
+    return n
+
+
+def _fetch_one_region_cidrs(
+    session: requests.Session, bucket: str, url: str
+) -> List[ipaddress.IPv4Network]:
+    """Fetch and parse one region's CIDR list, applying the sanity-check
+    fuse. Returns [] on any failure or sanity violation; never raises.
+
+    Sanity check: if line count < IPNOVA_MIN_LINES, treat as transport
+    corruption (truncated 502, partial response, etc.) and degrade the
+    bucket to empty for this build. Logged at WARN level (ERROR for CN
+    because it impacts the existing pipeline).
+    """
+    severity = "ERROR" if bucket == "CN" else "WARN"
+    try:
+        resp = session.get(url, timeout=30)
+        resp.raise_for_status()
+    except (requests.RequestException, OSError) as e:
+        log(f"[{severity}] ipnova {bucket}.txt fetch failed: {e}; bucket degraded to empty")
+        return []
+
+    line_count = _count_cidr_lines(resp.text)
+    if line_count < IPNOVA_MIN_LINES:
+        log(
+            f"[{severity}] ipnova {bucket}.txt sanity-check failed: "
+            f"{line_count} lines < {IPNOVA_MIN_LINES}; bucket degraded to empty"
+        )
+        return []
+
+    networks = _parse_cidr_text(resp.text)
+    log(f"[+] Loaded {len(networks)} {bucket} CIDRs from ipnova")
+    return networks
+
+
+def fetch_region_cidrs(
+    session: requests.Session,
+) -> Dict[str, List[ipaddress.IPv4Network]]:
+    """Fetch all four region CIDR lists from ipnova. Each region is
+    independent — failure of one does not abort the others or the build.
+
+    Returns: {bucket: [networks]} for each bucket in REGION_BUCKETS.
+             Degraded buckets map to an empty list.
+    """
+    log("[+] Fetching ipnova multi-region CIDR lists (CN/HK/MO/TW)...")
+    out: Dict[str, List[ipaddress.IPv4Network]] = {}
+    # Fetch in deterministic order so logs read CN→HK→MO→TW.
+    for bucket in ("CN", "HK", "MO", "TW"):
+        url = REGION_CIDR_URLS.get(bucket)
+        if not url:
+            log(f"[ERROR] REGION_CIDR_URLS missing entry for {bucket}; degraded to empty")
+            out[bucket] = []
+            continue
+        out[bucket] = _fetch_one_region_cidrs(session, bucket, url)
+    return out
+
+
+def build_region_lookup(
+    region_cidrs: Dict[str, List[ipaddress.IPv4Network]],
+) -> RegionLookup:
+    """Wrap existing build_cidr_lookup() per bucket. Empty buckets produce
+    an empty lookup dict (still valid input to ip_in_cn_cidrs)."""
+    return {bucket: build_cidr_lookup(nets) for bucket, nets in region_cidrs.items()}
+
+
+def ip_to_bucket(ip_str: str, region_lookup: RegionLookup) -> str:
+    """Resolve an IPv4 address to its region bucket using the per-region
+    ipnova CIDR lookups.
+
+    Priority order CN > HK > MO > TW: ipnova outputs are mutually exclusive
+    APNIC delegations in practice, but we enforce deterministic precedence
+    as defensive tie-breaking. First-match wins.
+
+    Returns: "CN" | "HK" | "MO" | "TW" | "" (no match in any region)
+    """
+    for bucket in ("CN", "HK", "MO", "TW"):
+        lookup = region_lookup.get(bucket)
+        if not lookup:
+            continue
+        if ip_in_cn_cidrs(ip_str, lookup) is not None:
+            return bucket
+    return ""
+
+
+# ---------------------------------------------------------------------------
 # Three-tier source loader
 # ---------------------------------------------------------------------------
 def load_file_domains(path: Path) -> List[str]:
@@ -278,6 +411,139 @@ def load_file_domains(path: Path) -> List[str]:
             seen.add(domain)
             out.append(domain)
     return out
+
+
+# ---------------------------------------------------------------------------
+# P1 Step 7: Seed health check
+# ---------------------------------------------------------------------------
+SEED_HEALTH_FILES: List[Tuple[str, str]] = [
+    ("seed.txt",    "CN"),
+    ("seed_hk.txt", "HK"),
+    ("seed_mo.txt", "MO"),
+    ("seed_tw.txt", "TW"),
+]
+SEED_HEALTH_SAMPLE_SIZE = 20
+SEED_HEALTH_MIN_FOR_CHECK = 3  # below this, mark as 'skipped'
+
+
+def _classify_health(rate: float) -> str:
+    """Pure function. Maps self-consistency rate to status label.
+    Thresholds per PROPOSAL §4.1: < 0.3 -> error, < 0.6 -> warn, else ok."""
+    if rate < 0.3:
+        return "error"
+    if rate < 0.6:
+        return "warn"
+    return "ok"
+
+
+def seed_health_check(
+    repo_root: Path,
+    region_lookup: RegionLookup,
+    session: requests.Session,
+    rng: Optional[random.Random] = None,
+) -> dict:
+    """
+    P1 Step 7: sample each seed file and verify the resolved IPs land in the
+    bucket the file claims. Writes data/seed_health.json and returns the
+    payload. NEVER raises — any exception is caught and logged ERROR.
+
+    Per PROPOSAL §4: alerts only, no auto-fix, no build abort. The CN seed
+    is the same legacy seed.txt; HK/MO/TW use seed_hk/mo/tw.txt.
+
+    Args:
+        repo_root:     repo root for path resolution
+        region_lookup: ipnova region lookup (already built by caller)
+        session:       requests session for DoH calls
+        rng:           injectable Random for deterministic tests; defaults to module random
+
+    Returns:
+        the payload dict that was written to data/seed_health.json
+    """
+    if rng is None:
+        rng = random.Random()
+
+    payload: dict = {
+        "checked_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "results": {},
+    }
+
+    try:
+        for filename, expected_region in SEED_HEALTH_FILES:
+            path = repo_root / "sources" / "manual" / filename
+            entry: dict = {
+                "region":     expected_region,
+                "sampled":    0,
+                "consistent": 0,
+                "rate":       0.0,
+                "status":     "skipped",
+            }
+
+            try:
+                domains = load_file_domains(path) if path.exists() else []
+            except OSError as e:
+                log(f"[ERROR] seed_health: cannot read {filename}: {e}")
+                payload["results"][filename] = entry
+                continue
+
+            if len(domains) < SEED_HEALTH_MIN_FOR_CHECK:
+                log(f"[+] seed_health: {filename} has {len(domains)} domains (< "
+                    f"{SEED_HEALTH_MIN_FOR_CHECK}); marked skipped")
+                payload["results"][filename] = entry
+                continue
+
+            sample_size = min(SEED_HEALTH_SAMPLE_SIZE, len(domains))
+            sample = rng.sample(domains, sample_size)
+
+            consistent = 0
+            resolved   = 0
+            for d in sample:
+                try:
+                    ips = resolve_domain(d, session)
+                except Exception as e:  # noqa: BLE001 — never let one DNS error abort
+                    log(f"[WARN] seed_health: resolve {d} raised {type(e).__name__}: {e}")
+                    continue
+                if not ips:
+                    continue
+                resolved += 1
+                # Use first valid IP for the consistency probe (cheap; the
+                # check is statistical, not exhaustive).
+                bucket = ip_to_bucket(ips[0], region_lookup)
+                if bucket == expected_region:
+                    consistent += 1
+
+            if resolved == 0:
+                log(f"[WARN] seed_health: {filename} sampled {sample_size}, "
+                    "0 resolved; marked skipped")
+                entry.update({"sampled": sample_size, "consistent": 0,
+                              "rate": 0.0, "status": "skipped"})
+                payload["results"][filename] = entry
+                continue
+
+            rate = consistent / resolved
+            status = _classify_health(rate)
+            entry.update({
+                "sampled":    sample_size,
+                "consistent": consistent,
+                "rate":       round(rate, 4),
+                "status":     status,
+            })
+            payload["results"][filename] = entry
+
+            level = {"ok": "+", "warn": "WARN", "error": "ERROR"}[status]
+            log(f"[{level}] seed_health: {filename} ({expected_region}) "
+                f"{consistent}/{resolved} consistent (rate={rate:.2f}, status={status})")
+
+        # Persist payload
+        out_path = repo_root / "data" / "seed_health.json"
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        out_path.write_text(
+            json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+    except Exception as e:  # noqa: BLE001 — defense in depth, never abort build
+        log(f"[ERROR] seed_health_check failed unexpectedly: {type(e).__name__}: {e}")
+
+    return payload
 
 
 def load_all_sources(repo_root: Path) -> List[Tuple[str, str]]:
@@ -588,6 +854,60 @@ def build_dns_signal(
     return dns_cn, cn_count, dns_total, matched
 
 
+def build_region_signals(
+    ips: List[str], region_lookup: RegionLookup
+) -> Tuple[List[str], int, int, int, str]:
+    """
+    Multi-region successor to build_dns_signal().
+
+    Walks each resolved IP once, asks ip_to_bucket() which region it belongs
+    to, and produces:
+      - per_ip_buckets: list[str] aligned with the input `ips` order; one of
+                        "CN"|"HK"|"MO"|"TW"|"" per IP. Invalid (non-IPv4) inputs
+                        contribute "" to preserve positional alignment.
+      - dns_cn:         1 if CN-bucket IPs are >=60% of valid IPv4 (same threshold
+                        as build_dns_signal); else 0. EXACTLY equivalent to the
+                        old build_dns_signal output when region_lookup contains
+                        only CN data.
+      - dns_cn_count:   count of CN-bucket IPs (== old cn_count)
+      - dns_total:      len(ips), matching old behavior (counts non-IPv4 too)
+      - matched_cidr:   pipe-joined dedup list of up to 5 CN CIDRs (== old matched)
+
+    The first three return values are the inputs decide_bucket() needs;
+    dns_cn_count / dns_total / matched_cidr keep DomainRecord backward compat.
+    """
+    if not ips:
+        return [], 0, 0, 0, ""
+
+    per_ip_buckets: List[str] = []
+    cn_count = 0
+    ipv4_total = 0
+    matched_cn_cidrs: List[str] = []
+    cn_lookup = region_lookup.get("CN") or {}
+
+    for ip in ips:
+        try:
+            ipaddress.IPv4Address(ip)
+        except ValueError:
+            per_ip_buckets.append("")  # keep positional alignment
+            continue
+        ipv4_total += 1
+        bucket = ip_to_bucket(ip, region_lookup)
+        per_ip_buckets.append(bucket)
+        if bucket == "CN":
+            cn_count += 1
+            # Reproduce old build_dns_signal's matched_cidr field exactly:
+            # we need the CIDR string, not just the bucket label.
+            cidr = ip_in_cn_cidrs(ip, cn_lookup)
+            if cidr:
+                matched_cn_cidrs.append(cidr)
+
+    dns_total = len(ips)
+    dns_cn    = int(ipv4_total > 0 and (cn_count / ipv4_total) >= 0.60)
+    matched   = "|".join(list(dict.fromkeys(matched_cn_cidrs))[:5])
+    return per_ip_buckets, dns_cn, cn_count, dns_total, matched
+
+
 def score_record(
     dns_cn: int, registrar_cn: int, registrant_cn: int, cn_tld: int,
     has_ips: bool = True,
@@ -612,6 +932,87 @@ def score_record(
         # ICP-backed fallback: .cn requires government filing → strong CN signal
         return CN_TLD_FALLBACK_SCORE
     return 0
+
+
+# ---------------------------------------------------------------------------
+# P1 Multi-region: pure bucket assignment
+# ---------------------------------------------------------------------------
+# Source-name prefix → bucket (rule 2.2.1, "Seed forced assignment").
+# Only manual seed_xx files force a bucket; extended/discovery do not.
+_SEED_SOURCE_TO_BUCKET: dict[str, str] = {
+    "seed_hk": "HK",
+    "seed_mo": "MO",
+    "seed_tw": "TW",
+    # Note: legacy "seed" (mainland) is NOT auto-forced to CN here. It still
+    # has to earn CN via the IP/TLD vote — preserves existing CN behavior and
+    # lets seed_health_check catch drift.
+}
+
+
+def decide_bucket(
+    domain: str,
+    source: str,
+    ip_buckets: List[str],
+    dns_cn: int,
+) -> str:
+    """
+    Pure function. Assigns a domain to exactly one of CN/HK/MO/TW or "" (unclassified).
+
+    Implements docs/PROPOSAL_MULTI_REGION.md §2.2 decision tree (v1.1):
+      1. Seed forced assignment (seed_hk/mo/tw)
+      2. Resolution-failure handling is the CALLER's job (sticky fallback);
+         this function returns "" if there are no signals.
+      3. Per-IP voting using pre-resolved bucket labels from ipnova CIDR lookup
+      4. dns_cn flag (CN CIDR ≥60% majority) adds +2 to CN
+      5. TLD adds +1 vote to its matching bucket
+      6. Majority decision; tie-break order CN > HK > MO > TW
+
+    Args:
+        domain:     normalized domain (lowercase, no scheme).
+        source:     "seed" | "seed_hk" | "seed_mo" | "seed_tw" | "extended" | "discovery".
+        ip_buckets: list of pre-resolved bucket labels, one per resolved IP. Each
+                    element is "CN" | "HK" | "MO" | "TW" | "" produced by
+                    ip_to_bucket() against the ipnova region lookup. Empty string
+                    means the IP did not match any region table.
+        dns_cn:     1 if build_region_signals flagged CN-CIDR-majority, else 0.
+
+    Returns:
+        "CN" | "HK" | "MO" | "TW" | "" (unclassified)
+    """
+    # ---- Rule 1: seed forced assignment --------------------------------------
+    forced = _SEED_SOURCE_TO_BUCKET.get(source)
+    if forced:
+        return forced
+
+    # ---- Rule 3: per-IP voting -----------------------------------------------
+    votes: dict[str, int] = {"CN": 0, "HK": 0, "MO": 0, "TW": 0}
+    for b in ip_buckets:
+        if b in votes:
+            votes[b] += 1
+
+    # ---- Rule 4: dns_cn boosts CN -------------------------------------------
+    # CN CIDR majority is a strong, curated signal. +2 outweighs a single
+    # HK/TW false positive from a CDN edge node.
+    if dns_cn:
+        votes["CN"] += 2
+
+    # ---- Rule 5: TLD vote (+1) -----------------------------------------------
+    d = domain.lower()
+    for suffix, bucket in TLD_TO_BUCKET.items():
+        if d.endswith(suffix):
+            votes[bucket] += 1
+            break  # only one TLD can match
+
+    # ---- Rule 6: majority + tie-break ----------------------------------------
+    max_vote = max(votes.values())
+    if max_vote == 0:
+        return ""  # unclassified — no positive signal at all
+
+    # Tie-break order: CN > HK > MO > TW
+    for bucket in ("CN", "HK", "MO", "TW"):
+        if votes[bucket] == max_vote:
+            return bucket
+    return ""  # unreachable, but keeps type-checkers happy
 
 
 # ---------------------------------------------------------------------------
@@ -651,6 +1052,7 @@ def load_previous_rows(path: Path) -> Dict[str, DomainRecord]:
                         source=row.get("source", "") or "",
                         updated=row.get("updated", "") or "",
                         sticky=int(row.get("sticky", 0) or 0),
+                        bucket=(row.get("bucket", "") or "").strip().upper(),
                     )
                 except (ValueError, KeyError):
                     # Skip malformed row; never let one bad line break the build
@@ -667,21 +1069,24 @@ def process_domain(
     domain: str,
     source: str,
     session: requests.Session,
-    cidr_lookup: dict,
+    region_lookup: RegionLookup,
     updated: str,
     previous: Optional[Dict[str, DomainRecord]] = None,
 ) -> DomainRecord:
     ips = resolve_domain(domain, session)
-    dns_cn, dns_cn_count, dns_total, matched_cidr = build_dns_signal(ips, cidr_lookup)
+    per_ip_buckets, dns_cn, dns_cn_count, dns_total, matched_cidr = \
+        build_region_signals(ips, region_lookup)
     tld_flag = cn_tld_flag(domain)
     score    = score_record(dns_cn, 0, 0, tld_flag, has_ips=bool(ips))
+    bucket   = decide_bucket(domain, source, per_ip_buckets, dns_cn)
 
     # Sticky fallback: if this run couldn't resolve any IPs AND the previous
     # run had the domain qualified (score >= threshold), keep the old signals.
     # This prevents transient DNS outages from wiping good domains out of dist.
     # We only stick on a hard resolution failure (no IPs) — if we DID resolve
     # IPs but they're no longer in CN CIDRs, that's a real signal change and
-    # we let it through.
+    # we let it through. Per PROPOSAL §6.1, sticky also restores prev.bucket
+    # so domains don't flicker between buckets on DoH jitter.
     sticky_flag = 0
     if previous and not ips:
         prev = previous.get(domain)
@@ -700,6 +1105,7 @@ def process_domain(
                 source=source,          # source may have been reclassified
                 updated=prev.updated,   # keep stale date to signal non-refresh
                 sticky=1,
+                bucket=prev.bucket,     # restore previous bucket
             )
 
     return DomainRecord(
@@ -716,6 +1122,7 @@ def process_domain(
         source=source,
         updated=updated,
         sticky=sticky_flag,
+        bucket=bucket,
     )
 
 
@@ -1038,15 +1445,56 @@ def write_csv(path: Path, rows: List[DomainRecord]) -> None:
             writer.writerow(asdict(r))
 
 
-def write_dist(path: Path, rows: List[DomainRecord]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    included = [r.domain for r in rows if r.score >= INCLUDE_THRESHOLD]
-    path.write_text(
-        "\n".join(included) + ("\n" if included else ""), encoding="utf-8"
-    )
+def write_dist_buckets(dist_dir: Path, rows: List[DomainRecord]) -> Dict[str, int]:
+    """
+    P1 Step 6: write four parallel region dist files.
+
+    For each bucket in CN/HK/MO/TW, write `domains_{bucket}.txt` containing
+    domains that satisfy `r.bucket == bucket AND r.score >= INCLUDE_THRESHOLD`,
+    sorted alphabetically. Empty buckets still get an empty file with header,
+    so subscription endpoints never 404.
+
+    Returns: {bucket_lower: included_count} for use by write_stats.
+    """
+    dist_dir.mkdir(parents=True, exist_ok=True)
+    counts: Dict[str, int] = {}
+    generated_at = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+
+    for bucket in ("CN", "HK", "MO", "TW"):
+        included = sorted(
+            r.domain for r in rows
+            if r.bucket == bucket and r.score >= INCLUDE_THRESHOLD
+        )
+        path = dist_dir / f"domains_{bucket.lower()}.txt"
+        header = (
+            f"# DomainNova - {bucket} domains\n"
+            f"# Generated: {generated_at}\n"
+            f"# Count: {len(included)}\n"
+        )
+        body = "\n".join(included) + ("\n" if included else "")
+        path.write_text(header + body, encoding="utf-8")
+        counts[bucket.lower()] = len(included)
+        log(f"[+] Wrote {len(included):>5} domains -> dist/domains_{bucket.lower()}.txt")
+
+    # P1 v1.1: dist/domains.txt is removed. Clean up the legacy file if a
+    # previous build created it, so the working tree doesn't carry stale state.
+    legacy = dist_dir / "domains.txt"
+    if legacy.exists():
+        try:
+            legacy.unlink()
+            log("[+] Removed legacy dist/domains.txt (P1 v1.1: replaced by domains_cn.txt)")
+        except OSError as e:
+            log(f"[WARN] Could not remove legacy dist/domains.txt: {e}")
+
+    return counts
 
 
-def write_stats(path: Path, rows: List[DomainRecord], extra: dict) -> None:
+def write_stats(
+    path: Path,
+    rows: List[DomainRecord],
+    extra: dict,
+    bucket_counts: Optional[Dict[str, int]] = None,
+) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     score_bands:   Counter = Counter()
     source_counts: Counter = Counter()
@@ -1061,14 +1509,52 @@ def write_stats(path: Path, rows: List[DomainRecord], extra: dict) -> None:
             score_bands["gray"] += 1
         else:
             score_bands["non_cn"] += 1
+
+    # P1 Step 6: per-bucket totals. `included` is computed by write_dist_buckets
+    # (passed via bucket_counts) so the two are guaranteed to agree. `gray` and
+    # `total` are computed here from rows for completeness.
+    buckets_payload: Dict[str, Dict[str, int]] = {}
+    unclassified_count = 0
+    for r in rows:
+        if not r.bucket:
+            unclassified_count += 1
+            continue
+        b = r.bucket.lower()
+        slot = buckets_payload.setdefault(b, {"included": 0, "gray": 0, "total": 0})
+        slot["total"] += 1
+        if r.score >= INCLUDE_THRESHOLD:
+            pass  # 'included' is overwritten below from bucket_counts
+        elif r.score >= 30:
+            slot["gray"] += 1
+    # Ensure all four buckets always present, even when empty
+    for b in ("cn", "hk", "mo", "tw"):
+        buckets_payload.setdefault(b, {"included": 0, "gray": 0, "total": 0})
+        if bucket_counts is not None:
+            buckets_payload[b]["included"] = bucket_counts.get(b, 0)
+        else:
+            # Fallback: derive from rows directly (should match write_dist_buckets)
+            buckets_payload[b]["included"] = sum(
+                1 for r in rows
+                if r.bucket.lower() == b and r.score >= INCLUDE_THRESHOLD
+            )
+    buckets_payload["unclassified"] = unclassified_count  # type: ignore[assignment]
+
+    # `dist_domains` semantic per PROPOSAL v1.1 §5.3: sum of included across
+    # all four buckets (was: CN-only count). Old dashboards continue to read
+    # this key without 404, but the value now reflects total dist size.
+    total_included = sum(
+        buckets_payload[b]["included"] for b in ("cn", "hk", "mo", "tw")
+    )
+
     payload = {
         "total_domains":     len(rows),
-        "dist_domains":      sum(1 for r in rows if r.score >= INCLUDE_THRESHOLD),
+        "dist_domains":      total_included,
         "seed_domains":      source_counts.get("seed", 0),
         "extended_domains":  source_counts.get("extended", 0),
         "discovery_domains": source_counts.get("discovery", 0),
         "score_bands":       dict(score_bands),
         "source_counts":     dict(source_counts),
+        "buckets":           buckets_payload,
         "generated_at":      time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         **extra,
     }
@@ -1083,11 +1569,26 @@ def write_stats(path: Path, rows: List[DomainRecord], extra: dict) -> None:
 def build(repo_root: Path) -> None:
     data_csv   = repo_root / "data" / "domains.csv"
     stats_json = repo_root / "data" / "stats.json"
-    dist_txt   = repo_root / "dist" / "domains.txt"
+    dist_dir   = repo_root / "dist"
 
     session     = make_session()
     cn_networks = fetch_cn_cidrs(session)
     cidr_lookup = build_cidr_lookup(cn_networks)
+
+    # P1 Step 5: multi-region lookup. Reuses the CN networks already fetched
+    # above to avoid double download; HK/MO/TW are fetched fresh via ipnova.
+    # Failure of any non-CN region degrades that bucket to empty (logged WARN);
+    # CN failure is logged ERROR but build continues. See PROPOSAL §3.2.
+    region_cidrs_extra = fetch_region_cidrs(session)
+    # Override CN with the already-loaded list (single source of truth, also
+    # avoids a redundant HTTP call when CN.txt is the same upstream URL).
+    region_cidrs_extra["CN"] = cn_networks
+    region_lookup = build_region_lookup(region_cidrs_extra)
+
+    # P1 Step 7: seed health check. Samples each seed file and verifies
+    # resolved IPs land in the expected bucket. Pure diagnostic — never
+    # aborts build, never modifies seed files. See PROPOSAL §4.
+    seed_health_check(repo_root, region_lookup, session)
 
     # Load previous run for sticky fallback (protects against DNS flakes)
     previous = load_previous_rows(data_csv)
@@ -1104,7 +1605,7 @@ def build(repo_root: Path) -> None:
     with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
         future_map = {
             executor.submit(
-                process_domain, domain, source, session, cidr_lookup, updated, previous
+                process_domain, domain, source, session, region_lookup, updated, previous
             ): domain
             for domain, source in domains
         }
@@ -1136,7 +1637,7 @@ def build(repo_root: Path) -> None:
         log(f"[+] Removed {len(dead)} dead domains (NS confirmed non-existent)")
 
     write_csv(data_csv, rows)
-    write_dist(dist_txt, rows)
+    bucket_counts = write_dist_buckets(dist_dir, rows)
     sticky_count = sum(1 for r in rows if r.sticky)
     write_stats(stats_json, rows, extra={
         "auto_purged":        len(purged),
@@ -1146,10 +1647,14 @@ def build(repo_root: Path) -> None:
         "sticky_retained":    sticky_count,
         "workers":            MAX_WORKERS,
         "discovery_sample":   DISCOVERY_SAMPLE,
-    })
+    }, bucket_counts=bucket_counts)
 
-    dist_count = sum(1 for r in rows if r.score >= INCLUDE_THRESHOLD)
-    log(f"[+] Build complete: {dist_count} CN domains -> dist/domains.txt")
+    total_dist = sum(bucket_counts.values())
+    log(
+        f"[+] Build complete: {total_dist} domains across "
+        f"CN={bucket_counts.get('cn',0)} HK={bucket_counts.get('hk',0)} "
+        f"MO={bucket_counts.get('mo',0)} TW={bucket_counts.get('tw',0)}"
+    )
     if sticky_count:
         log(f"[+] {sticky_count} rows retained via sticky fallback (DNS flake protection)")
 
