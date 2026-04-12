@@ -147,14 +147,15 @@ class TestProcessDomainRegionSeedScore(unittest.TestCase):
         self.assertEqual(rec.bucket, "TW")
         self.assertEqual(rec.score, 100)
 
-    def test_legacy_cn_seed_NOT_overridden(self):
-        # Mainland seed must still earn its score normally so seed_health_check
-        # has a real signal to detect drift.
+    def test_legacy_cn_seed_now_overridden(self):
+        # P1 fix v2: mainland seed now also gets score=100 override, symmetric
+        # with seed_hk/mo/tw. Protects against ipnova CIDR noise causing known
+        # CN seeds to miss dist/domains_cn.txt.
         bd.resolve_domain = lambda d, s: []
         rec = process_domain("foo.com", "seed", session=None,
                              region_lookup=self.lookup, updated="now")
-        # No IPs, no .cn TLD → score=0 (unchanged from pre-patch behavior)
-        self.assertEqual(rec.score, 0)
+        self.assertEqual(rec.score, 100)
+        self.assertEqual(rec.bucket, "CN")
 
     def test_extended_source_NOT_overridden(self):
         bd.resolve_domain = lambda d, s: []
@@ -186,8 +187,17 @@ class TestWriteDistBucketsLenientFilter(unittest.TestCase):
             if ln and not ln.startswith("#")
         ]
 
-    def test_hk_bucket_accepts_zero_score(self):
-        rows = [_rec("alipay.hk", "HK", score=0)]
+    def test_hk_bucket_rejects_zero_score(self):
+        # P1 fix v2: HK bucket now uses the same INCLUDE_THRESHOLD as CN.
+        # A score=0 HK-bucketed row (from extended/discovery with ipnova
+        # noise) must NOT leak into dist/domains_hk.txt.
+        rows = [_rec("noisy.com", "HK", score=0)]
+        write_dist_buckets(self.dist, rows)
+        self.assertEqual(self._read("domains_hk.txt"), [])
+
+    def test_hk_bucket_accepts_seed_score(self):
+        # But a seed_hk row (score=100 from process_domain override) passes.
+        rows = [_rec("alipay.hk", "HK", score=100, source="seed_hk")]
         write_dist_buckets(self.dist, rows)
         self.assertEqual(self._read("domains_hk.txt"), ["alipay.hk"])
 
@@ -199,14 +209,18 @@ class TestWriteDistBucketsLenientFilter(unittest.TestCase):
         write_dist_buckets(self.dist, rows)
         self.assertEqual(self._read("domains_cn.txt"), ["good.cn"])
 
-    def test_mo_tw_buckets_lenient(self):
+    def test_mo_tw_buckets_also_threshold_filtered(self):
+        # P1 fix v2: symmetric threshold for all buckets.
+        # score=0 rows dropped, score=100 rows kept.
         rows = [
-            _rec("foo.mo", "MO", score=0),
-            _rec("foo.tw", "TW", score=10),
+            _rec("noisy.mo",   "MO", score=0),
+            _rec("seeded.mo",  "MO", score=100),
+            _rec("noisy.tw",   "TW", score=10),
+            _rec("seeded.tw",  "TW", score=100),
         ]
         write_dist_buckets(self.dist, rows)
-        self.assertEqual(self._read("domains_mo.txt"), ["foo.mo"])
-        self.assertEqual(self._read("domains_tw.txt"), ["foo.tw"])
+        self.assertEqual(self._read("domains_mo.txt"), ["seeded.mo"])
+        self.assertEqual(self._read("domains_tw.txt"), ["seeded.tw"])
 
     def test_unclassified_still_excluded_from_all(self):
         rows = [_rec("nope.com", "", score=100)]
@@ -249,6 +263,76 @@ class TestEndToEndAlipayHk(unittest.TestCase):
             self.assertEqual(counts["hk"], 1)
             content = (dist / "domains_hk.txt").read_text()
             self.assertIn("alipay.hk", content)
+
+
+class TestIpnovaCidrNoiseRegression(unittest.TestCase):
+    """Regression: ipnova HK.txt occasionally contains mainland IPs, causing
+    known-CN domains like 163.net (Netease) or tom.com to get bucket=HK via
+    decide_bucket's per-IP voting. Without symmetric threshold filtering,
+    these would leak into dist/domains_hk.txt as observed in production.
+    """
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.dist = Path(self.tmp.name) / "dist"
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def _read(self, name):
+        return [
+            ln for ln in (self.dist / name).read_text().splitlines()
+            if ln and not ln.startswith("#")
+        ]
+
+    def test_extended_hk_bucketed_zero_score_excluded(self):
+        # 163.net from extended.txt, ipnova put its IP in HK.txt, score=0
+        rows = [_rec("163.net", "HK", score=0, source="extended")]
+        write_dist_buckets(self.dist, rows)
+        self.assertEqual(self._read("domains_hk.txt"), [])
+        for b in ("cn", "mo", "tw"):
+            self.assertEqual(self._read(f"domains_{b}.txt"), [])
+
+    def test_discovery_mo_bucketed_zero_score_excluded(self):
+        # discovery domain accidentally IP-voted into MO
+        rows = [_rec("0355fk.com", "MO", score=0, source="discovery")]
+        write_dist_buckets(self.dist, rows)
+        for b in ("cn", "hk", "mo", "tw"):
+            self.assertEqual(self._read(f"domains_{b}.txt"), [])
+
+    def test_seed_hk_untouched_by_noise_filter(self):
+        # seed_hk entries are process_domain-overridden to score=100, so they
+        # always pass the threshold and land in domains_hk.txt.
+        rows = [
+            _rec("alipay.hk", "HK", score=100, source="seed_hk"),
+            _rec("163.net",   "HK", score=0,   source="extended"),  # noise
+        ]
+        write_dist_buckets(self.dist, rows)
+        self.assertEqual(self._read("domains_hk.txt"), ["alipay.hk"])
+
+    def test_cn_seed_rescued_when_ipnova_misbuckets(self):
+        # Production case: meituanmaicai.com in seed.txt, but ipnova CIDR
+        # happened to put its IP in HK.txt. WITH the v2 fix, decide_bucket
+        # forces seed->CN (ignoring the IP vote), and process_domain forces
+        # score=100. So it lands correctly in domains_cn.txt, not lost.
+        import build_domains as bd
+        original = bd.resolve_domain
+        bd.resolve_domain = lambda d, s: ["1.2.3.4"]  # IP doesn't matter
+        try:
+            rec = process_domain(
+                "meituanmaicai.com", "seed", session=None,
+                region_lookup=build_region_lookup({
+                    "CN": [],  # simulate: CN table doesn't have this IP
+                    "HK": [ipaddress.IPv4Network("1.2.3.0/24")],  # but HK does!
+                    "MO": [], "TW": [],
+                }),
+                updated="now",
+            )
+        finally:
+            bd.resolve_domain = original
+        # Despite the ipnova table noise, the seed assignment wins
+        self.assertEqual(rec.bucket, "CN")
+        self.assertEqual(rec.score, 100)
 
 
 if __name__ == "__main__":

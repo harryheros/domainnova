@@ -50,11 +50,12 @@ class TestSeedForcing(unittest.TestCase):
             "MO",
         )
 
-    def test_legacy_seed_does_not_force_cn(self):
-        # "seed" (mainland) is NOT auto-forced — must earn it via vote.
+    def test_legacy_seed_forces_cn(self):
+        # P1 fix v2: mainland seed is now symmetric with seed_hk/mo/tw.
+        # Even without IP/TLD/dns_cn signal, source=seed forces bucket=CN.
         self.assertEqual(
             decide_bucket("example.com", "seed", [], dns_cn=0),
-            "",
+            "CN",
         )
 
     def test_legacy_seed_with_cn_signal_becomes_cn(self):

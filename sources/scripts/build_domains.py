@@ -961,12 +961,18 @@ def score_record(
 # Source-name prefix → bucket (rule 2.2.1, "Seed forced assignment").
 # Only manual seed_xx files force a bucket; extended/discovery do not.
 _SEED_SOURCE_TO_BUCKET: dict[str, str] = {
+    "seed":    "CN",
     "seed_hk": "HK",
     "seed_mo": "MO",
     "seed_tw": "TW",
-    # Note: legacy "seed" (mainland) is NOT auto-forced to CN here. It still
-    # has to earn CN via the IP/TLD vote — preserves existing CN behavior and
-    # lets seed_health_check catch drift.
+    # Mainland seed is now forced to CN, symmetric with the region seeds.
+    # Rationale: ipnova CIDR tables have occasional overlap or mis-collection
+    # (seen in production: mainland IPs leaking into HK.txt caused Netease
+    # domains like 163.net and mainland seed domains like meituanmaicai.com to
+    # get mis-bucketed). Forcing `seed` -> CN guarantees the dist is robust to
+    # single-IP-level noise. seed_health_check remains the independent drift
+    # detector and still runs against actual ipnova classifications, so we
+    # haven't lost the ability to notice seed.txt rot.
 }
 
 
@@ -1101,14 +1107,13 @@ def process_domain(
     score    = score_record(dns_cn, 0, 0, tld_flag, has_ips=bool(ips))
     bucket   = decide_bucket(domain, source, per_ip_buckets, dns_cn)
 
-    # P1 fix: region-specific seeds (seed_hk/mo/tw) are human-curated and get
-    # full trust regardless of IP-based scoring. The current score_record() only
-    # rewards CN signals (dns_cn / cn_tld), so without this override an HK seed
-    # like alipay.hk would compute score=0 and be filtered out by
-    # write_dist_buckets even though decide_bucket correctly assigns bucket=HK.
-    # Mainland "seed" is intentionally NOT overridden — it still earns its
-    # score the normal way so seed_health_check has signal to detect drift.
-    if source in ("seed_hk", "seed_mo", "seed_tw"):
+    # P1 fix v2: ALL seed-prefixed sources (including mainland) are human-
+    # curated and get full trust regardless of IP-based scoring. This makes
+    # seed behavior symmetric across all four buckets and protects the dist
+    # from single-IP misclassification (e.g., ipnova CIDR table overlap
+    # causing a known-CN domain to compute score=0 because decide_bucket
+    # forced CN but the IP landed in HK).
+    if source in ("seed", "seed_hk", "seed_mo", "seed_tw"):
         score = 100
 
     # Sticky fallback: if this run couldn't resolve any IPs AND the previous
@@ -1492,24 +1497,16 @@ def write_dist_buckets(dist_dir: Path, rows: List[DomainRecord]) -> Dict[str, in
     generated_at = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
 
     for bucket in ("CN", "HK", "MO", "TW"):
-        if bucket == "CN":
-            # CN preserves the legacy INCLUDE_THRESHOLD scoring gate, ensuring
-            # byte-level continuity with the pre-P1 dist/domains.txt contract.
-            included = sorted(
-                r.domain for r in rows
-                if r.bucket == bucket and r.score >= INCLUDE_THRESHOLD
-            )
-        else:
-            # Non-CN buckets currently lack a per-bucket scoring model
-            # (score_record only rewards CN signals). For now, bucket assignment
-            # by decide_bucket IS the trust signal — anything that decide_bucket
-            # was confident enough to label HK/MO/TW belongs in dist. This is a
-            # P1.5 simplification; P2 will introduce score_record_for_bucket()
-            # and reunify the gate.
-            included = sorted(
-                r.domain for r in rows
-                if r.bucket == bucket
-            )
+        # P1 fix v2: ALL buckets use INCLUDE_THRESHOLD symmetrically.
+        # Because process_domain now forces score=100 for all seed* sources,
+        # seed-curated entries always pass. extended/discovery entries with
+        # score=0 (no CN scoring signal) are kept out of dist regardless of
+        # which bucket decide_bucket assigned them to — this prevents ipnova
+        # CIDR table noise from leaking into HK/MO/TW buckets.
+        included = sorted(
+            r.domain for r in rows
+            if r.bucket == bucket and r.score >= INCLUDE_THRESHOLD
+        )
         path = dist_dir / f"domains_{bucket.lower()}.txt"
         header = (
             f"# DomainNova - {bucket} domains\n"
@@ -1577,17 +1574,12 @@ def write_stats(
         if bucket_counts is not None:
             buckets_payload[b]["included"] = bucket_counts.get(b, 0)
         else:
-            # Fallback: mirror write_dist_buckets exactly. CN uses the legacy
-            # INCLUDE_THRESHOLD gate; non-CN buckets accept any classified row.
-            if b == "cn":
-                buckets_payload[b]["included"] = sum(
-                    1 for r in rows
-                    if r.bucket.lower() == b and r.score >= INCLUDE_THRESHOLD
-                )
-            else:
-                buckets_payload[b]["included"] = sum(
-                    1 for r in rows if r.bucket.lower() == b
-                )
+            # Fallback: mirror write_dist_buckets exactly. ALL buckets use the
+            # symmetric INCLUDE_THRESHOLD gate after the P1 fix v2.
+            buckets_payload[b]["included"] = sum(
+                1 for r in rows
+                if r.bucket.lower() == b and r.score >= INCLUDE_THRESHOLD
+            )
     buckets_payload["unclassified"] = unclassified_count  # type: ignore[assignment]
 
     # `dist_domains` semantic per PROPOSAL v1.1 §5.3: sum of included across
