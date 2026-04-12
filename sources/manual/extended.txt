@@ -16,7 +16,6 @@
 173zb.com
 178.com
 188.com
-189mail.com
 1905.com
 199it.com
 2113.com
@@ -52,7 +51,6 @@
 51xuediannao.com
 56.com
 58cdn.com.cn
-5sing.com
 7-wx.com
 7daysinn.com.cn
 7fresh.com
@@ -65,7 +63,6 @@
 95508.com
 95516.com
 95528.com
-95533.com
 95555.com
 95559.com.cn
 95566.com
@@ -91,7 +88,6 @@ airj.website
 aizhan.com
 ali213.net
 alibaba.cn
-alibabacloudcdn.com
 alicdn.com
 alicdn.net
 alicdn.org
@@ -117,7 +113,6 @@ anzhi.com
 aoyou.com
 appchina.com
 appgallery.cloud
-appgame.com
 artfinace.com
 asd.cn
 atobo.com
@@ -127,16 +122,13 @@ autonavi.com
 babytree.com
 baic.com.cn
 baiducontent.com
-baiduimg.com
 baidupan.com
 baifubao.com
-baishancdn.com
 baixiang.com
 baixing.com
 baiyewang.com
 bankofbeijing.com.cn
 bankofdl.com
-bankofqd.com
 bankofshanghai.com.cn
 baofeng.com
 baomihua.com
@@ -189,7 +181,6 @@ bytedns.net
 cainiao-inc.com
 cainiao.com
 caissa.com.cn
-caitongfund.com
 caiyunai.com
 calb-tech.com
 camel.com.cn
@@ -248,15 +239,12 @@ chinaz.com
 chiphell.com
 chunmi.com
 cille.cn
-citic-fund.com
-citic-trust.com
 cits.com.cn
 cloudxns.net
 cmcc.com
 cmecloud.cn
 cmfchina.com
 cnaps.com.cn
-cnbeta.com
 cnblogs.com
 cnbmtech.com
 cnbsm.com
@@ -409,7 +397,6 @@ gog.cn
 goldlion.com.cn
 gome.com.cn
 gotion.com.cn
-gotoshanghai.com
 goubuli.com
 grandomics.com
 grcbank.com
@@ -422,7 +409,6 @@ gtimg.com
 guangming.com.cn
 guazi.com
 gucunpark.net
-guizhou-moutai.com
 guokr.com
 guotaifund.com
 gxrcu.com
@@ -558,7 +544,6 @@ luyuan.cn
 luzhou-laojiao.com.cn
 ly.com
 lzskqyy.com
-m18.com
 m1world.com
 maihaoche.com
 maitian.com
@@ -571,14 +556,12 @@ maogeping.com
 maoyan.com
 markor.com
 marubi.cn
-master-kong.com
 masterkong.com.cn
 meet99.com
 meicai.cn
 meilishuo.com
 meitu.com
 metersbonwe.com
-mi-cdn.com
 mi-img.com
 mi.com
 miaopai.com
@@ -665,7 +648,6 @@ png.pub
 pocari.com.cn
 port.sh.cn
 portshanghai.com
-powerchina.com
 ppdai.com
 pptv.com
 proya.com.cn
@@ -674,8 +656,6 @@ puercn.com
 q-house.cn
 qcloudcdn.com
 qhimg.com
-qhrcu.com
-qhres.com
 qianfan.cloud
 qiaqia.com
 qidian.com
@@ -690,13 +670,10 @@ qq.net
 qqcdn.com
 qqkkb.com
 qqmail.com
-quanjude.com
-qumei.com
 qyer.com
 qzone.com
 redbull.com.cn
 redcross.org.cn
-reddragonfly.com
 rednet.cn
 redoufu.com
 redstar.com.cn
@@ -710,8 +687,6 @@ rong360.com
 ronshen.com
 rossini.com.cn
 rtxplugins.com
-ruijin-hospital.com
-ruixingcoffee.com
 runoob.com
 sac.net.cn
 saic-gm.com.cn
@@ -719,7 +694,6 @@ saicmotor.com
 samsung.com.cn
 schneider-electric.com.cn
 scol.com.cn
-scrccu.com
 scwqxh.com
 scyyxh.com
 sd-sma.com
@@ -774,7 +748,6 @@ southcn.com
 spacemit.com
 spdl.com
 spic.com.cn
-srdrug.com
 srrsh.com
 sspai.com
 starbucks.com.cn
@@ -891,7 +864,6 @@ xinjiangtravel.com
 xinnet.com
 xinss.com
 xitongzhijia.net
-xjrcu.com
 xpcha.com
 xt-gas.com
 xtep.com
@@ -901,7 +873,6 @@ xueqiu.com
 xunlei.com
 xxyw.com
 xywy.com
-xzrcu.com
 yadea.com.cn
 yahuayunshu.com
 yanghe.com.cn
