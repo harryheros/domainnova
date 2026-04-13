@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-04-12T23:59:16Z",
+  "checked_at": "2026-04-13T04:53:07Z",
   "results": {
     "seed.txt": {
       "region": "CN",
       "sampled": 20,
-      "consistent": 13,
-      "rate": 0.8667,
-      "status": "ok"
+      "consistent": 7,
+      "rate": 0.5833,
+      "status": "warn"
     },
     "seed_hk.txt": {
       "region": "HK",
