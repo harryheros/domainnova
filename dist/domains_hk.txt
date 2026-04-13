@@ -1,6 +1,7 @@
 # DomainNova - HK domains
-# Generated: 2026-04-12T16:56:53Z
-# Count: 3
+# Generated: 2026-04-13T00:00:39Z
+# Count: 4
 alipay.hk
 jd.hk
+mailf2.hfm.com.cn
 tmall.hk
