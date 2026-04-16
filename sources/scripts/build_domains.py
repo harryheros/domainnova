@@ -62,6 +62,7 @@ try:
         REGION_BUCKETS,
         REGION_CIDR_URLS,
         IPNOVA_MIN_LINES,
+        IPNOVA_MIN_LINES_PER_BUCKET,
     )
 except ImportError:
     sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -70,6 +71,7 @@ except ImportError:
         REGION_BUCKETS,
         REGION_CIDR_URLS,
         IPNOVA_MIN_LINES,
+        IPNOVA_MIN_LINES_PER_BUCKET,
     )
 
 # ---------------------------------------------------------------------------
@@ -332,10 +334,13 @@ def _fetch_one_region_cidrs(
         return []
 
     line_count = _count_cidr_lines(resp.text)
-    if line_count < IPNOVA_MIN_LINES:
+    # Per-bucket threshold: MO is naturally tiny (tens of CIDRs), so reusing
+    # a single global floor would falsely discard legitimate MO data.
+    min_lines = IPNOVA_MIN_LINES_PER_BUCKET.get(bucket, IPNOVA_MIN_LINES)
+    if line_count < min_lines:
         log(
             f"[{severity}] ipnova {bucket}.txt sanity-check failed: "
-            f"{line_count} lines < {IPNOVA_MIN_LINES}; bucket degraded to empty"
+            f"{line_count} lines < {min_lines}; bucket degraded to empty"
         )
         return []
 

@@ -1,5 +1,34 @@
 # ===== DomainNova - Seed Domains (Taiwan) =====
 # Manually curated high-confidence TW infrastructure domains.
 # APNIC region: TW. Governed by Taiwan Personal Data Protection Act.
-# Placeholder - entries to be populated by discovery agents and manual review.
+# Selection criteria: operator registered in Taiwan, primary DNS resolves to
+# TW-APNIC or TW-registered cloud region, served via TW-based CDN endpoints.
 
+# === Media & News ===
+udn.com
+chinatimes.com
+ltn.com.tw
+ettoday.net
+tvbs.com.tw
+setn.com
+storm.mg
+cna.com.tw
+
+# === E-commerce ===
+pchome.com.tw
+momoshop.com.tw
+shopee.tw
+ruten.com.tw
+books.com.tw
+
+# === Community & Forums ===
+mobile01.com
+ptt.cc
+gamer.com.tw
+bahamut.com.tw
+pixnet.net
+
+# === Services & Consumer ===
+kkbox.com
+kkday.com
+yahoo.com.tw
