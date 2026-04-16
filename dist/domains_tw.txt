@@ -1,3 +1,24 @@
 # DomainNova - TW domains
-# Generated: 2026-04-16T10:56:42Z
-# Count: 0
+# Generated: 2026-04-16T11:18:19Z
+# Count: 21
+bahamut.com.tw
+books.com.tw
+chinatimes.com
+cna.com.tw
+ettoday.net
+gamer.com.tw
+kkbox.com
+kkday.com
+ltn.com.tw
+mobile01.com
+momoshop.com.tw
+pchome.com.tw
+pixnet.net
+ptt.cc
+ruten.com.tw
+setn.com
+shopee.tw
+storm.mg
+tvbs.com.tw
+udn.com
+yahoo.com.tw
