@@ -128,8 +128,20 @@ REGION_CIDR_URLS: dict[str, str] = {
 # Sanity-check threshold: ipnova region files with fewer than this many lines
 # are treated as transport corruption (truncated 502, partial response, etc.)
 # and the affected bucket is degraded to empty for the current build.
-# Macao is the smallest legitimate region; even MO.txt has hundreds of CIDRs.
-IPNOVA_MIN_LINES: int = 50
+#
+# Rationale: MO is naturally very small (tens of CIDRs), so a global threshold
+# would falsely reject MO as corrupt. Per-bucket thresholds are sized to accept
+# known-legitimate minima while still catching transport-level truncation
+# (which typically produces zero or single-digit line counts from HTML error
+# pages parsed as CIDR text).
+IPNOVA_MIN_LINES: int = 10  # legacy global floor, retained as ultimate fallback
+
+IPNOVA_MIN_LINES_PER_BUCKET: dict[str, int] = {
+    "CN": 3000,   # mainland has thousands of CIDRs; <3000 indicates upstream regression
+    "HK": 500,    # HK is well-populated via BGP supplement
+    "TW": 100,    # TW populated after ipnova P0.5; floor guards against collapse
+    "MO": 5,      # MO is intrinsically small; set just above corruption noise floor
+}
 
 # Map TLD suffix -> bucket. Used as +1 vote in decide_bucket().
 TLD_TO_BUCKET: dict[str, str] = {
