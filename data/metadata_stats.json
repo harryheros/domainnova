@@ -1,11 +1,11 @@
 {
-  "total": 2424,
+  "total": 2423,
   "by_source": {
     "seed": 615,
-    "extended": 1809
+    "extended": 1808
   },
   "by_ecosystem": {
-    "unknown": 2195,
+    "unknown": 2194,
     "government-cn": 38,
     "finance-banking": 26,
     "alibaba": 21,
@@ -25,7 +25,7 @@
     "developer-platforms": 4
   },
   "by_category": {
-    "uncategorized": 2195,
+    "uncategorized": 2194,
     "platform": 85,
     "government": 38,
     "finance": 26,
