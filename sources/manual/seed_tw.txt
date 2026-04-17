@@ -4,6 +4,38 @@
 # Selection criteria: operator registered in Taiwan, primary DNS resolves to
 # TW-APNIC or TW-registered cloud region, served via TW-based CDN endpoints.
 
+# === Government ===
+gov.tw
+president.gov.tw
+moea.gov.tw
+mof.gov.tw
+nccc.com.tw
+twnic.tw
+
+# === Finance & Banking ===
+cbc.gov.tw
+twse.com.tw
+tpex.org.tw
+bot.com.tw
+megabank.com.tw
+ctbcbank.com
+cathaybk.com.tw
+fubon.com
+esunbank.com.tw
+taishinbank.com.tw
+linebank.com.tw
+rakuten-bank.com.tw
+
+# === Infrastructure & Utility ===
+taipower.com.tw
+water.gov.tw
+taipeiwater.gov.tw
+cpc.com.tw
+railway.gov.tw
+thsrc.com.tw
+taoyuan-airport.com
+post.gov.tw
+
 # === Media & News ===
 udn.com
 chinatimes.com
@@ -13,13 +45,25 @@ tvbs.com.tw
 setn.com
 storm.mg
 cna.com.tw
+pts.org.tw
 
-# === E-commerce ===
+# === Telecom & ISP ===
+cht.com.tw
+hinet.net
+taiwanmobile.com
+fetnet.net
+aptg.com.tw
+
+# === E-commerce & Logistics ===
 pchome.com.tw
 momoshop.com.tw
 shopee.tw
 ruten.com.tw
 books.com.tw
+coupan.tw
+hct.com.tw
+t-cat.com.tw
+kerrytj.com
 
 # === Community & Forums ===
 mobile01.com
@@ -27,8 +71,20 @@ ptt.cc
 gamer.com.tw
 bahamut.com.tw
 pixnet.net
+dcard.tw
 
 # === Services & Consumer ===
 kkbox.com
 kkday.com
 yahoo.com.tw
+line.me
+ubereats.com
+foodpanda.com.tw
+
+# === Education ===
+ntu.edu.tw
+nthu.edu.tw
+nycu.edu.tw
+ntnu.edu.tw
+ncku.edu.tw
+nsysu.edu.tw
