@@ -1,68 +1,64 @@
-# ===== DomainNova - Seed Domains (Hong Kong) =====
-# Manually curated high-confidence HK infrastructure domains.
-# APNIC region: HK. Governed by PDPO (Hong Kong), not PRC cyberlaw.
-# Selection criteria: operator/registrant in Hong Kong SAR, primary DNS resolves
-# to HK-APNIC segments or Hong Kong-based hosting.
+# ===== DomainNova - Seed Domains (Macau) =====
+# Manually curated high-confidence MO infrastructure domains.
+# APNIC region: MO. Governed by Macau Personal Data Protection Act.
+# Selection criteria: operator/registrant in Macau SAR, primary DNS resolves
+# to MO-APNIC segments or Macau-based hosting.
 
 # === Government ===
-gov.hk
-ogcio.gov.hk
-hkma.gov.hk
-pcpd.org.hk
-hkic.org.hk
+gov.mo
+dsat.gov.mo
+gcs.gov.mo
+sc.gov.mo
+io.gov.mo
+iam.gov.mo
+dsf.gov.mo
+ssm.gov.mo
+fsm.gov.mo
+dsi.gov.mo
 
 # === Finance & Banking ===
-hkex.com.hk
-hkicl.com.hk
-hsbc.com.hk
-hangseng.com
-bankofchina.com.hk
-standardchartered.com.hk
-dbs.com.hk
-za.group
-mox.com
+amcm.gov.mo
+bnu.com.mo
+ocbc.com.mo
+bcm.com.mo
+taifungbank.com
+mc.icbc.com.cn
+bankofchina.com.mo
+mpay.com.mo
+uubank.com.mo
 
 # === Infrastructure & Utility ===
-octopus.com.hk
-mtr.com.hk
-hkelectric.com
-clp.com.hk
-towngas.com
-kmb.hk
-citybus.com.hk
-hongkongairport.com
+cem.com.mo
+macau-water.com
+macau-airport.com
+tcm.com.mo
+transmac.com.mo
+mlm.com.mo
+turbojet.com.hk
+cotaiwaterjet.com
 
 # === Media & Telecom ===
-hkt.com
-pccw.com
-smartone.com
-three.com.hk
-hkbn.net
-cmhk.com
-scmp.com
-mingpao.com
-hket.com
-stheadline.com
-tvb.com
-viu.tv
-rthk.hk
+ctm.net
+mtel.mo
+smartone.com.mo
+three.com.mo
+macaodaily.com
+exmoo.com
+macaonews.org
+tdm.com.mo
+mastvnet.com
+chengpou.com.mo
 
 # === E-commerce & Logistics ===
-hktvmall.com
-price.com.hk
-ztore.com
-carousell.com.hk
-alipay.hk
-jd.hk
-tmall.hk
-foodpanda.hk
-deliveroo.hk
-sf-express.com.hk
+mfood.mo
+macau-sf.com
+directel.com.mo
+macauticket.com
 
 # === Education ===
-hku.hk
-cuhk.edu.hk
-ust.hk
-polyu.edu.hk
-cityu.edu.hk
-hkbu.edu.hk
+umac.mo
+must.edu.mo
+mpu.edu.mo
+cityu.edu.mo
+usj.edu.mo
+iftm.edu.mo
