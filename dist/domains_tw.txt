@@ -1,5 +1,5 @@
 # DomainNova - TW domains
-# Generated: 2026-04-16T11:18:19Z
+# Generated: 2026-04-17T16:05:13Z
 # Count: 21
 bahamut.com.tw
 books.com.tw

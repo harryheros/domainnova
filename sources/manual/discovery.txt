@@ -1,73 +1,32 @@
 # DomainNova - Discovery Layer
 
 # --- upstream:felixonmars-accelerated 2026-03-28 ---
-c1km4.com
 
 # --- upstream:felixonmars-accelerated 2026-03-28 ---
-gljygd.com
 
 # --- upstream:felixonmars-accelerated 2026-03-28 ---
 cqstudents.com
-gxlhgjg.com
-r12345.com
 shsot.com
 04n1ns24180.xin
-jianshu.io
-tocreating.com
-jidiw.com
-imageplusplus.com
 xincha.com
-116cd.net
-gd-haijing.com
-haowang.shop
 akgjgs.com
-wh-baidu.com
-hngs.net
 cncoolm.com
-huashengdaili.com
 lczq.com
-bwie.net
 0d00.xin
 chinaief.net
-mocn.cc
 ttfly.com
-nysgjgs.com
 798com.com
-smt2000.com
-mstxx.com
 piaoshen.com
-ebtang.com
-xooooa.com
 yishang.cc
 yuegui.shop
 gzccvs.com
 zjtdw.com
 gzfirst.com
-enjlink.com
 haiqingyanyu.com
-chinardr.com
 sxpta.com
-pslkzs.com
-mggtech.vip
 17tui.cc
-obins.net
 gxyzjc.com
-dbmeta.net
-visaforkorea-gz.com
-t1.ink
 uipaas-assets.com
-cim2025.net
-cqsj365.com
-nri-beijing.com
-zjklfj.com
-eastjq.com
-hifidiy.net
-bykszb.com
-gljlw.com
-hailunpiano.com
-ccbfutures.com
-vipkaoyan.net
-fenbaner.net
 ylyk.com
 mddlsa.com
 huifudashi.com
@@ -95,49 +54,24 @@ www.septwolves.com
 x-f.cc
 astroit.cn
 minhe.bj.cn
-www.minhe.bj.cn
 bj17.cn
-boser.cn
-www.boser.cn
 www.china-hz.cn
-chinalogo.cn
-cnetart.cn
-cnyuxiang.cn
-www.cnyuxiang.cn
-atrie.com.cn
-bewell.com.cn
-bjhuajin.com.cn
-bjhyd.com.cn
-buerma.com.cn
-chxy.com.cn
-creaton.com.cn
 hdw.com.cn
-icf.com.cn
 cpcjxs.gov.cn
 www.cpcjxs.gov.cn
 
 # --- ct-logs:Huawei 2026-03-28 ---
-eservice.huawei.com
 clouddrive.huawei.com
-beian.huaweicloud.com
-developer.huawei.com
-res-static2.huaweicloud.com
-welink.huaweicloud.com
 
 # --- upstream:felixonmars-accelerated 2026-03-28 ---
-zhaobuxiu.com
 ht-rc.com
 hxgs.net
 topmba.mobi
 bajasaechina.com
 jiuanchem.com
-vipyz-cdn1.com
 gsbankmall.com
 cloudflareinsights-cn.com
 qianhong.com
-szyfdz.net
-2cycomic.com
-ovglass.com
 aoyor.com
 1688.xn--czrs0t
 nschctw.com
@@ -145,16 +79,10 @@ sogoucdndl.com
 hexdo.com
 doov5g.com
 qcloudtt.com
-chinadrum.net
-feeyan.com
 kkmall.org
-iapple123.com
 tdiac.com
-682.com
 bikehome.net
 ttshengbei.com
-thronechina.com
-yuanshanbx.com
 tpoxiaozhan.com
 shanyuanms.com
 
@@ -165,24 +93,14 @@ shanyuanms.com
 # --- ip-neighbor:202.117.80.233 2026-03-28 ---
 
 # --- ip-neighbor:203.107.45.167 2026-03-28 ---
-aiatelier.art
 daiwei.art
 motu.art
-h5.umx.art
-wapa.art
-weibo.art
-xiaohongtao.art
-xingzou.art
-yingqi.art
-yipan.art
-yitongxue.art
 
 # --- ct-logs:%.gov.cn 2026-03-28 ---
 www.szmb.gov.cn
 mail.bjmacp.gov.cn
 www.lhht.szlh.gov.cn
 wsnj.baic.gov.cn
-openapi.zjport.gov.cn
 api.m.sgeg.sg.gov.cn
 zybh.gov.cn
 wxapi.jsws.gov.cn
@@ -194,25 +112,17 @@ xcgs.gov.cn
 app.liangjiang.gov.cn
 hzfc.gov.cn
 gssoso.whhd.gov.cn
-qingdao.gov.cn
-gkpt.gzajj.gov.cn
 12333zjg.gov.cn
-12309.gov.cn
 bnpo.gov.cn
-jjgassc.jinjiang.gov.cn
 12333sh.gov.cn
-www.gzhsfy.gov.cn
 cqwhw.gov.cn
 m.gdepb.gov.cn
-jsy.xjjs.gov.cn
-biz.jnfda.gov.cn
 www.shpdxf.gov.cn
 cpservice.sipo.gov.cn
 zhscjg.gov.cn
 www.wswsj.gov.cn
 gxfgjj.gov.cn
 login.yjzzw.gov.cn
-mail.caac.gov.cn
 cloud.hbzljd.gov.cn
 xj-l-tax.gov.cn
 wxtj.chancheng.gov.cn
