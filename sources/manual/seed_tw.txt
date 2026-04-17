@@ -1,90 +1,70 @@
 # ===== DomainNova - Seed Domains (Taiwan) =====
 # Manually curated high-confidence TW infrastructure domains.
 # APNIC region: TW. Governed by Taiwan Personal Data Protection Act.
-# Selection criteria: operator registered in Taiwan, primary DNS resolves to
-# TW-APNIC or TW-registered cloud region, served via TW-based CDN endpoints.
 
-# === Government ===
-gov.tw
-president.gov.tw
-moea.gov.tw
-mof.gov.tw
-nccc.com.tw
-twnic.tw
-
-# === Finance & Banking ===
-cbc.gov.tw
-twse.com.tw
-tpex.org.tw
-bot.com.tw
-megabank.com.tw
-ctbcbank.com
-cathaybk.com.tw
-fubon.com
-esunbank.com.tw
-taishinbank.com.tw
-linebank.com.tw
-rakuten-bank.com.tw
-
-# === Infrastructure & Utility ===
-taipower.com.tw
-water.gov.tw
-taipeiwater.gov.tw
-cpc.com.tw
-railway.gov.tw
-thsrc.com.tw
-taoyuan-airport.com
-post.gov.tw
-
-# === Media & News ===
-udn.com
-chinatimes.com
-ltn.com.tw
-ettoday.net
-tvbs.com.tw
-setn.com
-storm.mg
-cna.com.tw
-pts.org.tw
-
-# === Telecom & ISP ===
-cht.com.tw
-hinet.net
-taiwanmobile.com
-fetnet.net
+104.com.tw
+591.com.tw
 aptg.com.tw
-
-# === E-commerce & Logistics ===
-pchome.com.tw
-momoshop.com.tw
-shopee.tw
-ruten.com.tw
-books.com.tw
-coupan.tw
-hct.com.tw
-t-cat.com.tw
-kerrytj.com
-
-# === Community & Forums ===
-mobile01.com
-ptt.cc
-gamer.com.tw
+asus.com
 bahamut.com.tw
-pixnet.net
+books.com.tw
+bot.com.tw
+bus.gov.tw
+cathaybk.com.tw
+cbc.gov.tw
+chinatimes.com
+cht.com.tw
+cna.com.tw
+cpc.com.tw
+ctbcbank.com
+cwb.gov.tw
 dcard.tw
-
-# === Services & Consumer ===
+dgbas.gov.tw
+e-bill.com.tw
+easycard.com.tw
+esunbank.com.tw
+ettoday.net
+ey.gov.tw
+familymart.com.tw
+fetnet.net
+foodpanda.com.tw
+fubon.com
+gamer.com.tw
+gov.tw
+hct.com.tw
+hi-life.com.tw
+hinet.net
+ibon.com.tw
+immigration.gov.tw
+kerrytj.com
 kkbox.com
 kkday.com
-yahoo.com.tw
-line.me
-ubereats.com
-foodpanda.com.tw
-
-# === Education ===
+linebank.com.tw
+ltn.com.tw
+megabank.com.tw
+mobile01.com
+moea.gov.tw
+mof.gov.tw
+momoshop.com.tw
+mops.twse.com.tw
+mrt.taipei
+nccc.com.tw
 ntu.edu.tw
-nthu.edu.tw
-nycu.edu.tw
-ntnu.edu.tw
-ncku.edu.tw
-nsysu.edu.tw
+pchome.com.tw
+pixnet.net
+post.gov.tw
+pts.org.tw
+ptt.cc
+ruten.com.tw
+setn.com
+shopee.tw
+storm.mg
+t-cat.com.tw
+taishinbank.com.tw
+thsrc.com.tw
+tsmc.com
+tvbs.com.tw
+twse.com.tw
+udn.com
+yahoo.com.tw
+youbike.com.tw

@@ -1,21 +1,72 @@
 # ===== DomainNova - Seed Domains (Macau) =====
 # Manually curated high-confidence MO infrastructure domains.
 # APNIC region: MO. Governed by Macau Personal Data Protection Act.
-# Selection criteria: operator/registrant in Macau SAR, primary DNS resolves
-# to MO-APNIC segments or Macau-based hosting.
 
-# === Government ===
-gov.mo
-dsat.gov.mo
-gcs.gov.mo
-sc.gov.mo
-io.gov.mo
-
-# === Media & Telecom ===
-macaodaily.com
-exmoo.com
-macaonews.org
+abm.org.mo
+amcm.gov.mo
+antifraud.gov.mo
+bankofchina.com.mo
+bcm.com.mo
+bnm.com.mo
+bnu.com.mo
+bocmacau.com
+ccac.org.mo
+cem.com.mo
+ces.gov.mo
+chengpou.com.mo
+cityu.edu.mo
+cotaiwaterjet.com
 ctm.net
-
-# === Education ===
+directel.com.mo
+dsal.gov.mo
+dsat.gov.mo
+dsedj.gov.mo
+dsf.gov.mo
+dsi.gov.mo
+exmoo.com
+fdct.gov.mo
+fsm.gov.mo
+gcs.gov.mo
+gov.mo
+iam.gov.mo
+ifm.org.mo
+iftm.edu.mo
+io.gov.mo
+ipim.gov.mo
+macaodaily.com
+macaonews.org
+macaoticket.com
+macaotourism.gov.mo
+macau-airport.com
+macau-sf.com
+macau-water.com
+macaudailytimes.com.mo
+macauhub.com.mo
+macaunews.mo
+macaupost.gov.mo
+macauticket.com
+mastvnet.com
+mbe.gov.mo
+mc.icbc.com.cn
+mfood.mo
+mlm.com.mo
+monic.mo
+mpay.com.mo
+mpu.edu.mo
+mtel.mo
+must.edu.mo
+ocbc.com.mo
+ocm.com.mo
+sc.gov.mo
+smartone.com.mo
+ssm.gov.mo
+taifungbank.com
+tcm.com.mo
+tdm.com.mo
+three.com.mo
+transmac.com.mo
+turbojet.com.hk
+um.edu.mo
 umac.mo
+usj.edu.mo
+uubank.com.mo
