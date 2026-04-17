@@ -1,13 +1,5 @@
 # DomainNova - MO domains
-# Generated: 2026-04-17T16:05:13Z
-# Count: 10
-ctm.net
+# Generated: 2026-04-17T16:18:15Z
+# Count: 2
 dsat.gov.mo
-exmoo.com
-gcs.gov.mo
-gov.mo
-io.gov.mo
-macaodaily.com
-macaonews.org
 sc.gov.mo
-umac.mo
