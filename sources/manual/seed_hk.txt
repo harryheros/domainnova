@@ -1,64 +1,99 @@
-# ===== DomainNova - Seed Domains (Macau) =====
-# Manually curated high-confidence MO infrastructure domains.
-# APNIC region: MO. Governed by Macau Personal Data Protection Act.
-# Selection criteria: operator/registrant in Macau SAR, primary DNS resolves
-# to MO-APNIC segments or Macau-based hosting.
+# ===== DomainNova - Seed Domains (Hong Kong) =====
+# Manually curated high-confidence HK infrastructure domains.
+# APNIC region: HK. Governed by PDPO (Hong Kong), not PRC cyberlaw.
+# Scoring signals: dns_hk, hk_tld, registrar_hk, registrant_hk
 
-# === Government ===
-gov.mo
-dsat.gov.mo
-gcs.gov.mo
-sc.gov.mo
-io.gov.mo
-iam.gov.mo
-dsf.gov.mo
-ssm.gov.mo
-fsm.gov.mo
-dsi.gov.mo
-
-# === Finance & Banking ===
-amcm.gov.mo
-bnu.com.mo
-ocbc.com.mo
-bcm.com.mo
-taifungbank.com
-mc.icbc.com.cn
-bankofchina.com.mo
-mpay.com.mo
-uubank.com.mo
-
-# === Infrastructure & Utility ===
-cem.com.mo
-macau-water.com
-macau-airport.com
-tcm.com.mo
-transmac.com.mo
-mlm.com.mo
-turbojet.com.hk
-cotaiwaterjet.com
-
-# === Media & Telecom ===
-ctm.net
-mtel.mo
-smartone.com.mo
-three.com.mo
-macaodaily.com
-exmoo.com
-macaonews.org
-tdm.com.mo
-mastvnet.com
-chengpou.com.mo
-
-# === E-commerce & Logistics ===
-mfood.mo
-macau-sf.com
-directel.com.mo
-macauticket.com
-
-# === Education ===
-umac.mo
-must.edu.mo
-mpu.edu.mo
-cityu.edu.mo
-usj.edu.mo
-iftm.edu.mo
+aastocks.com
+alipay.hk
+alipayhk.com
+am730.com.hk
+aswatson.com
+baby-kingdom.com
+bankofchina.com.hk
+bastillepost.com
+beafantasia.com
+bochk.com
+cathaypacific.com
+chubb.com.hk
+cityu.edu.hk
+clp.com.hk
+csl.com.hk
+ctfe.com
+cuhk.edu.hk
+cup.com.hk
+cxexpress.com
+dahsing.com
+dbs.com.hk
+dhk.com.hk
+dimbuy.com
+discuss.com.hk
+fortress.com.hk
+fwd.com.hk
+gov.hk
+hangseng.com
+hgc.com.hk
+hk01.com
+hkairport.com
+hkeaa.edu.hk
+hket.com
+hkex.com.hk
+hkexnews.hk
+hkgem.com
+hkia.com.hk
+hkicp.hk
+hkirc.hk
+hkjc.com
+hkma.gov.hk
+hkmc.com.hk
+hko.gov.hk
+hkoc.org.hk
+hkpost.hk
+hkstp.org
+hkt.com
+hktvmall.com
+hku.hk
+hsbc.com.hk
+icac.org.hk
+info.gov.hk
+isd.gov.hk
+jd.hk
+jobsdb.com
+klook.com
+lcsd.gov.hk
+lihkg.com
+mingpao.com
+mtr.com.hk
+nowtv.now.com
+oceanpark.com.hk
+octopus.com.hk
+on.cc
+openrice.com
+pccw.com
+polyu.edu.hk
+rthk.hk
+sc.com
+scmp.com
+sfc.hk
+singtao.com
+smartone.com
+stheadline.com
+three.com.hk
+tmall.hk
+tungwah.org.hk
+tvb.com
+udn.com.hk
+ust.hk
+uwants.com
+vancouver.hk
+vtc.edu.hk
+watsons.com.hk
+westkowloon.hk
+wharf.com.hk
+wheelockcompany.com
+winglungbank.com
+yata.hk
+yesstyle.com
+yield.hk
+za.group
+zh.mohw.gov.hk
+zhaopin.hk
