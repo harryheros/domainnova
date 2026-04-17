@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-04-16T11:16:44Z",
+  "checked_at": "2026-04-17T16:03:02Z",
   "results": {
     "seed.txt": {
       "region": "CN",
       "sampled": 20,
-      "consistent": 10,
+      "consistent": 13,
       "rate": 1.0,
       "status": "ok"
     },
