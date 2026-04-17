@@ -1,52 +1,19 @@
 # ===== DomainNova - Seed Domains (Hong Kong) =====
 # Manually curated high-confidence HK infrastructure domains.
 # APNIC region: HK. Governed by PDPO (Hong Kong), not PRC cyberlaw.
+# Selection criteria: operator/registrant in Hong Kong SAR, primary DNS resolves
+# to HK-APNIC segments or Hong Kong-based hosting.
 
+# === Government ===
 gov.hk
 ogcio.gov.hk
-hkic.org.hk
-pcpd.org.hk
 hkma.gov.hk
+pcpd.org.hk
+hkic.org.hk
+
+# === Finance & Banking ===
 hkex.com.hk
 hkicl.com.hk
-octopus.com.hk
-alipay.hk
-jd.hk
-tmall.hk
-hktvmall.com
-price.com.hk
-ztore.com
-carousell.com.hk
-foodpanda.hk
-deliveroo.hk
-sf-express.com.hk
-hkt.com
-pccw.com
-smartone.com
-three.com.hk
-hkbn.net
-cmhk.com
-mtr.com.hk
-hkelectric.com
-clp.com.hk
-towngas.com
-kmb.hk
-citybus.com.hk
-hongkongairport.com
-cathaypacific.com
-hku.hk
-cuhk.edu.hk
-ust.hk
-polyu.edu.hk
-cityu.edu.hk
-hkbu.edu.hk
-tvb.com
-viu.tv
-scmp.com
-mingpao.com
-hket.com
-stheadline.com
-rthk.hk
 hsbc.com.hk
 hangseng.com
 bankofchina.com.hk
@@ -54,5 +21,48 @@ standardchartered.com.hk
 dbs.com.hk
 za.group
 mox.com
-livibank.com
-welab.bank
+
+# === Infrastructure & Utility ===
+octopus.com.hk
+mtr.com.hk
+hkelectric.com
+clp.com.hk
+towngas.com
+kmb.hk
+citybus.com.hk
+hongkongairport.com
+
+# === Media & Telecom ===
+hkt.com
+pccw.com
+smartone.com
+three.com.hk
+hkbn.net
+cmhk.com
+scmp.com
+mingpao.com
+hket.com
+stheadline.com
+tvb.com
+viu.tv
+rthk.hk
+
+# === E-commerce & Logistics ===
+hktvmall.com
+price.com.hk
+ztore.com
+carousell.com.hk
+alipay.hk
+jd.hk
+tmall.hk
+foodpanda.hk
+deliveroo.hk
+sf-express.com.hk
+
+# === Education ===
+hku.hk
+cuhk.edu.hk
+ust.hk
+polyu.edu.hk
+cityu.edu.hk
+hkbu.edu.hk
