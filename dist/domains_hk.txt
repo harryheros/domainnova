@@ -1,12 +1,8 @@
 # DomainNova - HK domains
-# Generated: 2026-04-21T21:59:19Z
-# Count: 135
+# Generated: 2026-04-21T23:01:23Z
+# Count: 130
+00xu.com
 163.net
-17fandai.com
-197232.vip
-25yi.com
-51mockup.com
-52112.com
 aastocks.com
 alipay.hk
 alipayhk.com
@@ -14,14 +10,13 @@ am730.com.hk
 amcm.gov.mo
 aswatson.com
 baby-kingdom.com
+baidusx.cc
 bankofchina.com.hk
 bankofchina.com.mo
 bastillepost.com
 beafantasia.com
 bochk.com
-caifu500.net
 cathaypacific.com
-ce33m7.com
 cem.com.mo
 chubb.com.hk
 cityu.edu.hk
@@ -32,23 +27,24 @@ ctfe.com
 cuhk.edu.hk
 cup.com.hk
 cxexpress.com
+d837c367d34d7bb5.com
 dahsing.com
 dbs.com.hk
-dgw888.com
+dh33660.com
 dhk.com.hk
 dididadidi.com
 dimbuy.com
 discuss.com.hk
 dragonfly.fm
-easymule.com
+drvi.net
 fortress.com.hk
+fuyuzhe.com
 fwd.com.hk
+ganzhishi.com
+goodschool.world
 gov.hk
-gxhzkj.com
-hangruntech.com
 hangseng.com
 hgc.com.hk
-hgptech.com
 hk01.com
 hkairport.com
 hkeaa.edu.hk
@@ -75,13 +71,11 @@ iam.gov.mo
 icac.org.hk
 info.gov.hk
 isd.gov.hk
-izmzg.com
 jd.hk
 jobsdb.com
 klook.com
 lcsd.gov.hk
 lihkg.com
-lzmy123.com
 macau-sf.com
 macau-water.com
 mc.icbc.com.cn
@@ -92,6 +86,7 @@ mtr.com.hk
 must.edu.mo
 newhua.com
 ngacn.cc
+nongcun5.com
 nowtv.now.com
 oceanpark.com.hk
 octopus.com.hk
@@ -108,7 +103,6 @@ singtao.com
 smartone.com
 staticfile.org
 stheadline.com
-thelastsky.com
 three.com.hk
 tmall.hk
 tungwah.org.hk
@@ -131,8 +125,9 @@ xpcha.com
 yata.hk
 yesstyle.com
 yield.hk
+yswh.com
 za.group
 zh.mohw.gov.hk
-zhangshengrong.com
 zhaopin.hk
 zjlib.com
+ztxxr.com
