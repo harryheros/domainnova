@@ -65,8 +65,9 @@ class TestEquivalenceWithLegacy(unittest.TestCase):
 
     def assert_equiv(self, ips):
         legacy = build_dns_signal(ips, self.cn_lookup)
-        per_ip, dns_cn, cn_count, dns_total, matched = \
+        per_ip, region_dns_flags, cn_count, dns_total, matched = \
             build_region_signals(ips, self.region_lookup)
+        dns_cn = region_dns_flags["CN"]
         self.assertEqual(
             (dns_cn, cn_count, dns_total, matched),
             legacy,
@@ -105,7 +106,8 @@ class TestEquivalenceWithLegacy(unittest.TestCase):
         region_lookup = build_region_lookup({"CN": nets, "HK": [], "MO": [], "TW": []})
         ips = [f"10.{i}.0.1" for i in range(10)]
         legacy = build_dns_signal(ips, cn_lookup)
-        _, dns_cn, cn_count, dns_total, matched = build_region_signals(ips, region_lookup)
+        _, region_dns_flags, cn_count, dns_total, matched = build_region_signals(ips, region_lookup)
+        dns_cn = region_dns_flags["CN"]
         self.assertEqual((dns_cn, cn_count, dns_total, matched), legacy)
         self.assertEqual(len(matched.split("|")), 5)
 
@@ -133,10 +135,10 @@ class TestPerIpBuckets(unittest.TestCase):
 
     def test_dns_cn_only_counts_cn_bucket(self):
         # 3 HK + 1 CN → dns_cn=0 (only 25% CN)
-        _, dns_cn, cn_count, _, _ = build_region_signals(
+        _, region_dns_flags, cn_count, _, _ = build_region_signals(
             ["1.0.0.1", "2.0.0.1", "2.0.0.2", "2.0.0.3"], self.region_lookup
         )
-        self.assertEqual(dns_cn, 0)
+        self.assertEqual(region_dns_flags["CN"], 0)
         self.assertEqual(cn_count, 1)
 
 

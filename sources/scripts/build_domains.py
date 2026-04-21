@@ -146,6 +146,13 @@ CN_TLD_WEIGHT     = 10
 INCLUDE_THRESHOLD = 60
 CN_TLD_FALLBACK_SCORE = 60  # .cn requires ICP filing → strong CN signal
 
+# P2.A: symmetric TLD bonus weight for HK/MO/TW (mirrors CN_TLD_WEIGHT intent
+# but set to 20 per §2.3: "DNS=60, TLD=20" for the non-CN symmetric model).
+# CN keeps its existing CN_TLD_WEIGHT=10 so existing CN score arithmetic is
+# byte-identical. XX_TLD_WEIGHT is ONLY used in score_record_for_bucket for
+# HK/MO/TW buckets.
+XX_TLD_WEIGHT     = 20
+
 ENABLE_RDAP = os.getenv("DOMAINNOVA_RDAP", "0") == "1"
 
 CN_TLDS = (".cn", ".xn--fiqs8s", ".xn--55qx5d", ".xn--io0a7i")
@@ -176,6 +183,11 @@ class DomainRecord:
     updated:       str
     sticky:        int = 0   # 1 if score was retained from previous run (DNS flake protection)
     bucket:        str = ""  # P1: "CN" | "HK" | "MO" | "TW" | "" (unclassified). See decide_bucket().
+    # P2.A: per-region DNS majority flags (symmetric with dns_cn).
+    # 1 iff resolved IPv4 IPs in that region's CIDR ≥ 60%; 0 otherwise.
+    dns_hk:        int = 0
+    dns_mo:        int = 0
+    dns_tw:        int = 0
 
 
 # ---------------------------------------------------------------------------
@@ -893,31 +905,33 @@ def build_dns_signal(
 
 def build_region_signals(
     ips: List[str], region_lookup: RegionLookup
-) -> Tuple[List[str], int, int, int, str]:
+) -> Tuple[List[str], Dict[str, int], int, int, str]:
     """
     Multi-region successor to build_dns_signal().
 
-    Walks each resolved IP once, asks ip_to_bucket() which region it belongs
-    to, and produces:
-      - per_ip_buckets: list[str] aligned with the input `ips` order; one of
-                        "CN"|"HK"|"MO"|"TW"|"" per IP. Invalid (non-IPv4) inputs
-                        contribute "" to preserve positional alignment.
-      - dns_cn:         1 if CN-bucket IPs are >=60% of valid IPv4 (same threshold
-                        as build_dns_signal); else 0. EXACTLY equivalent to the
-                        old build_dns_signal output when region_lookup contains
-                        only CN data.
-      - dns_cn_count:   count of CN-bucket IPs (== old cn_count)
-      - dns_total:      len(ips), matching old behavior (counts non-IPv4 too)
-      - matched_cidr:   pipe-joined dedup list of up to 5 CN CIDRs (== old matched)
+    P2.A: returns region_dns_flags dict instead of bare dns_cn int, so callers
+    can compute per-bucket scores. Existing legacy fields (dns_cn_count,
+    dns_total, matched_cidr) are unchanged for DomainRecord backward compat.
+
+    Returns:
+      - per_ip_buckets:    list[str] aligned with ips; one of "CN"|"HK"|"MO"|"TW"|""
+      - region_dns_flags:  {"CN": 0|1, "HK": 0|1, "MO": 0|1, "TW": 0|1}
+                           flag[b] = 1 iff ipv4_total > 0 AND
+                           bucket_hit_count[b] / ipv4_total >= 0.60
+                           Equivalence guarantee: region_dns_flags["CN"] is
+                           ALWAYS equal to the old dns_cn return value.
+      - dns_cn_count:      count of CN-bucket IPs (== old cn_count)
+      - dns_total:         len(ips), matching old behavior
+      - matched_cidr:      pipe-joined dedup list of up to 5 CN CIDRs
 
     The first three return values are the inputs decide_bucket() needs;
     dns_cn_count / dns_total / matched_cidr keep DomainRecord backward compat.
     """
     if not ips:
-        return [], 0, 0, 0, ""
+        return [], {"CN": 0, "HK": 0, "MO": 0, "TW": 0}, 0, 0, ""
 
     per_ip_buckets: List[str] = []
-    cn_count = 0
+    bucket_hit_counts: Dict[str, int] = {"CN": 0, "HK": 0, "MO": 0, "TW": 0}
     ipv4_total = 0
     matched_cn_cidrs: List[str] = []
     cn_lookup = region_lookup.get("CN") or {}
@@ -931,8 +945,9 @@ def build_region_signals(
         ipv4_total += 1
         bucket = ip_to_bucket(ip, region_lookup)
         per_ip_buckets.append(bucket)
+        if bucket in bucket_hit_counts:
+            bucket_hit_counts[bucket] += 1
         if bucket == "CN":
-            cn_count += 1
             # Reproduce old build_dns_signal's matched_cidr field exactly:
             # we need the CIDR string, not just the bucket label.
             cidr = ip_in_cn_cidrs(ip, cn_lookup)
@@ -940,9 +955,51 @@ def build_region_signals(
                 matched_cn_cidrs.append(cidr)
 
     dns_total = len(ips)
-    dns_cn    = int(ipv4_total > 0 and (cn_count / ipv4_total) >= 0.60)
-    matched   = "|".join(list(dict.fromkeys(matched_cn_cidrs))[:5])
-    return per_ip_buckets, dns_cn, cn_count, dns_total, matched
+    # Compute per-region dns flags; all use the same 60% threshold.
+    region_dns_flags: Dict[str, int] = {
+        b: int(ipv4_total > 0 and (bucket_hit_counts[b] / ipv4_total) >= 0.60)
+        for b in ("CN", "HK", "MO", "TW")
+    }
+    # Legacy alias — kept for DomainRecord.dns_cn_count field (CN only)
+    cn_count = bucket_hit_counts["CN"]
+    matched  = "|".join(list(dict.fromkeys(matched_cn_cidrs))[:5])
+    return per_ip_buckets, region_dns_flags, cn_count, dns_total, matched
+
+
+def score_record_for_bucket(
+    bucket: str,
+    dns_flag: int,
+    tld_flag: int,
+) -> int:
+    """
+    P2.A: Compute a domain's confidence score for its assigned bucket.
+
+    CN path (byte-identical to pre-P2.A score_record when called with
+    registrar_cn=0, registrant_cn=0):
+      dns_cn=1  -> DNS_WEIGHT(60) + up to CN_TLD_WEIGHT(10) tld bonus = max 70
+      cn_tld=1  -> CN_TLD_FALLBACK_SCORE(60)
+      else      -> 0
+
+    HK/MO/TW path (P2.A new, symmetric structure):
+      dns_xx=1  -> DNS_WEIGHT(60) + up to XX_TLD_WEIGHT(20) tld bonus = max 80
+      else      -> 0  (no TLD fallback — .hk/.mo/.tw lack ICP equivalent)
+
+    Unclassified / unknown bucket:
+      -> 0
+    """
+    if bucket == "CN":
+        if dns_flag:
+            return min(100, DNS_WEIGHT + (tld_flag * CN_TLD_WEIGHT))
+        if tld_flag:
+            return CN_TLD_FALLBACK_SCORE
+        return 0
+
+    if bucket in ("HK", "MO", "TW"):
+        if dns_flag:
+            return min(100, DNS_WEIGHT + (tld_flag * XX_TLD_WEIGHT))
+        return 0
+
+    return 0  # unclassified or unknown bucket
 
 
 def score_record(
@@ -950,25 +1007,23 @@ def score_record(
     has_ips: bool = True,
 ) -> int:
     """
-    Scoring model:
-      Normal path (dns_cn=1): 60 + up to 40 bonus = max 100
+    Backward-compatible wrapper. New code should call score_record_for_bucket().
+
+    Kept so all existing callers (tests, external tooling) remain valid without
+    modification. registrar_cn / registrant_cn were always passed as 0 by
+    process_domain and are deliberately ignored here (P3 scope per §2.3).
+
+    Scoring:
+      Normal path (dns_cn=1): 60 + up to 10 tld bonus = max 70
       CN TLD fallback (dns_cn=0, cn_tld=1): CN_TLD_FALLBACK_SCORE (60)
         - .cn domains require ICP filing under MIIT regulation,
           confirming mainland CN business entity regardless of CDN placement.
         - Score 60 includes them in dist/domains.txt (ICP is strong signal).
       No signal: 0
     """
-    if dns_cn:
-        return min(100,
-            dns_cn        * DNS_WEIGHT
-            + registrar_cn  * REGISTRAR_WEIGHT
-            + registrant_cn * REGISTRANT_WEIGHT
-            + cn_tld        * CN_TLD_WEIGHT
-        )
-    if cn_tld:
-        # ICP-backed fallback: .cn requires government filing → strong CN signal
-        return CN_TLD_FALLBACK_SCORE
-    return 0
+    # registrar_cn / registrant_cn intentionally not forwarded (always 0 in
+    # practice; kept in signature for API compatibility only).
+    return score_record_for_bucket("CN", dns_cn, cn_tld)
 
 
 # ---------------------------------------------------------------------------
@@ -1096,6 +1151,10 @@ def load_previous_rows(path: Path) -> Dict[str, DomainRecord]:
                         updated=row.get("updated", "") or "",
                         sticky=int(row.get("sticky", 0) or 0),
                         bucket=(row.get("bucket", "") or "").strip().upper(),
+                        # P2.A: graceful fallback for old CSV without these columns
+                        dns_hk=int(row.get("dns_hk", 0) or 0),
+                        dns_mo=int(row.get("dns_mo", 0) or 0),
+                        dns_tw=int(row.get("dns_tw", 0) or 0),
                     )
                 except (ValueError, KeyError):
                     # Skip malformed row; never let one bad line break the build
@@ -1103,6 +1162,25 @@ def load_previous_rows(path: Path) -> Dict[str, DomainRecord]:
     except OSError:
         return {}
     return prev
+
+
+# ---------------------------------------------------------------------------
+# P2.A: TLD flag helper for per-bucket scoring
+# ---------------------------------------------------------------------------
+def _tld_flag_for_bucket(domain: str, bucket: str) -> int:
+    """
+    Return 1 if `domain` ends with the canonical TLD for `bucket`, else 0.
+    Pure function; used by process_domain to compute tld_flag per assigned bucket.
+    Returns 0 for unclassified ("") bucket.
+    """
+    if not bucket:
+        return 0
+    suffix_map = {"CN": CN_TLDS, "HK": (".hk",), "MO": (".mo",), "TW": (".tw",)}
+    suffixes = suffix_map.get(bucket)
+    if not suffixes:
+        return 0
+    d = normalize_domain(domain)
+    return int(d.endswith(suffixes))
 
 
 # ---------------------------------------------------------------------------
@@ -1117,11 +1195,26 @@ def process_domain(
     previous: Optional[Dict[str, DomainRecord]] = None,
 ) -> DomainRecord:
     ips = resolve_domain(domain, session)
-    per_ip_buckets, dns_cn, dns_cn_count, dns_total, matched_cidr = \
+    per_ip_buckets, region_dns_flags, dns_cn_count, dns_total, matched_cidr = \
         build_region_signals(ips, region_lookup)
-    tld_flag = cn_tld_flag(domain)
-    score    = score_record(dns_cn, 0, 0, tld_flag, has_ips=bool(ips))
-    bucket   = decide_bucket(domain, source, per_ip_buckets, dns_cn)
+
+    # P2.A: extract individual dns flags for DomainRecord fields
+    dns_cn = region_dns_flags["CN"]
+    dns_hk = region_dns_flags["HK"]
+    dns_mo = region_dns_flags["MO"]
+    dns_tw = region_dns_flags["TW"]
+
+    bucket = decide_bucket(domain, source, per_ip_buckets, dns_cn)
+
+    # P2.A: compute score for the assigned bucket using per-bucket TLD flag.
+    # For CN bucket this is byte-identical to the old score_record(dns_cn, 0, 0, tld_flag).
+    tld_flag = _tld_flag_for_bucket(domain, bucket)
+    dns_flag_for_bucket = region_dns_flags.get(bucket, 0)
+    score    = score_record_for_bucket(bucket, dns_flag_for_bucket, tld_flag)
+
+    # Legacy cn_tld field: keep recording the raw .cn TLD flag for DomainRecord
+    # (used in write_stats score_bands and for the CN fallback path).
+    cn_tld_value = cn_tld_flag(domain)
 
     # P1 fix v2: ALL seed-prefixed sources (including mainland) are human-
     # curated and get full trust regardless of IP-based scoring. This makes
@@ -1167,6 +1260,9 @@ def process_domain(
                 updated=prev.updated,   # keep stale date to signal non-refresh
                 sticky=1,
                 bucket=sticky_bucket,   # restore (and possibly repair) bucket
+                dns_hk=prev.dns_hk,
+                dns_mo=prev.dns_mo,
+                dns_tw=prev.dns_tw,
             )
 
     return DomainRecord(
@@ -1176,7 +1272,7 @@ def process_domain(
         dns_total=dns_total,
         registrar_cn=0,
         registrant_cn=0,
-        cn_tld=tld_flag,
+        cn_tld=cn_tld_value,
         score=score,
         resolved_ips="|".join(ips),
         matched_cidr=matched_cidr,
@@ -1184,6 +1280,9 @@ def process_domain(
         updated=updated,
         sticky=sticky_flag,
         bucket=bucket,
+        dns_hk=dns_hk,
+        dns_mo=dns_mo,
+        dns_tw=dns_tw,
     )
 
 
