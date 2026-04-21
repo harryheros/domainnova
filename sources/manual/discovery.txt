@@ -22,40 +22,16 @@ yuegui.shop
 gzccvs.com
 zjtdw.com
 gzfirst.com
-haiqingyanyu.com
 sxpta.com
-17tui.cc
-gxyzjc.com
-uipaas-assets.com
-ylyk.com
-mddlsa.com
-huifudashi.com
-luozhiyun.com
 litofu.com
-51weishi.com
-gxyiz.com
-chinaiol.com
-akey.me
 moe123.org
 
 # --- ip-neighbor:109.244.0.66 2026-03-28 ---
-haomenglvxing.cn
-z.mafengwo.cn
-mafengwo.com
-corp.mafengwo.com
-m.mafengwo.com
-www.mafengwo.com
-mafengwo.net
 
 # --- ip-neighbor:47.111.234.42 2026-03-28 ---
-www.septwolves.com
 
 # --- ip-neighbor:211.100.61.67 2026-03-28 ---
-x-f.cc
-astroit.cn
-minhe.bj.cn
 bj17.cn
-www.china-hz.cn
 hdw.com.cn
 cpcjxs.gov.cn
 www.cpcjxs.gov.cn
@@ -64,7 +40,6 @@ www.cpcjxs.gov.cn
 clouddrive.huawei.com
 
 # --- upstream:felixonmars-accelerated 2026-03-28 ---
-ht-rc.com
 hxgs.net
 topmba.mobi
 bajasaechina.com
@@ -225,8 +200,6 @@ pengyun.gov.cn
 8086.gzjjzd.gov.cn
 
 # --- upstream:felixonmars-accelerated 2026-03-28 ---
-hgj.com
-qunhei.com
 szwdny.com
 2133bbs.com
 ttplayer.com
@@ -236,7 +209,6 @@ mintrust.com
 chinasmp.com
 kwaitalk.com
 flintech.org
-qxw18.com
 globalesim.shop
 dxton.com
 77fanwen.com
@@ -262,7 +234,6 @@ missjia.net
 xiamen888.com
 myrb.net
 shcmhr.com
-tttarot.com
 hbbidding.com
 playerinfinite.com
 beijingrc.net
@@ -277,10 +248,8 @@ hi169.net
 b8b4ix7bj.com
 gala-v.com
 chiphometek.com
-fjjgn396.com
 093.com
 ndsad.com
-for512.com
 chinaave.org
 80c189b091016.beer
 ksdhgy.com
@@ -293,9 +262,7 @@ danming-ic.com
 youhaosoft.com
 hbfybj.com
 cqjsaq.com
-mvpmob.com
 yunyingketang.com
-msndvr.com
 
 # --- ip-neighbor:119.253.80.52 2026-03-28 ---
 
@@ -310,12 +277,8 @@ msndvr.com
 # --- ip-neighbor:103.102.200.2 2026-03-28 ---
 
 # --- ip-neighbor:59.82.44.240 2026-03-28 ---
-ctmhapepe17.club
 
 # --- ip-neighbor:59.82.121.163 2026-03-28 ---
-ctmhapepe15.club
-ctmhapepe18.club
-ctmhapepe25.club
 
 # --- ip-neighbor:59.82.122.140 2026-03-28 ---
 huishou.2.taobao.com
@@ -340,7 +303,6 @@ perf.mobi-getmore.store.ovi.com.cn
 wm2.1to1crm.com.cn
 owa.devicevm.com.cn
 dscitroen.com.cn
-dict.bing.com.cn
 test1.aca.browser.ovi.com.cn
 etrip.hrbb.com.cn
 www.spam.sgcc.com.cn

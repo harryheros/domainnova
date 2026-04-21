@@ -1,5 +1,5 @@
 # DomainNova - MO domains
-# Generated: 2026-04-21T14:42:45Z
+# Generated: 2026-04-21T21:39:22Z
 # Count: 56
 abm.org.mo
 antifraud.gov.mo
