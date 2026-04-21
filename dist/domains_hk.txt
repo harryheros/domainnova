@@ -1,30 +1,31 @@
 # DomainNova - HK domains
-# Generated: 2026-04-21T21:39:22Z
-# Count: 130
+# Generated: 2026-04-21T21:59:19Z
+# Count: 135
 163.net
-77fanwen.com
-798com.com
+17fandai.com
+197232.vip
+25yi.com
+51mockup.com
+52112.com
 aastocks.com
 alipay.hk
 alipayhk.com
 am730.com.hk
 amcm.gov.mo
 aswatson.com
-b8b4ix7bj.com
 baby-kingdom.com
 bankofchina.com.hk
 bankofchina.com.mo
 bastillepost.com
 beafantasia.com
 bochk.com
+caifu500.net
 cathaypacific.com
+ce33m7.com
 cem.com.mo
-chiphometek.com
 chubb.com.hk
 cityu.edu.hk
 clp.com.hk
-cncoolm.com
-cqstudents.com
 crcbank.com
 csl.com.hk
 ctfe.com
@@ -32,19 +33,22 @@ cuhk.edu.hk
 cup.com.hk
 cxexpress.com
 dahsing.com
-daiwei.art
 dbs.com.hk
+dgw888.com
 dhk.com.hk
 dididadidi.com
 dimbuy.com
 discuss.com.hk
 dragonfly.fm
+easymule.com
 fortress.com.hk
 fwd.com.hk
-globalesim.shop
 gov.hk
+gxhzkj.com
+hangruntech.com
 hangseng.com
 hgc.com.hk
+hgptech.com
 hk01.com
 hkairport.com
 hkeaa.edu.hk
@@ -68,16 +72,16 @@ hku.hk
 hsbc.com.hk
 huoche.net
 iam.gov.mo
-ic001.org
 icac.org.hk
 info.gov.hk
 isd.gov.hk
+izmzg.com
 jd.hk
 jobsdb.com
-junyuewl.com
 klook.com
 lcsd.gov.hk
 lihkg.com
+lzmy123.com
 macau-sf.com
 macau-water.com
 mc.icbc.com.cn
@@ -102,9 +106,9 @@ scmp.com
 sfc.hk
 singtao.com
 smartone.com
-solooncontrols.com
 staticfile.org
 stheadline.com
+thelastsky.com
 three.com.hk
 tmall.hk
 tungwah.org.hk
@@ -129,5 +133,6 @@ yesstyle.com
 yield.hk
 za.group
 zh.mohw.gov.hk
+zhangshengrong.com
 zhaopin.hk
 zjlib.com

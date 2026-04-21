@@ -1,6 +1,6 @@
 # DomainNova - TW domains
-# Generated: 2026-04-21T21:39:22Z
-# Count: 66
+# Generated: 2026-04-21T21:59:19Z
+# Count: 83
 104.com.tw
 591.com.tw
 aptg.com.tw
@@ -10,6 +10,7 @@ books.com.tw
 bot.com.tw
 bus.gov.tw
 cathaybk.com.tw
+cathaylife.com.tw
 cbc.gov.tw
 chinatimes.com
 cht.com.tw
@@ -22,24 +23,32 @@ dgbas.gov.tw
 e-bill.com.tw
 easycard.com.tw
 esunbank.com.tw
+etmall.com.tw
 ettoday.net
 ey.gov.tw
 familymart.com.tw
 fetnet.net
+firstbank.com.tw
 foodpanda.com.tw
+fpg.com.tw
 fubon.com
 gamer.com.tw
+gigabyte.com
 gov.tw
 hct.com.tw
 hi-life.com.tw
 hinet.net
 ibon.com.tw
 immigration.gov.tw
+judicial.gov.tw
 kerrytj.com
+kgi.com
 kkbox.com
 kkday.com
 linebank.com.tw
+liontravel.com
 ltn.com.tw
+mediatek.com
 megabank.com.tw
 mobile01.com
 moea.gov.tw
@@ -48,7 +57,11 @@ momoshop.com.tw
 mops.twse.com.tw
 mrt.taipei
 nccc.com.tw
+nchu.edu.tw
+ncku.edu.tw
+nhi.gov.tw
 ntu.edu.tw
+ntust.edu.tw
 pchome.com.tw
 pixnet.net
 post.gov.tw
@@ -60,10 +73,14 @@ shopee.tw
 storm.mg
 t-cat.com.tw
 taishinbank.com.tw
+taiwanmobile.com
+tcb-bank.com.tw
 thsrc.com.tw
 tsmc.com
+ttv.com.tw
 tvbs.com.tw
 twse.com.tw
 udn.com
 yahoo.com.tw
 youbike.com.tw
+yuantabank.com.tw
