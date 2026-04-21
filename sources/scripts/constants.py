@@ -52,7 +52,7 @@ CN_BACKBONE: dict[str, dict] = {
 # ---------------------------------------------------------------------------
 CN_CLOUD_ASNS: dict[str, str] = {
     # Alibaba Cloud
-    "45090":  "Alibaba_Cloud_CN",   # correct owner; was incorrectly duplicated for Tencent
+    "45090":  "Tencent_CN",          # AS45090 holder is Tencent (was mislabeled as Alibaba)
     "37963":  "Alibaba_Cloud_CN",
 
     # Tencent Cloud

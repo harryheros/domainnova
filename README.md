@@ -6,7 +6,7 @@ DomainNova is an open intelligence dataset and tooling layer for domain, network
 Core data infrastructure, large-scale scanning systems, and attribution engine are not open-sourced.
 
 [![Update](https://github.com/harryheros/domainnova/actions/workflows/update.yml/badge.svg)](https://github.com/harryheros/domainnova/actions/workflows/update.yml)
-[![Version](https://img.shields.io/badge/version-v2.0-blue)](https://github.com/harryheros/domainnova/releases/tag/v2.0)
+[![Version](https://img.shields.io/badge/version-v3.0-blue)](https://github.com/harryheros/domainnova/releases/tag/v3.0)
 
 ---
 
@@ -22,12 +22,27 @@ Unlike static domain lists, DomainNova operates a three-tier data architecture w
 
 ## Scoring Model
 
+DomainNova uses a **symmetric multi-region scoring model** (P2.A) that evaluates domains independently for each target region (CN, HK, MO, TW).
+
+### Per-Region Signals
+
 | Signal | Weight | Description |
 |--------|--------|-------------|
-| `dns_cn` | 60 | Majority of resolved IPs fall within CN CIDR ranges (via [IPNova](https://github.com/harryheros/ipnova)) |
-| `registrar_cn` | 20 | Domain registrar is a known Chinese company (RDAP, opt-in) |
-| `registrant_cn` | 20 | Registrant country is listed as CN in RDAP (opt-in) |
-| `cn_tld` | 10 | Domain uses a Chinese TLD (`.cn` etc.) |
+| `dns_xx` | 60 | ≥60% of resolved IPs fall within the region's CIDR ranges (via [IPNova](https://github.com/harryheros/ipnova)) |
+| `xx_tld` | 20 | Domain uses a region-specific TLD (`.hk`, `.mo`, `.tw`) — bonus only when `dns_xx=1` |
+| `cn_tld` | 10 | Domain uses `.cn` TLD — bonus when `dns_cn=1` |
+| `cn_tld` fallback | 60 | `.cn` domains without DNS signal still score 60 (ICP filing is a strong administrative signal) |
+
+> **Asymmetry note**: Only `.cn` has a TLD-only fallback path (score=60 without DNS confirmation). `.hk`, `.mo`, `.tw` TLDs do **not** trigger fallback because they lack an ICP-equivalent mandatory filing system. This reflects real-world signal strength differences, not an implementation shortcut.
+
+### Output Files
+
+| File | Contents |
+|------|----------|
+| `dist/domains_cn.txt` | Mainland China domains (score ≥ 60) |
+| `dist/domains_hk.txt` | Hong Kong domains (score ≥ 60) |
+| `dist/domains_tw.txt` | Taiwan domains (score ≥ 60) |
+| `dist/domains_mo.txt` | Macau domains (score ≥ 60) |
 
 **Thresholds:**
 
