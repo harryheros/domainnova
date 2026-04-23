@@ -1,16 +1,18 @@
 # DomainNova - HK domains
-# Generated: 2026-04-21T23:01:23Z
-# Count: 130
-00xu.com
+# Generated: 2026-04-23T15:46:51Z
+# Count: 135
 163.net
+46ab3da510d4ccaf.com
+517ming.com
 aastocks.com
+aboatedu.com
 alipay.hk
 alipayhk.com
 am730.com.hk
 amcm.gov.mo
 aswatson.com
+ausdream.org
 baby-kingdom.com
-baidusx.cc
 bankofchina.com.hk
 bankofchina.com.mo
 bastillepost.com
@@ -22,26 +24,24 @@ chubb.com.hk
 cityu.edu.hk
 clp.com.hk
 crcbank.com
+crvic.org
 csl.com.hk
 ctfe.com
 cuhk.edu.hk
 cup.com.hk
 cxexpress.com
-d837c367d34d7bb5.com
 dahsing.com
 dbs.com.hk
-dh33660.com
 dhk.com.hk
+dianchouapp.com
 dididadidi.com
 dimbuy.com
 discuss.com.hk
 dragonfly.fm
-drvi.net
+duoduopan.com
 fortress.com.hk
-fuyuzhe.com
+fulicat.com
 fwd.com.hk
-ganzhishi.com
-goodschool.world
 gov.hk
 hangseng.com
 hgc.com.hk
@@ -66,19 +66,26 @@ hkt.com
 hktvmall.com
 hku.hk
 hsbc.com.hk
+hst1966.net
 huoche.net
 iam.gov.mo
 icac.org.hk
+iipiano.com
 info.gov.hk
 isd.gov.hk
+j5.cc
+javabikes.com
 jd.hk
+jianxinyun.com
 jobsdb.com
 klook.com
 lcsd.gov.hk
 lihkg.com
+lzskqyy.com
 macau-sf.com
 macau-water.com
 mc.icbc.com.cn
+mfjxcn.com
 mingpao.com
 mpay.com.mo
 mtel.mo
@@ -86,7 +93,6 @@ mtr.com.hk
 must.edu.mo
 newhua.com
 ngacn.cc
-nongcun5.com
 nowtv.now.com
 oceanpark.com.hk
 octopus.com.hk
@@ -105,6 +111,7 @@ staticfile.org
 stheadline.com
 three.com.hk
 tmall.hk
+tom.com
 tungwah.org.hk
 turbojet.com.hk
 tvb.com
@@ -125,9 +132,7 @@ xpcha.com
 yata.hk
 yesstyle.com
 yield.hk
-yswh.com
 za.group
 zh.mohw.gov.hk
 zhaopin.hk
 zjlib.com
-ztxxr.com
