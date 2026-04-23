@@ -198,3 +198,6 @@ Core data infrastructure, large-scale scanning systems, and attribution engine a
 ## Related Projects
 
 - [IPNova](https://github.com/harryheros/ipnova) — companion CN IP CIDR dataset (APNIC-sourced)
+---
+
+Part of the [Nova infrastructure toolkit](https://github.com/harryheros).
