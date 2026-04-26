@@ -582,7 +582,6 @@ panasonic.com.cn
 pc6.com
 pcauto.com.cn
 pconline.com.cn
-pddlive.com
 peacebird.com
 pechoin.com.cn
 penghua.com
@@ -2016,7 +2015,6 @@ businesstoday.com.tw
 buy123.com.tw
 carrefour.com.tw
 cathaylife.com.tw
-cookpad.com.tw
 costco.com.tw
 ctitv.com.tw
 cw.com.tw
@@ -2030,13 +2028,11 @@ fpg.com.tw
 ftv.com.tw
 gigabyte.com
 htc.com
-hua-nan.com.tw
 icook.tw
 inside.com.tw
 judicial.gov.tw
 kgi.com
 klook.com.tw
-land.moi.gov.tw
 liontravel.com
 mediatek.com
 metro.taipei
@@ -2050,7 +2046,6 @@ nctu.edu.tw
 newtalk.tw
 nextapple.com
 nhi.gov.tw
-nia.gov.tw
 nthu.edu.tw
 ntnu.edu.tw
 ntust.edu.tw
@@ -2067,7 +2062,6 @@ scsb.com.tw
 taipower.com.tw
 taiwanlife.com
 taiwanmobile.com
-tax.gov.tw
 tcb-bank.com.tw
 technews.tw
 thenewslens.com
@@ -2300,3 +2294,6 @@ zgjianfang.com
 zhaoyl.com
 zuan88.com
 zxkq022.com
+
+# ===== Auto-promoted 2026-04-26 =====
+motu.art
