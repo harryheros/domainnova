@@ -2,8 +2,7 @@
 
 > Self-evolving dataset of domains associated with Chinese internet infrastructure, ranked by confidence.
 
-DomainNova is an open intelligence dataset and tooling layer for domain, network, and infrastructure analysis.  
-Core data infrastructure, large-scale scanning systems, and attribution engine are not open-sourced.
+DomainNova is an open intelligence dataset and tooling layer for domain, network, and infrastructure analysis.
 
 [![Update](https://github.com/harryheros/domainnova/actions/workflows/update.yml/badge.svg)](https://github.com/harryheros/domainnova/actions/workflows/update.yml)
 [![Version](https://img.shields.io/badge/version-v3.0-blue)](https://github.com/harryheros/domainnova/releases/tag/v3.0)
@@ -106,7 +105,10 @@ All agent output feeds into `discovery.txt` and is verified by the build pipelin
 ## Files
 
 ```text
-dist/domains.txt                    plain domain list (score >= 60), updated weekly
+dist/domains_cn.txt                 CN domain list (score >= 60), updated weekly
+dist/domains_hk.txt                 HK domain list (score >= 60)
+dist/domains_tw.txt                 TW domain list (score >= 60)
+dist/domains_mo.txt                 MO domain list (score >= 60)
 data/domains.csv                    full structured database (all signals + score)
 data/stats.json                     build statistics and lifecycle counters
 data/domains_metadata.json          structured metadata (domain → entity/category/ecosystem)
@@ -190,14 +192,19 @@ Discovery candidates are managed automatically — do not edit `sources/manual/d
 Data: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) — public domain.  
 Scripts: MIT.
 
-This repository contains the public dataset and tooling layer of DomainNova.  
-Core data infrastructure, large-scale scanning systems, and attribution engine are not open-sourced.
-
 ---
 
-## Related Projects
+## Nova Toolkit
 
-- [IPNova](https://github.com/harryheros/ipnova) — companion CN IP CIDR dataset (APNIC-sourced)
+DomainNova is part of the Nova infrastructure toolkit:
+
+| Project | Layer | Description |
+|---|---|---|
+| [IPNova](https://github.com/harryheros/ipnova) | IP | Routing-aware IPv4 dataset for infrastructure classification and traffic control |
+| **DomainNova** | **Domain (Data)** | **High-precision domain dataset for proxy routing and network intelligence** |
+| [ShieldNova](https://github.com/harryheros/shieldnova) | Domain (Filter) | Compatibility-first domain intelligence for privacy, ad blocking, security and traffic routing |
+| [HarryWrt](https://github.com/harryheros/harrywrt) | Device | Clean OpenWrt-based firmware for x86_64 and aarch64 (BIOS & UEFI) |
+| [OSNova](https://github.com/harryheros/osnova) | System | System deployment and reinstallation engine for VPS and bare-metal servers |
 ---
 
 Part of the [Nova infrastructure toolkit](https://github.com/harryheros).

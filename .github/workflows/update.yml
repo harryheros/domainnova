@@ -1,4 +1,4 @@
-name: Update China Domain List
+name: Update DomainNova Dataset
 
 on:
   schedule:
