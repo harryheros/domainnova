@@ -1,10 +1,9 @@
 # DomainNova - HK domains
-# Generated: 2026-04-26T17:02:29Z
-# Count: 133
+# Generated: 2026-04-26T17:10:48Z
+# Count: 143
 163.net
-25yi.com
-52112.com
-77fanwen.com
+17fandai.com
+51mockup.com
 aastocks.com
 alipay.hk
 alipayhk.com
@@ -17,13 +16,13 @@ bankofchina.com.mo
 bastillepost.com
 beafantasia.com
 bochk.com
-caifu500.net
 cathaypacific.com
+ce33m7.com
 cem.com.mo
-chiphometek.com
 chubb.com.hk
 cityu.edu.hk
 clp.com.hk
+coffee-script.org
 crcbank.com
 csl.com.hk
 ctfe.com
@@ -31,19 +30,26 @@ cuhk.edu.hk
 cup.com.hk
 cxexpress.com
 dahsing.com
+daugres.com
 dbs.com.hk
+dgw888.com
+dh33660.com
 dhk.com.hk
 dididadidi.com
 dimbuy.com
 discuss.com.hk
 dragonfly.fm
-easymule.com
 fortress.com.hk
+fuyuzhe.com
 fwd.com.hk
+ganzhishi.com
+gdks168.com
+goodschool.world
 gov.hk
-gxhzkj.com
+hangruntech.com
 hangseng.com
 hgc.com.hk
+hgptech.com
 hk01.com
 hkairport.com
 hkeaa.edu.hk
@@ -67,20 +73,19 @@ hku.hk
 hsbc.com.hk
 huoche.net
 iam.gov.mo
-ic001.org
 icac.org.hk
 info.gov.hk
 isd.gov.hk
+izmzg.com
 jd.hk
 jobsdb.com
-junyuewl.com
 klook.com
 lcsd.gov.hk
 lihkg.com
-lzmy123.com
 lzskqyy.com
 macau-sf.com
 macau-water.com
+males120.com
 mc.icbc.com.cn
 mingpao.com
 mpay.com.mo
@@ -89,6 +94,7 @@ mtr.com.hk
 must.edu.mo
 newhua.com
 ngacn.cc
+nongcun5.com
 nowtv.now.com
 oceanpark.com.hk
 octopus.com.hk
@@ -103,12 +109,12 @@ scmp.com
 sfc.hk
 singtao.com
 smartone.com
-solooncontrols.com
 staticfile.org
 stheadline.com
 three.com.hk
 tmall.hk
 tom.com
+tpsbp.com
 tungwah.org.hk
 turbojet.com.hk
 tvb.com
@@ -123,6 +129,7 @@ westkowloon.hk
 wharf.com.hk
 wheelockcompany.com
 winglungbank.com
+wordlm.com
 www.mybus.com.cn
 xiaohongtao.art
 xiaoweigod.com
@@ -130,7 +137,10 @@ xpcha.com
 yata.hk
 yesstyle.com
 yield.hk
+yswh.com
 za.group
 zh.mohw.gov.hk
+zhangshengrong.com
 zhaopin.hk
 zjlib.com
+ztxxr.com
