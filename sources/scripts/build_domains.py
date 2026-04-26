@@ -182,7 +182,7 @@ class DomainRecord:
     source:        str
     updated:       str
     sticky:        int = 0   # 1 if score was retained from previous run (DNS flake protection)
-    bucket:        str = ""  # P1: "CN" | "HK" | "MO" | "TW" | "" (unclassified). See decide_bucket().
+    bucket:        str = ""  # P1: "CN" | "HK" | "MO" | "TW" | "JP" | "KR" | "SG" | "" (unclassified). See decide_bucket().
     # P2.A: per-region DNS majority flags (symmetric with dns_cn).
     # 1 iff resolved IPv4 IPs in that region's CIDR ≥ 60%; 0 otherwise.
     dns_hk:        int = 0
@@ -370,7 +370,7 @@ def fetch_region_cidrs(
     Returns: {bucket: [networks]} for each bucket in REGION_BUCKETS.
              Degraded buckets map to an empty list.
     """
-    log("[+] Fetching ipnova multi-region CIDR lists (CN/HK/MO/TW)...")
+    log("[+] Fetching ipnova multi-region CIDR lists (CN/HK/MO/TW/JP/KR/SG)...")
     out: Dict[str, List[ipaddress.IPv4Network]] = {}
     # Fetch in deterministic order so logs read CN→HK→MO→TW.
     for bucket in ("CN", "HK", "MO", "TW", "JP", "KR", "SG"):
@@ -1076,10 +1076,10 @@ def decide_bucket(
     dns_cn: int,
 ) -> str:
     """
-    Pure function. Assigns a domain to exactly one of CN/HK/MO/TW or "" (unclassified).
+    Pure function. Assigns a domain to exactly one of CN/HK/MO/TW/JP/KR/SG or "" (unclassified).
 
     Implements docs/PROPOSAL_MULTI_REGION.md §2.2 decision tree (v1.1):
-      1. Seed forced assignment (seed_hk/mo/tw)
+      1. Seed forced assignment (seed_hk/mo/tw/jp/kr/sg)
       2. Resolution-failure handling is the CALLER's job (sticky fallback);
          this function returns "" if there are no signals.
       3. Per-IP voting using pre-resolved bucket labels from ipnova CIDR lookup
@@ -1089,7 +1089,7 @@ def decide_bucket(
 
     Args:
         domain:     normalized domain (lowercase, no scheme).
-        source:     "seed" | "seed_hk" | "seed_mo" | "seed_tw" | "extended" | "discovery".
+        source:     "seed" | "seed_hk" | "seed_mo" | "seed_tw" | "seed_jp" | "seed_kr" | "seed_sg" | "extended" | "discovery".
         ip_buckets: list of pre-resolved bucket labels, one per resolved IP. Each
                     element is "CN" | "HK" | "MO" | "TW" | "" produced by
                     ip_to_bucket() against the ipnova region lookup. Empty string
@@ -1097,7 +1097,7 @@ def decide_bucket(
         dns_cn:     1 if build_region_signals flagged CN-CIDR-majority, else 0.
 
     Returns:
-        "CN" | "HK" | "MO" | "TW" | "" (unclassified)
+        "CN" | "HK" | "MO" | "TW" | "JP" | "KR" | "SG" | "" (unclassified)
     """
     # ---- Rule 1: seed forced assignment --------------------------------------
     forced = _SEED_SOURCE_TO_BUCKET.get(source)
@@ -1244,7 +1244,7 @@ def process_domain(
     # from single-IP misclassification (e.g., ipnova CIDR table overlap
     # causing a known-CN domain to compute score=0 because decide_bucket
     # forced CN but the IP landed in HK).
-    if source in ("seed", "seed_hk", "seed_mo", "seed_tw"):
+    if source in ("seed", "seed_hk", "seed_mo", "seed_tw", "seed_jp", "seed_kr", "seed_sg"):
         score = 100
 
     # Sticky fallback: if this run couldn't resolve any IPs AND the previous
@@ -1631,7 +1631,7 @@ def write_dist_buckets(dist_dir: Path, rows: List[DomainRecord]) -> Dict[str, in
     """
     P1 Step 6: write four parallel region dist files.
 
-    For each bucket in CN/HK/MO/TW, write `domains_{bucket}.txt` containing
+    For each bucket in CN/HK/MO/TW/JP/KR/SG, write `domains_{bucket}.txt` containing
     domains that satisfy `r.bucket == bucket AND r.score >= INCLUDE_THRESHOLD`,
     sorted alphabetically. Empty buckets still get an empty file with header,
     so subscription endpoints never 404.

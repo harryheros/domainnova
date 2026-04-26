@@ -1,5 +1,5 @@
 """
-constants.py - Mainland China Digital Asset Intelligence Database
+constants.py - Asia-Pacific Digital Asset Intelligence Database
 
 Categorizes ASNs and infrastructure for the DomainNova build pipeline.
 
