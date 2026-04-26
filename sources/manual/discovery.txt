@@ -134,7 +134,6 @@ www.xinba.gov.cn
 vpn.hzfc.gov.cn
 git.dmfy.gov.cn
 tst.gov.cn
-wenming.034000.gov.cn
 xcjob.gov.cn
 nzcgzf.gov.cn
 czt.zww.nxzwfw.gov.cn
@@ -164,7 +163,6 @@ www.lygjj.gov.cn
 huanghai.gov.cn
 ipa.szxchb.gov.cn
 www.yzdzw.gov.cn
-tongxin.034000.gov.cn
 kf.cdzfgjj.gov.cn
 hszhdj.gov.cn
 jszwfw.gov.cn
@@ -212,7 +210,6 @@ dxton.com
 solooncontrols.com
 wtardseo26x6ts8tss0-dfs1.com
 junyuewl.com
-san-yang.com
 xn--fiq7vggk68aq1fe49byv8a.xn--zfr164b
 byted-static.com
 androidmi.com
@@ -240,7 +237,6 @@ pailitao.com
 pk38.com
 sinocache.net
 yunjiazheng.com
-zshandsome.com
 hi169.net
 b8b4ix7bj.com
 gala-v.com
@@ -256,9 +252,7 @@ qhytyyvx.com
 mangomob.net
 gl114.net
 danming-ic.com
-youhaosoft.com
 hbfybj.com
-cqjsaq.com
 yunyingketang.com
 
 # --- ip-neighbor:119.253.80.52 2026-03-28 ---
@@ -307,7 +301,6 @@ www.shianpiin.com.cn
 www1.cma-cgm.com.cn
 webjyzx.rxzq.com.cn
 merchant.globebill.com.cn
-trip.shengjingbank.com.cn
 cocama-remasys-test.mercedes-benz.com.cn
 tsbo.opentide.com.cn
 maps-src-bj-01.mh.ovi.com.cn
@@ -340,7 +333,6 @@ guilin-tour.com.cn
 sr10117.ned.naveco.com.cn
 scgi.ebay.com.cn
 icare.metlife.com.cn
-mail.hazoon.com.cn
 hp-accessory.com.cn
 www.secure.treknorth.com.cn
 ebank.hxb.com.cn
@@ -375,7 +367,6 @@ hospitalkg.com
 52112.com
 gxhzkj.com
 landzestate.com
-uhouzz.com
 unibizp.com
 mlinks.cc
 cdnhwclxu105.com
@@ -452,13 +443,8 @@ www.xiaomi--orel.ru
 xiaomi--31.online
 xiaomi--36.online
 xiaomi-my-watch-lite-es-es--25135353.jasont.de
-weather.intl.cdn.xiaomi.com
-predownload.game.xiaomi.com
 a.market.xiaomi.com
 cdn.fds-ssl.api.xiaomi.com
-xiaomi-poco-x3-pro-6gb-128gb--122826825.helpclean.de
-xiaomi-redmi-note-7-sim-karte-einlegen--491886683.helpclean.de
-static.ginstal.xiaomi.com
 xiaomi-watch-s1-active-pro-es-es--863642633.helpclean.de
 xiaomi--rostov.online
 xiaomi-poco-x3-pro-huelle--258835401.wingforum.de
@@ -2110,3 +2096,8 @@ uyouqu.com
 zdworks.com
 focusight.net
 jhwvjjw.com
+
+# --- upstream:felixonmars-accelerated 2026-04-26 ---
+daojialianmeng.com
+giscafer.com
+solarcare.com
