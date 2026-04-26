@@ -1,8 +1,10 @@
 # DomainNova - HK domains
-# Generated: 2026-04-26T02:48:35Z
-# Count: 134
+# Generated: 2026-04-26T17:02:29Z
+# Count: 133
 163.net
-798com.com
+25yi.com
+52112.com
+77fanwen.com
 aastocks.com
 alipay.hk
 alipayhk.com
@@ -15,14 +17,13 @@ bankofchina.com.mo
 bastillepost.com
 beafantasia.com
 bochk.com
+caifu500.net
 cathaypacific.com
 cem.com.mo
+chiphometek.com
 chubb.com.hk
 cityu.edu.hk
 clp.com.hk
-cncoolm.com
-cqapg.com
-cqstudents.com
 crcbank.com
 csl.com.hk
 ctfe.com
@@ -30,16 +31,17 @@ cuhk.edu.hk
 cup.com.hk
 cxexpress.com
 dahsing.com
-daiwei.art
 dbs.com.hk
 dhk.com.hk
 dididadidi.com
 dimbuy.com
 discuss.com.hk
 dragonfly.fm
+easymule.com
 fortress.com.hk
 fwd.com.hk
 gov.hk
+gxhzkj.com
 hangseng.com
 hgc.com.hk
 hk01.com
@@ -63,18 +65,19 @@ hkt.com
 hktvmall.com
 hku.hk
 hsbc.com.hk
-huaxiabeidou.com
 huoche.net
 iam.gov.mo
+ic001.org
 icac.org.hk
 info.gov.hk
 isd.gov.hk
 jd.hk
 jobsdb.com
+junyuewl.com
 klook.com
 lcsd.gov.hk
 lihkg.com
-linuxidc.net
+lzmy123.com
 lzskqyy.com
 macau-sf.com
 macau-water.com
@@ -84,31 +87,28 @@ mpay.com.mo
 mtel.mo
 mtr.com.hk
 must.edu.mo
-n12345.com
 newhua.com
 ngacn.cc
 nowtv.now.com
 oceanpark.com.hk
 octopus.com.hk
-ofenka.com
 on.cc
 openrice.com
 pccw.com
 pgyy.com
 polyu.edu.hk
-rsxmgl.com
 rthk.hk
 sc.com
 scmp.com
 sfc.hk
 singtao.com
 smartone.com
+solooncontrols.com
 staticfile.org
 stheadline.com
 three.com.hk
 tmall.hk
 tom.com
-tototang.com
 tungwah.org.hk
 turbojet.com.hk
 tvb.com
@@ -134,4 +134,3 @@ za.group
 zh.mohw.gov.hk
 zhaopin.hk
 zjlib.com
-zmkmex.com
