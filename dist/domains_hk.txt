@@ -1,9 +1,10 @@
 # DomainNova - HK domains
-# Generated: 2026-04-26T01:25:07Z
-# Count: 139
+# Generated: 2026-04-26T02:30:10Z
+# Count: 135
+02924.com
 163.net
-24timemap.com
 aastocks.com
+aialbb.com
 alipay.hk
 alipayhk.com
 am730.com.hk
@@ -15,8 +16,7 @@ bankofchina.com.mo
 bastillepost.com
 beafantasia.com
 bochk.com
-boke.one
-cashier.travelgo.com
+caiwu51.com
 cathaypacific.com
 cem.com.mo
 chubb.com.hk
@@ -37,10 +37,10 @@ discuss.com.hk
 dragonfly.fm
 fortress.com.hk
 fwd.com.hk
+gourmet114.com
 gov.hk
 hangseng.com
 hgc.com.hk
-hi772.com
 hk01.com
 hkairport.com
 hkeaa.edu.hk
@@ -68,24 +68,20 @@ icac.org.hk
 info.gov.hk
 isd.gov.hk
 jd.hk
-jianzhiwangzhan.com
-jlhdq.com
 jobsdb.com
 klook.com
 lcsd.gov.hk
 lihkg.com
+likeji.net
 lzskqyy.com
 macau-sf.com
 macau-water.com
-mamicode.com
 mc.icbc.com.cn
-mengniuir.com
 mingpao.com
 mpay.com.mo
 mtel.mo
 mtr.com.hk
 must.edu.mo
-nevem.com
 newhua.com
 ngacn.cc
 nowtv.now.com
@@ -96,8 +92,9 @@ openrice.com
 pccw.com
 pgyy.com
 polyu.edu.hk
-qcwh2021.com
-qunkeng.com
+qqpifu.com
+qyhxy365.com
+qzsfy.com
 rthk.hk
 sc.com
 scmp.com
@@ -105,38 +102,37 @@ sfc.hk
 singtao.com
 smartone.com
 staticfile.org
-stegameskins.com
 stheadline.com
+taizibao.com
 three.com.hk
 tmall.hk
 tom.com
-traveltosuzhou.com
 tungwah.org.hk
 turbojet.com.hk
 tvb.com
 udn.com.hk
+uscntv.com
 ust.hk
 uubank.com.mo
+uupei.com
 uwants.com
 vancouver.hk
 vtc.edu.hk
 watsons.com.hk
+weifengchina.com
 westkowloon.hk
 wharf.com.hk
 wheelockcompany.com
 winglungbank.com
 www.mybus.com.cn
-www.tongcheng.com
-xg.node.tcylgslb.com
 xiaohongtao.art
 xiaoweigod.com
 xpcha.com
-xuehai.net
 yata.hk
 yesstyle.com
 yield.hk
-ymhuwai.com
 za.group
+zd-hs.com
 zh.mohw.gov.hk
 zhaopin.hk
 zjlib.com
