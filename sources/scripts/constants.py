@@ -112,7 +112,7 @@ NON_MAINLAND_REGIONS: list[str] = [
 # ---------------------------------------------------------------------------
 # The set of recognized region buckets. A domain is assigned to exactly one
 # of these (or to "" / unclassified). See docs/PROPOSAL_MULTI_REGION.md §2.
-REGION_BUCKETS: set[str] = {"CN", "HK", "MO", "TW"}
+REGION_BUCKETS: set[str] = {"CN", "HK", "MO", "TW", "JP", "KR", "SG"}
 
 # ipnova multi-region CIDR data source. Self-owned upstream → use main branch;
 # no supply-chain pinning required (see PROPOSAL §3.1).
@@ -123,6 +123,9 @@ REGION_CIDR_URLS: dict[str, str] = {
     "HK": f"{IPNOVA_BASE}/HK.txt",
     "MO": f"{IPNOVA_BASE}/MO.txt",
     "TW": f"{IPNOVA_BASE}/TW.txt",
+    "JP": f"{IPNOVA_BASE}/JP.txt",
+    "KR": f"{IPNOVA_BASE}/KR.txt",
+    "SG": f"{IPNOVA_BASE}/SG.txt",
 }
 
 # Sanity-check threshold: ipnova region files with fewer than this many lines
@@ -137,10 +140,13 @@ REGION_CIDR_URLS: dict[str, str] = {
 IPNOVA_MIN_LINES: int = 10  # legacy global floor, retained as ultimate fallback
 
 IPNOVA_MIN_LINES_PER_BUCKET: dict[str, int] = {
-    "CN": 3000,   # mainland has thousands of CIDRs; <3000 indicates upstream regression
-    "HK": 500,    # HK is well-populated via BGP supplement
-    "TW": 100,    # TW populated after ipnova P0.5; floor guards against collapse
-    "MO": 5,      # MO is intrinsically small; set just above corruption noise floor
+    "CN": 3000,
+    "HK": 500,
+    "TW": 100,
+    "MO": 5,
+    "JP": 2000,
+    "KR": 800,
+    "SG": 200,
 }
 
 # Map TLD suffix -> bucket. Used as +1 vote in decide_bucket().
@@ -149,4 +155,7 @@ TLD_TO_BUCKET: dict[str, str] = {
     ".hk": "HK",
     ".mo": "MO",
     ".tw": "TW",
+    ".jp": "JP",
+    ".kr": "KR",
+    ".sg": "SG",
 }

@@ -1,11 +1,11 @@
 # DomainNova
 
-> Self-evolving dataset of domains associated with Chinese internet infrastructure, ranked by confidence.
+> Self-evolving dataset of domains associated with Asia-Pacific internet infrastructure, ranked by confidence.
 
-DomainNova is an open intelligence dataset and tooling layer for domain, network, and infrastructure analysis.
+DomainNova is an open intelligence dataset and tooling layer for domain, network, and infrastructure analysis across the Asia-Pacific region.
 
 [![Update](https://github.com/harryheros/domainnova/actions/workflows/update.yml/badge.svg)](https://github.com/harryheros/domainnova/actions/workflows/update.yml)
-[![Version](https://img.shields.io/badge/version-v3.0-blue)](https://github.com/harryheros/domainnova/releases/tag/v3.0)
+[![Version](https://img.shields.io/badge/version-v3.1-blue)](https://github.com/harryheros/domainnova/releases/tag/v3.0)
 
 ---
 
@@ -42,6 +42,9 @@ DomainNova uses a **symmetric multi-region scoring model** (P2.A) that evaluates
 | `dist/domains_hk.txt` | Hong Kong domains (score ≥ 60) |
 | `dist/domains_tw.txt` | Taiwan domains (score ≥ 60) |
 | `dist/domains_mo.txt` | Macau domains (score ≥ 60) |
+| `dist/domains_jp.txt` | Japan domains (score ≥ 60) |
+| `dist/domains_kr.txt` | South Korea domains (score ≥ 60) |
+| `dist/domains_sg.txt` | Singapore domains (score ≥ 60) |
 
 **Thresholds:**
 
@@ -109,6 +112,9 @@ dist/domains_cn.txt                 CN domain list (score >= 60), updated weekly
 dist/domains_hk.txt                 HK domain list (score >= 60)
 dist/domains_tw.txt                 TW domain list (score >= 60)
 dist/domains_mo.txt                 MO domain list (score >= 60)
+dist/domains_jp.txt                 JP domain list (score >= 60)
+dist/domains_kr.txt                 KR domain list (score >= 60)
+dist/domains_sg.txt                 SG domain list (score >= 60)
 data/domains.csv                    full structured database (all signals + score)
 data/stats.json                     build statistics and lifecycle counters
 data/domains_metadata.json          structured metadata (domain → entity/category/ecosystem)
