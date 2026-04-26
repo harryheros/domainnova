@@ -1,0 +1,117 @@
+# ===== DomainNova - Seed Domains (Japan) =====
+# Manually curated high-confidence JP infrastructure domains.
+# APNIC region: JP.
+# Scoring signals: dns_jp, jp_tld, registrar_jp
+
+# --- Government (Central) ---
+japan.go.jp
+gov-online.go.jp
+kantei.go.jp
+e-gov.go.jp
+cao.go.jp
+soumu.go.jp
+mofa.go.jp
+meti.go.jp
+mlit.go.jp
+mext.go.jp
+mhlw.go.jp
+env.go.jp
+mod.go.jp
+maff.go.jp
+npa.go.jp
+jma.go.jp
+jftc.go.jp
+caa.go.jp
+ppc.go.jp
+reconstruction.go.jp
+court.go.jp
+cas.go.jp
+psc.go.jp
+nta.go.jp
+digital.go.jp
+
+# --- Government (Prefectures) ---
+metro.tokyo.lg.jp
+pref.osaka.lg.jp
+pref.kanagawa.jp
+pref.aichi.jp
+pref.saitama.lg.jp
+pref.chiba.lg.jp
+
+# --- Government (Cities) ---
+city.yokohama.lg.jp
+city.osaka.lg.jp
+city.nagoya.lg.jp
+city.sapporo.jp
+city.kobe.lg.jp
+city.fukuoka.lg.jp
+
+# --- Telecom / ISP ---
+ntt.co.jp
+nttdocomo.co.jp
+ntt-east.co.jp
+ntt-west.co.jp
+nttcom.co.jp
+kddi.com
+au.com
+softbank.jp
+ymobile.jp
+
+# --- Major Portals / Internet ---
+yahoo.co.jp
+livedoor.jp
+goo.ne.jp
+hatena.ne.jp
+ameba.jp
+line.me
+
+# --- E-commerce ---
+amazon.co.jp
+rakuten.co.jp
+zozo.jp
+mercari.com
+dmm.com
+
+# --- Media / News ---
+nhk.or.jp
+asahi.com
+mainichi.jp
+nikkei.com
+sankei.com
+yomiuri.co.jp
+tokyo-np.co.jp
+
+# --- Banks / Finance ---
+bk.mufg.jp
+mizuhobank.co.jp
+smbc.co.jp
+japanpost.jp
+jp-bank.japanpost.jp
+sbigroup.co.jp
+nomura.co.jp
+
+# --- Tech / Industry ---
+sony.co.jp
+nintendo.co.jp
+sega.co.jp
+capcom.co.jp
+bandainamco.co.jp
+square-enix.co.jp
+panasonic.jp
+toyota.co.jp
+honda.co.jp
+
+# --- Education ---
+u-tokyo.ac.jp
+kyoto-u.ac.jp
+osaka-u.ac.jp
+tohoku.ac.jp
+titech.ac.jp
+keio.ac.jp
+waseda.jp
+
+# --- Cloud / Hosting ---
+sakura.ad.jp
+xserver.ne.jp
+lolipop.jp
+conoha.jp

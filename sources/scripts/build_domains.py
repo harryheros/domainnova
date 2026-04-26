@@ -373,7 +373,7 @@ def fetch_region_cidrs(
     log("[+] Fetching ipnova multi-region CIDR lists (CN/HK/MO/TW)...")
     out: Dict[str, List[ipaddress.IPv4Network]] = {}
     # Fetch in deterministic order so logs read CN→HK→MO→TW.
-    for bucket in ("CN", "HK", "MO", "TW"):
+    for bucket in ("CN", "HK", "MO", "TW", "JP", "KR", "SG"):
         url = REGION_CIDR_URLS.get(bucket)
         if not url:
             log(f"[ERROR] REGION_CIDR_URLS missing entry for {bucket}; degraded to empty")
@@ -401,7 +401,7 @@ def ip_to_bucket(ip_str: str, region_lookup: RegionLookup) -> str:
 
     Returns: "CN" | "HK" | "MO" | "TW" | "" (no match in any region)
     """
-    for bucket in ("CN", "HK", "MO", "TW"):
+    for bucket in ("CN", "HK", "MO", "TW", "JP", "KR", "SG"):
         lookup = region_lookup.get(bucket)
         if not lookup:
             continue
@@ -438,6 +438,9 @@ SEED_HEALTH_FILES: List[Tuple[str, str]] = [
     ("seed_hk.txt", "HK"),
     ("seed_mo.txt", "MO"),
     ("seed_tw.txt", "TW"),
+    ("seed_jp.txt", "JP"),
+    ("seed_kr.txt", "KR"),
+    ("seed_sg.txt", "SG"),
 ]
 SEED_HEALTH_SAMPLE_SIZE = 20
 SEED_HEALTH_MIN_FOR_CHECK = 3  # below this, mark as 'skipped'
@@ -584,6 +587,9 @@ def load_all_sources(repo_root: Path) -> List[Tuple[str, str]]:
     seed_hk_path   = repo_root / "sources" / "manual" / "seed_hk.txt"
     seed_mo_path   = repo_root / "sources" / "manual" / "seed_mo.txt"
     seed_tw_path   = repo_root / "sources" / "manual" / "seed_tw.txt"
+    seed_jp_path   = repo_root / "sources" / "manual" / "seed_jp.txt"
+    seed_kr_path   = repo_root / "sources" / "manual" / "seed_kr.txt"
+    seed_sg_path   = repo_root / "sources" / "manual" / "seed_sg.txt"
     extended_path  = repo_root / "sources" / "manual" / "extended.txt"
     discovery_path = repo_root / "sources" / "manual" / "discovery.txt"
 
@@ -591,12 +597,16 @@ def load_all_sources(repo_root: Path) -> List[Tuple[str, str]]:
     seed_hk_domains   = load_file_domains(seed_hk_path)
     seed_mo_domains   = load_file_domains(seed_mo_path)
     seed_tw_domains   = load_file_domains(seed_tw_path)
+    seed_jp_domains   = load_file_domains(seed_jp_path)
+    seed_kr_domains   = load_file_domains(seed_kr_path)
+    seed_sg_domains   = load_file_domains(seed_sg_path)
     extended_domains  = load_file_domains(extended_path)
     discovery_all     = load_file_domains(discovery_path)
 
     log(
         f"[+] Sources: seed={len(seed_domains)} "
         f"hk={len(seed_hk_domains)} mo={len(seed_mo_domains)} tw={len(seed_tw_domains)} "
+        f"jp={len(seed_jp_domains)} kr={len(seed_kr_domains)} sg={len(seed_sg_domains)} "
         f"extended={len(extended_domains)} discovery={len(discovery_all)}"
     )
 
@@ -625,7 +635,7 @@ def load_all_sources(repo_root: Path) -> List[Tuple[str, str]]:
     # Priority deduplication. Region-specific seeds (seed_hk/mo/tw) take the
     # HIGHEST priority because they encode an explicit jurisdictional claim
     # that overrides the legacy mainland seed if a domain ever appears in both.
-    # Order: seed_hk > seed_mo > seed_tw > seed (CN) > extended > discovery.
+    # Order: seed_hk > seed_mo > seed_tw > seed_jp > seed_kr > seed_sg > seed (CN) > extended > discovery.
     domain_map: Dict[str, str] = {}
     for domain in seed_hk_domains:
         domain_map[domain] = "seed_hk"
@@ -635,6 +645,15 @@ def load_all_sources(repo_root: Path) -> List[Tuple[str, str]]:
     for domain in seed_tw_domains:
         if domain not in domain_map:
             domain_map[domain] = "seed_tw"
+    for domain in seed_jp_domains:
+        if domain not in domain_map:
+            domain_map[domain] = "seed_jp"
+    for domain in seed_kr_domains:
+        if domain not in domain_map:
+            domain_map[domain] = "seed_kr"
+    for domain in seed_sg_domains:
+        if domain not in domain_map:
+            domain_map[domain] = "seed_sg"
     for domain in seed_domains:
         if domain not in domain_map:
             domain_map[domain] = "seed"
@@ -1107,7 +1126,7 @@ def decide_bucket(
         return ""  # unclassified — no positive signal at all
 
     # Tie-break order: CN > HK > MO > TW
-    for bucket in ("CN", "HK", "MO", "TW"):
+    for bucket in ("CN", "HK", "MO", "TW", "JP", "KR", "SG"):
         if votes[bucket] == max_vote:
             return bucket
     return ""  # unreachable, but keeps type-checkers happy
@@ -1620,7 +1639,7 @@ def write_dist_buckets(dist_dir: Path, rows: List[DomainRecord]) -> Dict[str, in
     counts: Dict[str, int] = {}
     generated_at = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
 
-    for bucket in ("CN", "HK", "MO", "TW"):
+    for bucket in ("CN", "HK", "MO", "TW", "JP", "KR", "SG"):
         # P1 fix v2: ALL buckets use INCLUDE_THRESHOLD symmetrically.
         # Because process_domain now forces score=100 for all seed* sources,
         # seed-curated entries always pass. extended/discovery entries with
