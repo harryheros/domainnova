@@ -1055,6 +1055,9 @@ _SEED_SOURCE_TO_BUCKET: dict[str, str] = {
     "seed_hk": "HK",
     "seed_mo": "MO",
     "seed_tw": "TW",
+    "seed_jp": "JP",
+    "seed_kr": "KR",
+    "seed_sg": "SG",
     # Mainland seed is now forced to CN, symmetric with the region seeds.
     # Rationale: ipnova CIDR tables have occasional overlap or mis-collection
     # (seen in production: mainland IPs leaking into HK.txt caused Netease
@@ -1102,7 +1105,7 @@ def decide_bucket(
         return forced
 
     # ---- Rule 3: per-IP voting -----------------------------------------------
-    votes: dict[str, int] = {"CN": 0, "HK": 0, "MO": 0, "TW": 0}
+    votes: dict[str, int] = {"CN": 0, "HK": 0, "MO": 0, "TW": 0, "JP": 0, "KR": 0, "SG": 0}
     for b in ip_buckets:
         if b in votes:
             votes[b] += 1
