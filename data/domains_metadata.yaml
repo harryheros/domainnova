@@ -7181,12 +7181,6 @@
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
-- domain:    pddlive.com
-  source:    extended
-  section:   Unsectioned
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
 - domain:    peacebird.com
   source:    extended
   section:   Unsectioned
@@ -15629,12 +15623,6 @@
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
-- domain:    cookpad.com.tw
-  source:    extended
-  section:   Taiwan domains (P2.A auto-scoring candidates)
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
 - domain:    costco.com.tw
   source:    extended
   section:   Taiwan domains (P2.A auto-scoring candidates)
@@ -15713,12 +15701,6 @@
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
-- domain:    hua-nan.com.tw
-  source:    extended
-  section:   Taiwan domains (P2.A auto-scoring candidates)
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
 - domain:    icook.tw
   source:    extended
   section:   Taiwan domains (P2.A auto-scoring candidates)
@@ -15744,12 +15726,6 @@
   entity:    Unknown
   category:  uncategorized
 - domain:    klook.com.tw
-  source:    extended
-  section:   Taiwan domains (P2.A auto-scoring candidates)
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
-- domain:    land.moi.gov.tw
   source:    extended
   section:   Taiwan domains (P2.A auto-scoring candidates)
   ecosystem: unknown
@@ -15828,12 +15804,6 @@
   entity:    Unknown
   category:  uncategorized
 - domain:    nhi.gov.tw
-  source:    extended
-  section:   Taiwan domains (P2.A auto-scoring candidates)
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
-- domain:    nia.gov.tw
   source:    extended
   section:   Taiwan domains (P2.A auto-scoring candidates)
   ecosystem: unknown
@@ -15930,12 +15900,6 @@
   entity:    Unknown
   category:  uncategorized
 - domain:    taiwanmobile.com
-  source:    extended
-  section:   Taiwan domains (P2.A auto-scoring candidates)
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
-- domain:    tax.gov.tw
   source:    extended
   section:   Taiwan domains (P2.A auto-scoring candidates)
   ecosystem: unknown
@@ -17294,6 +17258,12 @@
 - domain:    zxkq022.com
   source:    extended
   section:   Auto-promoted 2026-04-23
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    motu.art
+  source:    extended
+  section:   Auto-promoted 2026-04-26
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized

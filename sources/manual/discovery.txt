@@ -37,11 +37,9 @@ cpcjxs.gov.cn
 www.cpcjxs.gov.cn
 
 # --- ct-logs:Huawei 2026-03-28 ---
-clouddrive.huawei.com
 
 # --- upstream:felixonmars-accelerated 2026-03-28 ---
 hxgs.net
-topmba.mobi
 bajasaechina.com
 jiuanchem.com
 gsbankmall.com
@@ -69,7 +67,6 @@ shanyuanms.com
 
 # --- ip-neighbor:203.107.45.167 2026-03-28 ---
 daiwei.art
-motu.art
 
 # --- ct-logs:%.gov.cn 2026-03-28 ---
 www.szmb.gov.cn
