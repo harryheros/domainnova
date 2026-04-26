@@ -53,7 +53,7 @@ DomainNova uses a **symmetric multi-region scoring model** (P2.A) that evaluates
 
 DNS resolution uses **Google DoH with rotating EDNS Client Subnet** (Beijing/Shanghai/Guangdong Telecom + Beijing Unicom) to obtain GeoDNS-accurate results without exposing query traffic to CN DNS infrastructure.
 
-IP classification is performed against [IPNova](https://github.com/harryheros/ipnova)'s APNIC-sourced CN CIDR dataset.
+IP classification is performed against [IPNova](https://github.com/harryheros/ipnova)'s APNIC-sourced Asia-Pacific CIDR dataset.
 
 ---
 
@@ -200,7 +200,7 @@ DomainNova is part of the Nova infrastructure toolkit:
 
 | Project | Layer | Description |
 |---|---|---|
-| [IPNova](https://github.com/harryheros/ipnova) | IP | Routing-aware IPv4 dataset for infrastructure classification and traffic control |
+| [IPNova](https://github.com/harryheros/ipnova) | IP | Routing-aware IPv4 dataset for Asia-Pacific infrastructure classification and traffic control |
 | **DomainNova** | **Domain (Data)** | **High-precision domain dataset for proxy routing and network intelligence** |
 | [ShieldNova](https://github.com/harryheros/shieldnova) | Domain (Filter) | Compatibility-first domain intelligence for privacy, ad blocking, security and traffic routing |
 | [HarryWrt](https://github.com/harryheros/harrywrt) | Device | Clean OpenWrt-based firmware for x86_64 and aarch64 (BIOS & UEFI) |
