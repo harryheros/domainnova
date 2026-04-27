@@ -144,7 +144,7 @@ def load_existing(repo_root: Path) -> Set[str]:
     """Load all known domains across all three tiers."""
     known: Set[str] = set()
     for rel in (
-        "sources/manual/seed_cn.txt",
+        "sources/manual/seed.txt",
         "sources/manual/extended.txt",
         "sources/manual/discovery.txt",
     ):

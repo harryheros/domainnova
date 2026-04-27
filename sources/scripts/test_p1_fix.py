@@ -39,7 +39,7 @@ def _make_repo(seed=None, hk=None, mo=None, tw=None, extended=None, discovery=No
         (root / "sources" / "manual" / name).write_text(
             "\n".join(lines or []) + "\n", encoding="utf-8"
         )
-    _write("seed_cn.txt",      seed or [])
+    _write("seed.txt",      seed or [])
     _write("seed_hk.txt",   hk or [])
     _write("seed_mo.txt",   mo or [])
     _write("seed_tw.txt",   tw or [])
@@ -69,14 +69,14 @@ class TestLoadAllSourcesRegionSeeds(unittest.TestCase):
             result = dict(load_all_sources(root))
         finally:
             tmp.cleanup()
-        self.assertEqual(result["mainland.cn"], "seed_cn")
+        self.assertEqual(result["mainland.cn"], "seed")
         self.assertEqual(result["alipay.hk"],   "seed_hk")
         self.assertEqual(result["jd.hk"],       "seed_hk")
         self.assertEqual(result["macau1.mo"],   "seed_mo")
         self.assertEqual(result["taiwan1.tw"],  "seed_tw")
 
     def test_region_seed_priority_over_legacy_seed(self):
-        # If alipay.hk somehow appears in BOTH seed_cn.txt and seed_hk.txt,
+        # If alipay.hk somehow appears in BOTH seed.txt and seed_hk.txt,
         # the HK assignment must win.
         tmp, root = _make_repo(
             seed=["alipay.hk", "other.cn"],
@@ -87,7 +87,7 @@ class TestLoadAllSourcesRegionSeeds(unittest.TestCase):
         finally:
             tmp.cleanup()
         self.assertEqual(result["alipay.hk"], "seed_hk")
-        self.assertEqual(result["other.cn"],  "seed_cn")
+        self.assertEqual(result["other.cn"],  "seed")
 
     def test_region_seed_priority_over_extended(self):
         tmp, root = _make_repo(
@@ -107,7 +107,7 @@ class TestLoadAllSourcesRegionSeeds(unittest.TestCase):
             result = dict(load_all_sources(root))
         finally:
             tmp.cleanup()
-        self.assertEqual(result, {"only.cn": "seed_cn"})
+        self.assertEqual(result, {"only.cn": "seed"})
 
 
 class TestProcessDomainRegionSeedScore(unittest.TestCase):
@@ -152,7 +152,7 @@ class TestProcessDomainRegionSeedScore(unittest.TestCase):
         # with seed_hk/mo/tw. Protects against ipnova CIDR noise causing known
         # CN seeds to miss dist/domains_cn.txt.
         bd.resolve_domain = lambda d, s: []
-        rec = process_domain("foo.com", "seed_cn", session=None,
+        rec = process_domain("foo.com", "seed", session=None,
                              region_lookup=self.lookup, updated="now")
         self.assertEqual(rec.score, 100)
         self.assertEqual(rec.bucket, "CN")
@@ -311,7 +311,7 @@ class TestIpnovaCidrNoiseRegression(unittest.TestCase):
         self.assertEqual(self._read("domains_hk.txt"), ["alipay.hk"])
 
     def test_cn_seed_rescued_when_ipnova_misbuckets(self):
-        # Production case: meituanmaicai.com in seed_cn.txt, but ipnova CIDR
+        # Production case: meituanmaicai.com in seed.txt, but ipnova CIDR
         # happened to put its IP in HK.txt. WITH the v2 fix, decide_bucket
         # forces seed->CN (ignoring the IP vote), and process_domain forces
         # score=100. So it lands correctly in domains_cn.txt, not lost.
@@ -320,7 +320,7 @@ class TestIpnovaCidrNoiseRegression(unittest.TestCase):
         bd.resolve_domain = lambda d, s: ["1.2.3.4"]  # IP doesn't matter
         try:
             rec = process_domain(
-                "meituanmaicai.com", "seed_cn", session=None,
+                "meituanmaicai.com", "seed", session=None,
                 region_lookup=build_region_lookup({
                     "CN": [],  # simulate: CN table doesn't have this IP
                     "HK": [ipaddress.IPv4Network("1.2.3.0/24")],  # but HK does!
@@ -343,7 +343,7 @@ class TestStickyBucketRepair(unittest.TestCase):
     Their sticky records came from a pre-P1 CSV that had no bucket column, so
     load_previous_rows populated bucket='' and sticky fallback propagated it.
     Result: 105 seed CN domains in production had bucket='' and were dropped
-    from dist/domains_cn.txt despite having score=60 and being in seed_cn.txt.
+    from dist/domains_cn.txt despite having score=60 and being in seed.txt.
 
     Fix: when the sticky record has empty bucket AND the current source is a
     seed family (seed/seed_hk/seed_mo/seed_tw), re-apply seed-force at sticky
@@ -372,8 +372,8 @@ class TestStickyBucketRepair(unittest.TestCase):
         )
 
     def test_seed_cn_empty_bucket_repaired_to_CN(self):
-        prev = self._stale_prev("12315.gov.cn", "seed_cn", bucket="")
-        rec = process_domain("12315.gov.cn", "seed_cn", session=None,
+        prev = self._stale_prev("12315.gov.cn", "seed", bucket="")
+        rec = process_domain("12315.gov.cn", "seed", session=None,
                              region_lookup=self.lookup, updated="now",
                              previous={"12315.gov.cn": prev})
         self.assertEqual(rec.sticky, 1)
@@ -399,8 +399,8 @@ class TestStickyBucketRepair(unittest.TestCase):
 
     def test_existing_sticky_bucket_preserved(self):
         # If prev.bucket is already set, don't touch it (respect prior decision)
-        prev = self._stale_prev("foo.cn", "seed_cn", bucket="CN")
-        rec = process_domain("foo.cn", "seed_cn", session=None,
+        prev = self._stale_prev("foo.cn", "seed", bucket="CN")
+        rec = process_domain("foo.cn", "seed", session=None,
                              region_lookup=self.lookup, updated="now",
                              previous={"foo.cn": prev})
         self.assertEqual(rec.bucket, "CN")
@@ -408,7 +408,7 @@ class TestStickyBucketRepair(unittest.TestCase):
     def test_seed_force_not_triggered_when_no_previous(self):
         # No previous at all → normal path, not sticky; bucket comes from
         # decide_bucket (which forces CN for source=seed even with no IPs)
-        rec = process_domain("brand.new", "seed_cn", session=None,
+        rec = process_domain("brand.new", "seed", session=None,
                              region_lookup=self.lookup, updated="now",
                              previous=None)
         self.assertEqual(rec.sticky, 0)

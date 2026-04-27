@@ -1,7 +1,7 @@
 # 本輪會話改動審計
 
 ## Session 1（初始化）
-seed_cn.txt: 701 -> 696（移出 alipay.hk/tmall.hk/jd.hk → seed_hk.txt；bytedance.com/wechat.com → seed_offshore.txt）
+seed.txt: 701 -> 696（移出 alipay.hk/tmall.hk/jd.hk → seed_hk.txt；bytedance.com/wechat.com → seed_offshore.txt）
 新建：seed_hk.txt(3) / seed_mo.txt(空) / seed_tw.txt(空) / seed_offshore.txt(2)
 
 ## Session 2（種子庫全面擴充）
@@ -40,33 +40,6 @@ seed_offshore.txt: 2 → 7 個域名
   新增：tiktok/tiktokcdn/aliexpress/shein/temu；補充分類結構
 
 ## Session 2 技術修正
-- seed_cn.txt: 移除 foxconn.com（與 seed_tw.txt 跨區重複，歸屬應為 TW）
+- seed.txt: 移除 foxconn.com（與 seed_tw.txt 跨區重複，歸屬應為 TW）
 - validate_manual_sources.py v2 → v3：新增區域種子驗證、跨區域重複偵測、CN∩Regional 衝突檢查
 - update.yml：stats 輸出擴充為全 7 個區域（原本只顯示 cn/hk/mo/tw，漏掉 jp/kr/sg）
-
-## Session 4（seed.txt → seed_cn.txt 命名統一）
-
-統一命名體系，使 CN 種子文件與其他區域命名一致：
-  seed_cn.txt  (原 seed.txt)
-  seed_hk.txt
-  seed_mo.txt
-  seed_tw.txt
-  seed_jp.txt
-  seed_kr.txt
-  seed_sg.txt
-  seed_offshore.txt
-
-修改範圍（全面替換，無遺漏）：
-  sources/manual/seed.txt             → 重命名為 seed_cn.txt
-  sources/scripts/build_domains.py    → 文件路徑、source 標籤 "seed" → "seed_cn"、
-                                        docstring、排序 key、stats key
-  sources/scripts/validate_manual_sources.py → CORE_FILES key、所有引用
-  sources/scripts/build_metadata.py   → SEED_FILE 路徑
-  sources/scripts/expand_domains.py   → SEED_PATH
-  sources/scripts/test_p1_fix.py      → source 標籤 10 處
-  sources/scripts/test_step7_seed_health.py → 文件名引用
-  sources/discovery_agents/agent_*.py → 3 個 agent 的路徑引用
-  README.md                           → 文檔引用
-  docs/PROPOSAL_MULTI_REGION.md       → 文檔引用
-  data/seed_health.json               → JSON key 更新
-  data/manual_source_validation.json  → JSON key 更新
