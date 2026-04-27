@@ -54,13 +54,13 @@ class TestSeedForcing(unittest.TestCase):
         # P1 fix v2: mainland seed is now symmetric with seed_hk/mo/tw.
         # Even without IP/TLD/dns_cn signal, source=seed forces bucket=CN.
         self.assertEqual(
-            decide_bucket("example.com", "seed", [], dns_cn=0),
+            decide_bucket("example.com", "seed_cn", [], dns_cn=0),
             "CN",
         )
 
     def test_legacy_seed_with_cn_signal_becomes_cn(self):
         self.assertEqual(
-            decide_bucket("example.com", "seed", ["CN"], dns_cn=1),
+            decide_bucket("example.com", "seed_cn", ["CN"], dns_cn=1),
             "CN",
         )
 
