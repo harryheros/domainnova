@@ -227,7 +227,6 @@ beijingrc.net
 129t.com
 e-mallchina.com
 pailitao.com
-pk38.com
 sinocache.net
 yunjiazheng.com
 hi169.net
@@ -265,10 +264,8 @@ yunyingketang.com
 # --- ip-neighbor:59.82.121.163 2026-03-28 ---
 
 # --- ip-neighbor:59.82.122.140 2026-03-28 ---
-huishou.2.taobao.com
 
 # --- ct-logs:%.com.cn 2026-03-28 ---
-trip.nbcb.com.cn
 lesaunda.com.cn
 query.verisignchina.com.cn
 etrade.essence.com.cn
@@ -311,7 +308,6 @@ www.edge.ingrasys.com.cn
 www.jn.vpn.com.cn
 group.airchina.com.cn
 hk.guosen.com.cn
-www.mdecomics.com.cn
 websvc.webservice.com.cn
 axa-minmetals.com.cn
 edu.opentide.com.cn
@@ -364,9 +360,7 @@ unibizp.com
 mlinks.cc
 cdnhwclxu105.com
 huanqiu.org
-njd1.com
 searchtb.com
-shx11.xyz
 xinhaoqi.net
 dayuansouti.com
 hiklife.com
@@ -389,9 +383,7 @@ guiwang.org
 7b6466e191019.beer
 shaisino.com
 laodao.cc
-pz6.com
 gxyj.com
-zhemu.xyz
 exuanshi.com
 shlingang.com
 jlairports.com
@@ -402,7 +394,6 @@ bjdxfsxx.com
 koplayer.com
 lzmy123.com
 caifu500.net
-jiaobu365.com
 checkip.pw
 bj-klws.com
 25yi.com
@@ -420,13 +411,6 @@ wp.jun2020.com
 # --- ip-neighbor:211.100.61.67 2026-03-28 ---
 
 # --- ct-logs:Xiaomi 2026-03-28 ---
-lapiz-tablet-xiaomi-redmi-pad-es-es--31307949.neoko.de
-www.www.lapiz-tablet-xiaomi-redmi-pad-es-es--31307949.neoko.de
-www.xiaomi--tolyatti.ru
-www.xiaomi--astrahan.ru
-xiaomi-mi-9-128-gb-schwarz-dual-sim--98034298.matthewmitchell.de
-action-cam-xiaomi--16767860.matthewmitchell.de
-cdn.azams0.fds.ai-agent.ai.xiaomi.com
 www.action-cam-xiaomi--16767860.matthewmitchell.de
 mi-tv-stick-xiaomi-4k-es-es--418665342.restaurantnamaskar.de
 xiaomi--36.ru
@@ -437,41 +421,28 @@ xiaomi--31.online
 xiaomi--36.online
 xiaomi-my-watch-lite-es-es--25135353.jasont.de
 a.market.xiaomi.com
-cdn.fds-ssl.api.xiaomi.com
-xiaomi-watch-s1-active-pro-es-es--863642633.helpclean.de
 xiaomi--rostov.online
-xiaomi-poco-x3-pro-huelle--258835401.wingforum.de
 xiaomi--astrahan.online
-xiaomi-13-ultra-12gb-256gb-es-es--473629259.helpclean.de
 xiaomi--bryansk.online
 www.xiaomi--kursk.online
 xiaomi-14-pro-max-tablet-es-es--31307949.neoko.de
-xiaomi-256gb-8gb-ram-es-es--797663763.helpclean.de
 www.xiaomi--kaluga.ru
 xiaomi-neue-handys-2021--42977927.pia-apps.de
 www.xiaomi--rostov.ru
 xiaomi--astrahan.ru
 www.xiaomi--belgorod.online
 xiaomi---rostov.online
-cnbj0.fds.api.xiaomi.com
 xiaomi--tlt.online
-account.xiaomi.com
 www.www.xiaomi-my-watch-lite-es-es--25135353.jasont.de
 xiaomi--kursk.online
 www.xiaomi--astrahan.online
-robotics.xiaomi.com
-cdn.calendar.xiaomi.com
 www.xiaomi-e-scooter-essential--126273289.matthewmitchell.de
 xiaomi--belgorod.online
-cariot.fg.iccc.xiaomiev.com
-sec.resource.xiaomi.net
 www.xiaomi--tolyatti.online
 www.xiaomi--bryansk.ru
 xiaomi-mi-9t-pro-kaufen--521553094.jasont.de
 air-fryer-6-litros-xiaomi-es-es--22332918.westernholz.de
 www.xiaomi-pad-2023-es-es--50845960.jasont.de
-awssgp0-cdn.fds-ssl.api.xiaomi.com
-theme-intl.cdn.zhuti.xiaomi.com
 xiaomi-11t-pro-5g-mit-vertrag--308049192.jasont.de
 xiaomi--31.ru
 xiaomi--kaluga.online
@@ -484,7 +455,6 @@ xn--xiaomi--pgg7ct9bxa.iphone-repair-kirov.ru
 # --- upstream:felixonmars-accelerated 2026-04-01 ---
 volc-dns.com
 tpsbp.com
-3171688.com
 5c554118a1021.beer
 263idc.com
 hbaas.com
@@ -522,10 +492,7 @@ ce33m7.com
 content4ads.com
 thelastsky.com
 hgptech.com
-wezhan.us
-46576.org
 2d6cd83bf10261.beer
-muzisoft.com
 first-panel.com
 
 # --- upstream:felixonmars-accelerated 2026-04-03 ---
@@ -552,12 +519,10 @@ tennoo.com
 zsqx.com
 cece-mall.com
 iegourl.com
-tdnsv12.net
 ydyspc.com
 dgzx.net
 qjimage.com
 stdicloud.com
-haiqq.com
 dayustudy.com
 cocos2d.org
 stunnel.vip
@@ -2116,3 +2081,12 @@ beidou.org
 damiw.com
 sharpheel.com
 kuaizhan.com
+
+# --- upstream:felixonmars-accelerated 2026-04-27 ---
+doki8.com
+dawnarc.com
+027chwl.com
+ishuiyun.com
+ddyqh.com
+the9.com
+awsdns-cn-15.net

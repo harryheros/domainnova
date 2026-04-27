@@ -1,10 +1,11 @@
 # DomainNova - HK domains
-# Generated: 2026-04-27T00:24:49Z
-# Count: 134
+# Generated: 2026-04-27T03:49:37Z
+# Count: 137
 163.net
-6b3cfa277bae3b4b.com
-77fanwen.com
-798com.com
+17fandai.com
+25yi.com
+51mockup.com
+52112.com
 aastocks.com
 alipay.hk
 alipayhk.com
@@ -17,13 +18,14 @@ bankofchina.com.mo
 bastillepost.com
 beafantasia.com
 bochk.com
+caifu500.net
 cathaypacific.com
+ce33m7.com
 cem.com.mo
+chiphometek.com
 chubb.com.hk
 cityu.edu.hk
 clp.com.hk
-cncoolm.com
-cqstudents.com
 crcbank.com
 csl.com.hk
 ctfe.com
@@ -31,18 +33,21 @@ cuhk.edu.hk
 cup.com.hk
 cxexpress.com
 dahsing.com
-daiwei.art
 dbs.com.hk
 dhk.com.hk
 dididadidi.com
 dimbuy.com
 discuss.com.hk
 dragonfly.fm
+easymule.com
 fortress.com.hk
 fwd.com.hk
 gov.hk
+gxhzkj.com
+hangruntech.com
 hangseng.com
 hgc.com.hk
+hgptech.com
 hk01.com
 hkairport.com
 hkeaa.edu.hk
@@ -66,18 +71,16 @@ hku.hk
 hsbc.com.hk
 huoche.net
 iam.gov.mo
-ic001.org
 icac.org.hk
 info.gov.hk
 isd.gov.hk
+izmzg.com
 jd.hk
-jiangguimei.asia
 jobsdb.com
-junyuewl.com
 klook.com
-kzo.moe
 lcsd.gov.hk
 lihkg.com
+lzmy123.com
 lzskqyy.com
 macau-sf.com
 macau-water.com
@@ -103,12 +106,12 @@ scmp.com
 sfc.hk
 singtao.com
 smartone.com
-solooncontrols.com
 staticfile.org
 stheadline.com
 three.com.hk
 tmall.hk
 tom.com
+tpsbp.com
 tungwah.org.hk
 turbojet.com.hk
 tvb.com
@@ -132,6 +135,6 @@ yesstyle.com
 yield.hk
 za.group
 zh.mohw.gov.hk
+zhangshengrong.com
 zhaopin.hk
 zjlib.com
-zongyixun.com
