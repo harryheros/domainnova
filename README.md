@@ -13,7 +13,7 @@ DomainNova is an open intelligence dataset and tooling layer for domain, network
 
 A **self-evolving intelligence dataset for infrastructure attribution**, not a proxy or filtering ruleset.
 
-Each domain is evaluated across multiple independent signals to assess whether its infrastructure is physically located in mainland China or operated by a Chinese-registered entity. The goal is infrastructure attribution, not corporate ownership attribution.
+Each domain is evaluated across multiple independent signals to assess whether its infrastructure is physically located in a target Asia-Pacific region. The goal is infrastructure attribution, not corporate ownership attribution.
 
 Unlike static domain lists, DomainNova operates a three-tier data architecture with automated discovery, verification, and lifecycle management. The dataset grows and self-cleanses over time.
 
@@ -21,7 +21,7 @@ Unlike static domain lists, DomainNova operates a three-tier data architecture w
 
 ## Scoring Model
 
-DomainNova uses a **symmetric multi-region scoring model** (P2.A) that evaluates domains independently for each target region (CN, HK, MO, TW).
+DomainNova uses a **symmetric multi-region scoring model** (P2.A) that evaluates domains independently for each target region (CN, HK, MO, TW, JP, KR, SG).
 
 ### Per-Region Signals
 
@@ -50,7 +50,7 @@ DomainNova uses a **symmetric multi-region scoring model** (P2.A) that evaluates
 
 | Score | Meaning | Output |
 |-------|---------|--------|
-| >= 60 | Strong CN infrastructure evidence | Included in `dist/domains.txt` |
+| >= 60 | Strong infrastructure evidence | Included in `dist/domains_{region}.txt` |
 | 40 | CN TLD with ICP filing (CDN may obscure DNS) | Retained in `domains.csv` only |
 | < 40 | Insufficient signal | Excluded |
 
@@ -64,7 +64,7 @@ IP classification is performed against [IPNova](https://github.com/harryheros/ip
 
 ```text
 ┌──────────────────────────────────────────────────┐
-│  Core      (seed_cn.txt)       - manually curated   │
+│  Core      (seed_{region}.txt) - manually curated│
 │  Reliable  (extended.txt)   - stable + promoted  │
 │  Discovery (discovery.txt)  - auto-harvested     │
 └──────────────────────────────────────────────────┘
@@ -79,7 +79,7 @@ IP classification is performed against [IPNova](https://github.com/harryheros/ip
       ▼                ▼
 ┌─────────────┐  ┌──────────────────────┐
 │ dist/       │  │ Discovery Lifecycle  │
-│ domains.txt │  │ fail ×2 → purge      │
+│ domains_xx  │  │ fail ×2 → purge      │
 │ score >= 60 │  │ pass ×4 → promote    │
 └─────────────┘  └──────────────────────┘
 ```
@@ -93,7 +93,7 @@ IP classification is performed against [IPNova](https://github.com/harryheros/ip
 
 ## Discovery Agents
 
-Three agents run monthly to harvest new CN domain candidates:
+Three agents run monthly to harvest new domain candidates:
 
 | Agent | Source | Max per run |
 |-------|--------|-------------|
@@ -123,7 +123,14 @@ data/domains_metadata.csv           tabular export of the metadata layer
 data/metadata_stats.json            metadata coverage statistics
 data/manual_source_validation.json  duplicate / overlap / format checks
 data/discovery_stats.json           discovery lifecycle state (hit/fail counts, offset)
-sources/manual/seed_cn.txt             manually curated core domains
+sources/manual/seed_cn.txt             manually curated core domains (CN)
+sources/manual/seed_hk.txt             manually curated core domains (HK)
+sources/manual/seed_tw.txt             manually curated core domains (TW)
+sources/manual/seed_mo.txt             manually curated core domains (MO)
+sources/manual/seed_jp.txt             manually curated core domains (JP)
+sources/manual/seed_kr.txt             manually curated core domains (KR)
+sources/manual/seed_sg.txt             manually curated core domains (SG)
+sources/manual/seed_offshore.txt       offshore PRC-company domains
 sources/manual/extended.txt         stable verified domains + auto-promoted
 sources/manual/discovery.txt        auto-harvested candidates (managed lifecycle)
 sources/scripts/                    build pipeline scripts
@@ -177,17 +184,17 @@ python sources/scripts/validate_manual_sources.py
 
 ## Use Cases
 
-- **Traffic filtering / routing** — geo-classify domains by CN infrastructure origin
-- **Supply chain / vendor risk** — verify whether dependencies resolve to CN infrastructure
-- **OSINT / network intelligence** — identify CN-hosted services in traffic analysis
-- **Compliance** — audit exposure to mainland China-hosted services
+- **Traffic filtering / routing** — geo-classify domains by regional infrastructure origin
+- **Supply chain / vendor risk** — verify whether dependencies resolve to specific regional infrastructure
+- **OSINT / network intelligence** — identify regionally-hosted services in traffic analysis
+- **Compliance** — audit exposure to specific jurisdiction-hosted services
 - **Commercial intelligence** — infrastructure attribution for enterprise and government use
 
 ---
 
 ## Contributing
 
-To add domains, edit `sources/manual/seed_cn.txt` or `sources/manual/extended.txt` and open a PR.
+To add domains, edit the appropriate `sources/manual/seed_{region}.txt` or `sources/manual/extended.txt` and open a PR.
 
 Discovery candidates are managed automatically — do not edit `sources/manual/discovery.txt` manually.
 

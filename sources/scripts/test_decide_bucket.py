@@ -13,7 +13,7 @@ Covers PROPOSAL §2.2 decision tree:
   Rule 3: per-IP voting from ipnova-derived bucket labels
   Rule 4: dns_cn boosts CN by +2
   Rule 5: TLD +1 vote
-  Rule 6: majority + tie-break CN > HK > MO > TW
+  Rule 6: majority + tie-break CN > HK > MO > TW > JP > KR > SG
 
 Run from repo root:
     python sources/scripts/test_decide_bucket.py
@@ -232,6 +232,58 @@ class TestUnclassified(unittest.TestCase):
         self.assertEqual(
             decide_bucket("example.com", "discovery", ["", "", ""], dns_cn=0),
             "",
+        )
+
+
+class TestApacRegions(unittest.TestCase):
+    """Tests for JP/KR/SG seed forcing and TLD voting."""
+
+    def test_seed_jp_forces_jp(self):
+        self.assertEqual(
+            decide_bucket("example.co.jp", "seed_jp", ["CN"], dns_cn=1),
+            "JP",
+        )
+
+    def test_seed_kr_forces_kr(self):
+        self.assertEqual(
+            decide_bucket("example.co.kr", "seed_kr", [], dns_cn=0),
+            "KR",
+        )
+
+    def test_seed_sg_forces_sg(self):
+        self.assertEqual(
+            decide_bucket("example.com.sg", "seed_sg", [""], dns_cn=0),
+            "SG",
+        )
+
+    def test_jp_tld_alone(self):
+        self.assertEqual(
+            decide_bucket("example.jp", "extended", [], dns_cn=0),
+            "JP",
+        )
+
+    def test_kr_tld_alone(self):
+        self.assertEqual(
+            decide_bucket("example.kr", "extended", [], dns_cn=0),
+            "KR",
+        )
+
+    def test_sg_tld_alone(self):
+        self.assertEqual(
+            decide_bucket("example.sg", "extended", [], dns_cn=0),
+            "SG",
+        )
+
+    def test_jp_ip_voting(self):
+        self.assertEqual(
+            decide_bucket("example.com", "extended", ["JP", "JP"], dns_cn=0),
+            "JP",
+        )
+
+    def test_kr_ip_voting(self):
+        self.assertEqual(
+            decide_bucket("example.com", "extended", ["KR"], dns_cn=0),
+            "KR",
         )
 
 
