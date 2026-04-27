@@ -1,8 +1,10 @@
 # DomainNova - HK domains
-# Generated: 2026-04-27T16:30:42Z
-# Count: 125
+# Generated: 2026-04-27T20:52:07Z
+# Count: 123
+1415926.mobi
 163.net
-365good.cc
+3600.net
+6b3cfa277bae3b4b.com
 aastocks.com
 alipay.hk
 alipayhk.com
@@ -19,6 +21,7 @@ clp.com.hk
 crcbank.com
 csl.com.hk
 ctfe.com
+ctiforum.com
 cuhk.edu.hk
 cxexpress.com
 dahsing.com
@@ -30,11 +33,8 @@ dragonfly.fm
 fortress.com.hk
 fwd.com.hk
 gov.hk
-guodongbaohe.com
 gxkfy.com
 hangseng.com
-hbszzk.com
-hengyulighting.com
 hgc.com.hk
 hk01.com
 hkairport.com
@@ -58,27 +58,26 @@ hktvmall.com
 hku.hk
 hongkongairlines.com
 hsbc.com.hk
-huachenit.com
 huoche.net
+hzhxsy.com
 iam.gov.mo
 icac.org.hk
 info.gov.hk
 isd.gov.hk
 jd.hk
-jiangguimei.asia
 jobsdb.com
+kingpower-cn.com
 klook.com
-kmcits0716.com
-kzo.moe
+kooaoo.com
 lcsd.gov.hk
 lihkg.com
 lzskqyy.com
+macaobusinessnews.com
 macau-sf.com
 macau-water.com
 mc.icbc.com.cn
 mingpao.com
 mpay.com.mo
-mrlxc51byo.com
 mtel.mo
 mtr.com.hk
 must.edu.mo
@@ -93,18 +92,18 @@ pccw.com
 pgyy.com
 polyu.edu.hk
 rthk.hk
-ruitian.com
 sc.com
 scmp.com
 sfc.hk
 singtao.com
 smartone.com
-spacesystech.com
 staticfile.org
 stheadline.com
 three.com.hk
 tmall.hk
 tom.com
+tradplusad.com
+travelgo.com
 tungwah.org.hk
 tvb.com
 ust.hk
@@ -117,12 +116,11 @@ wharf.com.hk
 wheelockcompany.com
 winglungbank.com
 www.mybus.com.cn
-xiandaiyuwen.com
 xiaohongtao.art
+xn--ptua509t.com
 xpcha.com
 yata.hk
 yesstyle.com
-youwo.com
 za.group
+zhuyili.org
 zjlib.com
-zongyixun.com
