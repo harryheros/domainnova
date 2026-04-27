@@ -26,11 +26,28 @@ singstat.gov.sg
 singpass.gov.sg
 myinfo.gov.sg
 go.gov.sg
+tech.gov.sg
+csa.gov.sg
 
-# --- Telecom / ISP ---
+# --- Regulatory & Compliance ---
+acra.gov.sg
+edb.gov.sg
+enterprise.gov.sg
+mas.gov.sg
+judiciary.gov.sg
+
+# --- Infrastructure & Utilities ---
+sgnic.sg
+sgix.sg
+spgroup.com.sg
+pub.gov.sg
 singtel.com
 starhub.com
 m1.com.sg
+
+# --- Logistics & Port ---
+psa.sg
+caas.gov.sg
 
 # --- Media / News ---
 straitstimes.com
@@ -43,7 +60,6 @@ mothership.sg
 dbs.com.sg
 ocbc.com
 uob.com.sg
-mas.gov.sg
 sgx.com
 
 # --- E-commerce / Tech ---
@@ -66,3 +82,5 @@ sutd.edu.sg
 # --- Airlines / Transport ---
 singaporeair.com
 changiairport.com
+smrt.com.sg
+sbstransit.com.sg
