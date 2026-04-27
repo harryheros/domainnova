@@ -1,5 +1,5 @@
 # DomainNova - KR domains
-# Generated: 2026-04-27T16:02:48Z
+# Generated: 2026-04-27T16:30:42Z
 # Count: 111
 11st.co.kr
 airport.kr
