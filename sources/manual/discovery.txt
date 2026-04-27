@@ -12,7 +12,6 @@ xincha.com
 akgjgs.com
 cncoolm.com
 lczq.com
-0d00.xin
 chinaief.net
 ttfly.com
 798com.com
@@ -32,27 +31,21 @@ moe123.org
 
 # --- ip-neighbor:211.100.61.67 2026-03-28 ---
 bj17.cn
-hdw.com.cn
-cpcjxs.gov.cn
-www.cpcjxs.gov.cn
 
 # --- ct-logs:Huawei 2026-03-28 ---
 
 # --- upstream:felixonmars-accelerated 2026-03-28 ---
-hxgs.net
 bajasaechina.com
 jiuanchem.com
 gsbankmall.com
 cloudflareinsights-cn.com
 qianhong.com
 aoyor.com
-1688.xn--czrs0t
 nschctw.com
 sogoucdndl.com
 hexdo.com
 doov5g.com
 qcloudtt.com
-kkmall.org
 tdiac.com
 bikehome.net
 ttshengbei.com

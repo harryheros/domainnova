@@ -1,8 +1,10 @@
 # DomainNova - HK domains
-# Generated: 2026-04-26T23:58:36Z
-# Count: 135
+# Generated: 2026-04-27T00:24:49Z
+# Count: 134
 163.net
-365good.cc
+6b3cfa277bae3b4b.com
+77fanwen.com
+798com.com
 aastocks.com
 alipay.hk
 alipayhk.com
@@ -20,7 +22,8 @@ cem.com.mo
 chubb.com.hk
 cityu.edu.hk
 clp.com.hk
-cqdashun.com
+cncoolm.com
+cqstudents.com
 crcbank.com
 csl.com.hk
 ctfe.com
@@ -28,6 +31,7 @@ cuhk.edu.hk
 cup.com.hk
 cxexpress.com
 dahsing.com
+daiwei.art
 dbs.com.hk
 dhk.com.hk
 dididadidi.com
@@ -37,10 +41,7 @@ dragonfly.fm
 fortress.com.hk
 fwd.com.hk
 gov.hk
-guodongbaohe.com
 hangseng.com
-hbszzk.com
-hengyulighting.com
 hgc.com.hk
 hk01.com
 hkairport.com
@@ -63,17 +64,18 @@ hkt.com
 hktvmall.com
 hku.hk
 hsbc.com.hk
-huachenit.com
 huoche.net
 iam.gov.mo
+ic001.org
 icac.org.hk
 info.gov.hk
 isd.gov.hk
 jd.hk
-jingshanbus.com
+jiangguimei.asia
 jobsdb.com
+junyuewl.com
 klook.com
-kmcits0716.com
+kzo.moe
 lcsd.gov.hk
 lihkg.com
 lzskqyy.com
@@ -82,7 +84,6 @@ macau-water.com
 mc.icbc.com.cn
 mingpao.com
 mpay.com.mo
-mrlxc51byo.com
 mtel.mo
 mtr.com.hk
 must.edu.mo
@@ -97,13 +98,12 @@ pccw.com
 pgyy.com
 polyu.edu.hk
 rthk.hk
-ruitian.com
 sc.com
 scmp.com
 sfc.hk
 singtao.com
 smartone.com
-spacesystech.com
+solooncontrols.com
 staticfile.org
 stheadline.com
 three.com.hk
@@ -124,15 +124,14 @@ wharf.com.hk
 wheelockcompany.com
 winglungbank.com
 www.mybus.com.cn
-xiandaiyuwen.com
 xiaohongtao.art
 xiaoweigod.com
 xpcha.com
 yata.hk
 yesstyle.com
 yield.hk
-youwo.com
 za.group
 zh.mohw.gov.hk
 zhaopin.hk
 zjlib.com
+zongyixun.com
