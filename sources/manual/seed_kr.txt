@@ -3,9 +3,12 @@
 # APNIC region: KR.
 # Scoring signals: dns_kr, kr_tld, registrar_kr
 
-# --- Government (Central) ---
-korea.kr
+# --- Internet / Registry (Backbone) ---
+kisa.or.kr
 gov.kr
+korea.kr
+
+# --- Government (Central & Administrative) ---
 mofa.go.kr
 motie.go.kr
 moel.go.kr
@@ -14,7 +17,7 @@ msit.go.kr
 mohw.go.kr
 molit.go.kr
 mois.go.kr
-kma.go.kr
+moef.go.kr
 nts.go.kr
 police.go.kr
 customs.go.kr
@@ -22,8 +25,17 @@ forest.go.kr
 scourt.go.kr
 nec.go.kr
 kostat.go.kr
+nps.or.kr
+nhis.or.kr
 
-# --- Government (Cities) ---
+# --- Critical Infrastructure & Energy ---
+kepco.co.kr
+kwater.or.kr
+korail.com
+airport.kr
+kma.go.kr
+
+# --- Government (Cities & Provinces) ---
 seoul.go.kr
 busan.go.kr
 incheon.go.kr
@@ -31,25 +43,28 @@ daegu.go.kr
 daejeon.go.kr
 gwangju.go.kr
 ulsan.go.kr
+gyeonggi.go.kr
+sejong.go.kr
 
-# --- Telecom / ISP ---
+# --- Telecom / ISP / Network ---
 sktelecom.com
 kt.com
 lguplus.com
 sk.com
+skbroadband.com
 
 # --- Major Portals / Internet ---
 naver.com
 daum.net
 kakao.com
-kakaocorp.com
 tistory.com
+nate.com
 
 # --- Messaging / Social ---
 kakaotalk.com
 band.us
 
-# --- E-commerce ---
+# --- E-commerce & Logistics ---
 coupang.com
 gmarket.co.kr
 11st.co.kr
@@ -58,6 +73,10 @@ ssg.com
 kurly.com
 musinsa.com
 oliveyoung.co.kr
+lotteon.com
+cjlogistics.com
+hanjin.com
+lotte.co.kr
 
 # --- Media / News ---
 chosun.com
@@ -69,8 +88,10 @@ kbs.co.kr
 sbs.co.kr
 mbc.co.kr
 jtbc.co.kr
+edaily.co.kr
+mt.co.kr
 
-# --- Banks / Finance ---
+# --- Banks / Finance / Trading ---
 kbstar.com
 shinhan.com
 wooribank.com
@@ -79,23 +100,34 @@ ibk.co.kr
 nhbank.com
 kakaobank.com
 toss.im
+kfb.or.kr
+kofia.or.kr
+krx.co.kr
 
-# --- Tech / Industry ---
+# --- Tech / Industry / R&D ---
 samsung.com
 samsung.co.kr
 samsungsds.com
 lge.co.kr
 lg.co.kr
 hyundai.com
+kia.com
 sk.co.kr
 skplanet.com
+posco.co.kr
+hanwha.co.kr
+doosan.com
+etri.re.kr
+kist.re.kr
 
-# --- Education ---
+# --- Education / Research ---
 snu.ac.kr
 kaist.ac.kr
 yonsei.ac.kr
 korea.ac.kr
 postech.ac.kr
+hanyang.ac.kr
+skku.ac.kr
 
 # --- Gaming / Entertainment ---
 nexon.com
@@ -103,3 +135,7 @@ ncsoft.com
 netmarble.com
 smilegate.com
 krafton.com
+hybecorp.com
+jype.com
+smtown.com
+ygfamily.com
