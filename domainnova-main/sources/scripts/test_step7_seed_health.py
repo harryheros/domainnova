@@ -88,7 +88,7 @@ class TestSeedHealthCheck(unittest.TestCase):
         self.repo.cleanup()
 
     def test_all_consistent(self):
-        self.repo.write_seed("seed_cn.txt",    [f"cn{i}.example" for i in range(10)])
+        self.repo.write_seed("seed.txt",    [f"cn{i}.example" for i in range(10)])
         self.repo.write_seed("seed_hk.txt", [f"hk{i}.example" for i in range(5)])
         self.repo.write_seed("seed_mo.txt", [f"mo{i}.example" for i in range(5)])
         self.repo.write_seed("seed_tw.txt", [f"tw{i}.example" for i in range(5)])
@@ -102,14 +102,14 @@ class TestSeedHealthCheck(unittest.TestCase):
 
         payload = seed_health_check(self.repo.root, self.lookup, session=None,
                                     rng=random.Random(42))
-        for fname in ("seed_cn.txt", "seed_hk.txt", "seed_mo.txt", "seed_tw.txt"):
+        for fname in ("seed.txt", "seed_hk.txt", "seed_mo.txt", "seed_tw.txt"):
             entry = payload["results"][fname]
             self.assertEqual(entry["status"], "ok", f"{fname}: {entry}")
             self.assertEqual(entry["rate"], 1.0)
 
     def test_warn_threshold(self):
         # 5 HK domains, 2 resolve to HK and 3 to CN -> rate 0.4 -> warn
-        self.repo.write_seed("seed_cn.txt",    ["a", "b", "c"])
+        self.repo.write_seed("seed.txt",    ["a", "b", "c"])
         self.repo.write_seed("seed_hk.txt", ["h1", "h2", "h3", "h4", "h5"])
         self.repo.write_seed("seed_mo.txt", ["m1", "m2", "m3"])
         self.repo.write_seed("seed_tw.txt", ["t1", "t2", "t3"])
@@ -133,7 +133,7 @@ class TestSeedHealthCheck(unittest.TestCase):
 
     def test_error_threshold(self):
         # 5 TW domains, only 1 in TW -> rate 0.2 -> error
-        self.repo.write_seed("seed_cn.txt",    ["a", "b", "c"])
+        self.repo.write_seed("seed.txt",    ["a", "b", "c"])
         self.repo.write_seed("seed_hk.txt", ["h1", "h2", "h3"])
         self.repo.write_seed("seed_mo.txt", ["m1", "m2", "m3"])
         self.repo.write_seed("seed_tw.txt", ["t1", "t2", "t3", "t4", "t5"])
@@ -156,7 +156,7 @@ class TestSeedHealthCheck(unittest.TestCase):
 
     def test_skipped_when_too_few_domains(self):
         # < 3 domains -> skipped
-        self.repo.write_seed("seed_cn.txt",    ["a", "b", "c"])
+        self.repo.write_seed("seed.txt",    ["a", "b", "c"])
         self.repo.write_seed("seed_hk.txt", ["only_one"])
         self.repo.write_seed("seed_mo.txt", [])
         self.repo.write_seed("seed_tw.txt", ["t1", "t2", "t3"])
@@ -167,11 +167,11 @@ class TestSeedHealthCheck(unittest.TestCase):
                                     rng=random.Random(0))
         self.assertEqual(payload["results"]["seed_hk.txt"]["status"], "skipped")
         self.assertEqual(payload["results"]["seed_mo.txt"]["status"], "skipped")
-        self.assertEqual(payload["results"]["seed_cn.txt"]["status"], "ok")
+        self.assertEqual(payload["results"]["seed.txt"]["status"], "ok")
 
     def test_skipped_when_zero_resolved(self):
         # All resolve attempts fail -> skipped (not error)
-        self.repo.write_seed("seed_cn.txt",    ["a", "b", "c"])
+        self.repo.write_seed("seed.txt",    ["a", "b", "c"])
         self.repo.write_seed("seed_hk.txt", ["h1", "h2", "h3", "h4", "h5"])
         self.repo.write_seed("seed_mo.txt", ["m1", "m2", "m3"])
         self.repo.write_seed("seed_tw.txt", ["t1", "t2", "t3"])
@@ -185,7 +185,7 @@ class TestSeedHealthCheck(unittest.TestCase):
         self.assertEqual(payload["results"]["seed_hk.txt"]["status"], "skipped")
 
     def test_resolve_exception_does_not_abort(self):
-        self.repo.write_seed("seed_cn.txt",    ["a", "b", "c"])
+        self.repo.write_seed("seed.txt",    ["a", "b", "c"])
         self.repo.write_seed("seed_hk.txt", ["h1", "h2", "h3"])
         self.repo.write_seed("seed_mo.txt", ["m1", "m2", "m3"])
         self.repo.write_seed("seed_tw.txt", ["t1", "t2", "t3"])
@@ -202,11 +202,11 @@ class TestSeedHealthCheck(unittest.TestCase):
         payload = seed_health_check(self.repo.root, self.lookup, session=None,
                                     rng=random.Random(0))
         self.assertEqual(payload["results"]["seed_hk.txt"]["status"], "skipped")
-        self.assertEqual(payload["results"]["seed_cn.txt"]["status"], "ok")
+        self.assertEqual(payload["results"]["seed.txt"]["status"], "ok")
 
     def test_missing_seed_file_skipped(self):
-        # Only seed_cn.txt exists; HK/MO/TW files missing entirely
-        self.repo.write_seed("seed_cn.txt", ["a", "b", "c"])
+        # Only seed.txt exists; HK/MO/TW files missing entirely
+        self.repo.write_seed("seed.txt", ["a", "b", "c"])
         bd.resolve_domain = _stub_resolver({"a": ["1.0.0.1"], "b": ["1.0.0.2"], "c": ["1.0.0.3"]})
         payload = seed_health_check(self.repo.root, self.lookup, session=None,
                                     rng=random.Random(0))
@@ -215,7 +215,7 @@ class TestSeedHealthCheck(unittest.TestCase):
         self.assertEqual(payload["results"]["seed_tw.txt"]["status"], "skipped")
 
     def test_writes_seed_health_json(self):
-        self.repo.write_seed("seed_cn.txt", ["a", "b", "c"])
+        self.repo.write_seed("seed.txt", ["a", "b", "c"])
         bd.resolve_domain = _stub_resolver({"a": ["1.0.0.1"], "b": ["1.0.0.2"], "c": ["1.0.0.3"]})
         seed_health_check(self.repo.root, self.lookup, session=None,
                           rng=random.Random(0))
@@ -225,12 +225,12 @@ class TestSeedHealthCheck(unittest.TestCase):
         self.assertIn("checked_at", data)
         self.assertIn("results", data)
         self.assertEqual(set(data["results"].keys()),
-                         {"seed_cn.txt", "seed_hk.txt", "seed_mo.txt", "seed_tw.txt"})
+                         {"seed.txt", "seed_hk.txt", "seed_mo.txt", "seed_tw.txt"})
 
     def test_sample_size_caps_at_20(self):
         # 100 CN domains -> sample only 20
         domains = [f"d{i}" for i in range(100)]
-        self.repo.write_seed("seed_cn.txt", domains)
+        self.repo.write_seed("seed.txt", domains)
         for fname in ("seed_hk.txt", "seed_mo.txt", "seed_tw.txt"):
             self.repo.write_seed(fname, ["x1", "x2", "x3"])
         mapping = {d: ["1.0.0.1"] for d in domains}
@@ -239,16 +239,16 @@ class TestSeedHealthCheck(unittest.TestCase):
         bd.resolve_domain = _stub_resolver(mapping)
         payload = seed_health_check(self.repo.root, self.lookup, session=None,
                                     rng=random.Random(0))
-        self.assertEqual(payload["results"]["seed_cn.txt"]["sampled"], 20)
-        self.assertEqual(payload["results"]["seed_cn.txt"]["consistent"], 20)
+        self.assertEqual(payload["results"]["seed.txt"]["sampled"], 20)
+        self.assertEqual(payload["results"]["seed.txt"]["consistent"], 20)
 
     def test_payload_structure_matches_spec(self):
         # PROPOSAL §4.3: results entry has region/sampled/consistent/rate/status
-        self.repo.write_seed("seed_cn.txt", ["a", "b", "c"])
+        self.repo.write_seed("seed.txt", ["a", "b", "c"])
         bd.resolve_domain = _stub_resolver({"a": ["1.0.0.1"], "b": ["1.0.0.2"], "c": ["1.0.0.3"]})
         payload = seed_health_check(self.repo.root, self.lookup, session=None,
                                     rng=random.Random(0))
-        cn = payload["results"]["seed_cn.txt"]
+        cn = payload["results"]["seed.txt"]
         self.assertEqual(set(cn.keys()), {"region", "sampled", "consistent", "rate", "status"})
         self.assertEqual(cn["region"], "CN")
 

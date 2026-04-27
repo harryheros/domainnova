@@ -34,7 +34,7 @@
 
 ### 2.2 決策樹（由上而下首次命中即定案）
 
-1. **Seed 強制**：domain 來自 `seed_hk.txt` / `seed_mo.txt` / `seed_tw.txt` → 對應桶。`seed_cn.txt`（CN）**不**強制，仍須走投票。
+1. **Seed 強制**：domain 來自 `seed_hk.txt` / `seed_mo.txt` / `seed_tw.txt` → 對應桶。`seed.txt`（CN）**不**強制，仍須走投票。
 2. **解析失敗**：無 IP → 由呼叫端套 sticky 沿用上輪 bucket，否則 `""`。
 3. **per-IP 投票**：每個 IP 用 `ip_to_bucket` 查 4 張 ipnova CIDR 表，得到 `"CN"|"HK"|"MO"|"TW"|""`。
 4. **dns_cn 加權**：`dns_cn=1`（CN CIDR ≥60% 命中）→ CN 桶 +2 票。
@@ -91,7 +91,7 @@ def ip_to_bucket(ip_str, region_lookup) -> str: ...  # 回傳 "CN"|"HK"|"MO"|"TW
 
 每次 build 開始前 `seed_health_check(repo_root, region_lookup)`：
 
-1. 對 `seed_cn.txt` / `seed_hk.txt` / `seed_mo.txt` / `seed_tw.txt`，隨機抽 `min(20, len)` 條
+1. 對 `seed.txt` / `seed_hk.txt` / `seed_mo.txt` / `seed_tw.txt`，隨機抽 `min(20, len)` 條
 2. 對抽樣 domain 執行一次輕量解析（沿用既有 DoH，僅取首個 A 記錄）
 3. 用 `ip_to_bucket` 打標籤
 4. 統計自洽率 = (標籤 == 檔名地區) / 樣本數
@@ -104,7 +104,7 @@ def ip_to_bucket(ip_str, region_lookup) -> str: ...  # 回傳 "CN"|"HK"|"MO"|"TW
 {
   "checked_at": "2026-04-11T12:00:00Z",
   "results": {
-    "seed_cn.txt":    {"region": "CN", "sampled": 20, "consistent": 19, "rate": 0.95, "status": "ok"},
+    "seed.txt":    {"region": "CN", "sampled": 20, "consistent": 19, "rate": 0.95, "status": "ok"},
     "seed_hk.txt": {"region": "HK", "sampled": 8,  "consistent": 7,  "rate": 0.875,"status": "ok"},
     "seed_mo.txt": {"region": "MO", "sampled": 5,  "consistent": 5,  "rate": 1.0,  "status": "ok"},
     "seed_tw.txt": {"region": "TW", "sampled": 5,  "consistent": 2,  "rate": 0.4,  "status": "warn"}
