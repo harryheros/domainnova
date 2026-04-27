@@ -1,99 +1,113 @@
 # ===== DomainNova - Seed Domains (Hong Kong) =====
 # Manually curated high-confidence HK infrastructure domains.
-# APNIC region: HK. Governed by PDPO (Hong Kong), not PRC cyberlaw.
+# APNIC region: HK. Governed by PDPO (Hong Kong).
 # Scoring signals: dns_hk, hk_tld, registrar_hk, registrant_hk
 
-aastocks.com
-alipay.hk
-alipayhk.com
-am730.com.hk
-aswatson.com
-baby-kingdom.com
-bankofchina.com.hk
-bastillepost.com
-beafantasia.com
-bochk.com
-cathaypacific.com
-chubb.com.hk
-cityu.edu.hk
-clp.com.hk
-csl.com.hk
-ctfe.com
-cuhk.edu.hk
-cup.com.hk
-cxexpress.com
-dahsing.com
-dbs.com.hk
-dhk.com.hk
-dimbuy.com
-discuss.com.hk
-fortress.com.hk
-fwd.com.hk
+# --- Internet / Registry (Backbone) ---
+hkirc.hk
 gov.hk
-hangseng.com
-hgc.com.hk
-hk01.com
-hkairport.com
-hkeaa.edu.hk
-hket.com
+info.gov.hk
+isd.gov.hk
+
+# --- Regulatory / Financial Infrastructure ---
+hkma.gov.hk
+sfc.hk
 hkex.com.hk
 hkexnews.hk
 hkgem.com
-hkia.com.hk
-hkicp.hk
-hkirc.hk
-hkjc.com
-hkma.gov.hk
 hkmc.com.hk
-hko.gov.hk
-hkoc.org.hk
-hkpost.hk
-hkstp.org
-hkt.com
-hktvmall.com
-hku.hk
-hsbc.com.hk
 icac.org.hk
-info.gov.hk
-isd.gov.hk
+aastocks.com
+
+# --- Utilities / Transport / Logistics ---
+clp.com.hk
+hkelectric.com
+mtr.com.hk
+hkairport.com
+hkia.com.hk
+hkpost.hk
+octopus.com.hk
+westkowloon.hk
+
+# --- Government & Public Services ---
+lcsd.gov.hk
+hko.gov.hk
+hkeaa.edu.hk
+hkoc.org.hk
+tungwah.org.hk
+
+# --- Banking / Finance / Insurance ---
+bochk.com
+bankofchina.com.hk
+hsbc.com.hk
+hangseng.com
+dbs.com.hk
+dahsing.com
+winglungbank.com
+sc.com
+fwd.com.hk
+za.group
+
+# --- Telecom / ISP ---
+hkt.com
+csl.com.hk
+smartone.com
+hgc.com.hk
+pccw.com
+three.com.hk
+
+# --- Media / News ---
+rthk.hk
+scmp.com
+hk01.com
+mingpao.com
+hket.com
+on.cc
+singtao.com
+stheadline.com
+bastillepost.com
+tvb.com
+nowtv.now.com
+
+# --- Education / Research ---
+hku.hk
+cuhk.edu.hk
+ust.hk
+polyu.edu.hk
+cityu.edu.hk
+vtc.edu.hk
+
+# --- Tech / Innovation ---
+hkstp.org
+
+# --- E-commerce / Retail ---
+hktvmall.com
+alipay.hk
+alipayhk.com
+watsons.com.hk
+aswatson.com
+fortress.com.hk
+yata.hk
+tmall.hk
 jd.hk
+openrice.com
 jobsdb.com
 klook.com
-lcsd.gov.hk
+dimbuy.com
+yesstyle.com
+
+# --- Social / Forums ---
 lihkg.com
-mingpao.com
-mtr.com.hk
-nowtv.now.com
-oceanpark.com.hk
-octopus.com.hk
-on.cc
-openrice.com
-pccw.com
-polyu.edu.hk
-rthk.hk
-sc.com
-scmp.com
-sfc.hk
-singtao.com
-smartone.com
-stheadline.com
-three.com.hk
-tmall.hk
-tungwah.org.hk
-tvb.com
-udn.com.hk
-ust.hk
+discuss.com.hk
 uwants.com
-vancouver.hk
-vtc.edu.hk
-watsons.com.hk
-westkowloon.hk
+baby-kingdom.com
+
+# --- Conglomerates / Property / Aviation ---
+ctfe.com
 wharf.com.hk
 wheelockcompany.com
-winglungbank.com
-yata.hk
-yesstyle.com
-yield.hk
-za.group
-zh.mohw.gov.hk
-zhaopin.hk
+cathaypacific.com
+cxexpress.com
+hongkongairlines.com
+hkjc.com
+oceanpark.com.hk
