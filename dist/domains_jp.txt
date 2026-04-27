@@ -1,5 +1,5 @@
 # DomainNova - JP domains
-# Generated: 2026-04-27T05:19:20Z
+# Generated: 2026-04-27T15:17:51Z
 # Count: 91
 amazon.co.jp
 ameba.jp
