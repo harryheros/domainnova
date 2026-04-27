@@ -540,7 +540,6 @@ xcmg.com
 sany.com.cn
 cssc.net
 baosteel.com
-foxconn.com
 
 # ===== Jewelry & Tea =====
 chowtaifook.com

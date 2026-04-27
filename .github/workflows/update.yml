@@ -62,7 +62,7 @@ jobs:
           echo "=== Stats ==="
           [ -f data/stats.json ] && cat data/stats.json || echo "stats.json missing"
           echo ""
-          for region in cn hk mo tw; do
+          for region in cn hk mo tw jp kr sg; do
             f="dist/domains_${region}.txt"
             echo "=== $f (first 10 lines) ==="
             if [ -f "$f" ]; then
