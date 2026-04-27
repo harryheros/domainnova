@@ -5,7 +5,7 @@
 DomainNova is an open intelligence dataset and tooling layer for domain, network, and infrastructure analysis across the Asia-Pacific region.
 
 [![Update](https://github.com/harryheros/domainnova/actions/workflows/update.yml/badge.svg)](https://github.com/harryheros/domainnova/actions/workflows/update.yml)
-[![Version](https://img.shields.io/badge/version-v3.1-blue)](https://github.com/harryheros/domainnova/releases/tag/v3.0)
+[![Version](https://img.shields.io/badge/version-v3.1-blue)](https://github.com/harryheros/domainnova/releases/tag/v3.1)
 
 ---
 
