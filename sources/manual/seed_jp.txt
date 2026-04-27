@@ -1,9 +1,14 @@
-# ===== DomainNova - Seed Domains (Japan) =====
+# ===== DomainNova - Seed Domains (Japan - Expanded) =====
 # Manually curated high-confidence JP infrastructure domains.
 # APNIC region: JP.
-# Scoring signals: dns_jp, jp_tld, registrar_jp
+# Includes Registry, Critical Infra, and Industrial Backbone.
 
-# --- Government (Central) ---
+# --- Registry & Network Backbone ---
+jprs.jp
+jpix.ad.jp
+jpnap.net
+
+# --- Government (Central & Regulatory) ---
 japan.go.jp
 gov-online.go.jp
 kantei.go.jp
@@ -29,22 +34,27 @@ cas.go.jp
 psc.go.jp
 nta.go.jp
 digital.go.jp
+fsa.go.jp
 
-# --- Government (Prefectures) ---
+# --- Government (Prefectures & Cities) ---
 metro.tokyo.lg.jp
 pref.osaka.lg.jp
 pref.kanagawa.jp
 pref.aichi.jp
 pref.saitama.lg.jp
 pref.chiba.lg.jp
-
-# --- Government (Cities) ---
 city.yokohama.lg.jp
 city.osaka.lg.jp
 city.nagoya.lg.jp
 city.sapporo.jp
 city.kobe.lg.jp
 city.fukuoka.lg.jp
+
+# --- Critical Infrastructure & Energy ---
+tepco.co.jp
+kepco.co.jp
+chuden.co.jp
+tokyogas.co.jp
 
 # --- Telecom / ISP ---
 ntt.co.jp
@@ -56,6 +66,17 @@ kddi.com
 au.com
 softbank.jp
 ymobile.jp
+
+# --- Logistics & Transport ---
+kuronekoyamato.co.jp
+sagawa-exp.co.jp
+nipponexpress.com
+jr-central.co.jp
+jreast.co.jp
+westjr.co.jp
+tokyometro.jp
+jal.co.jp
+ana.co.jp
 
 # --- Major Portals / Internet ---
 yahoo.co.jp
@@ -81,7 +102,7 @@ sankei.com
 yomiuri.co.jp
 tokyo-np.co.jp
 
-# --- Banks / Finance ---
+# --- Financial Infrastructure & Regulation ---
 bk.mufg.jp
 mizuhobank.co.jp
 smbc.co.jp
@@ -89,8 +110,9 @@ japanpost.jp
 jp-bank.japanpost.jp
 sbigroup.co.jp
 nomura.co.jp
+jpx.co.jp
 
-# --- Tech / Industry ---
+# --- Tech / Industrial Giants ---
 sony.co.jp
 nintendo.co.jp
 sega.co.jp
@@ -100,15 +122,28 @@ square-enix.co.jp
 panasonic.jp
 toyota.co.jp
 honda.co.jp
+nec.co.jp
+fujitsu.com
+mitsubishielectric.co.jp
+hitachi.co.jp
+canon.co.jp
+toshiba.co.jp
 
-# --- Education ---
+# --- Industry Associations (Economic Backbone) ---
+keidanren.or.jp
+jetro.go.jp
+jcci.or.jp
+
+# --- Education / Research ---
 u-tokyo.ac.jp
 kyoto-u.ac.jp
 osaka-u.ac.jp
 tohoku.ac.jp
 titech.ac.jp
+isct.ac.jp
 keio.ac.jp
 waseda.jp
+riken.jp
 
 # --- Cloud / Hosting ---
 sakura.ad.jp
