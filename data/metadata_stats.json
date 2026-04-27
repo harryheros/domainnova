@@ -1,13 +1,13 @@
 {
-  "total": 3361,
+  "total": 3368,
   "by_source": {
-    "seed": 614,
-    "extended": 2747
+    "seed_cn": 622,
+    "extended": 2746
   },
   "by_ecosystem": {
-    "unknown": 3132,
-    "government-cn": 38,
-    "finance-banking": 26,
+    "unknown": 3133,
+    "government-cn": 43,
+    "finance-banking": 27,
     "alibaba": 21,
     "tencent": 21,
     "security-network": 18,
@@ -25,10 +25,10 @@
     "developer-platforms": 4
   },
   "by_category": {
-    "uncategorized": 3132,
+    "uncategorized": 3133,
     "platform": 85,
-    "government": 38,
-    "finance": 26,
+    "government": 43,
+    "finance": 27,
     "security_network": 18,
     "telecom_backbone": 14,
     "cdn_storage": 11,

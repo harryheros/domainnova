@@ -1,3684 +1,3732 @@
 ---
 - domain:    alibabacloud.net
-  source:    seed
+  source:    seed_cn
   section:   Alibaba Ecosystem
   ecosystem: alibaba
   entity:    Alibaba Group / Ant Group
   category:  platform
 - domain:    aliyun.com
-  source:    seed
+  source:    seed_cn
   section:   Alibaba Ecosystem
   ecosystem: alibaba
   entity:    Alibaba Group / Ant Group
   category:  platform
 - domain:    aliyun.cn
-  source:    seed
+  source:    seed_cn
   section:   Alibaba Ecosystem
   ecosystem: alibaba
   entity:    Alibaba Group / Ant Group
   category:  platform
 - domain:    aliyuncs.com
-  source:    seed
+  source:    seed_cn
   section:   Alibaba Ecosystem
   ecosystem: alibaba
   entity:    Alibaba Group / Ant Group
   category:  platform
 - domain:    aliyundrive.com
-  source:    seed
+  source:    seed_cn
   section:   Alibaba Ecosystem
   ecosystem: alibaba
   entity:    Alibaba Group / Ant Group
   category:  platform
 - domain:    alipay.com
-  source:    seed
+  source:    seed_cn
   section:   Alibaba Ecosystem
   ecosystem: alibaba
   entity:    Alibaba Group / Ant Group
   category:  platform
 - domain:    alipay.net
-  source:    seed
+  source:    seed_cn
   section:   Alibaba Ecosystem
   ecosystem: alibaba
   entity:    Alibaba Group / Ant Group
   category:  platform
 - domain:    alipayobjects.com
-  source:    seed
+  source:    seed_cn
   section:   Alibaba Ecosystem
   ecosystem: alibaba
   entity:    Alibaba Group / Ant Group
   category:  platform
 - domain:    alipayplus.com
-  source:    seed
+  source:    seed_cn
   section:   Alibaba Ecosystem
   ecosystem: alibaba
   entity:    Alibaba Group / Ant Group
   category:  platform
 - domain:    taobao.com
-  source:    seed
+  source:    seed_cn
   section:   Alibaba Ecosystem
   ecosystem: alibaba
   entity:    Alibaba Group / Ant Group
   category:  platform
 - domain:    taobao.net
-  source:    seed
+  source:    seed_cn
   section:   Alibaba Ecosystem
   ecosystem: alibaba
   entity:    Alibaba Group / Ant Group
   category:  platform
 - domain:    tmall.com
-  source:    seed
+  source:    seed_cn
   section:   Alibaba Ecosystem
   ecosystem: alibaba
   entity:    Alibaba Group / Ant Group
   category:  platform
 - domain:    1688.com
-  source:    seed
+  source:    seed_cn
   section:   Alibaba Ecosystem
   ecosystem: alibaba
   entity:    Alibaba Group / Ant Group
   category:  platform
 - domain:    antgroup.com
-  source:    seed
+  source:    seed_cn
   section:   Alibaba Ecosystem
   ecosystem: alibaba
   entity:    Alibaba Group / Ant Group
   category:  platform
 - domain:    dingtalk.com
-  source:    seed
+  source:    seed_cn
   section:   Alibaba Ecosystem
   ecosystem: alibaba
   entity:    Alibaba Group / Ant Group
   category:  platform
 - domain:    amap.com
-  source:    seed
+  source:    seed_cn
   section:   Alibaba Ecosystem
   ecosystem: alibaba
   entity:    Alibaba Group / Ant Group
   category:  platform
 - domain:    gaode.com
-  source:    seed
+  source:    seed_cn
   section:   Alibaba Ecosystem
   ecosystem: alibaba
   entity:    Alibaba Group / Ant Group
   category:  platform
 - domain:    fliggy.com
-  source:    seed
+  source:    seed_cn
   section:   Alibaba Ecosystem
   ecosystem: alibaba
   entity:    Alibaba Group / Ant Group
   category:  platform
 - domain:    dazhongdianping.com
-  source:    seed
+  source:    seed_cn
   section:   Alibaba Ecosystem
   ecosystem: alibaba
   entity:    Alibaba Group / Ant Group
   category:  platform
 - domain:    umeng.com
-  source:    seed
+  source:    seed_cn
   section:   Alibaba Ecosystem
   ecosystem: alibaba
   entity:    Alibaba Group / Ant Group
   category:  platform
 - domain:    umengcloud.com
-  source:    seed
+  source:    seed_cn
   section:   Alibaba Ecosystem
   ecosystem: alibaba
   entity:    Alibaba Group / Ant Group
   category:  platform
 - domain:    tencent.com
-  source:    seed
+  source:    seed_cn
   section:   Tencent Ecosystem
   ecosystem: tencent
   entity:    Tencent
   category:  platform
 - domain:    tencentcloudapi.com
-  source:    seed
+  source:    seed_cn
   section:   Tencent Ecosystem
   ecosystem: tencent
   entity:    Tencent
   category:  platform
 - domain:    tencentcos.com
-  source:    seed
+  source:    seed_cn
   section:   Tencent Ecosystem
   ecosystem: tencent
   entity:    Tencent
   category:  platform
 - domain:    tencentclb.com
-  source:    seed
+  source:    seed_cn
   section:   Tencent Ecosystem
   ecosystem: tencent
   entity:    Tencent
   category:  platform
 - domain:    tencentmusic.com
-  source:    seed
+  source:    seed_cn
   section:   Tencent Ecosystem
   ecosystem: tencent
   entity:    Tencent
   category:  platform
 - domain:    tencentgames.com
-  source:    seed
+  source:    seed_cn
   section:   Tencent Ecosystem
   ecosystem: tencent
   entity:    Tencent
   category:  platform
 - domain:    tencentmeeting.com
-  source:    seed
+  source:    seed_cn
   section:   Tencent Ecosystem
   ecosystem: tencent
   entity:    Tencent
   category:  platform
 - domain:    tencentvideo.com
-  source:    seed
+  source:    seed_cn
   section:   Tencent Ecosystem
   ecosystem: tencent
   entity:    Tencent
   category:  platform
 - domain:    tcloudfamily.com
-  source:    seed
+  source:    seed_cn
   section:   Tencent Ecosystem
   ecosystem: tencent
   entity:    Tencent
   category:  platform
 - domain:    apigwtencent.com
-  source:    seed
+  source:    seed_cn
   section:   Tencent Ecosystem
   ecosystem: tencent
   entity:    Tencent
   category:  platform
 - domain:    servicewechat.com
-  source:    seed
+  source:    seed_cn
   section:   Tencent Ecosystem
   ecosystem: tencent
   entity:    Tencent
   category:  platform
 - domain:    qq.com
-  source:    seed
+  source:    seed_cn
   section:   Tencent Ecosystem
   ecosystem: tencent
   entity:    Tencent
   category:  platform
 - domain:    qqmusic.com
-  source:    seed
+  source:    seed_cn
   section:   Tencent Ecosystem
   ecosystem: tencent
   entity:    Tencent
   category:  platform
 - domain:    foxmail.com
-  source:    seed
+  source:    seed_cn
   section:   Tencent Ecosystem
   ecosystem: tencent
   entity:    Tencent
   category:  platform
 - domain:    weixin.com
-  source:    seed
+  source:    seed_cn
   section:   Tencent Ecosystem
   ecosystem: tencent
   entity:    Tencent
   category:  platform
 - domain:    wechatpay.com
-  source:    seed
+  source:    seed_cn
   section:   Tencent Ecosystem
   ecosystem: tencent
   entity:    Tencent
   category:  platform
 - domain:    tenpay.com
-  source:    seed
+  source:    seed_cn
   section:   Tencent Ecosystem
   ecosystem: tencent
   entity:    Tencent
   category:  platform
 - domain:    qcloud.com
-  source:    seed
+  source:    seed_cn
   section:   Tencent Ecosystem
   ecosystem: tencent
   entity:    Tencent
   category:  platform
 - domain:    qpic.cn
-  source:    seed
+  source:    seed_cn
   section:   Tencent Ecosystem
   ecosystem: tencent
   entity:    Tencent
   category:  platform
 - domain:    dnspod.cn
-  source:    seed
+  source:    seed_cn
   section:   Tencent Ecosystem
   ecosystem: tencent
   entity:    Tencent
   category:  platform
 - domain:    dnspod.com
-  source:    seed
+  source:    seed_cn
   section:   Tencent Ecosystem
   ecosystem: tencent
   entity:    Tencent
   category:  platform
 - domain:    baidu.com
-  source:    seed
+  source:    seed_cn
   section:   Baidu Ecosystem
   ecosystem: baidu
   entity:    Baidu
   category:  platform
 - domain:    baidu.mobi
-  source:    seed
+  source:    seed_cn
   section:   Baidu Ecosystem
   ecosystem: baidu
   entity:    Baidu
   category:  platform
 - domain:    baidubce.com
-  source:    seed
+  source:    seed_cn
   section:   Baidu Ecosystem
   ecosystem: baidu
   entity:    Baidu
   category:  platform
 - domain:    baiducloud.com
-  source:    seed
+  source:    seed_cn
   section:   Baidu Ecosystem
   ecosystem: baidu
   entity:    Baidu
   category:  platform
 - domain:    baidupcs.com
-  source:    seed
+  source:    seed_cn
   section:   Baidu Ecosystem
   ecosystem: baidu
   entity:    Baidu
   category:  platform
 - domain:    baidupcs.net
-  source:    seed
+  source:    seed_cn
   section:   Baidu Ecosystem
   ecosystem: baidu
   entity:    Baidu
   category:  platform
 - domain:    baidustatic.com
-  source:    seed
+  source:    seed_cn
   section:   Baidu Ecosystem
   ecosystem: baidu
   entity:    Baidu
   category:  platform
 - domain:    bdstatic.com
-  source:    seed
+  source:    seed_cn
   section:   Baidu Ecosystem
   ecosystem: baidu
   entity:    Baidu
   category:  platform
 - domain:    bdimg.com
-  source:    seed
+  source:    seed_cn
   section:   Baidu Ecosystem
   ecosystem: baidu
   entity:    Baidu
   category:  platform
 - domain:    bcebos.com
-  source:    seed
+  source:    seed_cn
   section:   Baidu Ecosystem
   ecosystem: baidu
   entity:    Baidu
   category:  platform
 - domain:    shifen.com
-  source:    seed
+  source:    seed_cn
   section:   Baidu Ecosystem
   ecosystem: baidu
   entity:    Baidu
   category:  platform
 - domain:    hao123.com
-  source:    seed
+  source:    seed_cn
   section:   Baidu Ecosystem
   ecosystem: baidu
   entity:    Baidu
   category:  platform
 - domain:    iqiyi.com
-  source:    seed
+  source:    seed_cn
   section:   Baidu Ecosystem
   ecosystem: baidu
   entity:    Baidu
   category:  platform
 - domain:    iqiyipic.com
-  source:    seed
+  source:    seed_cn
   section:   Baidu Ecosystem
   ecosystem: baidu
   entity:    Baidu
   category:  platform
 - domain:    qiyi.com
-  source:    seed
+  source:    seed_cn
   section:   Baidu Ecosystem
   ecosystem: baidu
   entity:    Baidu
   category:  platform
 - domain:    qiyipic.com
-  source:    seed
+  source:    seed_cn
   section:   Baidu Ecosystem
   ecosystem: baidu
   entity:    Baidu
   category:  platform
 - domain:    bytedance.net
-  source:    seed
+  source:    seed_cn
   section:   ByteDance Ecosystem
   ecosystem: bytedance
   entity:    ByteDance
   category:  platform
 - domain:    douyin.com
-  source:    seed
+  source:    seed_cn
   section:   ByteDance Ecosystem
   ecosystem: bytedance
   entity:    ByteDance
   category:  platform
 - domain:    douyincdn.com
-  source:    seed
+  source:    seed_cn
   section:   ByteDance Ecosystem
   ecosystem: bytedance
   entity:    ByteDance
   category:  platform
 - domain:    douyinstatic.com
-  source:    seed
+  source:    seed_cn
   section:   ByteDance Ecosystem
   ecosystem: bytedance
   entity:    ByteDance
   category:  platform
 - domain:    douyinvod.com
-  source:    seed
+  source:    seed_cn
   section:   ByteDance Ecosystem
   ecosystem: bytedance
   entity:    ByteDance
   category:  platform
 - domain:    toutiao.com
-  source:    seed
+  source:    seed_cn
   section:   ByteDance Ecosystem
   ecosystem: bytedance
   entity:    ByteDance
   category:  platform
 - domain:    toutiaocloud.com
-  source:    seed
+  source:    seed_cn
   section:   ByteDance Ecosystem
   ecosystem: bytedance
   entity:    ByteDance
   category:  platform
 - domain:    snssdk.com
-  source:    seed
+  source:    seed_cn
   section:   ByteDance Ecosystem
   ecosystem: bytedance
   entity:    ByteDance
   category:  platform
 - domain:    byteimg.com
-  source:    seed
+  source:    seed_cn
   section:   ByteDance Ecosystem
   ecosystem: bytedance
   entity:    ByteDance
   category:  platform
 - domain:    iesdouyin.com
-  source:    seed
+  source:    seed_cn
   section:   ByteDance Ecosystem
   ecosystem: bytedance
   entity:    ByteDance
   category:  platform
 - domain:    iesdouyin.net
-  source:    seed
+  source:    seed_cn
   section:   ByteDance Ecosystem
   ecosystem: bytedance
   entity:    ByteDance
   category:  platform
 - domain:    feishu.cn
-  source:    seed
+  source:    seed_cn
   section:   ByteDance Ecosystem
   ecosystem: bytedance
   entity:    ByteDance
   category:  platform
 - domain:    larkoffice.com
-  source:    seed
+  source:    seed_cn
   section:   ByteDance Ecosystem
   ecosystem: bytedance
   entity:    ByteDance
   category:  platform
 - domain:    volcengine.com
-  source:    seed
+  source:    seed_cn
   section:   ByteDance Ecosystem
   ecosystem: bytedance
   entity:    ByteDance
   category:  platform
 - domain:    volccdn.com
-  source:    seed
+  source:    seed_cn
   section:   ByteDance Ecosystem
   ecosystem: bytedance
   entity:    ByteDance
   category:  platform
 - domain:    jd.com
-  source:    seed
+  source:    seed_cn
   section:   JD.com Ecosystem
   ecosystem: jd
   entity:    JD.com
   category:  platform
 - domain:    jdcloud.com
-  source:    seed
+  source:    seed_cn
   section:   JD.com Ecosystem
   ecosystem: jd
   entity:    JD.com
   category:  platform
 - domain:    jdcloudapi.com
-  source:    seed
+  source:    seed_cn
   section:   JD.com Ecosystem
   ecosystem: jd
   entity:    JD.com
   category:  platform
 - domain:    jdpay.com
-  source:    seed
+  source:    seed_cn
   section:   JD.com Ecosystem
   ecosystem: jd
   entity:    JD.com
   category:  platform
 - domain:    jdpay.com.cn
-  source:    seed
+  source:    seed_cn
   section:   JD.com Ecosystem
   ecosystem: jd
   entity:    JD.com
   category:  platform
 - domain:    jddj.com
-  source:    seed
+  source:    seed_cn
   section:   JD.com Ecosystem
   ecosystem: jd
   entity:    JD.com
   category:  platform
 - domain:    360buy.com
-  source:    seed
+  source:    seed_cn
   section:   JD.com Ecosystem
   ecosystem: jd
   entity:    JD.com
   category:  platform
 - domain:    360buyimg.com
-  source:    seed
+  source:    seed_cn
   section:   JD.com Ecosystem
   ecosystem: jd
   entity:    JD.com
   category:  platform
 - domain:    xiaomi.com
-  source:    seed
+  source:    seed_cn
   section:   Xiaomi Ecosystem
   ecosystem: xiaomi
   entity:    Xiaomi
   category:  consumer_tech
 - domain:    xiaomi.net
-  source:    seed
+  source:    seed_cn
   section:   Xiaomi Ecosystem
   ecosystem: xiaomi
   entity:    Xiaomi
   category:  consumer_tech
 - domain:    mi.com
-  source:    seed
+  source:    seed_cn
   section:   Xiaomi Ecosystem
   ecosystem: xiaomi
   entity:    Xiaomi
   category:  consumer_tech
 - domain:    mipush.com
-  source:    seed
+  source:    seed_cn
   section:   Xiaomi Ecosystem
   ecosystem: xiaomi
   entity:    Xiaomi
   category:  consumer_tech
 - domain:    miwifi.com
-  source:    seed
+  source:    seed_cn
   section:   Xiaomi Ecosystem
   ecosystem: xiaomi
   entity:    Xiaomi
   category:  consumer_tech
 - domain:    xiaoai.com
-  source:    seed
+  source:    seed_cn
   section:   Xiaomi Ecosystem
   ecosystem: xiaomi
   entity:    Xiaomi
   category:  consumer_tech
 - domain:    huawei.com
-  source:    seed
+  source:    seed_cn
   section:   Huawei Ecosystem
   ecosystem: huawei
   entity:    Huawei
   category:  cloud_device
 - domain:    myhuaweicloud.com
-  source:    seed
+  source:    seed_cn
   section:   Huawei Ecosystem
   ecosystem: huawei
   entity:    Huawei
   category:  cloud_device
 - domain:    hwclouds.com
-  source:    seed
+  source:    seed_cn
   section:   Huawei Ecosystem
   ecosystem: huawei
   entity:    Huawei
   category:  cloud_device
 - domain:    hicloud.com
-  source:    seed
+  source:    seed_cn
   section:   Huawei Ecosystem
   ecosystem: huawei
   entity:    Huawei
   category:  cloud_device
 - domain:    huaweidevice.com
-  source:    seed
+  source:    seed_cn
   section:   Huawei Ecosystem
   ecosystem: huawei
   entity:    Huawei
   category:  cloud_device
 - domain:    vmall.com
-  source:    seed
+  source:    seed_cn
   section:   Huawei Ecosystem
   ecosystem: huawei
   entity:    Huawei
   category:  cloud_device
 - domain:    dbankcloud.com
-  source:    seed
+  source:    seed_cn
   section:   Huawei Ecosystem
   ecosystem: huawei
   entity:    Huawei
   category:  cloud_device
 - domain:    obs.cn-north-1.myhuaweicloud.com
-  source:    seed
+  source:    seed_cn
   section:   Huawei Ecosystem
   ecosystem: huawei
   entity:    Huawei
   category:  cloud_device
 - domain:    oppo.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Devices
   ecosystem: consumer-devices
   entity:    Multi-brand
   category:  consumer_device
 - domain:    vivo.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Devices
   ecosystem: consumer-devices
   entity:    Multi-brand
   category:  consumer_device
 - domain:    meizu.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Devices
   ecosystem: consumer-devices
   entity:    Multi-brand
   category:  consumer_device
 - domain:    smartisan.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Devices
   ecosystem: consumer-devices
   entity:    Multi-brand
   category:  consumer_device
 - domain:    honorchina.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Devices
   ecosystem: consumer-devices
   entity:    Multi-brand
   category:  consumer_device
 - domain:    pinduoduo.com
-  source:    seed
+  source:    seed_cn
   section:   Pinduoduo
   ecosystem: pinduoduo
   entity:    Pinduoduo
   category:  platform
 - domain:    pinduoduo.net
-  source:    seed
+  source:    seed_cn
   section:   Pinduoduo
   ecosystem: pinduoduo
   entity:    Pinduoduo
   category:  platform
 - domain:    yangkeduo.com
-  source:    seed
+  source:    seed_cn
   section:   Pinduoduo
   ecosystem: pinduoduo
   entity:    Pinduoduo
   category:  platform
 - domain:    pddpic.com
-  source:    seed
+  source:    seed_cn
   section:   Pinduoduo
   ecosystem: pinduoduo
   entity:    Pinduoduo
   category:  platform
 - domain:    ucloud.cn
-  source:    seed
+  source:    seed_cn
   section:   Cloud & IDC
   ecosystem: cloud-idc
   entity:    Multi-operator
   category:  cloud_idc
 - domain:    ksyun.com
-  source:    seed
+  source:    seed_cn
   section:   Cloud & IDC
   ecosystem: cloud-idc
   entity:    Multi-operator
   category:  cloud_idc
 - domain:    ctyun.cn
-  source:    seed
+  source:    seed_cn
   section:   Cloud & IDC
   ecosystem: cloud-idc
   entity:    Multi-operator
   category:  cloud_idc
 - domain:    qingcloud.com
-  source:    seed
+  source:    seed_cn
   section:   Cloud & IDC
   ecosystem: cloud-idc
   entity:    Multi-operator
   category:  cloud_idc
 - domain:    ecloud.10086.cn
-  source:    seed
+  source:    seed_cn
   section:   Cloud & IDC
   ecosystem: cloud-idc
   entity:    Multi-operator
   category:  cloud_idc
 - domain:    cloud.189.cn
-  source:    seed
+  source:    seed_cn
   section:   Cloud & IDC
   ecosystem: cloud-idc
   entity:    Multi-operator
   category:  cloud_idc
 - domain:    21vianet.com
-  source:    seed
+  source:    seed_cn
   section:   Cloud & IDC
   ecosystem: cloud-idc
   entity:    Multi-operator
   category:  cloud_idc
 - domain:    capitalonline.net
-  source:    seed
+  source:    seed_cn
   section:   Cloud & IDC
   ecosystem: cloud-idc
   entity:    Multi-operator
   category:  cloud_idc
 - domain:    capitalonline.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Cloud & IDC
   ecosystem: cloud-idc
   entity:    Multi-operator
   category:  cloud_idc
 - domain:    wangsu.com
-  source:    seed
+  source:    seed_cn
   section:   CDN & Storage
   ecosystem: cdn-storage
   entity:    Multi-provider
   category:  cdn_storage
 - domain:    wangsucloud.com
-  source:    seed
+  source:    seed_cn
   section:   CDN & Storage
   ecosystem: cdn-storage
   entity:    Multi-provider
   category:  cdn_storage
 - domain:    wangsucloudcdn.com
-  source:    seed
+  source:    seed_cn
   section:   CDN & Storage
   ecosystem: cdn-storage
   entity:    Multi-provider
   category:  cdn_storage
 - domain:    chinanetcenter.com
-  source:    seed
+  source:    seed_cn
   section:   CDN & Storage
   ecosystem: cdn-storage
   entity:    Multi-provider
   category:  cdn_storage
 - domain:    baishancloud.com
-  source:    seed
+  source:    seed_cn
   section:   CDN & Storage
   ecosystem: cdn-storage
   entity:    Multi-provider
   category:  cdn_storage
 - domain:    chinacache.com
-  source:    seed
+  source:    seed_cn
   section:   CDN & Storage
   ecosystem: cdn-storage
   entity:    Multi-provider
   category:  cdn_storage
 - domain:    dnion.com
-  source:    seed
+  source:    seed_cn
   section:   CDN & Storage
   ecosystem: cdn-storage
   entity:    Multi-provider
   category:  cdn_storage
 - domain:    qiniu.com
-  source:    seed
+  source:    seed_cn
   section:   CDN & Storage
   ecosystem: cdn-storage
   entity:    Multi-provider
   category:  cdn_storage
 - domain:    qiniucdn.com
-  source:    seed
+  source:    seed_cn
   section:   CDN & Storage
   ecosystem: cdn-storage
   entity:    Multi-provider
   category:  cdn_storage
 - domain:    upyun.com
-  source:    seed
+  source:    seed_cn
   section:   CDN & Storage
   ecosystem: cdn-storage
   entity:    Multi-provider
   category:  cdn_storage
 - domain:    upaiyun.com
-  source:    seed
+  source:    seed_cn
   section:   CDN & Storage
   ecosystem: cdn-storage
   entity:    Multi-provider
   category:  cdn_storage
 - domain:    alidns.com
-  source:    seed
+  source:    seed_cn
   section:   DNS & Domain
   ecosystem: dns-domain
   entity:    Multi-provider
   category:  dns_domain
 - domain:    xinnet.com
-  source:    seed
+  source:    seed_cn
   section:   DNS & Domain
   ecosystem: dns-domain
   entity:    Multi-provider
   category:  dns_domain
 - domain:    west.cn
-  source:    seed
+  source:    seed_cn
   section:   DNS & Domain
   ecosystem: dns-domain
   entity:    Multi-provider
   category:  dns_domain
 - domain:    dns.com.cn
-  source:    seed
+  source:    seed_cn
   section:   DNS & Domain
   ecosystem: dns-domain
   entity:    Multi-provider
   category:  dns_domain
 - domain:    dns.la
-  source:    seed
+  source:    seed_cn
   section:   DNS & Domain
   ecosystem: dns-domain
   entity:    Multi-provider
   category:  dns_domain
 - domain:    chinamobile.com
-  source:    seed
+  source:    seed_cn
   section:   Telecom & Backbone
   ecosystem: telecom-backbone
   entity:    National Backbone
   category:  telecom_backbone
 - domain:    cmcc.com
-  source:    seed
+  source:    seed_cn
   section:   Telecom & Backbone
   ecosystem: telecom-backbone
   entity:    National Backbone
   category:  telecom_backbone
 - domain:    10086.cn
-  source:    seed
+  source:    seed_cn
   section:   Telecom & Backbone
   ecosystem: telecom-backbone
   entity:    National Backbone
   category:  telecom_backbone
 - domain:    chinaunicom.com
-  source:    seed
+  source:    seed_cn
   section:   Telecom & Backbone
   ecosystem: telecom-backbone
   entity:    National Backbone
   category:  telecom_backbone
 - domain:    chinaunicom.cn
-  source:    seed
+  source:    seed_cn
   section:   Telecom & Backbone
   ecosystem: telecom-backbone
   entity:    National Backbone
   category:  telecom_backbone
 - domain:    10010.com
-  source:    seed
+  source:    seed_cn
   section:   Telecom & Backbone
   ecosystem: telecom-backbone
   entity:    National Backbone
   category:  telecom_backbone
 - domain:    chinatelecom.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Telecom & Backbone
   ecosystem: telecom-backbone
   entity:    National Backbone
   category:  telecom_backbone
 - domain:    chinatelecom.cn
-  source:    seed
+  source:    seed_cn
   section:   Telecom & Backbone
   ecosystem: telecom-backbone
   entity:    National Backbone
   category:  telecom_backbone
 - domain:    10000.com
-  source:    seed
+  source:    seed_cn
   section:   Telecom & Backbone
   ecosystem: telecom-backbone
   entity:    National Backbone
   category:  telecom_backbone
 - domain:    189.cn
-  source:    seed
+  source:    seed_cn
   section:   Telecom & Backbone
   ecosystem: telecom-backbone
   entity:    National Backbone
   category:  telecom_backbone
 - domain:    cbn.cn
-  source:    seed
+  source:    seed_cn
   section:   Telecom & Backbone
   ecosystem: telecom-backbone
   entity:    National Backbone
   category:  telecom_backbone
 - domain:    cernet.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Telecom & Backbone
   ecosystem: telecom-backbone
   entity:    National Backbone
   category:  telecom_backbone
 - domain:    cstnet.cn
-  source:    seed
+  source:    seed_cn
   section:   Telecom & Backbone
   ecosystem: telecom-backbone
   entity:    National Backbone
   category:  telecom_backbone
 - domain:    caict.ac.cn
-  source:    seed
+  source:    seed_cn
   section:   Telecom & Backbone
   ecosystem: telecom-backbone
   entity:    National Backbone
   category:  telecom_backbone
 - domain:    360.cn
-  source:    seed
+  source:    seed_cn
   section:   Security & Network Equipment
   ecosystem: security-network
   entity:    Multi-vendor
   category:  security_network
 - domain:    360safe.com
-  source:    seed
+  source:    seed_cn
   section:   Security & Network Equipment
   ecosystem: security-network
   entity:    Multi-vendor
   category:  security_network
 - domain:    nsfocus.com
-  source:    seed
+  source:    seed_cn
   section:   Security & Network Equipment
   ecosystem: security-network
   entity:    Multi-vendor
   category:  security_network
 - domain:    venustech.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Security & Network Equipment
   ecosystem: security-network
   entity:    Multi-vendor
   category:  security_network
 - domain:    dbappsecurity.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Security & Network Equipment
   ecosystem: security-network
   entity:    Multi-vendor
   category:  security_network
 - domain:    knownsec.com
-  source:    seed
+  source:    seed_cn
   section:   Security & Network Equipment
   ecosystem: security-network
   entity:    Multi-vendor
   category:  security_network
 - domain:    hikvision.com
-  source:    seed
+  source:    seed_cn
   section:   Security & Network Equipment
   ecosystem: security-network
   entity:    Multi-vendor
   category:  security_network
 - domain:    dahua.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Security & Network Equipment
   ecosystem: security-network
   entity:    Multi-vendor
   category:  security_network
 - domain:    uniview.com
-  source:    seed
+  source:    seed_cn
   section:   Security & Network Equipment
   ecosystem: security-network
   entity:    Multi-vendor
   category:  security_network
 - domain:    kedacom.com
-  source:    seed
+  source:    seed_cn
   section:   Security & Network Equipment
   ecosystem: security-network
   entity:    Multi-vendor
   category:  security_network
 - domain:    sensetime.com
-  source:    seed
+  source:    seed_cn
   section:   Security & Network Equipment
   ecosystem: security-network
   entity:    Multi-vendor
   category:  security_network
 - domain:    megvii.com
-  source:    seed
+  source:    seed_cn
   section:   Security & Network Equipment
   ecosystem: security-network
   entity:    Multi-vendor
   category:  security_network
 - domain:    h3c.com
-  source:    seed
+  source:    seed_cn
   section:   Security & Network Equipment
   ecosystem: security-network
   entity:    Multi-vendor
   category:  security_network
 - domain:    inspur.com
-  source:    seed
+  source:    seed_cn
   section:   Security & Network Equipment
   ecosystem: security-network
   entity:    Multi-vendor
   category:  security_network
 - domain:    zte.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Security & Network Equipment
   ecosystem: security-network
   entity:    Multi-vendor
   category:  security_network
 - domain:    fiberhome.com
-  source:    seed
+  source:    seed_cn
   section:   Security & Network Equipment
   ecosystem: security-network
   entity:    Multi-vendor
   category:  security_network
 - domain:    ruijie.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Security & Network Equipment
   ecosystem: security-network
   entity:    Multi-vendor
   category:  security_network
 - domain:    tenda.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Security & Network Equipment
   ecosystem: security-network
   entity:    Multi-vendor
   category:  security_network
 - domain:    gitee.com
-  source:    seed
+  source:    seed_cn
   section:   Developer Platforms
   ecosystem: developer-platforms
   entity:    Multi-platform
   category:  developer_platform
 - domain:    coding.net
-  source:    seed
+  source:    seed_cn
   section:   Developer Platforms
   ecosystem: developer-platforms
   entity:    Multi-platform
   category:  developer_platform
 - domain:    csdn.net
-  source:    seed
+  source:    seed_cn
   section:   Developer Platforms
   ecosystem: developer-platforms
   entity:    Multi-platform
   category:  developer_platform
 - domain:    oschina.net
-  source:    seed
+  source:    seed_cn
   section:   Developer Platforms
   ecosystem: developer-platforms
   entity:    Multi-platform
   category:  developer_platform
 - domain:    gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    www.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    miit.gov.cn
-  source:    seed
+  source:    seed_cn
+  section:   Central Government
+  ecosystem: government-cn
+  entity:    PRC Central Government
+  category:  government
+- domain:    cac.gov.cn
+  source:    seed_cn
+  section:   Central Government
+  ecosystem: government-cn
+  entity:    PRC Central Government
+  category:  government
+- domain:    beian.miit.gov.cn
+  source:    seed_cn
+  section:   Central Government
+  ecosystem: government-cn
+  entity:    PRC Central Government
+  category:  government
+- domain:    beian.gov.cn
+  source:    seed_cn
+  section:   Central Government
+  ecosystem: government-cn
+  entity:    PRC Central Government
+  category:  government
+- domain:    cnnic.cn
+  source:    seed_cn
+  section:   Central Government
+  ecosystem: government-cn
+  entity:    PRC Central Government
+  category:  government
+- domain:    12377.cn
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    mps.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    mfa.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    moe.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    mof.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    customs.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    samr.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    mohurd.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    mot.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    mwr.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    mnr.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    mee.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    nha.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    mohrss.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    mca.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    court.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    spp.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    npc.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    cppcc.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    ndrc.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    nea.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    nia.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    caac.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    msa.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    cnta.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    sfda.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    charity.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    12333.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    12366.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    12315.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    12315.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    12345.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    chinatax.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    etax.chinatax.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    gsxt.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    creditchina.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Central Government
   ecosystem: government-cn
   entity:    PRC Central Government
   category:  government
 - domain:    beijing.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    shanghai.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    guangdong.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    jiangsu.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    zhejiang.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    shandong.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    henan.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    sichuan.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    hubei.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    hunan.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    fujian.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    hebei.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    shanxi.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    liaoning.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    jilin.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    heilongjiang.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    anhui.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    jiangxi.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    guangxi.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    yunnan.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    guizhou.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    shaanxi.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    gansu.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    qinghai.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    hainan.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    nmg.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    xj.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    xizang.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    nx.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    chongqing.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    tianjin.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    yiwu.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    liuyang.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Provincial Government
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    unionpay.com
-  source:    seed
+  source:    seed_cn
   section:   Finance & Banking
   ecosystem: finance-banking
   entity:    Multi-institution
   category:  finance
 - domain:    95516.com
-  source:    seed
+  source:    seed_cn
   section:   Finance & Banking
   ecosystem: finance-banking
   entity:    Multi-institution
   category:  finance
 - domain:    netsunion.com
-  source:    seed
+  source:    seed_cn
   section:   Finance & Banking
   ecosystem: finance-banking
   entity:    Multi-institution
   category:  finance
 - domain:    nucc.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Finance & Banking
   ecosystem: finance-banking
   entity:    Multi-institution
   category:  finance
 - domain:    icbc.com
-  source:    seed
+  source:    seed_cn
   section:   Finance & Banking
   ecosystem: finance-banking
   entity:    Multi-institution
   category:  finance
 - domain:    icbc.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Finance & Banking
   ecosystem: finance-banking
   entity:    Multi-institution
   category:  finance
 - domain:    boc.cn
-  source:    seed
+  source:    seed_cn
   section:   Finance & Banking
   ecosystem: finance-banking
   entity:    Multi-institution
   category:  finance
 - domain:    bankofchina.com
-  source:    seed
+  source:    seed_cn
   section:   Finance & Banking
   ecosystem: finance-banking
   entity:    Multi-institution
   category:  finance
 - domain:    ccb.com
-  source:    seed
+  source:    seed_cn
   section:   Finance & Banking
   ecosystem: finance-banking
   entity:    Multi-institution
   category:  finance
 - domain:    ccb.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Finance & Banking
   ecosystem: finance-banking
   entity:    Multi-institution
   category:  finance
 - domain:    abchina.com
-  source:    seed
+  source:    seed_cn
   section:   Finance & Banking
   ecosystem: finance-banking
   entity:    Multi-institution
   category:  finance
 - domain:    bankcomm.com
-  source:    seed
+  source:    seed_cn
   section:   Finance & Banking
   ecosystem: finance-banking
   entity:    Multi-institution
   category:  finance
 - domain:    psbc.com
-  source:    seed
+  source:    seed_cn
   section:   Finance & Banking
   ecosystem: finance-banking
   entity:    Multi-institution
   category:  finance
 - domain:    cmbchina.com
-  source:    seed
+  source:    seed_cn
   section:   Finance & Banking
   ecosystem: finance-banking
   entity:    Multi-institution
   category:  finance
 - domain:    cebbank.com
-  source:    seed
+  source:    seed_cn
   section:   Finance & Banking
   ecosystem: finance-banking
   entity:    Multi-institution
   category:  finance
 - domain:    cmbc.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Finance & Banking
   ecosystem: finance-banking
   entity:    Multi-institution
   category:  finance
 - domain:    cib.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Finance & Banking
   ecosystem: finance-banking
   entity:    Multi-institution
   category:  finance
 - domain:    spdb.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Finance & Banking
   ecosystem: finance-banking
   entity:    Multi-institution
   category:  finance
 - domain:    pingan.com
-  source:    seed
+  source:    seed_cn
   section:   Finance & Banking
   ecosystem: finance-banking
   entity:    Multi-institution
   category:  finance
 - domain:    citicbank.com
-  source:    seed
+  source:    seed_cn
   section:   Finance & Banking
   ecosystem: finance-banking
   entity:    Multi-institution
   category:  finance
 - domain:    ecitic.com
-  source:    seed
+  source:    seed_cn
   section:   Finance & Banking
   ecosystem: finance-banking
   entity:    Multi-institution
   category:  finance
 - domain:    pbc.gov.cn
-  source:    seed
+  source:    seed_cn
+  section:   Finance & Banking
+  ecosystem: finance-banking
+  entity:    Multi-institution
+  category:  finance
+- domain:    ecny.pbc.gov.cn
+  source:    seed_cn
   section:   Finance & Banking
   ecosystem: finance-banking
   entity:    Multi-institution
   category:  finance
 - domain:    safe.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Finance & Banking
   ecosystem: finance-banking
   entity:    Multi-institution
   category:  finance
 - domain:    csrc.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Finance & Banking
   ecosystem: finance-banking
   entity:    Multi-institution
   category:  finance
 - domain:    cbirc.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Finance & Banking
   ecosystem: finance-banking
   entity:    Multi-institution
   category:  finance
 - domain:    nssf.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Finance & Banking
   ecosystem: finance-banking
   entity:    Multi-institution
   category:  finance
 - domain:    sse.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Capital Markets
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    szse.cn
-  source:    seed
+  source:    seed_cn
   section:   Capital Markets
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    shfe.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Capital Markets
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    dce.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Capital Markets
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    czce.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Capital Markets
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    cffex.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Capital Markets
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    chinaclear.cn
-  source:    seed
+  source:    seed_cn
   section:   Capital Markets
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    chinaclearing.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Capital Markets
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    cnaps.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Capital Markets
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    cfets.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Capital Markets
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    chinamoney.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Capital Markets
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    chinabond.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Capital Markets
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    chinabond.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Capital Markets
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    eastmoney.com
-  source:    seed
+  source:    seed_cn
   section:   Capital Markets
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    10jqka.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Capital Markets
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    hexun.com
-  source:    seed
+  source:    seed_cn
   section:   Capital Markets
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    chinaamc.com
-  source:    seed
+  source:    seed_cn
   section:   Fund & Securities
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    efund.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Fund & Securities
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    bosera.com
-  source:    seed
+  source:    seed_cn
   section:   Fund & Securities
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    harvest.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Fund & Securities
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    castfund.com
-  source:    seed
+  source:    seed_cn
   section:   Fund & Securities
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    fullgoal.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Fund & Securities
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    icbcfund.com
-  source:    seed
+  source:    seed_cn
   section:   Fund & Securities
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    gfzq.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Fund & Securities
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    gjzq.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Fund & Securities
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    htsc.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Fund & Securities
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    gtja.com
-  source:    seed
+  source:    seed_cn
   section:   Fund & Securities
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    guosen.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Fund & Securities
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    everbright.com
-  source:    seed
+  source:    seed_cn
   section:   Fund & Securities
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    ebscn.com
-  source:    seed
+  source:    seed_cn
   section:   Fund & Securities
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    picc.com
-  source:    seed
+  source:    seed_cn
   section:   Insurance
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    picc.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Insurance
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    cpic.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Insurance
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    sinosig.com
-  source:    seed
+  source:    seed_cn
   section:   Insurance
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    taikang.com
-  source:    seed
+  source:    seed_cn
   section:   Insurance
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
+- domain:    cas.cn
+  source:    seed_cn
+  section:   Education & Research
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    cae.cn
+  source:    seed_cn
+  section:   Education & Research
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
 - domain:    edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    pku.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    tsinghua.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    fudan.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    sjtu.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    zju.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    nju.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    ustc.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    whu.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    hust.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    sysu.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    hit.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    tongji.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    buaa.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    bit.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    bnu.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    ruc.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    sdu.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    xjtu.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    nankai.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    seu.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    csu.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    jlu.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    dlut.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    nwpu.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    scut.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    cqu.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    swu.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    nenu.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    ecnu.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    cumt.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    cufe.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    uibe.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    bfsu.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    bjmu.edu.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    cnki.net
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    wanfangdata.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    chsi.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    xuexi.cn
-  source:    seed
+  source:    seed_cn
   section:   Education & Research
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    nhc.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Healthcare & Pharma
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    nmpa.gov.cn
-  source:    seed
+  source:    seed_cn
   section:   Healthcare & Pharma
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    chinacdc.cn
-  source:    seed
+  source:    seed_cn
   section:   Healthcare & Pharma
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    pumch.cn
-  source:    seed
+  source:    seed_cn
   section:   Healthcare & Pharma
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    guahao.com
-  source:    seed
+  source:    seed_cn
   section:   Healthcare & Pharma
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    haodf.com
-  source:    seed
+  source:    seed_cn
   section:   Healthcare & Pharma
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    dxy.cn
-  source:    seed
+  source:    seed_cn
   section:   Healthcare & Pharma
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    sinopharm.com
-  source:    seed
+  source:    seed_cn
   section:   Healthcare & Pharma
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    cspc.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Healthcare & Pharma
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    tongrentang.com
-  source:    seed
+  source:    seed_cn
   section:   Healthcare & Pharma
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    yunnan-baiyao.com
-  source:    seed
+  source:    seed_cn
   section:   Healthcare & Pharma
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    yunnanbaiyao.com
-  source:    seed
+  source:    seed_cn
   section:   Healthcare & Pharma
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    tasly.com
-  source:    seed
+  source:    seed_cn
   section:   Healthcare & Pharma
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    kelun.com
-  source:    seed
+  source:    seed_cn
   section:   Healthcare & Pharma
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    crpharm.com
-  source:    seed
+  source:    seed_cn
   section:   Healthcare & Pharma
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    harbinpharma.com
-  source:    seed
+  source:    seed_cn
   section:   Healthcare & Pharma
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    humanwell.com
-  source:    seed
+  source:    seed_cn
   section:   Healthcare & Pharma
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    xinhuanet.com
-  source:    seed
+  source:    seed_cn
   section:   State Media
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    xinhua.org
-  source:    seed
+  source:    seed_cn
   section:   State Media
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    people.com.cn
-  source:    seed
+  source:    seed_cn
   section:   State Media
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    cctv.com
-  source:    seed
+  source:    seed_cn
   section:   State Media
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    cgtn.com
-  source:    seed
+  source:    seed_cn
   section:   State Media
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    cri.cn
-  source:    seed
+  source:    seed_cn
   section:   State Media
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    china.com.cn
-  source:    seed
+  source:    seed_cn
   section:   State Media
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    chinadaily.com.cn
-  source:    seed
+  source:    seed_cn
   section:   State Media
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    rmrb.com.cn
-  source:    seed
+  source:    seed_cn
   section:   State Media
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    gmw.cn
-  source:    seed
+  source:    seed_cn
   section:   State Media
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    cnr.cn
-  source:    seed
+  source:    seed_cn
   section:   State Media
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    thepaper.cn
-  source:    seed
+  source:    seed_cn
   section:   State Media
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    caixin.com
-  source:    seed
+  source:    seed_cn
   section:   State Media
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    yicai.com
-  source:    seed
+  source:    seed_cn
   section:   State Media
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    21jingji.com
-  source:    seed
+  source:    seed_cn
   section:   State Media
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    weibo.com
-  source:    seed
+  source:    seed_cn
   section:   Social & Video
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    weibo.cn
-  source:    seed
+  source:    seed_cn
   section:   Social & Video
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    zhihu.com
-  source:    seed
+  source:    seed_cn
   section:   Social & Video
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    bilibili.com
-  source:    seed
+  source:    seed_cn
   section:   Social & Video
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    bilibili.net
-  source:    seed
+  source:    seed_cn
   section:   Social & Video
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    bilibili.tv
-  source:    seed
+  source:    seed_cn
   section:   Social & Video
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    xiaohongshu.com
-  source:    seed
+  source:    seed_cn
   section:   Social & Video
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    xhscdn.com
-  source:    seed
+  source:    seed_cn
   section:   Social & Video
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    kuaishou.com
-  source:    seed
+  source:    seed_cn
   section:   Social & Video
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    kuaishoucdn.com
-  source:    seed
+  source:    seed_cn
   section:   Social & Video
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    ximalaya.com
-  source:    seed
+  source:    seed_cn
   section:   Social & Video
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    douban.com
-  source:    seed
+  source:    seed_cn
   section:   Social & Video
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    douban.fm
-  source:    seed
+  source:    seed_cn
   section:   Social & Video
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    youku.com
-  source:    seed
+  source:    seed_cn
   section:   Social & Video
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    mgtv.com
-  source:    seed
+  source:    seed_cn
   section:   Social & Video
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    huya.com
-  source:    seed
+  source:    seed_cn
   section:   Social & Video
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    douyu.com
-  source:    seed
+  source:    seed_cn
   section:   Social & Video
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    kugou.com
-  source:    seed
+  source:    seed_cn
   section:   Social & Video
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    kuwo.cn
-  source:    seed
+  source:    seed_cn
   section:   Social & Video
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    ctrip.com
-  source:    seed
+  source:    seed_cn
   section:   Travel & Transport
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    qunar.com
-  source:    seed
+  source:    seed_cn
   section:   Travel & Transport
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    tuniu.com
-  source:    seed
+  source:    seed_cn
   section:   Travel & Transport
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    tongcheng.com
-  source:    seed
+  source:    seed_cn
   section:   Travel & Transport
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    mafengwo.cn
-  source:    seed
+  source:    seed_cn
   section:   Travel & Transport
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    lvmama.com
-  source:    seed
+  source:    seed_cn
   section:   Travel & Transport
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    huazhu.com
-  source:    seed
+  source:    seed_cn
   section:   Travel & Transport
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    jinjiang.com
-  source:    seed
+  source:    seed_cn
   section:   Travel & Transport
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    shangri-la.com
-  source:    seed
+  source:    seed_cn
   section:   Travel & Transport
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    cr12306.cn
-  source:    seed
+  source:    seed_cn
   section:   Travel & Transport
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    12306.cn
-  source:    seed
+  source:    seed_cn
   section:   Travel & Transport
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    sf-express.com
-  source:    seed
+  source:    seed_cn
   section:   Travel & Transport
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    sfbest.com
-  source:    seed
+  source:    seed_cn
   section:   Travel & Transport
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    zto.com
-  source:    seed
+  source:    seed_cn
   section:   Travel & Transport
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    yto.net.cn
-  source:    seed
+  source:    seed_cn
   section:   Travel & Transport
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    sto.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Travel & Transport
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    yundaex.com
-  source:    seed
+  source:    seed_cn
   section:   Travel & Transport
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    meituan.com
-  source:    seed
+  source:    seed_cn
   section:   O2O & Local Services
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    meituan.net
-  source:    seed
+  source:    seed_cn
   section:   O2O & Local Services
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    dianping.com
-  source:    seed
+  source:    seed_cn
   section:   O2O & Local Services
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    sankuai.com
-  source:    seed
+  source:    seed_cn
   section:   O2O & Local Services
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    ele.me
-  source:    seed
+  source:    seed_cn
   section:   O2O & Local Services
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    vip.com
-  source:    seed
+  source:    seed_cn
   section:   E-commerce & Retail
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    dangdang.com
-  source:    seed
+  source:    seed_cn
   section:   E-commerce & Retail
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    suning.com
-  source:    seed
+  source:    seed_cn
   section:   E-commerce & Retail
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    gome.com.cn
-  source:    seed
+  source:    seed_cn
   section:   E-commerce & Retail
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    anjuke.com
-  source:    seed
+  source:    seed_cn
   section:   E-commerce & Retail
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    lianjia.com
-  source:    seed
+  source:    seed_cn
   section:   E-commerce & Retail
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    58.com
-  source:    seed
+  source:    seed_cn
   section:   E-commerce & Retail
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    zhaopin.com
-  source:    seed
+  source:    seed_cn
   section:   E-commerce & Retail
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    51job.com
-  source:    seed
+  source:    seed_cn
   section:   E-commerce & Retail
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    zhipin.com
-  source:    seed
+  source:    seed_cn
   section:   E-commerce & Retail
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    wahaha.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Consumer Brands - Food & Beverage
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    nongfushanquan.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Brands - Food & Beverage
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    yili.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Brands - Food & Beverage
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    mengniu.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Brands - Food & Beverage
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    sanyuan.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Consumer Brands - Food & Beverage
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    maotai.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Brands - Food & Beverage
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    wuliangye.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Brands - Food & Beverage
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    tsingtao.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Brands - Food & Beverage
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    luckin.cn
-  source:    seed
+  source:    seed_cn
   section:   Consumer Brands - Food & Beverage
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    heytea.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Brands - Food & Beverage
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    haidilao.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Brands - Food & Beverage
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    midea.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Brands - Appliances
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    haier.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Brands - Appliances
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    gree.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Brands - Appliances
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    hisense.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Brands - Appliances
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    tcl.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Brands - Appliances
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    changhong.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Brands - Appliances
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    konka.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Brands - Appliances
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    robam.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Brands - Appliances
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    fotile.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Brands - Appliances
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    supor.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Brands - Appliances
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    joyoung.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Brands - Appliances
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    ecovacs.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Brands - Appliances
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    dreame.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Brands - Appliances
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    anta.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Brands - Apparel
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    lining.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Brands - Apparel
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    bosideng.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Brands - Apparel
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    youngor.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Brands - Apparel
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    septwolves.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Brands - Apparel
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    erdos.com
-  source:    seed
+  source:    seed_cn
   section:   Consumer Brands - Apparel
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    byd.com
-  source:    seed
+  source:    seed_cn
   section:   Auto & EV
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    bydauto.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Auto & EV
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    geely.com
-  source:    seed
+  source:    seed_cn
   section:   Auto & EV
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    nio.cn
-  source:    seed
+  source:    seed_cn
   section:   Auto & EV
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    xpeng.com
-  source:    seed
+  source:    seed_cn
   section:   Auto & EV
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    greatwall.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Auto & EV
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    chery.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Auto & EV
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    catl.com
-  source:    seed
+  source:    seed_cn
   section:   Battery & New Energy
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    sgcc.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Battery & New Energy
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    csg.cn
-  source:    seed
+  source:    seed_cn
   section:   Battery & New Energy
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    sinopec.com
-  source:    seed
+  source:    seed_cn
   section:   Battery & New Energy
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    petrochina.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Battery & New Energy
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    cnpc.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Battery & New Energy
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    cnooc.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Battery & New Energy
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    spic.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Battery & New Energy
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    cnnc.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Battery & New Energy
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    cgnpc.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Battery & New Energy
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    crrc.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Manufacturing & Industry
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    xcmg.com
-  source:    seed
+  source:    seed_cn
   section:   Manufacturing & Industry
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    sany.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Manufacturing & Industry
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    cssc.net
-  source:    seed
+  source:    seed_cn
   section:   Manufacturing & Industry
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    baosteel.com
-  source:    seed
+  source:    seed_cn
   section:   Manufacturing & Industry
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    chowtaifook.com
-  source:    seed
+  source:    seed_cn
   section:   Jewelry & Tea
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    chow-tai-fook.com
-  source:    seed
+  source:    seed_cn
   section:   Jewelry & Tea
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    laofengxiang.com
-  source:    seed
+  source:    seed_cn
   section:   Jewelry & Tea
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    laofeng.com
-  source:    seed
+  source:    seed_cn
   section:   Jewelry & Tea
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    darry.com
-  source:    seed
+  source:    seed_cn
   section:   Jewelry & Tea
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    ngtc.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Jewelry & Tea
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    gic.org.cn
-  source:    seed
+  source:    seed_cn
   section:   Jewelry & Tea
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    tenfu.com
-  source:    seed
+  source:    seed_cn
   section:   Jewelry & Tea
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    dahongpao.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Jewelry & Tea
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    tieguanyin.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Jewelry & Tea
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    longjingtea.com
-  source:    seed
+  source:    seed_cn
   section:   Jewelry & Tea
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    wuyitea.com
-  source:    seed
+  source:    seed_cn
   section:   Jewelry & Tea
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    dayi.com
-  source:    seed
+  source:    seed_cn
   section:   Jewelry & Tea
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    vanke.com
-  source:    seed
+  source:    seed_cn
   section:   Real Estate
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    longfor.com
-  source:    seed
+  source:    seed_cn
   section:   Real Estate
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    greenland-group.com
-  source:    seed
+  source:    seed_cn
   section:   Real Estate
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    poly-real-estate.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Real Estate
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    beike.com
-  source:    seed
+  source:    seed_cn
   section:   Real Estate
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    tianyancha.com
-  source:    seed
+  source:    seed_cn
   section:   Business Intelligence
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    qcc.com
-  source:    seed
+  source:    seed_cn
   section:   Business Intelligence
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    126.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    163.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    163yun.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    netease.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    yeah.net
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    sina.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    sina.com.cn
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    sinaimg.cn
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    sinaimgfx.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    sinajs.cn
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    weibocdn.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    alicdn.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    alicdngslb.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    aliyun-inc.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    ant.design
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    appgallery.cloud
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    acgvideo.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    biliapi.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    bilicomic.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    bilicomics.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    biligame.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    biligame.net
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    hdslb.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    gifshow.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    ksapisrv.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    ixigua.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    meituanmaicai.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    mi-img.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    mihoyo.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    mihoyogame.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    mybank.cn
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    qianfan.cloud
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    qiyukf.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    qq.net
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    tencent-cloud.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    tencent-cloud.net
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    tencent.net
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    tmallgenie.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    wenxin.cloud
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    xhslink.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    zhimg.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    jdcdn.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    jdl.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    djicreator.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    djistatic.com
-  source:    seed
+  source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    17k.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    22.cn
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    35.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    4.cn
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    a9vg.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    abc.com.cn
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    acfun.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    baihe.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    bookschina.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    bugly.qq.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    cf.qq.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    china.org.cn
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    chinabyte.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    chuangkit.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    cloud.tencent.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    comic.qq.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    cowtransfer.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    dnf.qq.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    doc88.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    docer.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    donews.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    duokan.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    ename.net
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    gaoding.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    geekpark.net
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    hichina.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    huoshan.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    iconfont.cn
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    icourse163.org
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    imooc.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    ip138.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    ireader.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    iteye.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    itools.cn
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    juejin.cn
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    juming.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    kongfz.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    lanhuapp.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    leetcode.cn
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    leiphone.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    lenovo.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    lol.qq.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    manhuagui.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    manhuatai.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    modao.cc
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    newsmth.net
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    nga.cn
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    okbuy.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    pcpop.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    pgyer.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    pingwest.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    pp.cn
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    processon.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    readnovel.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    ruochu.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    shimo.im
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    smth.org
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    tapd.cn
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    teambition.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    techweb.com.cn
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    tongbu.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    tower.im
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    u17.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    uuu9.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    vgtime.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    weishi.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    weixin.qq.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    wenku.baidu.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    wiz.cn
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    xin.net
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    xs8.cn
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    xuetangx.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    yanxuan.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    yinxiang.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    yoho.cn
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    yohobuy.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    yuque.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
 - domain:    zhihuishu.com
-  source:    seed
+  source:    seed_cn
   section:   User batch additions
   ecosystem: unknown
   entity:    Unknown
@@ -4416,12 +4464,6 @@
   entity:    Unknown
   category:  uncategorized
 - domain:    bear-electric.com
-  source:    extended
-  section:   Unsectioned
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
-- domain:    beian.gov.cn
   source:    extended
   section:   Unsectioned
   ecosystem: unknown

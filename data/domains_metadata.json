@@ -1,7 +1,7 @@
 [
   {
     "domain": "alibabacloud.net",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Alibaba Ecosystem",
     "ecosystem": "alibaba",
     "entity": "Alibaba Group / Ant Group",
@@ -9,7 +9,7 @@
   },
   {
     "domain": "aliyun.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Alibaba Ecosystem",
     "ecosystem": "alibaba",
     "entity": "Alibaba Group / Ant Group",
@@ -17,7 +17,7 @@
   },
   {
     "domain": "aliyun.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Alibaba Ecosystem",
     "ecosystem": "alibaba",
     "entity": "Alibaba Group / Ant Group",
@@ -25,7 +25,7 @@
   },
   {
     "domain": "aliyuncs.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Alibaba Ecosystem",
     "ecosystem": "alibaba",
     "entity": "Alibaba Group / Ant Group",
@@ -33,7 +33,7 @@
   },
   {
     "domain": "aliyundrive.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Alibaba Ecosystem",
     "ecosystem": "alibaba",
     "entity": "Alibaba Group / Ant Group",
@@ -41,7 +41,7 @@
   },
   {
     "domain": "alipay.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Alibaba Ecosystem",
     "ecosystem": "alibaba",
     "entity": "Alibaba Group / Ant Group",
@@ -49,7 +49,7 @@
   },
   {
     "domain": "alipay.net",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Alibaba Ecosystem",
     "ecosystem": "alibaba",
     "entity": "Alibaba Group / Ant Group",
@@ -57,7 +57,7 @@
   },
   {
     "domain": "alipayobjects.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Alibaba Ecosystem",
     "ecosystem": "alibaba",
     "entity": "Alibaba Group / Ant Group",
@@ -65,7 +65,7 @@
   },
   {
     "domain": "alipayplus.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Alibaba Ecosystem",
     "ecosystem": "alibaba",
     "entity": "Alibaba Group / Ant Group",
@@ -73,7 +73,7 @@
   },
   {
     "domain": "taobao.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Alibaba Ecosystem",
     "ecosystem": "alibaba",
     "entity": "Alibaba Group / Ant Group",
@@ -81,7 +81,7 @@
   },
   {
     "domain": "taobao.net",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Alibaba Ecosystem",
     "ecosystem": "alibaba",
     "entity": "Alibaba Group / Ant Group",
@@ -89,7 +89,7 @@
   },
   {
     "domain": "tmall.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Alibaba Ecosystem",
     "ecosystem": "alibaba",
     "entity": "Alibaba Group / Ant Group",
@@ -97,7 +97,7 @@
   },
   {
     "domain": "1688.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Alibaba Ecosystem",
     "ecosystem": "alibaba",
     "entity": "Alibaba Group / Ant Group",
@@ -105,7 +105,7 @@
   },
   {
     "domain": "antgroup.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Alibaba Ecosystem",
     "ecosystem": "alibaba",
     "entity": "Alibaba Group / Ant Group",
@@ -113,7 +113,7 @@
   },
   {
     "domain": "dingtalk.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Alibaba Ecosystem",
     "ecosystem": "alibaba",
     "entity": "Alibaba Group / Ant Group",
@@ -121,7 +121,7 @@
   },
   {
     "domain": "amap.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Alibaba Ecosystem",
     "ecosystem": "alibaba",
     "entity": "Alibaba Group / Ant Group",
@@ -129,7 +129,7 @@
   },
   {
     "domain": "gaode.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Alibaba Ecosystem",
     "ecosystem": "alibaba",
     "entity": "Alibaba Group / Ant Group",
@@ -137,7 +137,7 @@
   },
   {
     "domain": "fliggy.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Alibaba Ecosystem",
     "ecosystem": "alibaba",
     "entity": "Alibaba Group / Ant Group",
@@ -145,7 +145,7 @@
   },
   {
     "domain": "dazhongdianping.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Alibaba Ecosystem",
     "ecosystem": "alibaba",
     "entity": "Alibaba Group / Ant Group",
@@ -153,7 +153,7 @@
   },
   {
     "domain": "umeng.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Alibaba Ecosystem",
     "ecosystem": "alibaba",
     "entity": "Alibaba Group / Ant Group",
@@ -161,7 +161,7 @@
   },
   {
     "domain": "umengcloud.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Alibaba Ecosystem",
     "ecosystem": "alibaba",
     "entity": "Alibaba Group / Ant Group",
@@ -169,7 +169,7 @@
   },
   {
     "domain": "tencent.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Tencent Ecosystem",
     "ecosystem": "tencent",
     "entity": "Tencent",
@@ -177,7 +177,7 @@
   },
   {
     "domain": "tencentcloudapi.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Tencent Ecosystem",
     "ecosystem": "tencent",
     "entity": "Tencent",
@@ -185,7 +185,7 @@
   },
   {
     "domain": "tencentcos.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Tencent Ecosystem",
     "ecosystem": "tencent",
     "entity": "Tencent",
@@ -193,7 +193,7 @@
   },
   {
     "domain": "tencentclb.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Tencent Ecosystem",
     "ecosystem": "tencent",
     "entity": "Tencent",
@@ -201,7 +201,7 @@
   },
   {
     "domain": "tencentmusic.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Tencent Ecosystem",
     "ecosystem": "tencent",
     "entity": "Tencent",
@@ -209,7 +209,7 @@
   },
   {
     "domain": "tencentgames.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Tencent Ecosystem",
     "ecosystem": "tencent",
     "entity": "Tencent",
@@ -217,7 +217,7 @@
   },
   {
     "domain": "tencentmeeting.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Tencent Ecosystem",
     "ecosystem": "tencent",
     "entity": "Tencent",
@@ -225,7 +225,7 @@
   },
   {
     "domain": "tencentvideo.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Tencent Ecosystem",
     "ecosystem": "tencent",
     "entity": "Tencent",
@@ -233,7 +233,7 @@
   },
   {
     "domain": "tcloudfamily.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Tencent Ecosystem",
     "ecosystem": "tencent",
     "entity": "Tencent",
@@ -241,7 +241,7 @@
   },
   {
     "domain": "apigwtencent.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Tencent Ecosystem",
     "ecosystem": "tencent",
     "entity": "Tencent",
@@ -249,7 +249,7 @@
   },
   {
     "domain": "servicewechat.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Tencent Ecosystem",
     "ecosystem": "tencent",
     "entity": "Tencent",
@@ -257,7 +257,7 @@
   },
   {
     "domain": "qq.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Tencent Ecosystem",
     "ecosystem": "tencent",
     "entity": "Tencent",
@@ -265,7 +265,7 @@
   },
   {
     "domain": "qqmusic.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Tencent Ecosystem",
     "ecosystem": "tencent",
     "entity": "Tencent",
@@ -273,7 +273,7 @@
   },
   {
     "domain": "foxmail.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Tencent Ecosystem",
     "ecosystem": "tencent",
     "entity": "Tencent",
@@ -281,7 +281,7 @@
   },
   {
     "domain": "weixin.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Tencent Ecosystem",
     "ecosystem": "tencent",
     "entity": "Tencent",
@@ -289,7 +289,7 @@
   },
   {
     "domain": "wechatpay.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Tencent Ecosystem",
     "ecosystem": "tencent",
     "entity": "Tencent",
@@ -297,7 +297,7 @@
   },
   {
     "domain": "tenpay.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Tencent Ecosystem",
     "ecosystem": "tencent",
     "entity": "Tencent",
@@ -305,7 +305,7 @@
   },
   {
     "domain": "qcloud.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Tencent Ecosystem",
     "ecosystem": "tencent",
     "entity": "Tencent",
@@ -313,7 +313,7 @@
   },
   {
     "domain": "qpic.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Tencent Ecosystem",
     "ecosystem": "tencent",
     "entity": "Tencent",
@@ -321,7 +321,7 @@
   },
   {
     "domain": "dnspod.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Tencent Ecosystem",
     "ecosystem": "tencent",
     "entity": "Tencent",
@@ -329,7 +329,7 @@
   },
   {
     "domain": "dnspod.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Tencent Ecosystem",
     "ecosystem": "tencent",
     "entity": "Tencent",
@@ -337,7 +337,7 @@
   },
   {
     "domain": "baidu.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Baidu Ecosystem",
     "ecosystem": "baidu",
     "entity": "Baidu",
@@ -345,7 +345,7 @@
   },
   {
     "domain": "baidu.mobi",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Baidu Ecosystem",
     "ecosystem": "baidu",
     "entity": "Baidu",
@@ -353,7 +353,7 @@
   },
   {
     "domain": "baidubce.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Baidu Ecosystem",
     "ecosystem": "baidu",
     "entity": "Baidu",
@@ -361,7 +361,7 @@
   },
   {
     "domain": "baiducloud.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Baidu Ecosystem",
     "ecosystem": "baidu",
     "entity": "Baidu",
@@ -369,7 +369,7 @@
   },
   {
     "domain": "baidupcs.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Baidu Ecosystem",
     "ecosystem": "baidu",
     "entity": "Baidu",
@@ -377,7 +377,7 @@
   },
   {
     "domain": "baidupcs.net",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Baidu Ecosystem",
     "ecosystem": "baidu",
     "entity": "Baidu",
@@ -385,7 +385,7 @@
   },
   {
     "domain": "baidustatic.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Baidu Ecosystem",
     "ecosystem": "baidu",
     "entity": "Baidu",
@@ -393,7 +393,7 @@
   },
   {
     "domain": "bdstatic.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Baidu Ecosystem",
     "ecosystem": "baidu",
     "entity": "Baidu",
@@ -401,7 +401,7 @@
   },
   {
     "domain": "bdimg.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Baidu Ecosystem",
     "ecosystem": "baidu",
     "entity": "Baidu",
@@ -409,7 +409,7 @@
   },
   {
     "domain": "bcebos.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Baidu Ecosystem",
     "ecosystem": "baidu",
     "entity": "Baidu",
@@ -417,7 +417,7 @@
   },
   {
     "domain": "shifen.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Baidu Ecosystem",
     "ecosystem": "baidu",
     "entity": "Baidu",
@@ -425,7 +425,7 @@
   },
   {
     "domain": "hao123.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Baidu Ecosystem",
     "ecosystem": "baidu",
     "entity": "Baidu",
@@ -433,7 +433,7 @@
   },
   {
     "domain": "iqiyi.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Baidu Ecosystem",
     "ecosystem": "baidu",
     "entity": "Baidu",
@@ -441,7 +441,7 @@
   },
   {
     "domain": "iqiyipic.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Baidu Ecosystem",
     "ecosystem": "baidu",
     "entity": "Baidu",
@@ -449,7 +449,7 @@
   },
   {
     "domain": "qiyi.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Baidu Ecosystem",
     "ecosystem": "baidu",
     "entity": "Baidu",
@@ -457,7 +457,7 @@
   },
   {
     "domain": "qiyipic.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Baidu Ecosystem",
     "ecosystem": "baidu",
     "entity": "Baidu",
@@ -465,7 +465,7 @@
   },
   {
     "domain": "bytedance.net",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "ByteDance Ecosystem",
     "ecosystem": "bytedance",
     "entity": "ByteDance",
@@ -473,7 +473,7 @@
   },
   {
     "domain": "douyin.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "ByteDance Ecosystem",
     "ecosystem": "bytedance",
     "entity": "ByteDance",
@@ -481,7 +481,7 @@
   },
   {
     "domain": "douyincdn.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "ByteDance Ecosystem",
     "ecosystem": "bytedance",
     "entity": "ByteDance",
@@ -489,7 +489,7 @@
   },
   {
     "domain": "douyinstatic.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "ByteDance Ecosystem",
     "ecosystem": "bytedance",
     "entity": "ByteDance",
@@ -497,7 +497,7 @@
   },
   {
     "domain": "douyinvod.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "ByteDance Ecosystem",
     "ecosystem": "bytedance",
     "entity": "ByteDance",
@@ -505,7 +505,7 @@
   },
   {
     "domain": "toutiao.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "ByteDance Ecosystem",
     "ecosystem": "bytedance",
     "entity": "ByteDance",
@@ -513,7 +513,7 @@
   },
   {
     "domain": "toutiaocloud.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "ByteDance Ecosystem",
     "ecosystem": "bytedance",
     "entity": "ByteDance",
@@ -521,7 +521,7 @@
   },
   {
     "domain": "snssdk.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "ByteDance Ecosystem",
     "ecosystem": "bytedance",
     "entity": "ByteDance",
@@ -529,7 +529,7 @@
   },
   {
     "domain": "byteimg.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "ByteDance Ecosystem",
     "ecosystem": "bytedance",
     "entity": "ByteDance",
@@ -537,7 +537,7 @@
   },
   {
     "domain": "iesdouyin.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "ByteDance Ecosystem",
     "ecosystem": "bytedance",
     "entity": "ByteDance",
@@ -545,7 +545,7 @@
   },
   {
     "domain": "iesdouyin.net",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "ByteDance Ecosystem",
     "ecosystem": "bytedance",
     "entity": "ByteDance",
@@ -553,7 +553,7 @@
   },
   {
     "domain": "feishu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "ByteDance Ecosystem",
     "ecosystem": "bytedance",
     "entity": "ByteDance",
@@ -561,7 +561,7 @@
   },
   {
     "domain": "larkoffice.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "ByteDance Ecosystem",
     "ecosystem": "bytedance",
     "entity": "ByteDance",
@@ -569,7 +569,7 @@
   },
   {
     "domain": "volcengine.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "ByteDance Ecosystem",
     "ecosystem": "bytedance",
     "entity": "ByteDance",
@@ -577,7 +577,7 @@
   },
   {
     "domain": "volccdn.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "ByteDance Ecosystem",
     "ecosystem": "bytedance",
     "entity": "ByteDance",
@@ -585,7 +585,7 @@
   },
   {
     "domain": "jd.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "JD.com Ecosystem",
     "ecosystem": "jd",
     "entity": "JD.com",
@@ -593,7 +593,7 @@
   },
   {
     "domain": "jdcloud.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "JD.com Ecosystem",
     "ecosystem": "jd",
     "entity": "JD.com",
@@ -601,7 +601,7 @@
   },
   {
     "domain": "jdcloudapi.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "JD.com Ecosystem",
     "ecosystem": "jd",
     "entity": "JD.com",
@@ -609,7 +609,7 @@
   },
   {
     "domain": "jdpay.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "JD.com Ecosystem",
     "ecosystem": "jd",
     "entity": "JD.com",
@@ -617,7 +617,7 @@
   },
   {
     "domain": "jdpay.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "JD.com Ecosystem",
     "ecosystem": "jd",
     "entity": "JD.com",
@@ -625,7 +625,7 @@
   },
   {
     "domain": "jddj.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "JD.com Ecosystem",
     "ecosystem": "jd",
     "entity": "JD.com",
@@ -633,7 +633,7 @@
   },
   {
     "domain": "360buy.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "JD.com Ecosystem",
     "ecosystem": "jd",
     "entity": "JD.com",
@@ -641,7 +641,7 @@
   },
   {
     "domain": "360buyimg.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "JD.com Ecosystem",
     "ecosystem": "jd",
     "entity": "JD.com",
@@ -649,7 +649,7 @@
   },
   {
     "domain": "xiaomi.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Xiaomi Ecosystem",
     "ecosystem": "xiaomi",
     "entity": "Xiaomi",
@@ -657,7 +657,7 @@
   },
   {
     "domain": "xiaomi.net",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Xiaomi Ecosystem",
     "ecosystem": "xiaomi",
     "entity": "Xiaomi",
@@ -665,7 +665,7 @@
   },
   {
     "domain": "mi.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Xiaomi Ecosystem",
     "ecosystem": "xiaomi",
     "entity": "Xiaomi",
@@ -673,7 +673,7 @@
   },
   {
     "domain": "mipush.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Xiaomi Ecosystem",
     "ecosystem": "xiaomi",
     "entity": "Xiaomi",
@@ -681,7 +681,7 @@
   },
   {
     "domain": "miwifi.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Xiaomi Ecosystem",
     "ecosystem": "xiaomi",
     "entity": "Xiaomi",
@@ -689,7 +689,7 @@
   },
   {
     "domain": "xiaoai.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Xiaomi Ecosystem",
     "ecosystem": "xiaomi",
     "entity": "Xiaomi",
@@ -697,7 +697,7 @@
   },
   {
     "domain": "huawei.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Huawei Ecosystem",
     "ecosystem": "huawei",
     "entity": "Huawei",
@@ -705,7 +705,7 @@
   },
   {
     "domain": "myhuaweicloud.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Huawei Ecosystem",
     "ecosystem": "huawei",
     "entity": "Huawei",
@@ -713,7 +713,7 @@
   },
   {
     "domain": "hwclouds.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Huawei Ecosystem",
     "ecosystem": "huawei",
     "entity": "Huawei",
@@ -721,7 +721,7 @@
   },
   {
     "domain": "hicloud.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Huawei Ecosystem",
     "ecosystem": "huawei",
     "entity": "Huawei",
@@ -729,7 +729,7 @@
   },
   {
     "domain": "huaweidevice.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Huawei Ecosystem",
     "ecosystem": "huawei",
     "entity": "Huawei",
@@ -737,7 +737,7 @@
   },
   {
     "domain": "vmall.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Huawei Ecosystem",
     "ecosystem": "huawei",
     "entity": "Huawei",
@@ -745,7 +745,7 @@
   },
   {
     "domain": "dbankcloud.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Huawei Ecosystem",
     "ecosystem": "huawei",
     "entity": "Huawei",
@@ -753,7 +753,7 @@
   },
   {
     "domain": "obs.cn-north-1.myhuaweicloud.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Huawei Ecosystem",
     "ecosystem": "huawei",
     "entity": "Huawei",
@@ -761,7 +761,7 @@
   },
   {
     "domain": "oppo.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Devices",
     "ecosystem": "consumer-devices",
     "entity": "Multi-brand",
@@ -769,7 +769,7 @@
   },
   {
     "domain": "vivo.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Devices",
     "ecosystem": "consumer-devices",
     "entity": "Multi-brand",
@@ -777,7 +777,7 @@
   },
   {
     "domain": "meizu.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Devices",
     "ecosystem": "consumer-devices",
     "entity": "Multi-brand",
@@ -785,7 +785,7 @@
   },
   {
     "domain": "smartisan.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Devices",
     "ecosystem": "consumer-devices",
     "entity": "Multi-brand",
@@ -793,7 +793,7 @@
   },
   {
     "domain": "honorchina.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Devices",
     "ecosystem": "consumer-devices",
     "entity": "Multi-brand",
@@ -801,7 +801,7 @@
   },
   {
     "domain": "pinduoduo.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Pinduoduo",
     "ecosystem": "pinduoduo",
     "entity": "Pinduoduo",
@@ -809,7 +809,7 @@
   },
   {
     "domain": "pinduoduo.net",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Pinduoduo",
     "ecosystem": "pinduoduo",
     "entity": "Pinduoduo",
@@ -817,7 +817,7 @@
   },
   {
     "domain": "yangkeduo.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Pinduoduo",
     "ecosystem": "pinduoduo",
     "entity": "Pinduoduo",
@@ -825,7 +825,7 @@
   },
   {
     "domain": "pddpic.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Pinduoduo",
     "ecosystem": "pinduoduo",
     "entity": "Pinduoduo",
@@ -833,7 +833,7 @@
   },
   {
     "domain": "ucloud.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Cloud & IDC",
     "ecosystem": "cloud-idc",
     "entity": "Multi-operator",
@@ -841,7 +841,7 @@
   },
   {
     "domain": "ksyun.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Cloud & IDC",
     "ecosystem": "cloud-idc",
     "entity": "Multi-operator",
@@ -849,7 +849,7 @@
   },
   {
     "domain": "ctyun.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Cloud & IDC",
     "ecosystem": "cloud-idc",
     "entity": "Multi-operator",
@@ -857,7 +857,7 @@
   },
   {
     "domain": "qingcloud.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Cloud & IDC",
     "ecosystem": "cloud-idc",
     "entity": "Multi-operator",
@@ -865,7 +865,7 @@
   },
   {
     "domain": "ecloud.10086.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Cloud & IDC",
     "ecosystem": "cloud-idc",
     "entity": "Multi-operator",
@@ -873,7 +873,7 @@
   },
   {
     "domain": "cloud.189.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Cloud & IDC",
     "ecosystem": "cloud-idc",
     "entity": "Multi-operator",
@@ -881,7 +881,7 @@
   },
   {
     "domain": "21vianet.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Cloud & IDC",
     "ecosystem": "cloud-idc",
     "entity": "Multi-operator",
@@ -889,7 +889,7 @@
   },
   {
     "domain": "capitalonline.net",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Cloud & IDC",
     "ecosystem": "cloud-idc",
     "entity": "Multi-operator",
@@ -897,7 +897,7 @@
   },
   {
     "domain": "capitalonline.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Cloud & IDC",
     "ecosystem": "cloud-idc",
     "entity": "Multi-operator",
@@ -905,7 +905,7 @@
   },
   {
     "domain": "wangsu.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "CDN & Storage",
     "ecosystem": "cdn-storage",
     "entity": "Multi-provider",
@@ -913,7 +913,7 @@
   },
   {
     "domain": "wangsucloud.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "CDN & Storage",
     "ecosystem": "cdn-storage",
     "entity": "Multi-provider",
@@ -921,7 +921,7 @@
   },
   {
     "domain": "wangsucloudcdn.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "CDN & Storage",
     "ecosystem": "cdn-storage",
     "entity": "Multi-provider",
@@ -929,7 +929,7 @@
   },
   {
     "domain": "chinanetcenter.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "CDN & Storage",
     "ecosystem": "cdn-storage",
     "entity": "Multi-provider",
@@ -937,7 +937,7 @@
   },
   {
     "domain": "baishancloud.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "CDN & Storage",
     "ecosystem": "cdn-storage",
     "entity": "Multi-provider",
@@ -945,7 +945,7 @@
   },
   {
     "domain": "chinacache.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "CDN & Storage",
     "ecosystem": "cdn-storage",
     "entity": "Multi-provider",
@@ -953,7 +953,7 @@
   },
   {
     "domain": "dnion.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "CDN & Storage",
     "ecosystem": "cdn-storage",
     "entity": "Multi-provider",
@@ -961,7 +961,7 @@
   },
   {
     "domain": "qiniu.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "CDN & Storage",
     "ecosystem": "cdn-storage",
     "entity": "Multi-provider",
@@ -969,7 +969,7 @@
   },
   {
     "domain": "qiniucdn.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "CDN & Storage",
     "ecosystem": "cdn-storage",
     "entity": "Multi-provider",
@@ -977,7 +977,7 @@
   },
   {
     "domain": "upyun.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "CDN & Storage",
     "ecosystem": "cdn-storage",
     "entity": "Multi-provider",
@@ -985,7 +985,7 @@
   },
   {
     "domain": "upaiyun.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "CDN & Storage",
     "ecosystem": "cdn-storage",
     "entity": "Multi-provider",
@@ -993,7 +993,7 @@
   },
   {
     "domain": "alidns.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "DNS & Domain",
     "ecosystem": "dns-domain",
     "entity": "Multi-provider",
@@ -1001,7 +1001,7 @@
   },
   {
     "domain": "xinnet.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "DNS & Domain",
     "ecosystem": "dns-domain",
     "entity": "Multi-provider",
@@ -1009,7 +1009,7 @@
   },
   {
     "domain": "west.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "DNS & Domain",
     "ecosystem": "dns-domain",
     "entity": "Multi-provider",
@@ -1017,7 +1017,7 @@
   },
   {
     "domain": "dns.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "DNS & Domain",
     "ecosystem": "dns-domain",
     "entity": "Multi-provider",
@@ -1025,7 +1025,7 @@
   },
   {
     "domain": "dns.la",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "DNS & Domain",
     "ecosystem": "dns-domain",
     "entity": "Multi-provider",
@@ -1033,7 +1033,7 @@
   },
   {
     "domain": "chinamobile.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Telecom & Backbone",
     "ecosystem": "telecom-backbone",
     "entity": "National Backbone",
@@ -1041,7 +1041,7 @@
   },
   {
     "domain": "cmcc.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Telecom & Backbone",
     "ecosystem": "telecom-backbone",
     "entity": "National Backbone",
@@ -1049,7 +1049,7 @@
   },
   {
     "domain": "10086.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Telecom & Backbone",
     "ecosystem": "telecom-backbone",
     "entity": "National Backbone",
@@ -1057,7 +1057,7 @@
   },
   {
     "domain": "chinaunicom.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Telecom & Backbone",
     "ecosystem": "telecom-backbone",
     "entity": "National Backbone",
@@ -1065,7 +1065,7 @@
   },
   {
     "domain": "chinaunicom.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Telecom & Backbone",
     "ecosystem": "telecom-backbone",
     "entity": "National Backbone",
@@ -1073,7 +1073,7 @@
   },
   {
     "domain": "10010.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Telecom & Backbone",
     "ecosystem": "telecom-backbone",
     "entity": "National Backbone",
@@ -1081,7 +1081,7 @@
   },
   {
     "domain": "chinatelecom.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Telecom & Backbone",
     "ecosystem": "telecom-backbone",
     "entity": "National Backbone",
@@ -1089,7 +1089,7 @@
   },
   {
     "domain": "chinatelecom.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Telecom & Backbone",
     "ecosystem": "telecom-backbone",
     "entity": "National Backbone",
@@ -1097,7 +1097,7 @@
   },
   {
     "domain": "10000.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Telecom & Backbone",
     "ecosystem": "telecom-backbone",
     "entity": "National Backbone",
@@ -1105,7 +1105,7 @@
   },
   {
     "domain": "189.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Telecom & Backbone",
     "ecosystem": "telecom-backbone",
     "entity": "National Backbone",
@@ -1113,7 +1113,7 @@
   },
   {
     "domain": "cbn.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Telecom & Backbone",
     "ecosystem": "telecom-backbone",
     "entity": "National Backbone",
@@ -1121,7 +1121,7 @@
   },
   {
     "domain": "cernet.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Telecom & Backbone",
     "ecosystem": "telecom-backbone",
     "entity": "National Backbone",
@@ -1129,7 +1129,7 @@
   },
   {
     "domain": "cstnet.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Telecom & Backbone",
     "ecosystem": "telecom-backbone",
     "entity": "National Backbone",
@@ -1137,7 +1137,7 @@
   },
   {
     "domain": "caict.ac.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Telecom & Backbone",
     "ecosystem": "telecom-backbone",
     "entity": "National Backbone",
@@ -1145,7 +1145,7 @@
   },
   {
     "domain": "360.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Security & Network Equipment",
     "ecosystem": "security-network",
     "entity": "Multi-vendor",
@@ -1153,7 +1153,7 @@
   },
   {
     "domain": "360safe.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Security & Network Equipment",
     "ecosystem": "security-network",
     "entity": "Multi-vendor",
@@ -1161,7 +1161,7 @@
   },
   {
     "domain": "nsfocus.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Security & Network Equipment",
     "ecosystem": "security-network",
     "entity": "Multi-vendor",
@@ -1169,7 +1169,7 @@
   },
   {
     "domain": "venustech.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Security & Network Equipment",
     "ecosystem": "security-network",
     "entity": "Multi-vendor",
@@ -1177,7 +1177,7 @@
   },
   {
     "domain": "dbappsecurity.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Security & Network Equipment",
     "ecosystem": "security-network",
     "entity": "Multi-vendor",
@@ -1185,7 +1185,7 @@
   },
   {
     "domain": "knownsec.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Security & Network Equipment",
     "ecosystem": "security-network",
     "entity": "Multi-vendor",
@@ -1193,7 +1193,7 @@
   },
   {
     "domain": "hikvision.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Security & Network Equipment",
     "ecosystem": "security-network",
     "entity": "Multi-vendor",
@@ -1201,7 +1201,7 @@
   },
   {
     "domain": "dahua.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Security & Network Equipment",
     "ecosystem": "security-network",
     "entity": "Multi-vendor",
@@ -1209,7 +1209,7 @@
   },
   {
     "domain": "uniview.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Security & Network Equipment",
     "ecosystem": "security-network",
     "entity": "Multi-vendor",
@@ -1217,7 +1217,7 @@
   },
   {
     "domain": "kedacom.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Security & Network Equipment",
     "ecosystem": "security-network",
     "entity": "Multi-vendor",
@@ -1225,7 +1225,7 @@
   },
   {
     "domain": "sensetime.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Security & Network Equipment",
     "ecosystem": "security-network",
     "entity": "Multi-vendor",
@@ -1233,7 +1233,7 @@
   },
   {
     "domain": "megvii.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Security & Network Equipment",
     "ecosystem": "security-network",
     "entity": "Multi-vendor",
@@ -1241,7 +1241,7 @@
   },
   {
     "domain": "h3c.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Security & Network Equipment",
     "ecosystem": "security-network",
     "entity": "Multi-vendor",
@@ -1249,7 +1249,7 @@
   },
   {
     "domain": "inspur.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Security & Network Equipment",
     "ecosystem": "security-network",
     "entity": "Multi-vendor",
@@ -1257,7 +1257,7 @@
   },
   {
     "domain": "zte.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Security & Network Equipment",
     "ecosystem": "security-network",
     "entity": "Multi-vendor",
@@ -1265,7 +1265,7 @@
   },
   {
     "domain": "fiberhome.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Security & Network Equipment",
     "ecosystem": "security-network",
     "entity": "Multi-vendor",
@@ -1273,7 +1273,7 @@
   },
   {
     "domain": "ruijie.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Security & Network Equipment",
     "ecosystem": "security-network",
     "entity": "Multi-vendor",
@@ -1281,7 +1281,7 @@
   },
   {
     "domain": "tenda.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Security & Network Equipment",
     "ecosystem": "security-network",
     "entity": "Multi-vendor",
@@ -1289,7 +1289,7 @@
   },
   {
     "domain": "gitee.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Developer Platforms",
     "ecosystem": "developer-platforms",
     "entity": "Multi-platform",
@@ -1297,7 +1297,7 @@
   },
   {
     "domain": "coding.net",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Developer Platforms",
     "ecosystem": "developer-platforms",
     "entity": "Multi-platform",
@@ -1305,7 +1305,7 @@
   },
   {
     "domain": "csdn.net",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Developer Platforms",
     "ecosystem": "developer-platforms",
     "entity": "Multi-platform",
@@ -1313,7 +1313,7 @@
   },
   {
     "domain": "oschina.net",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Developer Platforms",
     "ecosystem": "developer-platforms",
     "entity": "Multi-platform",
@@ -1321,7 +1321,7 @@
   },
   {
     "domain": "gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1329,7 +1329,7 @@
   },
   {
     "domain": "www.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1337,7 +1337,47 @@
   },
   {
     "domain": "miit.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
+    "section": "Central Government",
+    "ecosystem": "government-cn",
+    "entity": "PRC Central Government",
+    "category": "government"
+  },
+  {
+    "domain": "cac.gov.cn",
+    "source": "seed_cn",
+    "section": "Central Government",
+    "ecosystem": "government-cn",
+    "entity": "PRC Central Government",
+    "category": "government"
+  },
+  {
+    "domain": "beian.miit.gov.cn",
+    "source": "seed_cn",
+    "section": "Central Government",
+    "ecosystem": "government-cn",
+    "entity": "PRC Central Government",
+    "category": "government"
+  },
+  {
+    "domain": "beian.gov.cn",
+    "source": "seed_cn",
+    "section": "Central Government",
+    "ecosystem": "government-cn",
+    "entity": "PRC Central Government",
+    "category": "government"
+  },
+  {
+    "domain": "cnnic.cn",
+    "source": "seed_cn",
+    "section": "Central Government",
+    "ecosystem": "government-cn",
+    "entity": "PRC Central Government",
+    "category": "government"
+  },
+  {
+    "domain": "12377.cn",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1345,7 +1385,7 @@
   },
   {
     "domain": "mps.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1353,7 +1393,7 @@
   },
   {
     "domain": "mfa.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1361,7 +1401,7 @@
   },
   {
     "domain": "moe.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1369,7 +1409,7 @@
   },
   {
     "domain": "mof.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1377,7 +1417,7 @@
   },
   {
     "domain": "customs.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1385,7 +1425,7 @@
   },
   {
     "domain": "samr.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1393,7 +1433,7 @@
   },
   {
     "domain": "mohurd.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1401,7 +1441,7 @@
   },
   {
     "domain": "mot.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1409,7 +1449,7 @@
   },
   {
     "domain": "mwr.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1417,7 +1457,7 @@
   },
   {
     "domain": "mnr.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1425,7 +1465,7 @@
   },
   {
     "domain": "mee.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1433,7 +1473,7 @@
   },
   {
     "domain": "nha.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1441,7 +1481,7 @@
   },
   {
     "domain": "mohrss.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1449,7 +1489,7 @@
   },
   {
     "domain": "mca.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1457,7 +1497,7 @@
   },
   {
     "domain": "court.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1465,7 +1505,7 @@
   },
   {
     "domain": "spp.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1473,7 +1513,7 @@
   },
   {
     "domain": "npc.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1481,7 +1521,7 @@
   },
   {
     "domain": "cppcc.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1489,7 +1529,7 @@
   },
   {
     "domain": "ndrc.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1497,7 +1537,7 @@
   },
   {
     "domain": "nea.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1505,7 +1545,7 @@
   },
   {
     "domain": "nia.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1513,7 +1553,7 @@
   },
   {
     "domain": "caac.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1521,7 +1561,7 @@
   },
   {
     "domain": "msa.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1529,7 +1569,7 @@
   },
   {
     "domain": "cnta.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1537,7 +1577,7 @@
   },
   {
     "domain": "sfda.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1545,7 +1585,7 @@
   },
   {
     "domain": "charity.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1553,7 +1593,7 @@
   },
   {
     "domain": "12333.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1561,7 +1601,7 @@
   },
   {
     "domain": "12366.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1569,7 +1609,7 @@
   },
   {
     "domain": "12315.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1577,7 +1617,7 @@
   },
   {
     "domain": "12315.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1585,7 +1625,7 @@
   },
   {
     "domain": "12345.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1593,7 +1633,7 @@
   },
   {
     "domain": "chinatax.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1601,7 +1641,7 @@
   },
   {
     "domain": "etax.chinatax.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1609,7 +1649,7 @@
   },
   {
     "domain": "gsxt.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1617,7 +1657,7 @@
   },
   {
     "domain": "creditchina.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
     "entity": "PRC Central Government",
@@ -1625,7 +1665,7 @@
   },
   {
     "domain": "beijing.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1633,7 +1673,7 @@
   },
   {
     "domain": "shanghai.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1641,7 +1681,7 @@
   },
   {
     "domain": "guangdong.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1649,7 +1689,7 @@
   },
   {
     "domain": "jiangsu.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1657,7 +1697,7 @@
   },
   {
     "domain": "zhejiang.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1665,7 +1705,7 @@
   },
   {
     "domain": "shandong.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1673,7 +1713,7 @@
   },
   {
     "domain": "henan.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1681,7 +1721,7 @@
   },
   {
     "domain": "sichuan.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1689,7 +1729,7 @@
   },
   {
     "domain": "hubei.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1697,7 +1737,7 @@
   },
   {
     "domain": "hunan.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1705,7 +1745,7 @@
   },
   {
     "domain": "fujian.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1713,7 +1753,7 @@
   },
   {
     "domain": "hebei.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1721,7 +1761,7 @@
   },
   {
     "domain": "shanxi.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1729,7 +1769,7 @@
   },
   {
     "domain": "liaoning.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1737,7 +1777,7 @@
   },
   {
     "domain": "jilin.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1745,7 +1785,7 @@
   },
   {
     "domain": "heilongjiang.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1753,7 +1793,7 @@
   },
   {
     "domain": "anhui.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1761,7 +1801,7 @@
   },
   {
     "domain": "jiangxi.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1769,7 +1809,7 @@
   },
   {
     "domain": "guangxi.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1777,7 +1817,7 @@
   },
   {
     "domain": "yunnan.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1785,7 +1825,7 @@
   },
   {
     "domain": "guizhou.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1793,7 +1833,7 @@
   },
   {
     "domain": "shaanxi.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1801,7 +1841,7 @@
   },
   {
     "domain": "gansu.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1809,7 +1849,7 @@
   },
   {
     "domain": "qinghai.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1817,7 +1857,7 @@
   },
   {
     "domain": "hainan.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1825,7 +1865,7 @@
   },
   {
     "domain": "nmg.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1833,7 +1873,7 @@
   },
   {
     "domain": "xj.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1841,7 +1881,7 @@
   },
   {
     "domain": "xizang.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1849,7 +1889,7 @@
   },
   {
     "domain": "nx.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1857,7 +1897,7 @@
   },
   {
     "domain": "chongqing.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1865,7 +1905,7 @@
   },
   {
     "domain": "tianjin.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1873,7 +1913,7 @@
   },
   {
     "domain": "yiwu.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1881,7 +1921,7 @@
   },
   {
     "domain": "liuyang.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -1889,7 +1929,7 @@
   },
   {
     "domain": "unionpay.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Finance & Banking",
     "ecosystem": "finance-banking",
     "entity": "Multi-institution",
@@ -1897,7 +1937,7 @@
   },
   {
     "domain": "95516.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Finance & Banking",
     "ecosystem": "finance-banking",
     "entity": "Multi-institution",
@@ -1905,7 +1945,7 @@
   },
   {
     "domain": "netsunion.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Finance & Banking",
     "ecosystem": "finance-banking",
     "entity": "Multi-institution",
@@ -1913,7 +1953,7 @@
   },
   {
     "domain": "nucc.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Finance & Banking",
     "ecosystem": "finance-banking",
     "entity": "Multi-institution",
@@ -1921,7 +1961,7 @@
   },
   {
     "domain": "icbc.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Finance & Banking",
     "ecosystem": "finance-banking",
     "entity": "Multi-institution",
@@ -1929,7 +1969,7 @@
   },
   {
     "domain": "icbc.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Finance & Banking",
     "ecosystem": "finance-banking",
     "entity": "Multi-institution",
@@ -1937,7 +1977,7 @@
   },
   {
     "domain": "boc.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Finance & Banking",
     "ecosystem": "finance-banking",
     "entity": "Multi-institution",
@@ -1945,7 +1985,7 @@
   },
   {
     "domain": "bankofchina.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Finance & Banking",
     "ecosystem": "finance-banking",
     "entity": "Multi-institution",
@@ -1953,7 +1993,7 @@
   },
   {
     "domain": "ccb.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Finance & Banking",
     "ecosystem": "finance-banking",
     "entity": "Multi-institution",
@@ -1961,7 +2001,7 @@
   },
   {
     "domain": "ccb.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Finance & Banking",
     "ecosystem": "finance-banking",
     "entity": "Multi-institution",
@@ -1969,7 +2009,7 @@
   },
   {
     "domain": "abchina.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Finance & Banking",
     "ecosystem": "finance-banking",
     "entity": "Multi-institution",
@@ -1977,7 +2017,7 @@
   },
   {
     "domain": "bankcomm.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Finance & Banking",
     "ecosystem": "finance-banking",
     "entity": "Multi-institution",
@@ -1985,7 +2025,7 @@
   },
   {
     "domain": "psbc.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Finance & Banking",
     "ecosystem": "finance-banking",
     "entity": "Multi-institution",
@@ -1993,7 +2033,7 @@
   },
   {
     "domain": "cmbchina.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Finance & Banking",
     "ecosystem": "finance-banking",
     "entity": "Multi-institution",
@@ -2001,7 +2041,7 @@
   },
   {
     "domain": "cebbank.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Finance & Banking",
     "ecosystem": "finance-banking",
     "entity": "Multi-institution",
@@ -2009,7 +2049,7 @@
   },
   {
     "domain": "cmbc.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Finance & Banking",
     "ecosystem": "finance-banking",
     "entity": "Multi-institution",
@@ -2017,7 +2057,7 @@
   },
   {
     "domain": "cib.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Finance & Banking",
     "ecosystem": "finance-banking",
     "entity": "Multi-institution",
@@ -2025,7 +2065,7 @@
   },
   {
     "domain": "spdb.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Finance & Banking",
     "ecosystem": "finance-banking",
     "entity": "Multi-institution",
@@ -2033,7 +2073,7 @@
   },
   {
     "domain": "pingan.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Finance & Banking",
     "ecosystem": "finance-banking",
     "entity": "Multi-institution",
@@ -2041,7 +2081,7 @@
   },
   {
     "domain": "citicbank.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Finance & Banking",
     "ecosystem": "finance-banking",
     "entity": "Multi-institution",
@@ -2049,7 +2089,7 @@
   },
   {
     "domain": "ecitic.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Finance & Banking",
     "ecosystem": "finance-banking",
     "entity": "Multi-institution",
@@ -2057,7 +2097,15 @@
   },
   {
     "domain": "pbc.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
+    "section": "Finance & Banking",
+    "ecosystem": "finance-banking",
+    "entity": "Multi-institution",
+    "category": "finance"
+  },
+  {
+    "domain": "ecny.pbc.gov.cn",
+    "source": "seed_cn",
     "section": "Finance & Banking",
     "ecosystem": "finance-banking",
     "entity": "Multi-institution",
@@ -2065,7 +2113,7 @@
   },
   {
     "domain": "safe.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Finance & Banking",
     "ecosystem": "finance-banking",
     "entity": "Multi-institution",
@@ -2073,7 +2121,7 @@
   },
   {
     "domain": "csrc.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Finance & Banking",
     "ecosystem": "finance-banking",
     "entity": "Multi-institution",
@@ -2081,7 +2129,7 @@
   },
   {
     "domain": "cbirc.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Finance & Banking",
     "ecosystem": "finance-banking",
     "entity": "Multi-institution",
@@ -2089,7 +2137,7 @@
   },
   {
     "domain": "nssf.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Finance & Banking",
     "ecosystem": "finance-banking",
     "entity": "Multi-institution",
@@ -2097,7 +2145,7 @@
   },
   {
     "domain": "sse.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Capital Markets",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2105,7 +2153,7 @@
   },
   {
     "domain": "szse.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Capital Markets",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2113,7 +2161,7 @@
   },
   {
     "domain": "shfe.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Capital Markets",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2121,7 +2169,7 @@
   },
   {
     "domain": "dce.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Capital Markets",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2129,7 +2177,7 @@
   },
   {
     "domain": "czce.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Capital Markets",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2137,7 +2185,7 @@
   },
   {
     "domain": "cffex.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Capital Markets",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2145,7 +2193,7 @@
   },
   {
     "domain": "chinaclear.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Capital Markets",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2153,7 +2201,7 @@
   },
   {
     "domain": "chinaclearing.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Capital Markets",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2161,7 +2209,7 @@
   },
   {
     "domain": "cnaps.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Capital Markets",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2169,7 +2217,7 @@
   },
   {
     "domain": "cfets.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Capital Markets",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2177,7 +2225,7 @@
   },
   {
     "domain": "chinamoney.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Capital Markets",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2185,7 +2233,7 @@
   },
   {
     "domain": "chinabond.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Capital Markets",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2193,7 +2241,7 @@
   },
   {
     "domain": "chinabond.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Capital Markets",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2201,7 +2249,7 @@
   },
   {
     "domain": "eastmoney.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Capital Markets",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2209,7 +2257,7 @@
   },
   {
     "domain": "10jqka.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Capital Markets",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2217,7 +2265,7 @@
   },
   {
     "domain": "hexun.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Capital Markets",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2225,7 +2273,7 @@
   },
   {
     "domain": "chinaamc.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Fund & Securities",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2233,7 +2281,7 @@
   },
   {
     "domain": "efund.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Fund & Securities",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2241,7 +2289,7 @@
   },
   {
     "domain": "bosera.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Fund & Securities",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2249,7 +2297,7 @@
   },
   {
     "domain": "harvest.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Fund & Securities",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2257,7 +2305,7 @@
   },
   {
     "domain": "castfund.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Fund & Securities",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2265,7 +2313,7 @@
   },
   {
     "domain": "fullgoal.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Fund & Securities",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2273,7 +2321,7 @@
   },
   {
     "domain": "icbcfund.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Fund & Securities",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2281,7 +2329,7 @@
   },
   {
     "domain": "gfzq.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Fund & Securities",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2289,7 +2337,7 @@
   },
   {
     "domain": "gjzq.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Fund & Securities",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2297,7 +2345,7 @@
   },
   {
     "domain": "htsc.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Fund & Securities",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2305,7 +2353,7 @@
   },
   {
     "domain": "gtja.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Fund & Securities",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2313,7 +2361,7 @@
   },
   {
     "domain": "guosen.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Fund & Securities",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2321,7 +2369,7 @@
   },
   {
     "domain": "everbright.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Fund & Securities",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2329,7 +2377,7 @@
   },
   {
     "domain": "ebscn.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Fund & Securities",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2337,7 +2385,7 @@
   },
   {
     "domain": "picc.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Insurance",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2345,7 +2393,7 @@
   },
   {
     "domain": "picc.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Insurance",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2353,7 +2401,7 @@
   },
   {
     "domain": "cpic.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Insurance",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2361,7 +2409,7 @@
   },
   {
     "domain": "sinosig.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Insurance",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2369,15 +2417,31 @@
   },
   {
     "domain": "taikang.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Insurance",
     "ecosystem": "unknown",
     "entity": "Unknown",
     "category": "uncategorized"
   },
   {
+    "domain": "cas.cn",
+    "source": "seed_cn",
+    "section": "Education & Research",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "cae.cn",
+    "source": "seed_cn",
+    "section": "Education & Research",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
     "domain": "edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2385,7 +2449,7 @@
   },
   {
     "domain": "pku.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2393,7 +2457,7 @@
   },
   {
     "domain": "tsinghua.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2401,7 +2465,7 @@
   },
   {
     "domain": "fudan.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2409,7 +2473,7 @@
   },
   {
     "domain": "sjtu.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2417,7 +2481,7 @@
   },
   {
     "domain": "zju.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2425,7 +2489,7 @@
   },
   {
     "domain": "nju.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2433,7 +2497,7 @@
   },
   {
     "domain": "ustc.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2441,7 +2505,7 @@
   },
   {
     "domain": "whu.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2449,7 +2513,7 @@
   },
   {
     "domain": "hust.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2457,7 +2521,7 @@
   },
   {
     "domain": "sysu.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2465,7 +2529,7 @@
   },
   {
     "domain": "hit.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2473,7 +2537,7 @@
   },
   {
     "domain": "tongji.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2481,7 +2545,7 @@
   },
   {
     "domain": "buaa.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2489,7 +2553,7 @@
   },
   {
     "domain": "bit.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2497,7 +2561,7 @@
   },
   {
     "domain": "bnu.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2505,7 +2569,7 @@
   },
   {
     "domain": "ruc.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2513,7 +2577,7 @@
   },
   {
     "domain": "sdu.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2521,7 +2585,7 @@
   },
   {
     "domain": "xjtu.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2529,7 +2593,7 @@
   },
   {
     "domain": "nankai.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2537,7 +2601,7 @@
   },
   {
     "domain": "seu.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2545,7 +2609,7 @@
   },
   {
     "domain": "csu.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2553,7 +2617,7 @@
   },
   {
     "domain": "jlu.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2561,7 +2625,7 @@
   },
   {
     "domain": "dlut.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2569,7 +2633,7 @@
   },
   {
     "domain": "nwpu.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2577,7 +2641,7 @@
   },
   {
     "domain": "scut.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2585,7 +2649,7 @@
   },
   {
     "domain": "cqu.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2593,7 +2657,7 @@
   },
   {
     "domain": "swu.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2601,7 +2665,7 @@
   },
   {
     "domain": "nenu.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2609,7 +2673,7 @@
   },
   {
     "domain": "ecnu.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2617,7 +2681,7 @@
   },
   {
     "domain": "cumt.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2625,7 +2689,7 @@
   },
   {
     "domain": "cufe.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2633,7 +2697,7 @@
   },
   {
     "domain": "uibe.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2641,7 +2705,7 @@
   },
   {
     "domain": "bfsu.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2649,7 +2713,7 @@
   },
   {
     "domain": "bjmu.edu.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2657,7 +2721,7 @@
   },
   {
     "domain": "cnki.net",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2665,7 +2729,7 @@
   },
   {
     "domain": "wanfangdata.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2673,7 +2737,7 @@
   },
   {
     "domain": "chsi.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2681,7 +2745,7 @@
   },
   {
     "domain": "xuexi.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Education & Research",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2689,7 +2753,7 @@
   },
   {
     "domain": "nhc.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Healthcare & Pharma",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2697,7 +2761,7 @@
   },
   {
     "domain": "nmpa.gov.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Healthcare & Pharma",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2705,7 +2769,7 @@
   },
   {
     "domain": "chinacdc.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Healthcare & Pharma",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2713,7 +2777,7 @@
   },
   {
     "domain": "pumch.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Healthcare & Pharma",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2721,7 +2785,7 @@
   },
   {
     "domain": "guahao.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Healthcare & Pharma",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2729,7 +2793,7 @@
   },
   {
     "domain": "haodf.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Healthcare & Pharma",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2737,7 +2801,7 @@
   },
   {
     "domain": "dxy.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Healthcare & Pharma",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2745,7 +2809,7 @@
   },
   {
     "domain": "sinopharm.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Healthcare & Pharma",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2753,7 +2817,7 @@
   },
   {
     "domain": "cspc.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Healthcare & Pharma",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2761,7 +2825,7 @@
   },
   {
     "domain": "tongrentang.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Healthcare & Pharma",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2769,7 +2833,7 @@
   },
   {
     "domain": "yunnan-baiyao.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Healthcare & Pharma",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2777,7 +2841,7 @@
   },
   {
     "domain": "yunnanbaiyao.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Healthcare & Pharma",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2785,7 +2849,7 @@
   },
   {
     "domain": "tasly.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Healthcare & Pharma",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2793,7 +2857,7 @@
   },
   {
     "domain": "kelun.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Healthcare & Pharma",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2801,7 +2865,7 @@
   },
   {
     "domain": "crpharm.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Healthcare & Pharma",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2809,7 +2873,7 @@
   },
   {
     "domain": "harbinpharma.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Healthcare & Pharma",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2817,7 +2881,7 @@
   },
   {
     "domain": "humanwell.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Healthcare & Pharma",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2825,7 +2889,7 @@
   },
   {
     "domain": "xinhuanet.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "State Media",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2833,7 +2897,7 @@
   },
   {
     "domain": "xinhua.org",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "State Media",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2841,7 +2905,7 @@
   },
   {
     "domain": "people.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "State Media",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2849,7 +2913,7 @@
   },
   {
     "domain": "cctv.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "State Media",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2857,7 +2921,7 @@
   },
   {
     "domain": "cgtn.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "State Media",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2865,7 +2929,7 @@
   },
   {
     "domain": "cri.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "State Media",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2873,7 +2937,7 @@
   },
   {
     "domain": "china.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "State Media",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2881,7 +2945,7 @@
   },
   {
     "domain": "chinadaily.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "State Media",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2889,7 +2953,7 @@
   },
   {
     "domain": "rmrb.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "State Media",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2897,7 +2961,7 @@
   },
   {
     "domain": "gmw.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "State Media",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2905,7 +2969,7 @@
   },
   {
     "domain": "cnr.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "State Media",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2913,7 +2977,7 @@
   },
   {
     "domain": "thepaper.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "State Media",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2921,7 +2985,7 @@
   },
   {
     "domain": "caixin.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "State Media",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2929,7 +2993,7 @@
   },
   {
     "domain": "yicai.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "State Media",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2937,7 +3001,7 @@
   },
   {
     "domain": "21jingji.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "State Media",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2945,7 +3009,7 @@
   },
   {
     "domain": "weibo.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Social & Video",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2953,7 +3017,7 @@
   },
   {
     "domain": "weibo.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Social & Video",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2961,7 +3025,7 @@
   },
   {
     "domain": "zhihu.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Social & Video",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2969,7 +3033,7 @@
   },
   {
     "domain": "bilibili.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Social & Video",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2977,7 +3041,7 @@
   },
   {
     "domain": "bilibili.net",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Social & Video",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2985,7 +3049,7 @@
   },
   {
     "domain": "bilibili.tv",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Social & Video",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -2993,7 +3057,7 @@
   },
   {
     "domain": "xiaohongshu.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Social & Video",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3001,7 +3065,7 @@
   },
   {
     "domain": "xhscdn.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Social & Video",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3009,7 +3073,7 @@
   },
   {
     "domain": "kuaishou.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Social & Video",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3017,7 +3081,7 @@
   },
   {
     "domain": "kuaishoucdn.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Social & Video",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3025,7 +3089,7 @@
   },
   {
     "domain": "ximalaya.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Social & Video",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3033,7 +3097,7 @@
   },
   {
     "domain": "douban.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Social & Video",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3041,7 +3105,7 @@
   },
   {
     "domain": "douban.fm",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Social & Video",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3049,7 +3113,7 @@
   },
   {
     "domain": "youku.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Social & Video",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3057,7 +3121,7 @@
   },
   {
     "domain": "mgtv.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Social & Video",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3065,7 +3129,7 @@
   },
   {
     "domain": "huya.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Social & Video",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3073,7 +3137,7 @@
   },
   {
     "domain": "douyu.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Social & Video",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3081,7 +3145,7 @@
   },
   {
     "domain": "kugou.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Social & Video",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3089,7 +3153,7 @@
   },
   {
     "domain": "kuwo.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Social & Video",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3097,7 +3161,7 @@
   },
   {
     "domain": "ctrip.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Travel & Transport",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3105,7 +3169,7 @@
   },
   {
     "domain": "qunar.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Travel & Transport",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3113,7 +3177,7 @@
   },
   {
     "domain": "tuniu.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Travel & Transport",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3121,7 +3185,7 @@
   },
   {
     "domain": "tongcheng.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Travel & Transport",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3129,7 +3193,7 @@
   },
   {
     "domain": "mafengwo.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Travel & Transport",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3137,7 +3201,7 @@
   },
   {
     "domain": "lvmama.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Travel & Transport",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3145,7 +3209,7 @@
   },
   {
     "domain": "huazhu.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Travel & Transport",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3153,7 +3217,7 @@
   },
   {
     "domain": "jinjiang.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Travel & Transport",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3161,7 +3225,7 @@
   },
   {
     "domain": "shangri-la.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Travel & Transport",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3169,7 +3233,7 @@
   },
   {
     "domain": "cr12306.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Travel & Transport",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3177,7 +3241,7 @@
   },
   {
     "domain": "12306.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Travel & Transport",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3185,7 +3249,7 @@
   },
   {
     "domain": "sf-express.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Travel & Transport",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3193,7 +3257,7 @@
   },
   {
     "domain": "sfbest.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Travel & Transport",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3201,7 +3265,7 @@
   },
   {
     "domain": "zto.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Travel & Transport",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3209,7 +3273,7 @@
   },
   {
     "domain": "yto.net.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Travel & Transport",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3217,7 +3281,7 @@
   },
   {
     "domain": "sto.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Travel & Transport",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3225,7 +3289,7 @@
   },
   {
     "domain": "yundaex.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Travel & Transport",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3233,7 +3297,7 @@
   },
   {
     "domain": "meituan.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "O2O & Local Services",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3241,7 +3305,7 @@
   },
   {
     "domain": "meituan.net",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "O2O & Local Services",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3249,7 +3313,7 @@
   },
   {
     "domain": "dianping.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "O2O & Local Services",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3257,7 +3321,7 @@
   },
   {
     "domain": "sankuai.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "O2O & Local Services",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3265,7 +3329,7 @@
   },
   {
     "domain": "ele.me",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "O2O & Local Services",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3273,7 +3337,7 @@
   },
   {
     "domain": "vip.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "E-commerce & Retail",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3281,7 +3345,7 @@
   },
   {
     "domain": "dangdang.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "E-commerce & Retail",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3289,7 +3353,7 @@
   },
   {
     "domain": "suning.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "E-commerce & Retail",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3297,7 +3361,7 @@
   },
   {
     "domain": "gome.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "E-commerce & Retail",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3305,7 +3369,7 @@
   },
   {
     "domain": "anjuke.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "E-commerce & Retail",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3313,7 +3377,7 @@
   },
   {
     "domain": "lianjia.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "E-commerce & Retail",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3321,7 +3385,7 @@
   },
   {
     "domain": "58.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "E-commerce & Retail",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3329,7 +3393,7 @@
   },
   {
     "domain": "zhaopin.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "E-commerce & Retail",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3337,7 +3401,7 @@
   },
   {
     "domain": "51job.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "E-commerce & Retail",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3345,7 +3409,7 @@
   },
   {
     "domain": "zhipin.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "E-commerce & Retail",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3353,7 +3417,7 @@
   },
   {
     "domain": "wahaha.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Brands - Food & Beverage",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3361,7 +3425,7 @@
   },
   {
     "domain": "nongfushanquan.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Brands - Food & Beverage",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3369,7 +3433,7 @@
   },
   {
     "domain": "yili.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Brands - Food & Beverage",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3377,7 +3441,7 @@
   },
   {
     "domain": "mengniu.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Brands - Food & Beverage",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3385,7 +3449,7 @@
   },
   {
     "domain": "sanyuan.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Brands - Food & Beverage",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3393,7 +3457,7 @@
   },
   {
     "domain": "maotai.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Brands - Food & Beverage",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3401,7 +3465,7 @@
   },
   {
     "domain": "wuliangye.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Brands - Food & Beverage",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3409,7 +3473,7 @@
   },
   {
     "domain": "tsingtao.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Brands - Food & Beverage",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3417,7 +3481,7 @@
   },
   {
     "domain": "luckin.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Brands - Food & Beverage",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3425,7 +3489,7 @@
   },
   {
     "domain": "heytea.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Brands - Food & Beverage",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3433,7 +3497,7 @@
   },
   {
     "domain": "haidilao.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Brands - Food & Beverage",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3441,7 +3505,7 @@
   },
   {
     "domain": "midea.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Brands - Appliances",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3449,7 +3513,7 @@
   },
   {
     "domain": "haier.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Brands - Appliances",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3457,7 +3521,7 @@
   },
   {
     "domain": "gree.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Brands - Appliances",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3465,7 +3529,7 @@
   },
   {
     "domain": "hisense.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Brands - Appliances",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3473,7 +3537,7 @@
   },
   {
     "domain": "tcl.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Brands - Appliances",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3481,7 +3545,7 @@
   },
   {
     "domain": "changhong.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Brands - Appliances",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3489,7 +3553,7 @@
   },
   {
     "domain": "konka.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Brands - Appliances",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3497,7 +3561,7 @@
   },
   {
     "domain": "robam.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Brands - Appliances",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3505,7 +3569,7 @@
   },
   {
     "domain": "fotile.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Brands - Appliances",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3513,7 +3577,7 @@
   },
   {
     "domain": "supor.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Brands - Appliances",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3521,7 +3585,7 @@
   },
   {
     "domain": "joyoung.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Brands - Appliances",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3529,7 +3593,7 @@
   },
   {
     "domain": "ecovacs.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Brands - Appliances",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3537,7 +3601,7 @@
   },
   {
     "domain": "dreame.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Brands - Appliances",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3545,7 +3609,7 @@
   },
   {
     "domain": "anta.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Brands - Apparel",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3553,7 +3617,7 @@
   },
   {
     "domain": "lining.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Brands - Apparel",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3561,7 +3625,7 @@
   },
   {
     "domain": "bosideng.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Brands - Apparel",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3569,7 +3633,7 @@
   },
   {
     "domain": "youngor.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Brands - Apparel",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3577,7 +3641,7 @@
   },
   {
     "domain": "septwolves.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Brands - Apparel",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3585,7 +3649,7 @@
   },
   {
     "domain": "erdos.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Consumer Brands - Apparel",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3593,7 +3657,7 @@
   },
   {
     "domain": "byd.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Auto & EV",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3601,7 +3665,7 @@
   },
   {
     "domain": "bydauto.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Auto & EV",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3609,7 +3673,7 @@
   },
   {
     "domain": "geely.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Auto & EV",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3617,7 +3681,7 @@
   },
   {
     "domain": "nio.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Auto & EV",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3625,7 +3689,7 @@
   },
   {
     "domain": "xpeng.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Auto & EV",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3633,7 +3697,7 @@
   },
   {
     "domain": "greatwall.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Auto & EV",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3641,7 +3705,7 @@
   },
   {
     "domain": "chery.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Auto & EV",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3649,7 +3713,7 @@
   },
   {
     "domain": "catl.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Battery & New Energy",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3657,7 +3721,7 @@
   },
   {
     "domain": "sgcc.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Battery & New Energy",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3665,7 +3729,7 @@
   },
   {
     "domain": "csg.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Battery & New Energy",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3673,7 +3737,7 @@
   },
   {
     "domain": "sinopec.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Battery & New Energy",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3681,7 +3745,7 @@
   },
   {
     "domain": "petrochina.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Battery & New Energy",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3689,7 +3753,7 @@
   },
   {
     "domain": "cnpc.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Battery & New Energy",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3697,7 +3761,7 @@
   },
   {
     "domain": "cnooc.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Battery & New Energy",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3705,7 +3769,7 @@
   },
   {
     "domain": "spic.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Battery & New Energy",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3713,7 +3777,7 @@
   },
   {
     "domain": "cnnc.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Battery & New Energy",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3721,7 +3785,7 @@
   },
   {
     "domain": "cgnpc.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Battery & New Energy",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3729,7 +3793,7 @@
   },
   {
     "domain": "crrc.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Manufacturing & Industry",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3737,7 +3801,7 @@
   },
   {
     "domain": "xcmg.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Manufacturing & Industry",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3745,7 +3809,7 @@
   },
   {
     "domain": "sany.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Manufacturing & Industry",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3753,7 +3817,7 @@
   },
   {
     "domain": "cssc.net",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Manufacturing & Industry",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3761,7 +3825,7 @@
   },
   {
     "domain": "baosteel.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Manufacturing & Industry",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3769,7 +3833,7 @@
   },
   {
     "domain": "chowtaifook.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Jewelry & Tea",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3777,7 +3841,7 @@
   },
   {
     "domain": "chow-tai-fook.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Jewelry & Tea",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3785,7 +3849,7 @@
   },
   {
     "domain": "laofengxiang.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Jewelry & Tea",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3793,7 +3857,7 @@
   },
   {
     "domain": "laofeng.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Jewelry & Tea",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3801,7 +3865,7 @@
   },
   {
     "domain": "darry.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Jewelry & Tea",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3809,7 +3873,7 @@
   },
   {
     "domain": "ngtc.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Jewelry & Tea",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3817,7 +3881,7 @@
   },
   {
     "domain": "gic.org.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Jewelry & Tea",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3825,7 +3889,7 @@
   },
   {
     "domain": "tenfu.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Jewelry & Tea",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3833,7 +3897,7 @@
   },
   {
     "domain": "dahongpao.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Jewelry & Tea",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3841,7 +3905,7 @@
   },
   {
     "domain": "tieguanyin.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Jewelry & Tea",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3849,7 +3913,7 @@
   },
   {
     "domain": "longjingtea.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Jewelry & Tea",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3857,7 +3921,7 @@
   },
   {
     "domain": "wuyitea.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Jewelry & Tea",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3865,7 +3929,7 @@
   },
   {
     "domain": "dayi.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Jewelry & Tea",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3873,7 +3937,7 @@
   },
   {
     "domain": "vanke.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Real Estate",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3881,7 +3945,7 @@
   },
   {
     "domain": "longfor.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Real Estate",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3889,7 +3953,7 @@
   },
   {
     "domain": "greenland-group.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Real Estate",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3897,7 +3961,7 @@
   },
   {
     "domain": "poly-real-estate.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Real Estate",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3905,7 +3969,7 @@
   },
   {
     "domain": "beike.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Real Estate",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3913,7 +3977,7 @@
   },
   {
     "domain": "tianyancha.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Business Intelligence",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3921,7 +3985,7 @@
   },
   {
     "domain": "qcc.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Business Intelligence",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3929,7 +3993,7 @@
   },
   {
     "domain": "126.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3937,7 +4001,7 @@
   },
   {
     "domain": "163.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3945,7 +4009,7 @@
   },
   {
     "domain": "163yun.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3953,7 +4017,7 @@
   },
   {
     "domain": "netease.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3961,7 +4025,7 @@
   },
   {
     "domain": "yeah.net",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3969,7 +4033,7 @@
   },
   {
     "domain": "sina.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3977,7 +4041,7 @@
   },
   {
     "domain": "sina.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3985,7 +4049,7 @@
   },
   {
     "domain": "sinaimg.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -3993,7 +4057,7 @@
   },
   {
     "domain": "sinaimgfx.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4001,7 +4065,7 @@
   },
   {
     "domain": "sinajs.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4009,7 +4073,7 @@
   },
   {
     "domain": "weibocdn.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4017,7 +4081,7 @@
   },
   {
     "domain": "alicdn.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4025,7 +4089,7 @@
   },
   {
     "domain": "alicdngslb.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4033,7 +4097,7 @@
   },
   {
     "domain": "aliyun-inc.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4041,7 +4105,7 @@
   },
   {
     "domain": "ant.design",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4049,7 +4113,7 @@
   },
   {
     "domain": "appgallery.cloud",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4057,7 +4121,7 @@
   },
   {
     "domain": "acgvideo.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4065,7 +4129,7 @@
   },
   {
     "domain": "biliapi.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4073,7 +4137,7 @@
   },
   {
     "domain": "bilicomic.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4081,7 +4145,7 @@
   },
   {
     "domain": "bilicomics.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4089,7 +4153,7 @@
   },
   {
     "domain": "biligame.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4097,7 +4161,7 @@
   },
   {
     "domain": "biligame.net",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4105,7 +4169,7 @@
   },
   {
     "domain": "hdslb.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4113,7 +4177,7 @@
   },
   {
     "domain": "gifshow.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4121,7 +4185,7 @@
   },
   {
     "domain": "ksapisrv.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4129,7 +4193,7 @@
   },
   {
     "domain": "ixigua.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4137,7 +4201,7 @@
   },
   {
     "domain": "meituanmaicai.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4145,7 +4209,7 @@
   },
   {
     "domain": "mi-img.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4153,7 +4217,7 @@
   },
   {
     "domain": "mihoyo.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4161,7 +4225,7 @@
   },
   {
     "domain": "mihoyogame.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4169,7 +4233,7 @@
   },
   {
     "domain": "mybank.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4177,7 +4241,7 @@
   },
   {
     "domain": "qianfan.cloud",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4185,7 +4249,7 @@
   },
   {
     "domain": "qiyukf.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4193,7 +4257,7 @@
   },
   {
     "domain": "qq.net",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4201,7 +4265,7 @@
   },
   {
     "domain": "tencent-cloud.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4209,7 +4273,7 @@
   },
   {
     "domain": "tencent-cloud.net",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4217,7 +4281,7 @@
   },
   {
     "domain": "tencent.net",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4225,7 +4289,7 @@
   },
   {
     "domain": "tmallgenie.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4233,7 +4297,7 @@
   },
   {
     "domain": "wenxin.cloud",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4241,7 +4305,7 @@
   },
   {
     "domain": "xhslink.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4249,7 +4313,7 @@
   },
   {
     "domain": "zhimg.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4257,7 +4321,7 @@
   },
   {
     "domain": "jdcdn.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4265,7 +4329,7 @@
   },
   {
     "domain": "jdl.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4273,7 +4337,7 @@
   },
   {
     "domain": "djicreator.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4281,7 +4345,7 @@
   },
   {
     "domain": "djistatic.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4289,7 +4353,7 @@
   },
   {
     "domain": "17k.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4297,7 +4361,7 @@
   },
   {
     "domain": "22.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4305,7 +4369,7 @@
   },
   {
     "domain": "35.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4313,7 +4377,7 @@
   },
   {
     "domain": "4.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4321,7 +4385,7 @@
   },
   {
     "domain": "a9vg.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4329,7 +4393,7 @@
   },
   {
     "domain": "abc.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4337,7 +4401,7 @@
   },
   {
     "domain": "acfun.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4345,7 +4409,7 @@
   },
   {
     "domain": "baihe.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4353,7 +4417,7 @@
   },
   {
     "domain": "bookschina.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4361,7 +4425,7 @@
   },
   {
     "domain": "bugly.qq.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4369,7 +4433,7 @@
   },
   {
     "domain": "cf.qq.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4377,7 +4441,7 @@
   },
   {
     "domain": "china.org.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4385,7 +4449,7 @@
   },
   {
     "domain": "chinabyte.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4393,7 +4457,7 @@
   },
   {
     "domain": "chuangkit.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4401,7 +4465,7 @@
   },
   {
     "domain": "cloud.tencent.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4409,7 +4473,7 @@
   },
   {
     "domain": "comic.qq.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4417,7 +4481,7 @@
   },
   {
     "domain": "cowtransfer.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4425,7 +4489,7 @@
   },
   {
     "domain": "dnf.qq.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4433,7 +4497,7 @@
   },
   {
     "domain": "doc88.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4441,7 +4505,7 @@
   },
   {
     "domain": "docer.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4449,7 +4513,7 @@
   },
   {
     "domain": "donews.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4457,7 +4521,7 @@
   },
   {
     "domain": "duokan.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4465,7 +4529,7 @@
   },
   {
     "domain": "ename.net",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4473,7 +4537,7 @@
   },
   {
     "domain": "gaoding.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4481,7 +4545,7 @@
   },
   {
     "domain": "geekpark.net",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4489,7 +4553,7 @@
   },
   {
     "domain": "hichina.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4497,7 +4561,7 @@
   },
   {
     "domain": "huoshan.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4505,7 +4569,7 @@
   },
   {
     "domain": "iconfont.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4513,7 +4577,7 @@
   },
   {
     "domain": "icourse163.org",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4521,7 +4585,7 @@
   },
   {
     "domain": "imooc.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4529,7 +4593,7 @@
   },
   {
     "domain": "ip138.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4537,7 +4601,7 @@
   },
   {
     "domain": "ireader.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4545,7 +4609,7 @@
   },
   {
     "domain": "iteye.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4553,7 +4617,7 @@
   },
   {
     "domain": "itools.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4561,7 +4625,7 @@
   },
   {
     "domain": "juejin.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4569,7 +4633,7 @@
   },
   {
     "domain": "juming.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4577,7 +4641,7 @@
   },
   {
     "domain": "kongfz.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4585,7 +4649,7 @@
   },
   {
     "domain": "lanhuapp.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4593,7 +4657,7 @@
   },
   {
     "domain": "leetcode.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4601,7 +4665,7 @@
   },
   {
     "domain": "leiphone.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4609,7 +4673,7 @@
   },
   {
     "domain": "lenovo.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4617,7 +4681,7 @@
   },
   {
     "domain": "lol.qq.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4625,7 +4689,7 @@
   },
   {
     "domain": "manhuagui.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4633,7 +4697,7 @@
   },
   {
     "domain": "manhuatai.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4641,7 +4705,7 @@
   },
   {
     "domain": "modao.cc",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4649,7 +4713,7 @@
   },
   {
     "domain": "newsmth.net",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4657,7 +4721,7 @@
   },
   {
     "domain": "nga.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4665,7 +4729,7 @@
   },
   {
     "domain": "okbuy.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4673,7 +4737,7 @@
   },
   {
     "domain": "pcpop.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4681,7 +4745,7 @@
   },
   {
     "domain": "pgyer.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4689,7 +4753,7 @@
   },
   {
     "domain": "pingwest.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4697,7 +4761,7 @@
   },
   {
     "domain": "pp.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4705,7 +4769,7 @@
   },
   {
     "domain": "processon.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4713,7 +4777,7 @@
   },
   {
     "domain": "readnovel.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4721,7 +4785,7 @@
   },
   {
     "domain": "ruochu.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4729,7 +4793,7 @@
   },
   {
     "domain": "shimo.im",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4737,7 +4801,7 @@
   },
   {
     "domain": "smth.org",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4745,7 +4809,7 @@
   },
   {
     "domain": "tapd.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4753,7 +4817,7 @@
   },
   {
     "domain": "teambition.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4761,7 +4825,7 @@
   },
   {
     "domain": "techweb.com.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4769,7 +4833,7 @@
   },
   {
     "domain": "tongbu.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4777,7 +4841,7 @@
   },
   {
     "domain": "tower.im",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4785,7 +4849,7 @@
   },
   {
     "domain": "u17.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4793,7 +4857,7 @@
   },
   {
     "domain": "uuu9.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4801,7 +4865,7 @@
   },
   {
     "domain": "vgtime.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4809,7 +4873,7 @@
   },
   {
     "domain": "weishi.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4817,7 +4881,7 @@
   },
   {
     "domain": "weixin.qq.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4825,7 +4889,7 @@
   },
   {
     "domain": "wenku.baidu.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4833,7 +4897,7 @@
   },
   {
     "domain": "wiz.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4841,7 +4905,7 @@
   },
   {
     "domain": "xin.net",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4849,7 +4913,7 @@
   },
   {
     "domain": "xs8.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4857,7 +4921,7 @@
   },
   {
     "domain": "xuetangx.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4865,7 +4929,7 @@
   },
   {
     "domain": "yanxuan.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4873,7 +4937,7 @@
   },
   {
     "domain": "yinxiang.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4881,7 +4945,7 @@
   },
   {
     "domain": "yoho.cn",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4889,7 +4953,7 @@
   },
   {
     "domain": "yohobuy.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4897,7 +4961,7 @@
   },
   {
     "domain": "yuque.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -4905,7 +4969,7 @@
   },
   {
     "domain": "zhihuishu.com",
-    "source": "seed",
+    "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
     "entity": "Unknown",
@@ -5889,14 +5953,6 @@
   },
   {
     "domain": "bear-electric.com",
-    "source": "extended",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized"
-  },
-  {
-    "domain": "beian.gov.cn",
     "source": "extended",
     "section": "Unsectioned",
     "ecosystem": "unknown",
