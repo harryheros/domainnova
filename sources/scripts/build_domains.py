@@ -1265,7 +1265,7 @@ def process_domain(
             # DoH but are known-good seeds. Non-seed sources stay unclassified
             # because we have no way to re-derive their bucket without IPs.
             sticky_bucket = prev.bucket
-            if source in _SEED_SOURCE_TO_BUCKET:
+            if not sticky_bucket and source in _SEED_SOURCE_TO_BUCKET:
                 sticky_bucket = _SEED_SOURCE_TO_BUCKET[source]
             return DomainRecord(
                 domain=domain,

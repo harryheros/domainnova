@@ -5,5 +5,15 @@
 # Examples: overseas editions of Chinese tech giants (international cloud,
 # international apps, investor-relations sites registered in Cayman/BVI).
 
+# --- Social / Messaging ---
 bytedance.com
 wechat.com
+
+# --- Video / Short-form ---
+tiktok.com
+tiktokcdn.com
+
+# --- E-commerce (Global) ---
+aliexpress.com
+shein.com
+temu.com
