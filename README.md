@@ -64,7 +64,7 @@ IP classification is performed against [IPNova](https://github.com/harryheros/ip
 
 ```text
 ┌──────────────────────────────────────────────────┐
-│  Core      (seed.txt)       - manually curated   │
+│  Core      (seed_cn.txt)       - manually curated   │
 │  Reliable  (extended.txt)   - stable + promoted  │
 │  Discovery (discovery.txt)  - auto-harvested     │
 └──────────────────────────────────────────────────┘
@@ -123,7 +123,7 @@ data/domains_metadata.csv           tabular export of the metadata layer
 data/metadata_stats.json            metadata coverage statistics
 data/manual_source_validation.json  duplicate / overlap / format checks
 data/discovery_stats.json           discovery lifecycle state (hit/fail counts, offset)
-sources/manual/seed.txt             manually curated core domains
+sources/manual/seed_cn.txt             manually curated core domains
 sources/manual/extended.txt         stable verified domains + auto-promoted
 sources/manual/discovery.txt        auto-harvested candidates (managed lifecycle)
 sources/scripts/                    build pipeline scripts
@@ -187,7 +187,7 @@ python sources/scripts/validate_manual_sources.py
 
 ## Contributing
 
-To add domains, edit `sources/manual/seed.txt` or `sources/manual/extended.txt` and open a PR.
+To add domains, edit `sources/manual/seed_cn.txt` or `sources/manual/extended.txt` and open a PR.
 
 Discovery candidates are managed automatically — do not edit `sources/manual/discovery.txt` manually.
 

@@ -18,7 +18,7 @@ import socket
 from collections import defaultdict
 from pathlib import Path
 
-SEED_PATH = Path("sources/manual/seed.txt")
+SEED_PATH = Path("sources/manual/seed_cn.txt")
 OUT_PATH  = Path("sources/generated/expanded_candidates.txt")
 
 

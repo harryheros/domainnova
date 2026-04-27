@@ -34,7 +34,7 @@ from pathlib import Path
 from typing import Iterable
 
 ROOT          = Path(__file__).resolve().parents[2]
-SEED_FILE     = ROOT / "sources" / "manual" / "seed.txt"
+SEED_FILE     = ROOT / "sources" / "manual" / "seed_cn.txt"
 EXTENDED_FILE = ROOT / "sources" / "manual" / "extended.txt"
 
 OUT_JSON       = ROOT / "data" / "domains_metadata.json"
@@ -196,12 +196,12 @@ def entries_to_yaml(entries: list[DomainMeta]) -> str:
 # Main
 # ---------------------------------------------------------------------------
 def run(write_all: bool = True, validate_only: bool = False) -> None:
-    seed_entries     = parse_source(SEED_FILE,     "seed")
+    seed_entries     = parse_source(SEED_FILE,     "seed_cn")
     extended_entries = parse_source(EXTENDED_FILE, "extended")
 
     # ---- Validation ----
     validation_report = {
-        "seed":     validate(SEED_FILE),
+        "seed_cn":     validate(SEED_FILE),
         "extended": validate(EXTENDED_FILE),
     }
     # Cross-source overlap

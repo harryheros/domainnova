@@ -146,7 +146,7 @@ def build_queries(repo_root: Path) -> List[str]:
     queries.extend(org_queries[:2])
 
     # Seed-based: pick random seed domains for subdomain discovery
-    seed_path = repo_root / "sources" / "manual" / "seed.txt"
+    seed_path = repo_root / "sources" / "manual" / "seed_cn.txt"
     if seed_path.exists():
         seed_domains = [
             l.strip().lower()
@@ -165,7 +165,7 @@ def build_queries(repo_root: Path) -> List[str]:
 def load_existing(repo_root: Path) -> Set[str]:
     known: Set[str] = set()
     for rel in (
-        "sources/manual/seed.txt",
+        "sources/manual/seed_cn.txt",
         "sources/manual/extended.txt",
         "sources/manual/discovery.txt",
     ):

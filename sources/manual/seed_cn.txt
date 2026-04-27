@@ -201,6 +201,11 @@ oschina.net
 gov.cn
 www.gov.cn
 miit.gov.cn
+cac.gov.cn
+beian.miit.gov.cn
+beian.gov.cn
+cnnic.cn
+12377.cn
 mps.gov.cn
 mfa.gov.cn
 moe.gov.cn
@@ -295,6 +300,7 @@ pingan.com
 citicbank.com
 ecitic.com
 pbc.gov.cn
+ecny.pbc.gov.cn
 safe.gov.cn
 csrc.gov.cn
 cbirc.gov.cn
@@ -342,6 +348,8 @@ sinosig.com
 taikang.com
 
 # ===== Education & Research =====
+cas.cn
+cae.cn
 edu.cn
 pku.edu.cn
 tsinghua.edu.cn
