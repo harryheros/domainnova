@@ -1,12 +1,17 @@
 # DomainNova - SG domains
-# Generated: 2026-04-27T15:17:51Z
-# Count: 48
+# Generated: 2026-04-27T16:02:48Z
+# Count: 62
 99.co
+acra.gov.sg
+caas.gov.sg
 carousell.com
 changiairport.com
 channelnewsasia.com
 cpf.gov.sg
+csa.gov.sg
 dbs.com.sg
+edb.gov.sg
+enterprise.gov.sg
 foodpanda.sg
 go.gov.sg
 gov.sg
@@ -15,6 +20,7 @@ hdb.gov.sg
 ica.gov.sg
 imda.gov.sg
 iras.gov.sg
+judiciary.gov.sg
 lazada.sg
 lta.gov.sg
 m1.com.sg
@@ -35,17 +41,25 @@ nus.edu.sg
 ocbc.com
 police.gov.sg
 propertyguru.com.sg
+psa.sg
+pub.gov.sg
+sbstransit.com.sg
 scdf.gov.sg
+sgix.sg
+sgnic.sg
 sgx.com
 shopee.sg
 singaporeair.com
 singpass.gov.sg
 singstat.gov.sg
 singtel.com
+smrt.com.sg
 smu.edu.sg
+spgroup.com.sg
 starhub.com
 straitstimes.com
 sutd.edu.sg
+tech.gov.sg
 todayonline.com
 uob.com.sg
 zaobao.com.sg
