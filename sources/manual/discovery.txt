@@ -5,16 +5,13 @@
 # --- upstream:felixonmars-accelerated 2026-03-28 ---
 
 # --- upstream:felixonmars-accelerated 2026-03-28 ---
-cqstudents.com
 shsot.com
 04n1ns24180.xin
 xincha.com
 akgjgs.com
-cncoolm.com
 lczq.com
 chinaief.net
 ttfly.com
-798com.com
 piaoshen.com
 yishang.cc
 yuegui.shop
@@ -59,47 +56,10 @@ shanyuanms.com
 # --- ip-neighbor:202.117.80.233 2026-03-28 ---
 
 # --- ip-neighbor:203.107.45.167 2026-03-28 ---
-daiwei.art
 
 # --- ct-logs:%.gov.cn 2026-03-28 ---
-www.szmb.gov.cn
-mail.bjmacp.gov.cn
-www.lhht.szlh.gov.cn
-wsnj.baic.gov.cn
 api.m.sgeg.sg.gov.cn
-zybh.gov.cn
-wxapi.jsws.gov.cn
-gzjcrz.gov.cn
-c.ts.gxdx.gov.cn
-lingfeng.gov.cn
-gwlz.whrt.gov.cn
-xcgs.gov.cn
-app.liangjiang.gov.cn
 hzfc.gov.cn
-gssoso.whhd.gov.cn
-12333zjg.gov.cn
-bnpo.gov.cn
-12333sh.gov.cn
-cqwhw.gov.cn
-m.gdepb.gov.cn
-www.shpdxf.gov.cn
-cpservice.sipo.gov.cn
-zhscjg.gov.cn
-www.wswsj.gov.cn
-gxfgjj.gov.cn
-login.yjzzw.gov.cn
-cloud.hbzljd.gov.cn
-xj-l-tax.gov.cn
-wxtj.chancheng.gov.cn
-wx.hnec.gov.cn
-autodiscover.fjkl.gov.cn
-mail.culturalink.gov.cn
-park.gdf.gov.cn
-xinyonggl.nasg.gov.cn
-oa.btjt.gov.cn
-ywpx.mofcom.gov.cn
-jubao.cqjcy.gov.cn
-xxzcgl.szft.gov.cn
 wxxzfwzx.gov.cn
 n.jnfda.gov.cn
 i.nbciq.gov.cn
@@ -191,30 +151,20 @@ pengyun.gov.cn
 szwdny.com
 2133bbs.com
 ttplayer.com
-ic001.org
-tdnsdlovs4.com
 mintrust.com
 chinasmp.com
 kwaitalk.com
 flintech.org
 globalesim.shop
 dxton.com
-77fanwen.com
-solooncontrols.com
 wtardseo26x6ts8tss0-dfs1.com
-junyuewl.com
-xn--fiq7vggk68aq1fe49byv8a.xn--zfr164b
 byted-static.com
-androidmi.com
-imdmedical.com
-50027.com
 8ee1834c110272.beer
 checkmath.net
 tyread.com
 volcfcdnplus.com
 tencentcloudbase.com
 6k11.com
-xiaohulu.com
 xiguabook.com
 baitanheichang.com
 missjia.net
@@ -232,20 +182,15 @@ yunjiazheng.com
 hi169.net
 b8b4ix7bj.com
 gala-v.com
-chiphometek.com
-093.com
 ndsad.com
-chinaave.org
 80c189b091016.beer
 ksdhgy.com
 dream-loft.com
 acctdns.net
 qhytyyvx.com
-mangomob.net
 gl114.net
 danming-ic.com
 hbfybj.com
-yunyingketang.com
 
 # --- ip-neighbor:119.253.80.52 2026-03-28 ---
 
@@ -266,30 +211,7 @@ yunyingketang.com
 # --- ip-neighbor:59.82.122.140 2026-03-28 ---
 
 # --- ct-logs:%.com.cn 2026-03-28 ---
-lesaunda.com.cn
-query.verisignchina.com.cn
-etrade.essence.com.cn
-autodiscover.sporton.com.cn
-www1.16168.com.cn
-testaccount.chsi.com.cn
-mail.hanweienergy.com.cn
-sip.apmchina.com.cn
-order.converse.com.cn
-www.billing.shinjiru.com.cn
-checkout.rakuten.com.cn
-www.navimark.com.cn
-ebiz.cpic.com.cn
-www.alcatel-sbell.com.cn
-perf.mobi-getmore.store.ovi.com.cn
-wm2.1to1crm.com.cn
-owa.devicevm.com.cn
 dscitroen.com.cn
-test1.aca.browser.ovi.com.cn
-etrip.hrbb.com.cn
-www.spam.sgcc.com.cn
-www.shianpiin.com.cn
-www1.cma-cgm.com.cn
-webjyzx.rxzq.com.cn
 merchant.globebill.com.cn
 cocama-remasys-test.mercedes-benz.com.cn
 tsbo.opentide.com.cn
@@ -325,30 +247,12 @@ icare.metlife.com.cn
 hp-accessory.com.cn
 www.secure.treknorth.com.cn
 ebank.hxb.com.cn
-bip.baxglobal.com.cn
 samsungshop.com.cn
-mail.ciss.com.cn
-event.sonata.beijing-hyundai.com.cn
-m.secure.ford.com.cn
-tj.hkcholdings.com.cn
-www.slimforce7.com.cn
-person.guilinbank.com.cn
-secure.bmw.com.cn
 salala.com.cn
-gsc.mic.com.cn
-www.1630.com.cn
-www.023jkw.com.cn
-www.ntt-at.com.cn
-hitool.rakuten.com.cn
-staging.s60-getmore.store.nokia.com.cn
-ids-admin.itrus.com.cn
-wfbs6-sc.icrc.trendmicro.com.cn
 
 # --- upstream:felixonmars-accelerated 2026-03-28 ---
 haomaku.com
 xninja.org
-xn--fiq73f39fwr0b4wk.net
-easymule.com
 lygfish.com
 zthsqx.com
 yunmoxing.com
