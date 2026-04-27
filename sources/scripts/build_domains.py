@@ -5,7 +5,7 @@ build_domains.py - DomainNova unified build pipeline.
 v6.0 - Reliability & Accuracy Overhaul
 
 Three-tier architecture:
-  Core      (seed_cn.txt)       read-only, manually curated, absolute trust
+  Core      (seed.txt)       read-only, manually curated, absolute trust
   Reliable  (extended.txt)   read-only by default, receives auto-promotions
   Discovery (discovery.txt)  read-write, auto-managed lifecycle
 
@@ -434,7 +434,7 @@ def load_file_domains(path: Path) -> List[str]:
 # P1 Step 7: Seed health check
 # ---------------------------------------------------------------------------
 SEED_HEALTH_FILES: List[Tuple[str, str]] = [
-    ("seed_cn.txt",    "CN"),
+    ("seed.txt",    "CN"),
     ("seed_hk.txt", "HK"),
     ("seed_mo.txt", "MO"),
     ("seed_tw.txt", "TW"),
@@ -468,7 +468,7 @@ def seed_health_check(
     payload. NEVER raises — any exception is caught and logged ERROR.
 
     Per PROPOSAL §4: alerts only, no auto-fix, no build abort. The CN seed
-    is the same legacy seed_cn.txt; HK/MO/TW use seed_hk/mo/tw.txt.
+    is the same legacy seed.txt; HK/MO/TW use seed_hk/mo/tw.txt.
 
     Args:
         repo_root:     repo root for path resolution
@@ -583,7 +583,7 @@ def load_all_sources(repo_root: Path) -> List[Tuple[str, str]]:
     Discovery is sampled to DISCOVERY_SAMPLE domains per run (rotated by offset).
     Total domains processed per run is capped at seed+extended full + 300 discovery.
     """
-    seed_path      = repo_root / "sources" / "manual" / "seed_cn.txt"
+    seed_path      = repo_root / "sources" / "manual" / "seed.txt"
     seed_hk_path   = repo_root / "sources" / "manual" / "seed_hk.txt"
     seed_mo_path   = repo_root / "sources" / "manual" / "seed_mo.txt"
     seed_tw_path   = repo_root / "sources" / "manual" / "seed_tw.txt"
@@ -656,7 +656,7 @@ def load_all_sources(repo_root: Path) -> List[Tuple[str, str]]:
             domain_map[domain] = "seed_sg"
     for domain in seed_domains:
         if domain not in domain_map:
-            domain_map[domain] = "seed_cn"
+            domain_map[domain] = "seed"
     for domain in extended_domains:
         if domain not in domain_map:
             domain_map[domain] = "extended"
@@ -1051,7 +1051,7 @@ def score_record(
 # Source-name prefix → bucket (rule 2.2.1, "Seed forced assignment").
 # Only manual seed_xx files force a bucket; extended/discovery do not.
 _SEED_SOURCE_TO_BUCKET: dict[str, str] = {
-    "seed_cn": "CN",
+    "seed":    "CN",
     "seed_hk": "HK",
     "seed_mo": "MO",
     "seed_tw": "TW",
@@ -1065,7 +1065,7 @@ _SEED_SOURCE_TO_BUCKET: dict[str, str] = {
     # get mis-bucketed). Forcing `seed` -> CN guarantees the dist is robust to
     # single-IP-level noise. seed_health_check remains the independent drift
     # detector and still runs against actual ipnova classifications, so we
-    # haven't lost the ability to notice seed_cn.txt rot.
+    # haven't lost the ability to notice seed.txt rot.
 }
 
 
@@ -1089,7 +1089,7 @@ def decide_bucket(
 
     Args:
         domain:     normalized domain (lowercase, no scheme).
-        source:     "seed_cn" | "seed_hk" | "seed_mo" | "seed_tw" | "seed_jp" | "seed_kr" | "seed_sg" | "extended" | "discovery".
+        source:     "seed" | "seed_hk" | "seed_mo" | "seed_tw" | "seed_jp" | "seed_kr" | "seed_sg" | "extended" | "discovery".
         ip_buckets: list of pre-resolved bucket labels, one per resolved IP. Each
                     element is "CN" | "HK" | "MO" | "TW" | "" produced by
                     ip_to_bucket() against the ipnova region lookup. Empty string
@@ -1244,7 +1244,7 @@ def process_domain(
     # from single-IP misclassification (e.g., ipnova CIDR table overlap
     # causing a known-CN domain to compute score=0 because decide_bucket
     # forced CN but the IP landed in HK).
-    if source in ("seed_cn", "seed_hk", "seed_mo", "seed_tw", "seed_jp", "seed_kr", "seed_sg"):
+    if source in ("seed", "seed_hk", "seed_mo", "seed_tw", "seed_jp", "seed_kr", "seed_sg"):
         score = 100
 
     # Sticky fallback: if this run couldn't resolve any IPs AND the previous
@@ -1507,7 +1507,7 @@ def detect_dead_domains(
     # 1. Update dead_streak counters based on this run's results
     candidates_for_ns_check: List[str] = []
     for row in rows:
-        if row.source == "seed_cn":
+        if row.source == "seed":
             continue  # Never touch seed
         if row.source not in ("extended", "discovery"):
             continue
@@ -1738,7 +1738,7 @@ def write_stats(
     payload = {
         "total_domains":     len(rows),
         "dist_domains":      total_included,
-        "seed_domains":      source_counts.get("seed_cn", 0),
+        "seed_domains":      source_counts.get("seed", 0),
         "extended_domains":  source_counts.get("extended", 0),
         "discovery_domains": source_counts.get("discovery", 0),
         "score_bands":       dict(score_bands),
@@ -1810,7 +1810,7 @@ def build(repo_root: Path) -> None:
                 log(f"  [error] {future_map[future]}: {exc}")
 
     # Sort: seed first, then extended, then discovery; alphabetical within each
-    source_order = {"seed_cn": 0, "extended": 1, "discovery": 2}
+    source_order = {"seed": 0, "extended": 1, "discovery": 2}
     rows.sort(key=lambda r: (source_order.get(r.source, 9), r.domain))
 
     # Discovery lifecycle

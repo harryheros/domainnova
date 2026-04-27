@@ -1,6 +1,13 @@
 {
   "checked_at": "2026-04-27T16:00:27Z",
   "results": {
+    "seed.txt": {
+      "region": "CN",
+      "sampled": 20,
+      "consistent": 15,
+      "rate": 1.0,
+      "status": "ok"
+    },
     "seed_hk.txt": {
       "region": "HK",
       "sampled": 20,
@@ -42,13 +49,6 @@
       "consistent": 1,
       "rate": 0.0556,
       "status": "error"
-    },
-    "seed_cn.txt": {
-      "region": "CN",
-      "sampled": 20,
-      "consistent": 15,
-      "rate": 1.0,
-      "status": "ok"
     }
   }
 }

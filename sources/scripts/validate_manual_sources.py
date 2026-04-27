@@ -30,7 +30,7 @@ ROOT = Path(__file__).resolve().parents[2]
 
 # Primary files (checked for duplicates + cross-overlap)
 CORE_FILES = {
-    "seed_cn":  ROOT / "sources" / "manual" / "seed_cn.txt",
+    "seed":     ROOT / "sources" / "manual" / "seed.txt",
     "extended": ROOT / "sources" / "manual" / "extended.txt",
 }
 
@@ -105,8 +105,8 @@ def main() -> None:
     all_files = {**CORE_FILES, **REGIONAL_FILES}
     parsed = {name: parse(path) for name, path in all_files.items()}
 
-    # Cross-source overlap (seed_cn.txt vs extended.txt)
-    seed_set     = load_domain_set(CORE_FILES["seed_cn"])
+    # Cross-source overlap (seed.txt vs extended.txt)
+    seed_set     = load_domain_set(CORE_FILES["seed"])
     extended_set = load_domain_set(CORE_FILES["extended"])
     overlaps = sorted(seed_set & extended_set)
 
@@ -129,7 +129,7 @@ def main() -> None:
             cn_regional_conflicts[f"seed_cn ∩ {name}"] = conflict
 
     result = {
-        "seed_cn":                 parsed.get("seed_cn", {}),
+        "seed":                    parsed.get("seed", {}),
         "extended":                parsed.get("extended", {}),
         "regional":                {k: parsed.get(k, {}) for k in REGIONAL_FILES},
         "cross_source_overlap":    overlaps,
@@ -145,9 +145,9 @@ def main() -> None:
 
     # Collect all errors
     has_errors = (
-        bool(result.get("seed_cn",  {}).get("duplicates"))
+        bool(result.get("seed",     {}).get("duplicates"))
         or bool(result.get("extended", {}).get("duplicates"))
-        or bool(result.get("seed_cn",  {}).get("invalid"))
+        or bool(result.get("seed",     {}).get("invalid"))
         or bool(result.get("extended", {}).get("invalid"))
         or any(v.get("duplicates") for v in result["regional"].values())
         or any(v.get("invalid")    for v in result["regional"].values())

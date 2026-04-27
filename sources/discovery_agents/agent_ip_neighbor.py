@@ -225,7 +225,7 @@ def reverse_ip_lookup(ip: str, session: requests.Session) -> List[str]:
 def load_existing(repo_root: Path) -> Set[str]:
     known: Set[str] = set()
     for rel in (
-        "sources/manual/seed_cn.txt",
+        "sources/manual/seed.txt",
         "sources/manual/extended.txt",
         "sources/manual/discovery.txt",
     ):
@@ -288,9 +288,9 @@ def run(repo_root: Path) -> None:
 
     print(f"[+] Budget: {budget} new domains")
 
-    seed_path = repo_root / "sources" / "manual" / "seed_cn.txt"
+    seed_path = repo_root / "sources" / "manual" / "seed.txt"
     if not seed_path.exists():
-        print("[!] seed_cn.txt not found. Exiting.")
+        print("[!] seed.txt not found. Exiting.")
         return
 
     seed_domains = [
