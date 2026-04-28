@@ -2797,3 +2797,6 @@ zbgedu.com
 zby.ly.com
 zhengqingsong.com
 zhibo.yipincm365.com
+
+# ===== Auto-promoted 2026-04-28 =====
+ygym.org
