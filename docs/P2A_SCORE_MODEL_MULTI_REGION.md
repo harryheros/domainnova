@@ -1,5 +1,7 @@
 # DomainNova P2.A 多地區評分模型規範書 v1.0
 
+> **v1.1 更新 (2026-04)**: 模型已擴展至 JP/KR/SG，所有對稱信號邏輯同樣適用於新增地區。
+
 > 狀態：已實施 · 2026-04-21
 > 前置條件：P1 v1.1 + P1 fix v2.1 已部署（對稱分桶、對稱閾值、sticky repair）
 > 範圍：`sources/scripts/build_domains.py`、`sources/scripts/constants.py`

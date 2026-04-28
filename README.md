@@ -148,11 +148,12 @@ gov.cn,0,0,0,0,0,1,40,,,seed,2026-03-28
 ```
 
 Key fields:
-- `dns_cn` — 1 if majority of resolved IPs are in CN CIDRs
-- `matched_cidr` — the CN CIDR range(s) matched (pipe-separated, up to 5)
+- `dns_cn` — 1 if majority of resolved IPs are in CN CIDRs (similar fields exist per region in build logic)
+- `matched_cidr` — the region CIDR range(s) matched (pipe-separated, up to 5)
 - `cn_tld` — 1 if domain uses a CN TLD (`.cn`, `.中国`, etc.)
 - `score` — composite score; 60+ in dist, 40 = ICP fallback, 0 = excluded
-- `source` — `seed`, `extended`, or `discovery`
+- `source` — `seed_cn`, `seed_hk`, `seed_jp`, `extended`, `discovery`, etc.
+- `bucket` — assigned region: CN, HK, TW, MO, JP, KR, SG, or empty (unclassified)
 
 ---
 
