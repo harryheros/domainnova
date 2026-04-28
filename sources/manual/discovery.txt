@@ -683,8 +683,6 @@ xiqinrc.com
 gxkefei.com
 bcbjjy.com
 jygz.org
-ptrcw.com
-feigang.net
 rdympjoqbu.work
 aliyunduncc.com
 hengbogroup.com
@@ -744,21 +742,9 @@ chinanetidc.com
 zjsalt.com
 zhaogang.com
 kkdaxue.com
-51jiaoxi.com
-17qzx.com
-yywt.online
-dachengzi.net
 yuwangcn.com
-ymhuwai.com
-xinwell.com
-mengniuir.com
 
 # --- ip-neighbor:43.132.140.66 2026-04-12 ---
-mdcxa.cn
-xg.node.tcylgslb.com
-www.tongcheng.com
-cashier.travelgo.com
-traveltosuzhou.com
 
 # --- ip-neighbor:116.153.78.163 2026-04-12 ---
 
@@ -771,7 +757,6 @@ traveltosuzhou.com
 # --- ip-neighbor:61.152.229.228 2026-04-12 ---
 
 # --- upstream:felixonmars-accelerated 2026-04-13 ---
-clbu.club
 weijq.com
 goldstonepack.com
 gitsea.com
@@ -781,11 +766,9 @@ ghhyjc.com
 zhimaruanjian.com
 boole-tech.com
 fzjs.work
-vmall.cloud
 sgsic.com
 600df970611031.beer
 eznowdns.net
-uyi2.com
 huilongsen.com
 wadkj.com
 lxdvsss.com
@@ -798,9 +781,6 @@ l68.net
 caeerr.com
 songziren.com
 mchpk.com
-qunkeng.com
-xyykt.org
-edgeonev4.net
 ibaitiao.com
 cqxyfl.com
 jingshun-wl.com
@@ -824,7 +804,6 @@ lzgas.com
 qdnsyh.com
 inter1908.net
 chiji.app
-obagame.com
 biogeeker.com
 
 # --- ip-neighbor:122.14.229.64 2026-04-13 ---
@@ -834,110 +813,57 @@ zgzbb.com
 
 # --- upstream:felixonmars-accelerated 2026-04-17 ---
 njkq.net
-mamicode.com
-light3moon.com
 iweekapi.com
-qcwh2021.com
-runzechuanmei.com
 lakala.com
 xacyyxq.com
 bidingxing.com
 shwxzfjpyzc-tencentclb.com
-assrt.net
-anyant.com
 uid75.com
-qyous.com
 njgdjg.com
 mxtronics.com
 af165fa2910261.beer
-qyhxy365.com
 h51.com
 mmzh.com
-it578.com
 5805c102b11021.beer
 sh-gsg.com
-aialbb.com
-yihang.info
-huobi.io
 webxgame.com
-congyicn.com
-pj334.org
 fenglinlab.com
 nmweidian.com
-8779.com
 gxuit.com
 csseplastic.com
-biduoxs.com
-tencentemr.com
 bbpph.com
-zd-hs.com
 arcas-da.com
 hymjy.net
 baihongsoft.com
 yukaidi.com
-yuandian.club
-aifang.com
-sc119.cc
 
 # --- upstream:felixonmars-accelerated 2026-04-17 ---
-gbtranswins.com
-dagufood.com
-dianwanshidai.com
-reai120.com
-dd-img.com
-yuetu.tech
-goldenladies.com
 tiwb.com
 dqpkb.com
 qznovel.com
-yfway.com
-zjblast.com
-cqmzj.com
-baineng.cc
-aniu.so
 mikucdn.com
 eforclub.com
-maotiangroup.com
-jssutong.com
 tianma3600.com
-zqygame.com
-puoke.com
-hzwaye.com
-weihua2.com
 010fang.net
 wyydsb.xin
 cqljhr.com
-hmltec.com
-dlsstax.com
 britesemi.com
-changyan.com
 wincologistics.com
 dfebda0512.vip
-gxpost.com
-ehaini.com
 xhrczp.com
 aero-shenyang.com
 kscbpkf.com
 qwe1e.com
 msmartlife.com
-gxsubat.com
 gxkfl.com
 scommander.com
-gridsumdissector.com
-jinti.com
 ipanocloud.com
-itmanbu.com
-j8j9.com
 67it.com
 yizhidayu.com
 taiqiedu.com
 duoshuo.com
 yingpost.com
-jkximg.com
-southernmindict.net
 iper2.com
-szwfzs.com
-game112233.com
 qxme.com
 lgyudiao.com
 ovellpump.com
@@ -2090,3 +2016,46 @@ hszsz.com
 gxhuachi.com
 nicewatch.cc
 sipedu.org
+
+# --- upstream:felixonmars-accelerated 2026-04-28 ---
+xinghuoxiaoshuo.com
+xinluex.com
+tlivesrcschedule.com
+vurl.tech
+zsanxing.com
+dmcdn.com
+cqxqz.com
+bigbigwork.com
+elbmodel.com
+dellenglish.com
+zhuayoukong.com
+ynjiaoyu.net
+lanyue.com
+toxingwang.com
+jbs-kj.com
+shisongya.com
+lewang.ltd
+gongkaoleida.com
+beidousafety.org
+mywaymeta.com
+xn--s4t325g.com
+yaimg.com
+xuancaizi.com
+wuxi5h.com
+iremaker.com
+jiupainews.com
+tianhepiano.com
+hackjie.com
+chengrang.com
+seaide.com
+yoxiha.com
+mulinsen.com
+sereypath.com
+175bar.com
+etrump.net
+wdexam.com
+gztalx.com
+elitecrm.com
+znfit.com
+bangrong.com
+yueyuez.com
