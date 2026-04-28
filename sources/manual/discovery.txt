@@ -363,7 +363,6 @@ tpsbp.com
 263idc.com
 hbaas.com
 huananauctionctf.com
-51mockup.com
 knowingyun.com
 zyjhzyy.com
 
@@ -371,7 +370,6 @@ zyjhzyy.com
 volcmcdn2.com
 bjcls.net
 jnmc.com
-tngdigital.com.my
 wscloudcdn.org
 zgdygf.com
 5sha.com
@@ -381,21 +379,16 @@ fanjianhome.com
 mascaw.com
 honf.net
 kehuzhichi.com
-izmzg.com
 jixiewz.com
-hangruntech.com
 gctianshanxh.com
 ishaibiao.com
 china-shimo.com
 letaoedu.com
 rtahengtai.com
-wj-lean.com
 2677dl.com
 ebbcb476210291.beer
-ce33m7.com
 content4ads.com
 thelastsky.com
-hgptech.com
 2d6cd83bf10261.beer
 first-panel.com
 
@@ -409,13 +402,11 @@ baixiangnews.com
 gzstarship.com
 zcjbgame.com
 gsstic.com
-zhangshengrong.com
 0hl5ntdm0i.xin
 unitedbank.ltd
 xxdao.com
 czxiu.com
 wacaiyun.com
-17fandai.com
 caidian.com
 huokeying.com
 imgcdc.com
@@ -428,7 +419,6 @@ dgzx.net
 qjimage.com
 stdicloud.com
 dayustudy.com
-cocos2d.org
 stunnel.vip
 dugrqnn.xyz
 edu-cj.com
@@ -440,9 +430,7 @@ volccdn2.com
 ggsfcw.com
 jsiport.com
 males120.com
-shaogood.com
 ddnspod.com
-ibangquan.com
 ponkong.com
 tjchildrenshospital.com
 novelquickapppic.com
@@ -458,7 +446,6 @@ wanwan4399.com
 
 # --- upstream:felixonmars-accelerated 2026-04-09 ---
 moyugroup.com
-daugres.com
 szqycl.com
 bj-tencentclb.cloud
 bh1t.com
@@ -468,18 +455,13 @@ ipinba.com
 360timg.com
 iusersurvey.com
 coffee-script.org
-xn--4rrx74a.xn--vuq861b
 9chew.com
-qzljjq.com
 cjcn.com
 139game.net
 sxuyr2nx.com
 down568.com
-dh33660.com
 wsdlb.com
 039r93jevs.xin
-ztxxr.com
-ganzhishi.com
 fencescn.com
 wasonchina.com
 goodschool.world
@@ -499,7 +481,6 @@ originalvod.com
 xmylhy.com
 
 # --- upstream:felixonmars-accelerated 2026-04-11 ---
-dz137.com
 nationsky.com
 laxarq.com
 sccens.net
@@ -518,9 +499,6 @@ slatic.net
 dutils.com
 ehaiwang.com
 haihetour.com
-yswh.com
-fuyuzhe.com
-cnxile.com
 lionit.net
 queniuua.com
 sxlottery.net
@@ -529,7 +507,6 @@ pdwxo.vip
 zwefu.com
 
 # --- upstream:felixonmars-accelerated 2026-04-11 ---
-cqios.com
 boomallha.com
 321key.com
 queniuiq.com
@@ -537,7 +514,6 @@ beeplay123.com
 jsclearing.com
 
 # --- upstream:felixonmars-accelerated 2026-04-11 ---
-jdxsr.com
 wodecaipu.com
 union178.com
 264321.com
@@ -547,11 +523,9 @@ groad.net
 icepie.net
 fjfgroup.com
 hdxxw.com
-ysgushi.com
 queniuxe.com
 sxpmpos.com
 xiaomei.cc
-chinapoto.com
 zjjzyxh.com
 ihowguide.com
 zk678.com
@@ -567,7 +541,6 @@ dataing.com
 demlution.com
 tamersunion.net
 dbankcloud.ru
-194610.xyz
 nsiqoaks.com
 49ms.net
 blogways.net
@@ -576,15 +549,10 @@ haipinggroup.com
 hz-winone.com
 baixingyllh.com
 ctrip.co.id
-zouhong365.com
 jxtvbbs.com
 cimc-tianda.com
-kuaihz.com
-dengmoe.com
 honstarmemory.com
 lepiaoyun.com
-forthxu.com
-0355fk.com
 websbook.com
 my3w.com
 sanhucidiao.cc
@@ -598,20 +566,15 @@ a32bd427dd.skin
 # --- upstream:felixonmars-accelerated 2026-04-12 ---
 jznygf.com
 hy01888.com
-cnexps.com
 xhdxly.com
 nes-auto.com
-soyiyuan.com
 willsfitness.net
 bocommlife.com
 hzlrhb.com
-chronusartcenter.org
 xjjt.com
-expku.com
 bjppa.com
 99dushuzu.com
 ljkangyang.com
-daita.red
 py3.io
 xzyjl.com
 vipjingdong.com
@@ -627,7 +590,6 @@ lshfreda.com
 putaocdn.com
 ugc-up-dom.com
 webkdcdn.com
-mfjxcn.com
 znxk.net
 hntic.com
 touchngo.com.my
@@ -641,7 +603,6 @@ awsdns-cn-31.net
 92u93e.com
 shxbe.com
 herenit.com
-ygym.org
 haochengda.net
 87vr.com
 yongshenghn.com
@@ -664,7 +625,6 @@ writingo-editor.com
 qqpharm.com
 zijieimg.com
 3366.net
-o02251aokk.com
 zhongcai.com
 banmasiwei.com
 
@@ -680,7 +640,6 @@ sparkeducdn.com
 ibook8.com
 shcifco.com
 watertek.com
-hetaousercontent.com
 iseedog.com
 0ptf4g04404.xin
 javabikes.com
@@ -2033,3 +1992,101 @@ astron.ac
 jnhzxx.com
 kooaoo.com
 sybasebbs.com
+
+# --- upstream:felixonmars-accelerated 2026-04-28 ---
+xukou.net
+rpg99.com
+baiao.com
+doducity.com
+wxf.com
+licancan.com
+wenyucdn.com
+gzpaco.com
+jiamingwenhua.com
+jlstt.com
+cncmrn.com
+21bowu.com
+cdqcw.net
+liexing.com
+yjydl.com
+whgmbwg.com
+elonghotel.com
+nbcsgo.com
+articclothes.com
+ibee360.com
+mzres.com
+lyy99.com
+cqzbcg.com
+aiguo.tech
+nbegame.com
+gaozhentang.com
+huweihuang.com
+sumaarts.com
+biancui.com
+cqgmfw.com
+wobangzhao.com
+hqbnb.com
+qunarzz.com
+shsanfine.com
+hi-cloud.net
+aiqiyi.com
+1b0y8tocaz24.com
+cnsimeng.com
+yichemall.com
+mixkr.com
+bjwhds.com
+0577gyy.com
+lpfile.com
+adxmax.com
+xiajuan88.com
+luckincdn.com
+huoniuniu.com
+e3j.co
+foneplatform.com
+cupmcn.com
+pag.art
+exia.xyz
+wldsb.com
+isawuhan.com
+kuaizip.com
+shyy6688.com
+eyingyubao.com
+byteacctimg.com
+merklechina.com
+njypk.com
+6a4126ebcf94c39d.com
+gxhonggang.com
+anhuimeijia.com
+dahuagong.com
+zjzsco.com
+suirui.com
+hacjkq.com
+greenwood-park.com
+playwonderful.com
+lijiangbooks.com
+transer-cn.com
+178yy.com
+lenovofile.com
+wb321.com
+qqwinner.com
+tzjyjt.com
+zhenfacloud.com
+zjsjty.com
+topdoge123-a.com
+kuaichala.com
+5o.com
+chongyunpowu.com
+jbote.com
+yuntuys.com
+boweifeng.com
+hzkjcyy.com
+gxtkzx.com
+liangc.com
+kmcits.com
+duanxiansen.com
+sybj.com
+chinacfo.net
+hszsz.com
+gxhuachi.com
+nicewatch.cc
+sipedu.org

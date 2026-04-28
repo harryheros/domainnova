@@ -1,13 +1,15 @@
 # DomainNova - MO domains
-# Generated: 2026-04-27T23:58:58Z
-# Count: 58
+# Generated: 2026-04-28T15:30:43Z
+# Count: 68
 abm.org.mo
+amcm.gov.mo
 antifraud.gov.mo
 bcm.com.mo
 bnm.com.mo
 bnu.com.mo
 bocmacau.com
 ccac.org.mo
+cem.com.mo
 ces.gov.mo
 chengpou.com.mo
 cityu.edu.mo
@@ -26,6 +28,7 @@ galaxyentertainment.com
 gaming-inspection.gov.mo
 gcs.gov.mo
 gov.mo
+iam.gov.mo
 ifm.org.mo
 iftm.edu.mo
 io.gov.mo
@@ -34,6 +37,8 @@ macaonews.org
 macaoticket.com
 macaotourism.gov.mo
 macau-airport.com
+macau-sf.com
+macau-water.com
 macaudaily.com
 macaudailytimes.com.mo
 macauhub.com.mo
@@ -41,10 +46,14 @@ macaunews.mo
 macaupost.gov.mo
 mastvnet.com
 mbe.gov.mo
+mc.icbc.com.cn
 mfood.mo
 mlm.com.mo
 monic.mo
+mpay.com.mo
 mpu.edu.mo
+mtel.mo
+must.edu.mo
 ocbc.com.mo
 ocm.com.mo
 sands.com.mo
@@ -59,3 +68,4 @@ transmac.com.mo
 um.edu.mo
 umac.mo
 usj.edu.mo
+uubank.com.mo
