@@ -203,7 +203,7 @@ Discovery candidates are managed automatically — do not edit `sources/manual/d
 
 ## License
 
-Data: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) — public domain.  
+Data: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) — personal use free, commercial use requires separate license.  
 Scripts: MIT.
 
 ---
