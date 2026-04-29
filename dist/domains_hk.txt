@@ -1,9 +1,8 @@
 # DomainNova - HK domains
-# Generated: 2026-04-29T12:49:47Z
-# Count: 114
-1415926.mobi
+# Generated: 2026-04-29T21:40:34Z
+# Count: 116
 163.net
-6b3cfa277bae3b4b.com
+3600.net
 aastocks.com
 alipay.hk
 alipayhk.com
@@ -16,9 +15,11 @@ bochk.com
 cathaypacific.com
 cityu.edu.hk
 clp.com.hk
+cqxqz.com
 crcbank.com
 csl.com.hk
 ctfe.com
+ctiforum.com
 cuhk.edu.hk
 cxexpress.com
 dahsing.com
@@ -32,7 +33,6 @@ fwd.com.hk
 gov.hk
 gxkfy.com
 hangseng.com
-hbszzk.com
 hgc.com.hk
 hk01.com
 hkairport.com
@@ -57,20 +57,21 @@ hku.hk
 hongkongairlines.com
 hsbc.com.hk
 huoche.net
+hzhxsy.com
 icac.org.hk
 info.gov.hk
+isawuhan.com
 isd.gov.hk
 jd.hk
-jiangguimei.asia
 jobsdb.com
+kingpower-cn.com
 klook.com
-kzo.moe
+kooaoo.com
+kuaichala.com
 lcsd.gov.hk
 lihkg.com
 lzskqyy.com
-macaobusinessnews.com
 mingpao.com
-mrlxc51byo.com
 mtr.com.hk
 newhua.com
 ngacn.cc
@@ -90,10 +91,11 @@ singtao.com
 smartone.com
 staticfile.org
 stheadline.com
+subo.net
 three.com.hk
 tmall.hk
 tom.com
-tradplusad.com
+travelgo.com
 tungwah.org.hk
 tvb.com
 ust.hk
@@ -104,14 +106,14 @@ westkowloon.hk
 wharf.com.hk
 wheelockcompany.com
 winglungbank.com
+wobangzhao.com
 www.mybus.com.cn
 xiaohongtao.art
-xn--ptua509t.com
 xpcha.com
 yata.hk
 yesstyle.com
-youwo.com
+ynjiaoyu.net
 za.group
-zhuyili.org
+zhuayoukong.com
 zjlib.com
-zongyixun.com
+zsanxing.com
