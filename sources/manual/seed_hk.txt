@@ -26,23 +26,43 @@ mtr.com.hk
 hkairport.com
 hkia.com.hk
 hkpost.hk
+hongkongpost.hk
 octopus.com.hk
 westkowloon.hk
+hkexpress.com
 
 # --- Government & Public Services ---
+ceo.gov.hk
+cepu.gov.hk
+cedb.gov.hk
+cmab.gov.hk
+csb.gov.hk
+cso.gov.hk
+cstb.gov.hk
+edb.gov.hk
+fso.gov.hk
+fstb.gov.hk
+hb.gov.hk
+hyab.gov.hk
+lwb.gov.hk
+sb.gov.hk
 lcsd.gov.hk
 hko.gov.hk
 hkeaa.edu.hk
 hkoc.org.hk
 tungwah.org.hk
+ha.org.hk
 
 # --- Banking / Finance / Insurance ---
 bochk.com
 bankofchina.com.hk
+boc.hk
+asia.ccb.com
 hsbc.com.hk
 hangseng.com
 dbs.com.hk
 dahsing.com
+citibank.com.hk
 winglungbank.com
 sc.com
 fwd.com.hk
@@ -55,6 +75,8 @@ smartone.com
 hgc.com.hk
 pccw.com
 three.com.hk
+3hk.hk
+hkbn.net
 
 # --- Media / News ---
 rthk.hk
@@ -68,13 +90,30 @@ stheadline.com
 bastillepost.com
 tvb.com
 nowtv.now.com
+bigbigchannel.com.hk
+crhk.com.hk
+hkcd.com.hk
+takungpao.com
+wenweipo.com
 
 # --- Education / Research ---
 hku.hk
+centennialcollege.hku.hk
 cuhk.edu.hk
+cuhkmc.hk
 ust.hk
 polyu.edu.hk
 cityu.edu.hk
+hkbu.edu.hk
+ln.edu.hk
+eduhk.hk
+hkapa.edu
+hksyu.edu
+hkct.edu.hk
+gcc.edu.hk
+sfu.edu.hk
+twc.edu.hk
+uowchk.edu.hk
 vtc.edu.hk
 
 # --- Tech / Innovation ---
@@ -95,12 +134,23 @@ jobsdb.com
 klook.com
 dimbuy.com
 yesstyle.com
+yahoo.com.hk
 
 # --- Social / Forums ---
 lihkg.com
 discuss.com.hk
 uwants.com
 baby-kingdom.com
+
+# --- Healthcare ---
+hkbh.org.hk
+hksh-hospital.com
+
+# --- Entertainment ---
+
+# --- NGO / Community ---
+stpaul.org.hk
+sth.org.hk
 
 # --- Conglomerates / Property / Aviation ---
 ctfe.com
@@ -111,3 +161,4 @@ cxexpress.com
 hongkongairlines.com
 hkjc.com
 oceanpark.com.hk
+jardines.com

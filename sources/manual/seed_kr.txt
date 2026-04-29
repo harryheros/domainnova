@@ -33,7 +33,9 @@ kepco.co.kr
 kwater.or.kr
 korail.com
 airport.kr
+incheonairport.kr
 kma.go.kr
+tmoney.co.kr
 
 # --- Government (Cities & Provinces) ---
 seoul.go.kr
@@ -57,15 +59,26 @@ skbroadband.com
 naver.com
 daum.net
 kakao.com
+kakaot.com
 tistory.com
 nate.com
+namu.wiki
+hanmail.net
 
-# --- Messaging / Social ---
+# --- Messaging / Social / Community ---
 kakaotalk.com
 band.us
+clien.net
+dcinside.com
+ppomppu.co.kr
+ruliweb.com
+theqoo.net
+afreecatv.com
+sooplive.co.kr
 
 # --- E-commerce & Logistics ---
 coupang.com
+coupangplay.com
 gmarket.co.kr
 11st.co.kr
 auction.co.kr
@@ -74,11 +87,27 @@ kurly.com
 musinsa.com
 oliveyoung.co.kr
 lotteon.com
+lotte.com
+lotteimall.com
 cjlogistics.com
 hanjin.com
 lotte.co.kr
+interpark.com
+gsshop.com
+hyundaihmall.com
+homeplus.co.kr
+shinsegae.com
+tmon.co.kr
+wemakeprice.com
+g9.co.kr
+bunjang.co.kr
+daangn.com
+danawa.com
+kcar.com
+yes24.com
+aladin.co.kr
 
-# --- Media / News ---
+# --- Media / News / Entertainment ---
 chosun.com
 donga.com
 joongang.co.kr
@@ -90,19 +119,32 @@ mbc.co.kr
 jtbc.co.kr
 edaily.co.kr
 mt.co.kr
+hankyung.com
+mk.co.kr
+tvn.co.kr
+tving.com
+ebs.co.kr
+cgv.co.kr
+megabox.co.kr
+melon.com
+genie.co.kr
 
 # --- Banks / Finance / Trading ---
 kbstar.com
+kbcard.com
+kbanknow.com
 shinhan.com
 wooribank.com
 hanabank.com
 ibk.co.kr
 nhbank.com
+nonghyup.com
 kakaobank.com
 toss.im
 kfb.or.kr
 kofia.or.kr
 krx.co.kr
+banksalad.com
 
 # --- Tech / Industry / R&D ---
 samsung.com
@@ -139,3 +181,18 @@ hybecorp.com
 jype.com
 smtown.com
 ygfamily.com
+ygentertainment.com
+
+# --- Travel / Food / Lifestyle ---
+koreanair.com
+visitkorea.or.kr
+yanolja.com
+baemin.com
+lotteria.com
+
+# --- Jobs ---
+saramin.co.kr
+jobkorea.co.kr
+
+# --- Crowdfunding ---
+wadiz.kr
