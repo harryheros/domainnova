@@ -72,11 +72,36 @@ kuronekoyamato.co.jp
 sagawa-exp.co.jp
 nipponexpress.com
 jr-central.co.jp
+jr-east.co.jp
 jreast.co.jp
+jrkyushu.co.jp
+jr-odekake.net
 westjr.co.jp
 tokyometro.jp
 jal.co.jp
 ana.co.jp
+navitime.co.jp
+timescar.jp
+
+# --- Travel / Tourism ---
+jtb.co.jp
+his-j.com
+hankyu-travel.com
+suumo.jp
+
+# --- Jobs / Recruitment ---
+rikunabi.com
+townwork.net
+indeedjapan.com
+
+# --- Telecom (additional) ---
+docomo.ne.jp
+
+# --- Retail / Convenience ---
+lawson.co.jp
+
+# --- Lifestyle / Services ---
+tsite.jp
 
 # --- Major Portals / Internet ---
 yahoo.co.jp
@@ -84,7 +109,6 @@ livedoor.jp
 goo.ne.jp
 hatena.ne.jp
 ameba.jp
-line.me
 
 # --- E-commerce ---
 amazon.co.jp
@@ -92,6 +116,13 @@ rakuten.co.jp
 zozo.jp
 mercari.com
 dmm.com
+uniqlo.com
+muji.com
+nitori-net.jp
+biccamera.com
+yamada-denki.jp
+yodobashi.com
+nissen.co.jp
 
 # --- Media / News ---
 nhk.or.jp
@@ -101,16 +132,27 @@ nikkei.com
 sankei.com
 yomiuri.co.jp
 tokyo-np.co.jp
+oricon.co.jp
+smartnews.com
+weathernews.jp
+tabelog.com
+gurunavi.com
 
 # --- Financial Infrastructure & Regulation ---
 bk.mufg.jp
+ufjbank.co.jp
 mizuhobank.co.jp
+mizuho.co.jp
 smbc.co.jp
+smbc-card.com
 japanpost.jp
 jp-bank.japanpost.jp
 sbigroup.co.jp
 nomura.co.jp
 jpx.co.jp
+resona-gr.co.jp
+jcb.co.jp
+eposcard.co.jp
 
 # --- Tech / Industrial Giants ---
 sony.co.jp
@@ -128,6 +170,11 @@ mitsubishielectric.co.jp
 hitachi.co.jp
 canon.co.jp
 toshiba.co.jp
+fastretailing.com
+suntory.co.jp
+mcdonalds.co.jp
+daiso-sangyo.co.jp
+takashimaya.co.jp
 
 # --- Industry Associations (Economic Backbone) ---
 keidanren.or.jp
@@ -144,6 +191,7 @@ isct.ac.jp
 keio.ac.jp
 waseda.jp
 riken.jp
+jasso.go.jp
 
 # --- Cloud / Hosting ---
 sakura.ad.jp

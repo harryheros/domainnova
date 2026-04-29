@@ -28,24 +28,34 @@ msa.gov.tw
 # --- Regional Government (22 Cities & Counties) ---
 taipei.gov.tw
 ntpc.gov.tw
+newtaipei.gov.tw
 kcg.gov.tw
+kaohsiung.gov.tw
 taichung.gov.tw
 tainan.gov.tw
 taoyuan.gov.tw
 hccg.gov.tw
 hsinchu.gov.tw
+keelung.gov.tw
 miaoli.gov.tw
 chcg.gov.tw
+changhua.gov.tw
 ntct.gov.tw
+nantou.gov.tw
 yunlin.gov.tw
 cycg.gov.tw
 chiayi.gov.tw
 pthg.gov.tw
+pingtung.gov.tw
 ttcg.gov.tw
+taitung.gov.tw
 hl.gov.tw
+hualien.gov.tw
 ilc.gov.tw
+yilan.gov.tw
 penghu.gov.tw
 kmtc.gov.tw
+kinmen.gov.tw
 matsu.gov.tw
 
 # --- Science Parks & Industry Clusters ---
@@ -71,7 +81,6 @@ cwb.gov.tw
 # --- Logistics ---
 hct.com.tw
 t-cat.com.tw
-kerrytj.com
 
 # --- Key Industry Associations (B2B Hubs) ---
 teema.org.tw
@@ -91,6 +100,7 @@ taishinbank.com.tw
 megabank.com.tw
 bot.com.tw
 fubon.com
+sinopac.com
 linebank.com.tw
 nccc.com.tw
 e-bill.com.tw
@@ -101,6 +111,9 @@ cht.com.tw
 hinet.net
 fetnet.net
 aptg.com.tw
+taiwanmobile.com
+kbro.com.tw
+mylink.com.tw
 
 # --- Media / News ---
 cna.com.tw
@@ -114,10 +127,16 @@ storm.mg
 pts.org.tw
 bcc.com.tw
 rti.org.tw
+bnext.com.tw
+businessweekly.com.tw
+businesstoday.com.tw
+cnyes.com
+nownews.com
 
 # --- E-commerce / Tech / Social ---
 pchome.com.tw
 momoshop.com.tw
+momo.com.tw
 shopee.tw
 ruten.com.tw
 books.com.tw
@@ -129,10 +148,18 @@ bahamut.com.tw
 gamer.com.tw
 pixnet.net
 104.com.tw
+1111.com.tw
+518.com.tw
+yes123.com.tw
 591.com.tw
 kkbox.com
 kkday.com
+kktix.com
 foodpanda.com.tw
+eslite.com
+pcstore.com.tw
+watsons.com.tw
+myfone.com.tw
 
 # --- Hardware / Semiconductor / Manufacturing ---
 asus.com
@@ -144,8 +171,10 @@ quanta.com.tw
 
 # --- Retail / Convenience ---
 7-eleven.com.tw
+7-11.com.tw
 hi-life.com.tw
 familymart.com.tw
+family.com.tw
 
 # --- Education / Research ---
 ntu.edu.tw
@@ -154,3 +183,8 @@ nthu.edu.tw
 ncku.edu.tw
 nycu.edu.tw
 ntust.edu.tw
+ncu.edu.tw
+nsysu.edu.tw
+pccu.edu.tw
+fju.edu.tw
+tku.edu.tw

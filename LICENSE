@@ -2,23 +2,11 @@ DomainNova Licensing
 ====================
 
 Data (data/, dist/, sources/manual/):
-  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
-  (CC BY-NC-SA 4.0)
-  https://creativecommons.org/licenses/by-nc-sa/4.0/
+  Creative Commons Zero v1.0 Universal (CC0 1.0)
+  https://creativecommons.org/publicdomain/zero/1.0/
 
-  You are free to:
-    - Share: copy and redistribute the material in any medium or format
-    - Adapt: remix, transform, and build upon the material
-
-  Under the following terms:
-    - Attribution: You must give appropriate credit.
-    - NonCommercial: You may not use the material for commercial purposes
-      without a separate commercial license from the author.
-    - ShareAlike: If you remix, transform, or build upon the material, you
-      must distribute your contributions under the same license.
-
-  For commercial licensing inquiries, please contact via GitHub Issues:
-  https://github.com/harryheros/domainnova/issues
+  To the extent possible under law, the author has waived all copyright
+  and related or neighboring rights to DomainNova data files.
 
 Scripts (sources/scripts/, sources/discovery_agents/):
   MIT License

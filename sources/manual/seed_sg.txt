@@ -28,6 +28,7 @@ myinfo.gov.sg
 go.gov.sg
 tech.gov.sg
 csa.gov.sg
+ura.gov.sg
 
 # --- Regulatory & Compliance ---
 acra.gov.sg
@@ -55,32 +56,47 @@ channelnewsasia.com
 todayonline.com
 zaobao.com.sg
 mothership.sg
+8world.com
 
 # --- Banking / Finance ---
 dbs.com.sg
 ocbc.com
 uob.com.sg
+posb.com.sg
 sgx.com
 
-# --- E-commerce / Tech ---
+# --- E-commerce / Retail ---
 lazada.sg
 shopee.sg
 carousell.com
+carousell.sg
 grab.com
 foodpanda.sg
+qoo10.sg
+fairprice.com.sg
+coldstorage.com.sg
 
-# --- Property / Services ---
+# --- Property / Jobs / Services ---
 propertyguru.com.sg
 99.co
+jobstreet.com.sg
+streetdirectory.com
+sistic.com.sg
 
 # --- Education ---
 nus.edu.sg
 ntu.edu.sg
 smu.edu.sg
 sutd.edu.sg
+sit.edu.sg
 
 # --- Airlines / Transport ---
 singaporeair.com
 changiairport.com
 smrt.com.sg
 sbstransit.com.sg
+comfortdelgro.com
+
+# --- Tourism / Attractions ---
+sentosa.com.sg
+visitsingapore.com

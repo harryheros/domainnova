@@ -6,6 +6,8 @@
 monic.mo
 gov.mo
 io.gov.mo
+e-gov.mo
+bo.io.gov.mo
 
 # --- Government (Central & Regulatory) ---
 amcm.gov.mo
@@ -26,15 +28,38 @@ ipim.gov.mo
 mbe.gov.mo
 ces.gov.mo
 gaming-inspection.gov.mo
+al.gov.mo
+cd.gov.mo
+cfm.gov.mo
+cm.gov.mo
+cp.gov.mo
+customs.gov.mo
+dicj.gov.mo
+dsj.gov.mo
+dsscu.gov.mo
+dssopt.gov.mo
+dst.gov.mo
+grs.gov.mo
+iacm.gov.mo
+ias.gov.mo
+icm.gov.mo
+ifp.gov.mo
+mgto.gov.mo
+msa.gov.mo
+msar.gov.mo
+sa.gov.mo
+tj.gov.mo
+macautourism.gov.mo
+macaupost.gov.mo
 
 # --- Critical Infrastructure / Utilities ---
 cem.com.mo
 macau-water.com
 macau-airport.com
-macaupost.gov.mo
 ctm.net
 mtel.mo
 mlm.com.mo
+cyberctm.com
 
 # --- Transport & Logistics ---
 transmac.com.mo
@@ -54,10 +79,15 @@ mpay.com.mo
 abm.org.mo
 ifm.org.mo
 mc.icbc.com.cn
+icbc.com.mo
 
 # --- Gaming / Hospitality (Core Industry) ---
 sands.com.mo
 galaxyentertainment.com
+galaxymacau.com
+sandschina.com
+venetianmacao.com
+casino.org.mo
 
 # --- Media / News ---
 macaudaily.com
@@ -68,6 +98,7 @@ macaonews.org
 macaunews.mo
 macauhub.com.mo
 mastvnet.com
+macaobbs.com
 
 # --- Education / Research ---
 um.edu.mo
@@ -77,6 +108,18 @@ mpu.edu.mo
 usj.edu.mo
 cityu.edu.mo
 iftm.edu.mo
+ipm.edu.mo
+iusm.edu.mo
+kjc.edu.mo
+cmc.edu.mo
+macaopolytechnic.edu.mo
+
+# --- Civic / Culture / Community ---
+civicedu.mo
+cpttm.org.mo
+macaumemory.mo
+moedict.mo
+yp.mo
 
 # --- E-commerce / Tech / Services ---
 macaoticket.com
@@ -87,3 +130,4 @@ smartone.com.mo
 three.com.mo
 directel.com.mo
 ocm.com.mo
+macau.com
