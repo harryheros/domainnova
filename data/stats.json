@@ -1,18 +1,18 @@
 {
-  "total_domains": 4270,
-  "dist_domains": 3582,
+  "total_domains": 4406,
+  "dist_domains": 3700,
   "seed_domains": 622,
-  "extended_domains": 2777,
-  "discovery_domains": 300,
+  "extended_domains": 2914,
+  "discovery_domains": 299,
   "score_bands": {
-    "cn_dns": 2973,
+    "cn_dns": 3091,
     "cn_tld": 980,
-    "non_cn": 317
+    "non_cn": 335
   },
   "source_counts": {
     "seed_cn": 622,
-    "extended": 2777,
-    "discovery": 300,
+    "extended": 2914,
+    "discovery": 299,
     "seed_tw": 125,
     "seed_kr": 111,
     "seed_sg": 62,
@@ -22,24 +22,24 @@
   },
   "buckets": {
     "cn": {
-      "included": 3262,
+      "included": 3380,
       "gray": 0,
-      "total": 3263
+      "total": 3382
     },
     "hk": {
-      "included": 115,
+      "included": 114,
       "gray": 0,
       "total": 115
     },
     "tw": {
-      "included": 137,
+      "included": 138,
       "gray": 0,
-      "total": 168
+      "total": 169
     },
     "sg": {
       "included": 62,
       "gray": 0,
-      "total": 69
+      "total": 74
     },
     "jp": {
       "included": 120,
@@ -56,14 +56,14 @@
       "gray": 0,
       "total": 68
     },
-    "unclassified": 353
+    "unclassified": 364
   },
-  "generated_at": "2026-04-29T04:03:39Z",
+  "generated_at": "2026-04-29T12:49:47Z",
   "auto_purged": 0,
-  "auto_promoted": 137,
+  "auto_promoted": 0,
   "auto_dead_removed": 0,
   "processing_errors": 0,
-  "sticky_retained": 472,
+  "sticky_retained": 469,
   "workers": 20,
   "discovery_sample": 300
 }

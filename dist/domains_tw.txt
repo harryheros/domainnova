@@ -1,6 +1,7 @@
 # DomainNova - TW domains
-# Generated: 2026-04-29T04:03:39Z
-# Count: 137
+# Generated: 2026-04-29T12:49:47Z
+# Count: 138
+024365.com
 104.com.tw
 591.com.tw
 7-eleven.com.tw
