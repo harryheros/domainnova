@@ -1,8 +1,9 @@
 # DomainNova - HK domains
-# Generated: 2026-04-29T04:03:39Z
-# Count: 115
+# Generated: 2026-04-29T12:49:47Z
+# Count: 114
+1415926.mobi
 163.net
-333.com
+6b3cfa277bae3b4b.com
 aastocks.com
 alipay.hk
 alipayhk.com
@@ -15,8 +16,6 @@ bochk.com
 cathaypacific.com
 cityu.edu.hk
 clp.com.hk
-cqapg.com
-cqdashun.com
 crcbank.com
 csl.com.hk
 ctfe.com
@@ -33,6 +32,7 @@ fwd.com.hk
 gov.hk
 gxkfy.com
 hangseng.com
+hbszzk.com
 hgc.com.hk
 hk01.com
 hkairport.com
@@ -56,35 +56,32 @@ hktvmall.com
 hku.hk
 hongkongairlines.com
 hsbc.com.hk
-huaxiabeidou.com
 huoche.net
 icac.org.hk
 info.gov.hk
 isd.gov.hk
 jd.hk
-jingshanbus.com
+jiangguimei.asia
 jobsdb.com
 klook.com
+kzo.moe
 lcsd.gov.hk
 lihkg.com
-linuxidc.net
 lzskqyy.com
+macaobusinessnews.com
 mingpao.com
+mrlxc51byo.com
 mtr.com.hk
-n12345.com
 newhua.com
 ngacn.cc
 nowtv.now.com
 oceanpark.com.hk
 octopus.com.hk
-ofenka.com
 on.cc
 openrice.com
 pccw.com
 pgyy.com
 polyu.edu.hk
-qqpifu.com
-rsxmgl.com
 rthk.hk
 sc.com
 scmp.com
@@ -96,10 +93,9 @@ stheadline.com
 three.com.hk
 tmall.hk
 tom.com
-tototang.com
+tradplusad.com
 tungwah.org.hk
 tvb.com
-uscntv.com
 ust.hk
 uwants.com
 vtc.edu.hk
@@ -110,9 +106,12 @@ wheelockcompany.com
 winglungbank.com
 www.mybus.com.cn
 xiaohongtao.art
+xn--ptua509t.com
 xpcha.com
 yata.hk
 yesstyle.com
+youwo.com
 za.group
+zhuyili.org
 zjlib.com
-zmkmex.com
+zongyixun.com
