@@ -3016,3 +3016,6 @@ zmssh.com
 zsaeroengine.com
 zsceta.com
 zz597.com
+
+# ===== Auto-promoted 2026-04-30 =====
+bj17.cn

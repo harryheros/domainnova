@@ -27,7 +27,6 @@ moe123.org
 # --- ip-neighbor:47.111.234.42 2026-03-28 ---
 
 # --- ip-neighbor:211.100.61.67 2026-03-28 ---
-bj17.cn
 
 # --- ct-logs:Huawei 2026-03-28 ---
 
@@ -60,71 +59,12 @@ shanyuanms.com
 # --- ct-logs:%.gov.cn 2026-03-28 ---
 api.m.sgeg.sg.gov.cn
 hzfc.gov.cn
-wxxzfwzx.gov.cn
-n.jnfda.gov.cn
-i.nbciq.gov.cn
-lljs.gov.cn
-ksbm.sdtg.gov.cn
-jcyj.zjppq.gov.cn
-szsi.gov.cn
-bjlsj.gov.cn
-image.qyngw.gov.cn
-zh.dwkdj.gov.cn
-lyncdiscover.nbsti.gov.cn
-www.qinduankou.gov.cn
-www.csks.gov.cn
-www.hbtmsl.gov.cn
-csswtzn.cshrss.gov.cn
 cy.12366.gov.cn
 ftxwbt.gov.cn
 zhxy.swdx.km.gov.cn
-wx.szltax.gov.cn
-zsrs.cqhrss.gov.cn
-jktn.tnwsj.gov.cn
-two.hhdjh.gov.cn
-xyb.chinasarft.gov.cn
-www.xinba.gov.cn
-vpn.hzfc.gov.cn
-git.dmfy.gov.cn
-tst.gov.cn
-xcjob.gov.cn
-nzcgzf.gov.cn
-czt.zww.nxzwfw.gov.cn
-xcx.lkjxj.gov.cn
-gmt.szgm.gov.cn
-hlgehb.gov.cn
-nndsj.gov.cn
-https.1234.gov.cn
-spsy.gdda.gov.cn
-gr.cdhrss.gov.cn
-wylz.gzzx.gov.cn
-dysj.dtdjzx.gov.cn
-moa.liuzhou.gov.cn
-a.tmfda.gov.cn
-jdfp.sc-n-tax.gov.cn
-mail.fujian.gov.cn
-y.gxdx.gov.cn
 hrsszj.gov.cn
-htjg.szlh.gov.cn
-www.cxldrk.gov.cn
-ehbds.gov.cn
-jkrz.ts.gov.cn
-name.gxdx.gov.cn
-bmfwpt.hnzzjj.gov.cn
-zqdq.gov.cn
-www.lygjj.gov.cn
-huanghai.gov.cn
-ipa.szxchb.gov.cn
-www.yzdzw.gov.cn
-kf.cdzfgjj.gov.cn
-hszhdj.gov.cn
 jszwfw.gov.cn
-jzqb.sme.gov.cn
-xyw.gov.cn
-floa.qzsfj.gov.cn
 lzwenming.gov.cn
-webapi.tjgaj.gov.cn
-jc.wuliu.gov.cn
 fjxwcbj.gov.cn
 www.nzcgzf.gov.cn
 www.sdmsjw.gov.cn
