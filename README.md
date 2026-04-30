@@ -9,7 +9,6 @@ DomainNova is an open intelligence dataset and tooling layer for domain, network
 
 ---
 
-
 > **License Notice**: All versions of this project, including historical commits, are licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). Commercial use of any version requires a separate written license agreement.
 > **Versioning Notice**: Previous public versions of this project may have been distributed under different license terms. All current and future releases are governed solely by the LICENSE file in this repository.
 
@@ -20,6 +19,8 @@ A **self-evolving intelligence dataset for infrastructure attribution**, not a p
 Each domain is evaluated across multiple independent signals to assess whether its infrastructure is physically located in a target Asia-Pacific region. The goal is infrastructure attribution, not corporate ownership attribution.
 
 Unlike static domain lists, DomainNova operates a three-tier data architecture with automated discovery, verification, and lifecycle management. The dataset grows and self-cleanses over time.
+
+For current dataset statistics, see `data/stats.json`.
 
 ---
 
@@ -50,7 +51,7 @@ DomainNova uses a **symmetric multi-region scoring model** (P2.A) that evaluates
 | `dist/domains_kr.txt` | South Korea domains (score ≥ 60) |
 | `dist/domains_sg.txt` | Singapore domains (score ≥ 60) |
 
-**Thresholds:**
+### Thresholds
 
 | Score | Meaning | Output |
 |-------|---------|--------|
@@ -127,14 +128,14 @@ data/domains_metadata.csv           tabular export of the metadata layer
 data/metadata_stats.json            metadata coverage statistics
 data/manual_source_validation.json  duplicate / overlap / format checks
 data/discovery_stats.json           discovery lifecycle state (hit/fail counts, offset)
-sources/manual/seed_cn.txt             manually curated core domains (CN)
-sources/manual/seed_hk.txt             manually curated core domains (HK)
-sources/manual/seed_tw.txt             manually curated core domains (TW)
-sources/manual/seed_mo.txt             manually curated core domains (MO)
-sources/manual/seed_jp.txt             manually curated core domains (JP)
-sources/manual/seed_kr.txt             manually curated core domains (KR)
-sources/manual/seed_sg.txt             manually curated core domains (SG)
-sources/manual/seed_offshore.txt       offshore PRC-company domains
+sources/manual/seed_cn.txt          manually curated core domains (CN)
+sources/manual/seed_hk.txt          manually curated core domains (HK)
+sources/manual/seed_tw.txt          manually curated core domains (TW)
+sources/manual/seed_mo.txt          manually curated core domains (MO)
+sources/manual/seed_jp.txt          manually curated core domains (JP)
+sources/manual/seed_kr.txt          manually curated core domains (KR)
+sources/manual/seed_sg.txt          manually curated core domains (SG)
+sources/manual/seed_offshore.txt    offshore PRC-company domains
 sources/manual/extended.txt         stable verified domains + auto-promoted
 sources/manual/discovery.txt        auto-harvested candidates (managed lifecycle)
 sources/scripts/                    build pipeline scripts
