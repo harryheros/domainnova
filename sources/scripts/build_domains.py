@@ -866,14 +866,14 @@ def _resolve_rescue(domain: str, session: requests.Session) -> List[str]:
         with _rescue_mode_lock:
             if _rescue_mode is None:
                 _rescue_mode = "json"
-                log(f"  [info] Rescue endpoint mode detected: JSON API")
+                log("  [info] Rescue endpoint mode detected: JSON API")
         return ips
     ok, ips = _resolve_via_wire(domain, DOH_RESCUE, session, use_ecs)
     if ok:
         with _rescue_mode_lock:
             if _rescue_mode is None:
                 _rescue_mode = "wire"
-                log(f"  [info] Rescue endpoint mode detected: RFC 8484 wireformat")
+                log("  [info] Rescue endpoint mode detected: RFC 8484 wireformat")
         return ips
     return []
 
@@ -1296,6 +1296,12 @@ def process_domain(
             sticky_bucket = prev.bucket
             if source in _SEED_SOURCE_TO_BUCKET:
                 sticky_bucket = _SEED_SOURCE_TO_BUCKET[source]
+            # P1 fix v2.2: for non-seed sources with empty bucket (e.g. extended
+            # .cn domains that persistently fail DoH), use CN TLD as recovery signal.
+            # cn_tld=1 is a strong administrative signal (ICP filing requirement);
+            # assigning CN bucket here is safer than leaving the domain unclassified.
+            if not sticky_bucket and prev.cn_tld:
+                sticky_bucket = "CN"
             return DomainRecord(
                 domain=domain,
                 dns_cn=prev.dns_cn,

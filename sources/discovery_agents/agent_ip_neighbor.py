@@ -300,7 +300,7 @@ def run(repo_root: Path) -> None:
     ]
     random.shuffle(seed_domains)
 
-    print(f"[+] Resolving seed domains to find CN IPs...")
+    print("[+] Resolving seed domains to find CN IPs...")
     cn_ips: List[str] = []
     seen_ips: Set[str] = set()
 

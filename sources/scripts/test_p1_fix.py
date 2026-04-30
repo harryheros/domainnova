@@ -388,14 +388,26 @@ class TestStickyBucketRepair(unittest.TestCase):
         self.assertEqual(rec.sticky, 1)
         self.assertEqual(rec.bucket, "HK")
 
-    def test_non_seed_empty_bucket_stays_empty(self):
-        # extended/discovery have no seed-force path; can't re-derive without IPs
+    def test_non_seed_empty_bucket_stays_empty_without_cn_tld(self):
+        # extended/discovery have no seed-force path; without a prior bucket or
+        # CN TLD administrative signal, they stay unclassified on DNS failure.
         prev = self._stale_prev("foo.com", "extended", bucket="")
+        prev.cn_tld = 0
         rec = process_domain("foo.com", "extended", session=None,
                              region_lookup=self.lookup, updated="now",
                              previous={"foo.com": prev})
         self.assertEqual(rec.sticky, 1)
         self.assertEqual(rec.bucket, "")  # stays empty — no signal to rebuild
+
+    def test_non_seed_empty_bucket_recovers_cn_tld(self):
+        # .cn extended/discovery domains can recover CN bucket during sticky
+        # fallback because .cn has strong administrative signal.
+        prev = self._stale_prev("foo.cn", "extended", bucket="")
+        rec = process_domain("foo.cn", "extended", session=None,
+                             region_lookup=self.lookup, updated="now",
+                             previous={"foo.cn": prev})
+        self.assertEqual(rec.sticky, 1)
+        self.assertEqual(rec.bucket, "CN")
 
     def test_existing_sticky_bucket_preserved(self):
         # If prev.bucket is already set, don't touch it (respect prior decision)
