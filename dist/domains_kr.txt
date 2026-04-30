@@ -1,14 +1,16 @@
 # DomainNova - KR domains
-# Generated: 2026-04-29T23:22:10Z
-# Count: 162
+# Generated: 2026-04-30T05:17:54Z
+# Count: 165
 11st.co.kr
 afreecatv.com
 airport.kr
+akmall.com
 aladin.co.kr
 auction.co.kr
 baemin.com
 band.us
 banksalad.com
+bhc.co.kr
 bunjang.co.kr
 busan.go.kr
 cgv.co.kr
@@ -161,5 +163,6 @@ yanolja.com
 yes24.com
 ygentertainment.com
 ygfamily.com
+ygselect.com
 yna.co.kr
 yonsei.ac.kr

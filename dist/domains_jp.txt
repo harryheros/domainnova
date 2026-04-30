@@ -1,11 +1,12 @@
 # DomainNova - JP domains
-# Generated: 2026-04-29T23:22:10Z
-# Count: 158
+# Generated: 2026-04-30T05:17:54Z
+# Count: 162
 amazon.co.jp
 ameba.jp
 ana.co.jp
 asahi.com
 au.com
+baixiang.com
 bandainamco.co.jp
 biccamera.com
 bk.mufg.jp
@@ -71,6 +72,7 @@ kepco.co.jp
 kuronekoyamato.co.jp
 kyoto-u.ac.jp
 lawson.co.jp
+line.me
 livedoor.jp
 lolipop.jp
 maff.go.jp
@@ -89,6 +91,7 @@ mod.go.jp
 mofa.go.jp
 muji.com
 navitime.co.jp
+nayuki.com
 nec.co.jp
 nhk.or.jp
 nikkei.com
@@ -158,4 +161,5 @@ yamada-denki.jp
 ymobile.jp
 yodobashi.com
 yomiuri.co.jp
+yuncha.com
 zozo.jp

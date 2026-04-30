@@ -1,69 +1,69 @@
 {
-  "total_domains": 4518,
-  "dist_domains": 4104,
+  "total_domains": 4655,
+  "dist_domains": 4240,
   "seed_domains": 1417,
-  "extended_domains": 2801,
-  "discovery_domains": 300,
+  "extended_domains": 2939,
+  "discovery_domains": 299,
   "score_bands": {
-    "cn_dns": 2975,
-    "cn_tld": 1207,
-    "non_cn": 336
+    "cn_dns": 3028,
+    "cn_tld": 1290,
+    "non_cn": 337
   },
   "source_counts": {
     "seed_cn": 622,
-    "extended": 2801,
-    "discovery": 300,
-    "seed_tw": 159,
-    "seed_kr": 162,
     "seed_hk": 130,
-    "seed_sg": 76,
     "seed_mo": 110,
-    "seed_jp": 158
+    "seed_tw": 159,
+    "seed_jp": 158,
+    "seed_kr": 162,
+    "seed_sg": 76,
+    "extended": 2939,
+    "discovery": 299
   },
   "buckets": {
     "cn": {
-      "included": 3263,
+      "included": 3325,
       "gray": 0,
-      "total": 3264
+      "total": 3328
     },
     "hk": {
-      "included": 163,
+      "included": 159,
       "gray": 0,
-      "total": 167
-    },
-    "sg": {
-      "included": 76,
-      "gray": 0,
-      "total": 84
-    },
-    "kr": {
-      "included": 162,
-      "gray": 0,
-      "total": 165
-    },
-    "tw": {
-      "included": 171,
-      "gray": 0,
-      "total": 199
-    },
-    "jp": {
-      "included": 158,
-      "gray": 0,
-      "total": 162
+      "total": 164
     },
     "mo": {
       "included": 111,
       "gray": 0,
       "total": 111
     },
-    "unclassified": 366
+    "tw": {
+      "included": 172,
+      "gray": 0,
+      "total": 200
+    },
+    "jp": {
+      "included": 162,
+      "gray": 0,
+      "total": 162
+    },
+    "kr": {
+      "included": 165,
+      "gray": 0,
+      "total": 165
+    },
+    "sg": {
+      "included": 146,
+      "gray": 0,
+      "total": 149
+    },
+    "unclassified": 376
   },
-  "generated_at": "2026-04-29T23:49:34Z",
+  "generated_at": "2026-04-30T05:17:54Z",
   "auto_purged": 0,
   "auto_promoted": 0,
   "auto_dead_removed": 0,
   "processing_errors": 0,
-  "sticky_retained": 474,
+  "sticky_retained": 534,
   "workers": 20,
   "discovery_sample": 300
 }
