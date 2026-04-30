@@ -1,29 +1,28 @@
 # DomainNova - SG domains
-# Generated: 2026-04-30T06:25:48Z
-# Count: 140
+# Generated: 2026-04-30T13:19:00Z
+# Count: 133
 263.net
 3171688.com
 321009.com
 333.com
-4000kbpe.bar
 51credit.com
 6xw.com
 8world.com
 99.co
 acra.gov.sg
 aicoin.com
-beyoner.net
+ay-china.com
 bh568.com
 biohyalux.com
 caas.gov.sg
 carousell.com
 carousell.sg
+ceshi.com
 changiairport.com
 channelnewsasia.com
 coldstorage.com.sg
 comfortdelgro.com
 cpf.gov.sg
-cqgmfw.com
 cqjsaq.com
 csa.gov.sg
 ctsho.com
@@ -34,6 +33,7 @@ edb.gov.sg
 enterprise.gov.sg
 fairprice.com.sg
 foodpanda.sg
+functionaltextilesshanghai.com
 go.gov.sg
 gov.sg
 grab.com
@@ -45,19 +45,15 @@ haoranbio.com
 hdb.gov.sg
 hongkongdaily.net
 hsrjtk.com
-hzhxsy.com
 ica.gov.sg
 imda.gov.sg
 iras.gov.sg
-iyouxin.com
 izhangan.com
 jobstreet.com.sg
+joywellsemi.com
 jslvzhigu.com
 judiciary.gov.sg
-kjcmxx.com
 lazada.sg
-licancan.com
-lijiangbooks.com
 lta.gov.sg
 m1.com.sg
 mas.gov.sg
@@ -91,7 +87,7 @@ qoo10.sg
 san-yang.com
 sbstransit.com.sg
 scdf.gov.sg
-seaide.com
+sczxmr.com
 segmentfault.com
 sentosa.com.sg
 sgix.sg
@@ -106,8 +102,8 @@ sistic.com.sg
 sit.edu.sg
 smrt.com.sg
 smu.edu.sg
+snowflake.pink
 sogou.com
-soso.com
 souche.com
 spgroup.com.sg
 starhub.com
@@ -115,11 +111,9 @@ stbieshu.com
 straitstimes.com
 streetdirectory.com
 sutd.edu.sg
-sybasebbs.com
 tech.gov.sg
 tieyou.com
 todayonline.com
-travelgo.com
 uhouzz.com
 ulife.com
 uob.com.sg
@@ -128,8 +122,6 @@ visitsingapore.com
 weixinyunduan.com
 wellcee.com
 winkkie.com
-wobangzhao.com
-xiajuan88.com
 xiecheng.com
 xn--fiqs8sr9ge7eb4b28vo92a.com
 youhaosoft.com
@@ -138,6 +130,7 @@ yywt.online
 zaobao.com.sg
 zjlib.com
 zkzbkj.com
+zngm.com
 zqygame.com
 zshandsome.com
 zxkq022.com
