@@ -1,9 +1,9 @@
 # DomainNova - HK domains
-# Generated: 2026-04-30T05:17:54Z
-# Count: 159
+# Generated: 2026-04-30T06:25:48Z
+# Count: 160
 163.net
+3600.net
 3hk.hk
-6b3cfa277bae3b4b.com
 aastocks.com
 alipay.hk
 alipayhk.com
@@ -25,6 +25,7 @@ citibank.com.hk
 cityu.edu.hk
 clp.com.hk
 cmab.gov.hk
+cqxqz.com
 crcbank.com
 crhk.com.hk
 csb.gov.hk
@@ -33,6 +34,7 @@ cso.gov.hk
 cstb.gov.hk
 ctfe.com
 ctgoodjobs.hk
+ctiforum.com
 cuhk.edu.hk
 cuhkmc.hk
 cxexpress.com
@@ -55,7 +57,6 @@ gxkfy.com
 ha.org.hk
 hangseng.com
 hb.gov.hk
-hbszzk.com
 hgc.com.hk
 hk01.com
 hkairport.com
@@ -93,22 +94,23 @@ huoche.net
 hyab.gov.hk
 icac.org.hk
 info.gov.hk
+isawuhan.com
 isd.gov.hk
 jardines.com
 jd.hk
-jiangguimei.asia
 job853.com
 jobsdb.com
+kingpower-cn.com
 klook.com
+kooaoo.com
+kuaichala.com
 lcsd.gov.hk
 lihkg.com
 ln.edu.hk
 lwb.gov.hk
 lzskqyy.com
-macaobusinessnews.com
 mclcinema.com
 mingpao.com
-mrlxc51byo.com
 mtr.com.hk
 newhua.com
 nowtv.now.com
@@ -150,13 +152,12 @@ wheelockcompany.com
 winglungbank.com
 www.mybus.com.cn
 xiaohongtao.art
-xn--ptua509t.com
 xpcha.com
 yahoo.com.hk
 yata.hk
 yesstyle.com
 ygym.org
-youwo.com
+ynjiaoyu.net
 za.group
-zhuyili.org
-zongyixun.com
+zhuayoukong.com
+zsanxing.com
