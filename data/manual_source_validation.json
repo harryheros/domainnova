@@ -5,6 +5,42 @@
     "invalid": [],
     "unsectioned": []
   },
+  "seed_hk": {
+    "count": 130,
+    "duplicates": [],
+    "invalid": [],
+    "unsectioned": []
+  },
+  "seed_mo": {
+    "count": 110,
+    "duplicates": [],
+    "invalid": [],
+    "unsectioned": []
+  },
+  "seed_tw": {
+    "count": 159,
+    "duplicates": [],
+    "invalid": [],
+    "unsectioned": []
+  },
+  "seed_jp": {
+    "count": 158,
+    "duplicates": [],
+    "invalid": [],
+    "unsectioned": []
+  },
+  "seed_kr": {
+    "count": 162,
+    "duplicates": [],
+    "invalid": [],
+    "unsectioned": []
+  },
+  "seed_sg": {
+    "count": 76,
+    "duplicates": [],
+    "invalid": [],
+    "unsectioned": []
+  },
   "extended": {
     "count": 2956,
     "duplicates": [],
@@ -876,6 +912,23 @@
     ]
   },
   "cross_source_overlap": [
-    "beian.gov.cn"
-  ]
+    "7-11.com.tw",
+    "acer.com",
+    "beian.gov.cn",
+    "bnext.com.tw",
+    "businesstoday.com.tw",
+    "judicial.gov.tw",
+    "mediatek.com",
+    "ncku.edu.tw",
+    "nhi.gov.tw",
+    "nthu.edu.tw",
+    "ntust.edu.tw",
+    "nycu.edu.tw",
+    "pcstore.com.tw",
+    "rti.org.tw",
+    "taipower.com.tw",
+    "taiwanmobile.com",
+    "water.gov.tw"
+  ],
+  "cross_seed_overlap": {}
 }
