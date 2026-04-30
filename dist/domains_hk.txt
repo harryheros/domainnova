@@ -1,7 +1,8 @@
 # DomainNova - HK domains
-# Generated: 2026-04-30T16:19:55Z
-# Count: 156
+# Generated: 2026-04-30T21:45:40Z
+# Count: 163
 163.net
+365good.cc
 3hk.hk
 aastocks.com
 alipay.hk
@@ -49,12 +50,12 @@ fso.gov.hk
 fstb.gov.hk
 fwd.com.hk
 gcc.edu.hk
-gourmet114.com
 gov.hk
 gxkfy.com
 ha.org.hk
 hangseng.com
 hb.gov.hk
+hengyulighting.com
 hgc.com.hk
 hk01.com
 hkairport.com
@@ -88,45 +89,50 @@ hku.hk
 hongkongairlines.com
 hongkongpost.hk
 hsbc.com.hk
+huachenit.com
+huaxiabeidou.com
 huoche.net
 hyab.gov.hk
 icac.org.hk
 info.gov.hk
 isd.gov.hk
 jardines.com
-javabikes.com
 jd.hk
 job853.com
 jobsdb.com
 klook.com
 lcsd.gov.hk
 lihkg.com
-likeji.net
+linuxidc.net
 ln.edu.hk
 lwb.gov.hk
 lzskqyy.com
 mclcinema.com
-meexx.xyz
 mingpao.com
 mtr.com.hk
+n12345.com
 newhua.com
 nowtv.now.com
 oceanpark.com.hk
 octopus.com.hk
+ofenka.com
 on.cc
 openrice.com
 pccw.com
 pgyy.com
 polyu.edu.hk
+qqpifu.com
+rsxmgl.com
 rthk.hk
+ruitian.com
 sb.gov.hk
 sc.com
 scmp.com
 sfc.hk
 sfu.edu.hk
-shandongqinuo.com
 singtao.com
 smartone.com
+spacesystech.com
 staticfile.org
 sth.org.hk
 stheadline.com
@@ -135,6 +141,7 @@ takungpao.com
 three.com.hk
 tmall.hk
 tom.com
+tototang.com
 tungwah.org.hk
 tvb.com
 twc.edu.hk
@@ -156,4 +163,4 @@ yata.hk
 yesstyle.com
 ygym.org
 za.group
-zksoftwaresz.com
+zmkmex.com
