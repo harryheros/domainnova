@@ -5,9 +5,12 @@
 DomainNova is an open intelligence dataset and tooling layer for domain, network, and infrastructure analysis across the Asia-Pacific region.
 
 [![Update](https://github.com/harryheros/domainnova/actions/workflows/update.yml/badge.svg)](https://github.com/harryheros/domainnova/actions/workflows/update.yml)
-[![Version](https://img.shields.io/badge/version-v3.1-blue)](https://github.com/harryheros/domainnova/releases/tag/v3.1)
+[![Version](https://img.shields.io/badge/version-v3.1-blue)](https://github.com/harryheros/domainnova/releases)
 
 ---
+
+
+> **License Notice**: Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) as of 2026-04-30. Commercial use of any version requires explicit written permission from the author.
 
 ## What this is
 
@@ -203,8 +206,7 @@ Discovery candidates are managed automatically — do not edit `sources/manual/d
 
 ## License
 
-Data: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) — public domain.  
-Scripts: MIT.
+[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) — Attribution-NonCommercial-ShareAlike.
 
 ---
 
@@ -219,6 +221,7 @@ DomainNova is part of the Nova infrastructure toolkit:
 | [ShieldNova](https://github.com/harryheros/shieldnova) | Domain (Filter) | Compatibility-first domain intelligence for privacy, ad blocking, and security |
 | [HarryWrt](https://github.com/harryheros/harrywrt) | Device | Clean OpenWrt-based firmware for x86_64 and aarch64 (BIOS & UEFI) |
 | [OSNova](https://github.com/harryheros/osnova) | System | System deployment and reinstallation engine for VPS and bare-metal servers |
+
 ---
 
 Part of the [Nova infrastructure toolkit](https://github.com/harryheros).
