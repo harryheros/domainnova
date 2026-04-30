@@ -11,6 +11,7 @@ DomainNova is an open intelligence dataset and tooling layer for domain, network
 
 
 > **License Notice**: All versions of this project, including historical commits, are licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). Commercial use of any version requires a separate written license agreement.
+> **Versioning Notice**: Previous public versions of this project may have been distributed under different license terms. All current and future releases are governed solely by the LICENSE file in this repository.
 
 ## What this is
 
@@ -209,7 +210,7 @@ Discovery candidates are managed automatically — do not edit `sources/manual/d
 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) — Attribution-NonCommercial-ShareAlike.
 
 - **Non-commercial use**: Permitted under the terms of CC BY-NC-SA 4.0.
-- **Commercial use**: Requires a separate written license agreement. Contact via [GitHub Issues](https://github.com/harryheros/domainnova/issues).
+- **Commercial use**: Commercial use, SaaS deployment, API resale, redistribution, or integration into paid products or services requires explicit prior written authorization from the author. See [COMMERCIAL_LICENSE.md](./COMMERCIAL_LICENSE.md) or contact via [GitHub Issues](https://github.com/harryheros/domainnova/issues).
 
 ---
 
