@@ -34,7 +34,6 @@ jobs:
 
       - name: Validate manual sources
         run: python sources/scripts/validate_manual_sources.py
-        continue-on-error: true
 
       # Discovery agents - run monthly or on manual trigger
       - name: Run discovery agents
@@ -49,8 +48,6 @@ jobs:
           python sources/discovery_agents/agent_ip_neighbor.py
           echo "[+] Running CT logs agent..."
           python sources/discovery_agents/agent_ct_logs.py
-        continue-on-error: true
-
       - name: Build domain artifacts
         run: python sources/scripts/build_domains.py
 

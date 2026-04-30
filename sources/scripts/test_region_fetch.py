@@ -96,11 +96,11 @@ class TestCountCidrLines(unittest.TestCase):
 
 class TestFetchOneRegion(unittest.TestCase):
     def test_success(self):
-        text = _big_cidr_blob(0, 100)
+        text = _big_cidr_blob(0, 500)
         session = MagicMock()
         session.get.return_value = _mk_resp(text)
         nets = _fetch_one_region_cidrs(session, "HK", "http://x")
-        self.assertEqual(len(nets), 100)
+        self.assertEqual(len(nets), 500)
 
     def test_http_failure_returns_empty(self):
         session = MagicMock()
@@ -116,7 +116,7 @@ class TestFetchOneRegion(unittest.TestCase):
 
     def test_sanity_fuse_below_threshold(self):
         # 49 lines < IPNOVA_MIN_LINES (50) → empty
-        text = _big_cidr_blob(0, 49)
+        text = _big_cidr_blob(0, 499)
         session = MagicMock()
         session.get.return_value = _mk_resp(text)
         nets = _fetch_one_region_cidrs(session, "HK", "http://x")
@@ -124,11 +124,11 @@ class TestFetchOneRegion(unittest.TestCase):
 
     def test_sanity_fuse_at_threshold(self):
         # exactly 50 lines → passes
-        text = _big_cidr_blob(0, 50)
+        text = _big_cidr_blob(0, 500)
         session = MagicMock()
         session.get.return_value = _mk_resp(text)
         nets = _fetch_one_region_cidrs(session, "HK", "http://x")
-        self.assertEqual(len(nets), 50)
+        self.assertEqual(len(nets), 500)
 
     def test_sanity_fuse_truncated_response(self):
         # Simulates a partial 502: only header + 3 lines
@@ -140,21 +140,24 @@ class TestFetchOneRegion(unittest.TestCase):
 
 
 class TestFetchRegionCidrs(unittest.TestCase):
-    def test_all_four_buckets_returned(self):
+    def test_all_region_buckets_returned(self):
         session = MagicMock()
-        session.get.return_value = _mk_resp(_big_cidr_blob(0, 100))
+        session.get.return_value = _mk_resp(_big_cidr_blob(0, 3000))
         result = fetch_region_cidrs(session)
-        self.assertEqual(set(result.keys()), {"CN", "HK", "MO", "TW"})
-        for bucket in ("CN", "HK", "MO", "TW"):
-            self.assertEqual(len(result[bucket]), 100)
+        self.assertEqual(set(result.keys()), {"CN", "HK", "MO", "TW", "JP", "KR", "SG"})
+        for bucket in ("CN", "HK", "MO", "TW", "JP", "KR", "SG"):
+            self.assertEqual(len(result[bucket]), 3000)
 
     def test_partial_degradation_does_not_abort(self):
         # CN ok, HK truncated, MO ok, TW network failure
         responses = {
-            "CN": _mk_resp(_big_cidr_blob(1, 200)),
+            "CN": _mk_resp(_big_cidr_blob(1, 3000)),
             "HK": _mk_resp("1.0.0.0/24\n"),  # < 50 lines
             "MO": _mk_resp(_big_cidr_blob(3, 60)),
             "TW": None,  # raises
+            "JP": _mk_resp(_big_cidr_blob(5, 2000)),
+            "KR": _mk_resp(_big_cidr_blob(6, 800)),
+            "SG": _mk_resp(_big_cidr_blob(7, 200)),
         }
 
         def fake_get(url, timeout=None, **kw):
@@ -169,7 +172,7 @@ class TestFetchRegionCidrs(unittest.TestCase):
         session = MagicMock()
         session.get.side_effect = fake_get
         result = fetch_region_cidrs(session)
-        self.assertEqual(len(result["CN"]), 200)
+        self.assertEqual(len(result["CN"]), 3000)
         self.assertEqual(result["HK"], [])  # sanity-degraded
         self.assertEqual(len(result["MO"]), 60)
         self.assertEqual(result["TW"], [])  # network-degraded
@@ -178,7 +181,7 @@ class TestFetchRegionCidrs(unittest.TestCase):
         session = MagicMock()
         session.get.side_effect = requests.ConnectionError("offline")
         result = fetch_region_cidrs(session)
-        self.assertEqual(result, {"CN": [], "HK": [], "MO": [], "TW": []})
+        self.assertEqual(result, {"CN": [], "HK": [], "MO": [], "TW": [], "JP": [], "KR": [], "SG": []})
 
 
 class TestRegionLookupAndIpToBucket(unittest.TestCase):

@@ -225,7 +225,7 @@ class TestSeedHealthCheck(unittest.TestCase):
         self.assertIn("checked_at", data)
         self.assertIn("results", data)
         self.assertEqual(set(data["results"].keys()),
-                         {"seed_cn.txt", "seed_hk.txt", "seed_mo.txt", "seed_tw.txt"})
+                         {"seed_cn.txt", "seed_hk.txt", "seed_mo.txt", "seed_tw.txt", "seed_jp.txt", "seed_kr.txt", "seed_sg.txt"})
 
     def test_sample_size_caps_at_20(self):
         # 100 CN domains -> sample only 20
@@ -249,7 +249,7 @@ class TestSeedHealthCheck(unittest.TestCase):
         payload = seed_health_check(self.repo.root, self.lookup, session=None,
                                     rng=random.Random(0))
         cn = payload["results"]["seed_cn.txt"]
-        self.assertEqual(set(cn.keys()), {"region", "sampled", "consistent", "rate", "status"})
+        self.assertEqual(set(cn.keys()), {"region", "sampled", "resolved", "consistent", "rate", "status"})
         self.assertEqual(cn["region"], "CN")
 
 

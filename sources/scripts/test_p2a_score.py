@@ -222,7 +222,7 @@ class TestBuildRegionSignalsFlags(unittest.TestCase):
 
     def test_empty_ips(self):
         _, flags, _, _, _ = build_region_signals([], self.lookup)
-        self.assertEqual(flags, {"CN": 0, "HK": 0, "MO": 0, "TW": 0})
+        self.assertEqual(flags, {"CN": 0, "HK": 0, "MO": 0, "TW": 0, "JP": 0, "KR": 0, "SG": 0})
 
     def test_cn_flag_equals_legacy_dns_cn(self):
         """region_dns_flags["CN"] must equal legacy dns_cn for all inputs."""
@@ -337,6 +337,9 @@ class TestProcessDomainP2A(unittest.TestCase):
         self.assertIsInstance(rec.dns_hk, int)
         self.assertIsInstance(rec.dns_mo, int)
         self.assertIsInstance(rec.dns_tw, int)
+        self.assertIsInstance(rec.dns_jp, int)
+        self.assertIsInstance(rec.dns_kr, int)
+        self.assertIsInstance(rec.dns_sg, int)
 
 
 # ---------------------------------------------------------------------------
