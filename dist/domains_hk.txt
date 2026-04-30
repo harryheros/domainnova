@@ -1,9 +1,9 @@
 # DomainNova - HK domains
-# Generated: 2026-04-30T21:45:40Z
-# Count: 163
+# Generated: 2026-04-30T23:36:22Z
+# Count: 159
 163.net
-365good.cc
 3hk.hk
+6b3cfa277bae3b4b.com
 aastocks.com
 alipay.hk
 alipayhk.com
@@ -55,7 +55,7 @@ gxkfy.com
 ha.org.hk
 hangseng.com
 hb.gov.hk
-hengyulighting.com
+hbszzk.com
 hgc.com.hk
 hk01.com
 hkairport.com
@@ -89,8 +89,6 @@ hku.hk
 hongkongairlines.com
 hongkongpost.hk
 hsbc.com.hk
-huachenit.com
-huaxiabeidou.com
 huoche.net
 hyab.gov.hk
 icac.org.hk
@@ -98,33 +96,30 @@ info.gov.hk
 isd.gov.hk
 jardines.com
 jd.hk
+jiangguimei.asia
 job853.com
 jobsdb.com
 klook.com
 lcsd.gov.hk
 lihkg.com
-linuxidc.net
 ln.edu.hk
 lwb.gov.hk
 lzskqyy.com
+macaobusinessnews.com
 mclcinema.com
 mingpao.com
+mrlxc51byo.com
 mtr.com.hk
-n12345.com
 newhua.com
 nowtv.now.com
 oceanpark.com.hk
 octopus.com.hk
-ofenka.com
 on.cc
 openrice.com
 pccw.com
 pgyy.com
 polyu.edu.hk
-qqpifu.com
-rsxmgl.com
 rthk.hk
-ruitian.com
 sb.gov.hk
 sc.com
 scmp.com
@@ -132,7 +127,6 @@ sfc.hk
 sfu.edu.hk
 singtao.com
 smartone.com
-spacesystech.com
 staticfile.org
 sth.org.hk
 stheadline.com
@@ -141,7 +135,6 @@ takungpao.com
 three.com.hk
 tmall.hk
 tom.com
-tototang.com
 tungwah.org.hk
 tvb.com
 twc.edu.hk
@@ -157,10 +150,13 @@ wheelockcompany.com
 winglungbank.com
 www.mybus.com.cn
 xiaohongtao.art
+xn--ptua509t.com
 xpcha.com
 yahoo.com.hk
 yata.hk
 yesstyle.com
 ygym.org
+youwo.com
 za.group
-zmkmex.com
+zhuyili.org
+zongyixun.com
