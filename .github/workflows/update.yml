@@ -19,6 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      issues: write
 
     steps:
       - name: Checkout
@@ -92,3 +93,48 @@ jobs:
             git commit -m "chore: auto-update $(date -u +%Y-%m-%d)"
             git push
           fi
+
+  notify-failure:
+    runs-on: ubuntu-latest
+    needs: update
+    if: ${{ needs.update.result == 'failure' }}
+    permissions:
+      issues: write
+
+    steps:
+      - name: Create failure issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = `DomainNova update failed — ${new Date().toISOString().split('T')[0]}`;
+            const body = [
+              '## DomainNova automated update failed',
+              '',
+              `**Workflow run:** ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+              '',
+              'Possible causes:',
+              '- DoH upstream unavailable or DNS resolution degraded',
+              '- ipnova CIDR data unavailable or corrupted',
+              '- Discovery agent failure',
+              '- Build script validation failure',
+              '',
+              'Please investigate the workflow logs and re-run manually if needed.',
+            ].join('\n');
+
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'ci-failure',
+              per_page: 5,
+            });
+
+            if (issues.data.length === 0) {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+                labels: ['ci-failure'],
+              });
+            }

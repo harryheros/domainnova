@@ -27,6 +27,12 @@ import time
 from pathlib import Path
 from typing import List, Set
 
+# Allow this agent to be executed directly from the repository root by
+# GitHub Actions while still reusing constants from sources/scripts.
+SCRIPTS_DIR = Path(__file__).resolve().parents[1] / "scripts"
+if str(SCRIPTS_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPTS_DIR))
+
 import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
