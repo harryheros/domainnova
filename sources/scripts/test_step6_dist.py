@@ -89,13 +89,13 @@ class TestWriteDistBuckets(unittest.TestCase):
         rows = [_rec("classified.cn", "CN"), _rec("unknown.com", "")]
         write_dist_buckets(self.dist, rows)
         self.assertEqual(self._read_domains("domains_cn.txt"), ["classified.cn"])
-        for b in ("hk", "mo", "tw"):
+        for b in ("hk", "mo", "tw", "jp", "kr", "sg"):
             self.assertEqual(self._read_domains(f"domains_{b}.txt"), [])
 
     def test_returns_counts(self):
         rows = [_rec("a.cn", "CN"), _rec("b.cn", "CN"), _rec("c.hk", "HK")]
         counts = write_dist_buckets(self.dist, rows)
-        self.assertEqual(counts, {"cn": 2, "hk": 1, "mo": 0, "tw": 0})
+        self.assertEqual(counts, {"cn": 2, "hk": 1, "mo": 0, "tw": 0, "jp": 0, "kr": 0, "sg": 0})
 
     def test_mutual_exclusion_invariant(self):
         # PROPOSAL §7.1.2: 4 dist files must be pairwise disjoint
@@ -107,7 +107,7 @@ class TestWriteDistBuckets(unittest.TestCase):
         ]
         write_dist_buckets(self.dist, rows)
         sets = {b: set(self._read_domains(f"domains_{b}.txt"))
-                for b in ("cn", "hk", "mo", "tw")}
+                for b in ("cn", "hk", "mo", "tw", "jp", "kr", "sg")}
         keys = list(sets)
         for i in range(len(keys)):
             for j in range(i + 1, len(keys)):

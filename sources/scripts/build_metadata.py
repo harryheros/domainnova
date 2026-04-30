@@ -34,7 +34,15 @@ from pathlib import Path
 from typing import Iterable
 
 ROOT          = Path(__file__).resolve().parents[2]
-SEED_FILE     = ROOT / "sources" / "manual" / "seed_cn.txt"
+SEED_FILES = {
+    "seed_cn": ROOT / "sources" / "manual" / "seed_cn.txt",
+    "seed_hk": ROOT / "sources" / "manual" / "seed_hk.txt",
+    "seed_mo": ROOT / "sources" / "manual" / "seed_mo.txt",
+    "seed_tw": ROOT / "sources" / "manual" / "seed_tw.txt",
+    "seed_jp": ROOT / "sources" / "manual" / "seed_jp.txt",
+    "seed_kr": ROOT / "sources" / "manual" / "seed_kr.txt",
+    "seed_sg": ROOT / "sources" / "manual" / "seed_sg.txt",
+}
 EXTENDED_FILE = ROOT / "sources" / "manual" / "extended.txt"
 
 OUT_JSON       = ROOT / "data" / "domains_metadata.json"
@@ -196,18 +204,39 @@ def entries_to_yaml(entries: list[DomainMeta]) -> str:
 # Main
 # ---------------------------------------------------------------------------
 def run(write_all: bool = True, validate_only: bool = False) -> None:
-    seed_entries     = parse_source(SEED_FILE,     "seed_cn")
+    seed_entries_by_source = {
+        source: parse_source(path, source)
+        for source, path in SEED_FILES.items()
+    }
+    seed_entries = [e for entries in seed_entries_by_source.values() for e in entries]
     extended_entries = parse_source(EXTENDED_FILE, "extended")
 
     # ---- Validation ----
     validation_report = {
-        "seed_cn":     validate(SEED_FILE),
-        "extended": validate(EXTENDED_FILE),
+        source: validate(path)
+        for source, path in SEED_FILES.items()
     }
+    validation_report["extended"] = validate(EXTENDED_FILE)
+
     # Cross-source overlap
     seed_set     = {e.domain for e in seed_entries}
     extended_set = {e.domain for e in extended_entries}
     validation_report["cross_source_overlap"] = sorted(seed_set & extended_set)
+
+    # Cross-seed overlap: regional seed files are forced buckets, so overlap
+    # should be visible in metadata validation rather than silently hidden.
+    seed_domains_by_source = {
+        source: {e.domain for e in entries}
+        for source, entries in seed_entries_by_source.items()
+    }
+    seed_overlap = {}
+    sources = list(seed_domains_by_source)
+    for i, left in enumerate(sources):
+        for right in sources[i + 1:]:
+            overlap = sorted(seed_domains_by_source[left] & seed_domains_by_source[right])
+            if overlap:
+                seed_overlap[f"{left} ∩ {right}"] = overlap
+    validation_report["cross_seed_overlap"] = seed_overlap
 
     print(json.dumps(validation_report, ensure_ascii=False, indent=2))
 

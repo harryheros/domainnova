@@ -48,6 +48,7 @@ from collections import Counter
 from dataclasses import dataclass, asdict, fields
 from pathlib import Path
 from threading import Lock
+import threading
 from typing import Dict, List, Optional, Tuple
 
 import requests
@@ -158,10 +159,13 @@ ENABLE_RDAP = os.getenv("DOMAINNOVA_RDAP", "0") == "1"
 CN_TLDS = (".cn", ".xn--fiqs8s", ".xn--55qx5d", ".xn--io0a7i")
 
 USER_AGENT = "DomainNova/BuildPipeline (+https://github.com/harryheros/domainnova)"
+REGION_ORDER = ("CN", "HK", "MO", "TW", "JP", "KR", "SG")
+REGION_LOWER = tuple(b.lower() for b in REGION_ORDER)
 
 PRINT_LOCK   = Lock()
 COUNTER_LOCK = Lock()
 _doh_index   = 0
+_thread_local = threading.local()
 
 
 # ---------------------------------------------------------------------------
@@ -188,6 +192,9 @@ class DomainRecord:
     dns_hk:        int = 0
     dns_mo:        int = 0
     dns_tw:        int = 0
+    dns_jp:        int = 0
+    dns_kr:        int = 0
+    dns_sg:        int = 0
 
 
 # ---------------------------------------------------------------------------
@@ -228,6 +235,19 @@ def make_session() -> requests.Session:
     # Accept header is set per-request (JSON vs wireformat differs)
     session.headers.update({"User-Agent": USER_AGENT})
     return session
+
+
+def get_thread_session() -> requests.Session:
+    """Return one requests.Session per worker thread.
+
+    The build resolves domains concurrently; sharing a single Session across
+    threads can cause connection-pool races and flaky transport behavior.
+    """
+    sess = getattr(_thread_local, "session", None)
+    if sess is None:
+        sess = make_session()
+        _thread_local.session = sess
+    return sess
 
 
 def next_doh_upstream() -> str:
@@ -373,7 +393,7 @@ def fetch_region_cidrs(
     log("[+] Fetching ipnova multi-region CIDR lists (CN/HK/MO/TW/JP/KR/SG)...")
     out: Dict[str, List[ipaddress.IPv4Network]] = {}
     # Fetch in deterministic order so logs read CN→HK→MO→TW.
-    for bucket in ("CN", "HK", "MO", "TW", "JP", "KR", "SG"):
+    for bucket in REGION_ORDER:
         url = REGION_CIDR_URLS.get(bucket)
         if not url:
             log(f"[ERROR] REGION_CIDR_URLS missing entry for {bucket}; degraded to empty")
@@ -401,7 +421,7 @@ def ip_to_bucket(ip_str: str, region_lookup: RegionLookup) -> str:
 
     Returns: "CN" | "HK" | "MO" | "TW" | "" (no match in any region)
     """
-    for bucket in ("CN", "HK", "MO", "TW", "JP", "KR", "SG"):
+    for bucket in REGION_ORDER:
         lookup = region_lookup.get(bucket)
         if not lookup:
             continue
@@ -866,7 +886,9 @@ def _do_resolve(domain: str, upstream: str, session: requests.Session) -> List[s
     return ips
 
 
-def resolve_domain(domain: str, session: requests.Session) -> List[str]:
+def resolve_domain(domain: str, session: Optional[requests.Session]) -> List[str]:
+    if session is None:
+        session = get_thread_session()
     domain = normalize_domain(domain)
     if not domain:
         return []
@@ -948,10 +970,10 @@ def build_region_signals(
     dns_cn_count / dns_total / matched_cidr keep DomainRecord backward compat.
     """
     if not ips:
-        return [], {"CN": 0, "HK": 0, "MO": 0, "TW": 0}, 0, 0, ""
+        return [], {bucket: 0 for bucket in REGION_ORDER}, 0, 0, ""
 
     per_ip_buckets: List[str] = []
-    bucket_hit_counts: Dict[str, int] = {"CN": 0, "HK": 0, "MO": 0, "TW": 0}
+    bucket_hit_counts: Dict[str, int] = {bucket: 0 for bucket in REGION_ORDER}
     ipv4_total = 0
     matched_cn_cidrs: List[str] = []
     cn_lookup = region_lookup.get("CN") or {}
@@ -978,7 +1000,7 @@ def build_region_signals(
     # Compute per-region dns flags; all use the same 60% threshold.
     region_dns_flags: Dict[str, int] = {
         b: int(ipv4_total > 0 and (bucket_hit_counts[b] / ipv4_total) >= 0.60)
-        for b in ("CN", "HK", "MO", "TW")
+        for b in REGION_ORDER
     }
     # Legacy alias — kept for DomainRecord.dns_cn_count field (CN only)
     cn_count = bucket_hit_counts["CN"]
@@ -1014,7 +1036,7 @@ def score_record_for_bucket(
             return CN_TLD_FALLBACK_SCORE
         return 0
 
-    if bucket in ("HK", "MO", "TW"):
+    if bucket in REGION_ORDER and bucket != "CN":
         if dns_flag:
             return min(100, DNS_WEIGHT + (tld_flag * XX_TLD_WEIGHT))
         return 0
@@ -1106,7 +1128,7 @@ def decide_bucket(
         return forced
 
     # ---- Rule 3: per-IP voting -----------------------------------------------
-    votes: dict[str, int] = {"CN": 0, "HK": 0, "MO": 0, "TW": 0, "JP": 0, "KR": 0, "SG": 0}
+    votes: dict[str, int] = {bucket: 0 for bucket in REGION_ORDER}
     for b in ip_buckets:
         if b in votes:
             votes[b] += 1
@@ -1130,7 +1152,7 @@ def decide_bucket(
         return ""  # unclassified — no positive signal at all
 
     # Tie-break order: CN > HK > MO > TW
-    for bucket in ("CN", "HK", "MO", "TW", "JP", "KR", "SG"):
+    for bucket in REGION_ORDER:
         if votes[bucket] == max_vote:
             return bucket
     return ""  # unreachable, but keeps type-checkers happy
@@ -1178,6 +1200,9 @@ def load_previous_rows(path: Path) -> Dict[str, DomainRecord]:
                         dns_hk=int(row.get("dns_hk", 0) or 0),
                         dns_mo=int(row.get("dns_mo", 0) or 0),
                         dns_tw=int(row.get("dns_tw", 0) or 0),
+                        dns_jp=int(row.get("dns_jp", 0) or 0),
+                        dns_kr=int(row.get("dns_kr", 0) or 0),
+                        dns_sg=int(row.get("dns_sg", 0) or 0),
                     )
                 except (ValueError, KeyError):
                     # Skip malformed row; never let one bad line break the build
@@ -1198,7 +1223,7 @@ def _tld_flag_for_bucket(domain: str, bucket: str) -> int:
     """
     if not bucket:
         return 0
-    suffix_map = {"CN": CN_TLDS, "HK": (".hk",), "MO": (".mo",), "TW": (".tw",)}
+    suffix_map = {"CN": CN_TLDS, "HK": (".hk",), "MO": (".mo",), "TW": (".tw",), "JP": (".jp",), "KR": (".kr",), "SG": (".sg",)}
     suffixes = suffix_map.get(bucket)
     if not suffixes:
         return 0
@@ -1226,6 +1251,9 @@ def process_domain(
     dns_hk = region_dns_flags["HK"]
     dns_mo = region_dns_flags["MO"]
     dns_tw = region_dns_flags["TW"]
+    dns_jp = region_dns_flags["JP"]
+    dns_kr = region_dns_flags["KR"]
+    dns_sg = region_dns_flags["SG"]
 
     bucket = decide_bucket(domain, source, per_ip_buckets, dns_cn)
 
@@ -1286,6 +1314,9 @@ def process_domain(
                 dns_hk=prev.dns_hk,
                 dns_mo=prev.dns_mo,
                 dns_tw=prev.dns_tw,
+                dns_jp=prev.dns_jp,
+                dns_kr=prev.dns_kr,
+                dns_sg=prev.dns_sg,
             )
 
     return DomainRecord(
@@ -1306,6 +1337,9 @@ def process_domain(
         dns_hk=dns_hk,
         dns_mo=dns_mo,
         dns_tw=dns_tw,
+        dns_jp=dns_jp,
+        dns_kr=dns_kr,
+        dns_sg=dns_sg,
     )
 
 
@@ -1372,8 +1406,8 @@ def manage_discovery_lifecycle(
             continue
         domain = row.domain
 
-        if row.dns_cn == 1:
-            # Passed CN check
+        if row.bucket in REGION_ORDER and row.score >= INCLUDE_THRESHOLD:
+            # Passed regional check
             hit_counts[domain]  = hit_counts.get(domain, 0) + 1
             fail_counts.pop(domain, None)
 
@@ -1387,7 +1421,7 @@ def manage_discovery_lifecycle(
             # This prevents legitimate domains with flaky DNS from being purged.
             pass
         else:
-            # Resolved to IPs but none matched CN CIDRs → definitive failure
+            # Resolved to IPs but no qualifying regional signal → definitive failure
             fail_counts[domain] = fail_counts.get(domain, 0) + 1
             hit_counts.pop(domain, None)
 
@@ -1643,7 +1677,7 @@ def write_dist_buckets(dist_dir: Path, rows: List[DomainRecord]) -> Dict[str, in
     counts: Dict[str, int] = {}
     generated_at = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
 
-    for bucket in ("CN", "HK", "MO", "TW", "JP", "KR", "SG"):
+    for bucket in REGION_ORDER:
         # P1 fix v2: ALL buckets use INCLUDE_THRESHOLD symmetrically.
         # Because process_domain now forces score=100 for all seed* sources,
         # seed-curated entries always pass. extended/discovery entries with
@@ -1734,13 +1768,13 @@ def write_stats(
     # all four buckets (was: CN-only count). Old dashboards continue to read
     # this key without 404, but the value now reflects total dist size.
     total_included = sum(
-        buckets_payload[b]["included"] for b in ("cn", "hk", "mo", "tw")
+        buckets_payload[b]["included"] for b in REGION_LOWER
     )
 
     payload = {
         "total_domains":     len(rows),
         "dist_domains":      total_included,
-        "seed_domains":      source_counts.get("seed_cn", 0),
+        "seed_domains":      sum(source_counts.get(f"seed_{b.lower()}", 0) for b in REGION_ORDER),
         "extended_domains":  source_counts.get("extended", 0),
         "discovery_domains": source_counts.get("discovery", 0),
         "score_bands":       dict(score_bands),
@@ -1796,7 +1830,7 @@ def build(repo_root: Path) -> None:
     with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
         future_map = {
             executor.submit(
-                process_domain, domain, source, session, region_lookup, updated, previous
+                process_domain, domain, source, None, region_lookup, updated, previous
             ): domain
             for domain, source in domains
         }
@@ -1812,13 +1846,14 @@ def build(repo_root: Path) -> None:
                 log(f"  [error] {future_map[future]}: {exc}")
 
     # Sort: seed first, then extended, then discovery; alphabetical within each
-    source_order = {"seed_cn": 0, "extended": 1, "discovery": 2}
+    source_order = {f"seed_{b.lower()}": i for i, b in enumerate(REGION_ORDER)}
+    source_order.update({"extended": 100, "discovery": 101})
     rows.sort(key=lambda r: (source_order.get(r.source, 9), r.domain))
 
     # Discovery lifecycle
     purged, promoted = manage_discovery_lifecycle(repo_root, rows)
     if purged:
-        log(f"[+] Purged {len(purged)} discovery domains (failed CN check)")
+        log(f"[+] Purged {len(purged)} discovery domains (failed regional check)")
     if promoted:
         log(f"[+] Promoted {len(promoted)} discovery domains -> extended")
 
