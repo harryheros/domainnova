@@ -1,7 +1,9 @@
 # DomainNova - SG domains
-# Generated: 2026-04-30T13:19:00Z
-# Count: 133
+# Generated: 2026-04-30T14:40:38Z
+# Count: 137
+25yi.com
 263.net
+264321.com
 3171688.com
 321009.com
 333.com
@@ -9,23 +11,24 @@
 6xw.com
 8world.com
 99.co
+9chew.com
 acra.gov.sg
 aicoin.com
-ay-china.com
 bh568.com
 biohyalux.com
 caas.gov.sg
 carousell.com
 carousell.sg
-ceshi.com
 changiairport.com
 channelnewsasia.com
+china-shimo.com
 coldstorage.com.sg
 comfortdelgro.com
 cpf.gov.sg
 cqjsaq.com
 csa.gov.sg
 ctsho.com
+czxiu.com
 dbs.com.sg
 dlsstax.com
 e-tecsun.com
@@ -33,7 +36,6 @@ edb.gov.sg
 enterprise.gov.sg
 fairprice.com.sg
 foodpanda.sg
-functionaltextilesshanghai.com
 go.gov.sg
 gov.sg
 grab.com
@@ -46,11 +48,11 @@ hdb.gov.sg
 hongkongdaily.net
 hsrjtk.com
 ica.gov.sg
+ihowguide.com
 imda.gov.sg
 iras.gov.sg
 izhangan.com
 jobstreet.com.sg
-joywellsemi.com
 jslvzhigu.com
 judiciary.gov.sg
 lazada.sg
@@ -67,6 +69,7 @@ mom.gov.sg
 mothership.sg
 motu.art
 msf.gov.sg
+mspace.cc
 mti.gov.sg
 myinfo.gov.sg
 nea.gov.sg
@@ -87,7 +90,6 @@ qoo10.sg
 san-yang.com
 sbstransit.com.sg
 scdf.gov.sg
-sczxmr.com
 segmentfault.com
 sentosa.com.sg
 sgix.sg
@@ -102,12 +104,12 @@ sistic.com.sg
 sit.edu.sg
 smrt.com.sg
 smu.edu.sg
-snowflake.pink
 sogou.com
 souche.com
 spgroup.com.sg
 starhub.com
 stbieshu.com
+stnn.cc
 straitstimes.com
 streetdirectory.com
 sutd.edu.sg
@@ -122,6 +124,8 @@ visitsingapore.com
 weixinyunduan.com
 wellcee.com
 winkkie.com
+wp.jun2020.com
+wysaid.org
 xiecheng.com
 xn--fiqs8sr9ge7eb4b28vo92a.com
 youhaosoft.com
@@ -130,7 +134,7 @@ yywt.online
 zaobao.com.sg
 zjlib.com
 zkzbkj.com
-zngm.com
+zmtquan.com
 zqygame.com
 zshandsome.com
 zxkq022.com
