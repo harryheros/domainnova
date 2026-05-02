@@ -42,7 +42,6 @@ sogoucdndl.com
 hexdo.com
 doov5g.com
 qcloudtt.com
-tdiac.com
 bikehome.net
 ttshengbei.com
 tpoxiaozhan.com
@@ -59,20 +58,9 @@ shanyuanms.com
 # --- ct-logs:%.gov.cn 2026-03-28 ---
 api.m.sgeg.sg.gov.cn
 hzfc.gov.cn
-cy.12366.gov.cn
-ftxwbt.gov.cn
-zhxy.swdx.km.gov.cn
 hrsszj.gov.cn
 jszwfw.gov.cn
 lzwenming.gov.cn
-fjxwcbj.gov.cn
-www.nzcgzf.gov.cn
-www.sdmsjw.gov.cn
-idc-lyncfe01.nbsti.gov.cn
-qd-n-tax.gov.cn
-10086.gxdx.gov.cn
-dyks.sdtg.gov.cn
-verify.hzfc.gov.cn
 ccad.gov.cn
 owa.thnet.gov.cn
 cc.119.gov.cn
@@ -154,7 +142,6 @@ hbfybj.com
 dscitroen.com.cn
 wow-diamond.com.cn
 msjyfund.com.cn
-hp-accessory.com.cn
 samsungshop.com.cn
 salala.com.cn
 
@@ -222,10 +209,6 @@ wp.jun2020.com
 # --- ip-neighbor:211.100.61.67 2026-03-28 ---
 
 # --- ct-logs:Xiaomi 2026-03-28 ---
-xiaomi--31.online
-xiaomi--36.online
-xiaomi-my-watch-lite-es-es--25135353.jasont.de
-a.market.xiaomi.com
 xiaomi--rostov.online
 xiaomi--astrahan.online
 xiaomi--bryansk.online
@@ -251,11 +234,7 @@ www.xiaomi-pad-2023-es-es--50845960.jasont.de
 xiaomi-11t-pro-5g-mit-vertrag--308049192.jasont.de
 xiaomi--31.ru
 xiaomi--kaluga.online
-www.xiaomi-11t-pro-5g-mit-vertrag--308049192.jasont.de
-www.xiaomi---rostov.online
-xiaomi--tolyatti.ru
 finda-xiaomi-redmi-10-es-es--961112066.menschistmensch.de
-xn--xiaomi--pgg7ct9bxa.iphone-repair-kirov.ru
 
 # --- upstream:felixonmars-accelerated 2026-04-01 ---
 volc-dns.com
