@@ -1,6 +1,6 @@
 # DomainNova - JP domains
-# Generated: 2026-05-02T21:18:51Z
-# Count: 162
+# Generated: 2026-05-02T23:16:19Z
+# Count: 163
 amazon.co.jp
 ameba.jp
 ana.co.jp
@@ -22,6 +22,7 @@ city.nagoya.lg.jp
 city.osaka.lg.jp
 city.sapporo.jp
 city.yokohama.lg.jp
+cnswds.com
 conoha.jp
 court.go.jp
 daiso-sangyo.co.jp
