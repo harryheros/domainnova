@@ -1,15 +1,16 @@
 # DomainNova - HK domains
-# Generated: 2026-05-01T14:54:41Z
-# Count: 162
+# Generated: 2026-05-02T14:42:07Z
+# Count: 160
 163.net
 3hk.hk
-51119.com
-86jg.com
+52112.com
+81rzqh.cfd
 aastocks.com
 alipay.hk
 alipayhk.com
 asia.ccb.com
 aswatson.com
+b8b4ix7bj.com
 baby-kingdom.com
 bankofchina.com.hk
 bastillepost.com
@@ -17,8 +18,8 @@ beijing120.com
 bigbigchannel.com.hk
 boc.hk
 bochk.com
+caifu500.net
 cathaypacific.com
-cdnvp.com
 cedb.gov.hk
 centennialcollege.hku.hk
 ceo.gov.hk
@@ -40,28 +41,24 @@ cuhkmc.hk
 cxexpress.com
 dahsing.com
 dbs.com.hk
-dianbo.org
 dididadidi.com
 dimbuy.com
 discuss.com.hk
 dragonfly.fm
-e32a01b94145bb23.com
 edb.gov.hk
 eduhk.hk
-ejie.me
 find853.com
 fortress.com.hk
 fso.gov.hk
 fstb.gov.hk
 fwd.com.hk
 gcc.edu.hk
+globalesim.shop
 gov.hk
 gxkfy.com
 ha.org.hk
 hangseng.com
 hb.gov.hk
-hbrzkj.com
-hfdsgs.com
 hgc.com.hk
 hk01.com
 hkairport.com
@@ -92,7 +89,6 @@ hksyu.edu
 hkt.com
 hktvmall.com
 hku.hk
-hnwhg.org
 hongkongairlines.com
 hongkongpost.hk
 hsbc.com.hk
@@ -108,15 +104,16 @@ jobsdb.com
 klook.com
 lcsd.gov.hk
 lihkg.com
-liyuplay.com
 ln.edu.hk
+loac.cc
 lwb.gov.hk
+lzmy123.com
 lzskqyy.com
 mclcinema.com
-meijiezaixian.net
 mingpao.com
 mtr.com.hk
 newhua.com
+njshenglue.com
 nowtv.now.com
 oceanpark.com.hk
 octopus.com.hk
@@ -125,7 +122,6 @@ openrice.com
 pccw.com
 pgyy.com
 polyu.edu.hk
-ppwow.cc
 rthk.hk
 sb.gov.hk
 sc.com
@@ -142,6 +138,7 @@ takungpao.com
 three.com.hk
 tmall.hk
 tom.com
+tpsbp.com
 tungwah.org.hk
 tvb.com
 twc.edu.hk
@@ -163,3 +160,4 @@ yata.hk
 yesstyle.com
 ygym.org
 za.group
+zj-gold.com
