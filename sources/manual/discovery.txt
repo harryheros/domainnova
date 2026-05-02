@@ -267,7 +267,6 @@ rtahengtai.com
 2677dl.com
 ebbcb476210291.beer
 content4ads.com
-thelastsky.com
 2d6cd83bf10261.beer
 first-panel.com
 
@@ -357,7 +356,6 @@ xmylhy.com
 
 # --- upstream:felixonmars-accelerated 2026-04-11 ---
 nationsky.com
-laxarq.com
 sccens.net
 hengshan01.com
 byte-test.net
@@ -534,7 +532,6 @@ fdzzjs.com
 360wzb.com
 jisutp.com
 nngrhj.com
-sex2ribenwuma.wiki
 fengniaohd.com
 cqallcure.com
 cbmsci.com
@@ -543,28 +540,19 @@ jshcxn.com
 xiqinrc.com
 bcbjjy.com
 jygz.org
-rdympjoqbu.work
-aliyunduncc.com
 gxxldl.com
-sydneyglobaltimes.com
-haoyou666.com
 rscazvdbfpbyzqdvpy1m.com
 ustarl.com
-poj.org
 volcengine-dns.com
 dnsng.net
 haiwenky.com
-xushenghb.com
-czhjs.com
 hongbizi.org
-wulong365.com
 xiutv.com
 qqwebapp.com
 7wan.com
 bfyx.net
 shandongqinuo.com
 guanhoulz.com
-gxygfund.com
 meexx.xyz
 yuwangcn.com
 
@@ -2124,3 +2112,26 @@ initrr.com
 loac.cc
 nmufh.com
 jw100.net
+
+# --- upstream:felixonmars-accelerated 2026-05-02 ---
+piccjs.com
+runnuokeji.com
+xiaodoubi.com
+fy35.com
+beifuni.com
+zjgzp.com
+seedpace.com
+cciup.com
+zhihuimami.com
+mubanwan.com
+acgorg.com
+xhu2.com
+aifoxtech.com
+imagiclouds.com
+tdsf.asia
+lzxinwenwang.com
+anshunholdinggroup.com
+pgjxo.com
+shejixf.com
+xiaodongrui.com
+cn-psy.com
