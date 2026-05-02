@@ -601,7 +601,6 @@ zjjtgc.com
 jiupaipay.com
 dplslab.com
 roclee.com
-ksbao.cc
 idesktopcal.com
 yynykj.com
 cdhr.net
@@ -663,32 +662,23 @@ msmartlife.com
 scommander.com
 ipanocloud.com
 67it.com
-yizhidayu.com
 taiqiedu.com
-duoshuo.com
 yingpost.com
 qxme.com
-ovellpump.com
 dldm.com
 likeji.net
 zksoftwaresz.com
 juewei.com
 scdyjyzx.com
-8130088.com
 
 # --- upstream:felixonmars-accelerated 2026-04-17 ---
-pj57.com
 jiaoko.com
 cecesat.com
-xn--4gq1d760bszbgdv5p12rhq5bx2yc.net
 gourmet114.com
 807df2a0610272.beer
-fymall1.com
 gf7979cn.com
 dde-desktop.org
 szjr-tencentclb.com
-selenlictio.com
-chenglangyun.com
 51ywx.com
 weifengchina.com
 xinfeiyu.net
@@ -788,7 +778,6 @@ shayugg.com
 coolkk.net
 bjsoho.com
 dtjh-bj.com
-dbqf.xyz
 cambodiafang.com
 xmzzy.net
 
@@ -808,7 +797,6 @@ xs9999.com
 e-peilian.com
 ruipupharma.com
 zmkmex.com
-douyinmusicvideo.com
 qzzdtc.com
 n12345.com
 cdn-build.com
@@ -821,14 +809,12 @@ talkingnews.net
 linuxidc.net
 bjdyhsy.com
 jcloudlb.com
-cq315house.com
 mcit.tech
 ofenka.com
 171tax.com
 njzhengluan.com
 titapark.com
 dingsheng.com
-87161.vip
 9973.com
 fjzzct.com
 gzcycling.com
@@ -844,13 +830,11 @@ myqqdd.com
 saicgroup.com
 wscncdn.com
 hongtu56.com
-ylhongjin.com
 0fl1j80347.xin
 wenhuakejiao.com
 
 # --- upstream:felixonmars-accelerated 2026-04-26 ---
 cjbjedu.com
-ad321.cc
 xdnphb.com
 hzshanjie.com
 huaxiabeidou.com
@@ -874,12 +858,10 @@ zdworks.com
 
 # --- upstream:felixonmars-accelerated 2026-04-26 ---
 daojialianmeng.com
-giscafer.com
 solarcare.com
 
 # --- upstream:felixonmars-accelerated 2026-04-26 ---
 glxkbz.com
-sclvb.com
 ebopark.com
 hzxdfpr.com
 ibangkf.com
@@ -888,13 +870,10 @@ bfgho.com
 51baigong.com
 ntkfqjy.com
 ahjsexam.com
-ajgts.com
 cyol.net
-guizhenwei.com
 dandang.org
 
 # --- upstream:felixonmars-accelerated 2026-04-26 ---
-688mob.com
 tietie.la
 maple-game.com
 china-whwaterexpo.com
@@ -908,13 +887,10 @@ xunsns.com
 dingdanggj.com
 adhei.com
 zixueren.com
-cloudstudio.club
 happymmall.com
 ku6img.com
-6a3ad24293be062d.com
 gxskf.com
 dljierui.com
-xc-fc.com
 iot0.net
 zmjm.com
 easeheal.com
@@ -2135,3 +2111,17 @@ pgjxo.com
 shejixf.com
 xiaodongrui.com
 cn-psy.com
+
+# --- upstream:felixonmars-accelerated 2026-05-02 ---
+998tool.com
+ltkgjt.com
+stupidet.com
+fusaide.com
+winallseed.com
+xxzfgjj.com
+nvcong.com
+goldlion-info.com
+sofujinyu.com
+shfangshui.com
+hlread.com
+lickeji.com
