@@ -4,4 +4,7 @@ __pycache__/
 .env
 .venv/
 *.log
-data/domains.csv			
+data/domains.csv
+
+# Generated intermediate files
+sources/generated/
