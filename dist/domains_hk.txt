@@ -1,7 +1,8 @@
 # DomainNova - HK domains
-# Generated: 2026-05-02T23:16:19Z
-# Count: 166
+# Generated: 2026-05-03T09:52:37Z
+# Count: 161
 163.net
+365good.cc
 3hk.hk
 aastocks.com
 alipay.hk
@@ -15,7 +16,6 @@ beijing120.com
 bigbigchannel.com.hk
 boc.hk
 bochk.com
-caiwu51.com
 cathaypacific.com
 cedb.gov.hk
 centennialcollege.hku.hk
@@ -44,19 +44,19 @@ discuss.com.hk
 dragonfly.fm
 edb.gov.hk
 eduhk.hk
-fengxb.com
 find853.com
 fortress.com.hk
 fso.gov.hk
 fstb.gov.hk
 fwd.com.hk
 gcc.edu.hk
-gourmet114.com
 gov.hk
 gxkfy.com
 ha.org.hk
 hangseng.com
 hb.gov.hk
+hbszzk.com
+hengyulighting.com
 hgc.com.hk
 hk01.com
 hkairport.com
@@ -90,7 +90,7 @@ hku.hk
 hongkongairlines.com
 hongkongpost.hk
 hsbc.com.hk
-huaxiabeidou.com
+huachenit.com
 huoche.net
 hyab.gov.hk
 icac.org.hk
@@ -98,34 +98,31 @@ info.gov.hk
 isd.gov.hk
 jardines.com
 jd.hk
+jiangguimei.asia
 job853.com
 jobsdb.com
 klook.com
+kmcits0716.com
 lcsd.gov.hk
 lihkg.com
-likeji.net
-linuxidc.net
 ln.edu.hk
 lwb.gov.hk
 lzskqyy.com
 mclcinema.com
 mingpao.com
+mrlxc51byo.com
 mtr.com.hk
-n12345.com
 newhua.com
 nowtv.now.com
 oceanpark.com.hk
 octopus.com.hk
-ofenka.com
 on.cc
 openrice.com
 pccw.com
 pgyy.com
 polyu.edu.hk
-qqpifu.com
-qzsfy.com
-rsxmgl.com
 rthk.hk
+ruitian.com
 sb.gov.hk
 sc.com
 scmp.com
@@ -133,22 +130,20 @@ sfc.hk
 sfu.edu.hk
 singtao.com
 smartone.com
+spacesystech.com
 staticfile.org
 sth.org.hk
 stheadline.com
 stpaul.org.hk
-taizibao.com
 takungpao.com
 three.com.hk
 tmall.hk
 tom.com
-tototang.com
 tungwah.org.hk
 tvb.com
 twc.edu.hk
 uowchk.edu.hk
 ust.hk
-uupei.com
 uwants.com
 vtc.edu.hk
 watsons.com.hk
@@ -164,6 +159,6 @@ yahoo.com.hk
 yata.hk
 yesstyle.com
 ygym.org
+youwo.com
 za.group
-zksoftwaresz.com
-zmkmex.com
+zongyixun.com
