@@ -1,9 +1,10 @@
 # DomainNova - HK domains
-# Generated: 2026-05-03T09:52:37Z
-# Count: 161
+# Generated: 2026-05-03T14:57:22Z
+# Count: 158
 163.net
-365good.cc
+3600.net
 3hk.hk
+6b3cfa277bae3b4b.com
 aastocks.com
 alipay.hk
 alipayhk.com
@@ -33,6 +34,7 @@ cso.gov.hk
 cstb.gov.hk
 ctfe.com
 ctgoodjobs.hk
+ctiforum.com
 cuhk.edu.hk
 cuhkmc.hk
 cxexpress.com
@@ -55,8 +57,6 @@ gxkfy.com
 ha.org.hk
 hangseng.com
 hb.gov.hk
-hbszzk.com
-hengyulighting.com
 hgc.com.hk
 hk01.com
 hkairport.com
@@ -90,7 +90,6 @@ hku.hk
 hongkongairlines.com
 hongkongpost.hk
 hsbc.com.hk
-huachenit.com
 huoche.net
 hyab.gov.hk
 icac.org.hk
@@ -98,19 +97,19 @@ info.gov.hk
 isd.gov.hk
 jardines.com
 jd.hk
-jiangguimei.asia
 job853.com
 jobsdb.com
+kingpower-cn.com
 klook.com
-kmcits0716.com
+kooaoo.com
 lcsd.gov.hk
 lihkg.com
 ln.edu.hk
 lwb.gov.hk
 lzskqyy.com
+macaobusinessnews.com
 mclcinema.com
 mingpao.com
-mrlxc51byo.com
 mtr.com.hk
 newhua.com
 nowtv.now.com
@@ -122,7 +121,6 @@ pccw.com
 pgyy.com
 polyu.edu.hk
 rthk.hk
-ruitian.com
 sb.gov.hk
 sc.com
 scmp.com
@@ -130,7 +128,6 @@ sfc.hk
 sfu.edu.hk
 singtao.com
 smartone.com
-spacesystech.com
 staticfile.org
 sth.org.hk
 stheadline.com
@@ -154,11 +151,11 @@ wheelockcompany.com
 winglungbank.com
 www.mybus.com.cn
 xiaohongtao.art
+xn--ptua509t.com
 xpcha.com
 yahoo.com.hk
 yata.hk
 yesstyle.com
 ygym.org
-youwo.com
 za.group
-zongyixun.com
+zhuyili.org
