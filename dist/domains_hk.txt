@@ -1,10 +1,9 @@
 # DomainNova - HK domains
-# Generated: 2026-05-03T21:47:30Z
-# Count: 165
+# Generated: 2026-05-04T05:45:59Z
+# Count: 159
 163.net
 3hk.hk
-51119.com
-86jg.com
+81rzqh.cfd
 aastocks.com
 alipay.hk
 alipayhk.com
@@ -18,7 +17,6 @@ bigbigchannel.com.hk
 boc.hk
 bochk.com
 cathaypacific.com
-cdnvp.com
 cedb.gov.hk
 centennialcollege.hku.hk
 ceo.gov.hk
@@ -27,7 +25,6 @@ citibank.com.hk
 cityu.edu.hk
 clp.com.hk
 cmab.gov.hk
-cqxqz.com
 crcbank.com
 crhk.com.hk
 csb.gov.hk
@@ -41,14 +38,13 @@ cuhkmc.hk
 cxexpress.com
 dahsing.com
 dbs.com.hk
-dianbo.org
 dididadidi.com
 dimbuy.com
 discuss.com.hk
 dragonfly.fm
-e32a01b94145bb23.com
 edb.gov.hk
 eduhk.hk
+ejie.me
 find853.com
 fortress.com.hk
 fso.gov.hk
@@ -60,8 +56,6 @@ gxkfy.com
 ha.org.hk
 hangseng.com
 hb.gov.hk
-hbrzkj.com
-hfdsgs.com
 hgc.com.hk
 hk01.com
 hkairport.com
@@ -92,6 +86,7 @@ hksyu.edu
 hkt.com
 hktvmall.com
 hku.hk
+hnwhg.org
 hongkongairlines.com
 hongkongpost.hk
 hsbc.com.hk
@@ -99,24 +94,24 @@ huoche.net
 hyab.gov.hk
 icac.org.hk
 info.gov.hk
-isawuhan.com
 isd.gov.hk
 jardines.com
 jd.hk
 job853.com
 jobsdb.com
 klook.com
-kuaichala.com
 lcsd.gov.hk
 lihkg.com
+liyuplay.com
 ln.edu.hk
+loac.cc
 lwb.gov.hk
 lzskqyy.com
 mclcinema.com
-meijiezaixian.net
 mingpao.com
 mtr.com.hk
 newhua.com
+njshenglue.com
 nowtv.now.com
 oceanpark.com.hk
 octopus.com.hk
@@ -125,13 +120,13 @@ openrice.com
 pccw.com
 pgyy.com
 polyu.edu.hk
+ppwow.cc
 rthk.hk
 sb.gov.hk
 sc.com
 scmp.com
 sfc.hk
 sfu.edu.hk
-sinforcon.com
 singtao.com
 smartone.com
 staticfile.org
@@ -162,7 +157,6 @@ yahoo.com.hk
 yata.hk
 yesstyle.com
 ygym.org
-ynjiaoyu.net
 za.group
-zhuayoukong.com
-zsanxing.com
+zhihuimami.com
+zj-gold.com
