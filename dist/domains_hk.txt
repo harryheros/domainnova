@@ -1,14 +1,15 @@
 # DomainNova - HK domains
-# Generated: 2026-05-04T05:45:59Z
-# Count: 159
+# Generated: 2026-05-04T09:49:21Z
+# Count: 161
 163.net
 3hk.hk
-81rzqh.cfd
+52112.com
 aastocks.com
 alipay.hk
 alipayhk.com
 asia.ccb.com
 aswatson.com
+b8b4ix7bj.com
 baby-kingdom.com
 bankofchina.com.hk
 bastillepost.com
@@ -16,6 +17,7 @@ beijing120.com
 bigbigchannel.com.hk
 boc.hk
 bochk.com
+caifu500.net
 cathaypacific.com
 cedb.gov.hk
 centennialcollege.hku.hk
@@ -25,6 +27,7 @@ citibank.com.hk
 cityu.edu.hk
 clp.com.hk
 cmab.gov.hk
+coffee-script.org
 crcbank.com
 crhk.com.hk
 csb.gov.hk
@@ -44,13 +47,15 @@ discuss.com.hk
 dragonfly.fm
 edb.gov.hk
 eduhk.hk
-ejie.me
 find853.com
 fortress.com.hk
 fso.gov.hk
 fstb.gov.hk
 fwd.com.hk
 gcc.edu.hk
+gdks168.com
+globalesim.shop
+goodschool.world
 gov.hk
 gxkfy.com
 ha.org.hk
@@ -86,7 +91,6 @@ hksyu.edu
 hkt.com
 hktvmall.com
 hku.hk
-hnwhg.org
 hongkongairlines.com
 hongkongpost.hk
 hsbc.com.hk
@@ -102,16 +106,15 @@ jobsdb.com
 klook.com
 lcsd.gov.hk
 lihkg.com
-liyuplay.com
 ln.edu.hk
-loac.cc
 lwb.gov.hk
+lzmy123.com
 lzskqyy.com
+males120.com
 mclcinema.com
 mingpao.com
 mtr.com.hk
 newhua.com
-njshenglue.com
 nowtv.now.com
 oceanpark.com.hk
 octopus.com.hk
@@ -120,7 +123,6 @@ openrice.com
 pccw.com
 pgyy.com
 polyu.edu.hk
-ppwow.cc
 rthk.hk
 sb.gov.hk
 sc.com
@@ -137,6 +139,7 @@ takungpao.com
 three.com.hk
 tmall.hk
 tom.com
+tpsbp.com
 tungwah.org.hk
 tvb.com
 twc.edu.hk
@@ -150,6 +153,7 @@ westkowloon.hk
 wharf.com.hk
 wheelockcompany.com
 winglungbank.com
+wordlm.com
 www.mybus.com.cn
 xiaohongtao.art
 xpcha.com
@@ -158,5 +162,3 @@ yata.hk
 yesstyle.com
 ygym.org
 za.group
-zhihuimami.com
-zj-gold.com
