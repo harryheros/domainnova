@@ -62,18 +62,6 @@ hrsszj.gov.cn
 jszwfw.gov.cn
 lzwenming.gov.cn
 ccad.gov.cn
-owa.thnet.gov.cn
-cc.119.gov.cn
-gmjd.gov.cn
-orgs.stcsm.gov.cn
-mail.szum.gov.cn
-zjk.bjztb.gov.cn
-cdn.jzghmsa.gov.cn
-mail.lsrenkou.gov.cn
-www.lzsjcy.gov.cn
-dwwt.cdsgjj.gov.cn
-pengyun.gov.cn
-8086.gzjjzd.gov.cn
 
 # --- upstream:felixonmars-accelerated 2026-03-28 ---
 szwdny.com
@@ -219,28 +207,13 @@ xiaomi-neue-handys-2021--42977927.pia-apps.de
 www.xiaomi--rostov.ru
 xiaomi--astrahan.ru
 www.xiaomi--belgorod.online
-xiaomi---rostov.online
-xiaomi--tlt.online
-www.www.xiaomi-my-watch-lite-es-es--25135353.jasont.de
-xiaomi--kursk.online
-www.xiaomi--astrahan.online
-www.xiaomi-e-scooter-essential--126273289.matthewmitchell.de
-xiaomi--belgorod.online
-www.xiaomi--tolyatti.online
-www.xiaomi--bryansk.ru
-xiaomi-mi-9t-pro-kaufen--521553094.jasont.de
 air-fryer-6-litros-xiaomi-es-es--22332918.westernholz.de
-www.xiaomi-pad-2023-es-es--50845960.jasont.de
-xiaomi-11t-pro-5g-mit-vertrag--308049192.jasont.de
-xiaomi--31.ru
-xiaomi--kaluga.online
 finda-xiaomi-redmi-10-es-es--961112066.menschistmensch.de
 
 # --- upstream:felixonmars-accelerated 2026-04-01 ---
 volc-dns.com
 tpsbp.com
 5c554118a1021.beer
-263idc.com
 hbaas.com
 huananauctionctf.com
 knowingyun.com

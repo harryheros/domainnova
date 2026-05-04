@@ -1,7 +1,7 @@
 # DomainNova - SG domains
-# Generated: 2026-05-04T05:45:59Z
-# Count: 142
-0972xxg.com
+# Generated: 2026-05-04T09:49:21Z
+# Count: 136
+25yi.com
 263.net
 3171688.com
 321009.com
@@ -10,9 +10,9 @@
 6xw.com
 8world.com
 99.co
+9chew.com
 acra.gov.sg
 aicoin.com
-ay-china.com
 bh568.com
 biohyalux.com
 caas.gov.sg
@@ -35,10 +35,8 @@ edb.gov.sg
 enterprise.gov.sg
 eyoucms.com
 fairprice.com.sg
-feling.net
 foodpanda.sg
 go.gov.sg
-gougoujp.com
 gov.sg
 grab.com
 gxpost.com
@@ -57,7 +55,6 @@ jobstreet.com.sg
 jslvzhigu.com
 judiciary.gov.sg
 lazada.sg
-lc044.love
 lta.gov.sg
 m1.com.sg
 mas.gov.sg
@@ -72,9 +69,9 @@ mom.gov.sg
 mothership.sg
 motu.art
 msf.gov.sg
+mspace.cc
 mti.gov.sg
 myinfo.gov.sg
-mzhu8.com
 nea.gov.sg
 ngacn.cc
 ntu.edu.sg
@@ -88,7 +85,6 @@ posb.com.sg
 propertyguru.com.sg
 psa.sg
 pub.gov.sg
-pytk.net
 qgwzjs.com
 qoo10.sg
 san-yang.com
@@ -115,31 +111,29 @@ starhub.com
 stbieshu.com
 straitstimes.com
 streetdirectory.com
-stupidet.com
 sutd.edu.sg
 tech.gov.sg
 tieyou.com
 todayonline.com
-tttang.com
 uhouzz.com
 ulife.com
 uob.com.sg
 ura.gov.sg
 visitsingapore.com
-wasucnc.com
 weixinyunduan.com
 wellcee.com
 winkkie.com
-xiaodongrui.com
+wp.jun2020.com
+wysaid.org
 xiecheng.com
 xn--fiqs8sr9ge7eb4b28vo92a.com
-yangzw.vip
 youhaosoft.com
 yuelvxing.com
 yywt.online
 zaobao.com.sg
 zjlib.com
 zkzbkj.com
+zmtquan.com
 zqygame.com
 zshandsome.com
 zxkq022.com
