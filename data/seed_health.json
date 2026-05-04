@@ -1,61 +1,61 @@
 {
-  "checked_at": "2026-05-04T09:46:53Z",
+  "checked_at": "2026-05-04T23:21:26Z",
   "results": {
     "seed_cn.txt": {
       "region": "CN",
       "sampled": 20,
-      "consistent": 15,
-      "rate": 1.0,
+      "consistent": 14,
+      "rate": 0.9333,
       "status": "ok",
       "resolved": 15
     },
     "seed_hk.txt": {
       "region": "HK",
       "sampled": 20,
-      "consistent": 6,
-      "rate": 0.375,
-      "status": "warn",
-      "resolved": 16
+      "consistent": 4,
+      "rate": 0.2222,
+      "status": "error",
+      "resolved": 18
     },
     "seed_mo.txt": {
       "region": "MO",
       "sampled": 20,
-      "consistent": 3,
-      "rate": 0.3333,
+      "consistent": 6,
+      "rate": 0.5455,
       "status": "warn",
-      "resolved": 9
+      "resolved": 11
     },
     "seed_tw.txt": {
       "region": "TW",
       "sampled": 20,
-      "consistent": 5,
-      "rate": 0.4167,
-      "status": "warn",
-      "resolved": 12
+      "consistent": 6,
+      "rate": 0.6667,
+      "status": "ok",
+      "resolved": 9
     },
     "seed_jp.txt": {
       "region": "JP",
       "sampled": 20,
-      "consistent": 3,
-      "rate": 0.3333,
-      "status": "warn",
-      "resolved": 9
+      "consistent": 2,
+      "rate": 0.1818,
+      "status": "error",
+      "resolved": 11
     },
     "seed_kr.txt": {
       "region": "KR",
       "sampled": 20,
       "consistent": 11,
-      "rate": 0.55,
-      "status": "warn",
-      "resolved": 20
+      "rate": 0.6111,
+      "status": "ok",
+      "resolved": 18
     },
     "seed_sg.txt": {
       "region": "SG",
       "sampled": 20,
-      "consistent": 3,
-      "rate": 0.15,
+      "consistent": 1,
+      "rate": 0.0526,
       "status": "error",
-      "resolved": 20
+      "resolved": 19
     }
   }
 }
