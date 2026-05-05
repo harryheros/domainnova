@@ -1,6 +1,7 @@
 # DomainNova - SG domains
-# Generated: 2026-05-04T23:24:43Z
-# Count: 135
+# Generated: 2026-05-05T17:59:27Z
+# Count: 145
+02924.com
 263.net
 3171688.com
 321009.com
@@ -14,6 +15,7 @@ aicoin.com
 bh568.com
 biohyalux.com
 caas.gov.sg
+cambodiafang.com
 carousell.com
 carousell.sg
 changiairport.com
@@ -22,23 +24,26 @@ china-shimo.com
 coldstorage.com.sg
 comfortdelgro.com
 cpf.gov.sg
+cqapg.com
+cqdashun.com
 cqjsaq.com
 csa.gov.sg
-ctrip.co.id
 ctsho.com
 czxiu.com
 dbs.com.sg
 dlsstax.com
+duoerpharmacy.com
 e-tecsun.com
 edb.gov.sg
 enterprise.gov.sg
 eyoucms.com
 fairprice.com.sg
-feiwan.net
 foodpanda.sg
 go.gov.sg
 gov.sg
 grab.com
+guodongbaohe.com
+gxchengjian.com
 gxpost.com
 gxrcu.com
 gxykjd.com
@@ -51,6 +56,7 @@ ica.gov.sg
 imda.gov.sg
 iras.gov.sg
 izhangan.com
+jg1994.com
 jobstreet.com.sg
 jslvzhigu.com
 judiciary.gov.sg
@@ -58,6 +64,7 @@ lazada.sg
 lta.gov.sg
 m1.com.sg
 mas.gov.sg
+mayiyx.com
 mfa.gov.sg
 mha.gov.sg
 minimaxi.com
@@ -73,7 +80,6 @@ mti.gov.sg
 myinfo.gov.sg
 nea.gov.sg
 ngacn.cc
-nsiqoaks.com
 ntu.edu.sg
 nuomiphp.com
 nus.edu.sg
@@ -87,6 +93,7 @@ psa.sg
 pub.gov.sg
 qgwzjs.com
 qoo10.sg
+rizhao.net
 san-yang.com
 sbstransit.com.sg
 scdf.gov.sg
@@ -102,8 +109,11 @@ singstat.gov.sg
 singtel.com
 sistic.com.sg
 sit.edu.sg
+skd62.com
 smrt.com.sg
 smu.edu.sg
+sogou.com
+soso.com
 souche.com
 spgroup.com.sg
 starhub.com
@@ -118,15 +128,15 @@ uhouzz.com
 ulife.com
 uob.com.sg
 ura.gov.sg
-ustarl.com
+uscntv.com
 visitsingapore.com
-weifengchina.com
 weixinyunduan.com
 wellcee.com
 winkkie.com
-wondershare.com.br
+xiandaiyuwen.com
 xiecheng.com
 xn--fiqs8sr9ge7eb4b28vo92a.com
+xunsns.com
 youhaosoft.com
 yuelvxing.com
 yywt.online
