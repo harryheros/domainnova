@@ -1030,7 +1030,6 @@ mrlxc51byo.com
 chuanghe.net
 foods1.com
 chouchoumao.com
-10086kuaixiu.com
 nuxue.com
 diandeng.tech
 shkypump.com
@@ -1090,7 +1089,6 @@ ctjin.com
 keoaeic.org
 pku-hit.com
 55haitao.com
-supesite.com
 boai120.com
 shufabao.net
 cszlgs.com
@@ -1131,7 +1129,6 @@ sxzhyy.com
 jiguangdanci.com
 lbdj.com
 7dc0d8dad10281.beer
-scdnurea.com
 vortexfun.com
 jjcs66.com
 gztopkt.com
@@ -1149,23 +1146,19 @@ tnccdn.com
 2.xn--vhquv
 baiduxiaodai.com
 zzfriend.com
-sz-czzc.com
 sdgsjc.com
-julysong.com
 kaishustory.com
 mckuai.com
 wztlink1013.com
 xlgtx.com
 qiniu.io
 winbywin.com
-gaaptest.com
 juuhe.com
 liqinyi.com
 srslyy.com
 awcloud.com
 wrjzj.com
 ytyz.net
-xianyudanji.net
 fs1982.com
 djbh.net
 uniostay.com
@@ -1181,7 +1174,6 @@ kuaizhan.com
 
 # --- upstream:felixonmars-accelerated 2026-04-27 ---
 doki8.com
-dawnarc.com
 027chwl.com
 ishuiyun.com
 ddyqh.com
@@ -1204,15 +1196,11 @@ longo.ltd
 gxlianci.com
 chinazy.org
 qtlglb.info
-jiaoyumao.com
 gwzft.com
-tianchuixiang.com
-biquwo.com
 xunruicms.com
 028-xhxgt.com
 kewucool.com
 c-discover.com
-011a4460e391a7f4.com
 gobyd.com
 nnyypc.com
 1415926.mobi
@@ -1220,7 +1208,6 @@ nnyypc.com
 bjspw.com
 bjyhwy.com
 cheoz.com
-erji.hk
 china-cloud.com
 5nexus.com
 heilifun.com
@@ -1232,14 +1219,10 @@ amhimalayanet.com
 only4.work
 aliyunga0018.com
 xn--ptua509t.com
-ppsoftw.com
 whcbank.com
-77vcd.com
-moeking.me
 impcochina.com
 activity02.com
 llsapp.com
-aa56238652.com
 okcxo.com
 gonever.com
 zhuyili.org
@@ -1254,18 +1237,13 @@ bgnyl.com
 banghaiwai.com
 zoossoft.com
 fcgasj.com
-cbice.com
-shouzhitao.com
 c631dlc0br.com
 datacvg.com
-dinghui.org
 fanlv.fun
 we-pass.com
 tu54o7863tbf6.com
 d3tt.com
 tlivewebrtcpushsch.com
-siling.com
-hy7756.com
 szx-ray.com
 dcloudstc.com
 blogchina.org
@@ -1283,7 +1261,6 @@ huiqia.net
 womai.com
 macaobusinessnews.com
 365cgw.com
-lxrcsc.com
 wmslz.com
 jiri28.com
 cnnice.com
@@ -1291,7 +1268,6 @@ chao-cn.com
 adamcdn.com
 shundeplus.com
 bangbang.com
-menchuang.biz
 klicen.com
 wsy400.com
 louge.ltd
@@ -1302,7 +1278,6 @@ koogua.com
 duolephz.com
 515app.com
 zxknow.com
-tangsuanradio.com
 gfbzb.net
 3600.net
 2w.com
@@ -2137,3 +2112,25 @@ rjpharma.com
 neusoft.com
 szcy-fintech.com
 fjsfjyl.com
+
+# --- upstream:felixonmars-accelerated 2026-05-06 ---
+1ju.com
+100fang.com
+kankanlive.com
+qixinworks.com
+ibooker.cc
+cnlongkou.net
+gxwhsy.com
+yuandiancredit.com
+yooyo.com
+yunjiweidian.com
+yqphh.com
+ycyz.com
+quantuantuan.com
+maidiancy.com
+longkuntech.com
+whtryine.com
+tcecps.org
+bluedgames.com
+ithor.net
+likingfit.com
