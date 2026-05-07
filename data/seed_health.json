@@ -1,61 +1,68 @@
 {
-  "checked_at": "2026-05-07T21:22:40Z",
+  "checked_at": "2026-05-07T22:23:32Z",
   "results": {
     "seed_cn.txt": {
       "region": "CN",
       "sampled": 20,
-      "consistent": 10,
-      "rate": 0.7692,
+      "consistent": 9,
+      "rate": 0.6923,
       "status": "ok",
-      "resolved": 13
+      "resolved": 13,
+      "identity_overrides": 0
     },
     "seed_hk.txt": {
       "region": "HK",
       "sampled": 20,
-      "consistent": 1,
-      "rate": 0.0588,
-      "status": "error",
-      "resolved": 17
+      "consistent": 13,
+      "rate": 0.7222,
+      "status": "ok",
+      "resolved": 18,
+      "identity_overrides": 10
     },
     "seed_mo.txt": {
       "region": "MO",
       "sampled": 20,
-      "consistent": 5,
-      "rate": 0.5,
-      "status": "warn",
-      "resolved": 10
+      "consistent": 6,
+      "rate": 1.0,
+      "status": "ok",
+      "resolved": 6,
+      "identity_overrides": 6
     },
     "seed_tw.txt": {
       "region": "TW",
       "sampled": 20,
-      "consistent": 7,
-      "rate": 0.5833,
-      "status": "warn",
-      "resolved": 12
+      "consistent": 6,
+      "rate": 1.0,
+      "status": "ok",
+      "resolved": 6,
+      "identity_overrides": 6
     },
     "seed_jp.txt": {
       "region": "JP",
       "sampled": 20,
-      "consistent": 4,
-      "rate": 0.5,
-      "status": "warn",
-      "resolved": 8
+      "consistent": 8,
+      "rate": 0.8889,
+      "status": "ok",
+      "resolved": 9,
+      "identity_overrides": 7
     },
     "seed_kr.txt": {
       "region": "KR",
       "sampled": 20,
-      "consistent": 14,
-      "rate": 0.7778,
+      "consistent": 17,
+      "rate": 0.85,
       "status": "ok",
-      "resolved": 18
+      "resolved": 20,
+      "identity_overrides": 14
     },
     "seed_sg.txt": {
       "region": "SG",
       "sampled": 20,
-      "consistent": 1,
-      "rate": 0.0556,
-      "status": "error",
-      "resolved": 18
+      "consistent": 15,
+      "rate": 0.8333,
+      "status": "ok",
+      "resolved": 18,
+      "identity_overrides": 15
     }
   }
 }
