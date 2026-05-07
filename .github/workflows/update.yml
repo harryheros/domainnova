@@ -81,10 +81,21 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add \
-            data/*.json \
-            data/*.csv \
-            data/*.yaml \
-            dist/*.txt \
+            data/domains.csv \
+            data/domains_metadata.json \
+            data/domains_metadata.csv \
+            data/domains_metadata.yaml \
+            data/metadata_stats.json \
+            data/manual_source_validation.json \
+            data/seed_health.json \
+            data/stats.json \
+            dist/domains_cn.txt \
+            dist/domains_hk.txt \
+            dist/domains_mo.txt \
+            dist/domains_tw.txt \
+            dist/domains_jp.txt \
+            dist/domains_kr.txt \
+            dist/domains_sg.txt \
             sources/manual/discovery.txt \
             sources/manual/extended.txt
           if git diff --cached --quiet; then
