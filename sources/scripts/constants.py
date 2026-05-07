@@ -76,6 +76,34 @@ CN_CLOUD_ASNS: dict[str, str] = {
 }
 
 # ---------------------------------------------------------------------------
+# Tier 2.5 – CN CDN Providers
+# Used by build_domains.py provider enrichment to detect CDN-masked origins.
+# ---------------------------------------------------------------------------
+CN_CDN_PROVIDERS: dict[str, str] = {
+    "Wangsu":         "wangsu.com",      # 網宿科技
+    "ChinaCache":     "chinacache.com",  # 藍汛通信
+    "Baishan Cloud":  "baishancloud.com",
+    "Qiniu Cloud":    "qiniu.com",       # 七牛雲
+    "Upyun":          "upyun.com",       # 又拍雲
+    "Alibaba CDN":    "alicdn.com",
+    "Tencent CDN":    "qcloudcdn.com",
+    "Huawei CDN":     "huaweicloud.com",
+    "Baidu CDN":      "bdydns.com",
+    "ByteDance CDN":  "bytegslb.com",
+}
+
+# Global CDN providers — domains behind these are CDN-masked;
+# origin region cannot be determined from A records alone.
+GLOBAL_CDN_ASNS: dict[int, str] = {
+    13335: "Cloudflare",
+    20940: "Akamai",
+    54113: "Fastly",
+    16509: "Amazon CloudFront",
+    15169: "Google Cloud CDN",
+    8075:  "Microsoft Azure CDN",
+}
+
+# ---------------------------------------------------------------------------
 # Tier 3 – Infrastructure Function Tags (keyword-based, used by 2_dns_check.py)
 # ---------------------------------------------------------------------------
 INFRA_KEYWORDS: dict[str, list[str]] = {
@@ -119,13 +147,15 @@ REGION_BUCKETS: set[str] = {"CN", "HK", "MO", "TW", "JP", "KR", "SG"}
 IPNOVA_BASE: str = "https://raw.githubusercontent.com/harryheros/ipnova/main/output"
 
 REGION_CIDR_URLS: dict[str, str] = {
-    "CN": f"{IPNOVA_BASE}/CN.txt",
-    "HK": f"{IPNOVA_BASE}/HK.txt",
-    "MO": f"{IPNOVA_BASE}/MO.txt",
-    "TW": f"{IPNOVA_BASE}/TW.txt",
-    "JP": f"{IPNOVA_BASE}/JP.txt",
-    "KR": f"{IPNOVA_BASE}/KR.txt",
-    "SG": f"{IPNOVA_BASE}/SG.txt",
+    # Use plain/ variants (no comment headers) — ipnova v3.2.1+
+    # Falls back gracefully if line starts with '#' (parser already filters those)
+    "CN": f"{IPNOVA_BASE}/plain/CN.txt",
+    "HK": f"{IPNOVA_BASE}/plain/HK.txt",
+    "MO": f"{IPNOVA_BASE}/plain/MO.txt",
+    "TW": f"{IPNOVA_BASE}/plain/TW.txt",
+    "JP": f"{IPNOVA_BASE}/plain/JP.txt",
+    "KR": f"{IPNOVA_BASE}/plain/KR.txt",
+    "SG": f"{IPNOVA_BASE}/plain/SG.txt",
 }
 
 # Sanity-check threshold: ipnova region files with fewer than this many lines

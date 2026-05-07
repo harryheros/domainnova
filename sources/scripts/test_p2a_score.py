@@ -24,7 +24,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from build_domains import (  # noqa: E402
+from build_domains import (
+    detect_provider,  # noqa: E402
     DomainRecord,
     build_cidr_lookup,
     build_region_lookup,
@@ -345,6 +346,89 @@ class TestProcessDomainP2A(unittest.TestCase):
 # ---------------------------------------------------------------------------
 # Tests: sticky path preserves dns_hk/mo/tw
 # ---------------------------------------------------------------------------
+
+class TestProviderCdnFields(unittest.TestCase):
+    """v6.1: provider and cdn_masked fields are present and backward-compatible."""
+
+    def _make_record(self, **kwargs):
+        defaults = dict(
+            domain="example.com", dns_cn=0, dns_cn_count=0, dns_total=0,
+            registrar_cn=0, registrant_cn=0, cn_tld=0, score=0,
+            resolved_ips="", matched_cidr="", source="extended",
+            updated="2026-01-01", sticky=0, bucket="",
+            dns_hk=0, dns_mo=0, dns_tw=0, dns_jp=0, dns_kr=0, dns_sg=0,
+        )
+        defaults.update(kwargs)
+        return DomainRecord(**defaults)
+
+    def test_provider_default_empty(self):
+        r = self._make_record()
+        self.assertEqual(r.provider, "")
+
+    def test_cdn_masked_default_zero(self):
+        r = self._make_record()
+        self.assertEqual(r.cdn_masked, 0)
+
+    def test_provider_set(self):
+        r = self._make_record(provider="Alibaba Cloud")
+        self.assertEqual(r.provider, "Alibaba Cloud")
+
+    def test_cdn_masked_set(self):
+        r = self._make_record(cdn_masked=1)
+        self.assertEqual(r.cdn_masked, 1)
+
+
+class TestDetectProvider(unittest.TestCase):
+    """v6.1: detect_provider fallback path (no _cidr_asn_map)."""
+
+    def setUp(self):
+        # Ensure _cidr_asn_map is empty for fallback path testing
+        import build_domains as bd
+        self._orig = dict(bd._cidr_asn_map)
+        bd._cidr_asn_map.clear()
+
+    def tearDown(self):
+        import build_domains as bd
+        bd._cidr_asn_map.clear()
+        bd._cidr_asn_map.update(self._orig)
+
+    def test_alibaba_ip_prefix(self):
+        provider, cdn = detect_provider(["8.152.1.1"])
+        self.assertEqual(provider, "Alibaba Cloud")
+        self.assertEqual(cdn, 0)
+
+    def test_huawei_ip_prefix(self):
+        provider, cdn = detect_provider(["139.9.1.1"])
+        self.assertEqual(provider, "Huawei Cloud")
+        self.assertEqual(cdn, 0)
+
+    def test_baidu_ip_prefix(self):
+        provider, cdn = detect_provider(["182.61.1.1"])
+        self.assertEqual(provider, "Baidu Cloud")
+        self.assertEqual(cdn, 0)
+
+    def test_bytedance_ip_prefix(self):
+        provider, cdn = detect_provider(["119.28.1.1"])
+        self.assertEqual(provider, "ByteDance")
+        self.assertEqual(cdn, 0)
+
+    def test_unknown_ip(self):
+        provider, cdn = detect_provider(["1.2.3.4"])
+        self.assertEqual(provider, "")
+        self.assertEqual(cdn, 0)
+
+    def test_empty_ips(self):
+        provider, cdn = detect_provider([])
+        self.assertEqual(provider, "")
+        self.assertEqual(cdn, 0)
+
+    def test_cidr_asn_map_takes_priority(self):
+        import build_domains as bd
+        bd._cidr_asn_map["8.152.0.0/13"] = 37963
+        provider, cdn = detect_provider(["8.152.100.1"])
+        self.assertEqual(provider, "Alibaba Cloud")
+        bd._cidr_asn_map.clear()
+
 
 class TestStickyPreservesNewFields(unittest.TestCase):
 

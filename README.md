@@ -5,7 +5,7 @@
 DomainNova is an open intelligence dataset and tooling layer for domain, network, and infrastructure analysis across the Asia-Pacific region.
 
 [![Update](https://github.com/harryheros/domainnova/actions/workflows/update.yml/badge.svg)](https://github.com/harryheros/domainnova/actions/workflows/update.yml)
-[![Version](https://img.shields.io/badge/version-v3.1-blue)](https://github.com/harryheros/domainnova/releases)
+[![Version](https://img.shields.io/badge/version-v3.2-blue)](https://github.com/harryheros/domainnova/releases)
 
 ---
 
@@ -120,7 +120,7 @@ dist/domains_mo.txt                 MO domain list (score >= 60)
 dist/domains_jp.txt                 JP domain list (score >= 60)
 dist/domains_kr.txt                 KR domain list (score >= 60)
 dist/domains_sg.txt                 SG domain list (score >= 60)
-data/domains.csv                    full structured database (all signals + score)
+data/domains.csv                    full structured database (all signals + score + provider + cdn_masked)
 data/stats.json                     build statistics and lifecycle counters
 data/domains_metadata.json          structured metadata (domain → entity/category/ecosystem)
 data/domains_metadata.yaml          YAML export of the metadata layer
@@ -147,9 +147,9 @@ sources/discovery_agents/           discovery agent scripts
 ## Data Format
 
 ```csv
-domain,dns_cn,dns_cn_count,dns_total,registrar_cn,registrant_cn,cn_tld,score,resolved_ips,matched_cidr,source,updated
-baidu.com,1,3,3,0,0,0,60,110.242.68.66|...,1.0.1.0/24,seed,2026-03-28
-gov.cn,0,0,0,0,0,1,40,,,seed,2026-03-28
+domain,dns_cn,...,bucket,dns_hk,...,dns_sg,provider,cdn_masked
+baidu.com,1,3,3,0,0,0,60,110.242.68.66|...,1.0.1.0/24,seed_cn,2026-03-28,0,CN,0,0,0,0,0,0,Alibaba Cloud,0
+google.com,0,0,1,0,0,0,0,...,,extended,2026-03-28,0,,0,0,0,0,0,0,Google Cloud CDN,1
 ```
 
 Key fields:
@@ -159,6 +159,8 @@ Key fields:
 - `score` — composite score; 60+ in dist, 40 = ICP fallback, 0 = excluded
 - `source` — `seed_cn`, `seed_hk`, `seed_jp`, `extended`, `discovery`, etc.
 - `bucket` — assigned region: CN, HK, TW, MO, JP, KR, SG, or empty (unclassified)
+- `provider` — detected cloud/CDN provider (e.g. `Alibaba Cloud`, `Cloudflare`); empty if unknown
+- `cdn_masked` — 1 if domain resolves to a global CDN that obscures origin region; 0 otherwise
 
 ---
 

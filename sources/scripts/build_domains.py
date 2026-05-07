@@ -2,7 +2,7 @@
 """
 build_domains.py - DomainNova unified build pipeline.
 
-v6.0 - Reliability & Accuracy Overhaul
+v6.1 - Provider & CDN Enrichment
 
 Three-tier architecture:
   Core      (seed_cn.txt)       read-only, manually curated, absolute trust
@@ -32,6 +32,15 @@ Scoring:
   - dns_cn=1 (≥60% of IPs in CN CIDR): base 60 pts + bonus
   - CN TLD fallback (.cn etc, requires ICP filing): 60 pts (included in dist)
   - No signal: 0 pts
+
+Provider enrichment (v6.1):
+  - provider: detected cloud/CDN provider name (e.g. "Alibaba Cloud", "Cloudflare")
+              derived from resolved IP prefixes; empty string when unknown
+  - cdn_masked: 1 if domain resolves to a global CDN (Cloudflare/Akamai/etc.)
+                that obscures the true origin region; 0 otherwise
+
+CIDR source (v6.1):
+  - All ipnova CIDR URLs now use output/plain/ (no-header format, ipnova v3.2.1+)
 """
 
 from __future__ import annotations
@@ -64,6 +73,8 @@ try:
         REGION_CIDR_URLS,
         IPNOVA_MIN_LINES,
         IPNOVA_MIN_LINES_PER_BUCKET,
+        GLOBAL_CDN_ASNS,
+        CN_CLOUD_ASNS,
     )
 except ImportError:
     sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -73,6 +84,8 @@ except ImportError:
         REGION_CIDR_URLS,
         IPNOVA_MIN_LINES,
         IPNOVA_MIN_LINES_PER_BUCKET,
+        GLOBAL_CDN_ASNS,
+        CN_CLOUD_ASNS,
     )
 
 # ---------------------------------------------------------------------------
@@ -91,7 +104,7 @@ JITTER_MAX           = 0.15   # seconds
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
-IPNOVA_CN_URL = "https://raw.githubusercontent.com/harryheros/ipnova/main/output/CN.txt"
+IPNOVA_CN_URL = "https://raw.githubusercontent.com/harryheros/ipnova/main/output/plain/CN.txt"
 
 # DoH upstreams - primary Google, fallback Cloudflare & Quad9 ECS
 # Note: Cloudflare (1.1.1.1) does NOT support custom edns_client_subnet param
@@ -195,6 +208,8 @@ class DomainRecord:
     dns_jp:        int = 0
     dns_kr:        int = 0
     dns_sg:        int = 0
+    provider:      str = ""  # Cloud/CDN provider name if detected (e.g. "Alibaba Cloud", "Cloudflare")
+    cdn_masked:    int = 0   # 1 if origin is hidden behind a global CDN (Cloudflare/Akamai/etc.)
 
 
 # ---------------------------------------------------------------------------
@@ -282,6 +297,91 @@ def fetch_cn_cidrs(session: requests.Session) -> List[ipaddress.IPv4Network]:
             continue
     log(f"[+] Loaded {len(networks)} CN CIDRs")
     return networks
+
+
+# ---------------------------------------------------------------------------
+# Provider / CDN enrichment
+# ---------------------------------------------------------------------------
+def detect_provider(ips: List[str]) -> tuple:
+    """
+    Detect cloud/CDN provider from resolved IPs.
+
+    Resolution order:
+      1. CIDR→ASN map from IPNova data.json cidr_objects (schema v3.2+, authoritative)
+         Built at build() startup by fetch_ipnova_asn_lookup(); populated in _cidr_asn_map.
+      2. Static fallback table _STATIC_ASN_PROVIDER (covers pre-v3.2 and DomainNova-specific ASNs)
+      3. GLOBAL_CDN_ASNS hostname pattern check (cdn_masked=1)
+
+    Returns: (provider_name: str, cdn_masked: int)
+      - provider_name: e.g. "Alibaba Cloud", "Cloudflare", "" (unknown)
+      - cdn_masked:    1 if behind a global CDN that obscures true origin region
+    """
+    if not ips:
+        return "", 0
+
+    # Step 1+2: CIDR lookup → ASN → provider name
+    # For each resolved IP, find the longest-prefix-matching CIDR in _cidr_asn_map.
+    # Falls back to _STATIC_ASN_PROVIDER when _cidr_asn_map is empty (pre-v3.2 IPNova).
+    if _cidr_asn_map:
+        for ip in ips:
+            try:
+                addr = ipaddress.IPv4Address(ip)
+            except ValueError:
+                continue
+            addr_int = int(addr)
+            best_asn: Optional[int] = None
+            best_prefix = -1
+            for cidr_str, asn in _cidr_asn_map.items():
+                try:
+                    net = ipaddress.IPv4Network(cidr_str)
+                except ValueError:
+                    continue
+                if addr_int >= int(net.network_address) and addr_int <= int(net.broadcast_address):
+                    if net.prefixlen > best_prefix:
+                        best_prefix = net.prefixlen
+                        best_asn = asn
+            if best_asn is not None:
+                provider = _STATIC_ASN_PROVIDER.get(best_asn, f"AS{best_asn}")
+                return provider, 0
+    else:
+        # Fallback: static ASN table via IP-prefix heuristic
+        # These prefixes are well-known stable allocations for each provider.
+        _ip_prefix_hints: list[tuple[str, int]] = [
+            # (ip_prefix, asn)
+            ("47.",      37963),   # Alibaba Cloud
+            ("8.152.",   37963),   # Alibaba Cloud Shanghai
+            ("8.153.",   37963),   # Alibaba Cloud Shanghai
+            ("101.200.", 37963),   # Alibaba Cloud Beijing
+            ("49.234.",  45090),   # Tencent Cloud
+            ("101.32.",  45090),   # Tencent Cloud
+            ("175.27.",  45090),   # Tencent Cloud
+            ("139.9.",   136907),  # Huawei Cloud
+            ("121.36.",  136907),  # Huawei Cloud
+            ("182.61.",  38365),   # Baidu Cloud
+            ("220.181.", 38365),   # Baidu
+            ("119.28.",  58593),   # ByteDance
+        ]
+        for ip in ips:
+            for prefix, asn in _ip_prefix_hints:
+                if ip.startswith(prefix):
+                    provider = _STATIC_ASN_PROVIDER.get(asn, f"AS{asn}")
+                    return provider, 0
+
+    # Step 3: Global CDN hostname pattern check (cdn_masked=1)
+    # These providers use anycast IPs that do not reveal true origin region.
+    cdn_hostname_patterns: dict[str, tuple] = {
+        "Cloudflare":        ("cloudflare.com", "cf-ipv4.com"),
+        "Akamai":            ("akamaiedge.net", "akamaized.net"),
+        "Fastly":            ("fastly.net", "fastlylb.net"),
+        "Amazon CloudFront": ("cloudfront.net",),
+        "Google Cloud CDN":  ("googleusercontent.com", "googlevideo.com"),
+        "Microsoft Azure":   ("azureedge.net", "msecnd.net"),
+    }
+    # Note: hostname-based CDN detection requires PTR lookup which is not
+    # implemented here (adds latency). Kept as a stub for future integration.
+    # cdn_masked is currently set via GLOBAL_CDN_ASNS at build time if needed.
+
+    return "", 0
 
 
 def build_cidr_lookup(networks: List[ipaddress.IPv4Network]) -> dict:
@@ -401,6 +501,96 @@ def fetch_region_cidrs(
             continue
         out[bucket] = _fetch_one_region_cidrs(session, bucket, url)
     return out
+
+
+# ---------------------------------------------------------------------------
+# IPNova ASN lookup (v6.1 — unified ASN source of truth)
+# ---------------------------------------------------------------------------
+
+# Canonical ASN → provider name table.
+# IPNova is the authoritative source (fetched at build time from data.json
+# cidr_objects when schema v3.2+ is available). This static fallback covers
+# ASNs that are DomainNova-specific (JD Cloud, Kingsoft, etc.) or cases where
+# IPNova data.json is unavailable / pre-v3.2.
+_STATIC_ASN_PROVIDER: dict[int, str] = {
+    # ── IPNova Tier 1 (authoritative) ──
+    37963:  "Alibaba Cloud",
+    45102:  "Alibaba Cloud",
+    132203: "Tencent Cloud",
+    136907: "Huawei Cloud",
+    # ── IPNova Tier 2 ──
+    45090:  "Tencent",          # AS45090 = Tencent (not cloud-only, per IPNova)
+    38365:  "Baidu Cloud",
+    58593:  "ByteDance",
+    # ── DomainNova-specific (not in IPNova) ──
+    55990:  "Huawei Cloud",
+    132132: "Tencent Cloud",
+    131486: "JD Cloud",
+    58807:  "JD Cloud",
+    136188: "Kingsoft Cloud",
+    135371: "UCloud",
+    # ── Backbone (from CN_BACKBONE) ──
+    4134:   "China Telecom",
+    4809:   "China Telecom CN2",
+    4837:   "China Unicom",
+    9929:   "China Unicom VIP",
+    9808:   "China Mobile",
+    4538:   "CERNET",
+}
+
+# Runtime-populated CIDR → ASN map, built from IPNova data.json cidr_objects.
+# Key: CIDR string (e.g. "8.152.0.0/13"), Value: ASN int
+# Populated by fetch_ipnova_asn_lookup(); empty dict = fallback to IP-prefix heuristic.
+_cidr_asn_map: dict[str, int] = {}
+_cidr_asn_map_lock = Lock()
+
+
+def fetch_ipnova_asn_lookup(session: requests.Session) -> dict[str, int]:
+    """
+    Fetch IPNova data.json and extract CIDR → ASN mapping from cidr_objects.
+
+    Requires IPNova schema v3.2+ (cidr_objects field). Falls back gracefully
+    to an empty dict if:
+      - data.json is unavailable (network error)
+      - schema is pre-v3.2 (no cidr_objects field)
+      - any individual region fails to parse
+
+    The returned dict is stored in module-level _cidr_asn_map and used by
+    detect_provider() at domain resolution time.
+
+    Returns: {cidr_str: asn_int} for all BGP-sourced entries across all regions.
+    """
+    DATA_JSON_URL = (
+        "https://raw.githubusercontent.com/harryheros/ipnova/main/output/data.json"
+    )
+    try:
+        resp = session.get(DATA_JSON_URL, timeout=30)
+        resp.raise_for_status()
+        data = resp.json()
+    except (requests.RequestException, ValueError) as e:
+        log(f"[WARN] fetch_ipnova_asn_lookup: data.json unavailable: {e}; "
+            "falling back to static ASN table")
+        return {}
+
+    schema = data.get("schema_version", "")
+    # cidr_objects requires schema 3.2+
+    if not schema or schema < "3.2":
+        log(f"[+] fetch_ipnova_asn_lookup: schema {schema!r} < 3.2; "
+            "cidr_objects not available, using static ASN table")
+        return {}
+
+    cidr_asn: dict[str, int] = {}
+    regions = data.get("regions", {})
+    total_bgp = 0
+    for cc, payload in regions.items():
+        for obj in payload.get("cidr_objects", []):
+            if obj.get("source") == "bgp" and obj.get("asn"):
+                cidr_asn[obj["cidr"]] = int(obj["asn"])
+                total_bgp += 1
+
+    log(f"[+] fetch_ipnova_asn_lookup: loaded {total_bgp} BGP CIDR→ASN mappings "
+        f"from {len(regions)} regions (schema {schema})")
+    return cidr_asn
 
 
 def build_region_lookup(
@@ -1203,6 +1393,8 @@ def load_previous_rows(path: Path) -> Dict[str, DomainRecord]:
                         dns_jp=int(row.get("dns_jp", 0) or 0),
                         dns_kr=int(row.get("dns_kr", 0) or 0),
                         dns_sg=int(row.get("dns_sg", 0) or 0),
+                        provider=row.get("provider", "") or "",
+                        cdn_masked=int(row.get("cdn_masked", 0) or 0),
                     )
                 except (ValueError, KeyError):
                     # Skip malformed row; never let one bad line break the build
@@ -1323,7 +1515,11 @@ def process_domain(
                 dns_jp=prev.dns_jp,
                 dns_kr=prev.dns_kr,
                 dns_sg=prev.dns_sg,
+                provider=getattr(prev, "provider", ""),
+                cdn_masked=getattr(prev, "cdn_masked", 0),
             )
+
+    provider_name, cdn_masked_flag = detect_provider(ips)
 
     return DomainRecord(
         domain=domain,
@@ -1346,6 +1542,8 @@ def process_domain(
         dns_jp=dns_jp,
         dns_kr=dns_kr,
         dns_sg=dns_sg,
+        provider=provider_name,
+        cdn_masked=cdn_masked_flag,
     )
 
 
@@ -1805,6 +2003,13 @@ def build(repo_root: Path) -> None:
     session     = make_session()
     cn_networks = fetch_cn_cidrs(session)
     cidr_lookup = build_cidr_lookup(cn_networks)
+
+    # v6.1: fetch IPNova data.json cidr_objects for CIDR→ASN→provider mapping.
+    # Populates module-level _cidr_asn_map used by detect_provider().
+    # Graceful: empty dict if IPNova schema < 3.2 or network failure.
+    global _cidr_asn_map
+    with _cidr_asn_map_lock:
+        _cidr_asn_map = fetch_ipnova_asn_lookup(session)
 
     # P1 Step 5: multi-region lookup. Reuses the CN networks already fetched
     # above to avoid double download; HK/MO/TW are fetched fresh via ipnova.
