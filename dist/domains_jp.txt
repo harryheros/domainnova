@@ -1,6 +1,6 @@
 # DomainNova - JP domains
-# Generated: 2026-05-07T09:25:46Z
-# Count: 162
+# Generated: 2026-05-07T16:28:30Z
+# Count: 163
 amazon.co.jp
 ameba.jp
 ana.co.jp
@@ -38,6 +38,7 @@ goo.ne.jp
 gov-online.go.jp
 gurunavi.com
 hankyu-travel.com
+haoliners.net
 hatena.ne.jp
 his-j.com
 hitachi.co.jp

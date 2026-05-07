@@ -2153,3 +2153,13 @@ joytype.com
 bsnniubi.com
 itblw.com
 qzgfyy.com
+
+# --- upstream:felixonmars-accelerated 2026-05-07 ---
+yinghezhong.com
+ehschina.com
+secxun.com
+1b0dbdb5310311.beer
+feipr.com
+i9dhjx.ru
+scgglm.com
+dongyoutu.com
