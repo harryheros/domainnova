@@ -8,3 +8,9 @@ data/domains.csv
 
 # Generated intermediate files
 sources/generated/
+
+# Dead domain audit log (operational data, grows unboundedly)
+data/dead_domains.log
+
+# Discovery run stats (transient counters, not meaningful in history)
+data/discovery_stats.json
