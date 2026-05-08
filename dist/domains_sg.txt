@@ -1,9 +1,7 @@
 # DomainNova - SG domains
-# Generated: 2026-05-08T02:53:18Z
-# Count: 139
-25yi.com
+# Generated: 2026-05-08T03:07:44Z
+# Count: 136
 263.net
-264321.com
 3171688.com
 321009.com
 333.com
@@ -11,7 +9,6 @@
 6xw.com
 8world.com
 99.co
-9chew.com
 acra.gov.sg
 aicoin.com
 bh568.com
@@ -27,6 +24,7 @@ comfortdelgro.com
 cpf.gov.sg
 cqjsaq.com
 csa.gov.sg
+ctrip.co.id
 ctsho.com
 czxiu.com
 dbs.com.sg
@@ -36,6 +34,7 @@ edb.gov.sg
 enterprise.gov.sg
 eyoucms.com
 fairprice.com.sg
+feiwan.net
 foodpanda.sg
 go.gov.sg
 gov.sg
@@ -49,7 +48,6 @@ hdb.gov.sg
 hongkongdaily.net
 hsrjtk.com
 ica.gov.sg
-ihowguide.com
 imda.gov.sg
 iras.gov.sg
 izhangan.com
@@ -71,11 +69,11 @@ mom.gov.sg
 mothership.sg
 motu.art
 msf.gov.sg
-mspace.cc
 mti.gov.sg
 myinfo.gov.sg
 nea.gov.sg
 ngacn.cc
+nsiqoaks.com
 ntu.edu.sg
 nuomiphp.com
 nus.edu.sg
@@ -107,7 +105,6 @@ sit.edu.sg
 smrt.com.sg
 smu.edu.sg
 sogou.com
-soso.com
 souche.com
 spgroup.com.sg
 starhub.com
@@ -122,12 +119,13 @@ uhouzz.com
 ulife.com
 uob.com.sg
 ura.gov.sg
+ustarl.com
 visitsingapore.com
+weifengchina.com
 weixinyunduan.com
 wellcee.com
 winkkie.com
-wp.jun2020.com
-wysaid.org
+wondershare.com.br
 xiecheng.com
 xn--fiqs8sr9ge7eb4b28vo92a.com
 youhaosoft.com
@@ -136,7 +134,6 @@ yywt.online
 zaobao.com.sg
 zjlib.com
 zkzbkj.com
-zmtquan.com
 zqygame.com
 zshandsome.com
 zxkq022.com

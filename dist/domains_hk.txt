@@ -1,15 +1,14 @@
 # DomainNova - HK domains
-# Generated: 2026-05-08T02:53:18Z
-# Count: 163
+# Generated: 2026-05-08T03:07:44Z
+# Count: 165
+00xu.com
 163.net
 3hk.hk
-52112.com
 aastocks.com
 alipay.hk
 alipayhk.com
 asia.ccb.com
 aswatson.com
-b8b4ix7bj.com
 baby-kingdom.com
 bankofchina.com.hk
 bastillepost.com
@@ -18,7 +17,6 @@ beijing120.com
 bigbigchannel.com.hk
 boc.hk
 bochk.com
-caifu500.net
 cathaypacific.com
 cedb.gov.hk
 centennialcollege.hku.hk
@@ -28,7 +26,6 @@ citibank.com.hk
 cityu.edu.hk
 clp.com.hk
 cmab.gov.hk
-coffee-script.org
 crcbank.com
 crhk.com.hk
 csb.gov.hk
@@ -48,15 +45,14 @@ discuss.com.hk
 dragonfly.fm
 edb.gov.hk
 eduhk.hk
+fengxb.com
 find853.com
 fortress.com.hk
 fso.gov.hk
 fstb.gov.hk
 fwd.com.hk
 gcc.edu.hk
-gdks168.com
-globalesim.shop
-goodschool.world
+gourmet114.com
 gov.hk
 gxkfy.com
 ha.org.hk
@@ -94,6 +90,7 @@ hktvmall.com
 hku.hk
 hongkongairlines.com
 hongkongpost.hk
+honstarmemory.com
 hsbc.com.hk
 huoche.net
 hyab.gov.hk
@@ -101,18 +98,19 @@ icac.org.hk
 info.gov.hk
 isd.gov.hk
 jardines.com
+javabikes.com
 jd.hk
 job853.com
 jobsdb.com
 klook.com
 lcsd.gov.hk
 lihkg.com
+likeji.net
 ln.edu.hk
 lwb.gov.hk
-lzmy123.com
 lzskqyy.com
-males120.com
 mclcinema.com
+meexx.xyz
 mingpao.com
 mtr.com.hk
 newhua.com
@@ -126,27 +124,31 @@ pgyy.com
 polyu.edu.hk
 qxzsw.com
 rthk.hk
+sachenpharm.com
+sanhucidiao.cc
 sb.gov.hk
 sc.com
 scmp.com
 sfc.hk
 sfu.edu.hk
+shandongqinuo.com
 singtao.com
 smartone.com
 staticfile.org
 sth.org.hk
 stheadline.com
 stpaul.org.hk
+taizibao.com
 takungpao.com
 three.com.hk
 tmall.hk
 tom.com
-tpsbp.com
 tungwah.org.hk
 tvb.com
 twc.edu.hk
 uowchk.edu.hk
 ust.hk
+uupei.com
 uwants.com
 vtc.edu.hk
 watsons.com.hk
@@ -155,7 +157,6 @@ westkowloon.hk
 wharf.com.hk
 wheelockcompany.com
 winglungbank.com
-wordlm.com
 www.mybus.com.cn
 xiaohongtao.art
 xpcha.com
@@ -164,3 +165,4 @@ yata.hk
 yesstyle.com
 ygym.org
 za.group
+zksoftwaresz.com
