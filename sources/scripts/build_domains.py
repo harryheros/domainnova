@@ -95,6 +95,11 @@ DISCOVERY_MAX        = 2000   # max domains in discovery.txt
 DISCOVERY_SAMPLE     = 300    # domains sampled from discovery per run
 EXTENDED_MAX         = 3000   # suspend auto-promote when extended reaches this
 PURGE_AFTER_FAILURES = 5      # consecutive CN failures before purge
+PURGE_AFTER_EMPTY    = 6      # consecutive dns_total=0 runs before purge
+                               # (slightly more lenient than PURGE_AFTER_FAILURES
+                               #  to tolerate genuine transient DoH outages, but
+                               #  prevents dead/garbage domains from accumulating
+                               #  indefinitely under the old "pass" exemption)
 PROMOTE_AFTER_PASSES = 4      # consecutive CN passes before promotion
 DEAD_STREAK_THRESHOLD = 6     # consecutive empty-DNS runs before NS confirmation
 STICKY_MAX_DAYS      = 28     # max days a domain may stay sticky without re-resolving
@@ -1764,8 +1769,9 @@ def manage_discovery_lifecycle(
         return [], []
 
     stats = load_discovery_stats(repo_root)
-    hit_counts  = stats.get("hit_counts",  {})   # domain -> consecutive passes
-    fail_counts = stats.get("fail_counts", {})   # domain -> consecutive failures
+    hit_counts   = stats.get("hit_counts",   {})  # domain -> consecutive passes
+    fail_counts  = stats.get("fail_counts",  {})  # domain -> consecutive signal failures
+    empty_counts = stats.get("empty_counts", {})  # domain -> consecutive dns_total=0 runs
 
     # Check extended capacity
     extended_domains = load_file_domains(extended_path)
@@ -1786,20 +1792,34 @@ def manage_discovery_lifecycle(
             # Passed regional check
             hit_counts[domain]  = hit_counts.get(domain, 0) + 1
             fail_counts.pop(domain, None)
+            empty_counts.pop(domain, None)
 
             if not promote_suspended and hit_counts[domain] >= PROMOTE_AFTER_PASSES:
                 promoted.append(domain)
                 hit_counts.pop(domain, None)
                 fail_counts.pop(domain, None)
+                empty_counts.pop(domain, None)
         elif row.dns_total == 0:
-            # DNS returned nothing (timeout / NXDOMAIN / all upstreams failed)
-            # Treat as "unknown" — do NOT count as a failure.
-            # This prevents legitimate domains with flaky DNS from being purged.
-            pass
+            # DNS returned nothing (timeout / NXDOMAIN / all upstreams failed).
+            # Count consecutive empty runs separately from signal failures.
+            # A short streak is likely transient DoH jitter; a long streak
+            # (>= PURGE_AFTER_EMPTY) means the domain is dead or unreachable
+            # and should be purged rather than occupying a slot indefinitely.
+            empty_counts[domain] = empty_counts.get(domain, 0) + 1
+            hit_counts.pop(domain, None)
+            # Reset signal-failure streak — we have no new signal either way
+            fail_counts.pop(domain, None)
+
+            if empty_counts[domain] >= PURGE_AFTER_EMPTY:
+                log(f"  [info] Purging discovery domain {domain} "
+                    f"(dns_total=0 for {empty_counts[domain]} consecutive runs)")
+                purged.append(domain)
+                empty_counts.pop(domain, None)
         else:
             # Resolved to IPs but no qualifying regional signal → definitive failure
             fail_counts[domain] = fail_counts.get(domain, 0) + 1
             hit_counts.pop(domain, None)
+            empty_counts.pop(domain, None)
 
             if fail_counts[domain] >= PURGE_AFTER_FAILURES:
                 purged.append(domain)
@@ -1847,8 +1867,9 @@ def manage_discovery_lifecycle(
                 f.write(d + "\n")
 
     # Save updated stats
-    stats["hit_counts"]  = hit_counts
-    stats["fail_counts"] = fail_counts
+    stats["hit_counts"]   = hit_counts
+    stats["fail_counts"]  = fail_counts
+    stats["empty_counts"] = empty_counts
     save_discovery_stats(repo_root, stats)
 
     return purged, promoted
@@ -2019,6 +2040,12 @@ def detect_dead_domains(
             f.write(f"{timestamp}\t{src}\t{domain}\n")
 
     stats["dead_streak"] = dead_streak
+    # Clean up empty_counts for confirmed-dead domains so manage_discovery_lifecycle
+    # doesn't hold stale counters for domains that have already been removed.
+    empty_counts = stats.get("empty_counts", {})
+    for domain in confirmed_dead:
+        empty_counts.pop(domain, None)
+    stats["empty_counts"] = empty_counts
     save_discovery_stats(repo_root, stats)
     return confirmed_dead
 
