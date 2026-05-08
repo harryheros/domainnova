@@ -123,7 +123,6 @@ baomihua.com
 bbtnews.com.cn
 bceg.com.cn
 bear-electric.com
-beian.gov.cn
 beibei.com
 beingmate.com
 beisen.com
@@ -2005,12 +2004,8 @@ ylyk.com
 z.mafengwo.cn
 
 # ===== Taiwan domains (P2.A auto-scoring candidates) =====
-7-11.com.tw
-acer.com
 asus.com.tw
 banksinopac.com.tw
-bnext.com.tw
-businesstoday.com.tw
 buy123.com.tw
 carrefour.com.tw
 cathaylife.com.tw
@@ -2029,45 +2024,33 @@ gigabyte.com
 htc.com
 icook.tw
 inside.com.tw
-judicial.gov.tw
 kgi.com
 klook.com.tw
 liontravel.com
-mediatek.com
 metro.taipei
 mirrormedia.mg
 mnews.tw
 msi.com
 mybank.com.tw
 nchu.edu.tw
-ncku.edu.tw
 nctu.edu.tw
 newtalk.tw
 nextapple.com
-nhi.gov.tw
-nthu.edu.tw
 ntnu.edu.tw
-ntust.edu.tw
-nycu.edu.tw
 openrice.com.tw
 payeasy.com.tw
-pcstore.com.tw
 plurk.com
 railway.gov.tw
 rakuten.com.tw
 realtek.com
-rti.org.tw
 scsb.com.tw
-taipower.com.tw
 taiwanlife.com
-taiwanmobile.com
 tcb-bank.com.tw
 technews.tw
 thenewslens.com
 tipo.gov.tw
 ttv.com.tw
 uniqlo.com.tw
-water.gov.tw
 xuite.net
 yuantabank.com.tw
 

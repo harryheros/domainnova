@@ -81,6 +81,16 @@ SECTION_OVERRIDES: dict[str, dict] = {
     "Healthcare":                  {"ecosystem": "healthcare",        "entity": "Multi-institution",         "category": "healthcare"},
     "Education":                   {"ecosystem": "education",         "entity": "Multi-institution",         "category": "education"},
     "Gaming":                      {"ecosystem": "gaming",            "entity": "Multi-brand",               "category": "gaming"},
+    # ── Region seed top-level headers ──────────────────────────────────────
+    # These are the file-level titles in each seed_xx.txt. Without entries here
+    # they fall through as ecosystem=unknown; mapping them to their region's
+    # infrastructure identity gives correct metadata for the whole seed file.
+    "DomainNova - Seed Domains (Hong Kong)":        {"ecosystem": "infrastructure-hk", "entity": "Hong Kong Infrastructure",  "category": "infrastructure"},
+    "DomainNova - Seed Domains (Macau)":            {"ecosystem": "infrastructure-mo", "entity": "Macau Infrastructure",      "category": "infrastructure"},
+    "DomainNova - Seed Domains (Taiwan - Expanded)":{"ecosystem": "infrastructure-tw", "entity": "Taiwan Infrastructure",     "category": "infrastructure"},
+    "DomainNova - Seed Domains (Japan - Expanded)": {"ecosystem": "infrastructure-jp", "entity": "Japan Infrastructure",      "category": "infrastructure"},
+    "DomainNova - Seed Domains (South Korea)":      {"ecosystem": "infrastructure-kr", "entity": "South Korea Infrastructure","category": "infrastructure"},
+    "DomainNova - Seed Domains (Singapore)":        {"ecosystem": "infrastructure-sg", "entity": "Singapore Infrastructure",  "category": "infrastructure"},
 }
 
 
