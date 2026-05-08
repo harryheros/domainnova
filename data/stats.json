@@ -66,12 +66,12 @@
     },
     "unclassified": 418
   },
-  "generated_at": "2026-05-08T08:13:14Z",
+  "generated_at": "2026-05-08T17:14:29Z",
   "auto_purged": 0,
   "auto_promoted": 0,
   "auto_dead_removed": 0,
   "processing_errors": 0,
-  "sticky_retained": 535,
+  "sticky_retained": 534,
   "workers": 20,
   "discovery_sample": 300
 }
