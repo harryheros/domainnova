@@ -1,6 +1,6 @@
 # DomainNova - CN domains
-# Generated: 2026-05-08T03:07:44Z
-# Count: 3359
+# Generated: 2026-05-08T08:13:14Z
+# Count: 3358
 00086.net
 010dh.com
 025xl.com
@@ -929,7 +929,6 @@ dns.la
 dnsapi.cn
 dnspod.cn
 dnspod.com
-dnsv1.com
 dnswind.net
 dobunkan.com
 doc88.com
