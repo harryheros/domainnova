@@ -11,7 +11,13 @@
     "extended": 3007
   },
   "by_ecosystem": {
-    "unknown": 4189,
+    "unknown": 3394,
+    "infrastructure-kr": 162,
+    "infrastructure-tw": 159,
+    "infrastructure-jp": 158,
+    "infrastructure-hk": 130,
+    "infrastructure-mo": 110,
+    "infrastructure-sg": 76,
     "government-cn": 43,
     "finance-banking": 27,
     "alibaba": 21,
@@ -31,7 +37,8 @@
     "developer-platforms": 4
   },
   "by_category": {
-    "uncategorized": 4189,
+    "uncategorized": 3394,
+    "infrastructure": 795,
     "platform": 85,
     "government": 43,
     "finance": 27,

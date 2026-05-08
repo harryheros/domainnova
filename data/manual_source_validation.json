@@ -42,7 +42,7 @@
     "unsectioned": []
   },
   "extended": {
-    "count": 3024,
+    "count": 3007,
     "duplicates": [],
     "invalid": [],
     "unsectioned": [
@@ -169,7 +169,6 @@
       "bbtnews.com.cn",
       "bceg.com.cn",
       "bear-electric.com",
-      "beian.gov.cn",
       "beibei.com",
       "beingmate.com",
       "beisen.com",
@@ -911,24 +910,6 @@
       "zxjy.net"
     ]
   },
-  "cross_source_overlap": [
-    "7-11.com.tw",
-    "acer.com",
-    "beian.gov.cn",
-    "bnext.com.tw",
-    "businesstoday.com.tw",
-    "judicial.gov.tw",
-    "mediatek.com",
-    "ncku.edu.tw",
-    "nhi.gov.tw",
-    "nthu.edu.tw",
-    "ntust.edu.tw",
-    "nycu.edu.tw",
-    "pcstore.com.tw",
-    "rti.org.tw",
-    "taipower.com.tw",
-    "taiwanmobile.com",
-    "water.gov.tw"
-  ],
+  "cross_source_overlap": [],
   "cross_seed_overlap": {}
 }
