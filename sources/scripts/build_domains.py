@@ -97,6 +97,7 @@ EXTENDED_MAX         = 3000   # suspend auto-promote when extended reaches this
 PURGE_AFTER_FAILURES = 5      # consecutive CN failures before purge
 PROMOTE_AFTER_PASSES = 4      # consecutive CN passes before promotion
 DEAD_STREAK_THRESHOLD = 6     # consecutive empty-DNS runs before NS confirmation
+STICKY_MAX_DAYS      = 28     # max days a domain may stay sticky without re-resolving
 MAX_WORKERS          = 20     # DoH thread pool size
 JITTER_MIN           = 0.05   # seconds
 JITTER_MAX           = 0.15   # seconds
@@ -367,19 +368,47 @@ def detect_provider(ips: List[str]) -> tuple:
                     provider = _STATIC_ASN_PROVIDER.get(asn, f"AS{asn}")
                     return provider, 0
 
-    # Step 3: Global CDN hostname pattern check (cdn_masked=1)
+    # Step 3: Global CDN ASN check (cdn_masked=1)
     # These providers use anycast IPs that do not reveal true origin region.
-    cdn_hostname_patterns: dict[str, tuple] = {
-        "Cloudflare":        ("cloudflare.com", "cf-ipv4.com"),
-        "Akamai":            ("akamaiedge.net", "akamaized.net"),
-        "Fastly":            ("fastly.net", "fastlylb.net"),
-        "Amazon CloudFront": ("cloudfront.net",),
-        "Google Cloud CDN":  ("googleusercontent.com", "googlevideo.com"),
-        "Microsoft Azure":   ("azureedge.net", "msecnd.net"),
-    }
-    # Note: hostname-based CDN detection requires PTR lookup which is not
-    # implemented here (adds latency). Kept as a stub for future integration.
-    # cdn_masked is currently set via GLOBAL_CDN_ASNS at build time if needed.
+    # We detect them via ASN lookup using the same _cidr_asn_map used in Step 1.
+    # If any resolved IP maps to a known global CDN ASN, flag cdn_masked=1.
+    # This replaces the PTR-lookup stub (too slow for build pipeline) with an
+    # accurate ASN-based approach that uses existing data without extra latency.
+    if _cidr_asn_map:
+        for ip in ips:
+            try:
+                addr = ipaddress.IPv4Address(ip)
+            except ValueError:
+                continue
+            addr_int = int(addr)
+            for cidr_str, asn in _cidr_asn_map.items():
+                try:
+                    net = ipaddress.IPv4Network(cidr_str)
+                except ValueError:
+                    continue
+                if addr_int >= int(net.network_address) and addr_int <= int(net.broadcast_address):
+                    if asn in GLOBAL_CDN_ASNS:
+                        cdn_name = GLOBAL_CDN_ASNS[asn]
+                        return cdn_name, 1
+    else:
+        # Fallback: well-known Cloudflare and Akamai IP prefix heuristics
+        _cdn_prefix_hints: list[tuple[str, str]] = [
+            ("172.64.",  "Cloudflare"),
+            ("172.65.",  "Cloudflare"),
+            ("172.66.",  "Cloudflare"),
+            ("172.67.",  "Cloudflare"),
+            ("104.16.",  "Cloudflare"),
+            ("104.17.",  "Cloudflare"),
+            ("104.18.",  "Cloudflare"),
+            ("104.19.",  "Cloudflare"),
+            ("104.20.",  "Cloudflare"),
+            ("104.21.",  "Cloudflare"),
+            ("23.227.",  "Cloudflare"),
+        ]
+        for ip in ips:
+            for prefix, cdn_name in _cdn_prefix_hints:
+                if ip.startswith(prefix):
+                    return cdn_name, 1
 
     return "", 0
 
@@ -759,6 +788,18 @@ def _classify_health(rate: float) -> str:
     return "ok"
 
 
+def _classify_resolve_rate(resolve_rate: float) -> str:
+    """Pure function. Maps DoH resolution rate to status label.
+    A low resolution rate is an independent signal of DoH reachability issues,
+    separate from whether resolved IPs land in the expected region.
+    Thresholds: < 0.3 -> error, < 0.5 -> warn, else ok."""
+    if resolve_rate < 0.3:
+        return "error"
+    if resolve_rate < 0.5:
+        return "warn"
+    return "ok"
+
+
 def seed_health_check(
     repo_root: Path,
     region_lookup: RegionLookup,
@@ -864,19 +905,30 @@ def seed_health_check(
 
             rate = consistent / resolved
             status = _classify_health(rate)
+            resolve_rate = resolved / sample_size
+            resolve_status = _classify_resolve_rate(resolve_rate)
+            # Combined status: worst of consistency status and resolution status
+            _severity = {"ok": 0, "warn": 1, "error": 2}
+            combined_status = max(status, resolve_status, key=lambda s: _severity[s])
+            dns_consistent = consistent - identity_overrides
             entry.update({
                 "sampled":            sample_size,
                 "resolved":           resolved,
+                "resolve_rate":       round(resolve_rate, 4),
+                "resolve_status":     resolve_status,
                 "consistent":         consistent,
                 "identity_overrides": identity_overrides,
+                "dns_consistent":     dns_consistent,
                 "rate":               round(rate, 4),
-                "status":             status,
+                "status":             combined_status,
             })
             payload["results"][filename] = entry
 
-            level = {"ok": "+", "warn": "WARN", "error": "ERROR"}[status]
+            level = {"ok": "+", "warn": "WARN", "error": "ERROR"}[combined_status]
             log(f"[{level}] seed_health: {filename} ({expected_region}) "
-                f"{consistent}/{resolved} consistent (rate={rate:.2f}, status={status})")
+                f"{consistent}/{resolved} consistent (rate={rate:.2f}, "
+                f"resolve_rate={resolve_rate:.2f}, dns_consistent={dns_consistent}, "
+                f"status={combined_status})")
 
         # Persist payload
         out_path = repo_root / "data" / "seed_health.json"
@@ -1578,49 +1630,66 @@ def process_domain(
     # IPs but they're no longer in CN CIDRs, that's a real signal change and
     # we let it through. Per PROPOSAL §6.1, sticky also restores prev.bucket
     # so domains don't flicker between buckets on DoH jitter.
+    # STICKY_MAX_DAYS cap: after this many days without re-resolving, the
+    # sticky protection expires and the domain is dropped from dist on next
+    # failed run. This prevents permanently unverifiable domains from
+    # accumulating in the dist indefinitely.
     sticky_flag = 0
     if previous and not ips:
         prev = previous.get(domain)
         if prev and prev.score >= INCLUDE_THRESHOLD:
-            # P1 fix v2.1: if the sticky record has an empty bucket (legacy
-            # CSV migration residue, or a sticky chain that spans the P1 upgrade
-            # from before bucket existed), re-apply the seed-force rule using
-            # the CURRENT source. This recovers domains that persistently fail
-            # DoH but are known-good seeds. Non-seed sources stay unclassified
-            # because we have no way to re-derive their bucket without IPs.
-            sticky_bucket = prev.bucket
-            if source in _SEED_SOURCE_TO_BUCKET:
-                sticky_bucket = _SEED_SOURCE_TO_BUCKET[source]
-            # P1 fix v2.2: for non-seed sources with empty bucket (e.g. extended
-            # .cn domains that persistently fail DoH), use CN TLD as recovery signal.
-            # cn_tld=1 is a strong administrative signal (ICP filing requirement);
-            # assigning CN bucket here is safer than leaving the domain unclassified.
-            if not sticky_bucket and prev.cn_tld:
-                sticky_bucket = "CN"
-            return DomainRecord(
-                domain=domain,
-                dns_cn=prev.dns_cn,
-                dns_cn_count=prev.dns_cn_count,
-                dns_total=prev.dns_total,
-                registrar_cn=prev.registrar_cn,
-                registrant_cn=prev.registrant_cn,
-                cn_tld=prev.cn_tld,
-                score=prev.score,
-                resolved_ips=prev.resolved_ips,
-                matched_cidr=prev.matched_cidr,
-                source=source,          # source may have been reclassified
-                updated=prev.updated,   # keep stale date to signal non-refresh
-                sticky=1,
-                bucket=sticky_bucket,   # restore (and possibly repair) bucket
-                dns_hk=prev.dns_hk,
-                dns_mo=prev.dns_mo,
-                dns_tw=prev.dns_tw,
-                dns_jp=prev.dns_jp,
-                dns_kr=prev.dns_kr,
-                dns_sg=prev.dns_sg,
-                provider=getattr(prev, "provider", ""),
-                cdn_masked=getattr(prev, "cdn_masked", 0),
-            )
+            # Check sticky age — do not carry forward indefinitely
+            try:
+                import datetime as _dt
+                prev_date = _dt.date.fromisoformat(prev.updated)
+                today_date = _dt.date.fromisoformat(updated)
+                age_days = (today_date - prev_date).days
+            except (ValueError, TypeError):
+                age_days = 0
+            if age_days > STICKY_MAX_DAYS:
+                log(f"  [info] sticky expired for {domain} "
+                    f"(last resolved {prev.updated}, {age_days}d ago > {STICKY_MAX_DAYS}d limit)")
+                # Fall through — do NOT return sticky; let score=0 propagate
+            else:
+                # P1 fix v2.1: if the sticky record has an empty bucket (legacy
+                # CSV migration residue, or a sticky chain that spans the P1 upgrade
+                # from before bucket existed), re-apply the seed-force rule using
+                # the CURRENT source. This recovers domains that persistently fail
+                # DoH but are known-good seeds. Non-seed sources stay unclassified
+                # because we have no way to re-derive their bucket without IPs.
+                sticky_bucket = prev.bucket
+                if source in _SEED_SOURCE_TO_BUCKET:
+                    sticky_bucket = _SEED_SOURCE_TO_BUCKET[source]
+                # P1 fix v2.2: for non-seed sources with empty bucket (e.g. extended
+                # .cn domains that persistently fail DoH), use CN TLD as recovery signal.
+                # cn_tld=1 is a strong administrative signal (ICP filing requirement);
+                # assigning CN bucket here is safer than leaving the domain unclassified.
+                if not sticky_bucket and prev.cn_tld:
+                    sticky_bucket = "CN"
+                return DomainRecord(
+                    domain=domain,
+                    dns_cn=prev.dns_cn,
+                    dns_cn_count=prev.dns_cn_count,
+                    dns_total=prev.dns_total,
+                    registrar_cn=prev.registrar_cn,
+                    registrant_cn=prev.registrant_cn,
+                    cn_tld=prev.cn_tld,
+                    score=prev.score,
+                    resolved_ips=prev.resolved_ips,
+                    matched_cidr=prev.matched_cidr,
+                    source=source,          # source may have been reclassified
+                    updated=prev.updated,   # keep stale date to signal non-refresh
+                    sticky=1,
+                    bucket=sticky_bucket,   # restore (and possibly repair) bucket
+                    dns_hk=prev.dns_hk,
+                    dns_mo=prev.dns_mo,
+                    dns_tw=prev.dns_tw,
+                    dns_jp=prev.dns_jp,
+                    dns_kr=prev.dns_kr,
+                    dns_sg=prev.dns_sg,
+                    provider=getattr(prev, "provider", ""),
+                    cdn_masked=getattr(prev, "cdn_masked", 0),
+                )
 
     provider_name, cdn_masked_flag = detect_provider(ips)
 
@@ -2033,16 +2102,24 @@ def write_stats(
         if r.score >= 60:
             if r.dns_cn == 1:
                 score_bands["cn_dns"] += 1
+            elif r.cn_tld and not r.bucket or r.bucket == "CN":
+                # .cn TLD fallback path (ICP-backed, no DNS confirmation)
+                score_bands["cn_tld"] += 1
             else:
-                score_bands["cn_tld"] += 1  # .cn ICP-backed, included in dist
+                # Non-CN seed forced to score=100, or regional DNS signal
+                score_bands["seed_forced"] += 1
         elif r.score >= 30:
             score_bands["gray"] += 1
         else:
             score_bands["non_cn"] += 1
 
     # P1 Step 6: per-bucket totals. `included` is computed by write_dist_buckets
-    # (passed via bucket_counts) so the two are guaranteed to agree. `gray` and
-    # `total` are computed here from rows for completeness.
+    # (passed via bucket_counts) so the two are guaranteed to agree. `gray`,
+    # `no_signal`, and `total` are computed here from rows for completeness.
+    # `no_signal`: score=0 domains that were assigned a bucket (e.g. extended
+    # .tw domains behind overseas CDNs with no dns_xx signal). These are
+    # correctly excluded from dist but previously fell through the gray/total
+    # accounting gap (score=0 is neither >= INCLUDE_THRESHOLD nor >= 30).
     buckets_payload: Dict[str, Dict[str, int]] = {}
     unclassified_count = 0
     for r in rows:
@@ -2050,16 +2127,18 @@ def write_stats(
             unclassified_count += 1
             continue
         b = r.bucket.lower()
-        slot = buckets_payload.setdefault(b, {"included": 0, "gray": 0, "total": 0})
+        slot = buckets_payload.setdefault(b, {"included": 0, "gray": 0, "no_signal": 0, "total": 0})
         slot["total"] += 1
         if r.score >= INCLUDE_THRESHOLD:
             pass  # 'included' is overwritten below from bucket_counts
         elif r.score >= 30:
             slot["gray"] += 1
+        else:
+            slot["no_signal"] += 1  # bucketed but score=0; excluded from dist
     # Ensure all region buckets always present, even when empty
     # P1 fix v3: expanded to all REGION_BUCKETS so JP/KR/SG show correct included counts.
     for b in {rb.lower() for rb in REGION_BUCKETS}:
-        buckets_payload.setdefault(b, {"included": 0, "gray": 0, "total": 0})
+        buckets_payload.setdefault(b, {"included": 0, "gray": 0, "no_signal": 0, "total": 0})
         if bucket_counts is not None:
             buckets_payload[b]["included"] = bucket_counts.get(b, 0)
         else:

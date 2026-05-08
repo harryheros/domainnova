@@ -89,6 +89,7 @@ jobs:
             data/manual_source_validation.json \
             data/seed_health.json \
             data/stats.json \
+            data/discovery_stats.json \
             dist/domains_cn.txt \
             dist/domains_hk.txt \
             dist/domains_mo.txt \
