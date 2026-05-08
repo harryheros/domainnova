@@ -49,8 +49,23 @@ jobs:
           python sources/discovery_agents/agent_ip_neighbor.py
           echo "[+] Running CT logs agent..."
           python sources/discovery_agents/agent_ct_logs.py
+      - name: Restore discovery stats cache
+        uses: actions/cache@v4
+        with:
+          path: data/discovery_stats.json
+          key: discovery-stats-${{ github.ref_name }}
+          restore-keys: |
+            discovery-stats-
+
       - name: Build domain artifacts
         run: python sources/scripts/build_domains.py
+
+      - name: Save discovery stats cache
+        uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: data/discovery_stats.json
+          key: discovery-stats-${{ github.ref_name }}
 
       - name: Build metadata artifacts
         run: python sources/scripts/build_metadata.py --all
@@ -89,7 +104,6 @@ jobs:
             data/manual_source_validation.json \
             data/seed_health.json \
             data/stats.json \
-            data/discovery_stats.json \
             dist/domains_cn.txt \
             dist/domains_hk.txt \
             dist/domains_mo.txt \
