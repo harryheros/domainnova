@@ -1,6 +1,6 @@
 # DomainNova - CN domains
-# Generated: 2026-05-08T17:14:29Z
-# Count: 3358
+# Generated: 2026-05-11T00:53:13Z
+# Count: 3353
 00086.net
 010dh.com
 025xl.com
@@ -767,6 +767,7 @@ cppcc.gov.cn
 cpuh2.com
 cpwlx.com
 cq8y4l.cn.720yun.com
+cqallcure.com
 cqdpt.com
 cqguangren.com
 cqgzdlgc.com
@@ -2018,7 +2019,6 @@ my7v.com
 myapp.com
 mybank.cn
 mydrivers.com
-mygobatv.com
 myhexin.com
 myhuaweicloud.com
 mynatapp.cc
@@ -2274,7 +2274,6 @@ qingyuangroup.com
 qiniu.com
 qiniucdn.com
 qinms.com
-qinqingshipin.com
 qinyuan.cn
 qiqiuyu.com
 qiquanwl.com
@@ -2300,6 +2299,7 @@ qunhei.com
 quotes.money.163.com
 quzhuanxiang.com
 qxw18.com
+qxzsw.com
 qyer.com
 qzqxd.com
 qzzpw.net
@@ -2449,7 +2449,6 @@ shyyy.com
 shyyyl.com
 shyz07.com
 sichuan.gov.cn
-siemens-home.com.cn
 siemens.com.cn
 sihoo.com
 sihuisoft.com
@@ -2504,7 +2503,6 @@ sohucs.com
 soicp.com
 songcwh.com
 songsongruanwen.com
-soso.com
 southcn.com
 southernmindict.net
 sowang.com
@@ -2818,7 +2816,6 @@ waterclean.cn
 watsons.com.cn
 wbimg.com
 wbpic.ws.netease.com
-wc44.com
 wcp.taobao.com
 weather.intl.cdn.xiaomi.com
 weatherol.com
@@ -2915,7 +2912,6 @@ www.cnyuxiang.cn
 www.cpic.com.cn
 www.cxtxl.com
 www.cyan-ad.com
-www.dayspay.com.cn
 www.dintek.com.cn
 www.dyp5918.com
 www.el-range.com
@@ -3034,7 +3030,6 @@ xin.net
 xinduoad.com
 xingci.com.cn
 xingpai.com
-xingshangnet.com
 xingyangroup.com
 xingzou.art
 xinhua.org
