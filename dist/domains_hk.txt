@@ -1,6 +1,6 @@
 # DomainNova - HK domains
-# Generated: 2026-05-08T17:14:29Z
-# Count: 165
+# Generated: 2026-05-11T00:53:13Z
+# Count: 170
 00xu.com
 163.net
 3hk.hk
@@ -104,6 +104,7 @@ job853.com
 jobsdb.com
 klook.com
 lcsd.gov.hk
+lianfengwh.com
 lihkg.com
 likeji.net
 ln.edu.hk
@@ -113,6 +114,7 @@ mclcinema.com
 meexx.xyz
 mingpao.com
 mtr.com.hk
+mygobatv.com
 newhua.com
 nowtv.now.com
 oceanpark.com.hk
@@ -122,7 +124,6 @@ openrice.com
 pccw.com
 pgyy.com
 polyu.edu.hk
-qxzsw.com
 rthk.hk
 sachenpharm.com
 sanhucidiao.cc
@@ -132,6 +133,7 @@ scmp.com
 sfc.hk
 sfu.edu.hk
 shandongqinuo.com
+siemens-home.com.cn
 singtao.com
 smartone.com
 staticfile.org
@@ -152,13 +154,16 @@ uupei.com
 uwants.com
 vtc.edu.hk
 watsons.com.hk
+wc44.com
 wenweipo.com
 westkowloon.hk
 wharf.com.hk
 wheelockcompany.com
 winglungbank.com
+www.dayspay.com.cn
 www.mybus.com.cn
 xiaohongtao.art
+xingshangnet.com
 xpcha.com
 yahoo.com.hk
 yata.hk
