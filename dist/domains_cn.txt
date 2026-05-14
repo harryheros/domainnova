@@ -1,5 +1,5 @@
 # DomainNova - CN domains
-# Generated: 2026-05-13T04:29:26Z
+# Generated: 2026-05-14T17:24:28Z
 # Count: 3353
 00086.net
 010dh.com
@@ -2503,6 +2503,7 @@ sohucs.com
 soicp.com
 songcwh.com
 songsongruanwen.com
+soso.com
 southcn.com
 southernmindict.net
 sowang.com
@@ -3058,7 +3059,6 @@ xlkshop.com
 xm9m.com
 xmafkj.com
 xmheigu.com
-xmzgxcl.com
 xn--nyqx2gbsm8u0b.com
 xooooa.com
 xpeng.com
