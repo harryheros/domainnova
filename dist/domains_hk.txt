@@ -1,6 +1,6 @@
 # DomainNova - HK domains
-# Generated: 2026-05-14T17:24:28Z
-# Count: 171
+# Generated: 2026-05-17T18:00:08Z
+# Count: 172
 00xu.com
 163.net
 3hk.hk
@@ -100,6 +100,7 @@ isd.gov.hk
 jardines.com
 javabikes.com
 jd.hk
+jiequ.art
 job853.com
 jobsdb.com
 klook.com
@@ -163,7 +164,6 @@ winglungbank.com
 www.dayspay.com.cn
 www.mybus.com.cn
 xiaohongtao.art
-xingshangnet.com
 xmzgxcl.com
 xpcha.com
 yahoo.com.hk
@@ -171,4 +171,5 @@ yata.hk
 yesstyle.com
 ygym.org
 za.group
+zjgqt.org
 zksoftwaresz.com

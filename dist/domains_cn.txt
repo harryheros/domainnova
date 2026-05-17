@@ -1,6 +1,6 @@
 # DomainNova - CN domains
-# Generated: 2026-05-14T17:24:28Z
-# Count: 3353
+# Generated: 2026-05-17T18:00:08Z
+# Count: 3350
 00086.net
 010dh.com
 025xl.com
@@ -19,6 +19,7 @@
 10jqka.com.cn
 10yan.com
 11467.com
+114la.com
 114photo.com
 115.com
 116cd.net
@@ -403,7 +404,6 @@ beijing.gov.cn
 beijing.yhk.18.com.cn
 beijingforum.art
 beike.com
-beileimaoedu.com
 beingmate.com
 beisen.com
 beiwaiguoji.com
@@ -787,7 +787,6 @@ cqxdnzyy.com
 cqyti.com
 cqzhihaolaw.com
 cr12306.cn
-craer.com
 crcc.cn
 creaton.com.cn
 crecg.com
@@ -930,6 +929,7 @@ dns.la
 dnsapi.cn
 dnspod.cn
 dnspod.com
+dnsv1.com
 dnswind.net
 dobunkan.com
 doc88.com
@@ -1632,7 +1632,6 @@ jiebide.xin
 jiegon.com
 jiehualv.com
 jiemian.com
-jiequ.art
 jietu365.com
 jihaoba.com
 jihuoniao.com
@@ -2503,7 +2502,6 @@ sohucs.com
 soicp.com
 songcwh.com
 songsongruanwen.com
-soso.com
 southcn.com
 southernmindict.net
 sowang.com
@@ -2976,7 +2974,6 @@ wxamkfyy.com
 wxapp3.720yun.com
 wxchildren.com
 wxhlhg.com
-wxtyyy.com
 wxzpw8.com
 wyl.cc
 wzgytz.com
@@ -3031,6 +3028,7 @@ xin.net
 xinduoad.com
 xingci.com.cn
 xingpai.com
+xingshangnet.com
 xingyangroup.com
 xingzou.art
 xinhua.org
@@ -3298,7 +3296,6 @@ zhx2008.com
 zigouzhan01.bbs.taobao.com
 ziroom.com
 zjblast.com
-zjgqt.org
 zjkbfjd.com
 zjkeling.com
 zjklfj.com

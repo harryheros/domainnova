@@ -1,6 +1,6 @@
 # DomainNova - TW domains
-# Generated: 2026-05-14T17:24:28Z
-# Count: 171
+# Generated: 2026-05-17T18:00:08Z
+# Count: 170
 104.com.tw
 1111.com.tw
 518.com.tw
@@ -74,7 +74,6 @@ kaohsiung.gov.tw
 kbro.com.tw
 kcg.gov.tw
 keelung.gov.tw
-kerrytj.com
 kgi.com
 kia.gov.tw
 kinmen.gov.tw

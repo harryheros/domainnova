@@ -1,65 +1,65 @@
 {
-  "checked_at": "2026-05-14T17:21:30Z",
+  "checked_at": "2026-05-17T17:57:06Z",
   "results": {
     "seed_cn.txt": {
       "region": "CN",
       "sampled": 20,
-      "consistent": 15,
-      "rate": 0.8824,
+      "consistent": 17,
+      "rate": 0.9444,
       "status": "ok",
-      "resolved": 17,
-      "resolve_rate": 0.85,
+      "resolved": 18,
+      "resolve_rate": 0.9,
       "resolve_status": "ok",
       "identity_overrides": 0,
-      "dns_consistent": 15
+      "dns_consistent": 17
     },
     "seed_hk.txt": {
       "region": "HK",
       "sampled": 20,
-      "consistent": 11,
-      "rate": 0.5789,
+      "consistent": 9,
+      "rate": 0.5625,
       "status": "warn",
-      "resolved": 19,
-      "resolve_rate": 0.95,
+      "resolved": 16,
+      "resolve_rate": 0.8,
       "resolve_status": "ok",
       "identity_overrides": 7,
-      "dns_consistent": 4
+      "dns_consistent": 2
     },
     "seed_mo.txt": {
       "region": "MO",
       "sampled": 20,
-      "consistent": 7,
-      "rate": 0.875,
-      "status": "warn",
-      "resolved": 8,
-      "resolve_rate": 0.4,
-      "resolve_status": "warn",
+      "consistent": 8,
+      "rate": 0.8,
+      "status": "ok",
+      "resolved": 10,
+      "resolve_rate": 0.5,
+      "resolve_status": "ok",
       "identity_overrides": 7,
-      "dns_consistent": 0
+      "dns_consistent": 1
     },
     "seed_tw.txt": {
       "region": "TW",
       "sampled": 20,
       "consistent": 6,
-      "rate": 0.6,
-      "status": "ok",
-      "resolved": 10,
-      "resolve_rate": 0.5,
-      "resolve_status": "ok",
-      "identity_overrides": 6,
-      "dns_consistent": 0
+      "rate": 0.8571,
+      "status": "warn",
+      "resolved": 7,
+      "resolve_rate": 0.35,
+      "resolve_status": "warn",
+      "identity_overrides": 5,
+      "dns_consistent": 1
     },
     "seed_jp.txt": {
       "region": "JP",
       "sampled": 20,
-      "consistent": 5,
-      "rate": 0.8333,
+      "consistent": 4,
+      "rate": 0.6667,
       "status": "warn",
       "resolved": 6,
       "resolve_rate": 0.3,
       "resolve_status": "warn",
-      "identity_overrides": 5,
-      "dns_consistent": 0
+      "identity_overrides": 3,
+      "dns_consistent": 1
     },
     "seed_kr.txt": {
       "region": "KR",
@@ -70,20 +70,20 @@
       "resolved": 20,
       "resolve_rate": 1.0,
       "resolve_status": "ok",
-      "identity_overrides": 8,
-      "dns_consistent": 6
+      "identity_overrides": 10,
+      "dns_consistent": 4
     },
     "seed_sg.txt": {
       "region": "SG",
       "sampled": 20,
-      "consistent": 14,
-      "rate": 0.7368,
+      "consistent": 15,
+      "rate": 0.8824,
       "status": "ok",
-      "resolved": 19,
-      "resolve_rate": 0.95,
+      "resolved": 17,
+      "resolve_rate": 0.85,
       "resolve_status": "ok",
       "identity_overrides": 14,
-      "dns_consistent": 0
+      "dns_consistent": 1
     }
   }
 }
