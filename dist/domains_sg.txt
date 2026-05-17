@@ -1,6 +1,6 @@
 # DomainNova - SG domains
-# Generated: 2026-05-14T17:24:28Z
-# Count: 136
+# Generated: 2026-05-17T18:00:08Z
+# Count: 139
 263.net
 3171688.com
 321009.com
@@ -23,6 +23,7 @@ coldstorage.com.sg
 comfortdelgro.com
 cpf.gov.sg
 cqjsaq.com
+craer.com
 csa.gov.sg
 ctrip.co.id
 ctsho.com
@@ -105,6 +106,7 @@ sit.edu.sg
 smrt.com.sg
 smu.edu.sg
 sogou.com
+soso.com
 souche.com
 spgroup.com.sg
 starhub.com
@@ -126,6 +128,7 @@ weixinyunduan.com
 wellcee.com
 winkkie.com
 wondershare.com.br
+wxtyyy.com
 xiecheng.com
 xn--fiqs8sr9ge7eb4b28vo92a.com
 youhaosoft.com
