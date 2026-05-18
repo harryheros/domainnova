@@ -1,6 +1,6 @@
 # DomainNova - CN domains
-# Generated: 2026-05-18T06:10:57Z
-# Count: 3350
+# Generated: 2026-05-18T17:48:45Z
+# Count: 3351
 00086.net
 010dh.com
 025xl.com
@@ -311,7 +311,6 @@ aoyou.com
 apad.pro
 apexapex.com
 api.17u.cn
-api.ad.xiaomi.com
 api.money.163.com
 api.xldoet.com
 apigwtencent.com
@@ -387,6 +386,7 @@ baoxiu.nwpu.edu.cn
 bawanglongbengye.com
 baxisuye.com
 bayuxuexiao.net
+bbcayy.com
 bbs.sahu.net
 bbtnews.com.cn
 bcebos.com
@@ -929,7 +929,6 @@ dns.la
 dnsapi.cn
 dnspod.cn
 dnspod.com
-dnsv1.com
 dnswind.net
 dobunkan.com
 doc88.com
@@ -2495,6 +2494,7 @@ snssdk.com
 so.com
 soccerbar.cc
 softonic.cn
+sogou.com
 sogoucdn.com
 sogowan.com
 sohu.com
@@ -2572,6 +2572,7 @@ szeeg.com
 szegddc.com
 szlanyou.com
 szlawyers.com
+szlddb.com
 szledia.org
 szmama.net
 szpengfa.net
