@@ -1,5 +1,5 @@
 # DomainNova - SG domains
-# Generated: 2026-05-18T06:10:57Z
+# Generated: 2026-05-18T17:48:45Z
 # Count: 139
 263.net
 3171688.com
@@ -105,12 +105,12 @@ sistic.com.sg
 sit.edu.sg
 smrt.com.sg
 smu.edu.sg
-sogou.com
 soso.com
 souche.com
 spgroup.com.sg
 starhub.com
 stbieshu.com
+stnn.cc
 straitstimes.com
 streetdirectory.com
 sutd.edu.sg
