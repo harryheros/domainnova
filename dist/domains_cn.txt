@@ -1,6 +1,6 @@
 # DomainNova - CN domains
-# Generated: 2026-05-18T17:48:45Z
-# Count: 3351
+# Generated: 2026-05-20T01:35:04Z
+# Count: 3350
 00086.net
 010dh.com
 025xl.com
@@ -311,6 +311,7 @@ aoyou.com
 apad.pro
 apexapex.com
 api.17u.cn
+api.ad.xiaomi.com
 api.money.163.com
 api.xldoet.com
 apigwtencent.com
@@ -1954,7 +1955,6 @@ miguvideo.com
 mihoyo.com
 mihoyogame.com
 mihuachat.com
-miidim.com
 miit.gov.cn
 mikuclub.fun
 mincdn.com
@@ -2494,7 +2494,6 @@ snssdk.com
 so.com
 soccerbar.cc
 softonic.cn
-sogou.com
 sogoucdn.com
 sogowan.com
 sohu.com
@@ -2502,6 +2501,7 @@ sohucs.com
 soicp.com
 songcwh.com
 songsongruanwen.com
+soso.com
 southcn.com
 southernmindict.net
 sowang.com
@@ -2716,7 +2716,6 @@ tudou.com
 tui.taobao.com
 tuniu.com
 tuoren.com
-tupian114.com
 tupu360.com
 tushifu.com
 tuyoumi.com

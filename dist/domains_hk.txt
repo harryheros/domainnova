@@ -1,6 +1,6 @@
 # DomainNova - HK domains
-# Generated: 2026-05-18T17:48:45Z
-# Count: 171
+# Generated: 2026-05-20T01:35:04Z
+# Count: 172
 00xu.com
 163.net
 3hk.hk
@@ -112,6 +112,7 @@ lwb.gov.hk
 lzskqyy.com
 mclcinema.com
 meexx.xyz
+miidim.com
 mingpao.com
 mtr.com.hk
 mygobatv.com
