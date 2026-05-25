@@ -1,6 +1,6 @@
 # DomainNova - CN domains
-# Generated: 2026-05-24T16:44:27Z
-# Count: 3353
+# Generated: 2026-05-25T06:23:20Z
+# Count: 3356
 00086.net
 010dh.com
 025xl.com
@@ -931,6 +931,7 @@ dns.la
 dnsapi.cn
 dnspod.cn
 dnspod.com
+dnsv1.com
 dnswind.net
 dobunkan.com
 doc88.com
@@ -1926,6 +1927,7 @@ meet99.com
 meetingmeet.com
 megvii.com
 meicai.cn
+meichunmed.com
 meigeinc.com
 meilishuo.com
 meita.art
@@ -2495,6 +2497,7 @@ snssdk.com
 so.com
 soccerbar.cc
 softonic.cn
+sogou.com
 sogoucdn.com
 sogowan.com
 sohu.com
