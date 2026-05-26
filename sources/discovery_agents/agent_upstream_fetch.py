@@ -33,9 +33,19 @@ SCRIPTS_DIR = Path(__file__).resolve().parents[1] / "scripts"
 if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
-import requests
-from requests.adapters import HTTPAdapter
-from urllib3.util.retry import Retry
+# Shared agent helpers.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _common import (  # noqa: E402
+    DOMAIN_RE,
+    EXCLUDE_DOMAINS,
+    USER_AGENT,
+    append_to_discovery,
+    discovery_count,
+    load_existing,
+    make_session,
+)
+
+import requests  # noqa: E402
 
 # ---------------------------------------------------------------------------
 # Configuration
@@ -54,38 +64,6 @@ UPSTREAM_SOURCES = [
         "parser":  "dnsmasq",
     },
 ]
-
-USER_AGENT = "DomainNova/DiscoveryAgent (+https://github.com/harryheros/domainnova)"
-
-# Valid domain pattern
-DOMAIN_RE = re.compile(
-    r"^(?=.{1,253}$)(?!-)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9-]{2,63}$"
-)
-
-# Domains to always exclude (non-CN or problematic)
-EXCLUDE_DOMAINS = {
-    "google.com", "youtube.com", "facebook.com", "twitter.com",
-    "instagram.com", "whatsapp.com", "telegram.org",
-    "bing.com", "microsoft.com", "apple.com", "icloud.com",
-    "amazonaws.com", "cloudflare.com", "fastly.com",
-}
-
-
-# ---------------------------------------------------------------------------
-# HTTP session
-# ---------------------------------------------------------------------------
-def make_session() -> requests.Session:
-    retry = Retry(
-        total=3,
-        backoff_factor=1.0,
-        status_forcelist=[429, 500, 502, 503, 504],
-        allowed_methods=["GET"],
-    )
-    adapter = HTTPAdapter(max_retries=retry)
-    session = requests.Session()
-    session.mount("https://", adapter)
-    session.headers.update({"User-Agent": USER_AGENT})
-    return session
 
 
 # ---------------------------------------------------------------------------
@@ -146,47 +124,17 @@ PARSERS = {
 # ---------------------------------------------------------------------------
 # Discovery file helpers
 # ---------------------------------------------------------------------------
-def load_existing(repo_root: Path) -> Set[str]:
-    """Load all known domains across all three tiers."""
-    known: Set[str] = set()
-    for rel in (
-        "sources/manual/seed_cn.txt",
-        "sources/manual/extended.txt",
-        "sources/manual/discovery.txt",
-    ):
-        path = repo_root / rel
-        if not path.exists():
-            continue
-        for raw in path.read_text(encoding="utf-8").splitlines():
-            line = raw.strip().lower()
-            if line and not line.startswith("#"):
-                known.add(line.rstrip("."))
-    return known
+# ---------------------------------------------------------------------------
+# Discovery file helpers — provided by _common module.
+# ---------------------------------------------------------------------------
 
 
-def discovery_count(repo_root: Path) -> int:
-    """Count current domains in discovery.txt."""
-    path = repo_root / "sources" / "manual" / "discovery.txt"
-    if not path.exists():
-        return 0
-    return sum(
-        1 for l in path.read_text(encoding="utf-8").splitlines()
-        if l.strip() and not l.strip().startswith("#")
-    )
-
-
-def append_to_discovery(repo_root: Path, domains: List[str], source_name: str) -> int:
-    """Append new domains to discovery.txt. Returns count added."""
-    path = repo_root / "sources" / "manual" / "discovery.txt"
-    path.parent.mkdir(parents=True, exist_ok=True)
-    if not path.exists():
-        path.write_text("# DomainNova - Discovery Layer\n", encoding="utf-8")
-
-    with path.open("a", encoding="utf-8") as f:
-        f.write(f"\n# --- upstream:{source_name} {time.strftime('%Y-%m-%d')} ---\n")
-        for d in domains:
-            f.write(d + "\n")
-    return len(domains)
+def append_to_discovery_up(
+    repo_root: Path, domains: List[str], source_name: str
+) -> int:
+    """Thin wrapper over _common.append_to_discovery that prefixes the
+    section tag with 'upstream:' for audit-trail clarity in discovery.txt."""
+    return append_to_discovery(repo_root, domains, f"upstream:{source_name}")
 
 
 # ---------------------------------------------------------------------------
@@ -251,7 +199,7 @@ def run(repo_root: Path) -> None:
         to_add = new_domains[:remaining]
 
         if to_add:
-            added = append_to_discovery(repo_root, to_add, source["name"])
+            added = append_to_discovery_up(repo_root, to_add, source["name"])
             # Update existing set so next source doesn't add duplicates
             existing.update(to_add)
             total_added += added

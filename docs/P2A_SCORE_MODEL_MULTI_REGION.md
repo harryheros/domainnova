@@ -1,54 +1,72 @@
-# DomainNova P2.A 多地區評分模型規範書 v1.0
+# DomainNova P2.A Multi-Region Score Model Specification v1.0
 
-> **v1.1 更新 (2026-04)**: 模型已擴展至 JP/KR/SG，所有對稱信號邏輯同樣適用於新增地區。
+> **v1.1 update (2026-04)**: model extended to JP/KR/SG; all symmetric
+> signal logic applies equally to the new regions.
 
-> 狀態：已實施 · 2026-04-21
-> 前置條件：P1 v1.1 + P1 fix v2.1 已部署（對稱分桶、對稱閾值、sticky repair）
-> 範圍：`sources/scripts/build_domains.py`、`sources/scripts/constants.py`
-> 目標：讓 extended/discovery 來源的非 CN 域名能自動基於 IP 信號獲得 HK/MO/TW 桶入選資格
+> Status: Implemented · 2026-04-21
+> Prerequisite: P1 v1.1 + P1 fix v2.1 deployed (symmetric bucketing,
+> symmetric thresholds, sticky repair).
+> Scope: `sources/scripts/build_domains.py`, `sources/scripts/constants.py`.
+> Goal: let extended/discovery domains qualify for HK/MO/TW buckets
+> automatically based on IP signals, without requiring manual seeding.
 
 ---
 
-## 1. 問題陳述
+## 1. Problem Statement
 
-P1 實作了對稱分桶與閾值，但 `score_record()` 的信號輸入只編碼 CN 信號。HK/MO/TW 域名即使 IP 落在對應 ipnova 表，依然 score=0，無法進入 dist。
+P1 introduced symmetric bucketing and thresholds, but `score_record()`'s
+signal inputs only encoded CN signals. HK/MO/TW domains whose IPs landed
+in the corresponding IPNova region still scored 0 and could never enter
+the dist files.
 
-## 2. 設計決策
+## 2. Design Decisions
 
-### 2.1 對稱信號模型
+### 2.1 Symmetric signal model
 
-每個桶獨立計算布爾信號：`dns_cn / dns_hk / dns_mo / dns_tw` + `cn_tld / hk_tld / mo_tld / tw_tld`。
+Each bucket computes its own boolean signal independently:
+`dns_cn / dns_hk / dns_mo / dns_tw` + `cn_tld / hk_tld / mo_tld / tw_tld`.
 
-### 2.2 TLD fallback 非對稱
+### 2.2 Asymmetric TLD fallback
 
-| 地區 | TLD fallback | 原因 |
+| Region | TLD fallback | Rationale |
 |---|---|---|
-| CN | 有（score=60）| `.cn` 強制 ICP 備案，TLD 是強信號 |
-| HK/MO/TW | 無 | 無等價強制備案制度 |
+| CN | yes (score = 60) | `.cn` requires ICP filing; TLD is a strong administrative signal |
+| HK/MO/TW | no | No equivalent compulsory filing regime |
 
-### 2.3 信號權重
+### 2.3 Signal weights
 
-DNS_WEIGHT=60, CN_TLD_WEIGHT=10, XX_TLD_WEIGHT=20, CN_TLD_FALLBACK_SCORE=60。INCLUDE_THRESHOLD 統一 60。
+`DNS_WEIGHT = 60`, `CN_TLD_WEIGHT = 10`, `XX_TLD_WEIGHT = 20`,
+`CN_TLD_FALLBACK_SCORE = 60`. `INCLUDE_THRESHOLD` stays at 60
+symmetrically across all buckets.
 
-### 2.4 不引入 registrar/registrant 信號（P3 範圍）
+### 2.4 No registrar / registrant signal (P3 scope)
 
-### 2.5 seed-force 不變（score=100 覆蓋）
+These are deferred to a later milestone.
 
-## 3. 技術改造
+### 2.5 Seed-force unchanged (`score = 100` override)
 
-- `DomainRecord` 新增 `dns_hk, dns_mo, dns_tw` 三欄位
-- `build_region_signals` 返回 `region_dns_flags` dict
-- 新增 `score_record_for_bucket(bucket, dns_flag, tld_flag)` 純函式
-- `score_record` 改為向後兼容 wrapper
-- `process_domain` 按桶計算 score
-- 新增 `_tld_flag_for_bucket` 輔助函式
-- CSV 新增 3 欄，`load_previous_rows` 有 fallback
+Manually-curated seed entries continue to bypass IP-based scoring.
 
-## 4. 測試
+## 3. Technical Changes
 
-- `test_p2a_score.py`：等價性保證、四桶評分、process_domain 整合、CSV 兼容
-- 既有測試全部保持綠色
+- `DomainRecord` gains three fields: `dns_hk`, `dns_mo`, `dns_tw`.
+- `build_region_signals` returns a `region_dns_flags` dict.
+- New pure function `score_record_for_bucket(bucket, dns_flag, tld_flag)`.
+- `score_record` is now a backward-compatible wrapper around the per-bucket
+  version.
+- `process_domain` computes the score against its assigned bucket.
+- New helper `_tld_flag_for_bucket`.
+- CSV gains three columns; `load_previous_rows` has a fallback for older
+  CSVs without these columns.
 
-## 5. 實測結果（2026-04-21）
+## 4. Testing
 
-首次跑 P2.A 後，17 個台灣域名通過自動評分進入 dist/domains_tw.txt（不依賴手工 seed）。HK 非 seed 域名 36 個自動拿分。CN 行為位元組級不變。
+- `test_p2a_score.py`: equivalence guarantees, four-bucket scoring,
+  `process_domain` integration, CSV compatibility.
+- All pre-existing tests continue to pass.
+
+## 5. Measured Results (2026-04-21)
+
+The first P2.A run automatically promoted 17 Taiwanese domains into
+`dist/domains_tw.txt` without manual seeding. 36 non-seed HK domains also
+auto-qualified. CN behaviour is byte-identical to the pre-P2.A baseline.

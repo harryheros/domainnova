@@ -21,10 +21,20 @@ FIXES (v3):
 from __future__ import annotations
 
 import json
-import re
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
+
+# Shared regex + iteration primitives (DOMAIN_RE, HEADER_RE, UNSECTIONED,
+# iter_source_entries). Single source of truth across build_metadata.py
+# and validate_manual_sources.py — previously each carried its own copy.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _source_parser import (  # noqa: E402
+    DOMAIN_RE,
+    HEADER_RE,
+    UNSECTIONED,
+    iter_source_entries,
+)
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -47,37 +57,22 @@ REGIONAL_FILES = {
 
 OUT_JSON = ROOT / "data" / "manual_source_validation.json"
 
-HEADER_RE = re.compile(r"^#\s*=+\s*(.*?)\s*=+\s*$")
-DOMAIN_RE = re.compile(
-    r"^(?=.{1,253}$)(?!-)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9-]{2,63}$"
-)
-
 
 def parse(path: Path) -> dict:
     if not path.exists():
         return {"error": f"{path} not found"}
 
-    section      = "Unsectioned"
     domains:     list[tuple[str, str]] = []
     invalid:     list[str] = []
     unsectioned: list[str] = []
     counts:      Counter = Counter()
 
-    for raw in path.read_text(encoding="utf-8").splitlines():
-        line = raw.strip()
-        if not line:
-            continue
-        if line.startswith("#"):
-            m = HEADER_RE.match(line)
-            if m:
-                section = m.group(1).strip()
-            continue
-        domain = line.lower().rstrip(".")
+    for section, domain in iter_source_entries(path):
         domains.append((domain, section))
         counts[domain] += 1
         if not DOMAIN_RE.match(domain):
             invalid.append(domain)
-        if section == "Unsectioned":
+        if section == UNSECTIONED:
             unsectioned.append(domain)
 
     duplicates = sorted(d for d, c in counts.items() if c > 1)

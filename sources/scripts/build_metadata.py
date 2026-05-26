@@ -27,11 +27,20 @@ from __future__ import annotations
 import argparse
 import csv
 import json
-import re
 from collections import Counter
 from dataclasses import dataclass, asdict
 from pathlib import Path
 from typing import Iterable
+
+# Shared regex + iteration primitives (HEADER_RE, DOMAIN_RE, iter_source_entries).
+import sys as _sys
+_sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _source_parser import (  # noqa: E402
+    DOMAIN_RE,
+    HEADER_RE,
+    UNSECTIONED,
+    iter_source_entries,
+)
 
 ROOT          = Path(__file__).resolve().parents[2]
 SEED_FILES = {
@@ -50,12 +59,6 @@ OUT_YAML       = ROOT / "data" / "domains_metadata.yaml"
 OUT_CSV        = ROOT / "data" / "domains_metadata.csv"
 OUT_STATS      = ROOT / "data" / "metadata_stats.json"
 OUT_VALIDATION = ROOT / "data" / "manual_source_validation.json"
-
-HEADER_RE = re.compile(r"^#\s*=+\s*(.*?)\s*=+\s*$")
-DOM_RE    = re.compile(r"^[A-Za-z0-9.-]+$")
-DOMAIN_RE = re.compile(
-    r"^(?=.{1,253}$)(?!-)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9-]{2,63}$"
-)
 
 SECTION_OVERRIDES: dict[str, dict] = {
     "Alibaba Ecosystem":           {"ecosystem": "alibaba",           "entity": "Alibaba Group / Ant Group", "category": "platform"},
@@ -115,23 +118,17 @@ def parse_source(path: Path, source_name: str) -> list[DomainMeta]:
         print(f"  [warn] {path} not found – skipping.")
         return []
 
-    section   = "Unsectioned"
-    overrides = {}
     entries: list[DomainMeta] = []
+    # Track most recent section's overrides; updated implicitly as the
+    # iterator yields entries from successive sections.
+    last_section = UNSECTIONED
+    overrides = SECTION_OVERRIDES.get(last_section, {})
 
-    for raw in path.read_text(encoding="utf-8").splitlines():
-        line = raw.strip()
-        if not line:
-            continue
-        if line.startswith("#"):
-            m = HEADER_RE.match(line)
-            if m:
-                section   = m.group(1).strip()
-                overrides = SECTION_OVERRIDES.get(section, {})
-            continue
-
-        domain = line.lower().rstrip(".")
-        if not DOM_RE.match(domain):
+    for section, domain in iter_source_entries(path):
+        if section != last_section:
+            last_section = section
+            overrides = SECTION_OVERRIDES.get(section, {})
+        if not DOMAIN_RE.match(domain):
             continue
 
         entries.append(
@@ -155,27 +152,17 @@ def validate(path: Path) -> dict:
     if not path.exists():
         return {"error": f"{path.name} not found"}
 
-    section   = "Unsectioned"
     domains:   list[tuple[str, str]] = []
     invalid:   list[str]  = []
     unsectioned: list[str] = []
     counts:    Counter = Counter()
 
-    for raw in path.read_text(encoding="utf-8").splitlines():
-        line = raw.strip()
-        if not line:
-            continue
-        if line.startswith("#"):
-            m = HEADER_RE.match(line)
-            if m:
-                section = m.group(1).strip()
-            continue
-        domain = line.lower().rstrip(".")
+    for section, domain in iter_source_entries(path):
         domains.append((domain, section))
         counts[domain] += 1
         if not DOMAIN_RE.match(domain):
             invalid.append(domain)
-        if section == "Unsectioned":
+        if section == UNSECTIONED:
             unsectioned.append(domain)
 
     duplicates = sorted(d for d, c in counts.items() if c > 1)

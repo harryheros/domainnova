@@ -155,7 +155,7 @@ google.com,0,0,1,0,0,0,0,...,,extended,2026-03-28,0,,0,0,0,0,0,0,Google Cloud CD
 Key fields:
 - `dns_cn` — 1 if majority of resolved IPs are in CN CIDRs (similar fields exist per region in build logic)
 - `matched_cidr` — the region CIDR range(s) matched (pipe-separated, up to 5)
-- `cn_tld` — 1 if domain uses a CN TLD (`.cn`, `.中国`, etc.)
+- `cn_tld` — 1 if domain uses a CN TLD (`.cn`, `.xn--fiqs8s` / `.xn--fiqz9s`, etc.)
 - `score` — composite score; 60+ in dist, 40 = ICP fallback, 0 = excluded
 - `source` — `seed_cn`, `seed_hk`, `seed_jp`, `extended`, `discovery`, etc.
 - `bucket` — assigned region: CN, HK, TW, MO, JP, KR, SG, or empty (unclassified)
