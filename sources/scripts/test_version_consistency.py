@@ -38,17 +38,28 @@ class TestVersionConsistency(unittest.TestCase):
 
     def test_readme_badge_matches_version(self):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
-        m = re.search(r"version-v(\d+\.\d+)(?:\.\d+)?-blue", readme)
+        # Match either full SemVer (vX.Y.Z) or the two-segment shorthand
+        # (vX.Y) some projects use. We then compare against the appropriate
+        # slice of constants.__version__ so both styles remain valid.
+        m = re.search(r"version-v(\d+\.\d+(?:\.\d+)?)-blue", readme)
         self.assertIsNotNone(m, "README must contain a version badge")
         badge = m.group(1)
-        # README badge typically shows major.minor only; verify the prefix.
-        actual_prefix = ".".join(constants.__version__.split(".")[:2])
-        self.assertEqual(
-            badge,
-            actual_prefix,
-            f"README badge {badge!r} disagrees with "
-            f"constants.__version__ {constants.__version__!r}",
-        )
+        actual = constants.__version__
+        if badge.count(".") == 2:
+            # Full SemVer badge — exact match required.
+            self.assertEqual(
+                badge, actual,
+                f"README badge {badge!r} disagrees with "
+                f"constants.__version__ {actual!r}",
+            )
+        else:
+            # Two-segment shorthand — match the leading major.minor.
+            actual_prefix = ".".join(actual.split(".")[:2])
+            self.assertEqual(
+                badge, actual_prefix,
+                f"README badge {badge!r} disagrees with "
+                f"constants.__version__ {actual!r}",
+            )
 
 
 if __name__ == "__main__":
