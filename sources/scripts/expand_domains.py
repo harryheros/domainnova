@@ -6,6 +6,19 @@ Resolves all seed domains, groups them by resolved IP, and emits
 domains that share an IP with at least one other seed domain.
 These are *candidates* for manual review – not automatic additions.
 
+Design note — vantage point:
+  This tool deliberately uses the local resolver (socket.getaddrinfo),
+  not the DoH+ECS path that build_domains.py uses. Different vantage
+  points reveal different co-hosting relationships:
+
+  - build_domains.py wants the truth from inside CN (DoH + CN-ISP ECS
+    hints) so its bucket assignment is accurate.
+  - expand_domains.py wants what overseas resolvers see, because that
+    is the most common attack surface for shared-host enumeration and
+    the candidate signal we are interested in here.
+
+  Don't migrate this tool to DoH+ECS — it would defeat the purpose.
+
 FIXES (v2):
   - Replaced bare `except:` with explicit `except (socket.gaierror, OSError)`
     so KeyboardInterrupt and other system signals are not swallowed.

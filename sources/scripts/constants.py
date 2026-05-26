@@ -80,11 +80,11 @@ CN_CLOUD_ASNS: dict[str, str] = {
 # Used by build_domains.py provider enrichment to detect CDN-masked origins.
 # ---------------------------------------------------------------------------
 CN_CDN_PROVIDERS: dict[str, str] = {
-    "Wangsu":         "wangsu.com",      # 網宿科技
-    "ChinaCache":     "chinacache.com",  # 藍汛通信
+    "Wangsu":         "wangsu.com",       # Wangsu Science & Technology
+    "ChinaCache":     "chinacache.com",   # ChinaCache (Lanxun Communications)
     "Baishan Cloud":  "baishancloud.com",
-    "Qiniu Cloud":    "qiniu.com",       # 七牛雲
-    "Upyun":          "upyun.com",       # 又拍雲
+    "Qiniu Cloud":    "qiniu.com",        # Qiniu
+    "Upyun":          "upyun.com",        # Upyun (Youpaiyun)
     "Alibaba CDN":    "alicdn.com",
     "Tencent CDN":    "qcloudcdn.com",
     "Huawei CDN":     "huaweicloud.com",

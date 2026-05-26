@@ -1,45 +1,68 @@
-# 本輪會話改動審計
+# Session Changelog
 
-## Session 1（初始化）
-seed.txt: 701 -> 696（移出 alipay.hk/tmall.hk/jd.hk → seed_hk.txt；bytedance.com/wechat.com → seed_offshore.txt）
-新建：seed_hk.txt(3) / seed_mo.txt(空) / seed_tw.txt(空) / seed_offshore.txt(2)
+## Session 1 (initialization)
+seed.txt: 701 → 696 (moved alipay.hk / tmall.hk / jd.hk to seed_hk.txt;
+bytedance.com / wechat.com to seed_offshore.txt).
+Created: seed_hk.txt (3) / seed_mo.txt (empty) / seed_tw.txt (empty) /
+seed_offshore.txt (2).
 
-## Session 2（種子庫全面擴充）
-seed_sg.txt: 舊版扁平結構 → 分類結構，新增 Regulatory、Infrastructure、Logistics 分類
-  新增：acra/edb/enterprise/mas/judiciary/sgnic/sgix/spgroup/pub/psa/caas/tech/csa/smrt/sbstransit（+14）
+## Session 2 (seed expansion)
+seed_sg.txt: flat layout → categorized layout, added Regulatory,
+Infrastructure, Logistics sections.
+  Added: acra / edb / enterprise / mas / judiciary / sgnic / sgix /
+         spgroup / pub / psa / caas / tech / csa / smrt / sbstransit (+14).
 
-seed_tw.txt: 大幅擴充，從舊版 ~65 → 125 個域名
-  新增：twnic/edu.tw registry 錨點；22縣市政府全覆蓋；科學園區；工業協會 B2B hubs；
-        7-eleven/hi-life/familymart Retail 分類；mediatek/acer/foxconn/quanta 製造業；
-        fubon 補回；ndc/msa 中央政府補充
+seed_tw.txt: expanded from ~65 → 125 domains.
+  Added: twnic / edu.tw registry anchors; all 22 county/city governments;
+         science parks; B2B industry-association hubs;
+         7-eleven / hi-life / familymart retail; mediatek / acer / foxconn /
+         quanta manufacturing; fubon restored; ndc / msa central government.
 
-seed_kr.txt: 舊版 ~80 → 111 個域名
-  新增：kisa registry；kepco/kwater/korail/airport.kr 基礎設施；gyeonggi/sejong 地方政府；
-        skbroadband telecom；nate 入口；lotteon/cjlogistics/hanjin 電商物流；
-        edaily/mt.co.kr 媒體；krx/kofia/kfb 金融；kia/posco/hanwha/doosan 製造業；
-        etri/kist R&D；hanyang/skku.ac.kr 教育；hybecorp/jype/smtown/ygfamily 娛樂；
-        moef/nhis 政府補充
-  修正：skku.edu → skku.ac.kr（錯誤域名）；移除 krnic.or.kr（已併入 KISA）
+seed_kr.txt: ~80 → 111 domains.
+  Added: kisa registry; kepco / kwater / korail / airport.kr infrastructure;
+         gyeonggi / sejong local government; skbroadband telecom; nate portal;
+         lotteon / cjlogistics / hanjin e-commerce + logistics;
+         edaily / mt.co.kr media; krx / kofia / kfb finance;
+         kia / posco / hanwha / doosan manufacturing;
+         etri / kist R&D; hanyang / skku.ac.kr education;
+         hybecorp / jype / smtown / ygfamily entertainment;
+         moef / nhis government supplements.
+  Fixed: skku.edu → skku.ac.kr (wrong domain); removed krnic.or.kr
+         (merged into KISA).
 
-seed_jp.txt: 舊版 ~85 → 120 個域名
-  新增：jprs/jpix IXP backbone；fsa 金融廳；tepco/kepco/chuden 電力；tokyogas 能源；
-        kuronekoyamato/sagawa/nipponexpress/jr-central/jreast/westjr 物流交通；
-        tokyometro/jal/ana 交通航空；jpx 交易所；nec/fujitsu/mitsubishielectric/hitachi/canon/toshiba 製造；
-        keidanren/jetro/jcci 經濟團體；isct.ac.jp（東工大新域名）；riken 研究機構
-  修正：移除重複 chuden.co.jp；移除 internet.ne.jp（非基礎設施）
+seed_jp.txt: ~85 → 120 domains.
+  Added: jprs / jpix IXP backbone; fsa (Financial Services Agency);
+         tepco / kepco / chuden electric utilities; tokyogas energy;
+         kuronekoyamato / sagawa / nipponexpress / jr-central / jreast / westjr
+         logistics and rail; tokyometro / jal / ana transport and aviation;
+         jpx (Japan Exchange); nec / fujitsu / mitsubishielectric / hitachi /
+         canon / toshiba manufacturing; keidanren / jetro / jcci business
+         associations; isct.ac.jp (new domain for Tokyo Institute of Science);
+         riken research.
+  Fixed: removed duplicate chuden.co.jp; removed internet.ne.jp
+         (not infrastructure).
 
-seed_hk.txt: 舊版扁平 ~70 → 分類結構 85 個域名
-  修正：移除不存在的 hknic.hk；hke.com.hk → hkelectric.com；移除錯誤的 bankofchina.com.hk
-  補回：octopus/aastocks/hkstp/fwd/winglungbank/yesstyle；新增 hongkongairlines
+seed_hk.txt: flat ~70 → categorized 85 domains.
+  Fixed: removed non-existent hknic.hk; hke.com.hk → hkelectric.com;
+         removed incorrect bankofchina.com.hk.
+  Restored: octopus / aastocks / hkstp / fwd / winglungbank / yesstyle;
+            added hongkongairlines.
 
-seed_mo.txt: 舊版扁平 ~65 → 分類結構 68 個域名
-  修正：移除 bankofchina.com.hk（香港域名混入）；移除 turbojet.com.hk（跨境域名）
-  補回：ipim/mbe/ces/ocm；新增 gaming-inspection.gov.mo；新增 Gaming/Hospitality 分類（sands/galaxyentertainment）
+seed_mo.txt: flat ~65 → categorized 68 domains.
+  Fixed: removed bankofchina.com.hk (HK domain leaked in);
+         removed turbojet.com.hk (cross-border domain).
+  Restored: ipim / mbe / ces / ocm;
+  Added: gaming-inspection.gov.mo; new Gaming / Hospitality section
+         (sands / galaxyentertainment).
 
-seed_offshore.txt: 2 → 7 個域名
-  新增：tiktok/tiktokcdn/aliexpress/shein/temu；補充分類結構
+seed_offshore.txt: 2 → 7 domains.
+  Added: tiktok / tiktokcdn / aliexpress / shein / temu;
+  Added categorized layout.
 
-## Session 2 技術修正
-- seed.txt: 移除 foxconn.com（與 seed_tw.txt 跨區重複，歸屬應為 TW）
-- validate_manual_sources.py v2 → v3：新增區域種子驗證、跨區域重複偵測、CN∩Regional 衝突檢查
-- update.yml：stats 輸出擴充為全 7 個區域（原本只顯示 cn/hk/mo/tw，漏掉 jp/kr/sg）
+## Session 2 technical fixes
+- seed.txt: removed foxconn.com (cross-region duplicate with seed_tw.txt;
+  correct attribution is TW).
+- validate_manual_sources.py v2 → v3: added regional-seed validation,
+  cross-region duplicate detection, and CN ∩ regional conflict checks.
+- update.yml: stats output expanded to all 7 regions (previously displayed
+  only cn / hk / mo / tw and silently omitted jp / kr / sg).

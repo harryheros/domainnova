@@ -110,7 +110,10 @@ JITTER_MAX           = 0.15   # seconds
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
-IPNOVA_CN_URL = "https://raw.githubusercontent.com/harryheros/ipnova/main/output/plain/CN.txt"
+# CN CIDR URL is sourced from constants.REGION_CIDR_URLS["CN"] — the single
+# source of truth for all per-region IPNova endpoints. The previous double
+# definition risked drift if one was updated and the other wasn't.
+IPNOVA_CN_URL = REGION_CIDR_URLS["CN"]
 
 # DoH upstreams - primary Google, fallback Cloudflare & Quad9 ECS
 # Note: Cloudflare (1.1.1.1) does NOT support custom edns_client_subnet param
@@ -313,10 +316,12 @@ def detect_provider(ips: List[str]) -> tuple:
     Detect cloud/CDN provider from resolved IPs.
 
     Resolution order:
-      1. CIDR→ASN map from IPNova data.json cidr_objects (schema v3.2+, authoritative)
-         Built at build() startup by fetch_ipnova_asn_lookup(); populated in _cidr_asn_map.
-      2. Static fallback table _STATIC_ASN_PROVIDER (covers pre-v3.2 and DomainNova-specific ASNs)
-      3. GLOBAL_CDN_ASNS hostname pattern check (cdn_masked=1)
+      1. CIDR→ASN lookup from IPNova data.json cidr_objects (schema v3.2+,
+         authoritative). Built at build() startup by fetch_ipnova_asn_lookup();
+         populated in _cidr_asn_lookup (O(log n) prefix-bucket structure).
+      2. Static fallback table _STATIC_ASN_PROVIDER (covers pre-v3.2 IPNova
+         and DomainNova-specific ASNs).
+      3. GLOBAL_CDN_ASNS hostname pattern check (cdn_masked=1).
 
     Returns: (provider_name: str, cdn_masked: int)
       - provider_name: e.g. "Alibaba Cloud", "Cloudflare", "" (unknown)
@@ -325,29 +330,16 @@ def detect_provider(ips: List[str]) -> tuple:
     if not ips:
         return "", 0
 
-    # Step 1+2: CIDR lookup → ASN → provider name
-    # For each resolved IP, find the longest-prefix-matching CIDR in _cidr_asn_map.
-    # Falls back to _STATIC_ASN_PROVIDER when _cidr_asn_map is empty (pre-v3.2 IPNova).
-    if _cidr_asn_map:
+    # Step 1+2: CIDR lookup → ASN → provider name (fast path)
+    if _cidr_asn_lookup:
         for ip in ips:
-            try:
-                addr = ipaddress.IPv4Address(ip)
-            except ValueError:
-                continue
-            addr_int = int(addr)
-            best_asn: Optional[int] = None
-            best_prefix = -1
-            for cidr_str, asn in _cidr_asn_map.items():
-                try:
-                    net = ipaddress.IPv4Network(cidr_str)
-                except ValueError:
-                    continue
-                if addr_int >= int(net.network_address) and addr_int <= int(net.broadcast_address):
-                    if net.prefixlen > best_prefix:
-                        best_prefix = net.prefixlen
-                        best_asn = asn
-            if best_asn is not None:
-                provider = _STATIC_ASN_PROVIDER.get(best_asn, f"AS{best_asn}")
+            asn = _lookup_asn_for_ip(ip, _cidr_asn_lookup)
+            if asn is not None:
+                # Step 3 (interleaved): if the resolved ASN is a known global
+                # CDN, the IP doesn't reveal true origin region.
+                if asn in GLOBAL_CDN_ASNS:
+                    return GLOBAL_CDN_ASNS[asn], 1
+                provider = _STATIC_ASN_PROVIDER.get(asn, f"AS{asn}")
                 return provider, 0
     else:
         # Fallback: static ASN table via IP-prefix heuristic
@@ -373,30 +365,7 @@ def detect_provider(ips: List[str]) -> tuple:
                     provider = _STATIC_ASN_PROVIDER.get(asn, f"AS{asn}")
                     return provider, 0
 
-    # Step 3: Global CDN ASN check (cdn_masked=1)
-    # These providers use anycast IPs that do not reveal true origin region.
-    # We detect them via ASN lookup using the same _cidr_asn_map used in Step 1.
-    # If any resolved IP maps to a known global CDN ASN, flag cdn_masked=1.
-    # This replaces the PTR-lookup stub (too slow for build pipeline) with an
-    # accurate ASN-based approach that uses existing data without extra latency.
-    if _cidr_asn_map:
-        for ip in ips:
-            try:
-                addr = ipaddress.IPv4Address(ip)
-            except ValueError:
-                continue
-            addr_int = int(addr)
-            for cidr_str, asn in _cidr_asn_map.items():
-                try:
-                    net = ipaddress.IPv4Network(cidr_str)
-                except ValueError:
-                    continue
-                if addr_int >= int(net.network_address) and addr_int <= int(net.broadcast_address):
-                    if asn in GLOBAL_CDN_ASNS:
-                        cdn_name = GLOBAL_CDN_ASNS[asn]
-                        return cdn_name, 1
-    else:
-        # Fallback: well-known Cloudflare and Akamai IP prefix heuristics
+        # Fallback (no IPNova data.json): well-known Cloudflare prefix hints
         _cdn_prefix_hints: list[tuple[str, str]] = [
             ("172.64.",  "Cloudflare"),
             ("172.65.",  "Cloudflare"),
@@ -431,6 +400,13 @@ def build_cidr_lookup(networks: List[ipaddress.IPv4Network]) -> dict:
 
 
 def ip_in_cn_cidrs(ip_str: str, cidr_lookup: dict) -> Optional[str]:
+    """Return the matching CIDR string for ip_str (longest-prefix wins),
+    or None if no CIDR in the lookup contains the address.
+
+    See _lookup_asn_for_ip docstring for why the bisect key uses
+    (addr_int + 1, ...): the old key (addr_int, addr_int, "~") missed
+    the network address itself when net_start == addr_int.
+    """
     import bisect
     try:
         addr = ipaddress.IPv4Address(ip_str)
@@ -439,7 +415,11 @@ def ip_in_cn_cidrs(ip_str: str, cidr_lookup: dict) -> Optional[str]:
     addr_int = int(addr)
     for prefix_len in sorted(cidr_lookup.keys(), reverse=True):
         entries = cidr_lookup[prefix_len]
-        idx = bisect.bisect_right(entries, (addr_int, addr_int, "~")) - 1
+        # Find rightmost entry whose net_start <= addr_int.
+        # Using a tuple where the second element is -1 makes the search key
+        # strictly greater than any real entry sharing the same net_start,
+        # so bisect_right returns the position immediately after it.
+        idx = bisect.bisect_right(entries, (addr_int + 1, -1, "")) - 1
         if idx >= 0:
             net_start, net_end, cidr_str = entries[idx]
             if net_start <= addr_int <= net_end:
@@ -578,6 +558,92 @@ _STATIC_ASN_PROVIDER: dict[int, str] = {
 _cidr_asn_map: dict[str, int] = {}
 _cidr_asn_map_lock = Lock()
 
+# Prefix-bucket + bisect lookup for the CIDR→ASN map, built alongside
+# _cidr_asn_map. Same structure as build_cidr_lookup() returns:
+#   {prefix_len: [(net_start, net_end, asn), ...]}  (entries sorted by net_start)
+# Used by detect_provider() for O(prefix_len_count * log n) lookups instead
+# of the linear scan + re-parsing IPv4Network per IP that the original code
+# performed. Significant for typical builds (1500 domains x ~3 IPs x hundreds
+# of CIDRs).
+_cidr_asn_lookup: dict = {}
+_cidr_asn_lookup_lock = Lock()
+
+
+def _build_asn_lookup(cidr_asn: dict[str, int]) -> dict:
+    """Return a prefix-bucketed, sorted lookup matching build_cidr_lookup()'s
+    layout but with ASN as the third tuple element (instead of CIDR str).
+    Invalid CIDR strings are silently skipped — we never want this helper to
+    raise during build."""
+    from collections import defaultdict
+    by_prefix: dict = defaultdict(list)
+    for cidr_str, asn in cidr_asn.items():
+        try:
+            net = ipaddress.IPv4Network(cidr_str)
+        except ValueError:
+            continue
+        by_prefix[net.prefixlen].append(
+            (int(net.network_address), int(net.broadcast_address), asn)
+        )
+    for pl in by_prefix:
+        by_prefix[pl].sort()
+    return dict(by_prefix)
+
+
+def _lookup_asn_for_ip(ip_str: str, asn_lookup: dict) -> Optional[int]:
+    """O(prefix_len_count * log n) ASN lookup for an IPv4 address.
+    Returns the most-specific (longest-prefix) match, or None if no CIDR
+    in the lookup contains the address. Mirrors ip_in_cn_cidrs() semantics
+    but returns the ASN instead of the CIDR string.
+
+    Bisect key: we search for "the rightmost entry whose net_start <= addr".
+    Since entries are sorted by net_start (then net_end), we look for the
+    insertion point of (addr_int + 1, ...) and step back one. This avoids
+    a subtle bug where (addr_int, addr_int, ...) compared less than an
+    entry whose net_start == addr_int (because addr_int < net_end), causing
+    the network-address itself to miss its own CIDR.
+    """
+    import bisect
+    try:
+        addr = ipaddress.IPv4Address(ip_str)
+    except ValueError:
+        return None
+    addr_int = int(addr)
+    # Longest prefix first — ipnova's cidr_objects can overlap (e.g. an APNIC
+    # /16 augmented with a BGP-sourced /20 inside it); the more specific
+    # entry should win.
+    for prefix_len in sorted(asn_lookup.keys(), reverse=True):
+        entries = asn_lookup[prefix_len]
+        # Find rightmost entry with net_start <= addr_int.
+        # bisect_right with (addr_int + 1, ...) gives the first index whose
+        # net_start > addr_int, so -1 steps back to the candidate.
+        idx = bisect.bisect_right(entries, (addr_int + 1, -1, -1)) - 1
+        if idx >= 0:
+            net_start, net_end, asn = entries[idx]
+            if net_start <= addr_int <= net_end:
+                return asn
+    return None
+
+
+def _parse_schema_version(s: str) -> tuple[int, ...]:
+    """Parse a dotted schema version string into a tuple of ints for safe
+    comparison. Non-numeric components are treated as 0.
+
+    Examples:
+      "3.2"   -> (3, 2)
+      "3.10"  -> (3, 10)         # previously compared less than "3.2" as strings
+      "3.2.1" -> (3, 2, 1)
+      ""      -> (0,)
+    """
+    if not s:
+        return (0,)
+    parts: list[int] = []
+    for chunk in str(s).split("."):
+        try:
+            parts.append(int(chunk))
+        except ValueError:
+            parts.append(0)
+    return tuple(parts) or (0,)
+
 
 def fetch_ipnova_asn_lookup(session: requests.Session) -> dict[str, int]:
     """
@@ -607,8 +673,12 @@ def fetch_ipnova_asn_lookup(session: requests.Session) -> dict[str, int]:
         return {}
 
     schema = data.get("schema_version", "")
-    # cidr_objects requires schema 3.2+
-    if not schema or schema < "3.2":
+    # cidr_objects requires schema 3.2+. Parse to tuple-of-int so that
+    # IPNova 3.10 (or any future >=10 minor) compares correctly. Previously
+    # this used string comparison, which made "3.10" < "3.2" lexicographically.
+    MIN_SCHEMA = (3, 2)
+    schema_tuple = _parse_schema_version(schema)
+    if not schema or schema_tuple < MIN_SCHEMA:
         log(f"[+] fetch_ipnova_asn_lookup: schema {schema!r} < 3.2; "
             "cidr_objects not available, using static ASN table")
         return {}
@@ -1055,11 +1125,20 @@ def _encode_dns_wire_query(domain: str, ecs_subnet: Optional[str] = None) -> byt
     """
     Build a minimal RFC 1035 DNS query for A record, with optional ECS (RFC 7871).
     Returns raw wireformat bytes suitable for RFC 8484 DoH POST/GET.
+
+    The query ID is randomized per call rather than hardcoded to 0.
+    DoH transport is HTTPS so on-path ID-spoofing is not the threat, but
+    some DoH servers de-duplicate by query content and a fixed ID can
+    trigger spurious cache collisions on heterogeneous queries.
     """
+    import os as _os
     import struct
-    # Header: ID=0 (DoH caches by content), flags=0x0100 (RD), QD=1, AN=0, NS=0, AR=1 if ECS else 0
+    # Random 16-bit query ID. DoH transport already authenticates the answer
+    # via TLS, so this is purely a cache-collision and observability aid.
+    query_id = int.from_bytes(_os.urandom(2), "big")
+    # Header: ID=random, flags=0x0100 (RD), QD=1, AN=0, NS=0, AR=1 if ECS else 0
     ar_count = 1 if ecs_subnet else 0
-    header = struct.pack(">HHHHHH", 0, 0x0100, 1, 0, 0, ar_count)
+    header = struct.pack(">HHHHHH", query_id, 0x0100, 1, 0, 0, ar_count)
 
     # Question section: QNAME + QTYPE(A=1) + QCLASS(IN=1)
     qname = b""
@@ -1093,6 +1172,16 @@ def _decode_dns_wire_answer(data: bytes) -> List[str]:
     """
     Parse a DNS wireformat response and extract A record IPs.
     Minimal implementation - handles name compression for answer names.
+
+    Returns the IPs found in the ANSWER section. CNAME-chained answers are
+    handled transparently because we iterate ALL answer records and pick
+    out type-1 (A) entries — the A records at the chain's tail are present
+    in the same response. We do NOT chase CNAME pointers manually.
+
+    Truncation (TC flag): we advertised a 4096-byte UDP buffer in the OPT
+    RR, and DoH carries the answer over HTTPS where size is not bounded.
+    In practice TC should never fire here; if it does we still return
+    whatever A records were parsed before truncation and accept the loss.
     """
     import struct
     if len(data) < 12:
@@ -2214,11 +2303,15 @@ def build(repo_root: Path) -> None:
     cidr_lookup = build_cidr_lookup(cn_networks)
 
     # v6.1: fetch IPNova data.json cidr_objects for CIDR→ASN→provider mapping.
-    # Populates module-level _cidr_asn_map used by detect_provider().
-    # Graceful: empty dict if IPNova schema < 3.2 or network failure.
-    global _cidr_asn_map
+    # Populates module-level _cidr_asn_map (dict, kept for backward compat) and
+    # _cidr_asn_lookup (prefix-bucket structure used by detect_provider's fast
+    # path). Graceful: both stay empty if IPNova schema < 3.2 or network fails.
+    global _cidr_asn_map, _cidr_asn_lookup
+    asn_map = fetch_ipnova_asn_lookup(session)
     with _cidr_asn_map_lock:
-        _cidr_asn_map = fetch_ipnova_asn_lookup(session)
+        _cidr_asn_map = asn_map
+    with _cidr_asn_lookup_lock:
+        _cidr_asn_lookup = _build_asn_lookup(asn_map) if asn_map else {}
 
     # P1 Step 5: multi-region lookup. Reuses the CN networks already fetched
     # above to avoid double download; HK/MO/TW are fetched fresh via ipnova.

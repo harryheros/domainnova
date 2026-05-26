@@ -95,22 +95,12 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add \
-            data/domains.csv \
-            data/domains_metadata.json \
-            data/domains_metadata.csv \
-            data/domains_metadata.yaml \
-            data/metadata_stats.json \
-            data/manual_source_validation.json \
-            data/seed_health.json \
-            data/stats.json \
-            dist/domains_cn.txt \
-            dist/domains_hk.txt \
-            dist/domains_mo.txt \
-            dist/domains_tw.txt \
-            dist/domains_jp.txt \
-            dist/domains_kr.txt \
-            dist/domains_sg.txt \
+          # Add the entire data/ and dist/ directories plus the manually-
+          # modified discovery/extended source files. Using directory-level
+          # paths instead of an explicit file list means future additions
+          # to either output directory are picked up automatically rather
+          # than silently dropped.
+          git add data/ dist/ \
             sources/manual/discovery.txt \
             sources/manual/extended.txt
           if git diff --cached --quiet; then

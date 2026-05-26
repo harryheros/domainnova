@@ -25,9 +25,19 @@ import time
 from pathlib import Path
 from typing import List, Optional, Set
 
-import requests
-from requests.adapters import HTTPAdapter
-from urllib3.util.retry import Retry
+# Shared agent helpers.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _common import (  # noqa: E402
+    DOMAIN_RE,
+    EXCLUDE_DOMAINS,
+    USER_AGENT,
+    append_to_discovery,
+    discovery_count,
+    load_existing,
+    make_session,
+)
+
+import requests  # noqa: E402
 
 # ---------------------------------------------------------------------------
 # Configuration
@@ -43,37 +53,6 @@ ECS_SUBNET = "114.114.114.0/24"
 HACKERTARGET_URL = "https://api.hackertarget.com/reverseiplookup/"
 VIEWDNS_URL      = "https://api.viewdns.info/reverseip/"
 VIEWDNS_APIKEY   = ""  # leave empty to use free web scrape fallback
-
-USER_AGENT = "DomainNova/DiscoveryAgent (+https://github.com/harryheros/domainnova)"
-
-DOMAIN_RE = re.compile(
-    r"^(?=.{1,253}$)(?!-)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9-]{2,63}$"
-)
-
-EXCLUDE_DOMAINS = {
-    "google.com", "youtube.com", "facebook.com", "twitter.com",
-    "instagram.com", "whatsapp.com", "telegram.org",
-    "bing.com", "microsoft.com", "apple.com", "icloud.com",
-    "amazonaws.com", "cloudflare.com", "fastly.com",
-    "akamai.com", "akamaiedge.net", "edgekey.net",
-}
-
-
-# ---------------------------------------------------------------------------
-# HTTP session
-# ---------------------------------------------------------------------------
-def make_session() -> requests.Session:
-    retry = Retry(
-        total=3,
-        backoff_factor=1.0,
-        status_forcelist=[429, 500, 502, 503, 504],
-        allowed_methods=["GET"],
-    )
-    adapter = HTTPAdapter(max_retries=retry)
-    session = requests.Session()
-    session.mount("https://", adapter)
-    session.headers.update({"User-Agent": USER_AGENT})
-    return session
 
 
 # ---------------------------------------------------------------------------
@@ -104,7 +83,11 @@ def resolve_to_ipv4(domain: str, session: requests.Session) -> List[str]:
 # ipnova CIDR check
 # ---------------------------------------------------------------------------
 def fetch_cn_cidrs(session: requests.Session) -> List[ipaddress.IPv4Network]:
-    url = "https://raw.githubusercontent.com/harryheros/ipnova/main/output/CN.txt"
+    # IPNova v3.2.1+ ships header-free CIDR lists under output/plain/.
+    # Older output/CN.txt still works (parser strips '#' lines), but the
+    # plain/ variant is the canonical post-v3.2 path; using it keeps this
+    # agent in lockstep with build_domains.py.
+    url = "https://raw.githubusercontent.com/harryheros/ipnova/main/output/plain/CN.txt"
     resp = session.get(url, timeout=30)
     resp.raise_for_status()
     networks = []
@@ -220,47 +203,16 @@ def reverse_ip_lookup(ip: str, session: requests.Session) -> List[str]:
 
 
 # ---------------------------------------------------------------------------
-# Discovery file helpers
+# Discovery file helpers — provided by _common module.
 # ---------------------------------------------------------------------------
-def load_existing(repo_root: Path) -> Set[str]:
-    known: Set[str] = set()
-    for rel in (
-        "sources/manual/seed_cn.txt",
-        "sources/manual/extended.txt",
-        "sources/manual/discovery.txt",
-    ):
-        path = repo_root / rel
-        if not path.exists():
-            continue
-        for raw in path.read_text(encoding="utf-8").splitlines():
-            line = raw.strip().lower()
-            if line and not line.startswith("#"):
-                known.add(line.rstrip("."))
-    return known
 
 
-def discovery_count(repo_root: Path) -> int:
-    path = repo_root / "sources" / "manual" / "discovery.txt"
-    if not path.exists():
-        return 0
-    return sum(
-        1 for l in path.read_text(encoding="utf-8").splitlines()
-        if l.strip() and not l.strip().startswith("#")
-    )
-
-
-def append_to_discovery(
+def append_to_discovery_ipn(
     repo_root: Path, domains: List[str], source_tag: str
 ) -> int:
-    path = repo_root / "sources" / "manual" / "discovery.txt"
-    path.parent.mkdir(parents=True, exist_ok=True)
-    if not path.exists():
-        path.write_text("# DomainNova - Discovery Layer\n", encoding="utf-8")
-    with path.open("a", encoding="utf-8") as f:
-        f.write(f"\n# --- ip-neighbor:{source_tag} {time.strftime('%Y-%m-%d')} ---\n")
-        for d in domains:
-            f.write(d + "\n")
-    return len(domains)
+    """Thin wrapper over _common.append_to_discovery that prefixes the
+    section tag with 'ip-neighbor:' for audit-trail clarity in discovery.txt."""
+    return append_to_discovery(repo_root, domains, f"ip-neighbor:{source_tag}")
 
 
 # ---------------------------------------------------------------------------
@@ -337,7 +289,7 @@ def run(repo_root: Path) -> None:
         if new:
             remaining = budget - total_added
             to_add = new[:remaining]
-            added = append_to_discovery(repo_root, to_add, ip)
+            added = append_to_discovery_ipn(repo_root, to_add, ip)
             existing.update(to_add)
             total_added += added
             print(f"    +{added} new domains from {ip}")

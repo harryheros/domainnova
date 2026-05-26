@@ -243,14 +243,27 @@ class TestSeedHealthCheck(unittest.TestCase):
         self.assertEqual(payload["results"]["seed_cn.txt"]["consistent"], 20)
 
     def test_payload_structure_matches_spec(self):
-        # PROPOSAL §4.3: results entry has region/sampled/consistent/rate/status
+        # PROPOSAL §4.3 (v2): results entry includes region/sampled/resolved/
+        # consistent/rate/status plus four observability fields added when the
+        # check actually runs: resolve_rate, resolve_status, dns_consistent,
+        # identity_overrides. Skipped entries omit the observability fields.
         self.repo.write_seed("seed_cn.txt", ["a", "b", "c"])
         bd.resolve_domain = _stub_resolver({"a": ["1.0.0.1"], "b": ["1.0.0.2"], "c": ["1.0.0.3"]})
         payload = seed_health_check(self.repo.root, self.lookup, session=None,
                                     rng=random.Random(0))
         cn = payload["results"]["seed_cn.txt"]
-        self.assertEqual(set(cn.keys()), {"region", "sampled", "resolved", "consistent", "rate", "status"})
+        expected_keys = {
+            "region", "sampled", "resolved", "consistent", "rate", "status",
+            "resolve_rate", "resolve_status", "dns_consistent",
+            "identity_overrides",
+        }
+        self.assertEqual(set(cn.keys()), expected_keys)
         self.assertEqual(cn["region"], "CN")
+        # Sanity on observability fields' types/ranges
+        self.assertIsInstance(cn["resolve_rate"], float)
+        self.assertIn(cn["resolve_status"], {"ok", "warn", "error"})
+        self.assertIsInstance(cn["dns_consistent"], int)
+        self.assertIsInstance(cn["identity_overrides"], int)
 
 
 if __name__ == "__main__":
