@@ -1,0 +1,89 @@
+{
+  "checked_at": "2026-05-26T08:47:46Z",
+  "results": {
+    "seed_cn.txt": {
+      "region": "CN",
+      "sampled": 20,
+      "consistent": 13,
+      "rate": 0.8667,
+      "status": "ok",
+      "resolved": 15,
+      "resolve_rate": 0.75,
+      "resolve_status": "ok",
+      "identity_overrides": 0,
+      "dns_consistent": 13
+    },
+    "seed_hk.txt": {
+      "region": "HK",
+      "sampled": 20,
+      "consistent": 14,
+      "rate": 0.7778,
+      "status": "ok",
+      "resolved": 18,
+      "resolve_rate": 0.9,
+      "resolve_status": "ok",
+      "identity_overrides": 11,
+      "dns_consistent": 3
+    },
+    "seed_mo.txt": {
+      "region": "MO",
+      "sampled": 20,
+      "consistent": 9,
+      "rate": 0.8182,
+      "status": "ok",
+      "resolved": 11,
+      "resolve_rate": 0.55,
+      "resolve_status": "ok",
+      "identity_overrides": 8,
+      "dns_consistent": 1
+    },
+    "seed_tw.txt": {
+      "region": "TW",
+      "sampled": 20,
+      "consistent": 9,
+      "rate": 0.8182,
+      "status": "ok",
+      "resolved": 11,
+      "resolve_rate": 0.55,
+      "resolve_status": "ok",
+      "identity_overrides": 8,
+      "dns_consistent": 1
+    },
+    "seed_jp.txt": {
+      "region": "JP",
+      "sampled": 20,
+      "consistent": 7,
+      "rate": 0.7778,
+      "status": "warn",
+      "resolved": 9,
+      "resolve_rate": 0.45,
+      "resolve_status": "warn",
+      "identity_overrides": 7,
+      "dns_consistent": 0
+    },
+    "seed_kr.txt": {
+      "region": "KR",
+      "sampled": 20,
+      "consistent": 14,
+      "rate": 0.7778,
+      "status": "ok",
+      "resolved": 18,
+      "resolve_rate": 0.9,
+      "resolve_status": "ok",
+      "identity_overrides": 11,
+      "dns_consistent": 3
+    },
+    "seed_sg.txt": {
+      "region": "SG",
+      "sampled": 20,
+      "consistent": 14,
+      "rate": 0.7778,
+      "status": "ok",
+      "resolved": 18,
+      "resolve_rate": 0.9,
+      "resolve_status": "ok",
+      "identity_overrides": 14,
+      "dns_consistent": 0
+    }
+  }
+}
