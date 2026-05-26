@@ -13,6 +13,13 @@ FIXES (v2):
   that appear in ip-api responses for HK/TW/overseas CDN pops.
 """
 
+# DomainNova project version (SemVer). Bump on every release.
+# Single source of truth: README badge, workflow logs, any future
+# release tag scripts must read from here rather than embedding a
+# hard-coded literal.
+__version__ = "3.3.0"
+
+
 # ---------------------------------------------------------------------------
 # Tier 1 – State-Owned Backbone
 # ---------------------------------------------------------------------------
