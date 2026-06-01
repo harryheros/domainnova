@@ -1,9 +1,10 @@
 # DomainNova - HK domains
-# Generated: 2026-05-26T09:03:46Z
+# Generated: 2026-06-01T07:43:25Z
 # Count: 169
 00xu.com
 163.net
 3hk.hk
+48hao.net
 aastocks.com
 alipay.hk
 alipayhk.com
@@ -91,7 +92,6 @@ hongkongairlines.com
 hongkongpost.hk
 honstarmemory.com
 hsbc.com.hk
-huoche.net
 hyab.gov.hk
 icac.org.hk
 info.gov.hk
@@ -106,7 +106,6 @@ klook.com
 lcsd.gov.hk
 lianfengwh.com
 lihkg.com
-likeji.net
 ln.edu.hk
 lwb.gov.hk
 mclcinema.com
@@ -120,7 +119,6 @@ octopus.com.hk
 on.cc
 openrice.com
 pccw.com
-pgyy.com
 polyu.edu.hk
 rthk.hk
 sachenpharm.com
@@ -140,6 +138,7 @@ stheadline.com
 stpaul.org.hk
 taizibao.com
 takungpao.com
+taodocs.com
 three.com.hk
 tmall.hk
 tom.com
@@ -166,6 +165,7 @@ yahoo.com.hk
 yata.hk
 yesstyle.com
 ygym.org
+yongqischool.net
 za.group
 zhimaruanjian.com
 zjgqt.org
