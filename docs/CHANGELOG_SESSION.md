@@ -1,5 +1,31 @@
 # Session Changelog
 
+## Session 3 (v3.4.0 — discovery source cleanup)
+
+Removed the upstream-list discovery agent and its lineage:
+  - Deleted `agent_upstream_fetch.py` (pulled from v2fly/domain-list-community
+    and felixonmars/dnsmasq-china-list). Those lists originate as proxy-routing
+    rule sources, and their upstream licenses are not compatible with
+    redistribution inside this CC BY-NC-SA dataset.
+  - Purged 1975 upstream-sourced candidates from `discovery.txt`
+    (2165 → 91 lines); kept the 25 candidates from neutral sources
+    (IP-neighbor + CT logs). Already-promoted domains in extended.txt / dist
+    are untouched — they live by the build pipeline's own DNS/IP verification,
+    independent of how they were first nominated.
+  - `update.yml` now runs only the two neutral agents (IP-neighbor over
+    IPNova's own CN ranges, and crt.sh CT logs).
+
+Discovery candidate volume will rebuild over time from the two neutral agents
+(~250/month combined); the dataset core (seed_*.txt + extended.txt) is
+unaffected.
+
+README: removed "proxy routing" framing from the project description and the
+Nova-toolkit table; reordered Use Cases so compliance / supply-chain / OSINT
+lead; restated "What this is" to make explicit this is a dataset, not a
+routing product, and that downstream use is the consumer's responsibility.
+
+Version: 3.3.0 → 3.4.0 (constants.py + README badge).
+
 ## Session 1 (initialization)
 seed.txt: 701 → 696 (moved alipay.hk / tmall.hk / jd.hk to seed_hk.txt;
 bytedance.com / wechat.com to seed_offshore.txt).
