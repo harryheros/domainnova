@@ -1,14 +1,14 @@
 {
-  "total_domains": 4724,
-  "dist_domains": 4256,
+  "total_domains": 4549,
+  "dist_domains": 4310,
   "seed_domains": 1417,
   "extended_domains": 3007,
-  "discovery_domains": 300,
+  "discovery_domains": 125,
   "score_bands": {
-    "cn_dns": 2960,
-    "cn_tld": 381,
-    "seed_forced": 915,
-    "non_cn": 468
+    "cn_dns": 3056,
+    "cn_tld": 380,
+    "seed_forced": 874,
+    "non_cn": 239
   },
   "source_counts": {
     "seed_cn": 622,
@@ -19,20 +19,20 @@
     "seed_kr": 162,
     "seed_sg": 76,
     "extended": 3007,
-    "discovery": 300
+    "discovery": 125
   },
   "buckets": {
     "cn": {
-      "included": 3340,
+      "included": 3426,
       "gray": 0,
-      "no_signal": 1,
-      "total": 3341
+      "no_signal": 2,
+      "total": 3428
     },
     "hk": {
-      "included": 169,
+      "included": 143,
       "gray": 0,
       "no_signal": 4,
-      "total": 173
+      "total": 147
     },
     "mo": {
       "included": 111,
@@ -47,10 +47,10 @@
       "total": 198
     },
     "jp": {
-      "included": 163,
+      "included": 162,
       "gray": 0,
       "no_signal": 0,
-      "total": 163
+      "total": 162
     },
     "kr": {
       "included": 165,
@@ -59,14 +59,14 @@
       "total": 165
     },
     "sg": {
-      "included": 138,
+      "included": 133,
       "gray": 0,
-      "no_signal": 2,
-      "total": 140
+      "no_signal": 3,
+      "total": 136
     },
-    "unclassified": 433
+    "unclassified": 202
   },
-  "generated_at": "2026-06-01T08:40:20Z",
+  "generated_at": "2026-06-05T10:29:20Z",
   "auto_purged": 0,
   "auto_promoted": 0,
   "auto_dead_removed": 0,
