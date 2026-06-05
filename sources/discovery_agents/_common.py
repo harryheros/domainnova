@@ -1,7 +1,7 @@
 """
 _common.py — shared helpers for DomainNova discovery agents.
 
-All three agents (agent_ct_logs, agent_ip_neighbor, agent_upstream_fetch)
+Both agents (agent_ct_logs, agent_ip_neighbor)
 historically maintained their own copies of:
   - DOMAIN_RE              (re-exported from sources/scripts/_source_parser)
   - EXCLUDE_DOMAINS

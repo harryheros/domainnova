@@ -43,8 +43,11 @@ jobs:
           github.event.inputs.run_agents == 'yes'
         run: |
           mkdir -p sources/discovery_agents
-          echo "[+] Running upstream fetch agent..."
-          python sources/discovery_agents/agent_upstream_fetch.py
+          # Discovery uses neutral infrastructure sources only:
+          # IP-neighbor (reverse-IP on IPNova's own CN ranges) + CT logs.
+          # The former upstream-list agent (v2fly / dnsmasq-china-list) was
+          # retired — those lists carry proxy-routing lineage and upstream
+          # license terms incompatible with redistribution here.
           echo "[+] Running IP neighbor agent..."
           python sources/discovery_agents/agent_ip_neighbor.py
           echo "[+] Running CT logs agent..."

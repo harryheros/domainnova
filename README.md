@@ -5,7 +5,7 @@
 DomainNova is an open intelligence dataset and tooling layer for domain, network, and infrastructure analysis across the Asia-Pacific region.
 
 [![Update](https://github.com/harryheros/domainnova/actions/workflows/update.yml/badge.svg)](https://github.com/harryheros/domainnova/actions/workflows/update.yml)
-[![Version](https://img.shields.io/badge/version-v3.3.0-blue)](https://github.com/harryheros/domainnova/releases)
+[![Version](https://img.shields.io/badge/version-v3.4.0-blue)](https://github.com/harryheros/domainnova/releases)
 
 ---
 
@@ -14,7 +14,10 @@ DomainNova is an open intelligence dataset and tooling layer for domain, network
 
 ## What this is
 
-A **self-evolving intelligence dataset for infrastructure attribution**, not a proxy or filtering ruleset.
+A **self-evolving intelligence dataset for infrastructure attribution** — it
+answers "is this domain's infrastructure physically hosted in region X?", and
+nothing more. It is a dataset, not a routing or filtering product; what
+downstream consumers do with the attribution is their decision.
 
 Each domain is evaluated across multiple independent signals to assess whether its infrastructure is physically located in a target Asia-Pacific region. The goal is infrastructure attribution, not corporate ownership attribution.
 
@@ -98,12 +101,12 @@ IP classification is performed against [IPNova](https://github.com/harryheros/ip
 
 ## Discovery Agents
 
-Three agents run monthly to harvest new domain candidates:
+Two agents run monthly to harvest new domain candidates, both from neutral
+infrastructure sources:
 
 | Agent | Source | Max per run |
 |-------|--------|-------------|
-| `agent_upstream_fetch.py` | v2fly domain list, felixonmars dnsmasq-china-list | 200 |
-| `agent_ip_neighbor.py` | HackerTarget Reverse IP (fallback: ViewDNS.info) | 100 |
+| `agent_ip_neighbor.py` | Reverse-IP over IPNova's own CN ranges (HackerTarget, fallback ViewDNS.info) | 100 |
 | `agent_ct_logs.py` | crt.sh Certificate Transparency logs | 150 |
 
 All agent output feeds into `discovery.txt` and is verified by the build pipeline before reaching `dist/`.
@@ -192,11 +195,11 @@ python sources/scripts/validate_manual_sources.py
 
 ## Use Cases
 
-- **Traffic filtering / routing** — geo-classify domains by regional infrastructure origin
+- **Compliance** — audit exposure to specific jurisdiction-hosted services
 - **Supply chain / vendor risk** — verify whether dependencies resolve to specific regional infrastructure
 - **OSINT / network intelligence** — identify regionally-hosted services in traffic analysis
-- **Compliance** — audit exposure to specific jurisdiction-hosted services
 - **Commercial intelligence** — infrastructure attribution for enterprise and government use
+- **Traffic classification** — geo-classify domains by regional infrastructure origin
 
 ---
 
@@ -224,7 +227,7 @@ DomainNova is part of the Nova infrastructure toolkit:
 | Project | Layer | Description |
 |---|---|---|
 | [IPNova](https://github.com/harryheros/ipnova) | IP | Routing-aware IPv4 dataset for Asia-Pacific infrastructure classification and traffic control |
-| **DomainNova** | **Domain (Data)** | **High-precision domain dataset for proxy routing and network intelligence** |
+| **DomainNova** | **Domain (Data)** | **High-precision domain dataset for regional infrastructure attribution and network intelligence** |
 | [ShieldNova](https://github.com/harryheros/shieldnova) | Domain (Filter) | Compatibility-first domain intelligence for privacy, ad blocking, and security |
 | [HarryWrt](https://github.com/harryheros/harrywrt) | Device | Clean OpenWrt-based firmware for x86_64 and aarch64 (BIOS & UEFI) |
 | [OSNova](https://github.com/harryheros/osnova) | System | System deployment and reinstallation engine for VPS and bare-metal servers |

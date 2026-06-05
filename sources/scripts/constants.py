@@ -17,7 +17,7 @@ FIXES (v2):
 # Single source of truth: README badge, workflow logs, any future
 # release tag scripts must read from here rather than embedding a
 # hard-coded literal.
-__version__ = "3.3.0"
+__version__ = "3.4.0"
 
 
 # ---------------------------------------------------------------------------
