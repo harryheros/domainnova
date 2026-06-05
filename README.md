@@ -62,7 +62,9 @@ DomainNova uses a **symmetric multi-region scoring model** (P2.A) that evaluates
 | 40 | CN TLD with ICP filing (CDN may obscure DNS) | Retained in `domains.csv` only |
 | < 40 | Insufficient signal | Excluded |
 
-DNS resolution uses **Google DoH with rotating EDNS Client Subnet** (Beijing/Shanghai/Guangdong Telecom + Beijing Unicom) to obtain GeoDNS-accurate results without exposing query traffic to CN DNS infrastructure.
+DNS resolution uses controlled regional vantage profiles with EDNS Client Subnet support to improve GeoDNS attribution accuracy across target regions.
+
+IP classification is performed against IPNova's Asia-Pacific infrastructure attribution dataset.
 
 IP classification is performed against [IPNova](https://github.com/harryheros/ipnova)'s APNIC-sourced Asia-Pacific CIDR dataset.
 
