@@ -2,7 +2,7 @@
 
 > Self-evolving dataset of domains associated with Asia-Pacific internet infrastructure, ranked by confidence.
 
-DomainNova is an open intelligence dataset and tooling layer for domain, network, and infrastructure analysis across the Asia-Pacific region.
+DomainNova is designed as a reusable domain intelligence dataset for infrastructure attribution, compliance, security, and network analysis workflows.
 
 [![Update](https://github.com/harryheros/domainnova/actions/workflows/update.yml/badge.svg)](https://github.com/harryheros/domainnova/actions/workflows/update.yml)
 [![Version](https://img.shields.io/badge/version-v3.4.0-blue)](https://github.com/harryheros/domainnova/releases)
