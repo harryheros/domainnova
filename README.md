@@ -2,7 +2,7 @@
 
 > Self-evolving dataset of domains associated with Asia-Pacific internet infrastructure, ranked by confidence.
 
-DomainNova is designed as a reusable domain intelligence dataset for infrastructure attribution, compliance, security, and network analysis workflows.
+DomainNova is an open intelligence dataset and tooling layer for domain, network, and infrastructure analysis across the Asia-Pacific region.
 
 [![Update](https://github.com/harryheros/domainnova/actions/workflows/update.yml/badge.svg)](https://github.com/harryheros/domainnova/actions/workflows/update.yml)
 [![Version](https://img.shields.io/badge/version-v3.4.0-blue)](https://github.com/harryheros/domainnova/releases)
@@ -62,9 +62,7 @@ DomainNova uses a **symmetric multi-region scoring model** (P2.A) that evaluates
 | 40 | CN TLD with ICP filing (CDN may obscure DNS) | Retained in `domains.csv` only |
 | < 40 | Insufficient signal | Excluded |
 
-DNS resolution uses controlled regional vantage profiles with EDNS Client Subnet support to improve GeoDNS attribution accuracy across target regions.
-
-IP classification is performed against IPNova's Asia-Pacific infrastructure attribution dataset.
+DNS resolution uses **Google DoH with rotating EDNS Client Subnet** (Beijing/Shanghai/Guangdong Telecom + Beijing Unicom) to obtain GeoDNS-accurate results without exposing query traffic to CN DNS infrastructure.
 
 IP classification is performed against [IPNova](https://github.com/harryheros/ipnova)'s APNIC-sourced Asia-Pacific CIDR dataset.
 
@@ -228,7 +226,7 @@ DomainNova is part of the Nova infrastructure toolkit:
 
 | Project | Layer | Description |
 |---|---|---|
-| [IPNova](https://github.com/harryheros/ipnova) | IP | Routing-aware IPv4 dataset for Asia-Pacific infrastructure classification and traffic control |
+| [IPNova](https://github.com/harryheros/ipnova) | IP | Routing-aware IPv4 dataset for Asia-Pacific infrastructure attribution and network intelligence |
 | **DomainNova** | **Domain (Data)** | **High-precision domain dataset for regional infrastructure attribution and network intelligence** |
 | [ShieldNova](https://github.com/harryheros/shieldnova) | Domain (Filter) | Compatibility-first domain intelligence for privacy, ad blocking, and security |
 | [HarryWrt](https://github.com/harryheros/harrywrt) | Device | Clean OpenWrt-based firmware for x86_64 and aarch64 (BIOS & UEFI) |
