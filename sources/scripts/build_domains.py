@@ -126,7 +126,7 @@ IPNOVA_CN_URL = REGION_CIDR_URLS["CN"]
 #               These are queried first (round-robin) for accurate GeoDNS.
 # Fallback pool: upstreams that ignore ECS but still resolve DNS.
 #                Only used if ALL primaries fail for a given domain.
-DOH_RESCUE = "https://nova.iohope.com/query"  # HK node, CN upstreams
+DOH_RESCUE = "https://vip-16.coodns.com/query"  # HK node, CN upstreams
 
 DOH_PRIMARIES = [
     "https://dns.google/resolve",           # Google JSON API (ECS)
@@ -2028,8 +2028,9 @@ def detect_dead_domains(
     # 1. Update dead_streak counters based on this run's results
     candidates_for_ns_check: List[str] = []
     for row in rows:
-        if row.source == "seed_cn":
-            continue  # Never touch seed
+        # Only extended/discovery are eligible for dead-domain removal.
+        # This implicitly protects ALL seed_* sources (seed_cn/hk/mo/tw/jp/
+        # kr/sg), which are hand-curated and never touched.
         if row.source not in ("extended", "discovery"):
             continue
 
@@ -2218,8 +2219,12 @@ def write_stats(
         if r.score >= 60:
             if r.dns_cn == 1:
                 score_bands["cn_dns"] += 1
-            elif r.cn_tld and not r.bucket or r.bucket == "CN":
-                # .cn TLD fallback path (ICP-backed, no DNS confirmation)
+            elif r.cn_tld and (not r.bucket or r.bucket == "CN"):
+                # .cn TLD fallback path (ICP-backed, no DNS confirmation).
+                # Requires an actual .cn TLD flag AND a CN-ish bucket
+                # (unclassified or CN). The parentheses are load-bearing:
+                # without them `and` binds tighter than `or`, so every
+                # bucket=="CN" row leaked into this band regardless of TLD.
                 score_bands["cn_tld"] += 1
             else:
                 # Non-CN seed forced to score=100, or regional DNS signal
