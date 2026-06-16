@@ -1,8 +1,9 @@
 # DomainNova - HK domains
-# Generated: 2026-06-08T07:42:29Z
-# Count: 143
+# Generated: 2026-06-16T10:29:45Z
+# Count: 150
 163.net
 3hk.hk
+99166.com
 aastocks.com
 alipay.hk
 alipayhk.com
@@ -36,6 +37,7 @@ cuhkmc.hk
 cxexpress.com
 dahsing.com
 dbs.com.hk
+diagram.jd.com
 dimbuy.com
 discuss.com.hk
 edb.gov.hk
@@ -88,15 +90,20 @@ hyab.gov.hk
 icac.org.hk
 info.gov.hk
 isd.gov.hk
+item.m.jd.com
 jardines.com
+jcap.m.jd.com
 jd.hk
+jdme.jd.com
 job853.com
 jobsdb.com
 klook.com
 lcsd.gov.hk
 lihkg.com
+list.jd.com
 ln.edu.hk
 lwb.gov.hk
+mars.jd.com
 mclcinema.com
 mingpao.com
 mtr.com.hk
@@ -108,6 +115,7 @@ on.cc
 openrice.com
 pccw.com
 polyu.edu.hk
+pro.m.jd.com
 rthk.hk
 sb.gov.hk
 sc.com
@@ -121,7 +129,6 @@ sth.org.hk
 stheadline.com
 stpaul.org.hk
 takungpao.com
-taodocs.com
 three.com.hk
 tmall.hk
 tom.com
