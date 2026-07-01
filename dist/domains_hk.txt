@@ -1,6 +1,6 @@
 # DomainNova - HK domains
-# Generated: 2026-06-16T10:29:45Z
-# Count: 150
+# Generated: 2026-07-01T08:24:27Z
+# Count: 152
 163.net
 3hk.hk
 99166.com
@@ -10,6 +10,7 @@ alipayhk.com
 asia.ccb.com
 aswatson.com
 baby-kingdom.com
+baiyewang.com
 bankofchina.com.hk
 bastillepost.com
 bigbigchannel.com.hk
@@ -97,6 +98,7 @@ jd.hk
 jdme.jd.com
 job853.com
 jobsdb.com
+joyspace.jd.com
 klook.com
 lcsd.gov.hk
 lihkg.com
