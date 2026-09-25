@@ -1,8 +1,10 @@
 # DomainNova - HK domains
-# Generated: 2026-07-01T08:24:27Z
-# Count: 152
+# Generated: 2026-09-25T09:19:17Z
+# Count: 169
 163.net
+321009.com
 3hk.hk
+985900.com
 99166.com
 aastocks.com
 alipay.hk
@@ -13,10 +15,12 @@ baby-kingdom.com
 baiyewang.com
 bankofchina.com.hk
 bastillepost.com
+beileimaoedu.com
 bigbigchannel.com.hk
 boc.hk
 bochk.com
 cathaypacific.com
+cbiec.net
 cedb.gov.hk
 centennialcollege.hku.hk
 ceo.gov.hk
@@ -25,6 +29,7 @@ citibank.com.hk
 cityu.edu.hk
 clp.com.hk
 cmab.gov.hk
+craer.com
 crcbank.com
 crhk.com.hk
 csb.gov.hk
@@ -38,11 +43,12 @@ cuhkmc.hk
 cxexpress.com
 dahsing.com
 dbs.com.hk
-diagram.jd.com
 dimbuy.com
 discuss.com.hk
+dragonfly.fm
 edb.gov.hk
 eduhk.hk
+fanuc.com.cn
 find853.com
 fortress.com.hk
 fso.gov.hk
@@ -83,7 +89,9 @@ hksyu.edu
 hkt.com
 hktvmall.com
 hku.hk
+hngwzk.com
 hongkongairlines.com
+hongkongdaily.net
 hongkongpost.hk
 hsbc.com.hk
 huoche.net
@@ -91,25 +99,26 @@ hyab.gov.hk
 icac.org.hk
 info.gov.hk
 isd.gov.hk
-item.m.jd.com
 jardines.com
-jcap.m.jd.com
 jd.hk
-jdme.jd.com
+jianhuasheng.com
+jiequ.art
+jmi.jd.com
 job853.com
 jobsdb.com
-joyspace.jd.com
+jszlgjg.com
 klook.com
 lcsd.gov.hk
 lihkg.com
-list.jd.com
 ln.edu.hk
 lwb.gov.hk
-mars.jd.com
+mapi.m.jd.com
 mclcinema.com
+mggtech.vip
 mingpao.com
 mtr.com.hk
 newhua.com
+nnsqr.com
 nowtv.now.com
 oceanpark.com.hk
 octopus.com.hk
@@ -117,19 +126,20 @@ on.cc
 openrice.com
 pccw.com
 polyu.edu.hk
-pro.m.jd.com
 rthk.hk
 sb.gov.hk
 sc.com
 scmp.com
 sfc.hk
 sfu.edu.hk
+sh1011.com
 singtao.com
 smartone.com
 staticfile.org
 sth.org.hk
 stheadline.com
 stpaul.org.hk
+sunyuejiao.xyz
 takungpao.com
 three.com.hk
 tmall.hk
@@ -147,9 +157,16 @@ westkowloon.hk
 wharf.com.hk
 wheelockcompany.com
 winglungbank.com
+www.sunyuejiao.xyz
 xmzgxcl.com
-xpcha.com
 yahoo.com.hk
 yata.hk
 yesstyle.com
+ygym.org
+yovyuan.com
 za.group
+zgbywl.com
+zgwlwx.com
+zhjxwh.com
+zjgqt.org
+zoofon.com
