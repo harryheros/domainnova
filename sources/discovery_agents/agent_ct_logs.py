@@ -2,18 +2,22 @@
 """
 agent_ct_logs.py - Certificate Transparency log discovery for DomainNova.
 
-Queries crt.sh to find domains with CN-related certificates:
-  - Domains ending in .cn TLDs
-  - Domains belonging to known CN organizations
-  - Subdomains of known CN seed domains
+Queries crt.sh for certificates issued to subdomains of known CN seed
+domains (``%.example.cn``), with expired certificates excluded. Only names
+that are genuinely under the queried seed are kept.
 
-This catches newly registered or updated CN infrastructure before it appears
-in other public lists.
+v3.5 removed two query families that misbehaved:
+  - Whole-TLD wildcards (``%.cn``, ``%.com.cn``): crt.sh cannot answer a
+    query over an entire national TLD; it times out, and each attempt was
+    retried with backoff — pure load on a free community service.
+  - Free-text organisation searches (``Alibaba``, ``Xiaomi``...): these
+    match any certificate mentioning the word and pulled spam/phishing
+    hosts such as ``www.xiaomi--kursk.online`` into discovery.txt.
 
 Safety limits:
-  - Max queries per run:           5  (each returns up to ~100 results)
+  - Max queries per run:           3
   - Max new domains added per run: 150
-  - Rate limit: 3s between queries
+  - Rate limit: 5s between queries
   - Run frequency: monthly
 """
 
@@ -44,9 +48,10 @@ import requests  # noqa: E402  (imported after _common so we use the shared sess
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
-MAX_QUERIES_PER_RUN  = 5     # crt.sh queries per run
+MAX_QUERIES_PER_RUN  = 3     # crt.sh queries per run
 MAX_NEW_PER_RUN      = 150   # hard limit on new domains added
-SLEEP_BETWEEN_QUERIES = 3.0  # seconds between crt.sh requests
+SLEEP_BETWEEN_QUERIES = 5.0  # seconds between crt.sh requests
+CRTSH_TIMEOUT        = 60    # crt.sh JSON for a popular seed can be slow
 DISCOVERY_MAX         = 2000
 
 CRTSH_URL  = "https://crt.sh/"
@@ -54,13 +59,13 @@ CRTSH_URL  = "https://crt.sh/"
 
 def make_session() -> requests.Session:
     # ct_logs historically used backoff_factor=2.0 (crt.sh is rate-sensitive).
-    return _make_session(backoff_factor=2.0)
+    # Fewer transport retries than the other agents: a crt.sh timeout is
+    # usually load on their side, and hammering it again doesn't help.
+    return _make_session(backoff_factor=2.0, total_retries=1)
 
 
-# CN TLDs to search for new registrations
+# Retained for reference/back-compat only — no longer queried (see docstring).
 CN_TLDS = [".cn", ".com.cn", ".net.cn", ".org.cn", ".gov.cn"]
-
-# Known CN organizations to search certificates for
 CN_ORGS = [
     "Alibaba",
     "Tencent",
@@ -80,16 +85,23 @@ CN_ORGS = [
 # ---------------------------------------------------------------------------
 # crt.sh queries
 # ---------------------------------------------------------------------------
+def _under(name: str, parent: str) -> bool:
+    return name == parent or name.endswith("." + parent)
+
+
 def query_crtsh(query: str, session: requests.Session) -> List[str]:
     """
     Query crt.sh for certificates matching the given pattern.
-    Returns list of unique domain names found.
+    Returns list of unique domain names found. For ``%.<seed>`` queries
+    only names under ``<seed>`` are returned (crt.sh's name_value can list
+    unrelated SANs from the same certificate).
     """
+    parent = query[2:] if query.startswith("%.") else ""
     try:
         resp = session.get(
             CRTSH_URL,
-            params={"q": query, "output": "json"},
-            timeout=30,
+            params={"q": query, "output": "json", "exclude": "expired"},
+            timeout=CRTSH_TIMEOUT,
         )
         if resp.status_code != 200:
             print(f"  [warn] crt.sh returned {resp.status_code} for {query}")
@@ -102,7 +114,11 @@ def query_crtsh(query: str, session: requests.Session) -> List[str]:
             # Each entry may have multiple names in name_value
             name_value = entry.get("name_value", "")
             for name in name_value.splitlines():
-                name = name.strip().lower().lstrip("*.")
+                name = name.strip().lower()
+                if name.startswith("*."):
+                    name = name[2:]
+                if parent and not _under(name, parent):
+                    continue
                 if DOMAIN_RE.match(name):
                     domains.add(name)
 
@@ -115,35 +131,19 @@ def query_crtsh(query: str, session: requests.Session) -> List[str]:
 
 def build_queries(repo_root: Path) -> List[str]:
     """
-    Build a list of crt.sh queries based on:
-    1. Random CN TLD patterns (recent 90 days)
-    2. Random CN organization names
-    3. Random seed domain subdomains
+    Build crt.sh queries of the form ``%.<seed>`` for randomly chosen
+    CN seed domains (subdomain discovery under trusted parents).
     """
-    queries: List[str] = []
-
-    # TLD-based: pick random CN TLDs
-    tld_queries = [f"%.{tld.lstrip('.')}" for tld in CN_TLDS]
-    random.shuffle(tld_queries)
-    queries.extend(tld_queries[:2])
-
-    # Org-based: pick random CN organizations
-    org_queries = list(CN_ORGS)
-    random.shuffle(org_queries)
-    queries.extend(org_queries[:2])
-
-    # Seed-based: pick random seed domains for subdomain discovery
     seed_path = repo_root / "sources" / "manual" / "seed_cn.txt"
-    if seed_path.exists():
-        seed_domains = [
-            l.strip().lower()
-            for l in seed_path.read_text(encoding="utf-8").splitlines()
-            if l.strip() and not l.strip().startswith("#")
-        ]
-        random.shuffle(seed_domains)
-        queries.extend([f"%.{d}" for d in seed_domains[:1]])
-
-    return queries[:MAX_QUERIES_PER_RUN]
+    if not seed_path.exists():
+        return []
+    seed_domains = [
+        l.strip().lower()
+        for l in seed_path.read_text(encoding="utf-8").splitlines()
+        if l.strip() and not l.strip().startswith("#")
+    ]
+    random.shuffle(seed_domains)
+    return [f"%.{d}" for d in seed_domains[:MAX_QUERIES_PER_RUN]]
 
 
 # ---------------------------------------------------------------------------

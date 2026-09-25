@@ -14,10 +14,10 @@ Discovery lifecycle rules:
   - Auto-purge:      removed after 5 consecutive *definitive* CN-check failures
                      (empty DNS results are NOT counted as failures)
   - Auto-promote:    moved to extended after 4 consecutive CN-check passes
-  - Promote suspend: when extended.txt reaches 3000 domains
+  - Promote suspend: when extended.txt reaches 5000 domains
 
 Performance boundaries:
-  - Max domains per run: 1500 (seed+extended full + discovery sample 300)
+  - Domains per run: seed + extended in full, plus a 300-domain discovery sample
   - DoH workers:         20 threads
   - Per-request jitter:  0.05-0.15s
   - Discovery sample:    300 domains per run (rotated)
@@ -93,7 +93,7 @@ except ImportError:
 # ---------------------------------------------------------------------------
 DISCOVERY_MAX        = 2000   # max domains in discovery.txt
 DISCOVERY_SAMPLE     = 300    # domains sampled from discovery per run
-EXTENDED_MAX         = 3000   # suspend auto-promote when extended reaches this
+EXTENDED_MAX         = 5000   # suspend auto-promote when extended reaches this (v3.5: 3000 -> 5000)
 PURGE_AFTER_FAILURES = 5      # consecutive CN failures before purge
 PURGE_AFTER_EMPTY    = 6      # consecutive dns_total=0 runs before purge
                                # (slightly more lenient than PURGE_AFTER_FAILURES
@@ -130,7 +130,7 @@ DOH_RESCUE = "https://vip-16.coodns.com/query"  # HK node, CN upstreams
 
 DOH_PRIMARIES = [
     "https://dns.google/resolve",           # Google JSON API (ECS)
-    "https://dns11.quad9.net/dns-query",    # Quad9 Secure with ECS
+    "https://dns11.quad9.net/dns-query",    # Quad9 Secure with ECS (RFC 8484 wire only)
 ]
 
 DOH_FALLBACKS = [
@@ -147,6 +147,25 @@ DOH_ECS_SUPPORT = {
     "https://dns11.quad9.net/dns-query":         True,
     "https://cloudflare-dns.com/dns-query":      False,
 }
+
+# Wire protocol per public upstream. Quad9 retired its JSON API (which only
+# ever existed on port 5053) on 2025-05-05; port 443 speaks RFC 8484
+# wireformat only. v3.4 queried it in JSON mode, so every Quad9 attempt —
+# half of all primary lookups under round-robin — failed and fell through.
+DOH_MODE: dict[str, str] = {
+    "https://dns.google/resolve":           "json",
+    "https://dns11.quad9.net/dns-query":    "wire",
+    "https://cloudflare-dns.com/dns-query": "json",
+}
+
+# Rescue-node circuit breaker. If the self-hosted rescue endpoint is down,
+# every domain would otherwise pay JSON + wire attempts (each with transport
+# retries and a 10s timeout) before reaching the public resolvers — hours of
+# stall for a ~4,700-domain build. After this many consecutive transport
+# failures the rescue tier is skipped for the rest of the run.
+RESCUE_MAX_CONSECUTIVE_FAILURES = 15
+_rescue_consecutive_failures = 0
+_rescue_disabled = False
 
 # Runtime-detected mode for the rescue endpoint: "json", "wire", or None (untested)
 # Auto-detected on first use, then locked for the rest of the run.
@@ -341,48 +360,56 @@ def detect_provider(ips: List[str]) -> tuple:
                     return GLOBAL_CDN_ASNS[asn], 1
                 provider = _STATIC_ASN_PROVIDER.get(asn, f"AS{asn}")
                 return provider, 0
-    else:
-        # Fallback: static ASN table via IP-prefix heuristic
-        # These prefixes are well-known stable allocations for each provider.
-        _ip_prefix_hints: list[tuple[str, int]] = [
-            # (ip_prefix, asn)
-            ("47.",      37963),   # Alibaba Cloud
-            ("8.152.",   37963),   # Alibaba Cloud Shanghai
-            ("8.153.",   37963),   # Alibaba Cloud Shanghai
-            ("101.200.", 37963),   # Alibaba Cloud Beijing
-            ("49.234.",  45090),   # Tencent Cloud
-            ("101.32.",  45090),   # Tencent Cloud
-            ("175.27.",  45090),   # Tencent Cloud
-            ("139.9.",   136907),  # Huawei Cloud
-            ("121.36.",  136907),  # Huawei Cloud
-            ("182.61.",  38365),   # Baidu Cloud
-            ("220.181.", 38365),   # Baidu
-            ("119.28.",  58593),   # ByteDance
-        ]
-        for ip in ips:
-            for prefix, asn in _ip_prefix_hints:
-                if ip.startswith(prefix):
-                    provider = _STATIC_ASN_PROVIDER.get(asn, f"AS{asn}")
-                    return provider, 0
 
-        # Fallback (no IPNova data.json): well-known Cloudflare prefix hints
-        _cdn_prefix_hints: list[tuple[str, str]] = [
-            ("172.64.",  "Cloudflare"),
-            ("172.65.",  "Cloudflare"),
-            ("172.66.",  "Cloudflare"),
-            ("172.67.",  "Cloudflare"),
-            ("104.16.",  "Cloudflare"),
-            ("104.17.",  "Cloudflare"),
-            ("104.18.",  "Cloudflare"),
-            ("104.19.",  "Cloudflare"),
-            ("104.20.",  "Cloudflare"),
-            ("104.21.",  "Cloudflare"),
-            ("23.227.",  "Cloudflare"),
-        ]
-        for ip in ips:
-            for prefix, cdn_name in _cdn_prefix_hints:
-                if ip.startswith(prefix):
-                    return cdn_name, 1
+    # Heuristic fallback. v3.4 only reached this when the IPNova lookup was
+    # empty, but a miss in a *loaded* lookup is the common case:
+    #   - IPNova's cidr_objects carry an ASN only for BGP-supplement CIDRs;
+    #     since IPNova v3.5 large APNIC blocks (e.g. Aliyun 47.96.0.0/11)
+    #     are correctly labelled source="apnic" with no ASN.
+    #   - IPNova *excludes* Cloudflare/Akamai/etc. ranges entirely, so the
+    #     GLOBAL_CDN_ASNS branch above can never match a global CDN IP.
+    # Falling through keeps provider tagging and makes cdn_masked work.
+    # Fallback: static ASN table via IP-prefix heuristic
+    # These prefixes are well-known stable allocations for each provider.
+    _ip_prefix_hints: list[tuple[str, int]] = [
+        # (ip_prefix, asn)
+        ("47.",      37963),   # Alibaba Cloud
+        ("8.152.",   37963),   # Alibaba Cloud Shanghai
+        ("8.153.",   37963),   # Alibaba Cloud Shanghai
+        ("101.200.", 37963),   # Alibaba Cloud Beijing
+        ("49.234.",  45090),   # Tencent Cloud
+        ("101.32.",  45090),   # Tencent Cloud
+        ("175.27.",  45090),   # Tencent Cloud
+        ("139.9.",   136907),  # Huawei Cloud
+        ("121.36.",  136907),  # Huawei Cloud
+        ("182.61.",  38365),   # Baidu Cloud
+        ("220.181.", 38365),   # Baidu
+        ("119.28.",  58593),   # ByteDance
+    ]
+    for ip in ips:
+        for prefix, asn in _ip_prefix_hints:
+            if ip.startswith(prefix):
+                provider = _STATIC_ASN_PROVIDER.get(asn, f"AS{asn}")
+                return provider, 0
+
+    # Fallback (no IPNova data.json): well-known Cloudflare prefix hints
+    _cdn_prefix_hints: list[tuple[str, str]] = [
+        ("172.64.",  "Cloudflare"),
+        ("172.65.",  "Cloudflare"),
+        ("172.66.",  "Cloudflare"),
+        ("172.67.",  "Cloudflare"),
+        ("104.16.",  "Cloudflare"),
+        ("104.17.",  "Cloudflare"),
+        ("104.18.",  "Cloudflare"),
+        ("104.19.",  "Cloudflare"),
+        ("104.20.",  "Cloudflare"),
+        ("104.21.",  "Cloudflare"),
+        ("23.227.",  "Cloudflare"),
+    ]
+    for ip in ips:
+        for prefix, cdn_name in _cdn_prefix_hints:
+            if ip.startswith(prefix):
+                return cdn_name, 1
 
     return "", 0
 
@@ -1283,20 +1310,41 @@ def _resolve_via_wire(domain: str, upstream: str, session: requests.Session,
         return False, []
 
 
+def _rescue_record(ok: bool) -> None:
+    """Update the rescue circuit breaker after one rescue attempt."""
+    global _rescue_consecutive_failures, _rescue_disabled
+    with _rescue_mode_lock:
+        if ok:
+            _rescue_consecutive_failures = 0
+            return
+        _rescue_consecutive_failures += 1
+        if (not _rescue_disabled
+                and _rescue_consecutive_failures >= RESCUE_MAX_CONSECUTIVE_FAILURES):
+            _rescue_disabled = True
+            log(f"[WARN] Rescue DoH endpoint failed {_rescue_consecutive_failures} "
+                "times in a row; disabling it for the rest of this run "
+                "(falling back to public DoH).")
+
+
 def _resolve_rescue(domain: str, session: requests.Session) -> List[str]:
     """
     Query the rescue (self-hosted HK) DoH endpoint.
     Auto-detects JSON vs wireformat mode on first successful call, then locks.
+    Protected by a circuit breaker (see RESCUE_MAX_CONSECUTIVE_FAILURES).
     """
     global _rescue_mode
+    if _rescue_disabled:
+        return []
     mode = _rescue_mode
     use_ecs = DOH_ECS_SUPPORT.get(DOH_RESCUE, False)
 
     if mode == "json":
-        _ok, ips = _resolve_via_json(domain, DOH_RESCUE, session, use_ecs)
+        ok, ips = _resolve_via_json(domain, DOH_RESCUE, session, use_ecs)
+        _rescue_record(ok)
         return ips
     if mode == "wire":
-        _ok, ips = _resolve_via_wire(domain, DOH_RESCUE, session, use_ecs)
+        ok, ips = _resolve_via_wire(domain, DOH_RESCUE, session, use_ecs)
+        _rescue_record(ok)
         return ips
 
     # Mode not yet detected - try JSON first, then wire
@@ -1306,22 +1354,29 @@ def _resolve_rescue(domain: str, session: requests.Session) -> List[str]:
             if _rescue_mode is None:
                 _rescue_mode = "json"
                 log("  [info] Rescue endpoint mode detected: JSON API")
+        _rescue_record(True)
         return ips
+
     ok, ips = _resolve_via_wire(domain, DOH_RESCUE, session, use_ecs)
     if ok:
         with _rescue_mode_lock:
             if _rescue_mode is None:
                 _rescue_mode = "wire"
                 log("  [info] Rescue endpoint mode detected: RFC 8484 wireformat")
+        _rescue_record(True)
         return ips
+
+    _rescue_record(False)
     return []
 
 
 def _do_resolve(domain: str, upstream: str, session: requests.Session) -> List[str]:
-    """Single-upstream resolve attempt (JSON API mode, for public DoH)."""
-    _ok, ips = _resolve_via_json(
-        domain, upstream, session, DOH_ECS_SUPPORT.get(upstream, False)
-    )
+    """Single-upstream resolve attempt using that upstream's wire protocol."""
+    use_ecs = DOH_ECS_SUPPORT.get(upstream, False)
+    if DOH_MODE.get(upstream, "json") == "wire":
+        _ok, ips = _resolve_via_wire(domain, upstream, session, use_ecs)
+    else:
+        _ok, ips = _resolve_via_json(domain, upstream, session, use_ecs)
     return ips
 
 
@@ -1969,16 +2024,19 @@ def manage_discovery_lifecycle(
 # ---------------------------------------------------------------------------
 def _query_ns_record(domain: str, session: requests.Session) -> bool:
     """
-    Check if a domain has ANY NS record via overseas DoH.
-    Returns True if NS records exist (domain is registered), False otherwise.
+    Return False only if the domain name definitively does not exist.
 
-    NS records are returned by the TLD servers themselves, so they are NOT
-    subject to the geo-blocking that affects A records. If Google DoH cannot
-    find any NS record for a domain, it means the domain is truly dead
-    (expired, deleted, or never existed).
+    Uses an NS query via Google DoH. Only an authoritative NXDOMAIN
+    (Status 3) is treated as "dead"; every other outcome counts as alive.
 
-    Uses Google DoH JSON API directly (type=NS). Short timeout to avoid
-    blocking the pipeline on dead domains.
+    v3.4 also returned False (dead) when the response contained no NS
+    record. That is the *normal* NOERROR response for any subdomain
+    (``cdn.example.com`` has no NS of its own — the answer is empty with an
+    SOA in Authority) and for CNAME names (the answer is a CNAME). ~380 of
+    the ~3,000 extended.txt entries are such names, so after a 6-run DNS
+    streak they would have been deleted from extended.txt while alive.
+
+    Short timeout; network/HTTP errors play safe and assume alive.
     """
     try:
         time.sleep(random.uniform(JITTER_MIN, JITTER_MAX))
@@ -1991,17 +2049,8 @@ def _query_ns_record(domain: str, session: requests.Session) -> bool:
         if resp.status_code != 200:
             return True  # On HTTP error, play safe and assume alive
         data = resp.json()
-        # Status 0 = NOERROR, 3 = NXDOMAIN
-        status = data.get("Status", 0)
-        if status == 3:
-            return False  # NXDOMAIN: definitively dead
-        # Look for NS records in Answer or Authority section
-        # (some TLDs return NS in Authority rather than Answer)
-        for section in ("Answer", "Authority"):
-            for rec in data.get(section, []):
-                if rec.get("type") == 2:  # NS record type
-                    return True
-        return False
+        # Status 0 = NOERROR, 2 = SERVFAIL, 3 = NXDOMAIN, 5 = REFUSED
+        return data.get("Status", 0) != 3
     except (requests.RequestException, ValueError):
         # On network error, play safe and assume alive (don't accidentally purge)
         return True
@@ -2337,6 +2386,19 @@ def build(repo_root: Path) -> None:
     previous = load_previous_rows(data_csv)
     if previous:
         log(f"[+] Loaded {len(previous)} previous records for sticky fallback")
+    else:
+        # data/domains.csv is gitignored; in CI it only exists if the Actions
+        # state cache was restored. Without it, sticky fallback is inactive
+        # and a DNS flake drops domains from dist for this run.
+        log("[WARN] No previous data/domains.csv — sticky fallback inactive "
+            "this run (state cache missing or first run)")
+    state_restored = {
+        "domains_csv": bool(previous),
+        "discovery_stats": (repo_root / "data" / "discovery_stats.json").exists(),
+    }
+    if not state_restored["discovery_stats"]:
+        log("[WARN] No data/discovery_stats.json — discovery rotation and "
+            "promote/purge/dead-domain counters start from zero this run")
 
     domains = load_all_sources(repo_root)
     log(f"[+] Processing {len(domains)} domains with {MAX_WORKERS} workers...")
@@ -2391,6 +2453,8 @@ def build(repo_root: Path) -> None:
         "sticky_retained":    sticky_count,
         "workers":            MAX_WORKERS,
         "discovery_sample":   DISCOVERY_SAMPLE,
+        "state_restored":     state_restored,
+        "rescue_disabled":    _rescue_disabled,
     }, bucket_counts=bucket_counts)
 
     total_dist = sum(bucket_counts.values())

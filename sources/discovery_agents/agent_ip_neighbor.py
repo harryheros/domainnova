@@ -5,19 +5,28 @@ agent_ip_neighbor.py - Reverse IP neighbor discovery for DomainNova.
 Resolves seed domains to their CN IPs via Google DoH + ECS, then queries
 Reverse IP APIs to find co-hosted domains on the same server.
 
-Primary:  HackerTarget Reverse IP API (100 free queries/day)
-Fallback: ViewDNS.info Reverse IP API  (automatic if HackerTarget fails)
+Primary:  HackerTarget Reverse IP API (free tier, small daily quota)
+Fallback: ViewDNS.info Reverse IP **JSON API**, only when the
+          VIEWDNS_APIKEY environment variable is set (e.g. a repo secret).
+
+v3.5: the key-less fallback used to scrape viewdns.info's HTML web page.
+Automated scraping of a website from shared CI runners is the kind of
+traffic that gets accounts flagged, and it was triggered for every IP once
+HackerTarget's quota ran out. It has been removed. When the HackerTarget
+quota is exhausted and no ViewDNS key is configured, the run stops early.
 
 Safety limits:
   - Max IPs queried per run:       50
   - Max new domains added per run: 100
-  - Passive only, no active scanning
+  - Passive only, no active scanning (never contacts the IPs themselves)
   - Run frequency: monthly
 """
 
 from __future__ import annotations
 
+import bisect
 import ipaddress
+import os
 import random
 import re
 import sys
@@ -52,7 +61,11 @@ ECS_SUBNET = "114.114.114.0/24"
 
 HACKERTARGET_URL = "https://api.hackertarget.com/reverseiplookup/"
 VIEWDNS_URL      = "https://api.viewdns.info/reverseip/"
-VIEWDNS_APIKEY   = ""  # leave empty to use free web scrape fallback
+VIEWDNS_APIKEY   = os.environ.get("VIEWDNS_APIKEY", "").strip()
+
+
+class QuotaExhausted(Exception):
+    """Raised when every configured reverse-IP backend is out of quota."""
 
 
 # ---------------------------------------------------------------------------
@@ -102,12 +115,28 @@ def fetch_cn_cidrs(session: requests.Session) -> List[ipaddress.IPv4Network]:
     return networks
 
 
+_NET_INDEX: dict = {}
+
+
 def is_cn_ip(ip_str: str, networks: List[ipaddress.IPv4Network]) -> bool:
+    """Binary-search membership test (v3.4 scanned ~5,600 networks per IP).
+    The list is collapsed once and cached, so members are disjoint and the
+    only candidate is the rightmost network starting at or below the IP."""
     try:
-        addr = ipaddress.IPv4Address(ip_str)
+        addr = int(ipaddress.IPv4Address(ip_str))
     except ValueError:
         return False
-    return any(addr in net for net in networks)
+    cached = _NET_INDEX.get(id(networks))
+    if cached is None or cached[0] is not networks:
+        nets = sorted(ipaddress.collapse_addresses(networks),
+                      key=lambda n: int(n.network_address))
+        cached = (networks,
+                  [int(n.network_address) for n in nets],
+                  [int(n.broadcast_address) for n in nets])
+        _NET_INDEX[id(networks)] = cached
+    _, starts, ends = cached
+    i = bisect.bisect_right(starts, addr) - 1
+    return i >= 0 and ends[i] >= addr
 
 
 # ---------------------------------------------------------------------------
@@ -132,8 +161,11 @@ def hackertarget_lookup(ip: str, session: requests.Session) -> Optional[List[str
         if resp.status_code != 200:
             return None
         text = resp.text.strip()
-        if "API count exceeded" in text or "error" in text[:30].lower():
-            print(f"  [warn] HackerTarget limit/error: {text[:80]}")
+        if "API count exceeded" in text:
+            print(f"  [warn] HackerTarget quota exhausted: {text[:80]}")
+            raise QuotaExhausted(text[:80])
+        if "error" in text[:30].lower():
+            print(f"  [warn] HackerTarget error: {text[:80]}")
             return None
         return _parse_domains(text)
     except requests.RequestException as exc:
@@ -143,62 +175,54 @@ def hackertarget_lookup(ip: str, session: requests.Session) -> Optional[List[str
 
 def viewdns_lookup(ip: str, session: requests.Session) -> Optional[List[str]]:
     """
-    Query ViewDNS.info Reverse IP.
-    Uses JSON API if VIEWDNS_APIKEY is set, otherwise scrapes the free HTML page.
+    Query the ViewDNS.info Reverse IP JSON API. Requires VIEWDNS_APIKEY;
+    returns None without making any request when no key is configured.
     """
+    if not VIEWDNS_APIKEY:
+        return None
     try:
-        if VIEWDNS_APIKEY:
-            # JSON API (requires key)
-            resp = session.get(
-                VIEWDNS_URL,
-                params={"ip": ip, "apikey": VIEWDNS_APIKEY, "output": "json"},
-                timeout=15,
-            )
-            if resp.status_code != 200:
-                return None
-            data = resp.json()
-            domains = [
-                entry.get("name", "").lower().strip()
-                for entry in data.get("response", {}).get("domains", [])
-            ]
-            return [d for d in domains if DOMAIN_RE.match(d)]
-        else:
-            # Free HTML page scrape
-            resp = session.get(
-                "https://viewdns.info/reverseip/",
-                params={"host": ip, "t": "1"},
-                timeout=15,
-            )
-            if resp.status_code != 200:
-                return None
-            # Extract domains from HTML table cells
-            found = re.findall(
-                r'<td>([a-z0-9](?:[a-z0-9\-]{0,61}[a-z0-9])?'
-                r'(?:\.[a-z0-9](?:[a-z0-9\-]{0,61}[a-z0-9])?)+)</td>',
-                resp.text.lower()
-            )
-            return [d for d in found if DOMAIN_RE.match(d)]
-    except requests.RequestException as exc:
+        resp = session.get(
+            VIEWDNS_URL,
+            params={"host": ip, "apikey": VIEWDNS_APIKEY, "output": "json"},
+            timeout=15,
+        )
+        if resp.status_code != 200:
+            return None
+        data = resp.json()
+        domains = [
+            str(entry.get("name", "")).lower().strip()
+            for entry in (data.get("response", {}) or {}).get("domains", []) or []
+            if isinstance(entry, dict)
+        ]
+        return [d for d in domains if DOMAIN_RE.match(d)]
+    except (requests.RequestException, ValueError) as exc:
         print(f"  [warn] ViewDNS failed for {ip}: {exc}")
         return None
 
 
 def reverse_ip_lookup(ip: str, session: requests.Session) -> List[str]:
     """
-    Try HackerTarget first, fall back to ViewDNS if needed.
-    Returns empty list if both fail.
+    Try HackerTarget first, then the ViewDNS JSON API (if a key is set).
+    Raises QuotaExhausted when HackerTarget is out of quota and there is
+    no ViewDNS key, so the caller stops instead of continuing to query.
     """
-    result = hackertarget_lookup(ip, session)
+    try:
+        result = hackertarget_lookup(ip, session)
+    except QuotaExhausted:
+        if not VIEWDNS_APIKEY:
+            raise
+        result = None
     if result is not None:
         return result
 
-    print(f"  [info] Falling back to ViewDNS for {ip}...")
-    time.sleep(1.0)
-    result = viewdns_lookup(ip, session)
-    if result is not None:
-        return result
+    if VIEWDNS_APIKEY:
+        print(f"  [info] Falling back to ViewDNS API for {ip}...")
+        time.sleep(1.0)
+        result = viewdns_lookup(ip, session)
+        if result is not None:
+            return result
 
-    print(f"  [warn] Both sources failed for {ip}")
+    print(f"  [warn] No reverse-IP result for {ip}")
     return []
 
 
@@ -277,7 +301,12 @@ def run(repo_root: Path) -> None:
             break
 
         print(f"  Querying neighbors of {ip}...")
-        neighbors = reverse_ip_lookup(ip, session)
+        try:
+            neighbors = reverse_ip_lookup(ip, session)
+        except QuotaExhausted:
+            print("[!] Reverse-IP quota exhausted and no VIEWDNS_APIKEY "
+                  "configured; stopping early.")
+            break
 
         new = [
             d for d in neighbors

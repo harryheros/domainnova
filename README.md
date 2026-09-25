@@ -5,7 +5,7 @@
 DomainNova is an open intelligence dataset and tooling layer for domain, network, and infrastructure analysis across the Asia-Pacific region.
 
 [![Update](https://github.com/harryheros/domainnova/actions/workflows/update.yml/badge.svg)](https://github.com/harryheros/domainnova/actions/workflows/update.yml)
-[![Version](https://img.shields.io/badge/version-v3.4.0-blue)](https://github.com/harryheros/domainnova/releases)
+[![Version](https://img.shields.io/badge/version-v3.5.0-blue)](https://github.com/harryheros/domainnova/releases)
 
 ---
 
@@ -95,7 +95,7 @@ IP classification is performed against [IPNova](https://github.com/harryheros/ip
 **Discovery capacity limits:**
 - Max 2000 domains in `discovery.txt`
 - Max 300 domains sampled per weekly build (rotated)
-- Auto-promote suspended when `extended.txt` reaches 3000 domains
+- Auto-promote suspended when `extended.txt` reaches 5000 domains
 
 ---
 
@@ -106,8 +106,8 @@ infrastructure sources:
 
 | Agent | Source | Max per run |
 |-------|--------|-------------|
-| `agent_ip_neighbor.py` | Reverse-IP over IPNova's own CN ranges (HackerTarget, fallback ViewDNS.info) | 100 |
-| `agent_ct_logs.py` | crt.sh Certificate Transparency logs | 150 |
+| `agent_ip_neighbor.py` | Reverse-IP over IPNova's own CN ranges (HackerTarget; optional ViewDNS JSON API via `VIEWDNS_APIKEY` secret — no web scraping) | 100 |
+| `agent_ct_logs.py` | crt.sh Certificate Transparency logs (subdomains of CN seed domains, unexpired certs only) | 150 |
 
 All agent output feeds into `discovery.txt` and is verified by the build pipeline before reaching `dist/`.
 
