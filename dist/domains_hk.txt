@@ -1,10 +1,9 @@
 # DomainNova - HK domains
-# Generated: 2026-09-25T09:19:17Z
-# Count: 169
+# Generated: 2026-09-28T07:54:03Z
+# Count: 174
 163.net
 321009.com
 3hk.hk
-985900.com
 99166.com
 aastocks.com
 alipay.hk
@@ -41,11 +40,14 @@ ctgoodjobs.hk
 cuhk.edu.hk
 cuhkmc.hk
 cxexpress.com
+cyflscb.com
 dahsing.com
 dbs.com.hk
+diagram.jd.com
 dimbuy.com
 discuss.com.hk
 dragonfly.fm
+dtstudyclub.cn
 edb.gov.hk
 eduhk.hk
 fanuc.com.cn
@@ -99,20 +101,24 @@ hyab.gov.hk
 icac.org.hk
 info.gov.hk
 isd.gov.hk
+item.m.jd.com
 jardines.com
+jcap.m.jd.com
 jd.hk
+jdme.jd.com
 jianhuasheng.com
 jiequ.art
-jmi.jd.com
 job853.com
 jobsdb.com
+joyspace.jd.com
 jszlgjg.com
 klook.com
 lcsd.gov.hk
 lihkg.com
+list.jd.com
 ln.edu.hk
 lwb.gov.hk
-mapi.m.jd.com
+mars.jd.com
 mclcinema.com
 mggtech.vip
 mingpao.com
@@ -126,6 +132,7 @@ on.cc
 openrice.com
 pccw.com
 polyu.edu.hk
+pro.m.jd.com
 rthk.hk
 sb.gov.hk
 sc.com
@@ -139,7 +146,6 @@ staticfile.org
 sth.org.hk
 stheadline.com
 stpaul.org.hk
-sunyuejiao.xyz
 takungpao.com
 three.com.hk
 tmall.hk
@@ -157,7 +163,6 @@ westkowloon.hk
 wharf.com.hk
 wheelockcompany.com
 winglungbank.com
-www.sunyuejiao.xyz
 xmzgxcl.com
 yahoo.com.hk
 yata.hk
