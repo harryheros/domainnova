@@ -1,8 +1,7 @@
 # DomainNova - HK domains
-# Generated: 2026-09-28T07:54:03Z
-# Count: 174
+# Generated: 2026-10-01T10:01:58Z
+# Count: 166
 163.net
-321009.com
 3hk.hk
 99166.com
 aastocks.com
@@ -43,11 +42,9 @@ cxexpress.com
 cyflscb.com
 dahsing.com
 dbs.com.hk
-diagram.jd.com
 dimbuy.com
 discuss.com.hk
 dragonfly.fm
-dtstudyclub.cn
 edb.gov.hk
 eduhk.hk
 fanuc.com.cn
@@ -101,24 +98,18 @@ hyab.gov.hk
 icac.org.hk
 info.gov.hk
 isd.gov.hk
-item.m.jd.com
 jardines.com
-jcap.m.jd.com
 jd.hk
-jdme.jd.com
 jianhuasheng.com
 jiequ.art
 job853.com
 jobsdb.com
-joyspace.jd.com
 jszlgjg.com
 klook.com
 lcsd.gov.hk
 lihkg.com
-list.jd.com
 ln.edu.hk
 lwb.gov.hk
-mars.jd.com
 mclcinema.com
 mggtech.vip
 mingpao.com
@@ -132,7 +123,6 @@ on.cc
 openrice.com
 pccw.com
 polyu.edu.hk
-pro.m.jd.com
 rthk.hk
 sb.gov.hk
 sc.com
@@ -163,7 +153,10 @@ westkowloon.hk
 wharf.com.hk
 wheelockcompany.com
 winglungbank.com
+wnbsq.com
+xckgq.com
 xmzgxcl.com
+xpcha.com
 yahoo.com.hk
 yata.hk
 yesstyle.com
@@ -173,5 +166,4 @@ za.group
 zgbywl.com
 zgwlwx.com
 zhjxwh.com
-zjgqt.org
 zoofon.com
