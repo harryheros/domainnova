@@ -1,6 +1,6 @@
 # DomainNova - HK domains
-# Generated: 2026-10-12T08:30:49Z
-# Count: 168
+# Generated: 2026-10-19T07:06:06Z
+# Count: 169
 163.net
 350abc.net
 3hk.hk
@@ -110,7 +110,6 @@ lcsd.gov.hk
 lihkg.com
 ln.edu.hk
 lwb.gov.hk
-mail.qidan.com.cn
 mclcinema.com
 mggtech.vip
 mingpao.com
@@ -134,10 +133,12 @@ sfu.edu.hk
 sh1011.com
 singtao.com
 smartone.com
+smc18.com
 staticfile.org
 sth.org.hk
 stheadline.com
 stpaul.org.hk
+sunyuejiao.xyz
 takungpao.com
 three.com.hk
 tmall.hk
@@ -156,6 +157,7 @@ wharf.com.hk
 wheelockcompany.com
 winglungbank.com
 wnbsq.com
+www.sunyuejiao.xyz
 xckgq.com
 xmzgxcl.com
 xpcha.com
@@ -168,4 +170,3 @@ za.group
 zgbywl.com
 zgwlwx.com
 zhjxwh.com
-zoofon.com

@@ -82,7 +82,6 @@ aizhan.com
 ali213.net
 alibaba.cn
 alicdn.net
-alicdn.org
 alicloudccp.com
 aliexpress.com
 alimama.com
@@ -1131,7 +1130,6 @@ www.v6.gifshow.com
 xcao.win
 xiaoyeren.com
 xm9m.com
-xxlxxl.xyz
 yanglaocn.com
 yaozhizhu.com
 yingxiao.bbs.taobao.com
@@ -1262,7 +1260,6 @@ llsstt.dpdns.org
 ls-doll.com
 lytlmy.ggff.net
 lytlst.ggff.net
-m.js-hmdf.com
 maitao.com
 mall.bydauto.com.cn
 meigeinc.com
@@ -1282,7 +1279,6 @@ sh1011.com
 shandongruyi.com
 shxcoal.com
 smtsvs.com
-stsproxy.lenovo.com
 summerpalace-china.com
 suningestate.com
 swkong.com
@@ -1376,7 +1372,6 @@ webankwld.com
 wxtyyy.com
 x8sb.com
 xuexi727.com
-yecao.net
 yejiangye.com
 yfdxs.com
 yiai.me
@@ -1399,7 +1394,6 @@ admission.nwpu.edu.cn
 all163-dxospf.split.netease.com
 anfine-healthcare.com
 antiquelearn.com
-api.money.163.com
 aqkszr.nwpu.edu.cn
 art.pinpai.163.com
 atcrs.nwpu.edu.cn
@@ -1407,7 +1401,6 @@ baomi.nwpu.edu.cn
 baoxiu.nwpu.edu.cn
 bdwork.com
 beijingforum.art
-betaclub-global.huawei.com
 beyondcomparepro.com
 biosune.com
 biu.art
@@ -1892,7 +1885,6 @@ www.boser.cn
 www.cnyuxiang.cn
 www.gzhsfy.gov.cn
 www.minhe.bj.cn
-xiaohongtao.art
 xingzou.art
 xooooa.com
 yingqi.art
