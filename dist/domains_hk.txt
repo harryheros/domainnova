@@ -1,6 +1,6 @@
 # DomainNova - HK domains
-# Generated: 2026-10-19T07:06:06Z
-# Count: 169
+# Generated: 2026-10-26T07:34:42Z
+# Count: 179
 163.net
 350abc.net
 3hk.hk
@@ -28,6 +28,7 @@ citibank.com.hk
 cityu.edu.hk
 clp.com.hk
 cmab.gov.hk
+cmfwiper.com
 craer.com
 crcbank.com
 crhk.com.hk
@@ -43,6 +44,7 @@ cxexpress.com
 cyflscb.com
 dahsing.com
 dbs.com.hk
+diagram.jd.com
 dimbuy.com
 discuss.com.hk
 dragonfly.fm
@@ -99,22 +101,30 @@ hyab.gov.hk
 icac.org.hk
 info.gov.hk
 isd.gov.hk
+item-aws.jd.com
+item.m.jd.com
 jardines.com
+jcap.m.jd.com
 jd.hk
+jdme.jd.com
 jiequ.art
 job853.com
 jobsdb.com
+joyspace.jd.com
 jszlgjg.com
 klook.com
 lcsd.gov.hk
 lihkg.com
 ln.edu.hk
 lwb.gov.hk
+mapi.m.jd.com
+mars.jd.com
 mclcinema.com
 mggtech.vip
 mingpao.com
 missfresh.net
 mtr.com.hk
+new6.art
 newhua.com
 nnsqr.com
 nowtv.now.com
@@ -124,7 +134,9 @@ on.cc
 openrice.com
 pccw.com
 polyu.edu.hk
+pro.m.jd.com
 rthk.hk
+san-yang.com
 sb.gov.hk
 sc.com
 scmp.com
@@ -138,11 +150,11 @@ staticfile.org
 sth.org.hk
 stheadline.com
 stpaul.org.hk
-sunyuejiao.xyz
 takungpao.com
 three.com.hk
 tmall.hk
 tom.com
+tongniguoji.com
 tungwah.org.hk
 tvb.com
 twc.edu.hk
@@ -157,7 +169,6 @@ wharf.com.hk
 wheelockcompany.com
 winglungbank.com
 wnbsq.com
-www.sunyuejiao.xyz
 xckgq.com
 xmzgxcl.com
 xpcha.com
@@ -165,7 +176,6 @@ yahoo.com.hk
 yata.hk
 yesstyle.com
 ygym.org
-yovyuan.com
 za.group
 zgbywl.com
 zgwlwx.com
