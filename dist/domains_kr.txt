@@ -1,5 +1,5 @@
 # DomainNova - KR domains
-# Generated: 2026-10-19T07:06:06Z
+# Generated: 2026-10-26T07:34:42Z
 # Count: 165
 11st.co.kr
 afreecatv.com
