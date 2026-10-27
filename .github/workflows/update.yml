@@ -2,8 +2,7 @@ name: Update DomainNova Dataset
 
 on:
   schedule:
-    - cron: "0 2 * * 1"    # Weekly: every Monday 02:00 UTC (build)
-    - cron: "0 3 1 * *"    # Monthly: 1st of month 03:00 UTC (discovery agents + build)
+    - cron: "0 2 * * 1"    # Weekly: every Monday 02:00 UTC (discovery agent + build)
     - cron: "30 3 * * 4"   # Weekly: Thursday — state cache keep-alive only
   workflow_dispatch:
     inputs:
@@ -87,22 +86,22 @@ jobs:
           restore-keys: |
             domainnova-state-
 
-      # Discovery agents - run monthly or on manual trigger
-      - name: Run discovery agents
+      # Discovery agent - every weekly build (v3.6; was monthly) or on demand.
+      # Only reverse-IP on IPNova's own CN ranges: the CT-log agent can only
+      # find subdomains of seed domains, which the suffix rules already
+      # cover, so it is no longer scheduled (see agent_ct_logs.py).
+      - name: Run discovery agent
         if: |
-          github.event.schedule == '0 3 1 * *' ||
+          github.event.schedule == '0 2 * * 1' ||
           github.event.inputs.run_agents == 'yes'
+        # A failing third-party API must not block the weekly data update.
+        continue-on-error: true
         env:
           # Optional: set a repo secret to enable the ViewDNS JSON API fallback.
           VIEWDNS_APIKEY: ${{ secrets.VIEWDNS_APIKEY }}
         run: |
-          mkdir -p sources/discovery_agents
-          # Discovery uses neutral infrastructure sources only:
-          # IP-neighbor (reverse-IP on IPNova's own CN ranges) + CT logs.
           echo "[+] Running IP neighbor agent..."
           python sources/discovery_agents/agent_ip_neighbor.py
-          echo "[+] Running CT logs agent..."
-          python sources/discovery_agents/agent_ct_logs.py
 
       - name: Build domain artifacts
         run: python sources/scripts/build_domains.py

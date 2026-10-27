@@ -5,7 +5,7 @@
 DomainNova is an open intelligence dataset and tooling layer for domain, network, and infrastructure analysis across the Asia-Pacific region.
 
 [![Update](https://github.com/harryheros/domainnova/actions/workflows/update.yml/badge.svg)](https://github.com/harryheros/domainnova/actions/workflows/update.yml)
-[![Version](https://img.shields.io/badge/version-v3.5.0-blue)](https://github.com/harryheros/domainnova/releases)
+[![Version](https://img.shields.io/badge/version-v3.6.0-blue)](https://github.com/harryheros/domainnova/releases)
 
 ---
 
@@ -80,34 +80,37 @@ IP classification is performed against [IPNova](https://github.com/harryheros/ip
               ▼
 ┌──────────────────────────────────────────────────┐
 │  Build Pipeline (parallel, 20 workers)           │
-│  Google DoH + ECS -> ipnova CIDR match -> score  │
+│  DoH + ECS (www. fallback) -> ipnova -> score    │
 └──────────────────────────────────────────────────┘
               │
       ┌───────┴────────┐
       ▼                ▼
 ┌─────────────┐  ┌──────────────────────┐
 │ dist/       │  │ Discovery Lifecycle  │
-│ domains_xx  │  │ fail ×2 → purge      │
+│ domains_xx  │  │ fail ×5 → purge      │
 │ score >= 60 │  │ pass ×4 → promote    │
 └─────────────┘  └──────────────────────┘
 ```
 
 **Discovery capacity limits:**
-- Max 2000 domains in `discovery.txt`
-- Max 300 domains sampled per weekly build (rotated)
+- Max 5000 domains in `discovery.txt`
+- Every discovery domain is checked on every weekly build, so promotion takes 4 weeks and the published lists do not change with a sampling rotation
 - Auto-promote suspended when `extended.txt` reaches 5000 domains
+- A domain whose bare name has no address record (common for government sites, e.g. `soumu.go.jp`) is checked through `www.<domain>`
 
 ---
 
 ## Discovery Agents
 
-Two agents run monthly to harvest new domain candidates, both from neutral
-infrastructure sources:
+The IP-neighbor agent runs with every weekly build to harvest new domain
+candidates from neutral infrastructure sources. Candidates already covered by a
+known domain or one of its parents (e.g. `news.example.cn` when `example.cn` is
+listed) are skipped, and a leading `www.` is removed:
 
 | Agent | Source | Max per run |
 |-------|--------|-------------|
 | `agent_ip_neighbor.py` | Reverse-IP over IPNova's own CN ranges (HackerTarget; optional ViewDNS JSON API via `VIEWDNS_APIKEY` secret — no web scraping) | 100 |
-| `agent_ct_logs.py` | crt.sh Certificate Transparency logs (subdomains of CN seed domains, unexpired certs only) | 150 |
+| `agent_ct_logs.py` | crt.sh Certificate Transparency logs — **not scheduled** since v3.6: it only finds subdomains of seed domains, which suffix rules already cover. Kept for manual runs. | 150 |
 
 All agent output feeds into `discovery.txt` and is verified by the build pipeline before reaching `dist/`.
 

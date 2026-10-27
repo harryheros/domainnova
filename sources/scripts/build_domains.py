@@ -10,17 +10,16 @@ Three-tier architecture:
   Discovery (discovery.txt)  read-write, auto-managed lifecycle
 
 Discovery lifecycle rules:
-  - Max capacity:    2000 domains (oldest purged when exceeded)
+  - Max capacity:    5000 domains (oldest purged when exceeded)
   - Auto-purge:      removed after 5 consecutive *definitive* CN-check failures
                      (empty DNS results are NOT counted as failures)
   - Auto-promote:    moved to extended after 4 consecutive CN-check passes
   - Promote suspend: when extended.txt reaches 5000 domains
 
 Performance boundaries:
-  - Domains per run: seed + extended in full, plus a 300-domain discovery sample
+  - Domains per run: seed + extended + discovery, all in full (v3.6)
   - DoH workers:         20 threads
   - Per-request jitter:  0.05-0.15s
-  - Discovery sample:    300 domains per run (rotated)
 
 DNS: Google DoH (primary) + Cloudflare DoH + Quad9 ECS DoH (fallback)
      with ECS using CN Telecom DNS IPs for accurate GeoDNS.
@@ -91,8 +90,8 @@ except ImportError:
 # ---------------------------------------------------------------------------
 # Hard limits (do not exceed these values)
 # ---------------------------------------------------------------------------
-DISCOVERY_MAX        = 2000   # max domains in discovery.txt
-DISCOVERY_SAMPLE     = 300    # domains sampled from discovery per run
+DISCOVERY_MAX        = 5000   # max domains in discovery.txt (v3.6: 2000 -> 5000;
+                               # must match discovery_agents/_common.py)
 EXTENDED_MAX         = 5000   # suspend auto-promote when extended reaches this (v3.5: 3000 -> 5000)
 PURGE_AFTER_FAILURES = 5      # consecutive CN failures before purge
 PURGE_AFTER_EMPTY    = 6      # consecutive dns_total=0 runs before purge
@@ -100,7 +99,9 @@ PURGE_AFTER_EMPTY    = 6      # consecutive dns_total=0 runs before purge
                                #  to tolerate genuine transient DoH outages, but
                                #  prevents dead/garbage domains from accumulating
                                #  indefinitely under the old "pass" exemption)
-PROMOTE_AFTER_PASSES = 4      # consecutive CN passes before promotion
+PROMOTE_AFTER_PASSES = 4      # consecutive CN passes before promotion (= 4 weekly
+                               # builds, now that every discovery domain is
+                               # checked on every build)
 DEAD_STREAK_THRESHOLD = 6     # consecutive empty-DNS runs before NS confirmation
 STICKY_MAX_DAYS      = 28     # max days a domain may stay sticky without re-resolving
 MAX_WORKERS          = 20     # DoH thread pool size
@@ -1021,6 +1022,7 @@ def seed_health_check(
                 "consistent":         consistent,
                 "identity_overrides": identity_overrides,
                 "dns_consistent":     dns_consistent,
+                "via_www":            sum(1 for d in sample if normalize_domain(d) in _www_fallback_hits),
                 "rate":               round(rate, 4),
                 "status":             combined_status,
             })
@@ -1048,8 +1050,13 @@ def seed_health_check(
 def load_all_sources(repo_root: Path) -> List[Tuple[str, str]]:
     """
     Load all three tiers with priority deduplication (seed > extended > discovery).
-    Discovery is sampled to DISCOVERY_SAMPLE domains per run (rotated by offset).
-    Total domains processed per run is capped at seed+extended full + 300 discovery.
+    Every tier is checked in full on every run.
+
+    v3.5 checked only a rotating 300-domain sample of discovery.txt. A
+    discovery domain therefore appeared in dist/ only in the weeks it was
+    sampled (the published lists changed by ~250 domains between runs for
+    no reason), and the 4 consecutive passes needed for promotion took
+    about 4 * len(discovery)/300 weeks — 11 weeks at 825 domains.
     """
     seed_path      = repo_root / "sources" / "manual" / "seed_cn.txt"
     seed_hk_path   = repo_root / "sources" / "manual" / "seed_hk.txt"
@@ -1078,27 +1085,17 @@ def load_all_sources(repo_root: Path) -> List[Tuple[str, str]]:
         f"extended={len(extended_domains)} discovery={len(discovery_all)}"
     )
 
-    # Load rotation offset from stats
+    # v3.5 stored a rotation offset here; drop it from the state file.
     stats_path = repo_root / "data" / "discovery_stats.json"
-    stats = {}
     if stats_path.exists():
         try:
             stats = json.loads(stats_path.read_text(encoding="utf-8"))
+            if stats.pop("discovery_offset", None) is not None:
+                stats_path.write_text(
+                    json.dumps(stats, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+                )
         except (json.JSONDecodeError, OSError):
             pass
-
-    offset = stats.get("discovery_offset", 0)
-    if discovery_all:
-        offset = offset % len(discovery_all)
-        # Rotate and sample
-        rotated = discovery_all[offset:] + discovery_all[:offset]
-        discovery_sample = rotated[:DISCOVERY_SAMPLE]
-        next_offset = (offset + DISCOVERY_SAMPLE) % len(discovery_all)
-    else:
-        discovery_sample = []
-        next_offset = 0
-
-    stats["discovery_offset"] = next_offset
 
     # Priority deduplication. Region-specific seeds (seed_hk/mo/tw) take the
     # HIGHEST priority because they encode an explicit jurisdictional claim
@@ -1128,20 +1125,12 @@ def load_all_sources(repo_root: Path) -> List[Tuple[str, str]]:
     for domain in extended_domains:
         if domain not in domain_map:
             domain_map[domain] = "extended"
-    for domain in discovery_sample:
+    for domain in discovery_all:
         if domain not in domain_map:
             domain_map[domain] = "discovery"
 
-    # Save updated offset
-    stats_path.parent.mkdir(parents=True, exist_ok=True)
-    stats_path.write_text(
-        json.dumps(stats, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
-    )
-
     result = list(domain_map.items())
-    log(f"[+] This run: {len(result)} domains "
-        f"(discovery sample {len(discovery_sample)}/{len(discovery_all)}, "
-        f"offset {offset}→{next_offset})")
+    log(f"[+] This run: {len(result)} domains (discovery {len(discovery_all)}, all checked)")
     return result
 
 
@@ -1380,12 +1369,8 @@ def _do_resolve(domain: str, upstream: str, session: requests.Session) -> List[s
     return ips
 
 
-def resolve_domain(domain: str, session: Optional[requests.Session]) -> List[str]:
-    if session is None:
-        session = get_thread_session()
-    domain = normalize_domain(domain)
-    if not domain:
-        return []
+def _resolve_name(domain: str, session: requests.Session) -> List[str]:
+    """Resolve one exact name through the upstream chain (no www fallback)."""
     # Tier 0: self-hosted HK rescue endpoint (CN upstreams, highest priority)
     ips = _resolve_rescue(domain, session)
     if ips:
@@ -1408,8 +1393,49 @@ def resolve_domain(domain: str, session: Optional[requests.Session]) -> List[str
         ips = _do_resolve(domain, upstream, session)
         if ips:
             return ips
-    log(f"  [warn] All DoH upstreams failed for {domain}")
     return []
+
+
+# Bare domains that only resolved through www.<domain> in this run
+# (reported in seed_health.json and the build log).
+_www_fallback_hits: set = set()
+_www_fallback_lock = threading.Lock()
+
+
+def resolve_domain_detail(
+    domain: str, session: Optional[requests.Session]
+) -> Tuple[List[str], str]:
+    """Resolve `domain`; returns (ips, name_that_resolved).
+
+    Many sites — government sites in particular (soumu.go.jp, dsat.gov.mo)
+    — publish an address only for www.<domain>, not for the bare domain.
+    v3.5 treated such a domain as unresolvable: seed health reported a
+    35-70% "resolve failure" for CN/TW/JP/MO, and discovery/extended
+    domains of this kind were counted as dead and eventually removed.
+    When the bare domain has no address, www.<domain> is tried; the rule
+    sets match by suffix, so the www host's location is the site's.
+    """
+    if session is None:
+        session = get_thread_session()
+    domain = normalize_domain(domain)
+    if not domain:
+        return [], ""
+    ips = _resolve_name(domain, session)
+    if ips:
+        return ips, domain
+    if not domain.startswith("www.") and "*" not in domain:
+        www = "www." + domain
+        ips = _resolve_name(www, session)
+        if ips:
+            with _www_fallback_lock:
+                _www_fallback_hits.add(domain)
+            return ips, www
+    log(f"  [warn] No address for {domain} (bare name and www.)")
+    return [], ""
+
+
+def resolve_domain(domain: str, session: Optional[requests.Session]) -> List[str]:
+    return resolve_domain_detail(domain, session)[0]
 
 
 # ---------------------------------------------------------------------------
@@ -2452,7 +2478,7 @@ def build(repo_root: Path) -> None:
         "processing_errors":  errors,
         "sticky_retained":    sticky_count,
         "workers":            MAX_WORKERS,
-        "discovery_sample":   DISCOVERY_SAMPLE,
+        "discovery_checked":  sum(1 for r in rows if r.source == "discovery"),
         "state_restored":     state_restored,
         "rescue_disabled":    _rescue_disabled,
     }, bucket_counts=bucket_counts)
