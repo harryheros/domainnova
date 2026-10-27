@@ -19,7 +19,7 @@ Safety limits:
   - Max IPs queried per run:       50
   - Max new domains added per run: 100
   - Passive only, no active scanning (never contacts the IPs themselves)
-  - Run frequency: monthly
+  - Run frequency: weekly (v3.6; was monthly)
 """
 
 from __future__ import annotations
@@ -38,10 +38,11 @@ from typing import List, Optional, Set
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _common import (  # noqa: E402
     DOMAIN_RE,
-    EXCLUDE_DOMAINS,
     USER_AGENT,
     append_to_discovery,
+    DISCOVERY_MAX,
     discovery_count,
+    filter_candidates,
     load_existing,
     make_session,
 )
@@ -54,7 +55,6 @@ import requests  # noqa: E402
 MAX_IPS_PER_RUN       = 50
 MAX_NEW_PER_RUN       = 100
 SLEEP_BETWEEN_QUERIES = 2.5
-DISCOVERY_MAX         = 2000
 
 DOH_URL    = "https://dns.google/resolve"
 ECS_SUBNET = "114.114.114.0/24"
@@ -308,12 +308,7 @@ def run(repo_root: Path) -> None:
                   "configured; stopping early.")
             break
 
-        new = [
-            d for d in neighbors
-            if d not in existing
-            and d not in EXCLUDE_DOMAINS
-            and "." in d
-        ]
+        new = filter_candidates(neighbors, existing)
 
         if new:
             remaining = budget - total_added

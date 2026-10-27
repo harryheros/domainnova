@@ -244,9 +244,9 @@ class TestSeedHealthCheck(unittest.TestCase):
 
     def test_payload_structure_matches_spec(self):
         # PROPOSAL §4.3 (v2): results entry includes region/sampled/resolved/
-        # consistent/rate/status plus four observability fields added when the
+        # consistent/rate/status plus observability fields added when the
         # check actually runs: resolve_rate, resolve_status, dns_consistent,
-        # identity_overrides. Skipped entries omit the observability fields.
+        # identity_overrides, via_www (v3.6). Skipped entries omit them.
         self.repo.write_seed("seed_cn.txt", ["a", "b", "c"])
         bd.resolve_domain = _stub_resolver({"a": ["1.0.0.1"], "b": ["1.0.0.2"], "c": ["1.0.0.3"]})
         payload = seed_health_check(self.repo.root, self.lookup, session=None,
@@ -255,7 +255,7 @@ class TestSeedHealthCheck(unittest.TestCase):
         expected_keys = {
             "region", "sampled", "resolved", "consistent", "rate", "status",
             "resolve_rate", "resolve_status", "dns_consistent",
-            "identity_overrides",
+            "identity_overrides", "via_www",
         }
         self.assertEqual(set(cn.keys()), expected_keys)
         self.assertEqual(cn["region"], "CN")

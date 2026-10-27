@@ -18,7 +18,10 @@ Safety limits:
   - Max queries per run:           3
   - Max new domains added per run: 150
   - Rate limit: 5s between queries
-  - Run frequency: monthly
+  - Not scheduled since v3.6: every name it can find is a subdomain of a
+    seed domain, which suffix-based rule sets already cover, so it adds no
+    coverage while still loading crt.sh (a free community service).
+    filter_candidates() now drops such names; run it by hand if needed.
 """
 
 from __future__ import annotations
@@ -35,10 +38,11 @@ from typing import List, Set
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _common import (  # noqa: E402
     DOMAIN_RE,
-    EXCLUDE_DOMAINS,
     USER_AGENT,
     append_to_discovery,
+    DISCOVERY_MAX,
     discovery_count,
+    filter_candidates,
     load_existing,
     make_session as _make_session,
 )
@@ -52,7 +56,6 @@ MAX_QUERIES_PER_RUN  = 3     # crt.sh queries per run
 MAX_NEW_PER_RUN      = 150   # hard limit on new domains added
 SLEEP_BETWEEN_QUERIES = 5.0  # seconds between crt.sh requests
 CRTSH_TIMEOUT        = 60    # crt.sh JSON for a popular seed can be slow
-DISCOVERY_MAX         = 2000
 
 CRTSH_URL  = "https://crt.sh/"
 
@@ -192,12 +195,7 @@ def run(repo_root: Path) -> None:
         found = query_crtsh(query, session)
         print(f"  Found {len(found)} domains in certificates")
 
-        new = [
-            d for d in found
-            if d not in existing
-            and d not in EXCLUDE_DOMAINS
-            and "." in d
-        ]
+        new = filter_candidates(found, existing)
 
         # Shuffle to avoid always picking the same results
         random.shuffle(new)

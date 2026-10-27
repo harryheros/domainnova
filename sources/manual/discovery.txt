@@ -1,46 +1,22 @@
 # DomainNova - Discovery Layer
 
-# --- ip-neighbor:109.244.0.66 2026-03-28 ---
 
-# --- ip-neighbor:47.111.234.42 2026-03-28 ---
 
-# --- ip-neighbor:211.100.61.67 2026-03-28 ---
 
-# --- ct-logs:Huawei 2026-03-28 ---
 
-# --- ip-neighbor:115.236.118.54 2026-03-28 ---
 
-# --- ip-neighbor:202.117.80.223 2026-03-28 ---
 
-# --- ip-neighbor:202.117.80.233 2026-03-28 ---
 
-# --- ip-neighbor:203.107.45.167 2026-03-28 ---
 
-# --- ct-logs:%.gov.cn 2026-03-28 ---
-api.m.sgeg.sg.gov.cn
-hzfc.gov.cn
-hrsszj.gov.cn
-jszwfw.gov.cn
-lzwenming.gov.cn
-ccad.gov.cn
 
-# --- ip-neighbor:119.253.80.52 2026-03-28 ---
 
-# --- ip-neighbor:116.236.67.182 2026-03-28 ---
 
-# --- ip-neighbor:220.196.85.123 2026-03-28 ---
 
-# --- ip-neighbor:111.206.228.66 2026-03-28 ---
 
-# --- ip-neighbor:106.3.129.147 2026-03-28 ---
 
-# --- ip-neighbor:103.102.200.2 2026-03-28 ---
 
-# --- ip-neighbor:59.82.44.240 2026-03-28 ---
 
-# --- ip-neighbor:59.82.121.163 2026-03-28 ---
 
-# --- ip-neighbor:59.82.122.140 2026-03-28 ---
 
 # --- ct-logs:%.com.cn 2026-03-28 ---
 dscitroen.com.cn
@@ -49,14 +25,11 @@ msjyfund.com.cn
 samsungshop.com.cn
 salala.com.cn
 
-# --- ip-neighbor:47.107.51.11 2026-03-28 ---
 
-# --- ip-neighbor:47.106.90.124 2026-03-28 ---
 
 # --- ip-neighbor:43.137.211.13 2026-03-28 ---
 wp.jun2020.com
 
-# --- ip-neighbor:211.100.61.67 2026-03-28 ---
 
 # --- ct-logs:Xiaomi 2026-03-28 ---
 xiaomi--rostov.online
@@ -72,22 +45,15 @@ www.xiaomi--belgorod.online
 air-fryer-6-litros-xiaomi-es-es--22332918.westernholz.de
 finda-xiaomi-redmi-10-es-es--961112066.menschistmensch.de
 
-# --- ip-neighbor:43.132.140.66 2026-04-12 ---
 
-# --- ip-neighbor:116.153.78.163 2026-04-12 ---
 
-# --- ip-neighbor:211.95.70.108 2026-04-12 ---
 
-# --- ip-neighbor:117.144.123.9 2026-04-12 ---
 
-# --- ip-neighbor:36.110.136.74 2026-04-12 ---
 
-# --- ip-neighbor:61.152.229.228 2026-04-12 ---
 
 # --- ip-neighbor:122.14.229.64 2026-04-13 ---
 zgzbb.com
 
-# --- ip-neighbor:61.241.148.62 2026-04-13 ---
 
 # --- ip-neighbor:49.4.40.184 2026-06-08 ---
 ecs-49-4-40-184.compute.hwclouds-dns.com
@@ -97,12 +63,8 @@ ppsimg.com
 
 # --- ip-neighbor:220.181.7.203 2026-06-08 ---
 1048.cc
-m.1048.cc
-www.1048.cc
 12555.com
 amlhc.com
-www.amlhc.com
-ss.baidu.com
 ksf609.com
 blackiron.fun
 baidu.com.hk
@@ -122,16 +84,12 @@ testtls.nuke666.cn
 843777.com
 888255.com
 cz6399.com
-s1.cz6399.com
 www.hanfuxin.com
 ltuztcapitale.com
-httpsproxy.a.shifen.com
 www22484.com
 www77642.com
-www.www77642.com
 xed222.com
 ycuse.com
-www.ycuse.com
 baidu.hk
 joeloves2sing.qzz.io
 kawaii.lat
@@ -147,42 +105,8 @@ praire.dpdns.org
 rulatior.dpdns.org
 1909.work
 sunyuejiao.xyz
-www.sunyuejiao.xyz
 
-# --- ip-neighbor:111.124.195.142 2026-06-08 ---
-youdata.163.com
-252fsxtourgroup.youdata.163.com
-demo.youdata.163.com
-jiakeonlin.youdata.163.com
-netease.youdata.163.com
-notebook.youdata.163.com
-test.youdata.163.com
-usercomer.youdata.163.com
-zytt.youdata.163.com
-bigdata.163yun.com
-id.163yun.com
-sq.163yun.com
-www.163yun.com
-ocm.netease.com
-research.netease.com
-youdata.netease.com
 
-# --- ip-neighbor:111.124.195.143 2026-06-08 ---
-bigdata.163.com
-yun.reg.163.com
-sf.163.com
-sq.sf.163.com
-test.sf.163.com
-x1.163.com
-2fsxtourgroup.youdata.163.com
-pinguan.youdata.163.com
-console.163yun.com
-cp.163yun.com
-id-test.163yun.com
-www-test.163yun.com
-bdms.netease.com
-netease.metrics-gydev.bdms.netease.com
-music.youdata.netease.com
 
 # --- ip-neighbor:42.192.175.15 2026-06-08 ---
 8cbx.gitcafe.com
@@ -209,19 +133,8 @@ oschina.cn
 toscode.mulanos.cn-f82c66e482b.baiduads.com
 all.oschina.net-1d96b9c4fc4.baiduads.com
 oschina.net-38a6d2f2a9a.baiduads.com
-admin.oschina.net
-agr-ai-seninar.oschina.net
-city.oschina.net
-gotc2023.oschina.net
-job.oschina.net
-my.oschina.net
-tool.oschina.net
-tosfoundation.oschina.net
-www.oschina.net
-zb.oschina.net
 
 # --- ip-neighbor:122.193.250.58 2026-06-16 ---
-h5.open.hxb.com.cn
 app.showcai.com.cn
 znkf.showcai.com.cn
 www.hsw.cn
@@ -268,7 +181,6 @@ new6.art
 gyuk.rasjkfd.autos
 weunlcp.autos
 wkui.vqodcjh.beauty
-trf.qy.nmz.xe.wkui.vqodcjh.beauty
 mellifluous.beer
 pearl.orchid.haze.glacier.numinousm.blog
 evanescenat.bond
@@ -305,175 +217,19 @@ www.studys.christmas
 aoidc.cn
 zgbmw.com.cn
 ikarox.cn
-www.ikarox.cn
 ilovegoogle.cn
 ioooe.cn
 dela.net.cn
 pddx.cn
 
 # --- ct-logs:JD.com 2026-06-16 ---
-jdl-gateway-sg-api.jd.com
-logistics-mrd.jd.com
-en.jd.com
-element.jd.com
-trustmail.jd.com
-p.m.jd.com
-www.jd.com--vip999--huodong2020--everyday.idefault.xyz
-ir.jd.com
-hk-cnc.jd.com
-play-jdd.jd.com
-www.test.aces.jd.com
-mstone-api.jd.com
-open-api-live.jd.com
-www.re.jd.com
-ua.jd.com
-h7nmeet.jd.com
-webank-manage-test.jd.com
-vvip.jd.com
 4e94jd.com
-camellia-test.jd.com
 jd.com--vip999--huodong2020--everyday.idefault.xyz
-g.ua.jd.com
-jxdtx.jd.com
-smartcamera-upload.jd.com
-xltestpull.jd.com
-ipop.jd.com
-yunjian-back.jd.com
-janus-api-pre.jd.com
-ipromo.jd.com
-27kf-desktop.jd.com
-c.ua.jd.com
-mapi.m.jd.com
-kf-desktop-site-6.jd.com
-jdmap-logpush-cloud.jd.com
-yyslyptsc-jk.jd.com
-cloudpc-hd.jd.com
-jdttv.jd.com
-jr.jd.com
-doga.design.jd.com
-risk.jd.com
-edm.jd.com
-bamboo-demo.jd.com
-uat-jdl-gateway-sg-api.jd.com
-e.jd.com
-gxt-t.5.jd.com
-kf-desktop-site-5.jd.com
-test.jd.com
-jmi.jd.com
-h5speed.m.jd.com
-jdedu.jd.com
-in.m.jd.com
-neufoundry-cms-fe.jd.com
-decare.jd.com
-desktop-onsite.jd.com
-ui.jd.com
-ke.jd.com
-www.xn--68jd.com
-dweb.jd.com
-99995.jd.com
-qf-ai.jd.com
-vip-vdi.jd.com
-jduvideo.jd.com
-cs-desktop.jd.com
-jnr.jd.com
 xn--68jd.com
-wl.jd.com
-jkc-remote.jd.com
-www.bluespark.jd.com
-kf-desktop-site-7.jd.com
-test.aces.jd.com
-cloudpc-auth.jd.com
-cloud-ide.jd.com
-fintech.jd.com
-oos.jd.com
-s3-chubaofs.jd.com
-moa.jd.com
-cloudpc-login.jd.com
-insedutest.jd.com
-admin.jas.jd.com
-fgw.jd.com
-tpaas.jd.com
-soa.jd.com
-mos.jd.com
-jdiy.jd.com
-kafka-cloud.jd.com
-ngfw.jd.com
-mallq.jd.com
-plogin.m.jd.com
-beta-dongdong-gateway.jd.com
-a.ua.jd.com
-ierp.jd.com
-ap-ee0.jd.com
-test-ssa.jd.com
-test.cvessel.jd.com
-pro.m.jd.com
-grafana.ab.jd.com
-joyspace-pre2.jd.com
-www.ngfw.jd.com
-jdwm-editor.jd.com
-wqcoss.jd.com
 yiyaojd.com
-web-t.jd.com
-joydesktop.jd.com
-gxt.5.jd.com
-web-p.jd.com
-wukong.jd.com
-zdj.jd.com
-jduimg.jd.com
-union.click.jd.com
-jssbak-big.jd.com
-diagram.jd.com
-kafka-cluster.jd.com
-joydesktop-gateway.jd.com
-kmall.jd.com
-dev.aces.jd.com
-item-aws.jd.com
-hk-cmcc.jd.com
-so.m.jd.com
-jd-onsite.jd.com
-m.car.jd.com
-list.jd.com
-joyspace.jd.com
-ssl.jd.com
-huipao-man.jd.com
-webank-h5-test.jd.com
-storage.jd.com
-yunjian.jd.com
-cfs-s3-cn-south-1.jd.com
-lfrh-ct.jd.com
-k.jd.com
-jdme.jd.com
-5.jd.com
-item.m.jd.com
-jcap.m.jd.com
-lf-ct.jd.com
-ift-en.jd.com
-i.ua.jd.com
-wqdeal.jd.com
-mars.jd.com
-pos-yd.jd.com
-um.jd.com
-mpforum.jd.com
-uh.jd.com
-oap.jimi.jd.com
-jchd.jd.com
-insmetest.jd.com
-jss-big.jd.com
-gxt-p.5.jd.com
-e.ua.jd.com
-quic-jdpull.jd.com
 
 # --- ip-neighbor:114.117.128.151 2026-07-01 ---
 huzhujin.com
-linkm.ke.com
-m.ke.com
-matrix-prod50.ke.com
-sohu-m.ke.com
-ta.ke.com
-www.ke.com
-linkm.lianjia.com
-m.lianjia.com
-www.lianjia.com
 008276.lol
 028810.lol
 136419.lol
@@ -481,102 +237,15 @@ www.lianjia.com
 565659.lol
 901035.lol
 
-# --- ip-neighbor:103.181.234.48 2026-07-01 ---
-004.yohobuy.com
-101.yohobuy.com
-123.yohobuy.com
-1468202757826--431763167.yohobuy.com
-1468203304423--593013790.yohobuy.com
-1468203380438--739078109.yohobuy.com
-1468203429178--627564797.yohobuy.com
-1468203430140--323239104.yohobuy.com
-1997youzhengju.yohobuy.com
-1bil.yohobuy.com
-22market.yohobuy.com
-2percent.yohobuy.com
-31philliplim.yohobuy.com
-3omethingchic.yohobuy.com
-55.yohobuy.com
-55dsl.yohobuy.com
-5cm.yohobuy.com
-aaaa.yohobuy.com
-aape.yohobuy.com
-ablejeans.yohobuy.com
-absurdlogic.yohobuy.com
-aceyu.yohobuy.com
-acoldwall.yohobuy.com
-across.yohobuy.com
-activatewater.yohobuy.com
-adfunture.yohobuy.com
-adidas.yohobuy.com
-adidaswatch.yohobuy.com
-adorad.yohobuy.com
-agamemnon.yohobuy.com
-aimetoi.yohobuy.com
-airhole.yohobuy.com
-akclub.yohobuy.com
-akiiiclassic.yohobuy.com
-akop.yohobuy.com
-al203.yohobuy.com
-alinederose.yohobuy.com
-aliyastore.yohobuy.com
-almondrocks.yohobuy.com
-alphastyle.yohobuy.com
-ambush.yohobuy.com
-amesbros.yohobuy.com
-androidhomme.yohobuy.com
-angelcitiz.yohobuy.com
-annichen.yohobuy.com
-antiarchwz.yohobuy.com
-antiarchwz584.yohobuy.com
-antry.yohobuy.com
-aphelion.yohobuy.com
-artanky.yohobuy.com
-aruba.yohobuy.com
-ash.yohobuy.com
-ashphi.yohobuy.com
-atimeshijianlang.yohobuy.com
-attempt.yohobuy.com
-audiopark.yohobuy.com
-azulbymoussy.yohobuy.com
-b-duck.yohobuy.com
-babama.yohobuy.com
-babyghost.yohobuy.com
-babyone.yohobuy.com
-baijuan.yohobuy.com
-balenciaga.yohobuy.com
-bananababy.yohobuy.com
-bananaunder.yohobuy.com
-barbararihl.yohobuy.com
-barrel.yohobuy.com
-bearburry.yohobuy.com
-beastie.yohobuy.com
-beasts.yohobuy.com
-beats.yohobuy.com
-beautyberry.yohobuy.com
-become.yohobuy.com
-beffon.yohobuy.com
-billionaireboysclub.yohobuy.com
-bizzcut.yohobuy.com
-blackjack.yohobuy.com
-blacklux.yohobuy.com
-blackscale.yohobuy.com
-blesstyche.yohobuy.com
-bluekiki.yohobuy.com
-bone.yohobuy.com
-boogiebear.yohobuy.com
-bornchamps.yohobuy.com
 
 # --- ct-logs:%.cn 2026-07-01 ---
 tjbtn-sslvpn.fuwapingping.cn
 qos.qno.cn
 www.handpay.com.cn
 cnc.xkaka.cn
-imailcn.huawei.com
 myipad.dccnet.com.cn
 www.sonymusicnashville.com
 www.usebay.cn
-ccshop.cib.com.cn
 www.cnsw.org
 m.easy-forex.cn
 autodiscover.tsingtao.com.cn
@@ -588,7 +257,6 @@ emm.naveco.com.cn
 nhncorp.cn
 pingdtx.cn
 myepson.epson.com.cn
-www.nbk1560-chn.com.cn
 www.coooto.cn
 www.iosco2012.cn
 secure.www.cartier.cn
@@ -611,7 +279,6 @@ www.create-e.org.cn
 icestorm.cn
 citylogic.cn
 www.vpai.cn
-myebank1.icbc.com.cn
 secure-web-tic-mini-cn.bmwgroup.com
 housecall7-lenovo.icrc.trendmicro.com.cn
 ebank.trcbank.com.cn
@@ -646,14 +313,12 @@ www.stone-export.cn
 www.usamedicine.com.cn
 androidcn.com
 larryli.cn
-www.jxlsga.gov.cn
 www.llloo.cn
 www.keepout.cn
 m.ford.com.cn
 www.godwithus.cn
 secure.thecorner.com.cn
 secure-www.cartier.cn
-owa.gzcc.gov.cn
 www.piclink.cn
 sslvpn1.cn.tesco.com
 audividi.com.cn
@@ -689,13 +354,10 @@ ushi.cn
 eb.com.cn
 netson-cn.com
 www.sunflowerclub.com.cn
-www.pfizermedicalinformation.cn
 ssl.mengniu.cn
 www.canstockphoto.cn
 autodiscover.cargofe.com.cn
-ebank.spdb.com.cn
 tiseagles.cn
-cbcn.ocbc.com
 cscss.com.cn
 wt.swsc.com.cn
 ssl.mobage.cn

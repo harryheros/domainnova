@@ -1,5 +1,29 @@
 # Session Changelog
 
+## Session 5 (v3.6.0 — discovery throughput and stable lists)
+
+  - **Every discovery domain is checked on every build.** v3.5 checked a
+    rotating 300-domain sample, so a discovery domain was in `dist/` only
+    in the weeks it was sampled: between the July and October snapshots
+    ~150 domains left and ~100 joined the CN list for no reason other than
+    the rotation. Promotion needs 4 consecutive passes, which took
+    4 × len(discovery)/300 weeks (≈11 at 825 domains) and is now 4 weeks.
+  - **`www.` fallback.** A domain whose bare name has no address record
+    (common for government sites: `soumu.go.jp`, `dsat.gov.mo`) was treated
+    as unresolvable — seed health reported 35–70 % resolve failures for
+    CN/TW/JP/MO and such discovery/extended domains drifted towards the
+    dead-domain purge. The resolver now tries `www.<domain>`;
+    `seed_health.json` reports how many samples needed it (`via_www`).
+  - **Discovery intake.** The IP-neighbor agent runs weekly (was monthly).
+    Candidates covered by a known domain or a parent of one are skipped and
+    a leading `www.` is removed — about a third of discovery.txt was
+    subdomains of known domains. The CT-log agent is no longer scheduled
+    (it can only find such subdomains). `DISCOVERY_MAX` 2000 → 5000, now
+    defined once for the agents and checked against the build by a test.
+  - discovery.txt cleaned once: 307 entries that were subdomains of a
+    seed/extended domain (or of another discovery entry) were removed;
+    their parent domains already cover them. extended.txt is unchanged.
+
 ## Session 4 (v3.5.0 — pipeline reliability)
 
 CI / infrastructure:
