@@ -133,7 +133,8 @@ data/domains_metadata.yaml          YAML export of the metadata layer
 data/domains_metadata.csv           tabular export of the metadata layer
 data/metadata_stats.json            metadata coverage statistics
 data/manual_source_validation.json  duplicate / overlap / format checks
-data/discovery_stats.json           discovery lifecycle state (hit/fail counts, offset)
+data/discovery_stats.json           pipeline state (hit/fail counts, seed-review streaks; Actions cache, not committed)
+data/seed_review.json               seeds unresolved (bare name and www.) for 3+ weekly builds — for manual review
 sources/manual/seed_cn.txt          manually curated core domains (CN)
 sources/manual/seed_hk.txt          manually curated core domains (HK)
 sources/manual/seed_tw.txt          manually curated core domains (TW)

@@ -104,6 +104,8 @@ PROMOTE_AFTER_PASSES = 4      # consecutive CN passes before promotion (= 4 week
                                # checked on every build)
 DEAD_STREAK_THRESHOLD = 6     # consecutive empty-DNS runs before NS confirmation
 STICKY_MAX_DAYS      = 28     # max days a domain may stay sticky without re-resolving
+SEED_REVIEW_AFTER    = 3      # consecutive runs a seed may resolve to nothing (bare
+                               # name and www.) before it is listed for review
 MAX_WORKERS          = 20     # DoH thread pool size
 JITTER_MIN           = 0.05   # seconds
 JITTER_MAX           = 0.15   # seconds
@@ -2082,6 +2084,61 @@ def _query_ns_record(domain: str, session: requests.Session) -> bool:
         return True
 
 
+def update_seed_review(repo_root: Path, rows: List[DomainRecord], today: str) -> List[dict]:
+    """Track seeds that resolve to nothing and list them for manual review.
+
+    A seed is "unresolved" in a run when neither the bare name nor www.<name>
+    returned an address (rows kept alive by the sticky fallback count too).
+    Seeds are curated by hand and always published, so nothing is changed
+    automatically: after SEED_REVIEW_AFTER consecutive unresolved runs the
+    seed is written to data/seed_review.json. Typical causes: the name is
+    wrong or unused (guangdong.gov.cn — the province uses gd.gov.cn), or the
+    domain only has subdomains (alicdn.net), which is fine to keep.
+
+    The streak counters live in data/discovery_stats.json (pipeline state).
+    """
+    stats = load_discovery_stats(repo_root)
+    streaks: dict = stats.get("seed_unresolved", {})
+    seen = set()
+    for row in rows:
+        if not row.source.startswith("seed_"):
+            continue
+        seen.add(row.domain)
+        if row.sticky or row.dns_total == 0:
+            entry = streaks.get(row.domain) or {"streak": 0, "since": today}
+            entry["streak"] = int(entry.get("streak", 0)) + 1
+            streaks[row.domain] = entry
+        else:
+            streaks.pop(row.domain, None)
+    # Seeds removed from the files are forgotten.
+    for d in [d for d in streaks if d not in seen]:
+        streaks.pop(d)
+    stats["seed_unresolved"] = streaks
+    save_discovery_stats(repo_root, stats)
+
+    source_of = {r.domain: r.source for r in rows}
+    review = sorted(
+        (
+            {"domain": d, "file": f"{source_of[d]}.txt", "unresolved_runs": e["streak"], "since": e["since"]}
+            for d, e in streaks.items() if e["streak"] >= SEED_REVIEW_AFTER
+        ),
+        key=lambda x: (x["file"], x["domain"]),
+    )
+    out = repo_root / "data" / "seed_review.json"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps({
+        "generated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "note": ("Seeds that resolved to nothing (bare name and www.) for at least "
+                 f"{SEED_REVIEW_AFTER} consecutive weekly builds. Review by hand: fix a "
+                 "wrong name, or keep it if the domain only serves subdomains "
+                 "(e.g. CDN or API domains). Nothing here is changed automatically."),
+        "after_runs": SEED_REVIEW_AFTER,
+        "count": len(review),
+        "domains": review,
+    }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return review
+
+
 def detect_dead_domains(
     repo_root: Path,
     rows: List[DomainRecord],
@@ -2463,6 +2520,12 @@ def build(repo_root: Path) -> None:
     if promoted:
         log(f"[+] Promoted {len(promoted)} discovery domains -> extended")
 
+    # Seeds that keep resolving to nothing -> data/seed_review.json
+    seed_review = update_seed_review(repo_root, rows, updated)
+    if seed_review:
+        log(f"[+] {len(seed_review)} seeds need review (unresolved for "
+            f">= {SEED_REVIEW_AFTER} runs) -> data/seed_review.json")
+
     # Dead domain auto-detection (NS-confirmed)
     dead = detect_dead_domains(repo_root, rows, session)
     if dead:
@@ -2479,6 +2542,7 @@ def build(repo_root: Path) -> None:
         "sticky_retained":    sticky_count,
         "workers":            MAX_WORKERS,
         "discovery_checked":  sum(1 for r in rows if r.source == "discovery"),
+        "seeds_needing_review": len(seed_review),
         "state_restored":     state_restored,
         "rescue_disabled":    _rescue_disabled,
     }, bucket_counts=bucket_counts)

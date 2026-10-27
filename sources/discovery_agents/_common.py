@@ -123,8 +123,9 @@ def filter_candidates(candidates: Iterable[str], known: Set[str]) -> List[str]:
     - lower-case, trailing dot removed, a leading "www." removed (the bare
       domain covers it; build_domains falls back to www.<domain> when the
       bare name has no address record)
-    - must look like a domain, not excluded, not already covered by a known
-      domain or one of its parents; duplicates removed, order kept
+    - must look like a domain, not excluded, no look-alike "--" labels, not
+      already covered by a known domain or one of its parents; duplicates
+      removed, order kept
     """
     out: List[str] = []
     seen: Set[str] = set()
@@ -135,6 +136,11 @@ def filter_candidates(candidates: Iterable[str], known: Set[str]) -> List[str]:
         if not d or "." not in d or d in seen:
             continue
         if d in EXCLUDE_DOMAINS or not DOMAIN_RE.match(d):
+            continue
+        # "--" inside a label (not the xn-- IDN prefix) is the hallmark of
+        # look-alike hosts such as xiaomi--kursk.online or
+        # jd.com--vip999--huodong.example — never a real CN service name.
+        if any("--" in lab and not lab.startswith("xn--") for lab in d.split(".")):
             continue
         if is_covered(d, known):
             continue

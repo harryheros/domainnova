@@ -23,6 +23,17 @@
   - discovery.txt cleaned once: 307 entries that were subdomains of a
     seed/extended domain (or of another discovery entry) were removed;
     their parent domains already cover them. extended.txt is unchanged.
+  - **Seed review report.** `data/seed_review.json` lists seeds that
+    resolved to nothing (bare name and `www.`) for 3+ consecutive weekly
+    builds, e.g. names that are wrong or unused (`guangdong.gov.cn` — the
+    province uses `gd.gov.cn`). Seeds are curated by hand, so nothing is
+    changed automatically. `stats.json` gains `seeds_needing_review`.
+  - **Look-alike filter.** Discovery candidates with `--` inside a label
+    (not the `xn--` IDN prefix) are rejected, e.g. `xiaomi--kursk.online`.
+  - discovery.txt cleaned once more: 61 entries that resolved to nothing in
+    the 2026-10-27 build AND were obvious junk (look-alike `--` hosts,
+    random-string hosts such as `fc1k34xp.huanleu.com`, all-digit names,
+    vanity TLDs) were removed instead of waiting for the 6-run auto-purge.
 
 ## Session 4 (v3.5.0 — pipeline reliability)
 

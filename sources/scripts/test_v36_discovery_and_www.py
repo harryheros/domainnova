@@ -117,5 +117,51 @@ class TestDiscoveryIntake(unittest.TestCase):
             self.assertEqual(_common.load_existing(root), {"soumu.go.jp", "ext.example"})
 
 
+class TestSeedReview(unittest.TestCase):
+    def _row(self, domain, source, dns_total=0, sticky=0):
+        r = bd.DomainRecord.__new__(bd.DomainRecord)
+        r.domain, r.source, r.dns_total, r.sticky = domain, source, dns_total, sticky
+        return r
+
+    def test_listed_after_consecutive_unresolved_runs_and_reset(self):
+        with tempfile.TemporaryDirectory() as d:
+            root = Path(d)
+            (root / "data").mkdir()
+            out = root / "data" / "seed_review.json"
+            for day in ("2026-11-02", "2026-11-09"):
+                review = bd.update_seed_review(root, [
+                    self._row("guangdong.gov.cn", "seed_cn"),
+                    self._row("alicdn.net", "seed_cn", dns_total=2, sticky=1),
+                    self._row("baidu.com", "seed_cn", dns_total=3),
+                    self._row("junk.example", "discovery"),
+                ], day)
+                self.assertEqual(review, [], "not listed before SEED_REVIEW_AFTER runs")
+            review = bd.update_seed_review(root, [
+                self._row("guangdong.gov.cn", "seed_cn"),
+                self._row("alicdn.net", "seed_cn", dns_total=2, sticky=1),
+                self._row("baidu.com", "seed_cn", dns_total=3),
+            ], "2026-11-16")
+            self.assertEqual([x["domain"] for x in review], ["alicdn.net", "guangdong.gov.cn"])
+            self.assertEqual(review[1], {"domain": "guangdong.gov.cn", "file": "seed_cn.txt",
+                                         "unresolved_runs": 3, "since": "2026-11-02"})
+            data = json.loads(out.read_text(encoding="utf-8"))
+            self.assertEqual(data["count"], 2)
+            # resolves again -> dropped; seed removed from files -> forgotten
+            review = bd.update_seed_review(root, [
+                self._row("guangdong.gov.cn", "seed_cn", dns_total=1),
+            ], "2026-11-23")
+            self.assertEqual(review, [])
+            state = json.loads((root / "data" / "discovery_stats.json").read_text(encoding="utf-8"))
+            self.assertEqual(state["seed_unresolved"], {})
+
+
+class TestLookalikeFilter(unittest.TestCase):
+    def test_double_hyphen_labels_rejected_but_idn_kept(self):
+        got = _common.filter_candidates(
+            ["xiaomi--kursk.online", "jd.com--vip999--huodong.idefault.xyz",
+             "xn--fiqs8s.cn", "good-name.cn"], set())
+        self.assertEqual(got, ["xn--fiqs8s.cn", "good-name.cn"])
+
+
 if __name__ == "__main__":
     unittest.main()

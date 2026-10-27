@@ -69,7 +69,7 @@ jobs:
         run: python sources/scripts/validate_manual_sources.py
 
       # Pipeline state that must survive between runs but is not committed:
-      #   data/discovery_stats.json — discovery rotation offset and the
+      #   data/discovery_stats.json — seed-review streaks and the
       #       promote / purge / dead-domain streak counters
       #   data/domains.csv          — previous run, used for sticky fallback
       # v3.4 cached only the first file, under a fixed key. Actions caches are
