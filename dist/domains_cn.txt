@@ -1,6 +1,6 @@
 # DomainNova - CN domains
-# Generated: 2026-10-27T19:56:40Z
-# Count: 3733
+# Generated: 2026-10-27T20:46:18Z
+# Count: 3833
 00086.net
 025xl.com
 027yx.com
@@ -170,6 +170,47 @@
 20190501.myhard.com
 20190502.myhard.com
 20190508.myhard.com
+20190510.myhard.com
+20190511.myhard.com
+20190513.myhard.com
+20190514.myhard.com
+20190515.myhard.com
+20190516.myhard.com
+20190520.myhard.com
+20190603.myhard.com
+20190608.myhard.com
+20190617.myhard.com
+20190618.myhard.com
+20190623.myhard.com
+20190628.myhard.com
+20190630.myhard.com
+20190701.myhard.com
+20190817.myhard.com
+20190818.myhard.com
+20190820.myhard.com
+20190821.myhard.com
+20190822.myhard.com
+20190824.myhard.com
+20190825.myhard.com
+20190826.myhard.com
+20190918.myhard.com
+20190921.myhard.com
+20190922.myhard.com
+20190923.myhard.com
+20190924.myhard.com
+20191014.myhard.com
+20191015.myhard.com
+20191018.myhard.com
+20191019.myhard.com
+20191022.myhard.com
+20191023.myhard.com
+20191024.myhard.com
+20191218.myhard.com
+20191226.myhard.com
+20191228.myhard.com
+20191230.myhard.com
+20200101.myhard.com
+20200103.myhard.com
 2113.com
 2144.cn
 21cn.com
@@ -193,8 +234,10 @@
 2903866.net
 2car.taobao.com
 2femd0btesf.720yun.com
+2fimage.tianjimedia.com
 2google.com
 2muslim.com
+2qrt4.myhard.com
 2w.ma
 333.com
 35.com
@@ -260,6 +303,8 @@
 5i5j.com
 5iidea.com
 5th.zone
+618xz.com
+61ff0.myhard.com
 643777.com
 67bzf77sf0u.720yun.com
 698wan.com
@@ -332,6 +377,7 @@ actfile.cdn.pandora.xiaomi.com
 ad7.com
 adawang.art
 admaster.com.cn
+admin.tianjimedia.com
 admincdn.com
 admission.nwpu.edu.cn
 adubest.com
@@ -441,6 +487,8 @@ app3.cpic.com.cn
 appchina.com
 appgallery.cloud
 appnode.com
+appsimg.com
+appvipshop.com
 aqkszr.nwpu.edu.cn
 archsummit.com
 arrow-sh.com
@@ -517,9 +565,12 @@ baoxiaoke.com
 baoxiu.nwpu.edu.cn
 bawanglongbengye.com
 bbcayy.com
+bbs-app.meizu.cn
 bbs.catcap.cn
 bbs.eatcn.cn
+bbs.meizu.cn
 bbs.sahu.net
+bbsapp.meizu.cn
 bbtnews.com.cn
 bcebos.com
 bceg.com.cn
@@ -528,6 +579,7 @@ bdimg.com
 bds666.com
 bdstatic.com
 bdwork.com
+bear20.com
 beian.gov.cn
 beian.huaweicloud.com
 beian.miit.gov.cn
@@ -557,6 +609,7 @@ bgxcl.com
 bh6ycom.w36.cndns5.com
 bh6ycom.w36.mc-test.com
 bhzd.com
+big5.tianjimedia.com
 biliapi.com
 bilibili.com
 bilibili.net
@@ -679,6 +732,7 @@ caocao.com.cn
 capitalonline.com.cn
 capitalonline.net
 cariot.fg.iccc.xiaomiev.com
+cart.vip.com.vipgslb.com
 cas.cn
 casarte.com
 castfund.com
@@ -819,8 +873,11 @@ chuangkit.com
 chunmi.com
 chxy.com.cn
 cib.com.cn
+cige.tianjimedia.com
+cige1.tianjimedia.com
 cille.cn
 cim2025.net
+cimage1.tianjimedia.com
 citicbank.com
 cits.com.cn
 citylogic.cn
@@ -905,10 +962,12 @@ corp.mafengwo.com
 cosco.com.cn
 coscoshipping.com
 cosplayla.com
+counter.tianjimedia.com
 court.gov.cn
 cowtransfer.com
 cpic.com.cn
 cppcc.gov.cn
+cps-union.vip.com.vipgslb.com
 cpuh2.com
 cpwlx.com
 cq8y4l.cn.720yun.com
@@ -983,6 +1042,7 @@ czsfy.com
 czxiu.com
 d.b5g.cn
 d.news.163.com
+d10ak.myhard.com
 d1xf.net
 d4ctech.com
 dachengzi.net
@@ -1245,6 +1305,7 @@ faw.com.cn
 faxingzhan.com
 fcdy.nwpu.edu.cn
 fcxxh.org
+feedback.vip.com.vipgslb.com
 feeyan.com
 feigang.net
 feihe.com
@@ -1284,6 +1345,7 @@ for512.com
 fotile.com
 fow.ink
 foxmail.com
+foxmail.com.cn
 freemindworld.com
 frensworkz.com
 freshhema.com
@@ -1481,6 +1543,7 @@ gzwyc.w36.mc-test.com
 gzyowin.com
 h3c.com
 h5.umx.art
+h5.vip.com.vipgslb.com
 h5.zjsnews.cn
 h5cdn.izuiyou.com
 h5king.com
@@ -1690,6 +1753,7 @@ hzrmt.com
 hzsdyfzfxxx.com
 hzwaye.com
 hzzsfs.com
+i.flyme.cn
 i.money.163.com
 iart.art
 ibank.czcb.com.cn
@@ -1724,6 +1788,7 @@ iesdouyin.net
 ifanr.com
 ifeng.com
 igctex.com
+ige.tianjimedia.com
 igeocn.com
 ihome-stock.alibabausercontent.com
 ikarox.cn
@@ -1979,6 +2044,7 @@ ksyun.com
 ktth.w36.mc-test.com
 ktv.taobao.com
 kuaidi100.com
+kuaidown.net
 kuaikanmanhua.com
 kuaishou.com
 kuaishoucdn.com
@@ -2036,6 +2102,8 @@ lg.com.cn
 lgyudiao.com
 lhsr.sh.gov.cn
 lhxhwl.com
+li-ning.com
+li-ning.com.cn
 lianhe.art
 lianjia.com
 lianlian.com
@@ -2056,6 +2124,7 @@ linden.cn
 linearmotor.net
 lingdu.love
 lingqi.art
+lining.cn
 lining.com
 linuxidc.com
 linyo2018.w36.cndns5.com
@@ -2080,6 +2149,7 @@ ln.zaodianqi.com
 lncnw.com
 lnpjw.com
 login.cloud.huawei.com
+login.flyme.cn
 login.veove.cn
 login.zitian.cn
 lol.qq.com
@@ -2090,6 +2160,7 @@ longyi-uav.com
 lotour.com
 lotpen.com
 lousw.com
+loveformum.com
 lp91.com
 lrc99.com
 ls-doll.com
@@ -2141,6 +2212,7 @@ mail.leedsworld.cn
 mail.rjh.com.cn
 mail.siempelkamp.com.cn
 mail.vivabiotech.com.cn
+mail155.tianjimedia.com
 maiqun.vip
 maitao.com
 maitu.art
@@ -2160,6 +2232,7 @@ maotiangroup.com
 maoxiongtv.com
 maoyan.com
 map.metlife.com.cn
+mapi.appvipshop.vipgslb.com
 marketing.acxiom.cn
 marubi.cn
 masterkong.com.cn
@@ -2192,6 +2265,7 @@ meizu.com
 memeyule.com
 mengniu.com
 metersbonwe.com
+mf.meizu.cn
 mfa.gov.cn
 mggtech.vip
 mgtv.com
@@ -2408,12 +2482,14 @@ ol-cdn.com
 olami.ai
 old.techtronics.com.cn
 oldpic.ws.netease.com
+ologin.flyme.cn
 olympic.alisports.taobao.com
 omcube.com
 omicshare.com
 omicshare.net
 one918.com
 onlinedown.net
+open.flyme.cn
 openapi.zjport.gov.cn
 oppein.com
 opple.com
@@ -2451,6 +2527,7 @@ parallelsras.com
 parkingos.club
 paulownia.cn
 pay.taobao.com
+pay.vipshop.com.vipgslb.com
 payment.cfca.com.cn
 pbc.gov.cn
 pbottle.com
@@ -2495,9 +2572,11 @@ pinjiesj.com
 pinpai1.com
 pipi.cn
 pipix.com
+pjbest.com
 pk38.com
 pku.edu.cn
 pkuwwt.gitcafe.com
+pm7pm.myhard.com
 png.pub
 pocari.com.cn
 poly-real-estate.com.cn
@@ -2514,6 +2593,7 @@ ppsurl.com
 pptv.com
 praire.dpdns.org
 predownload.game.xiaomi.com
+preview.tianjimedia.com
 pro.panasonic.cn
 processon.com
 product.mobile.163.com
@@ -2530,6 +2610,8 @@ pumch.cn
 pumpzc.com
 puoke.com
 pusa123.com
+push.flyme.com
+pv.tianjimedia.com
 pysqqkgexojbqncv.cc
 pythonheidong.com
 pzhwater.com
@@ -2611,6 +2693,7 @@ rebo-group.com
 redbull.com.cn
 redcent.com.cn
 redcross.org.cn
+redirect.mydown.com
 rednet.cn
 redocn.com
 redoufu.com
@@ -2654,6 +2737,7 @@ rxhospital.com
 rzfyu.com
 s.yunresail-6.cn
 s.zylingxian.com
+s01.tianjimedia.com
 s3.javsee.cc
 saas.jieyixin.com.cn
 sac.net.cn
@@ -2694,6 +2778,7 @@ sdqcpc.com
 sdsfjy.com
 sdu.edu.cn
 seagullwatch.com
+search.mydown.com
 seaskyapp.com
 sebastianprofessional.cn
 sec.resource.xiaomi.net
@@ -2702,8 +2787,10 @@ secure-www.cartier.cn
 secure.thecorner.com.cn
 secure.www.cartier.cn
 seewoedu.com
+sem.tianjimedia.com
 semir.com
 semptian.com
+semyd.tianjimedia.com
 sensetime.com
 sensorsdata.cn
 septwolves.com
@@ -2731,6 +2818,7 @@ shanjianzhan.com
 shantui.com.cn
 shanwan.com
 shanxi.gov.cn
+share.vip.com.vipgslb.com
 sharetrace.com
 shazc.com
 shdmic.com
@@ -2752,6 +2840,7 @@ shucai001.com
 shuntongtong.com
 shuye.com
 shuyeidc.com
+shwphxd.com
 shwsg.net
 shxcoal.com
 shyyy.com
@@ -2768,6 +2857,7 @@ sinajs.cn
 sinapay.sina.com.cn
 sineva-robot.com
 singaporealive.com.cn
+singdown.com
 sinoaquafilter.com
 sinohydro.com
 sinonsh.com
@@ -2936,6 +3026,7 @@ tcloudfamily.com
 tdrffh.com
 tdsjbj.com
 teambition.com
+tech.tianjimedia.com
 tech1024.com
 techbrood.com
 technews.tw
@@ -2972,6 +3063,7 @@ thepaper.cn
 three-squirrels.com
 thufeng.net
 thunderflash.net
+tianjimedia.com
 tianjin.gov.cn
 tianmaying.com
 tianrun58.com.m.alikunlun.com
@@ -3108,6 +3200,7 @@ visitbeijing.com.cn
 vivo.com
 vksir.zone
 vmall.com
+vmyb0.myhard.com
 vnet.cn
 vodpub6.v.news.cn
 voidy.gitcafe.com
@@ -3236,6 +3329,7 @@ wuliu.taobao.com
 wusetu.art
 wuweijob.com
 wuyitea.com
+ww.myhard.com
 ww12.javsee.cc
 ww12.jstv.cc
 ww7.javsee.cc
@@ -3392,18 +3486,22 @@ xglopto.com
 xgpt.nwpu.edu.cn
 xhboke.com
 xhby.net
+xhs.cn
 xhscdn.com
+xhslink.cn
 xhslink.com
 xiabu.com
 xiachufang.com
 xiaguan.com.cn
 xiami.com
 xiaoai.com
+xiaoduxz.com
 xiaohongshu.com
 xiaohouyisheng.com
 xiaojiaokeji.com
 xiaomi.com
 xiaomi.net
+xiaomoxz.com
 xiaoshituina.vip
 xiaota.com
 xiaoweigod.com
@@ -3447,6 +3545,7 @@ xmafkj.com
 xmheigu.com
 xn--blq284eb6emsm8gb.xn--vuq861b
 xn--nyqx2gbsm8u0b.com
+xn--yus254n.com
 xooooa.com
 xpeng.com
 xpsup.com
@@ -3476,6 +3575,7 @@ xystatic.com
 xywy.com
 xzsdyyy.com
 xzsp.nea.gov.cn
+y.tianjimedia.com
 y8l.com
 yadea.com.cn
 yahuayunshu.com

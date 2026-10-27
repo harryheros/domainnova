@@ -5,8 +5,44 @@
     "invalid": [],
     "unsectioned": []
   },
+  "seed_hk": {
+    "count": 130,
+    "duplicates": [],
+    "invalid": [],
+    "unsectioned": []
+  },
+  "seed_mo": {
+    "count": 110,
+    "duplicates": [],
+    "invalid": [],
+    "unsectioned": []
+  },
+  "seed_tw": {
+    "count": 159,
+    "duplicates": [],
+    "invalid": [],
+    "unsectioned": []
+  },
+  "seed_jp": {
+    "count": 158,
+    "duplicates": [],
+    "invalid": [],
+    "unsectioned": []
+  },
+  "seed_kr": {
+    "count": 162,
+    "duplicates": [],
+    "invalid": [],
+    "unsectioned": []
+  },
+  "seed_sg": {
+    "count": 76,
+    "duplicates": [],
+    "invalid": [],
+    "unsectioned": []
+  },
   "extended": {
-    "count": 3098,
+    "count": 3427,
     "duplicates": [],
     "invalid": [],
     "unsectioned": [
@@ -873,51 +909,6 @@
       "zxjy.net"
     ]
   },
-  "regional": {
-    "seed_hk": {
-      "count": 130,
-      "duplicates": [],
-      "invalid": [],
-      "unsectioned": []
-    },
-    "seed_mo": {
-      "count": 110,
-      "duplicates": [],
-      "invalid": [],
-      "unsectioned": []
-    },
-    "seed_tw": {
-      "count": 159,
-      "duplicates": [],
-      "invalid": [],
-      "unsectioned": []
-    },
-    "seed_jp": {
-      "count": 158,
-      "duplicates": [],
-      "invalid": [],
-      "unsectioned": []
-    },
-    "seed_kr": {
-      "count": 162,
-      "duplicates": [],
-      "invalid": [],
-      "unsectioned": []
-    },
-    "seed_sg": {
-      "count": 76,
-      "duplicates": [],
-      "invalid": [],
-      "unsectioned": []
-    },
-    "seed_offshore": {
-      "count": 7,
-      "duplicates": [],
-      "invalid": [],
-      "unsectioned": []
-    }
-  },
   "cross_source_overlap": [],
-  "cross_region_duplicates": {},
-  "cn_regional_conflicts": {}
+  "cross_seed_overlap": {}
 }
