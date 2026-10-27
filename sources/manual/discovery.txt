@@ -19,16 +19,10 @@
 
 
 # --- ct-logs:%.com.cn 2026-03-28 ---
-dscitroen.com.cn
-wow-diamond.com.cn
-msjyfund.com.cn
-samsungshop.com.cn
-salala.com.cn
 
 
 
 # --- ip-neighbor:43.137.211.13 2026-03-28 ---
-wp.jun2020.com
 
 
 # --- ct-logs:Xiaomi 2026-03-28 ---
@@ -52,93 +46,36 @@ finda-xiaomi-redmi-10-es-es--961112066.menschistmensch.de
 
 
 # --- ip-neighbor:122.14.229.64 2026-04-13 ---
-zgzbb.com
 
 
 # --- ip-neighbor:49.4.40.184 2026-06-08 ---
 ecs-49-4-40-184.compute.hwclouds-dns.com
 
 # --- ip-neighbor:116.211.199.230 2026-06-08 ---
-ppsimg.com
 
 # --- ip-neighbor:220.181.7.203 2026-06-08 ---
-1048.cc
-12555.com
-amlhc.com
 ksf609.com
-blackiron.fun
-baidu.com.hk
-ow.mk
 582612.xyz
 
 # --- ip-neighbor:39.156.70.37 2026-06-08 ---
-222.ceo
-baidu.cn
-baidu.com.cn
-testtls.nuke666.cn
-1928888.com
 27707.com
-37703.com
-643777.com
-8378888.com
-843777.com
-888255.com
 cz6399.com
-www.hanfuxin.com
 ltuztcapitale.com
 www22484.com
 www77642.com
-xed222.com
-ycuse.com
-baidu.hk
-joeloves2sing.qzz.io
 kawaii.lat
-2213.net
 linjing.ggff.net
 showtime.linkpc.net
-aloiye.dpdns.org
-coeace.dpdns.org
-holely.dpdns.org
-luella.dpdns.org
-oalice.dpdns.org
-praire.dpdns.org
-rulatior.dpdns.org
-1909.work
 sunyuejiao.xyz
 
 
 
 # --- ip-neighbor:42.192.175.15 2026-06-08 ---
-8cbx.gitcafe.com
-andyhelix.gitcafe.com
-developer.gitcafe.com
-endle.gitcafe.com
-faebdc.gitcafe.com
-fanwenbin.gitcafe.com
-jackzhang1204.gitcafe.com
-kevinyoung.gitcafe.com
-lazycal.gitcafe.com
-lizheming.gitcafe.com
-mint.gitcafe.com
-pkuwwt.gitcafe.com
-risitide.gitcafe.com
-uliscom.gitcafe.com
-voidy.gitcafe.com
-wangdaodao.gitcafe.com
-whjkm.gitcafe.com
 
 # --- ip-neighbor:180.76.198.147 2026-06-16 ---
-portal.mulanos.cn
-oschina.cn
 toscode.mulanos.cn-f82c66e482b.baiduads.com
-all.oschina.net-1d96b9c4fc4.baiduads.com
-oschina.net-38a6d2f2a9a.baiduads.com
 
 # --- ip-neighbor:122.193.250.58 2026-06-16 ---
-app.showcai.com.cn
-znkf.showcai.com.cn
-www.hsw.cn
-kecheng.henanxuexi.com
 fc1k34xp.huanleu.com
 gro4jhts.huanleu.com
 hh6i37tj.huanleu.com
@@ -153,10 +90,6 @@ ohaot7yw.jinqiesj.com
 r4gnwt.sxqdx.com
 
 # --- ip-neighbor:211.95.70.193 2026-06-16 ---
-eltinchina.cn
-www.guancha.cn
-vodpub6.v.news.cn
-kb6-hotdata.chenguanserver.com
 2kfikzv4.huanleu.com
 2ttdg6t1.huanleu.com
 exu520e1.huanleu.com
@@ -170,7 +103,6 @@ e212r6xs.jinqiesj.com
 fm2xik9k.jinqiesj.com
 jzinvm6x.jinqiesj.com
 rxvqp6k6.jinqiesj.com
-ops-e.lumosfun.com
 8mdv91o4.sxqdx.com
 j3gdsvs.sxqdx.com
 m7czrf.sxqdx.com
@@ -186,50 +118,19 @@ pearl.orchid.haze.glacier.numinousm.blog
 evanescenat.bond
 www.verdant.casa
 www.akun100.cc
-www.atsivpro.cc
-lifecells.ccwu.cc
-desbgmr.cc
-intranet.javsee.cc
-s3.javsee.cc
-sitemaps.javsee.cc
-superset.javsee.cc
-ww12.javsee.cc
-ww7.javsee.cc
-ww99.javsee.cc
-www.javsee.cc
-sitemaps.jstv.cc
-ww12.jstv.cc
-hyc8e.jstv5.cc
-www.j20.jstv5.cc
-ww7.jstv5.cc
-www.jstv5.cc
-paike-site.cc
-pysqqkgexojbqncv.cc
-www.reju.cc
 ttk2.cc
 ck.vwxkug.cc
 ck2.vwxkug.cc
-wnsr66.cc
 sonder.center
 bloom.orchid.reef.falcon.umbrage.channel
 www.studys.christmas
-128kb.cn
-aoidc.cn
-zgbmw.com.cn
-ikarox.cn
-ilovegoogle.cn
-ioooe.cn
-dela.net.cn
-pddx.cn
 
 # --- ct-logs:JD.com 2026-06-16 ---
 4e94jd.com
 jd.com--vip999--huodong2020--everyday.idefault.xyz
 xn--68jd.com
-yiyaojd.com
 
 # --- ip-neighbor:114.117.128.151 2026-07-01 ---
-huzhujin.com
 008276.lol
 028810.lol
 136419.lol
@@ -584,3 +485,64 @@ nthlt.net
 20190501.myhard.com
 20190502.myhard.com
 20190508.myhard.com
+
+# --- ip-neighbor:183.60.240.56 2026-10-27 ---
+13765.zhulinyun.com
+amazon-v1.nhsoft.cn
+baike.mysteel.com
+bhzx.ncwfcgw.cn
+dc.hniop.com.w.kunluncan.com
+eul.zhihangwl.com
+fsgz.hangruitche.cn
+h5.zjsnews.cn
+h5cdn.izuiyou.com
+hongtqh.jsth3.com
+ihome-stock.alibabausercontent.com
+jiayiai.dauabxahm.cn
+jinma-int.com
+ln.zaodianqi.com
+m.yutu.cn
+mhmb01.wap.dlszyht.com.cn
+mobilezixue.3d66.com
+moran.rdyq.cn
+new149.wz.dlshtsy.net.cn
+news-video.newscdn.cn
+ninfo-pro.xhehuang.cn
+nymb050.wap.dlszyht.com.cn
+pin.znztv.com.w.kunluncan.com
+s.bjscedu.com
+s.yunresail-6.cn
+s.zylingxian.com
+saas.jieyixin.com.cn
+skx7x.bllxx.cn
+slzgmge4e.shyc02.com
+static-cdn.jiaoyimao.com.w.alikunlun.com
+static.nianyuxinxi.cn
+ua.can-think.com.w.kunluncan.com
+uc.yujie-bdw.com.w.kunluncan.com
+v2.hqwx.com.w.alikunlun.com
+website.starpos.com.cn.w.kunluncan.com
+wjdz002a.v.evyun.cn
+wqirw3860.jzzxa.cn
+ahwanxu.com.m.alikunlun.com
+evkworld.cn.w.kunluncan.com
+kzmc.xyz
+pbottle.com
+qdzhongkaida.com.m.alikunlun.com
+qhxnsw.com.m.alikunlun.com
+raylink.live
+tianrun58.com.m.alikunlun.com
+weiquan365.com
+yuebai.co
+ycycut.com.w.cdngslb.com
+zmnew349.v.evyun.cn
+
+# --- ip-neighbor:54.222.252.100 2026-10-27 ---
+cctvnews.cn
+
+# --- ip-neighbor:219.239.97.52 2026-10-27 ---
+cace-ns.org.cn
+caicp.org.cn
+jxcaict.com
+chinattl.com
+xn--blq284eb6emsm8gb.xn--vuq861b

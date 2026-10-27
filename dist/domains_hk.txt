@@ -1,6 +1,6 @@
 # DomainNova - HK domains
-# Generated: 2026-10-26T07:34:42Z
-# Count: 179
+# Generated: 2026-10-27T19:56:40Z
+# Count: 170
 163.net
 350abc.net
 3hk.hk
@@ -11,10 +11,10 @@ alipayhk.com
 asia.ccb.com
 aswatson.com
 baby-kingdom.com
-baiyewang.com
 bankofchina.com.hk
 bastillepost.com
 beileimaoedu.com
+bhzx.ncwfcgw.cn
 bigbigchannel.com.hk
 boc.hk
 bochk.com
@@ -44,7 +44,6 @@ cxexpress.com
 cyflscb.com
 dahsing.com
 dbs.com.hk
-diagram.jd.com
 dimbuy.com
 discuss.com.hk
 dragonfly.fm
@@ -101,26 +100,19 @@ hyab.gov.hk
 icac.org.hk
 info.gov.hk
 isd.gov.hk
-item-aws.jd.com
-item.m.jd.com
 jardines.com
-jcap.m.jd.com
 jd.hk
-jdme.jd.com
 jiequ.art
 job853.com
 jobsdb.com
-joyspace.jd.com
 jszlgjg.com
 klook.com
 lcsd.gov.hk
 lihkg.com
 ln.edu.hk
 lwb.gov.hk
-mapi.m.jd.com
-mars.jd.com
+mail.qidan.com.cn
 mclcinema.com
-mggtech.vip
 mingpao.com
 missfresh.net
 mtr.com.hk
@@ -134,7 +126,6 @@ on.cc
 openrice.com
 pccw.com
 polyu.edu.hk
-pro.m.jd.com
 rthk.hk
 san-yang.com
 sb.gov.hk

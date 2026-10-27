@@ -1,6 +1,6 @@
 # DomainNova - TW domains
-# Generated: 2026-10-26T07:34:42Z
-# Count: 170
+# Generated: 2026-10-27T19:56:40Z
+# Count: 180
 104.com.tw
 1111.com.tw
 518.com.tw
@@ -32,6 +32,7 @@ cpc.com.tw
 ctbcbank.com
 cto.org.tw
 ctspp.gov.tw
+cwa.gov.tw
 cwb.gov.tw
 cycg.gov.tw
 dcard.tw
@@ -43,9 +44,11 @@ eslite.com
 esunbank.com.tw
 etmall.com.tw
 ettoday.net
+exam.gov.tw
 ey.gov.tw
 family.com.tw
 familymart.com.tw
+fareastone.com.tw
 fetnet.net
 firstbank.com.tw
 fju.edu.tw
@@ -74,6 +77,7 @@ kaohsiung.gov.tw
 kbro.com.tw
 kcg.gov.tw
 keelung.gov.tw
+kerrytj.com
 kgi.com
 kia.gov.tw
 kinmen.gov.tw
@@ -88,6 +92,7 @@ ly.gov.tw
 matsu.gov.tw
 mediatek.com
 megabank.com.tw
+metro.taipei
 miaoli.gov.tw
 mobile01.com
 moea.gov.tw
@@ -99,6 +104,7 @@ mops.twse.com.tw
 motc.gov.tw
 mrt.taipei
 msa.gov.tw
+mybank.com.tw
 myfone.com.tw
 mylink.com.tw
 nantou.gov.tw
@@ -115,6 +121,7 @@ npa.gov.tw
 nsysu.edu.tw
 ntct.gov.tw
 nthu.edu.tw
+ntnu.edu.tw
 ntpc.gov.tw
 ntu.edu.tw
 ntust.edu.tw
@@ -131,8 +138,10 @@ pthg.gov.tw
 pts.org.tw
 ptt.cc
 quanta.com.tw
+railway.gov.tw
 rti.org.tw
 ruten.com.tw
+scsb.com.tw
 setn.com
 shopee.tw
 sinica.edu.tw
@@ -147,6 +156,7 @@ taipei.gov.tw
 taipower.com.tw
 taishinbank.com.tw
 taitung.gov.tw
+taiwanlife.com
 taiwanmobile.com
 tami.org.tw
 taoyuan-airport.com

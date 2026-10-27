@@ -1,6 +1,6 @@
 # DomainNova - SG domains
-# Generated: 2026-10-26T07:34:42Z
-# Count: 134
+# Generated: 2026-10-27T19:56:40Z
+# Count: 136
 13cr.com
 17qzx.com
 263.net
@@ -29,6 +29,7 @@ cqjsaq.com
 csa.gov.sg
 ctsho.com
 dbs.com.sg
+dedeadmin.com
 dlsstax.com
 e-tecsun.com
 edb.gov.sg
@@ -126,6 +127,7 @@ visitsingapore.com
 weixinyunduan.com
 wellcee.com
 winkkie.com
+wp.jun2020.com
 xiecheng.com
 xn--fiqs8sr9ge7eb4b28vo92a.com
 yaozhizhu.com
