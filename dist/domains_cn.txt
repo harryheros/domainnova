@@ -1,6 +1,6 @@
 # DomainNova - CN domains
-# Generated: 2026-10-27T20:46:18Z
-# Count: 3833
+# Generated: 2026-10-28T17:18:42Z
+# Count: 3904
 00086.net
 025xl.com
 027yx.com
@@ -55,6 +55,7 @@
 17173.com
 173zb.com
 178.com
+17e50dc783.rednetdns.com
 17k.com
 18.com.cn
 188.com
@@ -71,6 +72,9 @@
 1kuang.com
 2000y.net
 200218.com
+2011.yingjiesheng.com
+2012.yingjiesheng.com
+2013.yingjiesheng.com
 20160302.myhard.com
 20160420.myhard.com
 20160524.myhard.com
@@ -209,8 +213,15 @@
 20191226.myhard.com
 20191228.myhard.com
 20191230.myhard.com
+2020.yingjiesheng.com
 20200101.myhard.com
 20200103.myhard.com
+2021.yingjiesheng.com
+2022.yingjiesheng.com
+2023.yingjiesheng.com
+2024.yingjiesheng.com
+2025.yingjiesheng.com
+2026.yingjiesheng.com
 2113.com
 2144.cn
 21cn.com
@@ -272,6 +283,7 @@
 51gran.com
 51img9.com
 51jiaoxi.com
+51jingying.cn
 51job.com
 51peptide.com
 51pla.com
@@ -374,6 +386,8 @@ acfun.cn
 acfun.com
 acgvideo.com
 actfile.cdn.pandora.xiaomi.com
+activity-api.pinwan.cool
+activity.yingjiesheng.com
 ad7.com
 adawang.art
 admaster.com.cn
@@ -478,6 +492,7 @@ apexapex.com
 api.17u.cn
 api.ad.xiaomi.com
 api.xldoet.com
+apidoc.gitee.com-c5b3c9594e8.baiduads.com
 apigwtencent.com
 apm.cloud.tmall.com
 apowo.com
@@ -486,6 +501,7 @@ app.showcai.com.cn
 app3.cpic.com.cn
 appchina.com
 appgallery.cloud
+apply.yingjiesheng.com
 appnode.com
 appsimg.com
 appvipshop.com
@@ -563,6 +579,7 @@ baoshenggroup.com
 baosteel.com
 baoxiaoke.com
 baoxiu.nwpu.edu.cn
+batel-cs4.51jobdns.com
 bawanglongbengye.com
 bbcayy.com
 bbs-app.meizu.cn
@@ -571,6 +588,7 @@ bbs.eatcn.cn
 bbs.meizu.cn
 bbs.sahu.net
 bbsapp.meizu.cn
+bbsimg.yingjiesheng.net
 bbtnews.com.cn
 bcebos.com
 bceg.com.cn
@@ -706,6 +724,7 @@ bytecdn.cn
 bytedance.net
 byteimg.com
 byxx.com
+c3e9ef082bb7a846989f664ee8962407.sangfordns.com
 c98m56ayyev.720yun.com
 ca-aicc.com
 caac.gov.cn
@@ -882,6 +901,7 @@ citicbank.com
 cits.com.cn
 citylogic.cn
 cl868.com
+click.yingjiesheng.com
 cloud-hebi.com
 cloud.189.cn
 cloud.tencent.com
@@ -1002,6 +1022,7 @@ crpharm.com
 crrc.com.cn
 crscm.com
 crsky.com
+crystalnote.com
 cs.com.cn
 cscec.com
 cscss.com.cn
@@ -1017,7 +1038,10 @@ cspc.com.cn
 csrc.gov.cn
 cssc.net
 cssf.net
+cstcloud.cn
+cstcloud.org
 cstnet.cn
+cstnet.net.cn
 cstong.net
 csu.edu.cn
 ctcsz.com
@@ -1083,7 +1107,9 @@ dce.com.cn
 dd-img.com
 ddfm454y1zg.720yun.com
 ddl.com.cn
+ddl.escience.cn
 de0.cc
+deadline.yingjiesheng.com
 deepoon.com
 deerma.com
 define.com.cn
@@ -1118,6 +1144,7 @@ dict.bing.com.cn
 dict.cn
 didialift.com
 diditaxi.com.cn
+dig.yingjiesheng.com
 dingtalk.com
 dingtalk.taobao.com
 dinpay.com
@@ -1164,6 +1191,7 @@ douyincdn.com
 douyinstatic.com
 douyinvod.com
 douyu.com
+download.yingjiesheng.com
 downza.cn
 dpxkjw.com
 dreambrother.cn
@@ -1191,6 +1219,7 @@ dyp5918.com
 dyson.com.cn
 dzwww.com
 dzzui.com
+e.yingjiesheng.com
 e33n66vfk3.720yun.com
 easipass.com
 eastday.com
@@ -1217,6 +1246,7 @@ ecnu.edu.cn
 ecny.pbc.gov.cn
 ecovacs.com
 ecrm.taobao.com
+ecs-115-120-56-205.compute.hwclouds-dns.com
 ecton.com.cn
 edt2017.com
 edu-pubwb.5jjj.netwww.18.com.cn
@@ -1299,6 +1329,7 @@ fangchengbao.com
 fangdalaw.box.lenovo.com
 fanwenbin.gitcafe.com
 fanyantao.com
+faq.yingjiesheng.com
 farming.taobao.com
 fastcdn.com
 faw.com.cn
@@ -1417,7 +1448,9 @@ ginfon.com
 gioner.com
 gisap.w36.cndns5.com
 gisap.w36.mc-test.com
+git.5190m.top
 gitcode.com
+gitee-ai.com
 gitee.com
 gjzq.com.cn
 gkjs.w36.cndns5.com
@@ -1603,6 +1636,8 @@ hebei.gov.cn
 hebeiyouxi.com
 heighten-sh.com
 heilongjiang.gov.cn
+help.passport.escience.cn
+help.yingjiesheng.com
 henan.gov.cn
 hengbogroup.com
 hengdian.com
@@ -1641,6 +1676,7 @@ hisonracking.com
 hit.edu.cn
 hitest.taobao.com
 hitevision.com
+hitool.top
 hitui.com
 hiyd.com
 hjsilk.com.cn
@@ -1684,6 +1720,7 @@ honorchina.com
 hoosho.com
 hortor-comic.com
 hotata.com
+hotjob.yingjiesheng.com
 house.3g.163.com
 housecall7-lenovo.icrc.trendmicro.com.cn
 housecms.ws.netease.com
@@ -1725,6 +1762,7 @@ huoshan.com
 hupu.com
 hust-laser.com
 hust.edu.cn
+hutaojie.com
 huxiu.com
 huya.com
 huzhujin.com
@@ -1755,6 +1793,7 @@ hzwaye.com
 hzzsfs.com
 i.flyme.cn
 i.money.163.com
+i.yingjiesheng.com
 iart.art
 ibank.czcb.com.cn
 ibg-china.com
@@ -1879,6 +1918,7 @@ jdhospital.com
 jdl.com
 jdpay.com
 jdpay.com.cn
+jdpay.com.gslb.qianxun.com
 jdreader.net
 jfcoo.com
 jfdaily.com
@@ -2002,6 +2042,7 @@ jxjbzt.nwpu.edu.cn
 jxnews.com.cn
 jxqyfw.com
 jysedu.com
+k.yingjiesheng.com
 kaifu.com
 kaiwenda.com
 kaiyuedoors.com
@@ -2057,6 +2098,7 @@ kuka.com.cn
 kunlun.com
 kuwo.cn
 kwxl.nwpu.edu.cn
+kx.yingjiesheng.com
 kypt.nwpu.edu.cn
 kzmc.xyz
 lagou.com
@@ -2126,6 +2168,7 @@ lingdu.love
 lingqi.art
 lining.cn
 lining.com
+link.yingjiesheng.com
 linuxidc.com
 linyo2018.w36.cndns5.com
 lipton.com.cn
@@ -2188,6 +2231,7 @@ lzweidaoyou.com
 lzxnqt.com
 lzzhdq.com
 m-mall-origin.icbc.perf.akadns99.net
+m.bbs.yingjiesheng.com
 m.easy-forex.cn
 m.efunds.com.cn
 m.energy.caixin.com
@@ -2195,6 +2239,7 @@ m.ford.com.cn
 m.mafengwo.com
 m.money.163.com
 m.taikang.com
+m.yingjiesheng.com
 m.yutu.cn
 m.zhuangxiu.home.163.com
 m1world.com
@@ -2205,6 +2250,7 @@ mafengwo.net
 maianhao.com
 maihaoche.com
 mail.caac.gov.cn
+mail.escience.cn
 mail.hazoon.com.cn
 mail.huaweimarine.com
 mail.hyva.com.cn
@@ -2507,6 +2553,7 @@ ourats.com
 ourplay.net
 oushidiban.net
 ousweixin.com
+out.yingjiesheng.com
 ouzhou.cc
 ow.mk
 p.gd-share.cn
@@ -2572,6 +2619,7 @@ pinjiesj.com
 pinpai1.com
 pipi.cn
 pipix.com
+pizza.yingjiesheng.com
 pjbest.com
 pk38.com
 pku.edu.cn
@@ -2616,6 +2664,7 @@ pysqqkgexojbqncv.cc
 pythonheidong.com
 pzhwater.com
 q-house.cn
+q.yingjiesheng.com
 qalex.com
 qaynak.com
 qcc.com
@@ -2712,6 +2761,7 @@ risitide.gitcafe.com
 riskivy.com
 rklive888.com
 rmbbk.com
+rmkt.yingjiesheng.com
 rmrb.com.cn
 robam.com
 robotics.xiaomi.com
@@ -2735,6 +2785,7 @@ runxun.com
 ruochu.com
 rxhospital.com
 rzfyu.com
+s.yingjiesheng.com
 s.yunresail-6.cn
 s.zylingxian.com
 s01.tianjimedia.com
@@ -2907,7 +2958,6 @@ sohu.com
 sohucs.com
 soicp.com
 songcwh.com
-soso.com
 southcn.com
 southernmindict.net
 sowang.com
@@ -2930,6 +2980,7 @@ sssip.com.cn
 starbucks.com.cn
 static-cdn.jiaoyimao.com.w.alikunlun.com
 static.nianyuxinxi.cn
+static1.yingjiesheng.net
 staticfile.net
 stcn.com
 stea2008.com
@@ -3006,6 +3057,7 @@ taikangzhijia.com
 tailg.com.cn
 tailorwork.cn
 tairui-ad.com
+talent.zhiding.com.cn
 talents-tech.com
 talkingdata.com
 tangdou.com
@@ -3107,6 +3159,7 @@ toodudu.com
 topauth.taobao.com
 topcdb.com
 topcj.com
+topic.yingjiesheng.com
 topsec.com.cn
 topway.org
 toshiba.com.cn
@@ -3115,6 +3168,7 @@ toutiaocloud.com
 tower.im
 tp-link.com.cn
 tp.taobao.com
+trace.51jingying.com
 trade.1234567.com.cn
 trade.tebon.com.cn
 trade2.cnht.com.cn
@@ -3158,13 +3212,16 @@ umengcloud.com
 umva-china.com
 uni-power.com.cn
 uni-president.com.cn
+union.yingjiesheng.com
 unionpay.com
 unishy.com
 uniview.com
 upaiyun.com
+update.escience.cn
 upyun.com
 urbanchina.org
 uril6.com
+url.yingjiesheng.com
 urumqi-air.com
 uschinagreenfund.com
 ushare.nokia.com.cn
@@ -3192,6 +3249,7 @@ vgoyun.com
 vgtime.com
 video.cloud.huawei.com
 vip.com
+vip.yingjiesheng.com
 vipkaoyan.net
 vipshop.com
 virtaicloud.com
@@ -3200,6 +3258,7 @@ visitbeijing.com.cn
 vivo.com
 vksir.zone
 vmall.com
+vmt.escience.cn
 vmyb0.myhard.com
 vnet.cn
 vodpub6.v.news.cn
@@ -3232,6 +3291,7 @@ wangwang.com.cn
 wangwo.net
 wangxiaobao.com
 wanwu.com
+wap.bbs.yingjiesheng.com
 wap.taikang.com
 wapa.art
 waterclean.cn
@@ -3242,6 +3302,7 @@ wbpic.ws.netease.com
 wcp.taobao.com
 weather.intl.cdn.xiaomi.com
 weatherol.com
+web.yingjiesheng.com
 webankwld.com
 webjylt.rxzq.com.cn
 webmail.gadotbio.cn
@@ -3270,6 +3331,7 @@ weixin.qq.com
 weiyun.com
 welink.huaweicloud.com
 wenku.baidu.com
+wenku.yingjiesheng.com
 wenming.034000.gov.cn
 wentiquan.net
 wenxin.cloud
@@ -3299,6 +3361,7 @@ wiwide.com
 wiz.cn
 wjdz002a.v.evyun.cn
 wk-tech.com.cn
+wk.yingjiesheng.com
 wktline.com
 wlw.cn
 wnlproyunying.com
@@ -3314,6 +3377,7 @@ wow-diamond.com.cn
 wps.cn
 wqirw3860.jzzxa.cn
 wqyunpan.com
+wrating.com
 wsapi.jianghu.taobao.com
 wsgeogen.com
 wsrxw.com
@@ -3459,7 +3523,9 @@ www.ztgameaf.cn
 wxamkfyy.com
 wxapp3.720yun.com
 wxchildren.com
+wxcs.chinaceotv.com.51jobdns.com
 wxhlhg.com
+wxtel-cs4.51jobdns.com
 wyl.cc
 wzgytz.com
 wzjcsc.com
@@ -3624,6 +3690,8 @@ yijiawang.com
 yili.com
 yilianmeiti.com
 yimapay.com
+yingjiesheng.com
+yingjiesheng.net
 yingqi.art
 yingxiao.bbs.taobao.com
 yingxichina.com
@@ -3657,6 +3725,7 @@ youhaosoft.com
 youjiao.com
 youjiaxiao.com
 youku.com
+young.yingjiesheng.com
 youngor.com
 youtianmetal.com
 youxigu.com
@@ -3763,6 +3832,7 @@ zhimg.com
 zhimi.com
 zhipin.com
 zhirui.net
+zhiwei.yingjiesheng.com
 zhixin-semi.com
 zhjd.org
 zhld.com
@@ -3806,6 +3876,7 @@ zongheone.com.cn
 zongshengjituan.com
 zoomlion.com
 zoopda.com
+zph.yingjiesheng.com
 zqjiese.com
 zqygame.com
 zs-hospital.sh.cn

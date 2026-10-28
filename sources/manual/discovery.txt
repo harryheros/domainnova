@@ -35,15 +35,12 @@ xiaomi-14-pro-max-tablet-es-es--31307949.neoko.de
 
 
 # --- ip-neighbor:49.4.40.184 2026-06-08 ---
-ecs-49-4-40-184.compute.hwclouds-dns.com
 
 
 # --- ip-neighbor:220.181.7.203 2026-06-08 ---
 
 # --- ip-neighbor:39.156.70.37 2026-06-08 ---
-27707.com
 ltuztcapitale.com
-showtime.linkpc.net
 sunyuejiao.xyz
 
 
@@ -53,33 +50,21 @@ sunyuejiao.xyz
 toscode.mulanos.cn-f82c66e482b.baiduads.com
 
 # --- ip-neighbor:122.193.250.58 2026-06-16 ---
-ifivfyda.jinqiesj.com
 
 
 # --- ip-neighbor:111.63.65.103 2026-06-16 ---
-new6.art
-www.akun100.cc
-ck.vwxkug.cc
-ck2.vwxkug.cc
 
 # --- ct-logs:JD.com 2026-06-16 ---
 
 
 
 # --- ct-logs:%.cn 2026-07-01 ---
-www.sonymusicnashville.com
-www.cnsw.org
 www.cnbazaar.com
 secure-web-tic-mini-cn.bmwgroup.com
-www.alimentaria-bcn.com
-hcn.name
 sslvpn1.cn.tesco.com
 owa65cn.danfoss.com
-bradpaisley.sonymusicnashville.com
-netson-cn.com
 
 # --- ip-neighbor:114.80.156.219 2026-09-25 ---
-minshuo.net
 
 # --- ip-neighbor:120.48.6.179 2026-10-01 ---
 
@@ -259,3 +244,100 @@ pay.vipshop.com.vipgslb.com
 pjbest.com
 share.vip.com.vipgslb.com
 shwphxd.com
+
+# --- ip-neighbor:159.226.27.40 2026-10-28 ---
+cstcloud.cn
+cstcloud.org
+ddl.escience.cn
+help.passport.escience.cn
+mail.escience.cn
+update.escience.cn
+vmt.escience.cn
+cstnet.net.cn
+
+# --- ip-neighbor:182.92.20.26 2026-10-28 ---
+crystalnote.com
+
+# --- ip-neighbor:211.152.0.69 2026-10-28 ---
+jdpay.com.gslb.qianxun.com
+
+# --- ip-neighbor:123.57.253.206 2026-10-28 ---
+wrating.com
+
+# --- ip-neighbor:115.120.56.205 2026-10-28 ---
+ecs-115-120-56-205.compute.hwclouds-dns.com
+
+# --- ip-neighbor:47.93.77.119 2026-10-28 ---
+activity-api.pinwan.cool
+
+# --- ip-neighbor:175.6.47.164 2026-10-28 ---
+17e50dc783.rednetdns.com
+c3e9ef082bb7a846989f664ee8962407.sangfordns.com
+
+# --- ip-neighbor:150.158.224.195 2026-10-28 ---
+hutaojie.com
+
+# --- ip-neighbor:180.76.198.77 2026-10-28 ---
+apidoc.gitee.com-c5b3c9594e8.baiduads.com
+hitool.top
+
+# --- ip-neighbor:180.76.199.13 2026-10-28 ---
+git.5190m.top
+
+# --- ip-neighbor:180.76.198.225 2026-10-28 ---
+gitee-ai.com
+
+# --- ip-neighbor:114.80.176.40 2026-10-28 ---
+2011.yingjiesheng.com
+2012.yingjiesheng.com
+2013.yingjiesheng.com
+2020.yingjiesheng.com
+2021.yingjiesheng.com
+2022.yingjiesheng.com
+2023.yingjiesheng.com
+2024.yingjiesheng.com
+2025.yingjiesheng.com
+2026.yingjiesheng.com
+51jingying.cn
+activity.yingjiesheng.com
+apply.yingjiesheng.com
+batel-cs4.51jobdns.com
+bbsimg.yingjiesheng.net
+click.yingjiesheng.com
+deadline.yingjiesheng.com
+dig.yingjiesheng.com
+download.yingjiesheng.com
+e.yingjiesheng.com
+faq.yingjiesheng.com
+help.yingjiesheng.com
+hotjob.yingjiesheng.com
+i.yingjiesheng.com
+k.yingjiesheng.com
+kx.yingjiesheng.com
+link.yingjiesheng.com
+m.bbs.yingjiesheng.com
+m.yingjiesheng.com
+maketion.com
+out.yingjiesheng.com
+pizza.yingjiesheng.com
+q.yingjiesheng.com
+rmkt.yingjiesheng.com
+s.yingjiesheng.com
+static1.yingjiesheng.net
+talent.zhiding.com.cn
+topic.yingjiesheng.com
+trace.51jingying.com
+union.yingjiesheng.com
+url.yingjiesheng.com
+vip.yingjiesheng.com
+wap.bbs.yingjiesheng.com
+web.yingjiesheng.com
+wenku.yingjiesheng.com
+wk.yingjiesheng.com
+yingjiesheng.net
+wxcs.chinaceotv.com.51jobdns.com
+wxtel-cs4.51jobdns.com
+yingjiesheng.com
+young.yingjiesheng.com
+zhiwei.yingjiesheng.com
+zph.yingjiesheng.com

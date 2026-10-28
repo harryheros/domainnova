@@ -1,6 +1,6 @@
 # DomainNova - SG domains
-# Generated: 2026-10-27T20:46:18Z
-# Count: 136
+# Generated: 2026-10-28T17:18:42Z
+# Count: 138
 13cr.com
 17qzx.com
 263.net
@@ -91,6 +91,7 @@ pub.gov.sg
 qgwzjs.com
 qoo10.sg
 quzhuanxiang.com
+san-yang.com
 sbstransit.com.sg
 scdf.gov.sg
 segmentfault.com
@@ -107,6 +108,7 @@ sistic.com.sg
 sit.edu.sg
 smrt.com.sg
 smu.edu.sg
+soso.com
 souche.com
 spgroup.com.sg
 starhub.com

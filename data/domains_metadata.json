@@ -14288,14 +14288,6 @@
     "category": "uncategorized"
   },
   {
-    "domain": "gzrcu.com",
-    "source": "extended",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized"
-  },
-  {
     "domain": "h5king.com",
     "source": "extended",
     "section": "Unsectioned",
@@ -38747,6 +38739,14 @@
     "domain": "zizhugroup.cn",
     "source": "extended",
     "section": "Auto-promoted 2026-10-27",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "new6.art",
+    "source": "extended",
+    "section": "Auto-promoted 2026-10-28",
     "ecosystem": "unknown",
     "entity": "Unknown",
     "category": "uncategorized"
