@@ -369,7 +369,6 @@ guokr.com
 gxrcu.com
 gzbank.com.cn
 gzlzfm.com
-gzrcu.com
 h5king.com
 haday.com.cn
 haers.com
@@ -3497,3 +3496,6 @@ www.ztgameaf.cn
 yes.com.cn
 zign.cn
 zizhugroup.cn
+
+# ===== Auto-promoted 2026-10-28 =====
+new6.art

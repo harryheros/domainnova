@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T20:46:18Z",
+  "generated_at": "2026-10-28T17:18:42Z",
   "note": "Seeds that resolved to nothing (bare name and www.) for at least 3 consecutive weekly builds. Review by hand: fix a wrong name, or keep it if the domain only serves subdomains (e.g. CDN or API domains). Nothing here is changed automatically.",
   "after_runs": 3,
   "count": 0,

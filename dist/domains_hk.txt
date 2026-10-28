@@ -1,6 +1,6 @@
 # DomainNova - HK domains
-# Generated: 2026-10-27T20:46:18Z
-# Count: 170
+# Generated: 2026-10-28T17:18:42Z
+# Count: 169
 163.net
 350abc.net
 3hk.hk
@@ -127,7 +127,6 @@ openrice.com
 pccw.com
 polyu.edu.hk
 rthk.hk
-san-yang.com
 sb.gov.hk
 sc.com
 scmp.com
