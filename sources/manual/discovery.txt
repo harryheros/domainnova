@@ -40,7 +40,6 @@ xiaomi-14-pro-max-tablet-es-es--31307949.neoko.de
 # --- ip-neighbor:220.181.7.203 2026-06-08 ---
 
 # --- ip-neighbor:39.156.70.37 2026-06-08 ---
-ltuztcapitale.com
 sunyuejiao.xyz
 
 
@@ -59,75 +58,20 @@ toscode.mulanos.cn-f82c66e482b.baiduads.com
 
 
 # --- ct-logs:%.cn 2026-07-01 ---
-www.cnbazaar.com
-secure-web-tic-mini-cn.bmwgroup.com
-sslvpn1.cn.tesco.com
-owa65cn.danfoss.com
 
 # --- ip-neighbor:114.80.156.219 2026-09-25 ---
 
 # --- ip-neighbor:120.48.6.179 2026-10-01 ---
 
 # --- ip-neighbor:183.60.240.56 2026-10-27 ---
-13765.zhulinyun.com
-amazon-v1.nhsoft.cn
-baike.mysteel.com
-bhzx.ncwfcgw.cn
-dc.hniop.com.w.kunluncan.com
-eul.zhihangwl.com
-fsgz.hangruitche.cn
-h5.zjsnews.cn
-h5cdn.izuiyou.com
 hongtqh.jsth3.com
-ihome-stock.alibabausercontent.com
-jiayiai.dauabxahm.cn
-jinma-int.com
-ln.zaodianqi.com
-m.yutu.cn
-mhmb01.wap.dlszyht.com.cn
-mobilezixue.3d66.com
-moran.rdyq.cn
-new149.wz.dlshtsy.net.cn
-news-video.newscdn.cn
-ninfo-pro.xhehuang.cn
-nymb050.wap.dlszyht.com.cn
-pin.znztv.com.w.kunluncan.com
 s.bjscedu.com
-s.yunresail-6.cn
-s.zylingxian.com
-saas.jieyixin.com.cn
-skx7x.bllxx.cn
-slzgmge4e.shyc02.com
-static-cdn.jiaoyimao.com.w.alikunlun.com
-static.nianyuxinxi.cn
-ua.can-think.com.w.kunluncan.com
-uc.yujie-bdw.com.w.kunluncan.com
-v2.hqwx.com.w.alikunlun.com
-website.starpos.com.cn.w.kunluncan.com
-wjdz002a.v.evyun.cn
-wqirw3860.jzzxa.cn
 ahwanxu.com.m.alikunlun.com
 evkworld.cn.w.kunluncan.com
-kzmc.xyz
-pbottle.com
-qdzhongkaida.com.m.alikunlun.com
-qhxnsw.com.m.alikunlun.com
-raylink.live
-tianrun58.com.m.alikunlun.com
-weiquan365.com
-yuebai.co
-ycycut.com.w.cdngslb.com
-zmnew349.v.evyun.cn
 
 # --- ip-neighbor:54.222.252.100 2026-10-27 ---
-cctvnews.cn
 
 # --- ip-neighbor:219.239.97.52 2026-10-27 ---
-cace-ns.org.cn
-caicp.org.cn
-jxcaict.com
-chinattl.com
-xn--blq284eb6emsm8gb.xn--vuq861b
 
 # --- ip-neighbor:106.14.197.85 2026-10-27 ---
 li-ning.com
@@ -341,3 +285,105 @@ yingjiesheng.com
 young.yingjiesheng.com
 zhiwei.yingjiesheng.com
 zph.yingjiesheng.com
+
+# --- ip-neighbor:211.149.239.6 2026-11-02 ---
+51kuwan.store
+88gm.com
+ahalyb.com
+ahhnw.net
+ahmhyl.com
+aistar.cool
+anhtzdl.com
+back.cd133.vhostgo.com
+c-comsat.cn
+c-comsat.com.cn
+cdbyerp.com
+chinajianbanji.com
+cllssws.com
+cs283.com
+cyeyu.cn
+cztykj.com
+en.shangjin88.com
+fenglide.cn
+freetimefood.com
+fzzizhi.com
+fzzxpx.com
+gbg.net.cn
+gxxuk.com
+gzbjmy.net
+gzrth.com
+gzst888.cn
+haihuavalve.com
+heralex.com
+hetengpipe.com
+hewxtwod.com
+hntchbkjyxgs.com
+htlawyer.cn
+htwx.com
+hytech.cc
+hz99mc.com
+ilujn.com
+ipower-group.com
+jialelvye.com
+jiaodai.net
+jinkangyibiao.cn
+kangliya.com
+kkswxtwok.com
+leathergoods.com.cn
+lgwxfourk.com
+lgwxtwok.com
+lixunda.com.cn
+lnhzfwl.com
+lnwxthreer.com
+lysmjhb.com
+mdwxthreex.com
+myjdxh.com
+powdercoatings-cn.com.weaa.cn
+powdercoatings-cn.com.wzsite.com
+qcblly.com
+qishisan.cn
+quan-neng.com
+rsdwxonex.com
+rsdwxtwox.com
+rypower.cn
+scxmlhgs.com
+shangjin88.com
+shijixinneng.gotoip55.com
+shixiangweiye.com
+shkangdun.com
+shzgkjgscom.gotoip11.com
+sullairkongyaji.com
+sxwxonex.com
+sxwxtwod.com
+sxxwxtwox.com
+tclwxtwox.com
+thlfzp.com
+tlmpkj.cn
+total-edu.com
+wanghuaxiangsu.com
+welltonhotel.cn
+welltonhotel.com
+wgzmb.com
+ahjhyb.cn
+cn-mido.com
+cncfan.com
+cqxdfhm.com
+ej-soft.com
+hengde119.cn
+hnbkkq.cn
+huajiejinghua.com
+hxl665.cn
+jiact.vip
+ks3d.cn
+lmjcc.com
+qsdzkj.com
+sdsjxn.com
+shejiedu.com
+smswxthreer.com
+szhcinfo.com
+tiaaf.com
+wxoubang.cn
+xadayangzl.com
+xmzwxonex.com
+xtxljxgs.com
+yhwxthreer.com
