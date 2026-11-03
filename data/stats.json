@@ -1,56 +1,56 @@
 {
-  "total_domains": 5275,
-  "dist_domains": 5017,
-  "seed_domains": 1417,
-  "extended_domains": 3478,
-  "discovery_domains": 380,
+  "total_domains": 5270,
+  "dist_domains": 5006,
+  "seed_domains": 1315,
+  "extended_domains": 3578,
+  "discovery_domains": 377,
   "score_bands": {
-    "cn_dns": 3755,
-    "cn_tld": 242,
-    "seed_forced": 1020,
-    "non_cn": 258
+    "cn_dns": 3853,
+    "cn_tld": 214,
+    "seed_forced": 939,
+    "non_cn": 264
   },
   "source_counts": {
-    "seed_cn": 622,
-    "seed_hk": 130,
-    "seed_mo": 110,
-    "seed_tw": 159,
-    "seed_jp": 158,
+    "seed_cn": 584,
+    "seed_hk": 126,
+    "seed_mo": 76,
+    "seed_tw": 139,
+    "seed_jp": 155,
     "seed_kr": 162,
-    "seed_sg": 76,
-    "extended": 3478,
-    "discovery": 380
+    "seed_sg": 73,
+    "extended": 3578,
+    "discovery": 377
   },
   "buckets": {
     "cn": {
-      "included": 4088,
+      "included": 4141,
       "gray": 0,
       "no_signal": 3,
-      "total": 4091
+      "total": 4144
     },
     "hk": {
-      "included": 169,
+      "included": 165,
       "gray": 0,
       "no_signal": 4,
-      "total": 173
+      "total": 169
     },
     "mo": {
-      "included": 111,
+      "included": 77,
       "gray": 0,
       "no_signal": 0,
-      "total": 111
+      "total": 77
     },
     "tw": {
-      "included": 180,
+      "included": 160,
       "gray": 0,
       "no_signal": 21,
-      "total": 201
+      "total": 181
     },
     "jp": {
-      "included": 163,
+      "included": 160,
       "gray": 0,
       "no_signal": 0,
-      "total": 163
+      "total": 160
     },
     "kr": {
       "included": 165,
@@ -59,22 +59,22 @@
       "total": 165
     },
     "sg": {
-      "included": 141,
+      "included": 138,
       "gray": 0,
-      "no_signal": 2,
-      "total": 143
+      "no_signal": 1,
+      "total": 139
     },
-    "unclassified": 228
+    "unclassified": 235
   },
-  "generated_at": "2026-11-03T21:36:27Z",
-  "auto_purged": 3,
-  "auto_promoted": 100,
-  "auto_dead_removed": 0,
+  "generated_at": "2026-11-03T23:25:10Z",
+  "auto_purged": 4,
+  "auto_promoted": 72,
+  "auto_dead_removed": 4,
   "processing_errors": 0,
-  "sticky_retained": 289,
+  "sticky_retained": 166,
   "workers": 20,
-  "discovery_checked": 380,
-  "seeds_needing_review": 157,
+  "discovery_checked": 377,
+  "seeds_needing_review": 32,
   "state_restored": {
     "domains_csv": true,
     "discovery_stats": true

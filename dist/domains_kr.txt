@@ -1,5 +1,5 @@
 # DomainNova - KR domains
-# Generated: 2026-11-03T21:36:27Z
+# Generated: 2026-11-03T23:25:10Z
 # Count: 165
 11st.co.kr
 afreecatv.com
@@ -34,11 +34,11 @@ etri.re.kr
 forest.go.kr
 g9.co.kr
 genie.co.kr
+gg.go.kr
 gmarket.co.kr
 gov.kr
 gsshop.com
 gwangju.go.kr
-gyeonggi.go.kr
 hanabank.com
 hani.co.kr
 hanjin.com
@@ -90,9 +90,9 @@ lge.co.kr
 lguplus.com
 lotte.co.kr
 lotte.com
+lotteeatz.com
 lotteimall.com
 lotteon.com
-lotteria.com
 mbc.co.kr
 megabox.co.kr
 melon.com

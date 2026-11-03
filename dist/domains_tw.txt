@@ -1,6 +1,6 @@
 # DomainNova - TW domains
-# Generated: 2026-11-03T21:36:27Z
-# Count: 180
+# Generated: 2026-11-03T23:25:10Z
+# Count: 160
 104.com.tw
 1111.com.tw
 518.com.tw
@@ -10,12 +10,10 @@
 acer.com
 aptg.com.tw
 asus.com
-bahamut.com.tw
 bcc.com.tw
 bnext.com.tw
 books.com.tw
 bot.com.tw
-bus.gov.tw
 businesstoday.com.tw
 businessweekly.com.tw
 cathaybk.com.tw
@@ -30,14 +28,9 @@ cna.com.tw
 cnyes.com
 cpc.com.tw
 ctbcbank.com
-cto.org.tw
-ctspp.gov.tw
 cwa.gov.tw
-cwb.gov.tw
-cycg.gov.tw
 dcard.tw
 dgbas.gov.tw
-e-bill.com.tw
 easycard.com.tw
 edu.tw
 eslite.com
@@ -47,7 +40,6 @@ ettoday.net
 exam.gov.tw
 ey.gov.tw
 family.com.tw
-familymart.com.tw
 fareastone.com.tw
 fetnet.net
 firstbank.com.tw
@@ -70,13 +62,10 @@ hsinchu.gov.tw
 hualien.gov.tw
 ibon.com.tw
 ieatpe.org.tw
-ilc.gov.tw
 immigration.gov.tw
 judicial.gov.tw
-kaohsiung.gov.tw
 kbro.com.tw
 kcg.gov.tw
-keelung.gov.tw
 kerrytj.com
 kgi.com
 kia.gov.tw
@@ -84,7 +73,6 @@ kinmen.gov.tw
 kkbox.com
 kkday.com
 kktix.com
-kmtc.gov.tw
 linebank.com.tw
 liontravel.com
 ltn.com.tw
@@ -102,7 +90,6 @@ momo.com.tw
 momoshop.com.tw
 mops.twse.com.tw
 motc.gov.tw
-mrt.taipei
 msa.gov.tw
 mybank.com.tw
 myfone.com.tw
@@ -113,13 +100,10 @@ nchu.edu.tw
 ncku.edu.tw
 ncu.edu.tw
 ndc.gov.tw
-neipark.nat.gov.tw
-newtaipei.gov.tw
 nhi.gov.tw
 nownews.com
 npa.gov.tw
 nsysu.edu.tw
-ntct.gov.tw
 nthu.edu.tw
 ntnu.edu.tw
 ntpc.gov.tw
@@ -130,7 +114,6 @@ pccu.edu.tw
 pchome.com.tw
 pcstore.com.tw
 penghu.gov.tw
-pingtung.gov.tw
 pixnet.net
 post.gov.tw
 president.gov.tw
@@ -160,13 +143,11 @@ taiwanlife.com
 taiwanmobile.com
 tami.org.tw
 taoyuan-airport.com
-taoyuan.gov.tw
 tcb-bank.com.tw
 teema.org.tw
 thsrc.com.tw
 tku.edu.tw
 tsmc.com
-ttcg.gov.tw
 ttv.com.tw
 tvbs.com.tw
 twia.org.tw
@@ -177,7 +158,6 @@ water.gov.tw
 watsons.com.tw
 yahoo.com.tw
 yes123.com.tw
-yilan.gov.tw
 youbike.com.tw
 yuantabank.com.tw
 yunlin.gov.tw

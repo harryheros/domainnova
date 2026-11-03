@@ -1088,14 +1088,6 @@
     "category": "telecom_backbone"
   },
   {
-    "domain": "chinatelecom.cn",
-    "source": "seed_cn",
-    "section": "Telecom & Backbone",
-    "ecosystem": "telecom-backbone",
-    "entity": "National Backbone",
-    "category": "telecom_backbone"
-  },
-  {
     "domain": "10000.com",
     "source": "seed_cn",
     "section": "Telecom & Backbone",
@@ -1472,14 +1464,6 @@
     "category": "government"
   },
   {
-    "domain": "nha.gov.cn",
-    "source": "seed_cn",
-    "section": "Central Government",
-    "ecosystem": "government-cn",
-    "entity": "PRC Central Government",
-    "category": "government"
-  },
-  {
     "domain": "mohrss.gov.cn",
     "source": "seed_cn",
     "section": "Central Government",
@@ -1568,23 +1552,7 @@
     "category": "government"
   },
   {
-    "domain": "cnta.gov.cn",
-    "source": "seed_cn",
-    "section": "Central Government",
-    "ecosystem": "government-cn",
-    "entity": "PRC Central Government",
-    "category": "government"
-  },
-  {
     "domain": "sfda.gov.cn",
-    "source": "seed_cn",
-    "section": "Central Government",
-    "ecosystem": "government-cn",
-    "entity": "PRC Central Government",
-    "category": "government"
-  },
-  {
-    "domain": "charity.gov.cn",
     "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
@@ -1600,31 +1568,7 @@
     "category": "government"
   },
   {
-    "domain": "12366.gov.cn",
-    "source": "seed_cn",
-    "section": "Central Government",
-    "ecosystem": "government-cn",
-    "entity": "PRC Central Government",
-    "category": "government"
-  },
-  {
-    "domain": "12315.gov.cn",
-    "source": "seed_cn",
-    "section": "Central Government",
-    "ecosystem": "government-cn",
-    "entity": "PRC Central Government",
-    "category": "government"
-  },
-  {
     "domain": "12315.cn",
-    "source": "seed_cn",
-    "section": "Central Government",
-    "ecosystem": "government-cn",
-    "entity": "PRC Central Government",
-    "category": "government"
-  },
-  {
-    "domain": "12345.gov.cn",
     "source": "seed_cn",
     "section": "Central Government",
     "ecosystem": "government-cn",
@@ -1680,23 +1624,7 @@
     "category": "uncategorized"
   },
   {
-    "domain": "guangdong.gov.cn",
-    "source": "seed_cn",
-    "section": "Provincial Government",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized"
-  },
-  {
     "domain": "jiangsu.gov.cn",
-    "source": "seed_cn",
-    "section": "Provincial Government",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized"
-  },
-  {
-    "domain": "zhejiang.gov.cn",
     "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
@@ -1713,14 +1641,6 @@
   },
   {
     "domain": "henan.gov.cn",
-    "source": "seed_cn",
-    "section": "Provincial Government",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized"
-  },
-  {
-    "domain": "sichuan.gov.cn",
     "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
@@ -1768,30 +1688,6 @@
     "category": "uncategorized"
   },
   {
-    "domain": "liaoning.gov.cn",
-    "source": "seed_cn",
-    "section": "Provincial Government",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized"
-  },
-  {
-    "domain": "jilin.gov.cn",
-    "source": "seed_cn",
-    "section": "Provincial Government",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized"
-  },
-  {
-    "domain": "heilongjiang.gov.cn",
-    "source": "seed_cn",
-    "section": "Provincial Government",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized"
-  },
-  {
     "domain": "anhui.gov.cn",
     "source": "seed_cn",
     "section": "Provincial Government",
@@ -1801,22 +1697,6 @@
   },
   {
     "domain": "jiangxi.gov.cn",
-    "source": "seed_cn",
-    "section": "Provincial Government",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized"
-  },
-  {
-    "domain": "guangxi.gov.cn",
-    "source": "seed_cn",
-    "section": "Provincial Government",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized"
-  },
-  {
-    "domain": "yunnan.gov.cn",
     "source": "seed_cn",
     "section": "Provincial Government",
     "ecosystem": "unknown",
@@ -1896,30 +1776,6 @@
     "category": "uncategorized"
   },
   {
-    "domain": "chongqing.gov.cn",
-    "source": "seed_cn",
-    "section": "Provincial Government",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized"
-  },
-  {
-    "domain": "tianjin.gov.cn",
-    "source": "seed_cn",
-    "section": "Provincial Government",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized"
-  },
-  {
-    "domain": "yiwu.gov.cn",
-    "source": "seed_cn",
-    "section": "Provincial Government",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized"
-  },
-  {
     "domain": "liuyang.gov.cn",
     "source": "seed_cn",
     "section": "Provincial Government",
@@ -1937,22 +1793,6 @@
   },
   {
     "domain": "95516.com",
-    "source": "seed_cn",
-    "section": "Finance & Banking",
-    "ecosystem": "finance-banking",
-    "entity": "Multi-institution",
-    "category": "finance"
-  },
-  {
-    "domain": "netsunion.com",
-    "source": "seed_cn",
-    "section": "Finance & Banking",
-    "ecosystem": "finance-banking",
-    "entity": "Multi-institution",
-    "category": "finance"
-  },
-  {
-    "domain": "nucc.com.cn",
     "source": "seed_cn",
     "section": "Finance & Banking",
     "ecosystem": "finance-banking",
@@ -2104,14 +1944,6 @@
     "category": "finance"
   },
   {
-    "domain": "ecny.pbc.gov.cn",
-    "source": "seed_cn",
-    "section": "Finance & Banking",
-    "ecosystem": "finance-banking",
-    "entity": "Multi-institution",
-    "category": "finance"
-  },
-  {
     "domain": "safe.gov.cn",
     "source": "seed_cn",
     "section": "Finance & Banking",
@@ -2121,22 +1953,6 @@
   },
   {
     "domain": "csrc.gov.cn",
-    "source": "seed_cn",
-    "section": "Finance & Banking",
-    "ecosystem": "finance-banking",
-    "entity": "Multi-institution",
-    "category": "finance"
-  },
-  {
-    "domain": "cbirc.gov.cn",
-    "source": "seed_cn",
-    "section": "Finance & Banking",
-    "ecosystem": "finance-banking",
-    "entity": "Multi-institution",
-    "category": "finance"
-  },
-  {
-    "domain": "nssf.gov.cn",
     "source": "seed_cn",
     "section": "Finance & Banking",
     "ecosystem": "finance-banking",
@@ -2200,30 +2016,6 @@
     "category": "uncategorized"
   },
   {
-    "domain": "chinaclearing.com.cn",
-    "source": "seed_cn",
-    "section": "Capital Markets",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized"
-  },
-  {
-    "domain": "cnaps.com.cn",
-    "source": "seed_cn",
-    "section": "Capital Markets",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized"
-  },
-  {
-    "domain": "cfets.com.cn",
-    "source": "seed_cn",
-    "section": "Capital Markets",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized"
-  },
-  {
     "domain": "chinamoney.com.cn",
     "source": "seed_cn",
     "section": "Capital Markets",
@@ -2233,14 +2025,6 @@
   },
   {
     "domain": "chinabond.com.cn",
-    "source": "seed_cn",
-    "section": "Capital Markets",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized"
-  },
-  {
-    "domain": "chinabond.gov.cn",
     "source": "seed_cn",
     "section": "Capital Markets",
     "ecosystem": "unknown",
@@ -2304,14 +2088,6 @@
     "category": "uncategorized"
   },
   {
-    "domain": "castfund.com",
-    "source": "seed_cn",
-    "section": "Fund & Securities",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized"
-  },
-  {
     "domain": "fullgoal.com.cn",
     "source": "seed_cn",
     "section": "Fund & Securities",
@@ -2320,7 +2096,7 @@
     "category": "uncategorized"
   },
   {
-    "domain": "icbcfund.com",
+    "domain": "icbccs.com.cn",
     "source": "seed_cn",
     "section": "Fund & Securities",
     "ecosystem": "unknown",
@@ -2328,7 +2104,7 @@
     "category": "uncategorized"
   },
   {
-    "domain": "gfzq.com.cn",
+    "domain": "gf.com.cn",
     "source": "seed_cn",
     "section": "Fund & Securities",
     "ecosystem": "unknown",
@@ -2832,7 +2608,7 @@
     "category": "uncategorized"
   },
   {
-    "domain": "yunnan-baiyao.com",
+    "domain": "yunnanbaiyao.com.cn",
     "source": "seed_cn",
     "section": "Healthcare & Pharma",
     "ecosystem": "unknown",
@@ -2872,7 +2648,7 @@
     "category": "uncategorized"
   },
   {
-    "domain": "harbinpharma.com",
+    "domain": "hayao.com",
     "source": "seed_cn",
     "section": "Healthcare & Pharma",
     "ecosystem": "unknown",
@@ -3104,14 +2880,6 @@
     "category": "uncategorized"
   },
   {
-    "domain": "douban.fm",
-    "source": "seed_cn",
-    "section": "Social & Video",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized"
-  },
-  {
     "domain": "youku.com",
     "source": "seed_cn",
     "section": "Social & Video",
@@ -3200,14 +2968,6 @@
     "category": "uncategorized"
   },
   {
-    "domain": "lvmama.com",
-    "source": "seed_cn",
-    "section": "Travel & Transport",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized"
-  },
-  {
     "domain": "huazhu.com",
     "source": "seed_cn",
     "section": "Travel & Transport",
@@ -3232,14 +2992,6 @@
     "category": "uncategorized"
   },
   {
-    "domain": "cr12306.cn",
-    "source": "seed_cn",
-    "section": "Travel & Transport",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized"
-  },
-  {
     "domain": "12306.cn",
     "source": "seed_cn",
     "section": "Travel & Transport",
@@ -3249,14 +3001,6 @@
   },
   {
     "domain": "sf-express.com",
-    "source": "seed_cn",
-    "section": "Travel & Transport",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized"
-  },
-  {
-    "domain": "sfbest.com",
     "source": "seed_cn",
     "section": "Travel & Transport",
     "ecosystem": "unknown",
@@ -3456,7 +3200,7 @@
     "category": "uncategorized"
   },
   {
-    "domain": "maotai.com",
+    "domain": "moutaichina.com",
     "source": "seed_cn",
     "section": "Consumer Brands - Food & Beverage",
     "ecosystem": "unknown",
@@ -3648,14 +3392,6 @@
     "category": "uncategorized"
   },
   {
-    "domain": "erdos.com",
-    "source": "seed_cn",
-    "section": "Consumer Brands - Apparel",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized"
-  },
-  {
     "domain": "byd.com",
     "source": "seed_cn",
     "section": "Auto & EV",
@@ -3816,7 +3552,7 @@
     "category": "uncategorized"
   },
   {
-    "domain": "cssc.net",
+    "domain": "cssc.net.cn",
     "source": "seed_cn",
     "section": "Manufacturing & Industry",
     "ecosystem": "unknown",
@@ -3833,14 +3569,6 @@
   },
   {
     "domain": "chowtaifook.com",
-    "source": "seed_cn",
-    "section": "Jewelry & Tea",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized"
-  },
-  {
-    "domain": "chow-tai-fook.com",
     "source": "seed_cn",
     "section": "Jewelry & Tea",
     "ecosystem": "unknown",
@@ -3920,14 +3648,6 @@
     "category": "uncategorized"
   },
   {
-    "domain": "wuyitea.com",
-    "source": "seed_cn",
-    "section": "Jewelry & Tea",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized"
-  },
-  {
     "domain": "dayi.com",
     "source": "seed_cn",
     "section": "Jewelry & Tea",
@@ -3952,7 +3672,7 @@
     "category": "uncategorized"
   },
   {
-    "domain": "greenland-group.com",
+    "domain": "ldjt.com.cn",
     "source": "seed_cn",
     "section": "Real Estate",
     "ecosystem": "unknown",
@@ -3960,7 +3680,7 @@
     "category": "uncategorized"
   },
   {
-    "domain": "poly-real-estate.com.cn",
+    "domain": "polycn.com",
     "source": "seed_cn",
     "section": "Real Estate",
     "ecosystem": "unknown",
@@ -4336,14 +4056,6 @@
     "category": "uncategorized"
   },
   {
-    "domain": "djicreator.com",
-    "source": "seed_cn",
-    "section": "Additional brand ecosystem domains",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized"
-  },
-  {
     "domain": "djistatic.com",
     "source": "seed_cn",
     "section": "Additional brand ecosystem domains",
@@ -4393,14 +4105,6 @@
   },
   {
     "domain": "abc.com.cn",
-    "source": "seed_cn",
-    "section": "User batch additions",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized"
-  },
-  {
-    "domain": "acfun.com",
     "source": "seed_cn",
     "section": "User batch additions",
     "ecosystem": "unknown",
@@ -4928,14 +4632,6 @@
     "category": "uncategorized"
   },
   {
-    "domain": "yanxuan.com",
-    "source": "seed_cn",
-    "section": "User batch additions",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized"
-  },
-  {
     "domain": "yinxiang.com",
     "source": "seed_cn",
     "section": "User batch additions",
@@ -5040,14 +4736,6 @@
     "category": "infrastructure"
   },
   {
-    "domain": "hkgem.com",
-    "source": "seed_hk",
-    "section": "DomainNova - Seed Domains (Hong Kong)",
-    "ecosystem": "infrastructure-hk",
-    "entity": "Hong Kong Infrastructure",
-    "category": "infrastructure"
-  },
-  {
     "domain": "hkmc.com.hk",
     "source": "seed_hk",
     "section": "DomainNova - Seed Domains (Hong Kong)",
@@ -5105,14 +4793,6 @@
   },
   {
     "domain": "hkia.com.hk",
-    "source": "seed_hk",
-    "section": "DomainNova - Seed Domains (Hong Kong)",
-    "ecosystem": "infrastructure-hk",
-    "entity": "Hong Kong Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "hkpost.hk",
     "source": "seed_hk",
     "section": "DomainNova - Seed Domains (Hong Kong)",
     "ecosystem": "infrastructure-hk",
@@ -5288,7 +4968,7 @@
     "category": "infrastructure"
   },
   {
-    "domain": "hkoc.org.hk",
+    "domain": "hkolympic.org",
     "source": "seed_hk",
     "section": "DomainNova - Seed Domains (Hong Kong)",
     "ecosystem": "infrastructure-hk",
@@ -5313,22 +4993,6 @@
   },
   {
     "domain": "bochk.com",
-    "source": "seed_hk",
-    "section": "DomainNova - Seed Domains (Hong Kong)",
-    "ecosystem": "infrastructure-hk",
-    "entity": "Hong Kong Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "bankofchina.com.hk",
-    "source": "seed_hk",
-    "section": "DomainNova - Seed Domains (Hong Kong)",
-    "ecosystem": "infrastructure-hk",
-    "entity": "Hong Kong Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "boc.hk",
     "source": "seed_hk",
     "section": "DomainNova - Seed Domains (Hong Kong)",
     "ecosystem": "infrastructure-hk",
@@ -5952,7 +5616,7 @@
     "category": "infrastructure"
   },
   {
-    "domain": "wharf.com.hk",
+    "domain": "wharfholdings.com",
     "source": "seed_hk",
     "section": "DomainNova - Seed Domains (Hong Kong)",
     "ecosystem": "infrastructure-hk",
@@ -6025,30 +5689,6 @@
   },
   {
     "domain": "gov.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "io.gov.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "e-gov.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "bo.io.gov.mo",
     "source": "seed_mo",
     "section": "DomainNova - Seed Domains (Macau)",
     "ecosystem": "infrastructure-mo",
@@ -6152,22 +5792,6 @@
     "category": "infrastructure"
   },
   {
-    "domain": "antifraud.gov.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "sc.gov.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
     "domain": "ipim.gov.mo",
     "source": "seed_mo",
     "section": "DomainNova - Seed Domains (Macau)",
@@ -6176,63 +5800,7 @@
     "category": "infrastructure"
   },
   {
-    "domain": "mbe.gov.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "ces.gov.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "gaming-inspection.gov.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
     "domain": "al.gov.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "cd.gov.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "cfm.gov.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "cm.gov.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "cp.gov.mo",
     "source": "seed_mo",
     "section": "DomainNova - Seed Domains (Macau)",
     "ecosystem": "infrastructure-mo",
@@ -6272,31 +5840,7 @@
     "category": "infrastructure"
   },
   {
-    "domain": "dssopt.gov.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
     "domain": "dst.gov.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "grs.gov.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "iacm.gov.mo",
     "source": "seed_mo",
     "section": "DomainNova - Seed Domains (Macau)",
     "ecosystem": "infrastructure-mo",
@@ -6320,47 +5864,7 @@
     "category": "infrastructure"
   },
   {
-    "domain": "ifp.gov.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "mgto.gov.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "msa.gov.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "msar.gov.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
     "domain": "sa.gov.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "tj.gov.mo",
     "source": "seed_mo",
     "section": "DomainNova - Seed Domains (Macau)",
     "ecosystem": "infrastructure-mo",
@@ -6384,7 +5888,7 @@
     "category": "infrastructure"
   },
   {
-    "domain": "cem.com.mo",
+    "domain": "cem-macau.com",
     "source": "seed_mo",
     "section": "DomainNova - Seed Domains (Macau)",
     "ecosystem": "infrastructure-mo",
@@ -6392,7 +5896,7 @@
     "category": "infrastructure"
   },
   {
-    "domain": "macau-water.com",
+    "domain": "macaowater.com",
     "source": "seed_mo",
     "section": "DomainNova - Seed Domains (Macau)",
     "ecosystem": "infrastructure-mo",
@@ -6464,14 +5968,6 @@
     "category": "infrastructure"
   },
   {
-    "domain": "macau-sf.com",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
     "domain": "bocmacau.com",
     "source": "seed_mo",
     "section": "DomainNova - Seed Domains (Macau)",
@@ -6504,22 +6000,6 @@
     "category": "infrastructure"
   },
   {
-    "domain": "bnm.com.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "uubank.com.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
     "domain": "taifungbank.com",
     "source": "seed_mo",
     "section": "DomainNova - Seed Domains (Macau)",
@@ -6528,7 +6008,7 @@
     "category": "infrastructure"
   },
   {
-    "domain": "mpay.com.mo",
+    "domain": "macaupass.com",
     "source": "seed_mo",
     "section": "DomainNova - Seed Domains (Macau)",
     "ecosystem": "infrastructure-mo",
@@ -6537,22 +6017,6 @@
   },
   {
     "domain": "abm.org.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "ifm.org.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "mc.icbc.com.cn",
     "source": "seed_mo",
     "section": "DomainNova - Seed Domains (Macau)",
     "ecosystem": "infrastructure-mo",
@@ -6608,14 +6072,6 @@
     "category": "infrastructure"
   },
   {
-    "domain": "casino.org.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
     "domain": "macaudaily.com",
     "source": "seed_mo",
     "section": "DomainNova - Seed Domains (Macau)",
@@ -6656,15 +6112,7 @@
     "category": "infrastructure"
   },
   {
-    "domain": "macaunews.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "macauhub.com.mo",
+    "domain": "macauhub.com",
     "source": "seed_mo",
     "section": "DomainNova - Seed Domains (Macau)",
     "ecosystem": "infrastructure-mo",
@@ -6752,46 +6200,6 @@
     "category": "infrastructure"
   },
   {
-    "domain": "iusm.edu.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "kjc.edu.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "cmc.edu.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "macaopolytechnic.edu.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "civicedu.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
     "domain": "cpttm.org.mo",
     "source": "seed_mo",
     "section": "DomainNova - Seed Domains (Macau)",
@@ -6801,14 +6209,6 @@
   },
   {
     "domain": "macaumemory.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "moedict.mo",
     "source": "seed_mo",
     "section": "DomainNova - Seed Domains (Macau)",
     "ecosystem": "infrastructure-mo",
@@ -6873,14 +6273,6 @@
   },
   {
     "domain": "directel.com.mo",
-    "source": "seed_mo",
-    "section": "DomainNova - Seed Domains (Macau)",
-    "ecosystem": "infrastructure-mo",
-    "entity": "Macau Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "ocm.com.mo",
     "source": "seed_mo",
     "section": "DomainNova - Seed Domains (Macau)",
     "ecosystem": "infrastructure-mo",
@@ -7000,14 +6392,6 @@
     "category": "infrastructure"
   },
   {
-    "domain": "bus.gov.tw",
-    "source": "seed_tw",
-    "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
-    "ecosystem": "infrastructure-tw",
-    "entity": "Taiwan Infrastructure",
-    "category": "infrastructure"
-  },
-  {
     "domain": "npa.gov.tw",
     "source": "seed_tw",
     "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
@@ -7064,23 +6448,7 @@
     "category": "infrastructure"
   },
   {
-    "domain": "newtaipei.gov.tw",
-    "source": "seed_tw",
-    "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
-    "ecosystem": "infrastructure-tw",
-    "entity": "Taiwan Infrastructure",
-    "category": "infrastructure"
-  },
-  {
     "domain": "kcg.gov.tw",
-    "source": "seed_tw",
-    "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
-    "ecosystem": "infrastructure-tw",
-    "entity": "Taiwan Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "kaohsiung.gov.tw",
     "source": "seed_tw",
     "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
     "ecosystem": "infrastructure-tw",
@@ -7104,14 +6472,6 @@
     "category": "infrastructure"
   },
   {
-    "domain": "taoyuan.gov.tw",
-    "source": "seed_tw",
-    "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
-    "ecosystem": "infrastructure-tw",
-    "entity": "Taiwan Infrastructure",
-    "category": "infrastructure"
-  },
-  {
     "domain": "hccg.gov.tw",
     "source": "seed_tw",
     "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
@@ -7121,14 +6481,6 @@
   },
   {
     "domain": "hsinchu.gov.tw",
-    "source": "seed_tw",
-    "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
-    "ecosystem": "infrastructure-tw",
-    "entity": "Taiwan Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "keelung.gov.tw",
     "source": "seed_tw",
     "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
     "ecosystem": "infrastructure-tw",
@@ -7160,14 +6512,6 @@
     "category": "infrastructure"
   },
   {
-    "domain": "ntct.gov.tw",
-    "source": "seed_tw",
-    "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
-    "ecosystem": "infrastructure-tw",
-    "entity": "Taiwan Infrastructure",
-    "category": "infrastructure"
-  },
-  {
     "domain": "nantou.gov.tw",
     "source": "seed_tw",
     "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
@@ -7184,14 +6528,6 @@
     "category": "infrastructure"
   },
   {
-    "domain": "cycg.gov.tw",
-    "source": "seed_tw",
-    "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
-    "ecosystem": "infrastructure-tw",
-    "entity": "Taiwan Infrastructure",
-    "category": "infrastructure"
-  },
-  {
     "domain": "chiayi.gov.tw",
     "source": "seed_tw",
     "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
@@ -7201,22 +6537,6 @@
   },
   {
     "domain": "pthg.gov.tw",
-    "source": "seed_tw",
-    "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
-    "ecosystem": "infrastructure-tw",
-    "entity": "Taiwan Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "pingtung.gov.tw",
-    "source": "seed_tw",
-    "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
-    "ecosystem": "infrastructure-tw",
-    "entity": "Taiwan Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "ttcg.gov.tw",
     "source": "seed_tw",
     "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
     "ecosystem": "infrastructure-tw",
@@ -7248,31 +6568,7 @@
     "category": "infrastructure"
   },
   {
-    "domain": "ilc.gov.tw",
-    "source": "seed_tw",
-    "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
-    "ecosystem": "infrastructure-tw",
-    "entity": "Taiwan Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "yilan.gov.tw",
-    "source": "seed_tw",
-    "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
-    "ecosystem": "infrastructure-tw",
-    "entity": "Taiwan Infrastructure",
-    "category": "infrastructure"
-  },
-  {
     "domain": "penghu.gov.tw",
-    "source": "seed_tw",
-    "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
-    "ecosystem": "infrastructure-tw",
-    "entity": "Taiwan Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "kmtc.gov.tw",
     "source": "seed_tw",
     "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
     "ecosystem": "infrastructure-tw",
@@ -7305,22 +6601,6 @@
   },
   {
     "domain": "stsp.gov.tw",
-    "source": "seed_tw",
-    "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
-    "ecosystem": "infrastructure-tw",
-    "entity": "Taiwan Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "ctspp.gov.tw",
-    "source": "seed_tw",
-    "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
-    "ecosystem": "infrastructure-tw",
-    "entity": "Taiwan Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "neipark.nat.gov.tw",
     "source": "seed_tw",
     "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
     "ecosystem": "infrastructure-tw",
@@ -7376,14 +6656,6 @@
     "category": "infrastructure"
   },
   {
-    "domain": "mrt.taipei",
-    "source": "seed_tw",
-    "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
-    "ecosystem": "infrastructure-tw",
-    "entity": "Taiwan Infrastructure",
-    "category": "infrastructure"
-  },
-  {
     "domain": "thsrc.com.tw",
     "source": "seed_tw",
     "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
@@ -7409,14 +6681,6 @@
   },
   {
     "domain": "post.gov.tw",
-    "source": "seed_tw",
-    "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
-    "ecosystem": "infrastructure-tw",
-    "entity": "Taiwan Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "cwb.gov.tw",
     "source": "seed_tw",
     "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
     "ecosystem": "infrastructure-tw",
@@ -7465,14 +6729,6 @@
   },
   {
     "domain": "ieatpe.org.tw",
-    "source": "seed_tw",
-    "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
-    "ecosystem": "infrastructure-tw",
-    "entity": "Taiwan Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "cto.org.tw",
     "source": "seed_tw",
     "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
     "ecosystem": "infrastructure-tw",
@@ -7577,14 +6833,6 @@
   },
   {
     "domain": "nccc.com.tw",
-    "source": "seed_tw",
-    "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
-    "ecosystem": "infrastructure-tw",
-    "entity": "Taiwan Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "e-bill.com.tw",
     "source": "seed_tw",
     "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
     "ecosystem": "infrastructure-tw",
@@ -7864,14 +7112,6 @@
     "category": "infrastructure"
   },
   {
-    "domain": "bahamut.com.tw",
-    "source": "seed_tw",
-    "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
-    "ecosystem": "infrastructure-tw",
-    "entity": "Taiwan Infrastructure",
-    "category": "infrastructure"
-  },
-  {
     "domain": "gamer.com.tw",
     "source": "seed_tw",
     "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
@@ -8057,14 +7297,6 @@
   },
   {
     "domain": "hi-life.com.tw",
-    "source": "seed_tw",
-    "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
-    "ecosystem": "infrastructure-tw",
-    "entity": "Taiwan Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "familymart.com.tw",
     "source": "seed_tw",
     "section": "DomainNova - Seed Domains (Taiwan - Expanded)",
     "ecosystem": "infrastructure-tw",
@@ -8352,7 +7584,7 @@
     "category": "infrastructure"
   },
   {
-    "domain": "court.go.jp",
+    "domain": "courts.go.jp",
     "source": "seed_jp",
     "section": "DomainNova - Seed Domains (Japan - Expanded)",
     "ecosystem": "infrastructure-jp",
@@ -8368,7 +7600,7 @@
     "category": "infrastructure"
   },
   {
-    "domain": "psc.go.jp",
+    "domain": "jinji.go.jp",
     "source": "seed_jp",
     "section": "DomainNova - Seed Domains (Japan - Expanded)",
     "ecosystem": "infrastructure-jp",
@@ -8464,7 +7696,7 @@
     "category": "infrastructure"
   },
   {
-    "domain": "city.nagoya.lg.jp",
+    "domain": "city.nagoya.jp",
     "source": "seed_jp",
     "section": "DomainNova - Seed Domains (Japan - Expanded)",
     "ecosystem": "infrastructure-jp",
@@ -8520,7 +7752,7 @@
     "category": "infrastructure"
   },
   {
-    "domain": "tokyogas.co.jp",
+    "domain": "tokyo-gas.co.jp",
     "source": "seed_jp",
     "section": "DomainNova - Seed Domains (Japan - Expanded)",
     "ecosystem": "infrastructure-jp",
@@ -8625,14 +7857,6 @@
   },
   {
     "domain": "jr-central.co.jp",
-    "source": "seed_jp",
-    "section": "DomainNova - Seed Domains (Japan - Expanded)",
-    "ecosystem": "infrastructure-jp",
-    "entity": "Japan Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "jr-east.co.jp",
     "source": "seed_jp",
     "section": "DomainNova - Seed Domains (Japan - Expanded)",
     "ecosystem": "infrastructure-jp",
@@ -8760,7 +7984,7 @@
     "category": "infrastructure"
   },
   {
-    "domain": "indeedjapan.com",
+    "domain": "jp.indeed.com",
     "source": "seed_jp",
     "section": "DomainNova - Seed Domains (Japan - Expanded)",
     "ecosystem": "infrastructure-jp",
@@ -8801,14 +8025,6 @@
   },
   {
     "domain": "livedoor.jp",
-    "source": "seed_jp",
-    "section": "DomainNova - Seed Domains (Japan - Expanded)",
-    "ecosystem": "infrastructure-jp",
-    "entity": "Japan Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "goo.ne.jp",
     "source": "seed_jp",
     "section": "DomainNova - Seed Domains (Japan - Expanded)",
     "ecosystem": "infrastructure-jp",
@@ -9032,14 +8248,6 @@
     "category": "infrastructure"
   },
   {
-    "domain": "ufjbank.co.jp",
-    "source": "seed_jp",
-    "section": "DomainNova - Seed Domains (Japan - Expanded)",
-    "ecosystem": "infrastructure-jp",
-    "entity": "Japan Infrastructure",
-    "category": "infrastructure"
-  },
-  {
     "domain": "mizuhobank.co.jp",
     "source": "seed_jp",
     "section": "DomainNova - Seed Domains (Japan - Expanded)",
@@ -9240,7 +8448,7 @@
     "category": "infrastructure"
   },
   {
-    "domain": "canon.co.jp",
+    "domain": "canon.jp",
     "source": "seed_jp",
     "section": "DomainNova - Seed Domains (Japan - Expanded)",
     "ecosystem": "infrastructure-jp",
@@ -9712,7 +8920,7 @@
     "category": "infrastructure"
   },
   {
-    "domain": "gyeonggi.go.kr",
+    "domain": "gg.go.kr",
     "source": "seed_kr",
     "section": "DomainNova - Seed Domains (South Korea)",
     "ecosystem": "infrastructure-kr",
@@ -10696,7 +9904,7 @@
     "category": "infrastructure"
   },
   {
-    "domain": "lotteria.com",
+    "domain": "lotteeatz.com",
     "source": "seed_kr",
     "section": "DomainNova - Seed Domains (South Korea)",
     "ecosystem": "infrastructure-kr",
@@ -10888,14 +10096,6 @@
     "category": "infrastructure"
   },
   {
-    "domain": "myinfo.gov.sg",
-    "source": "seed_sg",
-    "section": "DomainNova - Seed Domains (Singapore)",
-    "ecosystem": "infrastructure-sg",
-    "entity": "Singapore Infrastructure",
-    "category": "infrastructure"
-  },
-  {
     "domain": "go.gov.sg",
     "source": "seed_sg",
     "section": "DomainNova - Seed Domains (Singapore)",
@@ -10937,14 +10137,6 @@
   },
   {
     "domain": "edb.gov.sg",
-    "source": "seed_sg",
-    "section": "DomainNova - Seed Domains (Singapore)",
-    "ecosystem": "infrastructure-sg",
-    "entity": "Singapore Infrastructure",
-    "category": "infrastructure"
-  },
-  {
-    "domain": "enterprise.gov.sg",
     "source": "seed_sg",
     "section": "DomainNova - Seed Domains (Singapore)",
     "ecosystem": "infrastructure-sg",
@@ -11176,14 +10368,6 @@
     "category": "infrastructure"
   },
   {
-    "domain": "qoo10.sg",
-    "source": "seed_sg",
-    "section": "DomainNova - Seed Domains (Singapore)",
-    "ecosystem": "infrastructure-sg",
-    "entity": "Singapore Infrastructure",
-    "category": "infrastructure"
-  },
-  {
     "domain": "fairprice.com.sg",
     "source": "seed_sg",
     "section": "DomainNova - Seed Domains (Singapore)",
@@ -11272,7 +10456,7 @@
     "category": "infrastructure"
   },
   {
-    "domain": "sit.edu.sg",
+    "domain": "singaporetech.edu.sg",
     "source": "seed_sg",
     "section": "DomainNova - Seed Domains (Singapore)",
     "ecosystem": "infrastructure-sg",
@@ -39953,6 +39137,582 @@
   },
   {
     "domain": "y.tianjimedia.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "17e50dc783.rednetdns.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "2011.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "2012.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "2013.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "2020.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "2021.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "2022.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "2023.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "2024.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "2025.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "2026.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "51jingying.cn",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "activity-api.pinwan.cool",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "activity.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "apidoc.gitee.com-c5b3c9594e8.baiduads.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "apply.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "batel-cs4.51jobdns.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "bbsimg.yingjiesheng.net",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "c3e9ef082bb7a846989f664ee8962407.sangfordns.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "click.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "crystalnote.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "cstcloud.cn",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "cstcloud.org",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "cstnet.net.cn",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "ddl.escience.cn",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "deadline.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "dig.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "download.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "e.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "ecs-115-120-56-205.compute.hwclouds-dns.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "faq.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "git.5190m.top",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "gitee-ai.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "help.passport.escience.cn",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "help.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "hitool.top",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "hotjob.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "hutaojie.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "i.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "jdpay.com.gslb.qianxun.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "k.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "kx.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "link.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "m.bbs.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "m.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "mail.escience.cn",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "out.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "pizza.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "q.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "rmkt.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "s.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "static1.yingjiesheng.net",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "talent.zhiding.com.cn",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "topic.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "trace.51jingying.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "union.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "update.escience.cn",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "url.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "vip.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "vmt.escience.cn",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "wap.bbs.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "web.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "wenku.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "wk.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "wrating.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "wxcs.chinaceotv.com.51jobdns.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "wxtel-cs4.51jobdns.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "yingjiesheng.net",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "young.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "zhiwei.yingjiesheng.com",
+    "source": "extended",
+    "section": "Auto-promoted 2026-11-03",
+    "ecosystem": "unknown",
+    "entity": "Unknown",
+    "category": "uncategorized"
+  },
+  {
+    "domain": "zph.yingjiesheng.com",
     "source": "extended",
     "section": "Auto-promoted 2026-11-03",
     "ecosystem": "unknown",
