@@ -1,5 +1,17 @@
 # Session Changelog
 
+## v3.6.1 — seed review without false alarms
+
+  - `data/seed_review.json` listed CDN and API domains (`hdslb.com`,
+    `byteimg.com`, `douyinvod.com`, …) as unresolved: they publish
+    addresses only on subdomains, so all 32 entries in Nov 2026 were
+    false alarms. Listed seeds now get the NS check already used for
+    dead-domain detection; registered domains go to `subdomain_only`
+    (keep), and `domains` holds only names that do not exist (NXDOMAIN).
+  - Seed lists cleaned by hand: renamed domains updated, defunct names and
+    subdomains already covered by a listed parent (`*.gov.mo`, `*.gov.tw`)
+    removed.
+
 ## Session 5 (v3.6.0 — discovery throughput and stable lists)
 
   - **Every discovery domain is checked on every build.** v3.5 checked a

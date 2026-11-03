@@ -3,7 +3,7 @@
 > Self-evolving dataset of domains hosted on Asia-Pacific infrastructure, ranked by confidence.
 
 [![Update](https://github.com/harryheros/domainnova/actions/workflows/update.yml/badge.svg)](https://github.com/harryheros/domainnova/actions/workflows/update.yml)
-[![Version](https://img.shields.io/badge/version-v3.6.0-blue)](https://github.com/harryheros/domainnova/releases)
+[![Version](https://img.shields.io/badge/version-v3.6.1-blue)](https://github.com/harryheros/domainnova/releases)
 
 DomainNova answers one question: **is this domain's infrastructure physically hosted in region X?** — for CN, HK, TW, MO, JP, KR and SG. It attributes infrastructure, not corporate ownership, and it is a dataset, not a routing or filtering product.
 
@@ -21,7 +21,7 @@ Unlike static lists, it discovers, verifies and retires domains automatically ev
 | `data/domains.csv` | Every domain with all signals, score, region, provider and CDN flag |
 | `data/domains_metadata.{json,yaml,csv}` | Entity, category and ecosystem per domain |
 | `data/stats.json` | Build statistics and lifecycle counters |
-| `data/seed_review.json` | Curated domains that stopped resolving, for manual review |
+| `data/seed_review.json` | Curated domains whose name no longer exists, for manual review |
 
 ```text
 https://raw.githubusercontent.com/harryheros/domainnova/main/dist/domains_cn.txt
@@ -62,7 +62,7 @@ weekly build: resolve → match IPNova ranges → score → dist/
 
 - **Discovery**: each week, reverse-IP lookups over IPNova's CN ranges (HackerTarget, optional ViewDNS API) find up to 100 new candidates. Subdomains of known domains are skipped, since suffix matching already covers them.
 - Promotion pauses when `extended.txt` reaches 5000 domains.
-- Seeds are never changed automatically; those that stop resolving for 3+ weeks are listed in `seed_review.json`.
+- Seeds are never changed automatically. One that has no address for 3+ weeks is listed in `seed_review.json` if the name no longer exists; CDN and API domains that serve only subdomains are kept apart under `subdomain_only`.
 
 ---
 
