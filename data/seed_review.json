@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T08:36:44Z",
+  "generated_at": "2026-11-03T21:36:25Z",
   "note": "Seeds that resolved to nothing (bare name and www.) for at least 3 consecutive weekly builds. Review by hand: fix a wrong name, or keep it if the domain only serves subdomains (e.g. CDN or API domains). Nothing here is changed automatically.",
   "after_runs": 3,
   "count": 157,
@@ -7,943 +7,943 @@
     {
       "domain": "12315.gov.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "12345.gov.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "12366.gov.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "acfun.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "alibabacloud.net",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "aliyun-inc.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "anhui.gov.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "appgallery.cloud",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "baidupcs.net",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "bcebos.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "biliapi.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "bilibili.net",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "biligame.net",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "byteimg.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "castfund.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "cbirc.gov.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "cfets.com.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "charity.gov.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "chinabond.gov.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "chinaclearing.com.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "chinatelecom.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "chongqing.gov.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "chow-tai-fook.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "cnaps.com.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "cnta.gov.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "cr12306.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "cssc.net",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "djicreator.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "douban.fm",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "douyinstatic.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "douyinvod.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "ecny.pbc.gov.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "erdos.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "gfzq.com.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "greenland-group.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "guangdong.gov.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "guangxi.gov.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "harbinpharma.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "hdslb.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "heilongjiang.gov.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "icbcfund.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "jdcloudapi.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "jdpay.com.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "jilin.gov.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "kuaishoucdn.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "liaoning.gov.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "lvmama.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "maotai.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "mi-img.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "mihoyogame.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "mipush.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "netsunion.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "nha.gov.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "nssf.gov.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "nucc.com.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "pddpic.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "poly-real-estate.com.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "qianfan.cloud",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "qq.net",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "sfbest.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "sfda.gov.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "sichuan.gov.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "sinaimgfx.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "sinajs.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "taobao.net",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "tencent.net",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "tencentclb.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "tianjin.gov.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "toutiaocloud.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "volccdn.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "wangsucloudcdn.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "wenxin.cloud",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "wuyitea.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "yanxuan.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "yiwu.gov.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "yunnan-baiyao.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "yunnan.gov.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "zhejiang.gov.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "bankofchina.com.hk",
       "file": "seed_hk.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "boc.hk",
       "file": "seed_hk.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "hkgem.com",
       "file": "seed_hk.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "hkoc.org.hk",
       "file": "seed_hk.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "hkpost.hk",
       "file": "seed_hk.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "wharf.com.hk",
       "file": "seed_hk.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "canon.co.jp",
       "file": "seed_jp.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "city.nagoya.lg.jp",
       "file": "seed_jp.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "court.go.jp",
       "file": "seed_jp.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "goo.ne.jp",
       "file": "seed_jp.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "indeedjapan.com",
       "file": "seed_jp.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "jr-east.co.jp",
       "file": "seed_jp.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "psc.go.jp",
       "file": "seed_jp.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "tokyogas.co.jp",
       "file": "seed_jp.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "ufjbank.co.jp",
       "file": "seed_jp.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "gyeonggi.go.kr",
       "file": "seed_kr.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "lotteria.com",
       "file": "seed_kr.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "antifraud.gov.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "bnm.com.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "bo.io.gov.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "casino.org.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "cd.gov.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "cem.com.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "ces.gov.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "cfm.gov.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "civicedu.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "cm.gov.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "cmc.edu.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "cp.gov.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "dssopt.gov.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "e-gov.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "gaming-inspection.gov.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "grs.gov.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "iacm.gov.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "ifm.org.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "ifp.gov.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "io.gov.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "iusm.edu.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "kjc.edu.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "macaopolytechnic.edu.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "macau-sf.com",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "macau-water.com",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "macauhub.com.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "macaunews.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "mbe.gov.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "mc.icbc.com.cn",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "mgto.gov.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "moedict.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "mpay.com.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "msa.gov.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "msar.gov.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "ocm.com.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "sc.gov.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "tj.gov.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "uubank.com.mo",
       "file": "seed_mo.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "enterprise.gov.sg",
       "file": "seed_sg.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "myinfo.gov.sg",
       "file": "seed_sg.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "qoo10.sg",
       "file": "seed_sg.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "sit.edu.sg",
       "file": "seed_sg.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "bahamut.com.tw",
       "file": "seed_tw.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "bus.gov.tw",
       "file": "seed_tw.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "cto.org.tw",
       "file": "seed_tw.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "ctspp.gov.tw",
       "file": "seed_tw.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "cwb.gov.tw",
       "file": "seed_tw.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "cycg.gov.tw",
       "file": "seed_tw.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "e-bill.com.tw",
       "file": "seed_tw.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "familymart.com.tw",
       "file": "seed_tw.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "ilc.gov.tw",
       "file": "seed_tw.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "kaohsiung.gov.tw",
       "file": "seed_tw.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "keelung.gov.tw",
       "file": "seed_tw.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "kmtc.gov.tw",
       "file": "seed_tw.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "mrt.taipei",
       "file": "seed_tw.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "neipark.nat.gov.tw",
       "file": "seed_tw.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "newtaipei.gov.tw",
       "file": "seed_tw.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "ntct.gov.tw",
       "file": "seed_tw.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "pingtung.gov.tw",
       "file": "seed_tw.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "taoyuan.gov.tw",
       "file": "seed_tw.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "ttcg.gov.tw",
       "file": "seed_tw.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     },
     {
       "domain": "yilan.gov.tw",
       "file": "seed_tw.txt",
-      "unresolved_runs": 3,
+      "unresolved_runs": 4,
       "since": "2026-10-27"
     }
   ]

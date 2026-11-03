@@ -24,7 +24,6 @@
 
 
 # --- ct-logs:Xiaomi 2026-03-28 ---
-xiaomi-14-pro-max-tablet-es-es--31307949.neoko.de
 
 
 
@@ -64,130 +63,28 @@ toscode.mulanos.cn-f82c66e482b.baiduads.com
 # --- ip-neighbor:120.48.6.179 2026-10-01 ---
 
 # --- ip-neighbor:183.60.240.56 2026-10-27 ---
-hongtqh.jsth3.com
 s.bjscedu.com
 ahwanxu.com.m.alikunlun.com
-evkworld.cn.w.kunluncan.com
 
 # --- ip-neighbor:54.222.252.100 2026-10-27 ---
 
 # --- ip-neighbor:219.239.97.52 2026-10-27 ---
 
 # --- ip-neighbor:106.14.197.85 2026-10-27 ---
-li-ning.com
-lining.cn
-li-ning.com.cn
 
 # --- ip-neighbor:118.195.253.242 2026-10-27 ---
-xhslink.cn
 
 # --- ip-neighbor:106.54.99.69 2026-10-27 ---
-xhs.cn
 
 # --- ip-neighbor:175.178.31.185 2026-10-27 ---
-foxmail.com.cn
 
 # --- ip-neighbor:119.147.162.254 2026-10-27 ---
-bbs-app.meizu.cn
-bbs.meizu.cn
-bbsapp.meizu.cn
-i.flyme.cn
-login.flyme.cn
-mf.meizu.cn
-ologin.flyme.cn
-open.flyme.cn
-push.flyme.com
 
 # --- ip-neighbor:202.114.0.245 2026-10-27 ---
-xn--yus254n.com
 
 # --- ip-neighbor:120.48.6.179 2026-10-27 ---
-20190510.myhard.com
-20190511.myhard.com
-20190513.myhard.com
-20190514.myhard.com
-20190515.myhard.com
-20190516.myhard.com
-20190520.myhard.com
-20190603.myhard.com
-20190608.myhard.com
-20190617.myhard.com
-20190618.myhard.com
-20190623.myhard.com
-20190628.myhard.com
-20190630.myhard.com
-20190701.myhard.com
-20190817.myhard.com
-20190818.myhard.com
-20190820.myhard.com
-20190821.myhard.com
-20190822.myhard.com
-20190824.myhard.com
-20190825.myhard.com
-20190826.myhard.com
-20190918.myhard.com
-20190921.myhard.com
-20190922.myhard.com
-20190923.myhard.com
-20190924.myhard.com
-20191014.myhard.com
-20191015.myhard.com
-20191018.myhard.com
-20191019.myhard.com
-20191022.myhard.com
-20191023.myhard.com
-20191024.myhard.com
-20191218.myhard.com
-20191226.myhard.com
-20191228.myhard.com
-20191230.myhard.com
-20200101.myhard.com
-20200103.myhard.com
-2fimage.tianjimedia.com
-2qrt4.myhard.com
-618xz.com
-61ff0.myhard.com
-admin.tianjimedia.com
-bear20.com
-big5.tianjimedia.com
-cige.tianjimedia.com
-cige1.tianjimedia.com
-cimage1.tianjimedia.com
-counter.tianjimedia.com
-d10ak.myhard.com
-ige.tianjimedia.com
-kuaidown.net
-mail155.tianjimedia.com
-pm7pm.myhard.com
-preview.tianjimedia.com
-pv.tianjimedia.com
-redirect.mydown.com
-s01.tianjimedia.com
-search.mydown.com
-sem.tianjimedia.com
-semyd.tianjimedia.com
-singdown.com
-tech.tianjimedia.com
-tianjimedia.com
-vmyb0.myhard.com
-ww.myhard.com
-xiaoduxz.com
-xiaomoxz.com
-y.tianjimedia.com
 
 # --- ip-neighbor:14.119.64.131 2026-10-27 ---
-appsimg.com
-appvipshop.com
-cart.vip.com.vipgslb.com
-cps-union.vip.com.vipgslb.com
-feedback.vip.com.vipgslb.com
-h5.vip.com.vipgslb.com
-loveformum.com
-mapi.appvipshop.vipgslb.com
-pay.vipshop.com.vipgslb.com
-pjbest.com
-share.vip.com.vipgslb.com
-shwphxd.com
 
 # --- ip-neighbor:159.226.27.40 2026-10-28 ---
 cstcloud.cn
@@ -387,3 +284,113 @@ xadayangzl.com
 xmzwxonex.com
 xtxljxgs.com
 yhwxthreer.com
+
+# --- ip-neighbor:183.193.77.10 2026-11-03 ---
+investor.sse.org.cn
+sse.org.cn
+
+# --- ip-neighbor:124.251.34.141 2026-11-03 ---
+aleenote.cn
+aleenote.com
+alinotes.cn
+mi.cn
+mi.xn--fiqs8s
+xiaomi.org
+xn--boq62d51cv6mulib5gtq9aboevs9begt.xn--fiqs8s
+
+# --- ip-neighbor:220.181.7.203 2026-11-03 ---
+582612.xyz
+dygdu.com
+ksf609.com
+
+# --- ip-neighbor:39.156.70.37 2026-11-03 ---
+27707.com
+cz6399.com
+kawaii.lat
+linjing.ggff.net
+ltuztcapitale.com
+qiyunwangluokeji.cn
+s1.cz6399.com
+showtime.linkpc.net
+hanfuxin.com
+www77642.com
+www22484.com
+
+# --- ip-neighbor:61.241.148.62 2026-11-03 ---
+0e5m1efueov.720yun.com
+12392iwlixsyherqkhqwtn-eo.qiqiuyun.net
+1253656337.trtcube-license.cn
+1308278719.trtcube-license.cn
+156155.com.720yun.com
+1921681248.kya.cn
+196mc0eunka.720yun.com
+255umv.cn.720yun.com
+256m340e45f.720yun.com
+265md67ecsw.720yun.com
+26em1e1yle6.720yun.com
+2vcgdcx.cn.720yun.com
+360viewer.fune.fun
+3f7m0ca4lvg.720yun.com
+3ns4zrfesv.720yun.com
+3zmhh38rds.720yun.com
+3zxjgg4kjy.720yun.com
+4006535111.com
+4bbmcb8euvv.720yun.com
+4hj5xje5uc.720yun.com
+54gtwja9qy.720yun.com
+5k23rwfcxp.720yun.com
+5twdfszeek.720yun.com
+6b0mfaau4kr.720yun.com
+6d4mc61lyrf.720yun.com
+6vcs.cn.720yun.com
+75bm1cbeyrs.720yun.com
+7cbmfk3rdf.720yun.com
+7n.sudayijia.com
+94fm16atuvv.720yun.com
+9dtgs9qtz7.720yun.com
+9p5bteupkx.720yun.com
+a9dm830ntuf.720yun.com
+actscp.leiting.com
+actscp01.leiting.com
+ad2016.20012.com
+admin.xiqi.socksip.cn
+ae.zdrgs.kurl.cc
+agreement.ixuecheng.cn
+aobi.leiting.com
+apbrolh.cn.720yun.com
+api.720yun.com
+apiapp.nauuqyt.com
+apigateway-x2-trigger.tesla.cn
+apitb.tikstar.cn
+apk-auth-shanwan-50-cdn.shanwan.cn
+aq866.cn.720yun.com
+archive.yijirecovery.com
+argomedias.com.720yun.com
+asset.linggekj.com
+assets1-cn20-1.dws.workzone.sapcloud.cn
+assets1-cn20-int1.dws.workzone.sapcloud.cn
+assets1-cn40-1.dws.workzone.sapcloud.cn
+assets2-cn20-int1.dws.workzone.sapcloud.cn
+assets2-cn40-1.dws.workzone.sapcloud.cn
+assets3-cn20-1.dws.workzone.sapcloud.cn
+assets3-cn40-1.dws.workzone.sapcloud.cn
+at2ghtuvbf.720yun.com
+avatar-t.720static.com
+b21md6enuun.720yun.com
+b42mcebyttn.720yun.com
+back.topuoo.com
+bbs.720yun.com
+bbs.colg.cn
+be6m4ff4lur.720yun.com
+beautyboutique.com.cn
+bhfckl.com.720yun.com
+booking.watsonsvip.com.cn
+boss.shijirencai.com.cn
+bpmweb.watsonsvip.com.cn
+buy.lenovovip.com.cn
+c1a8b2-pub.pubssl.qiqiuyun.net
+c47ma364b5w.720yun.com
+cdl.pdfxd.com
+cdl.yijirecovery.com
+cdn-ali-file.zhiyunjie.com
+cdn-ali.qiyujiasu.com
