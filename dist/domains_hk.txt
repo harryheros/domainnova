@@ -1,5 +1,5 @@
 # DomainNova - HK domains
-# Generated: 2026-11-02T08:36:44Z
+# Generated: 2026-11-03T21:36:27Z
 # Count: 169
 163.net
 350abc.net
@@ -19,7 +19,6 @@ bigbigchannel.com.hk
 boc.hk
 bochk.com
 cathaypacific.com
-cbiec.net
 cedb.gov.hk
 centennialcollege.hku.hk
 ceo.gov.hk
@@ -101,11 +100,11 @@ icac.org.hk
 info.gov.hk
 isd.gov.hk
 jardines.com
+jcmob.net
 jd.hk
 jiequ.art
 job853.com
 jobsdb.com
-jszlgjg.com
 klook.com
 lcsd.gov.hk
 lihkg.com
@@ -136,11 +135,13 @@ sfu.edu.hk
 sh1011.com
 singtao.com
 smartone.com
+smc18.com
 staticfile.org
 sth.org.hk
 stheadline.com
 stpaul.org.hk
 takungpao.com
+taodocs.com
 three.com.hk
 tmall.hk
 tom.com
@@ -165,7 +166,6 @@ xpcha.com
 yahoo.com.hk
 yata.hk
 yesstyle.com
-ygym.org
 za.group
 zgbywl.com
 zgwlwx.com
