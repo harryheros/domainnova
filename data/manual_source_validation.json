@@ -1,30 +1,30 @@
 {
   "seed_cn": {
-    "count": 622,
+    "count": 584,
     "duplicates": [],
     "invalid": [],
     "unsectioned": []
   },
   "seed_hk": {
-    "count": 130,
+    "count": 126,
     "duplicates": [],
     "invalid": [],
     "unsectioned": []
   },
   "seed_mo": {
-    "count": 110,
+    "count": 76,
     "duplicates": [],
     "invalid": [],
     "unsectioned": []
   },
   "seed_tw": {
-    "count": 159,
+    "count": 139,
     "duplicates": [],
     "invalid": [],
     "unsectioned": []
   },
   "seed_jp": {
-    "count": 158,
+    "count": 155,
     "duplicates": [],
     "invalid": [],
     "unsectioned": []
@@ -36,13 +36,13 @@
     "unsectioned": []
   },
   "seed_sg": {
-    "count": 76,
+    "count": 73,
     "duplicates": [],
     "invalid": [],
     "unsectioned": []
   },
   "extended": {
-    "count": 3578,
+    "count": 3650,
     "duplicates": [],
     "invalid": [],
     "unsectioned": [

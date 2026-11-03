@@ -1,6 +1,6 @@
 # DomainNova - HK domains
-# Generated: 2026-11-03T21:36:27Z
-# Count: 169
+# Generated: 2026-11-03T23:25:10Z
+# Count: 165
 163.net
 350abc.net
 3hk.hk
@@ -11,12 +11,10 @@ alipayhk.com
 asia.ccb.com
 aswatson.com
 baby-kingdom.com
-bankofchina.com.hk
 bastillepost.com
 beileimaoedu.com
 bhzx.ncwfcgw.cn
 bigbigchannel.com.hk
-boc.hk
 bochk.com
 cathaypacific.com
 cedb.gov.hk
@@ -74,15 +72,13 @@ hket.com
 hkex.com.hk
 hkexnews.hk
 hkexpress.com
-hkgem.com
 hkia.com.hk
 hkirc.hk
 hkjc.com
 hkma.gov.hk
 hkmc.com.hk
 hko.gov.hk
-hkoc.org.hk
-hkpost.hk
+hkolympic.org
 hksh-hospital.com
 hkstp.org
 hksyu.edu
@@ -156,7 +152,7 @@ vtc.edu.hk
 watsons.com.hk
 wenweipo.com
 westkowloon.hk
-wharf.com.hk
+wharfholdings.com
 wheelockcompany.com
 winglungbank.com
 wnbsq.com

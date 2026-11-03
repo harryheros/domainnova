@@ -1,6 +1,6 @@
 # DomainNova - SG domains
-# Generated: 2026-11-03T21:36:27Z
-# Count: 141
+# Generated: 2026-11-03T23:25:10Z
+# Count: 138
 13cr.com
 17qzx.com
 263.net
@@ -33,7 +33,6 @@ dedeadmin.com
 dlsstax.com
 e-tecsun.com
 edb.gov.sg
-enterprise.gov.sg
 eyoucms.com
 fairprice.com.sg
 foodpanda.sg
@@ -74,7 +73,6 @@ mom.gov.sg
 mothership.sg
 msf.gov.sg
 mti.gov.sg
-myinfo.gov.sg
 nea.gov.sg
 ngacn.cc
 ntu.edu.sg
@@ -89,7 +87,6 @@ propertyguru.com.sg
 psa.sg
 pub.gov.sg
 qgwzjs.com
-qoo10.sg
 quzhuanxiang.com
 san-yang.com
 sbstransit.com.sg
@@ -102,20 +99,20 @@ sgx.com
 shopee.sg
 shuanghui.com
 singaporeair.com
+singaporetech.edu.sg
 singpass.gov.sg
 singstat.gov.sg
 singtel.com
 sinovationmed.com
 sistic.com.sg
-sit.edu.sg
 smrt.com.sg
 smu.edu.sg
-sogou.com
 soso.com
 souche.com
 spgroup.com.sg
 starhub.com
 stbieshu.com
+stnn.cc
 straitstimes.com
 streetdirectory.com
 suiyifa.com

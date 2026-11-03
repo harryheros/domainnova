@@ -135,7 +135,6 @@ chinaunicom.com,seed_cn,Telecom & Backbone,telecom-backbone,National Backbone,te
 chinaunicom.cn,seed_cn,Telecom & Backbone,telecom-backbone,National Backbone,telecom_backbone
 10010.com,seed_cn,Telecom & Backbone,telecom-backbone,National Backbone,telecom_backbone
 chinatelecom.com.cn,seed_cn,Telecom & Backbone,telecom-backbone,National Backbone,telecom_backbone
-chinatelecom.cn,seed_cn,Telecom & Backbone,telecom-backbone,National Backbone,telecom_backbone
 10000.com,seed_cn,Telecom & Backbone,telecom-backbone,National Backbone,telecom_backbone
 189.cn,seed_cn,Telecom & Backbone,telecom-backbone,National Backbone,telecom_backbone
 cbn.cn,seed_cn,Telecom & Backbone,telecom-backbone,National Backbone,telecom_backbone
@@ -183,7 +182,6 @@ mot.gov.cn,seed_cn,Central Government,government-cn,PRC Central Government,gover
 mwr.gov.cn,seed_cn,Central Government,government-cn,PRC Central Government,government
 mnr.gov.cn,seed_cn,Central Government,government-cn,PRC Central Government,government
 mee.gov.cn,seed_cn,Central Government,government-cn,PRC Central Government,government
-nha.gov.cn,seed_cn,Central Government,government-cn,PRC Central Government,government
 mohrss.gov.cn,seed_cn,Central Government,government-cn,PRC Central Government,government
 mca.gov.cn,seed_cn,Central Government,government-cn,PRC Central Government,government
 court.gov.cn,seed_cn,Central Government,government-cn,PRC Central Government,government
@@ -195,38 +193,25 @@ nea.gov.cn,seed_cn,Central Government,government-cn,PRC Central Government,gover
 nia.gov.cn,seed_cn,Central Government,government-cn,PRC Central Government,government
 caac.gov.cn,seed_cn,Central Government,government-cn,PRC Central Government,government
 msa.gov.cn,seed_cn,Central Government,government-cn,PRC Central Government,government
-cnta.gov.cn,seed_cn,Central Government,government-cn,PRC Central Government,government
 sfda.gov.cn,seed_cn,Central Government,government-cn,PRC Central Government,government
-charity.gov.cn,seed_cn,Central Government,government-cn,PRC Central Government,government
 12333.gov.cn,seed_cn,Central Government,government-cn,PRC Central Government,government
-12366.gov.cn,seed_cn,Central Government,government-cn,PRC Central Government,government
-12315.gov.cn,seed_cn,Central Government,government-cn,PRC Central Government,government
 12315.cn,seed_cn,Central Government,government-cn,PRC Central Government,government
-12345.gov.cn,seed_cn,Central Government,government-cn,PRC Central Government,government
 chinatax.gov.cn,seed_cn,Central Government,government-cn,PRC Central Government,government
 etax.chinatax.gov.cn,seed_cn,Central Government,government-cn,PRC Central Government,government
 gsxt.gov.cn,seed_cn,Central Government,government-cn,PRC Central Government,government
 creditchina.gov.cn,seed_cn,Central Government,government-cn,PRC Central Government,government
 beijing.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
 shanghai.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
-guangdong.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
 jiangsu.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
-zhejiang.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
 shandong.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
 henan.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
-sichuan.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
 hubei.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
 hunan.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
 fujian.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
 hebei.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
 shanxi.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
-liaoning.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
-jilin.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
-heilongjiang.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
 anhui.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
 jiangxi.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
-guangxi.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
-yunnan.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
 guizhou.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
 shaanxi.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
 gansu.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
@@ -236,14 +221,9 @@ nmg.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
 xj.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
 xizang.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
 nx.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
-chongqing.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
-tianjin.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
-yiwu.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
 liuyang.gov.cn,seed_cn,Provincial Government,unknown,Unknown,uncategorized
 unionpay.com,seed_cn,Finance & Banking,finance-banking,Multi-institution,finance
 95516.com,seed_cn,Finance & Banking,finance-banking,Multi-institution,finance
-netsunion.com,seed_cn,Finance & Banking,finance-banking,Multi-institution,finance
-nucc.com.cn,seed_cn,Finance & Banking,finance-banking,Multi-institution,finance
 icbc.com,seed_cn,Finance & Banking,finance-banking,Multi-institution,finance
 icbc.com.cn,seed_cn,Finance & Banking,finance-banking,Multi-institution,finance
 boc.cn,seed_cn,Finance & Banking,finance-banking,Multi-institution,finance
@@ -262,11 +242,8 @@ pingan.com,seed_cn,Finance & Banking,finance-banking,Multi-institution,finance
 citicbank.com,seed_cn,Finance & Banking,finance-banking,Multi-institution,finance
 ecitic.com,seed_cn,Finance & Banking,finance-banking,Multi-institution,finance
 pbc.gov.cn,seed_cn,Finance & Banking,finance-banking,Multi-institution,finance
-ecny.pbc.gov.cn,seed_cn,Finance & Banking,finance-banking,Multi-institution,finance
 safe.gov.cn,seed_cn,Finance & Banking,finance-banking,Multi-institution,finance
 csrc.gov.cn,seed_cn,Finance & Banking,finance-banking,Multi-institution,finance
-cbirc.gov.cn,seed_cn,Finance & Banking,finance-banking,Multi-institution,finance
-nssf.gov.cn,seed_cn,Finance & Banking,finance-banking,Multi-institution,finance
 sse.com.cn,seed_cn,Capital Markets,unknown,Unknown,uncategorized
 szse.cn,seed_cn,Capital Markets,unknown,Unknown,uncategorized
 shfe.com.cn,seed_cn,Capital Markets,unknown,Unknown,uncategorized
@@ -274,12 +251,8 @@ dce.com.cn,seed_cn,Capital Markets,unknown,Unknown,uncategorized
 czce.com.cn,seed_cn,Capital Markets,unknown,Unknown,uncategorized
 cffex.com.cn,seed_cn,Capital Markets,unknown,Unknown,uncategorized
 chinaclear.cn,seed_cn,Capital Markets,unknown,Unknown,uncategorized
-chinaclearing.com.cn,seed_cn,Capital Markets,unknown,Unknown,uncategorized
-cnaps.com.cn,seed_cn,Capital Markets,unknown,Unknown,uncategorized
-cfets.com.cn,seed_cn,Capital Markets,unknown,Unknown,uncategorized
 chinamoney.com.cn,seed_cn,Capital Markets,unknown,Unknown,uncategorized
 chinabond.com.cn,seed_cn,Capital Markets,unknown,Unknown,uncategorized
-chinabond.gov.cn,seed_cn,Capital Markets,unknown,Unknown,uncategorized
 eastmoney.com,seed_cn,Capital Markets,unknown,Unknown,uncategorized
 10jqka.com.cn,seed_cn,Capital Markets,unknown,Unknown,uncategorized
 hexun.com,seed_cn,Capital Markets,unknown,Unknown,uncategorized
@@ -287,10 +260,9 @@ chinaamc.com,seed_cn,Fund & Securities,unknown,Unknown,uncategorized
 efund.com.cn,seed_cn,Fund & Securities,unknown,Unknown,uncategorized
 bosera.com,seed_cn,Fund & Securities,unknown,Unknown,uncategorized
 harvest.com.cn,seed_cn,Fund & Securities,unknown,Unknown,uncategorized
-castfund.com,seed_cn,Fund & Securities,unknown,Unknown,uncategorized
 fullgoal.com.cn,seed_cn,Fund & Securities,unknown,Unknown,uncategorized
-icbcfund.com,seed_cn,Fund & Securities,unknown,Unknown,uncategorized
-gfzq.com.cn,seed_cn,Fund & Securities,unknown,Unknown,uncategorized
+icbccs.com.cn,seed_cn,Fund & Securities,unknown,Unknown,uncategorized
+gf.com.cn,seed_cn,Fund & Securities,unknown,Unknown,uncategorized
 gjzq.com.cn,seed_cn,Fund & Securities,unknown,Unknown,uncategorized
 htsc.com.cn,seed_cn,Fund & Securities,unknown,Unknown,uncategorized
 gtja.com,seed_cn,Fund & Securities,unknown,Unknown,uncategorized
@@ -353,12 +325,12 @@ dxy.cn,seed_cn,Healthcare & Pharma,unknown,Unknown,uncategorized
 sinopharm.com,seed_cn,Healthcare & Pharma,unknown,Unknown,uncategorized
 cspc.com.cn,seed_cn,Healthcare & Pharma,unknown,Unknown,uncategorized
 tongrentang.com,seed_cn,Healthcare & Pharma,unknown,Unknown,uncategorized
-yunnan-baiyao.com,seed_cn,Healthcare & Pharma,unknown,Unknown,uncategorized
+yunnanbaiyao.com.cn,seed_cn,Healthcare & Pharma,unknown,Unknown,uncategorized
 yunnanbaiyao.com,seed_cn,Healthcare & Pharma,unknown,Unknown,uncategorized
 tasly.com,seed_cn,Healthcare & Pharma,unknown,Unknown,uncategorized
 kelun.com,seed_cn,Healthcare & Pharma,unknown,Unknown,uncategorized
 crpharm.com,seed_cn,Healthcare & Pharma,unknown,Unknown,uncategorized
-harbinpharma.com,seed_cn,Healthcare & Pharma,unknown,Unknown,uncategorized
+hayao.com,seed_cn,Healthcare & Pharma,unknown,Unknown,uncategorized
 humanwell.com,seed_cn,Healthcare & Pharma,unknown,Unknown,uncategorized
 xinhuanet.com,seed_cn,State Media,unknown,Unknown,uncategorized
 xinhua.org,seed_cn,State Media,unknown,Unknown,uncategorized
@@ -387,7 +359,6 @@ kuaishou.com,seed_cn,Social & Video,unknown,Unknown,uncategorized
 kuaishoucdn.com,seed_cn,Social & Video,unknown,Unknown,uncategorized
 ximalaya.com,seed_cn,Social & Video,unknown,Unknown,uncategorized
 douban.com,seed_cn,Social & Video,unknown,Unknown,uncategorized
-douban.fm,seed_cn,Social & Video,unknown,Unknown,uncategorized
 youku.com,seed_cn,Social & Video,unknown,Unknown,uncategorized
 mgtv.com,seed_cn,Social & Video,unknown,Unknown,uncategorized
 huya.com,seed_cn,Social & Video,unknown,Unknown,uncategorized
@@ -399,14 +370,11 @@ qunar.com,seed_cn,Travel & Transport,unknown,Unknown,uncategorized
 tuniu.com,seed_cn,Travel & Transport,unknown,Unknown,uncategorized
 tongcheng.com,seed_cn,Travel & Transport,unknown,Unknown,uncategorized
 mafengwo.cn,seed_cn,Travel & Transport,unknown,Unknown,uncategorized
-lvmama.com,seed_cn,Travel & Transport,unknown,Unknown,uncategorized
 huazhu.com,seed_cn,Travel & Transport,unknown,Unknown,uncategorized
 jinjiang.com,seed_cn,Travel & Transport,unknown,Unknown,uncategorized
 shangri-la.com,seed_cn,Travel & Transport,unknown,Unknown,uncategorized
-cr12306.cn,seed_cn,Travel & Transport,unknown,Unknown,uncategorized
 12306.cn,seed_cn,Travel & Transport,unknown,Unknown,uncategorized
 sf-express.com,seed_cn,Travel & Transport,unknown,Unknown,uncategorized
-sfbest.com,seed_cn,Travel & Transport,unknown,Unknown,uncategorized
 zto.com,seed_cn,Travel & Transport,unknown,Unknown,uncategorized
 yto.net.cn,seed_cn,Travel & Transport,unknown,Unknown,uncategorized
 sto.com.cn,seed_cn,Travel & Transport,unknown,Unknown,uncategorized
@@ -431,7 +399,7 @@ nongfushanquan.com,seed_cn,Consumer Brands - Food & Beverage,unknown,Unknown,unc
 yili.com,seed_cn,Consumer Brands - Food & Beverage,unknown,Unknown,uncategorized
 mengniu.com,seed_cn,Consumer Brands - Food & Beverage,unknown,Unknown,uncategorized
 sanyuan.com.cn,seed_cn,Consumer Brands - Food & Beverage,unknown,Unknown,uncategorized
-maotai.com,seed_cn,Consumer Brands - Food & Beverage,unknown,Unknown,uncategorized
+moutaichina.com,seed_cn,Consumer Brands - Food & Beverage,unknown,Unknown,uncategorized
 wuliangye.com,seed_cn,Consumer Brands - Food & Beverage,unknown,Unknown,uncategorized
 tsingtao.com,seed_cn,Consumer Brands - Food & Beverage,unknown,Unknown,uncategorized
 luckin.cn,seed_cn,Consumer Brands - Food & Beverage,unknown,Unknown,uncategorized
@@ -455,7 +423,6 @@ lining.com,seed_cn,Consumer Brands - Apparel,unknown,Unknown,uncategorized
 bosideng.com,seed_cn,Consumer Brands - Apparel,unknown,Unknown,uncategorized
 youngor.com,seed_cn,Consumer Brands - Apparel,unknown,Unknown,uncategorized
 septwolves.com,seed_cn,Consumer Brands - Apparel,unknown,Unknown,uncategorized
-erdos.com,seed_cn,Consumer Brands - Apparel,unknown,Unknown,uncategorized
 byd.com,seed_cn,Auto & EV,unknown,Unknown,uncategorized
 bydauto.com.cn,seed_cn,Auto & EV,unknown,Unknown,uncategorized
 geely.com,seed_cn,Auto & EV,unknown,Unknown,uncategorized
@@ -476,10 +443,9 @@ cgnpc.com.cn,seed_cn,Battery & New Energy,unknown,Unknown,uncategorized
 crrc.com.cn,seed_cn,Manufacturing & Industry,unknown,Unknown,uncategorized
 xcmg.com,seed_cn,Manufacturing & Industry,unknown,Unknown,uncategorized
 sany.com.cn,seed_cn,Manufacturing & Industry,unknown,Unknown,uncategorized
-cssc.net,seed_cn,Manufacturing & Industry,unknown,Unknown,uncategorized
+cssc.net.cn,seed_cn,Manufacturing & Industry,unknown,Unknown,uncategorized
 baosteel.com,seed_cn,Manufacturing & Industry,unknown,Unknown,uncategorized
 chowtaifook.com,seed_cn,Jewelry & Tea,unknown,Unknown,uncategorized
-chow-tai-fook.com,seed_cn,Jewelry & Tea,unknown,Unknown,uncategorized
 laofengxiang.com,seed_cn,Jewelry & Tea,unknown,Unknown,uncategorized
 laofeng.com,seed_cn,Jewelry & Tea,unknown,Unknown,uncategorized
 darry.com,seed_cn,Jewelry & Tea,unknown,Unknown,uncategorized
@@ -489,12 +455,11 @@ tenfu.com,seed_cn,Jewelry & Tea,unknown,Unknown,uncategorized
 dahongpao.com.cn,seed_cn,Jewelry & Tea,unknown,Unknown,uncategorized
 tieguanyin.com.cn,seed_cn,Jewelry & Tea,unknown,Unknown,uncategorized
 longjingtea.com,seed_cn,Jewelry & Tea,unknown,Unknown,uncategorized
-wuyitea.com,seed_cn,Jewelry & Tea,unknown,Unknown,uncategorized
 dayi.com,seed_cn,Jewelry & Tea,unknown,Unknown,uncategorized
 vanke.com,seed_cn,Real Estate,unknown,Unknown,uncategorized
 longfor.com,seed_cn,Real Estate,unknown,Unknown,uncategorized
-greenland-group.com,seed_cn,Real Estate,unknown,Unknown,uncategorized
-poly-real-estate.com.cn,seed_cn,Real Estate,unknown,Unknown,uncategorized
+ldjt.com.cn,seed_cn,Real Estate,unknown,Unknown,uncategorized
+polycn.com,seed_cn,Real Estate,unknown,Unknown,uncategorized
 beike.com,seed_cn,Real Estate,unknown,Unknown,uncategorized
 tianyancha.com,seed_cn,Business Intelligence,unknown,Unknown,uncategorized
 qcc.com,seed_cn,Business Intelligence,unknown,Unknown,uncategorized
@@ -541,7 +506,6 @@ xhslink.com,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategor
 zhimg.com,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 jdcdn.com,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 jdl.com,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
-djicreator.com,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 djistatic.com,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 17k.com,seed_cn,User batch additions,unknown,Unknown,uncategorized
 22.cn,seed_cn,User batch additions,unknown,Unknown,uncategorized
@@ -549,7 +513,6 @@ djistatic.com,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncateg
 4.cn,seed_cn,User batch additions,unknown,Unknown,uncategorized
 a9vg.com,seed_cn,User batch additions,unknown,Unknown,uncategorized
 abc.com.cn,seed_cn,User batch additions,unknown,Unknown,uncategorized
-acfun.com,seed_cn,User batch additions,unknown,Unknown,uncategorized
 baihe.com,seed_cn,User batch additions,unknown,Unknown,uncategorized
 bookschina.com,seed_cn,User batch additions,unknown,Unknown,uncategorized
 bugly.qq.com,seed_cn,User batch additions,unknown,Unknown,uncategorized
@@ -615,7 +578,6 @@ wiz.cn,seed_cn,User batch additions,unknown,Unknown,uncategorized
 xin.net,seed_cn,User batch additions,unknown,Unknown,uncategorized
 xs8.cn,seed_cn,User batch additions,unknown,Unknown,uncategorized
 xuetangx.com,seed_cn,User batch additions,unknown,Unknown,uncategorized
-yanxuan.com,seed_cn,User batch additions,unknown,Unknown,uncategorized
 yinxiang.com,seed_cn,User batch additions,unknown,Unknown,uncategorized
 yoho.cn,seed_cn,User batch additions,unknown,Unknown,uncategorized
 yohobuy.com,seed_cn,User batch additions,unknown,Unknown,uncategorized
@@ -629,7 +591,6 @@ hkma.gov.hk,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong
 sfc.hk,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
 hkex.com.hk,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
 hkexnews.hk,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
-hkgem.com,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
 hkmc.com.hk,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
 icac.org.hk,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
 aastocks.com,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
@@ -638,7 +599,6 @@ hkelectric.com,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,H
 mtr.com.hk,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
 hkairport.com,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
 hkia.com.hk,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
-hkpost.hk,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
 hongkongpost.hk,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
 octopus.com.hk,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
 westkowloon.hk,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
@@ -660,12 +620,10 @@ sb.gov.hk,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong K
 lcsd.gov.hk,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
 hko.gov.hk,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
 hkeaa.edu.hk,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
-hkoc.org.hk,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
+hkolympic.org,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
 tungwah.org.hk,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
 ha.org.hk,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
 bochk.com,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
-bankofchina.com.hk,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
-boc.hk,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
 asia.ccb.com,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
 hsbc.com.hk,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
 hangseng.com,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
@@ -743,7 +701,7 @@ hksh-hospital.com,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-h
 stpaul.org.hk,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
 sth.org.hk,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
 ctfe.com,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
-wharf.com.hk,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
+wharfholdings.com,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
 wheelockcompany.com,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
 cathaypacific.com,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
 cxexpress.com,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
@@ -753,9 +711,6 @@ oceanpark.com.hk,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk
 jardines.com,seed_hk,DomainNova - Seed Domains (Hong Kong),infrastructure-hk,Hong Kong Infrastructure,infrastructure
 monic.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-io.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-e-gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-bo.io.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 amcm.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 gcs.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 dsi.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
@@ -768,37 +723,20 @@ fsm.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Inf
 iam.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 ccac.org.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 fdct.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-antifraud.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-sc.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 ipim.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-mbe.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-ces.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-gaming-inspection.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 al.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-cd.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-cfm.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-cm.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-cp.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 customs.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 dicj.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 dsj.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 dsscu.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-dssopt.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 dst.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-grs.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-iacm.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 ias.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 icm.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-ifp.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-mgto.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-msa.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-msar.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 sa.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-tj.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 macautourism.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 macaupost.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-cem.com.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-macau-water.com,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
+cem-macau.com,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
+macaowater.com,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 macau-airport.com,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 ctm.net,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 mtel.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
@@ -807,32 +745,25 @@ cyberctm.com,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau I
 transmac.com.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 tcm.com.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 cotaiwaterjet.com,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-macau-sf.com,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 bocmacau.com,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 bnu.com.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 ocbc.com.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 bcm.com.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-bnm.com.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-uubank.com.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 taifungbank.com,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-mpay.com.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
+macaupass.com,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 abm.org.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-ifm.org.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-mc.icbc.com.cn,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 icbc.com.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 sands.com.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 galaxyentertainment.com,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 galaxymacau.com,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 sandschina.com,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 venetianmacao.com,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-casino.org.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 macaudaily.com,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 macaudailytimes.com.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 tdm.com.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 chengpou.com.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 macaonews.org,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-macaunews.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-macauhub.com.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
+macauhub.com,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 mastvnet.com,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 macaobbs.com,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 um.edu.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
@@ -843,14 +774,8 @@ usj.edu.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Inf
 cityu.edu.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 iftm.edu.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 ipm.edu.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-iusm.edu.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-kjc.edu.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-cmc.edu.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-macaopolytechnic.edu.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-civicedu.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 cpttm.org.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 macaumemory.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-moedict.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 yp.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 macaoticket.com,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 macaotourism.gov.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
@@ -859,7 +784,6 @@ exmoo.com,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infr
 smartone.com.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 three.com.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 directel.com.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
-ocm.com.mo,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 macau.com,seed_mo,DomainNova - Seed Domains (Macau),infrastructure-mo,Macau Infrastructure,infrastructure
 twnic.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
@@ -874,7 +798,6 @@ mof.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-
 dgbas.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 nhi.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 immigration.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
-bus.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 npa.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 moi.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 motc.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
@@ -882,58 +805,42 @@ ndc.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-
 msa.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 taipei.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 ntpc.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
-newtaipei.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 kcg.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
-kaohsiung.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 taichung.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 tainan.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
-taoyuan.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 hccg.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 hsinchu.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
-keelung.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 miaoli.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 chcg.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 changhua.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
-ntct.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 nantou.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 yunlin.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
-cycg.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 chiayi.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 pthg.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
-pingtung.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
-ttcg.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 taitung.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 hl.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 hualien.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
-ilc.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
-yilan.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 penghu.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
-kmtc.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 kinmen.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 matsu.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 sipa.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 stsp.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
-ctspp.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
-neipark.nat.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 taipower.com.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 water.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 freeway.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 cpc.com.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 taoyuan-airport.com,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 kia.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
-mrt.taipei,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 thsrc.com.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 youbike.com.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 easycard.com.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 post.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
-cwb.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 hct.com.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 t-cat.com.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 teema.org.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 tami.org.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 twia.org.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 ieatpe.org.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
-cto.org.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 cbc.gov.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 twse.com.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 mops.twse.com.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
@@ -947,7 +854,6 @@ fubon.com,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-t
 sinopac.com,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 linebank.com.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 nccc.com.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
-e-bill.com.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 ibon.com.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 cht.com.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 hinet.net,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
@@ -982,7 +888,6 @@ yahoo.com.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructur
 mobile01.com,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 dcard.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 ptt.cc,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
-bahamut.com.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 gamer.com.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 pixnet.net,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 104.com.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
@@ -1007,7 +912,6 @@ quanta.com.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructu
 7-eleven.com.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 7-11.com.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 hi-life.com.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
-familymart.com.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 family.com.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 ntu.edu.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
 sinica.edu.tw,seed_tw,DomainNova - Seed Domains (Taiwan - Expanded),infrastructure-tw,Taiwan Infrastructure,infrastructure
@@ -1043,9 +947,9 @@ jftc.go.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-j
 caa.go.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 ppc.go.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 reconstruction.go.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
-court.go.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
+courts.go.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 cas.go.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
-psc.go.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
+jinji.go.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 nta.go.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 digital.go.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 fsa.go.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
@@ -1057,14 +961,14 @@ pref.saitama.lg.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastr
 pref.chiba.lg.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 city.yokohama.lg.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 city.osaka.lg.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
-city.nagoya.lg.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
+city.nagoya.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 city.sapporo.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 city.kobe.lg.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 city.fukuoka.lg.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 tepco.co.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 kepco.co.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 chuden.co.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
-tokyogas.co.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
+tokyo-gas.co.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 ntt.co.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 nttdocomo.co.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 ntt-east.co.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
@@ -1078,7 +982,6 @@ kuronekoyamato.co.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infras
 sagawa-exp.co.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 nipponexpress.com,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 jr-central.co.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
-jr-east.co.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 jreast.co.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 jrkyushu.co.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 jr-odekake.net,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
@@ -1094,13 +997,12 @@ hankyu-travel.com,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastru
 suumo.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 rikunabi.com,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 townwork.net,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
-indeedjapan.com,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
+jp.indeed.com,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 docomo.ne.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 lawson.co.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 tsite.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 yahoo.co.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 livedoor.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
-goo.ne.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 hatena.ne.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 ameba.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 amazon.co.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
@@ -1128,7 +1030,6 @@ weathernews.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructu
 tabelog.com,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 gurunavi.com,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 bk.mufg.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
-ufjbank.co.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 mizuhobank.co.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 mizuho.co.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 smbc.co.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
@@ -1154,7 +1055,7 @@ nec.co.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp
 fujitsu.com,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 mitsubishielectric.co.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 hitachi.co.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
-canon.co.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
+canon.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 toshiba.co.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 fastretailing.com,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
 suntory.co.jp,seed_jp,DomainNova - Seed Domains (Japan - Expanded),infrastructure-jp,Japan Infrastructure,infrastructure
@@ -1213,7 +1114,7 @@ daegu.go.kr,seed_kr,DomainNova - Seed Domains (South Korea),infrastructure-kr,So
 daejeon.go.kr,seed_kr,DomainNova - Seed Domains (South Korea),infrastructure-kr,South Korea Infrastructure,infrastructure
 gwangju.go.kr,seed_kr,DomainNova - Seed Domains (South Korea),infrastructure-kr,South Korea Infrastructure,infrastructure
 ulsan.go.kr,seed_kr,DomainNova - Seed Domains (South Korea),infrastructure-kr,South Korea Infrastructure,infrastructure
-gyeonggi.go.kr,seed_kr,DomainNova - Seed Domains (South Korea),infrastructure-kr,South Korea Infrastructure,infrastructure
+gg.go.kr,seed_kr,DomainNova - Seed Domains (South Korea),infrastructure-kr,South Korea Infrastructure,infrastructure
 sejong.go.kr,seed_kr,DomainNova - Seed Domains (South Korea),infrastructure-kr,South Korea Infrastructure,infrastructure
 sktelecom.com,seed_kr,DomainNova - Seed Domains (South Korea),infrastructure-kr,South Korea Infrastructure,infrastructure
 kt.com,seed_kr,DomainNova - Seed Domains (South Korea),infrastructure-kr,South Korea Infrastructure,infrastructure
@@ -1336,7 +1237,7 @@ koreanair.com,seed_kr,DomainNova - Seed Domains (South Korea),infrastructure-kr,
 visitkorea.or.kr,seed_kr,DomainNova - Seed Domains (South Korea),infrastructure-kr,South Korea Infrastructure,infrastructure
 yanolja.com,seed_kr,DomainNova - Seed Domains (South Korea),infrastructure-kr,South Korea Infrastructure,infrastructure
 baemin.com,seed_kr,DomainNova - Seed Domains (South Korea),infrastructure-kr,South Korea Infrastructure,infrastructure
-lotteria.com,seed_kr,DomainNova - Seed Domains (South Korea),infrastructure-kr,South Korea Infrastructure,infrastructure
+lotteeatz.com,seed_kr,DomainNova - Seed Domains (South Korea),infrastructure-kr,South Korea Infrastructure,infrastructure
 saramin.co.kr,seed_kr,DomainNova - Seed Domains (South Korea),infrastructure-kr,South Korea Infrastructure,infrastructure
 jobkorea.co.kr,seed_kr,DomainNova - Seed Domains (South Korea),infrastructure-kr,South Korea Infrastructure,infrastructure
 wadiz.kr,seed_kr,DomainNova - Seed Domains (South Korea),infrastructure-kr,South Korea Infrastructure,infrastructure
@@ -1360,14 +1261,12 @@ hdb.gov.sg,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singa
 imda.gov.sg,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singapore Infrastructure,infrastructure
 singstat.gov.sg,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singapore Infrastructure,infrastructure
 singpass.gov.sg,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singapore Infrastructure,infrastructure
-myinfo.gov.sg,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singapore Infrastructure,infrastructure
 go.gov.sg,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singapore Infrastructure,infrastructure
 tech.gov.sg,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singapore Infrastructure,infrastructure
 csa.gov.sg,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singapore Infrastructure,infrastructure
 ura.gov.sg,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singapore Infrastructure,infrastructure
 acra.gov.sg,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singapore Infrastructure,infrastructure
 edb.gov.sg,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singapore Infrastructure,infrastructure
-enterprise.gov.sg,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singapore Infrastructure,infrastructure
 mas.gov.sg,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singapore Infrastructure,infrastructure
 judiciary.gov.sg,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singapore Infrastructure,infrastructure
 sgnic.sg,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singapore Infrastructure,infrastructure
@@ -1396,7 +1295,6 @@ carousell.com,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Si
 carousell.sg,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singapore Infrastructure,infrastructure
 grab.com,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singapore Infrastructure,infrastructure
 foodpanda.sg,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singapore Infrastructure,infrastructure
-qoo10.sg,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singapore Infrastructure,infrastructure
 fairprice.com.sg,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singapore Infrastructure,infrastructure
 coldstorage.com.sg,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singapore Infrastructure,infrastructure
 propertyguru.com.sg,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singapore Infrastructure,infrastructure
@@ -1408,7 +1306,7 @@ nus.edu.sg,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singa
 ntu.edu.sg,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singapore Infrastructure,infrastructure
 smu.edu.sg,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singapore Infrastructure,infrastructure
 sutd.edu.sg,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singapore Infrastructure,infrastructure
-sit.edu.sg,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singapore Infrastructure,infrastructure
+singaporetech.edu.sg,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singapore Infrastructure,infrastructure
 singaporeair.com,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singapore Infrastructure,infrastructure
 changiairport.com,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singapore Infrastructure,infrastructure
 smrt.com.sg,seed_sg,DomainNova - Seed Domains (Singapore),infrastructure-sg,Singapore Infrastructure,infrastructure
@@ -4994,3 +4892,75 @@ xiaoduxz.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
 xiaomoxz.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
 xn--yus254n.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
 y.tianjimedia.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+17e50dc783.rednetdns.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+2011.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+2012.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+2013.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+2020.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+2021.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+2022.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+2023.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+2024.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+2025.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+2026.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+51jingying.cn,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+activity-api.pinwan.cool,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+activity.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+apidoc.gitee.com-c5b3c9594e8.baiduads.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+apply.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+batel-cs4.51jobdns.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+bbsimg.yingjiesheng.net,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+c3e9ef082bb7a846989f664ee8962407.sangfordns.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+click.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+crystalnote.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+cstcloud.cn,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+cstcloud.org,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+cstnet.net.cn,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+ddl.escience.cn,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+deadline.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+dig.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+download.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+e.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+ecs-115-120-56-205.compute.hwclouds-dns.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+faq.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+git.5190m.top,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+gitee-ai.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+help.passport.escience.cn,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+help.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+hitool.top,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+hotjob.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+hutaojie.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+i.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+jdpay.com.gslb.qianxun.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+k.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+kx.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+link.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+m.bbs.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+m.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+mail.escience.cn,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+out.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+pizza.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+q.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+rmkt.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+s.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+static1.yingjiesheng.net,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+talent.zhiding.com.cn,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+topic.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+trace.51jingying.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+union.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+update.escience.cn,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+url.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+vip.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+vmt.escience.cn,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+wap.bbs.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+web.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+wenku.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+wk.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+wrating.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+wxcs.chinaceotv.com.51jobdns.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+wxtel-cs4.51jobdns.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+yingjiesheng.net,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+young.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+zhiwei.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
+zph.yingjiesheng.com,extended,Auto-promoted 2026-11-03,unknown,Unknown,uncategorized
