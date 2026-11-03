@@ -29,9 +29,9 @@ jftc.go.jp
 caa.go.jp
 ppc.go.jp
 reconstruction.go.jp
-court.go.jp
+courts.go.jp
 cas.go.jp
-psc.go.jp
+jinji.go.jp
 nta.go.jp
 digital.go.jp
 fsa.go.jp
@@ -45,7 +45,7 @@ pref.saitama.lg.jp
 pref.chiba.lg.jp
 city.yokohama.lg.jp
 city.osaka.lg.jp
-city.nagoya.lg.jp
+city.nagoya.jp
 city.sapporo.jp
 city.kobe.lg.jp
 city.fukuoka.lg.jp
@@ -54,7 +54,7 @@ city.fukuoka.lg.jp
 tepco.co.jp
 kepco.co.jp
 chuden.co.jp
-tokyogas.co.jp
+tokyo-gas.co.jp
 
 # --- Telecom / ISP ---
 ntt.co.jp
@@ -72,7 +72,6 @@ kuronekoyamato.co.jp
 sagawa-exp.co.jp
 nipponexpress.com
 jr-central.co.jp
-jr-east.co.jp
 jreast.co.jp
 jrkyushu.co.jp
 jr-odekake.net
@@ -92,7 +91,7 @@ suumo.jp
 # --- Jobs / Recruitment ---
 rikunabi.com
 townwork.net
-indeedjapan.com
+jp.indeed.com
 
 # --- Telecom (additional) ---
 docomo.ne.jp
@@ -106,7 +105,6 @@ tsite.jp
 # --- Major Portals / Internet ---
 yahoo.co.jp
 livedoor.jp
-goo.ne.jp
 hatena.ne.jp
 ameba.jp
 
@@ -140,7 +138,6 @@ gurunavi.com
 
 # --- Financial Infrastructure & Regulation ---
 bk.mufg.jp
-ufjbank.co.jp
 mizuhobank.co.jp
 mizuho.co.jp
 smbc.co.jp
@@ -168,7 +165,7 @@ nec.co.jp
 fujitsu.com
 mitsubishielectric.co.jp
 hitachi.co.jp
-canon.co.jp
+canon.jp
 toshiba.co.jp
 fastretailing.com
 suntory.co.jp

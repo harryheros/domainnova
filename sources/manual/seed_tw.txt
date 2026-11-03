@@ -18,7 +18,6 @@ mof.gov.tw
 dgbas.gov.tw
 nhi.gov.tw
 immigration.gov.tw
-bus.gov.tw
 npa.gov.tw
 moi.gov.tw
 motc.gov.tw
@@ -28,41 +27,28 @@ msa.gov.tw
 # --- Regional Government (22 Cities & Counties) ---
 taipei.gov.tw
 ntpc.gov.tw
-newtaipei.gov.tw
 kcg.gov.tw
-kaohsiung.gov.tw
 taichung.gov.tw
 tainan.gov.tw
-taoyuan.gov.tw
 hccg.gov.tw
 hsinchu.gov.tw
-keelung.gov.tw
 miaoli.gov.tw
 chcg.gov.tw
 changhua.gov.tw
-ntct.gov.tw
 nantou.gov.tw
 yunlin.gov.tw
-cycg.gov.tw
 chiayi.gov.tw
 pthg.gov.tw
-pingtung.gov.tw
-ttcg.gov.tw
 taitung.gov.tw
 hl.gov.tw
 hualien.gov.tw
-ilc.gov.tw
-yilan.gov.tw
 penghu.gov.tw
-kmtc.gov.tw
 kinmen.gov.tw
 matsu.gov.tw
 
 # --- Science Parks & Industry Clusters ---
 sipa.gov.tw
 stsp.gov.tw
-ctspp.gov.tw
-neipark.nat.gov.tw
 
 # --- Infrastructure / Utilities / Transport ---
 taipower.com.tw
@@ -71,12 +57,10 @@ freeway.gov.tw
 cpc.com.tw
 taoyuan-airport.com
 kia.gov.tw
-mrt.taipei
 thsrc.com.tw
 youbike.com.tw
 easycard.com.tw
 post.gov.tw
-cwb.gov.tw
 
 # --- Logistics ---
 hct.com.tw
@@ -87,7 +71,6 @@ teema.org.tw
 tami.org.tw
 twia.org.tw
 ieatpe.org.tw
-cto.org.tw
 
 # --- Banking / Finance / Payments ---
 cbc.gov.tw
@@ -103,7 +86,6 @@ fubon.com
 sinopac.com
 linebank.com.tw
 nccc.com.tw
-e-bill.com.tw
 ibon.com.tw
 
 # --- Telecom / ISP ---
@@ -144,7 +126,6 @@ yahoo.com.tw
 mobile01.com
 dcard.tw
 ptt.cc
-bahamut.com.tw
 gamer.com.tw
 pixnet.net
 104.com.tw
@@ -173,7 +154,6 @@ quanta.com.tw
 7-eleven.com.tw
 7-11.com.tw
 hi-life.com.tw
-familymart.com.tw
 family.com.tw
 
 # --- Education / Research ---

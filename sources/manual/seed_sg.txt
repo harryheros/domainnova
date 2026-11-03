@@ -24,7 +24,6 @@ hdb.gov.sg
 imda.gov.sg
 singstat.gov.sg
 singpass.gov.sg
-myinfo.gov.sg
 go.gov.sg
 tech.gov.sg
 csa.gov.sg
@@ -33,7 +32,6 @@ ura.gov.sg
 # --- Regulatory & Compliance ---
 acra.gov.sg
 edb.gov.sg
-enterprise.gov.sg
 mas.gov.sg
 judiciary.gov.sg
 
@@ -72,7 +70,6 @@ carousell.com
 carousell.sg
 grab.com
 foodpanda.sg
-qoo10.sg
 fairprice.com.sg
 coldstorage.com.sg
 
@@ -88,7 +85,7 @@ nus.edu.sg
 ntu.edu.sg
 smu.edu.sg
 sutd.edu.sg
-sit.edu.sg
+singaporetech.edu.sg
 
 # --- Airlines / Transport ---
 singaporeair.com

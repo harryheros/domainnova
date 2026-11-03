@@ -163,7 +163,6 @@ chinaunicom.com
 chinaunicom.cn
 10010.com
 chinatelecom.com.cn
-chinatelecom.cn
 10000.com
 189.cn
 cbn.cn
@@ -217,7 +216,6 @@ mot.gov.cn
 mwr.gov.cn
 mnr.gov.cn
 mee.gov.cn
-nha.gov.cn
 mohrss.gov.cn
 mca.gov.cn
 court.gov.cn
@@ -229,14 +227,9 @@ nea.gov.cn
 nia.gov.cn
 caac.gov.cn
 msa.gov.cn
-cnta.gov.cn
 sfda.gov.cn
-charity.gov.cn
 12333.gov.cn
-12366.gov.cn
-12315.gov.cn
 12315.cn
-12345.gov.cn
 chinatax.gov.cn
 etax.chinatax.gov.cn
 gsxt.gov.cn
@@ -245,24 +238,16 @@ creditchina.gov.cn
 # ===== Provincial Government =====
 beijing.gov.cn
 shanghai.gov.cn
-guangdong.gov.cn
 jiangsu.gov.cn
-zhejiang.gov.cn
 shandong.gov.cn
 henan.gov.cn
-sichuan.gov.cn
 hubei.gov.cn
 hunan.gov.cn
 fujian.gov.cn
 hebei.gov.cn
 shanxi.gov.cn
-liaoning.gov.cn
-jilin.gov.cn
-heilongjiang.gov.cn
 anhui.gov.cn
 jiangxi.gov.cn
-guangxi.gov.cn
-yunnan.gov.cn
 guizhou.gov.cn
 shaanxi.gov.cn
 gansu.gov.cn
@@ -272,16 +257,11 @@ nmg.gov.cn
 xj.gov.cn
 xizang.gov.cn
 nx.gov.cn
-chongqing.gov.cn
-tianjin.gov.cn
-yiwu.gov.cn
 liuyang.gov.cn
 
 # ===== Finance & Banking =====
 unionpay.com
 95516.com
-netsunion.com
-nucc.com.cn
 icbc.com
 icbc.com.cn
 boc.cn
@@ -300,11 +280,8 @@ pingan.com
 citicbank.com
 ecitic.com
 pbc.gov.cn
-ecny.pbc.gov.cn
 safe.gov.cn
 csrc.gov.cn
-cbirc.gov.cn
-nssf.gov.cn
 
 # ===== Capital Markets =====
 sse.com.cn
@@ -314,12 +291,8 @@ dce.com.cn
 czce.com.cn
 cffex.com.cn
 chinaclear.cn
-chinaclearing.com.cn
-cnaps.com.cn
-cfets.com.cn
 chinamoney.com.cn
 chinabond.com.cn
-chinabond.gov.cn
 eastmoney.com
 10jqka.com.cn
 hexun.com
@@ -329,10 +302,9 @@ chinaamc.com
 efund.com.cn
 bosera.com
 harvest.com.cn
-castfund.com
 fullgoal.com.cn
-icbcfund.com
-gfzq.com.cn
+icbccs.com.cn
+gf.com.cn
 gjzq.com.cn
 htsc.com.cn
 gtja.com
@@ -401,12 +373,12 @@ dxy.cn
 sinopharm.com
 cspc.com.cn
 tongrentang.com
-yunnan-baiyao.com
+yunnanbaiyao.com.cn
 yunnanbaiyao.com
 tasly.com
 kelun.com
 crpharm.com
-harbinpharma.com
+hayao.com
 humanwell.com
 
 # ===== State Media =====
@@ -439,7 +411,6 @@ kuaishou.com
 kuaishoucdn.com
 ximalaya.com
 douban.com
-douban.fm
 youku.com
 mgtv.com
 huya.com
@@ -453,14 +424,11 @@ qunar.com
 tuniu.com
 tongcheng.com
 mafengwo.cn
-lvmama.com
 huazhu.com
 jinjiang.com
 shangri-la.com
-cr12306.cn
 12306.cn
 sf-express.com
-sfbest.com
 zto.com
 yto.net.cn
 sto.com.cn
@@ -491,7 +459,7 @@ nongfushanquan.com
 yili.com
 mengniu.com
 sanyuan.com.cn
-maotai.com
+moutaichina.com
 wuliangye.com
 tsingtao.com
 luckin.cn
@@ -519,7 +487,6 @@ lining.com
 bosideng.com
 youngor.com
 septwolves.com
-erdos.com
 
 # ===== Auto & EV =====
 byd.com
@@ -546,12 +513,11 @@ cgnpc.com.cn
 crrc.com.cn
 xcmg.com
 sany.com.cn
-cssc.net
+cssc.net.cn
 baosteel.com
 
 # ===== Jewelry & Tea =====
 chowtaifook.com
-chow-tai-fook.com
 laofengxiang.com
 laofeng.com
 darry.com
@@ -561,14 +527,13 @@ tenfu.com
 dahongpao.com.cn
 tieguanyin.com.cn
 longjingtea.com
-wuyitea.com
 dayi.com
 
 # ===== Real Estate =====
 vanke.com
 longfor.com
-greenland-group.com
-poly-real-estate.com.cn
+ldjt.com.cn
+polycn.com
 beike.com
 
 # ===== Business Intelligence =====
@@ -619,7 +584,6 @@ xhslink.com
 zhimg.com
 jdcdn.com
 jdl.com
-djicreator.com
 djistatic.com
 
 # ===== User batch additions =====
@@ -629,7 +593,6 @@ djistatic.com
 4.cn
 a9vg.com
 abc.com.cn
-acfun.com
 baihe.com
 bookschina.com
 bugly.qq.com
@@ -695,7 +658,6 @@ wiz.cn
 xin.net
 xs8.cn
 xuetangx.com
-yanxuan.com
 yinxiang.com
 yoho.cn
 yohobuy.com

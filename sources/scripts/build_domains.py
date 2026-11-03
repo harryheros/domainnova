@@ -123,13 +123,14 @@ IPNOVA_CN_URL = REGION_CIDR_URLS["CN"]
 #       but is included as a fallback for availability; its CN PoPs still help.
 #       Quad9 ECS (dns11.quad9.net) follows Google's JSON schema and supports ECS.
 # DoH upstreams - tiered by ECS capability
-# Tier 0: self-hosted HK node with CN DNS upstream - rescues CN-only domains
-#         whose authoritative servers refuse queries from overseas recursors.
+# Tier 0: self-hosted HK node (AdGuard Home, ECS forwarded) with Google /
+#         Quad9 upstreams. Gives a second, HK-based path to the same public
+#         resolvers; no query goes to resolvers in mainland China.
 # Primary pool: upstreams that honor our edns_client_subnet parameter.
 #               These are queried first (round-robin) for accurate GeoDNS.
 # Fallback pool: upstreams that ignore ECS but still resolve DNS.
 #                Only used if ALL primaries fail for a given domain.
-DOH_RESCUE = "https://vip-16.coodns.com/query"  # HK node, CN upstreams
+DOH_RESCUE = "https://vip-16.coodns.com/query"  # HK node, Google/Quad9 upstreams with ECS
 
 DOH_PRIMARIES = [
     "https://dns.google/resolve",           # Google JSON API (ECS)
@@ -1373,7 +1374,7 @@ def _do_resolve(domain: str, upstream: str, session: requests.Session) -> List[s
 
 def _resolve_name(domain: str, session: requests.Session) -> List[str]:
     """Resolve one exact name through the upstream chain (no www fallback)."""
-    # Tier 0: self-hosted HK rescue endpoint (CN upstreams, highest priority)
+    # Tier 0: self-hosted HK rescue endpoint (Google/Quad9 upstreams, tried first)
     ips = _resolve_rescue(domain, session)
     if ips:
         return ips
