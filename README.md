@@ -1,241 +1,95 @@
 # DomainNova
 
-> Self-evolving dataset of domains associated with Asia-Pacific internet infrastructure, ranked by confidence.
-
-DomainNova is an open intelligence dataset and tooling layer for domain, network, and infrastructure analysis across the Asia-Pacific region.
+> Self-evolving dataset of domains hosted on Asia-Pacific infrastructure, ranked by confidence.
 
 [![Update](https://github.com/harryheros/domainnova/actions/workflows/update.yml/badge.svg)](https://github.com/harryheros/domainnova/actions/workflows/update.yml)
 [![Version](https://img.shields.io/badge/version-v3.6.0-blue)](https://github.com/harryheros/domainnova/releases)
 
----
+DomainNova answers one question: **is this domain's infrastructure physically hosted in region X?** — for CN, HK, TW, MO, JP, KR and SG. It attributes infrastructure, not corporate ownership, and it is a dataset, not a routing or filtering product.
 
-> **License Notice**: All versions of this project, including historical commits, are licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). Commercial use of any version requires a separate written license agreement.
-> **Versioning Notice**: Previous public versions of this project may have been distributed under different license terms. All current and future releases are governed solely by the LICENSE file in this repository.
+Unlike static lists, it discovers, verifies and retires domains automatically every week. Current statistics: [`data/stats.json`](data/stats.json).
 
-## What this is
-
-A **self-evolving intelligence dataset for infrastructure attribution** — it
-answers "is this domain's infrastructure physically hosted in region X?", and
-nothing more. It is a dataset, not a routing or filtering product; what
-downstream consumers do with the attribution is their decision.
-
-Each domain is evaluated across multiple independent signals to assess whether its infrastructure is physically located in a target Asia-Pacific region. The goal is infrastructure attribution, not corporate ownership attribution.
-
-Unlike static domain lists, DomainNova operates a three-tier data architecture with automated discovery, verification, and lifecycle management. The dataset grows and self-cleanses over time.
-
-For current dataset statistics, see `data/stats.json`.
+> **License**: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) for all versions, including historical commits. Commercial use requires a separate written license — see [COMMERCIAL_LICENSE.md](./COMMERCIAL_LICENSE.md).
 
 ---
 
-## Scoring Model
-
-DomainNova uses a **symmetric multi-region scoring model** (P2.A) that evaluates domains independently for each target region (CN, HK, MO, TW, JP, KR, SG).
-
-### Per-Region Signals
-
-| Signal | Weight | Description |
-|--------|--------|-------------|
-| `dns_xx` | 60 | ≥60% of resolved IPs fall within the region's CIDR ranges (via [IPNova](https://github.com/harryheros/ipnova)) |
-| `xx_tld` | 20 | Domain uses a region-specific TLD (`.hk`, `.mo`, `.tw`) — bonus only when `dns_xx=1` |
-| `cn_tld` | 10 | Domain uses `.cn` TLD — bonus when `dns_cn=1` |
-| `cn_tld` fallback | 60 | `.cn` domains without DNS signal still score 60 (ICP filing is a strong administrative signal) |
-
-> **Asymmetry note**: Only `.cn` has a TLD-only fallback path (score=60 without DNS confirmation). `.hk`, `.mo`, `.tw` TLDs do **not** trigger fallback because they lack an ICP-equivalent mandatory filing system. This reflects real-world signal strength differences, not an implementation shortcut.
-
-### Output Files
+## Output
 
 | File | Contents |
-|------|----------|
-| `dist/domains_cn.txt` | Mainland China domains (score ≥ 60) |
-| `dist/domains_hk.txt` | Hong Kong domains (score ≥ 60) |
-| `dist/domains_tw.txt` | Taiwan domains (score ≥ 60) |
-| `dist/domains_mo.txt` | Macau domains (score ≥ 60) |
-| `dist/domains_jp.txt` | Japan domains (score ≥ 60) |
-| `dist/domains_kr.txt` | South Korea domains (score ≥ 60) |
-| `dist/domains_sg.txt` | Singapore domains (score ≥ 60) |
-
-### Thresholds
-
-| Score | Meaning | Output |
-|-------|---------|--------|
-| >= 60 | Strong infrastructure evidence | Included in `dist/domains_{region}.txt` |
-| 40 | CN TLD with ICP filing (CDN may obscure DNS) | Retained in `domains.csv` only |
-| < 40 | Insufficient signal | Excluded |
-
-DNS resolution uses **Google DoH with rotating EDNS Client Subnet** (Beijing/Shanghai/Guangdong Telecom + Beijing Unicom) to obtain GeoDNS-accurate results without exposing query traffic to CN DNS infrastructure.
-
-IP classification is performed against [IPNova](https://github.com/harryheros/ipnova)'s APNIC-sourced Asia-Pacific CIDR dataset.
-
----
-
-## Three-Tier Architecture
+|---|---|
+| `dist/domains_{cn,hk,tw,mo,jp,kr,sg}.txt` | One domain per line, score ≥ 60 |
+| `data/domains.csv` | Every domain with all signals, score, region, provider and CDN flag |
+| `data/domains_metadata.{json,yaml,csv}` | Entity, category and ecosystem per domain |
+| `data/stats.json` | Build statistics and lifecycle counters |
+| `data/seed_review.json` | Curated domains that stopped resolving, for manual review |
 
 ```text
-┌──────────────────────────────────────────────────┐
-│  Core      (seed_{region}.txt) - manually curated│
-│  Reliable  (extended.txt)   - stable + promoted  │
-│  Discovery (discovery.txt)  - auto-harvested     │
-└──────────────────────────────────────────────────┘
-              │ seed > extended > discovery
-              ▼
-┌──────────────────────────────────────────────────┐
-│  Build Pipeline (parallel, 20 workers)           │
-│  DoH + ECS (www. fallback) -> ipnova -> score    │
-└──────────────────────────────────────────────────┘
-              │
-      ┌───────┴────────┐
-      ▼                ▼
-┌─────────────┐  ┌──────────────────────┐
-│ dist/       │  │ Discovery Lifecycle  │
-│ domains_xx  │  │ fail ×5 → purge      │
-│ score >= 60 │  │ pass ×4 → promote    │
-└─────────────┘  └──────────────────────┘
+https://raw.githubusercontent.com/harryheros/domainnova/main/dist/domains_cn.txt
 ```
 
-**Discovery capacity limits:**
-- Max 5000 domains in `discovery.txt`
-- Every discovery domain is checked on every weekly build, so promotion takes 4 weeks and the published lists do not change with a sampling rotation
-- Auto-promote suspended when `extended.txt` reaches 5000 domains
-- A domain whose bare name has no address record (common for government sites, e.g. `soumu.go.jp`) is checked through `www.<domain>`
+---
+
+## Scoring
+
+Each domain is scored separately for every region.
+
+| Signal | Points | Meaning |
+|---|---|---|
+| `dns_xx` | 60 | ≥ 60% of resolved IPs are in the region's ranges ([IPNova](https://github.com/harryheros/ipnova)) |
+| `xx_tld` | +20 | `.hk`, `.mo`, `.tw` — only together with `dns_xx` |
+| `cn_tld` | +10 | `.cn` together with `dns_cn` |
+| `.cn` fallback | 60 | `.cn` without a DNS match still scores 60 — ICP filing is a strong signal |
+
+Only `.cn` has a fallback: other regional TLDs have no mandatory filing system. Score ≥ 60 goes to `dist/`; everything else stays in `domains.csv` only.
+
+DNS uses Google DoH with rotating EDNS Client Subnet (Chinese carrier networks), so results match what users in the region see, without querying DNS servers in China. A domain with no record on its bare name, common for government sites, is checked through `www.<domain>`.
 
 ---
 
-## Discovery Agents
-
-The IP-neighbor agent runs with every weekly build to harvest new domain
-candidates from neutral infrastructure sources. Candidates already covered by a
-known domain or one of its parents (e.g. `news.example.cn` when `example.cn` is
-listed) are skipped, and a leading `www.` is removed:
-
-| Agent | Source | Max per run |
-|-------|--------|-------------|
-| `agent_ip_neighbor.py` | Reverse-IP over IPNova's own CN ranges (HackerTarget; optional ViewDNS JSON API via `VIEWDNS_APIKEY` secret — no web scraping) | 100 |
-| `agent_ct_logs.py` | crt.sh Certificate Transparency logs — **not scheduled** since v3.6: it only finds subdomains of seed domains, which suffix rules already cover. Kept for manual runs. | 150 |
-
-All agent output feeds into `discovery.txt` and is verified by the build pipeline before reaching `dist/`.
-
----
-
-## Files
+## How the dataset evolves
 
 ```text
-dist/domains_cn.txt                 CN domain list (score >= 60), updated weekly
-dist/domains_hk.txt                 HK domain list (score >= 60)
-dist/domains_tw.txt                 TW domain list (score >= 60)
-dist/domains_mo.txt                 MO domain list (score >= 60)
-dist/domains_jp.txt                 JP domain list (score >= 60)
-dist/domains_kr.txt                 KR domain list (score >= 60)
-dist/domains_sg.txt                 SG domain list (score >= 60)
-data/domains.csv                    full structured database (all signals + score + provider + cdn_masked)
-data/stats.json                     build statistics and lifecycle counters
-data/domains_metadata.json          structured metadata (domain → entity/category/ecosystem)
-data/domains_metadata.yaml          YAML export of the metadata layer
-data/domains_metadata.csv           tabular export of the metadata layer
-data/metadata_stats.json            metadata coverage statistics
-data/manual_source_validation.json  duplicate / overlap / format checks
-data/discovery_stats.json           pipeline state (hit/fail counts, seed-review streaks; Actions cache, not committed)
-data/seed_review.json               seeds unresolved (bare name and www.) for 3+ weekly builds — for manual review
-sources/manual/seed_cn.txt          manually curated core domains (CN)
-sources/manual/seed_hk.txt          manually curated core domains (HK)
-sources/manual/seed_tw.txt          manually curated core domains (TW)
-sources/manual/seed_mo.txt          manually curated core domains (MO)
-sources/manual/seed_jp.txt          manually curated core domains (JP)
-sources/manual/seed_kr.txt          manually curated core domains (KR)
-sources/manual/seed_sg.txt          manually curated core domains (SG)
-sources/manual/seed_offshore.txt    offshore PRC-company domains
-sources/manual/extended.txt         stable verified domains + auto-promoted
-sources/manual/discovery.txt        auto-harvested candidates (managed lifecycle)
-sources/scripts/                    build pipeline scripts
-sources/discovery_agents/           discovery agent scripts
+Core       sources/manual/seed_{region}.txt   curated by hand
+Reliable   sources/manual/extended.txt        stable and promoted domains
+Discovery  sources/manual/discovery.txt       found automatically (max 5000)
+                   │
+                   ▼
+weekly build: resolve → match IPNova ranges → score → dist/
+                   │
+       discovery: pass 4 weeks in a row → promoted to extended
+                  fail 5 times → removed
 ```
 
----
-
-## Data Format
-
-```csv
-domain,dns_cn,...,bucket,dns_hk,...,dns_sg,provider,cdn_masked
-baidu.com,1,3,3,0,0,0,60,110.242.68.66|...,1.0.1.0/24,seed_cn,2026-03-28,0,CN,0,0,0,0,0,0,Alibaba Cloud,0
-google.com,0,0,1,0,0,0,0,...,,extended,2026-03-28,0,,0,0,0,0,0,0,Google Cloud CDN,1
-```
-
-Key fields:
-- `dns_cn` — 1 if majority of resolved IPs are in CN CIDRs (similar fields exist per region in build logic)
-- `matched_cidr` — the region CIDR range(s) matched (pipe-separated, up to 5)
-- `cn_tld` — 1 if domain uses a CN TLD (`.cn`, `.xn--fiqs8s` / `.xn--fiqz9s`, etc.)
-- `score` — composite score; 60+ in dist, 40 = ICP fallback, 0 = excluded
-- `source` — `seed_cn`, `seed_hk`, `seed_jp`, `extended`, `discovery`, etc.
-- `bucket` — assigned region: CN, HK, TW, MO, JP, KR, SG, or empty (unclassified)
-- `provider` — detected cloud/CDN provider (e.g. `Alibaba Cloud`, `Cloudflare`); empty if unknown
-- `cdn_masked` — 1 if domain resolves to a global CDN that obscures origin region; 0 otherwise
+- **Discovery**: each week, reverse-IP lookups over IPNova's CN ranges (HackerTarget, optional ViewDNS API) find up to 100 new candidates. Subdomains of known domains are skipped, since suffix matching already covers them.
+- Promotion pauses when `extended.txt` reaches 5000 domains.
+- Seeds are never changed automatically; those that stop resolving for 3+ weeks are listed in `seed_review.json`.
 
 ---
 
-## Update Schedule
+## Schedule
 
-| Trigger | Frequency | Action |
-|---------|-----------|--------|
-| Scheduled | Every Monday 02:00 UTC | Full build pipeline |
-| Scheduled | 1st of month 03:00 UTC | Discovery agents + build |
-| Manual | On demand | Build only (or agents if `run_agents=yes`) |
+- Every Monday 02:00 UTC: discovery + full build. Thursday: cache keep-alive.
+- Manual runs build only, or also run discovery with `run_agents=yes`.
 
 ---
 
-## Metadata Layer
+## Use cases
 
-DomainNova ships with an additive metadata layer derived from curated manual sources.
-
-Each record includes `section`, `ecosystem`, `entity`, and `category` fields for programmatic use.
-
-```bash
-# Generate metadata artifacts
-python sources/scripts/build_metadata.py --all
-
-# Validate manual source files
-python sources/scripts/validate_manual_sources.py
-```
-
----
-
-## Use Cases
-
-- **Compliance** — audit exposure to specific jurisdiction-hosted services
-- **Supply chain / vendor risk** — verify whether dependencies resolve to specific regional infrastructure
-- **OSINT / network intelligence** — identify regionally-hosted services in traffic analysis
-- **Commercial intelligence** — infrastructure attribution for enterprise and government use
-- **Traffic classification** — geo-classify domains by regional infrastructure origin
+Compliance and jurisdiction audits, vendor and supply-chain risk, OSINT and network intelligence, traffic classification.
 
 ---
 
 ## Contributing
 
-To add domains, edit the appropriate `sources/manual/seed_{region}.txt` or `sources/manual/extended.txt` and open a PR.
+Add domains to `sources/manual/seed_{region}.txt` or `sources/manual/extended.txt` and open a pull request. `discovery.txt` is managed automatically; do not edit it by hand.
 
-Discovery candidates are managed automatically — do not edit `sources/manual/discovery.txt` manually.
+Local tools: `python sources/scripts/build_domains.py`, `build_metadata.py --all`, `validate_manual_sources.py`. Development notes: [`docs/`](docs/).
 
 ---
 
 ## License
 
-[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) — Attribution-NonCommercial-ShareAlike.
-
-- **Non-commercial use**: Permitted under the terms of CC BY-NC-SA 4.0.
-- **Commercial use**: Commercial use, SaaS deployment, API resale, redistribution, or integration into paid products or services requires explicit prior written authorization from the author. See [COMMERCIAL_LICENSE.md](./COMMERCIAL_LICENSE.md) or contact via [GitHub Issues](https://github.com/harryheros/domainnova/issues).
-
----
-
-## Nova Toolkit
-
-DomainNova is part of the Nova infrastructure toolkit:
-
-| Project | Layer | Description |
-|---|---|---|
-| [IPNova](https://github.com/harryheros/ipnova) | IP | Routing-aware IPv4 dataset for Asia-Pacific infrastructure attribution and network intelligence |
-| **DomainNova** | **Domain (Data)** | **High-precision domain dataset for regional infrastructure attribution and network intelligence** |
-| [ShieldNova](https://github.com/harryheros/shieldnova) | Domain (Filter) | Compatibility-first domain intelligence for privacy, ad blocking, and security |
-| [HarryWrt](https://github.com/harryheros/harrywrt) | Device | Clean OpenWrt-based firmware for x86_64 and aarch64 (BIOS & UEFI) |
-| [OSNova](https://github.com/harryheros/osnova) | System | System deployment and reinstallation engine for VPS and bare-metal servers |
-
----
+- **Non-commercial use**: permitted under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+- **Commercial use** (SaaS, API resale, redistribution, paid products): requires prior written authorization — see [COMMERCIAL_LICENSE.md](./COMMERCIAL_LICENSE.md) or open an [issue](https://github.com/harryheros/domainnova/issues).
 
 Part of the [Nova infrastructure toolkit](https://github.com/harryheros).
