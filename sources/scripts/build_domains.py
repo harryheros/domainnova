@@ -2085,7 +2085,8 @@ def _query_ns_record(domain: str, session: requests.Session) -> bool:
         return True
 
 
-def update_seed_review(repo_root: Path, rows: List[DomainRecord], today: str) -> List[dict]:
+def update_seed_review(repo_root: Path, rows: List[DomainRecord], today: str,
+                       session: Optional[requests.Session] = None) -> List[dict]:
     """Track seeds that resolve to nothing and list them for manual review.
 
     A seed is "unresolved" in a run when neither the bare name nor www.<name>
@@ -2095,6 +2096,14 @@ def update_seed_review(repo_root: Path, rows: List[DomainRecord], today: str) ->
     seed is written to data/seed_review.json. Typical causes: the name is
     wrong or unused (guangdong.gov.cn — the province uses gd.gov.cn), or the
     domain only has subdomains (alicdn.net), which is fine to keep.
+
+    v3.6.1: CDN and API domains such as hdslb.com or byteimg.com publish
+    addresses only on subdomains, so they were listed as if broken (32 of
+    32 entries in Nov 2026). With a session, each listed seed gets the same
+    NS check as dead-domain detection: a registered domain moves to
+    "subdomain_only" (keep it), and only names that do not exist (NXDOMAIN)
+    stay in "domains". Network errors count as registered (checked again
+    next week). Returns the "domains" list — the seeds that need action.
 
     The streak counters live in data/discovery_stats.json (pipeline state).
     """
@@ -2118,24 +2127,36 @@ def update_seed_review(repo_root: Path, rows: List[DomainRecord], today: str) ->
     save_discovery_stats(repo_root, stats)
 
     source_of = {r.domain: r.source for r in rows}
-    review = sorted(
+    listed = sorted(
         (
             {"domain": d, "file": f"{source_of[d]}.txt", "unresolved_runs": e["streak"], "since": e["since"]}
             for d, e in streaks.items() if e["streak"] >= SEED_REVIEW_AFTER
         ),
         key=lambda x: (x["file"], x["domain"]),
     )
+    review, subdomain_only = listed, []
+    if session is not None and listed:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+            registered = dict(zip(
+                (x["domain"] for x in listed),
+                executor.map(lambda x: _query_ns_record(x["domain"], session), listed),
+            ))
+        review = [x for x in listed if not registered[x["domain"]]]
+        subdomain_only = [x for x in listed if registered[x["domain"]]]
     out = repo_root / "data" / "seed_review.json"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps({
         "generated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         "note": ("Seeds that resolved to nothing (bare name and www.) for at least "
-                 f"{SEED_REVIEW_AFTER} consecutive weekly builds. Review by hand: fix a "
-                 "wrong name, or keep it if the domain only serves subdomains "
-                 "(e.g. CDN or API domains). Nothing here is changed automatically."),
+                 f"{SEED_REVIEW_AFTER} consecutive weekly builds. 'domains': the name does "
+                 "not exist (NXDOMAIN) - fix or remove it by hand. 'subdomain_only': the "
+                 "domain is registered and serves only subdomains (CDN / API domains) - "
+                 "keep it. Nothing here is changed automatically."),
         "after_runs": SEED_REVIEW_AFTER,
         "count": len(review),
         "domains": review,
+        "subdomain_only_count": len(subdomain_only),
+        "subdomain_only": subdomain_only,
     }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return review
 
@@ -2522,10 +2543,10 @@ def build(repo_root: Path) -> None:
         log(f"[+] Promoted {len(promoted)} discovery domains -> extended")
 
     # Seeds that keep resolving to nothing -> data/seed_review.json
-    seed_review = update_seed_review(repo_root, rows, updated)
+    seed_review = update_seed_review(repo_root, rows, updated, session)
     if seed_review:
         log(f"[+] {len(seed_review)} seeds need review (unresolved for "
-            f">= {SEED_REVIEW_AFTER} runs) -> data/seed_review.json")
+            f">= {SEED_REVIEW_AFTER} runs, name does not exist) -> data/seed_review.json")
 
     # Dead domain auto-detection (NS-confirmed)
     dead = detect_dead_domains(repo_root, rows, session)

@@ -155,6 +155,34 @@ class TestSeedReview(unittest.TestCase):
             self.assertEqual(state["seed_unresolved"], {})
 
 
+class TestSeedReviewNsSplit(unittest.TestCase):
+    """v3.6.1: registered CDN/API domains are not reported as broken."""
+
+    def _row(self, domain):
+        r = bd.DomainRecord.__new__(bd.DomainRecord)
+        r.domain, r.source, r.dns_total, r.sticky = domain, "seed_cn", 0, 0
+        return r
+
+    def test_registered_domains_move_to_subdomain_only(self):
+        orig = bd._query_ns_record
+        bd._query_ns_record = lambda d, session: d != "guangdong.gov.cn"  # NXDOMAIN
+        try:
+            with tempfile.TemporaryDirectory() as d:
+                root = Path(d)
+                (root / "data").mkdir()
+                rows = [self._row("guangdong.gov.cn"), self._row("hdslb.com")]
+                for day in ("2026-11-02", "2026-11-09"):
+                    bd.update_seed_review(root, rows, day, session=object())
+                review = bd.update_seed_review(root, rows, "2026-11-16", session=object())
+                self.assertEqual([x["domain"] for x in review], ["guangdong.gov.cn"])
+                data = json.loads((root / "data" / "seed_review.json").read_text(encoding="utf-8"))
+                self.assertEqual(data["count"], 1)
+                self.assertEqual(data["subdomain_only_count"], 1)
+                self.assertEqual(data["subdomain_only"][0]["domain"], "hdslb.com")
+        finally:
+            bd._query_ns_record = orig
+
+
 class TestLookalikeFilter(unittest.TestCase):
     def test_double_hyphen_labels_rejected_but_idn_kept(self):
         got = _common.filter_candidates(
