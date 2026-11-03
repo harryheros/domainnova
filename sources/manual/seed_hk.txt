@@ -14,7 +14,6 @@ hkma.gov.hk
 sfc.hk
 hkex.com.hk
 hkexnews.hk
-hkgem.com
 hkmc.com.hk
 icac.org.hk
 aastocks.com
@@ -25,7 +24,6 @@ hkelectric.com
 mtr.com.hk
 hkairport.com
 hkia.com.hk
-hkpost.hk
 hongkongpost.hk
 octopus.com.hk
 westkowloon.hk
@@ -49,14 +47,12 @@ sb.gov.hk
 lcsd.gov.hk
 hko.gov.hk
 hkeaa.edu.hk
-hkoc.org.hk
+hkolympic.org
 tungwah.org.hk
 ha.org.hk
 
 # --- Banking / Finance / Insurance ---
 bochk.com
-bankofchina.com.hk
-boc.hk
 asia.ccb.com
 hsbc.com.hk
 hangseng.com
@@ -154,7 +150,7 @@ sth.org.hk
 
 # --- Conglomerates / Property / Aviation ---
 ctfe.com
-wharf.com.hk
+wharfholdings.com
 wheelockcompany.com
 cathaypacific.com
 cxexpress.com

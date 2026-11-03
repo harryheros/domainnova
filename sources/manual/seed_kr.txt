@@ -45,7 +45,7 @@ daegu.go.kr
 daejeon.go.kr
 gwangju.go.kr
 ulsan.go.kr
-gyeonggi.go.kr
+gg.go.kr
 sejong.go.kr
 
 # --- Telecom / ISP / Network ---
@@ -188,7 +188,7 @@ koreanair.com
 visitkorea.or.kr
 yanolja.com
 baemin.com
-lotteria.com
+lotteeatz.com
 
 # --- Jobs ---
 saramin.co.kr
