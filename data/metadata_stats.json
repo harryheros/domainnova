@@ -1,5 +1,5 @@
 {
-  "total": 4965,
+  "total": 5064,
   "by_source": {
     "seed_cn": 584,
     "seed_hk": 126,
@@ -8,10 +8,10 @@
     "seed_jp": 155,
     "seed_kr": 162,
     "seed_sg": 73,
-    "extended": 3650
+    "extended": 3749
   },
   "by_ecosystem": {
-    "unknown": 4011,
+    "unknown": 4110,
     "infrastructure-kr": 162,
     "infrastructure-jp": 155,
     "infrastructure-tw": 139,
@@ -37,7 +37,7 @@
     "developer-platforms": 4
   },
   "by_category": {
-    "uncategorized": 4011,
+    "uncategorized": 4110,
     "infrastructure": 731,
     "platform": 85,
     "government": 37,
