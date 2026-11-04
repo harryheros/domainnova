@@ -138,7 +138,6 @@ capitalonline.com.cn
 # ===== CDN & Storage =====
 wangsu.com
 wangsucloud.com
-wangsucloudcdn.com
 chinanetcenter.com
 baishancloud.com
 chinacache.com
@@ -408,7 +407,6 @@ bilibili.tv
 xiaohongshu.com
 xhscdn.com
 kuaishou.com
-kuaishoucdn.com
 ximalaya.com
 douban.com
 youku.com
@@ -549,14 +547,12 @@ yeah.net
 sina.com
 sina.com.cn
 sinaimg.cn
-sinaimgfx.com
 sinajs.cn
 weibocdn.com
 alicdn.com
 alicdngslb.com
 aliyun-inc.com
 ant.design
-appgallery.cloud
 acgvideo.com
 biliapi.com
 bilicomic.com
@@ -570,7 +566,6 @@ ixigua.com
 meituanmaicai.com
 mi-img.com
 mihoyo.com
-mihoyogame.com
 mybank.cn
 qianfan.cloud
 qiyukf.com
@@ -579,7 +574,6 @@ tencent-cloud.com
 tencent-cloud.net
 tencent.net
 tmallgenie.com
-wenxin.cloud
 xhslink.com
 zhimg.com
 jdcdn.com
