@@ -105,120 +105,26 @@
 # --- ip-neighbor:180.76.198.225 2026-10-28 ---
 
 # --- ip-neighbor:114.80.176.40 2026-10-28 ---
-maketion.com
 
 # --- ip-neighbor:211.149.239.6 2026-11-02 ---
-xtxljxgs.com
 
 # --- ip-neighbor:183.193.77.10 2026-11-03 ---
-investor.sse.org.cn
-sse.org.cn
 
 # --- ip-neighbor:124.251.34.141 2026-11-03 ---
-aleenote.cn
-aleenote.com
-alinotes.cn
-mi.cn
-mi.xn--fiqs8s
-xiaomi.org
-xn--boq62d51cv6mulib5gtq9aboevs9begt.xn--fiqs8s
 
 # --- ip-neighbor:220.181.7.203 2026-11-03 ---
-582612.xyz
 dygdu.com
 ksf609.com
 
 # --- ip-neighbor:39.156.70.37 2026-11-03 ---
 27707.com
 cz6399.com
-kawaii.lat
 linjing.ggff.net
 ltuztcapitale.com
-qiyunwangluokeji.cn
 s1.cz6399.com
 showtime.linkpc.net
-hanfuxin.com
-www77642.com
-www22484.com
 
 # --- ip-neighbor:61.241.148.62 2026-11-03 ---
-0e5m1efueov.720yun.com
-12392iwlixsyherqkhqwtn-eo.qiqiuyun.net
-1253656337.trtcube-license.cn
-1308278719.trtcube-license.cn
-156155.com.720yun.com
-1921681248.kya.cn
-196mc0eunka.720yun.com
-255umv.cn.720yun.com
-256m340e45f.720yun.com
-265md67ecsw.720yun.com
-26em1e1yle6.720yun.com
-2vcgdcx.cn.720yun.com
-360viewer.fune.fun
-3f7m0ca4lvg.720yun.com
-3ns4zrfesv.720yun.com
-3zmhh38rds.720yun.com
-3zxjgg4kjy.720yun.com
-4006535111.com
-4bbmcb8euvv.720yun.com
-4hj5xje5uc.720yun.com
-54gtwja9qy.720yun.com
-5k23rwfcxp.720yun.com
-5twdfszeek.720yun.com
-6b0mfaau4kr.720yun.com
-6d4mc61lyrf.720yun.com
-6vcs.cn.720yun.com
-75bm1cbeyrs.720yun.com
-7cbmfk3rdf.720yun.com
-7n.sudayijia.com
-94fm16atuvv.720yun.com
-9dtgs9qtz7.720yun.com
-9p5bteupkx.720yun.com
-a9dm830ntuf.720yun.com
-actscp.leiting.com
-actscp01.leiting.com
-ad2016.20012.com
-admin.xiqi.socksip.cn
-ae.zdrgs.kurl.cc
-agreement.ixuecheng.cn
-aobi.leiting.com
-apbrolh.cn.720yun.com
-api.720yun.com
-apiapp.nauuqyt.com
-apigateway-x2-trigger.tesla.cn
-apitb.tikstar.cn
-apk-auth-shanwan-50-cdn.shanwan.cn
-aq866.cn.720yun.com
-archive.yijirecovery.com
-argomedias.com.720yun.com
-asset.linggekj.com
-assets1-cn20-1.dws.workzone.sapcloud.cn
-assets1-cn20-int1.dws.workzone.sapcloud.cn
-assets1-cn40-1.dws.workzone.sapcloud.cn
-assets2-cn20-int1.dws.workzone.sapcloud.cn
-assets2-cn40-1.dws.workzone.sapcloud.cn
-assets3-cn20-1.dws.workzone.sapcloud.cn
-assets3-cn40-1.dws.workzone.sapcloud.cn
-at2ghtuvbf.720yun.com
-avatar-t.720static.com
-b21md6enuun.720yun.com
-b42mcebyttn.720yun.com
-back.topuoo.com
-bbs.720yun.com
-bbs.colg.cn
-be6m4ff4lur.720yun.com
-beautyboutique.com.cn
-bhfckl.com.720yun.com
-booking.watsonsvip.com.cn
-boss.shijirencai.com.cn
-bpmweb.watsonsvip.com.cn
-buy.lenovovip.com.cn
-c1a8b2-pub.pubssl.qiqiuyun.net
-c47ma364b5w.720yun.com
-cdl.pdfxd.com
-cdl.yijirecovery.com
-cdn-ali-file.zhiyunjie.com
-cdn-ali.qiyujiasu.com
 
 # --- ip-neighbor:180.163.29.38 2026-11-03 ---
 1024paas.com
@@ -425,3 +331,119 @@ aosuosy.cn.alibaba.com
 aotewj.cn.alibaba.com
 apsisjs.cn.alibaba.com
 apxhongyun.cn.alibaba.com
+
+# --- ip-neighbor:59.82.44.190 2026-11-09 ---
+eleme.cn
+
+# --- ip-neighbor:59.82.158.12 2026-11-09 ---
+alldomain.sopush.elemecdn.com
+dishonesty.rajax-inc.com
+ele.to
+element-cn.eleme.io
+zb-aserver-sopush.elemecdn.com
+
+# --- ip-neighbor:113.246.57.9 2026-11-09 ---
+54269d7eab566bba.qaxcloudwaf.com
+
+# --- ip-neighbor:123.56.218.176 2026-11-09 ---
+alipan.com
+alipan.top
+aliyundrive.cloud
+aliyundrive.net
+
+# --- ip-neighbor:101.126.58.133 2026-11-09 ---
+larkenterprise.com
+
+# --- ip-neighbor:122.14.236.76 2026-11-09 ---
+open.zjurl.cn
+
+# --- ip-neighbor:123.206.4.34 2026-11-09 ---
+app.everhub.cn
+app.yinxiangbiji.com
+everhub.cn
+
+# --- ip-neighbor:203.107.45.167 2026-11-09 ---
+0001000.xyz
+00063.caecp.cn
+000949.bailu.com
+0010.co
+001cf.cn
+001dnf.com
+0026.cc
+0037wan.com
+0066000.cc
+007cfw.com
+007la.com
+007zf.com
+008023.com
+009dz.com
+00qd.cn
+00wn.com
+01083531111.com
+010cmer.com
+010sjh.com
+012008.com
+01consulting.com
+01liebian.cn
+01px.com
+01wlkj.com
+01yunying.com
+0201398.com
+020zh.cn
+021-hr.com
+021360.net
+021ast.com
+021health.com
+021ljep.com
+021sound.com
+021starkey.com
+021ting.com
+021xjh.com
+022blt.cn
+022blt.com
+023jcsh.com
+023xlzx.com
+024120.cn
+02521.com
+027cy.com
+028bokda.com
+028dafa.com
+028dna.com
+028lyh.com
+028xuexi.com
+028ygkj.com
+029665.com
+029net.net
+029qj.com
+0310w.cn
+0310w.com
+0315wm.com
+0317sn.com
+0372.cc
+03xq.cn
+0426.cn
+0431goeseo.com
+0435shq.top
+04712523629.com
+0476love.com
+0512front.com.cn
+0512front.net.cn
+0513666.com
+051396111.com
+0513cy.com
+0513taxi.com
+0516168.com
+0516cn.com
+0517job.cn
+051985190582.com
+051vip.cn
+0530yun.com
+053217.com
+05333.com
+0536.group
+0536lq.com
+05370.com
+0537app.cn
+0546dknk.com
+0551ysys.com
+0558job.com
