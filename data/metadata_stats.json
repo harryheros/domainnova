@@ -1,17 +1,17 @@
 {
-  "total": 5064,
+  "total": 5146,
   "by_source": {
-    "seed_cn": 584,
+    "seed_cn": 578,
     "seed_hk": 126,
     "seed_mo": 76,
     "seed_tw": 139,
     "seed_jp": 155,
     "seed_kr": 162,
     "seed_sg": 73,
-    "extended": 3749
+    "extended": 3837
   },
   "by_ecosystem": {
-    "unknown": 4110,
+    "unknown": 4193,
     "infrastructure-kr": 162,
     "infrastructure-jp": 155,
     "infrastructure-tw": 139,
@@ -26,7 +26,7 @@
     "baidu": 16,
     "bytedance": 15,
     "telecom-backbone": 13,
-    "cdn-storage": 11,
+    "cdn-storage": 10,
     "cloud-idc": 9,
     "jd": 8,
     "huawei": 8,
@@ -37,14 +37,14 @@
     "developer-platforms": 4
   },
   "by_category": {
-    "uncategorized": 4110,
+    "uncategorized": 4193,
     "infrastructure": 731,
     "platform": 85,
     "government": 37,
     "finance": 22,
     "security_network": 18,
     "telecom_backbone": 13,
-    "cdn_storage": 11,
+    "cdn_storage": 10,
     "cloud_idc": 9,
     "cloud_device": 8,
     "consumer_tech": 6,

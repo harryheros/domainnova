@@ -1,6 +1,6 @@
 # DomainNova - JP domains
-# Generated: 2026-11-04T00:27:33Z
-# Count: 160
+# Generated: 2026-11-09T08:54:28Z
+# Count: 159
 amazon.co.jp
 ameba.jp
 ana.co.jp
@@ -89,7 +89,6 @@ mlit.go.jp
 mod.go.jp
 mofa.go.jp
 muji.com
-music.163.com
 navitime.co.jp
 nayuki.com
 nec.co.jp

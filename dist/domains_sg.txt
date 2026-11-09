@@ -1,5 +1,5 @@
 # DomainNova - SG domains
-# Generated: 2026-11-04T00:27:33Z
+# Generated: 2026-11-09T08:54:28Z
 # Count: 138
 13cr.com
 17qzx.com
@@ -112,7 +112,6 @@ souche.com
 spgroup.com.sg
 starhub.com
 stbieshu.com
-stnn.cc
 straitstimes.com
 streetdirectory.com
 suiyifa.com
@@ -132,6 +131,7 @@ winkkie.com
 wp.jun2020.com
 xiecheng.com
 xn--fiqs8sr9ge7eb4b28vo92a.com
+xuanhaikuwan.com
 yaozhizhu.com
 yuelvxing.com
 yywt.online

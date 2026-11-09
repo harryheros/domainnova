@@ -1,5 +1,5 @@
 # DomainNova - MO domains
-# Generated: 2026-11-04T00:27:33Z
+# Generated: 2026-11-09T08:54:28Z
 # Count: 77
 abm.org.mo
 al.gov.mo

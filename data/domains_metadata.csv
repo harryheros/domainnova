@@ -114,7 +114,6 @@ capitalonline.net,seed_cn,Cloud & IDC,cloud-idc,Multi-operator,cloud_idc
 capitalonline.com.cn,seed_cn,Cloud & IDC,cloud-idc,Multi-operator,cloud_idc
 wangsu.com,seed_cn,CDN & Storage,cdn-storage,Multi-provider,cdn_storage
 wangsucloud.com,seed_cn,CDN & Storage,cdn-storage,Multi-provider,cdn_storage
-wangsucloudcdn.com,seed_cn,CDN & Storage,cdn-storage,Multi-provider,cdn_storage
 chinanetcenter.com,seed_cn,CDN & Storage,cdn-storage,Multi-provider,cdn_storage
 baishancloud.com,seed_cn,CDN & Storage,cdn-storage,Multi-provider,cdn_storage
 chinacache.com,seed_cn,CDN & Storage,cdn-storage,Multi-provider,cdn_storage
@@ -356,7 +355,6 @@ bilibili.tv,seed_cn,Social & Video,unknown,Unknown,uncategorized
 xiaohongshu.com,seed_cn,Social & Video,unknown,Unknown,uncategorized
 xhscdn.com,seed_cn,Social & Video,unknown,Unknown,uncategorized
 kuaishou.com,seed_cn,Social & Video,unknown,Unknown,uncategorized
-kuaishoucdn.com,seed_cn,Social & Video,unknown,Unknown,uncategorized
 ximalaya.com,seed_cn,Social & Video,unknown,Unknown,uncategorized
 douban.com,seed_cn,Social & Video,unknown,Unknown,uncategorized
 youku.com,seed_cn,Social & Video,unknown,Unknown,uncategorized
@@ -471,14 +469,12 @@ yeah.net,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorize
 sina.com,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 sina.com.cn,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 sinaimg.cn,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
-sinaimgfx.com,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 sinajs.cn,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 weibocdn.com,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 alicdn.com,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 alicdngslb.com,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 aliyun-inc.com,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 ant.design,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
-appgallery.cloud,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 acgvideo.com,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 biliapi.com,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 bilicomic.com,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
@@ -492,7 +488,6 @@ ixigua.com,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategori
 meituanmaicai.com,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 mi-img.com,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 mihoyo.com,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
-mihoyogame.com,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 mybank.cn,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 qianfan.cloud,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 qiyukf.com,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
@@ -501,7 +496,6 @@ tencent-cloud.com,seed_cn,Additional brand ecosystem domains,unknown,Unknown,unc
 tencent-cloud.net,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 tencent.net,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 tmallgenie.com,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
-wenxin.cloud,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 xhslink.com,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 zhimg.com,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
 jdcdn.com,seed_cn,Additional brand ecosystem domains,unknown,Unknown,uncategorized
@@ -5063,3 +5057,91 @@ wxoubang.cn,extended,Auto-promoted 2026-11-04,unknown,Unknown,uncategorized
 xadayangzl.com,extended,Auto-promoted 2026-11-04,unknown,Unknown,uncategorized
 xmzwxonex.com,extended,Auto-promoted 2026-11-04,unknown,Unknown,uncategorized
 yhwxthreer.com,extended,Auto-promoted 2026-11-04,unknown,Unknown,uncategorized
+0e5m1efueov.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+12392iwlixsyherqkhqwtn-eo.qiqiuyun.net,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+1253656337.trtcube-license.cn,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+1308278719.trtcube-license.cn,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+156155.com.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+1921681248.kya.cn,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+196mc0eunka.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+255umv.cn.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+256m340e45f.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+265md67ecsw.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+26em1e1yle6.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+2vcgdcx.cn.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+360viewer.fune.fun,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+3f7m0ca4lvg.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+3ns4zrfesv.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+3zmhh38rds.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+3zxjgg4kjy.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+4006535111.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+4bbmcb8euvv.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+4hj5xje5uc.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+54gtwja9qy.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+5k23rwfcxp.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+5twdfszeek.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+6b0mfaau4kr.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+6d4mc61lyrf.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+6vcs.cn.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+75bm1cbeyrs.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+7cbmfk3rdf.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+7n.sudayijia.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+94fm16atuvv.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+9dtgs9qtz7.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+9p5bteupkx.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+a9dm830ntuf.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+actscp.leiting.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+actscp01.leiting.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+ad2016.20012.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+admin.xiqi.socksip.cn,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+ae.zdrgs.kurl.cc,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+agreement.ixuecheng.cn,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+aleenote.cn,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+aleenote.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+alinotes.cn,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+aobi.leiting.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+apbrolh.cn.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+api.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+apiapp.nauuqyt.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+apigateway-x2-trigger.tesla.cn,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+apitb.tikstar.cn,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+apk-auth-shanwan-50-cdn.shanwan.cn,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+aq866.cn.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+archive.yijirecovery.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+argomedias.com.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+asset.linggekj.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+assets1-cn20-1.dws.workzone.sapcloud.cn,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+assets1-cn20-int1.dws.workzone.sapcloud.cn,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+assets1-cn40-1.dws.workzone.sapcloud.cn,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+assets2-cn20-int1.dws.workzone.sapcloud.cn,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+assets2-cn40-1.dws.workzone.sapcloud.cn,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+assets3-cn20-1.dws.workzone.sapcloud.cn,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+assets3-cn40-1.dws.workzone.sapcloud.cn,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+at2ghtuvbf.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+avatar-t.720static.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+b21md6enuun.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+b42mcebyttn.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+back.topuoo.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+bbs.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+bbs.colg.cn,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+be6m4ff4lur.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+beautyboutique.com.cn,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+bhfckl.com.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+booking.watsonsvip.com.cn,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+boss.shijirencai.com.cn,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+bpmweb.watsonsvip.com.cn,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+buy.lenovovip.com.cn,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+c1a8b2-pub.pubssl.qiqiuyun.net,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+c47ma364b5w.720yun.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+cdl.pdfxd.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+cdl.yijirecovery.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+cdn-ali-file.zhiyunjie.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+cdn-ali.qiyujiasu.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+hanfuxin.com,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+investor.sse.org.cn,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+mi.cn,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+mi.xn--fiqs8s,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+qiyunwangluokeji.cn,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+sse.org.cn,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+xiaomi.org,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized
+xn--boq62d51cv6mulib5gtq9aboevs9begt.xn--fiqs8s,extended,Auto-promoted 2026-11-09,unknown,Unknown,uncategorized

@@ -689,12 +689,6 @@
   ecosystem: cdn-storage
   entity:    Multi-provider
   category:  cdn_storage
-- domain:    wangsucloudcdn.com
-  source:    seed_cn
-  section:   CDN & Storage
-  ecosystem: cdn-storage
-  entity:    Multi-provider
-  category:  cdn_storage
 - domain:    chinanetcenter.com
   source:    seed_cn
   section:   CDN & Storage
@@ -2141,12 +2135,6 @@
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
-- domain:    kuaishoucdn.com
-  source:    seed_cn
-  section:   Social & Video
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
 - domain:    ximalaya.com
   source:    seed_cn
   section:   Social & Video
@@ -2831,12 +2819,6 @@
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
-- domain:    sinaimgfx.com
-  source:    seed_cn
-  section:   Additional brand ecosystem domains
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
 - domain:    sinajs.cn
   source:    seed_cn
   section:   Additional brand ecosystem domains
@@ -2868,12 +2850,6 @@
   entity:    Unknown
   category:  uncategorized
 - domain:    ant.design
-  source:    seed_cn
-  section:   Additional brand ecosystem domains
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
-- domain:    appgallery.cloud
   source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
@@ -2957,12 +2933,6 @@
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
-- domain:    mihoyogame.com
-  source:    seed_cn
-  section:   Additional brand ecosystem domains
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
 - domain:    mybank.cn
   source:    seed_cn
   section:   Additional brand ecosystem domains
@@ -3006,12 +2976,6 @@
   entity:    Unknown
   category:  uncategorized
 - domain:    tmallgenie.com
-  source:    seed_cn
-  section:   Additional brand ecosystem domains
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
-- domain:    wenxin.cloud
   source:    seed_cn
   section:   Additional brand ecosystem domains
   ecosystem: unknown
@@ -30380,6 +30344,534 @@
 - domain:    yhwxthreer.com
   source:    extended
   section:   Auto-promoted 2026-11-04
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    0e5m1efueov.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    12392iwlixsyherqkhqwtn-eo.qiqiuyun.net
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    1253656337.trtcube-license.cn
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    1308278719.trtcube-license.cn
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    156155.com.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    1921681248.kya.cn
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    196mc0eunka.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    255umv.cn.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    256m340e45f.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    265md67ecsw.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    26em1e1yle6.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    2vcgdcx.cn.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    360viewer.fune.fun
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    3f7m0ca4lvg.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    3ns4zrfesv.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    3zmhh38rds.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    3zxjgg4kjy.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    4006535111.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    4bbmcb8euvv.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    4hj5xje5uc.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    54gtwja9qy.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    5k23rwfcxp.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    5twdfszeek.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    6b0mfaau4kr.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    6d4mc61lyrf.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    6vcs.cn.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    75bm1cbeyrs.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    7cbmfk3rdf.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    7n.sudayijia.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    94fm16atuvv.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    9dtgs9qtz7.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    9p5bteupkx.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    a9dm830ntuf.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    actscp.leiting.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    actscp01.leiting.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    ad2016.20012.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    admin.xiqi.socksip.cn
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    ae.zdrgs.kurl.cc
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    agreement.ixuecheng.cn
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    aleenote.cn
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    aleenote.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    alinotes.cn
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    aobi.leiting.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    apbrolh.cn.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    api.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    apiapp.nauuqyt.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    apigateway-x2-trigger.tesla.cn
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    apitb.tikstar.cn
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    apk-auth-shanwan-50-cdn.shanwan.cn
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    aq866.cn.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    archive.yijirecovery.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    argomedias.com.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    asset.linggekj.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    assets1-cn20-1.dws.workzone.sapcloud.cn
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    assets1-cn20-int1.dws.workzone.sapcloud.cn
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    assets1-cn40-1.dws.workzone.sapcloud.cn
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    assets2-cn20-int1.dws.workzone.sapcloud.cn
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    assets2-cn40-1.dws.workzone.sapcloud.cn
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    assets3-cn20-1.dws.workzone.sapcloud.cn
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    assets3-cn40-1.dws.workzone.sapcloud.cn
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    at2ghtuvbf.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    avatar-t.720static.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    b21md6enuun.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    b42mcebyttn.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    back.topuoo.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    bbs.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    bbs.colg.cn
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    be6m4ff4lur.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    beautyboutique.com.cn
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    bhfckl.com.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    booking.watsonsvip.com.cn
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    boss.shijirencai.com.cn
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    bpmweb.watsonsvip.com.cn
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    buy.lenovovip.com.cn
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    c1a8b2-pub.pubssl.qiqiuyun.net
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    c47ma364b5w.720yun.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    cdl.pdfxd.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    cdl.yijirecovery.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    cdn-ali-file.zhiyunjie.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    cdn-ali.qiyujiasu.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    hanfuxin.com
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    investor.sse.org.cn
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    mi.cn
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    mi.xn--fiqs8s
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    qiyunwangluokeji.cn
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    sse.org.cn
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    xiaomi.org
+  source:    extended
+  section:   Auto-promoted 2026-11-09
+  ecosystem: unknown
+  entity:    Unknown
+  category:  uncategorized
+- domain:    xn--boq62d51cv6mulib5gtq9aboevs9begt.xn--fiqs8s
+  source:    extended
+  section:   Auto-promoted 2026-11-09
   ecosystem: unknown
   entity:    Unknown
   category:  uncategorized
