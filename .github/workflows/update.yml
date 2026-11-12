@@ -99,11 +99,17 @@ jobs:
         env:
           # Optional: set a repo secret to enable the ViewDNS JSON API fallback.
           VIEWDNS_APIKEY: ${{ secrets.VIEWDNS_APIKEY }}
+          DOMAINNOVA_DOH_URL: ${{ secrets.DOMAINNOVA_DOH_URL }}
         run: |
           echo "[+] Running IP neighbor agent..."
           python sources/discovery_agents/agent_ip_neighbor.py
 
       - name: Build domain artifacts
+        env:
+          # Optional repo secrets: our own resolver (a DNSNova ecs.client_path
+          # URL), and DOMAINNOVA_PUBLIC_DOH=off to never use public resolvers.
+          DOMAINNOVA_DOH_URL: ${{ secrets.DOMAINNOVA_DOH_URL }}
+          DOMAINNOVA_PUBLIC_DOH: ${{ secrets.DOMAINNOVA_PUBLIC_DOH }}
         run: python sources/scripts/build_domains.py
 
       - name: Build metadata artifacts

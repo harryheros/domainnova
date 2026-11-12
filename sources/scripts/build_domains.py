@@ -123,14 +123,21 @@ IPNOVA_CN_URL = REGION_CIDR_URLS["CN"]
 #       but is included as a fallback for availability; its CN PoPs still help.
 #       Quad9 ECS (dns11.quad9.net) follows Google's JSON schema and supports ECS.
 # DoH upstreams - tiered by ECS capability
-# Tier 0: self-hosted HK node (AdGuard Home, ECS forwarded) with Google /
-#         Quad9 upstreams. Gives a second, HK-based path to the same public
-#         resolvers; no query goes to resolvers in mainland China.
-# Primary pool: upstreams that honor our edns_client_subnet parameter.
-#               These are queried first (round-robin) for accurate GeoDNS.
+# Tier 0: our own resolver, asked first. With DOMAINNOVA_DOH_URL set (a
+#         repository secret) it is a DNSNova server's ecs.client_path: it
+#         resolves from each domain's own name servers and passes them our
+#         client subnet, with no public resolver in between. Without it,
+#         the hosted coodns node (Google / Quad9 upstreams, ECS forwarded).
+#         No query goes to resolvers in mainland China either way.
+# Primary pool: public upstreams that honor our edns_client_subnet parameter,
+#               asked (round-robin) when tier 0 has no answer.
 # Fallback pool: upstreams that ignore ECS but still resolve DNS.
 #                Only used if ALL primaries fail for a given domain.
-DOH_RESCUE = "https://vip-16.coodns.com/query"  # HK node, Google/Quad9 upstreams with ECS
+# DOMAINNOVA_PUBLIC_DOH=off skips the primary and fallback pools: a domain
+# tier 0 cannot resolve keeps its last placement (sticky fallback).
+OWN_DOH = os.environ.get("DOMAINNOVA_DOH_URL", "").strip()
+DOH_RESCUE = OWN_DOH or "https://vip-16.coodns.com/query"
+PUBLIC_DOH = os.environ.get("DOMAINNOVA_PUBLIC_DOH", "on").strip().lower() not in ("off", "0", "false", "no")
 
 DOH_PRIMARIES = [
     "https://dns.google/resolve",           # Google JSON API (ECS)
@@ -173,7 +180,7 @@ _rescue_disabled = False
 
 # Runtime-detected mode for the rescue endpoint: "json", "wire", or None (untested)
 # Auto-detected on first use, then locked for the rest of the run.
-_rescue_mode: Optional[str] = None
+_rescue_mode: Optional[str] = "wire" if OWN_DOH else None  # DNSNova speaks RFC 8484 only
 _rescue_mode_lock = Lock()
 
 # ECS subnets - use actual China Telecom recursive DNS IPs as ECS hints.
@@ -1374,10 +1381,17 @@ def _do_resolve(domain: str, upstream: str, session: requests.Session) -> List[s
 
 def _resolve_name(domain: str, session: requests.Session) -> List[str]:
     """Resolve one exact name through the upstream chain (no www fallback)."""
-    # Tier 0: self-hosted HK rescue endpoint (Google/Quad9 upstreams, tried first)
+    # Tier 0: our own resolver (tried first). It is asked twice: on a lossy
+    # path to a domain's name servers the first try can run out of time,
+    # and the second goes to the servers that answered (it has learnt
+    # which did not) with the zones' delegations already known.
     ips = _resolve_rescue(domain, session)
+    if not ips and OWN_DOH:
+        ips = _resolve_rescue(domain, session)
     if ips:
         return ips
+    if not PUBLIC_DOH:
+        return []
     # Tier 1: try ECS-capable primary (round-robin selection)
     primary = next_doh_upstream()
     ips = _do_resolve(domain, primary, session)
