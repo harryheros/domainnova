@@ -2,8 +2,10 @@
 """
 agent_ip_neighbor.py - Reverse IP neighbor discovery for DomainNova.
 
-Resolves seed domains to their CN IPs via Google DoH + ECS, then queries
-Reverse IP APIs to find co-hosted domains on the same server.
+Resolves seed domains to their CN IPs (through our own resolver when
+DOMAINNOVA_DOH_URL is set, else Google DoH, with a China Telecom client
+subnet), then queries Reverse IP APIs to find co-hosted domains on the
+same server.
 
 Primary:  HackerTarget Reverse IP API (free tier, small daily quota)
 Fallback: ViewDNS.info Reverse IP **JSON API**, only when the
@@ -29,6 +31,7 @@ import ipaddress
 import os
 import random
 import re
+import struct
 import sys
 import time
 from pathlib import Path
@@ -58,6 +61,8 @@ SLEEP_BETWEEN_QUERIES = 2.5
 
 DOH_URL    = "https://dns.google/resolve"
 ECS_SUBNET = "114.114.114.0/24"
+# A DNSNova server's ecs.client_path (RFC 8484), asked instead of Google
+OWN_DOH    = os.environ.get("DOMAINNOVA_DOH_URL", "").strip()
 
 HACKERTARGET_URL = "https://api.hackertarget.com/reverseiplookup/"
 VIEWDNS_URL      = "https://api.viewdns.info/reverseip/"
@@ -72,6 +77,8 @@ class QuotaExhausted(Exception):
 # DoH resolution
 # ---------------------------------------------------------------------------
 def resolve_to_ipv4(domain: str, session: requests.Session) -> List[str]:
+    if OWN_DOH:
+        return _resolve_own(domain, session)
     params = {
         "name":               domain,
         "type":               "A",
@@ -89,6 +96,62 @@ def resolve_to_ipv4(domain: str, session: requests.Session) -> List[str]:
             if ans.get("type") == 1
         ]
     except requests.RequestException:
+        return []
+
+
+def _wire_query(domain: str, subnet: str) -> bytes:
+    """An RFC 1035 A query with an EDNS Client Subnet option (RFC 7871)."""
+    net = ipaddress.ip_network(subnet, strict=False)
+    qname = b"".join(bytes([len(p)]) + p.encode("ascii") for p in domain.strip(".").split(".")) + b"\x00"
+    header = struct.pack(">HHHHHH", random.getrandbits(16), 0x0100, 1, 0, 0, 1)
+    addr = net.network_address.packed[: (net.prefixlen + 7) // 8]
+    ecs = struct.pack(">HBB", 1, net.prefixlen, 0) + addr
+    opt = struct.pack(">HH", 8, len(ecs)) + ecs
+    return header + qname + struct.pack(">HH", 1, 1) + b"\x00" + struct.pack(">HHIH", 41, 4096, 0, len(opt)) + opt
+
+
+def _answer_ipv4(data: bytes) -> List[str]:
+    """The A records in the answer section of a DNS response."""
+    if len(data) < 12 or data[3] & 0x0F:
+        return []
+    qd, an = struct.unpack(">HH", data[4:8])
+    pos = 12
+
+    def skip_name(p: int) -> int:
+        while p < len(data):
+            n = data[p]
+            if n == 0:
+                return p + 1
+            if n & 0xC0:
+                return p + 2
+            p += n + 1
+        return p
+
+    for _ in range(qd):
+        pos = skip_name(pos) + 4
+    out = []
+    for _ in range(an):
+        pos = skip_name(pos)
+        if pos + 10 > len(data):
+            break
+        rtype, _cls, _ttl, rdlen = struct.unpack(">HHIH", data[pos:pos + 10])
+        pos += 10
+        if rtype == 1 and rdlen == 4 and pos + 4 <= len(data):
+            out.append(".".join(str(b) for b in data[pos:pos + 4]))
+        pos += rdlen
+    return out
+
+
+def _resolve_own(domain: str, session: requests.Session) -> List[str]:
+    try:
+        time.sleep(random.uniform(0.05, 0.15))
+        resp = session.post(OWN_DOH, data=_wire_query(domain, ECS_SUBNET), timeout=10,
+                            headers={"Content-Type": "application/dns-message",
+                                     "Accept": "application/dns-message"})
+        if resp.status_code != 200:
+            return []
+        return _answer_ipv4(resp.content)
+    except (requests.RequestException, ValueError):
         return []
 
 

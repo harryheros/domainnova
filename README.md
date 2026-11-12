@@ -42,7 +42,11 @@ Each domain is scored separately for every region.
 
 Only `.cn` has a fallback: other regional TLDs have no mandatory filing system. Score ≥ 60 goes to `dist/`; everything else stays in `domains.csv` only.
 
-DNS uses Google DoH with rotating EDNS Client Subnet (Chinese carrier networks), so results match what users in the region see, without querying DNS servers in China. A domain with no record on its bare name, common for government sites, is checked through `www.<domain>`.
+Hand-curated seeds (`sources/manual/seed_{region}.txt`) are the exception: each is placed in its own region directly, so a single misattributed address cannot move a well-known domain. Each week a sample of every seed list is checked against IPNova, and how many still land in their region is recorded in `data/seed_health.json`; seeds are never moved automatically.
+
+DNS goes to our own resolver first, with a rotating EDNS Client Subnet of Chinese carrier networks, so results match what users in the region see, without querying DNS servers in China. With the repository secret `DOMAINNOVA_DOH_URL` set, that resolver is a [DNSNova](https://github.com/harryheros/dnsnova) server's `ecs.client_path`, which resolves from each domain's own name servers; without it, a hosted DoH node. Public resolvers with client subnet support (Google, Quad9) answer only when it does not, and `DOMAINNOVA_PUBLIC_DOH=off` turns them off: a domain then keeps its last placement until our resolver answers again. A domain with no record on its bare name, common for government sites, is checked through `www.<domain>`.
+
+To check our resolver against Google before turning public resolvers off, `python sources/scripts/compare_resolvers.py` resolves every published domain through both with the same client subnet and reports, in `data/resolver_compare.json`, how often they place it in the same region and which domains differ.
 
 ---
 
@@ -90,6 +94,6 @@ Local tools: `python sources/scripts/build_domains.py`, `build_metadata.py --all
 ## License
 
 - **Non-commercial use**: permitted under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
-- **Commercial use** (SaaS, API resale, redistribution, paid products): requires prior written authorization — see [COMMERCIAL_LICENSE.md](./COMMERCIAL_LICENSE.md) or open an [issue](https://github.com/harryheros/domainnova/issues).
+- **Commercial use** (SaaS, API resale, redistribution, paid products, use inside a company beyond research): requires prior written authorization — see [COMMERCIAL_LICENSE.md](./COMMERCIAL_LICENSE.md), or ask at [novaod.com/licensing](https://novaod.com/licensing).
 
 Part of the [Nova infrastructure toolkit](https://github.com/harryheros).

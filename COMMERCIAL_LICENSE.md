@@ -32,10 +32,10 @@ The following uses require explicit prior written authorization from the author:
 
 For commercial licensing inquiries, including enterprise plans, OEM rights, API redistribution, and white-label deployment:
 
-→ Open an issue at: https://github.com/harryheros/domainnova/issues  
-→ Label it: `commercial-licensing`
+→ Use the form at https://novaod.com/licensing  
+→ Or write to licensing@novaod.com
 
-Please include a brief description of your intended use case.
+Please include a brief description of your intended use case: which data, what it is for, and roughly how widely it will be used.
 
 ---
 
