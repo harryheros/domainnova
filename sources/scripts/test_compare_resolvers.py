@@ -71,12 +71,18 @@ class OwnResolverSettings(unittest.TestCase):
             os.environ.pop("DOMAINNOVA_PUBLIC_DOH", None)
             importlib.reload(build_domains)
 
-    def test_default_is_hosted_node_and_public(self):
+    def test_default_is_public_resolvers_only(self):
         os.environ.pop("DOMAINNOVA_DOH_URL", None)
         os.environ.pop("DOMAINNOVA_PUBLIC_DOH", None)
         bd = importlib.reload(build_domains)
-        self.assertEqual(bd.DOH_RESCUE, "https://vip-16.coodns.com/query")
+        self.assertEqual(bd.DOH_RESCUE, "")
         self.assertTrue(bd.PUBLIC_DOH)
+        self.assertNotIn("", bd.DOH_UPSTREAMS)
+        # no tier 0 is asked: straight to the public resolvers
+        with patch.object(bd, "_resolve_via_json") as j, patch.object(bd, "_resolve_via_wire") as w:
+            self.assertEqual(bd._resolve_rescue("example.cn", None), [])
+            j.assert_not_called()
+            w.assert_not_called()
 
     def test_own_resolver_first_public_off(self):
         bd = self.reload({"DOMAINNOVA_DOH_URL": "https://dns.example/ecs-x", "DOMAINNOVA_PUBLIC_DOH": "off"})
@@ -94,7 +100,7 @@ class OwnResolverSettings(unittest.TestCase):
         answers = [[], ["1.0.1.1"]]
         with patch.object(bd, "_resolve_rescue", side_effect=lambda d, s: answers.pop(0)):
             self.assertEqual(bd._resolve_name("example.cn", None), ["1.0.1.1"])
-        # without our own resolver configured, the hosted node is asked once
+        # without our own resolver configured, tier 0 is asked once (and has nothing)
         bd = self.reload({"DOMAINNOVA_DOH_URL": "", "DOMAINNOVA_PUBLIC_DOH": "off"})
         calls = []
         with patch.object(bd, "_resolve_rescue", side_effect=lambda d, s: calls.append(d) or []):

@@ -81,13 +81,14 @@ class TestQuad9WireMode(unittest.TestCase):
 # ---------------------------------------------------------------------------
 class TestRescueBreaker(unittest.TestCase):
     def setUp(self):
-        self._saved = (bd._rescue_mode, bd._rescue_consecutive_failures, bd._rescue_disabled)
+        self._saved = (bd._rescue_mode, bd._rescue_consecutive_failures, bd._rescue_disabled, bd.DOH_RESCUE)
+        bd.DOH_RESCUE = "https://dns.example/ecs-test"  # tier 0 only exists when configured
         bd._rescue_mode = None
         bd._rescue_consecutive_failures = 0
         bd._rescue_disabled = False
 
     def tearDown(self):
-        bd._rescue_mode, bd._rescue_consecutive_failures, bd._rescue_disabled = self._saved
+        bd._rescue_mode, bd._rescue_consecutive_failures, bd._rescue_disabled, bd.DOH_RESCUE = self._saved
 
     def test_dead_rescue_is_disabled_after_threshold(self):
         with mock.patch.object(bd, "_resolve_via_json", return_value=(False, [])) as j, \

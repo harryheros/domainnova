@@ -123,11 +123,11 @@ IPNOVA_CN_URL = REGION_CIDR_URLS["CN"]
 #       but is included as a fallback for availability; its CN PoPs still help.
 #       Quad9 ECS (dns11.quad9.net) follows Google's JSON schema and supports ECS.
 # DoH upstreams - tiered by ECS capability
-# Tier 0: our own resolver, asked first. With DOMAINNOVA_DOH_URL set (a
-#         repository secret) it is a DNSNova server's ecs.client_path: it
+# Tier 0: our own resolver, asked first, when DOMAINNOVA_DOH_URL is set (a
+#         repository secret): a DNSNova server's ecs.client_path, which
 #         resolves from each domain's own name servers and passes them our
-#         client subnet, with no public resolver in between. Without it,
-#         the hosted coodns node (Google / Quad9 upstreams, ECS forwarded).
+#         client subnet, with no public resolver in between. Without it
+#         (a fork, a local run), the public pools below are used directly.
 #         No query goes to resolvers in mainland China either way.
 # Primary pool: public upstreams that honor our edns_client_subnet parameter,
 #               asked (round-robin) when tier 0 has no answer.
@@ -136,7 +136,7 @@ IPNOVA_CN_URL = REGION_CIDR_URLS["CN"]
 # DOMAINNOVA_PUBLIC_DOH=off skips the primary and fallback pools: a domain
 # tier 0 cannot resolve keeps its last placement (sticky fallback).
 OWN_DOH = os.environ.get("DOMAINNOVA_DOH_URL", "").strip()
-DOH_RESCUE = OWN_DOH or "https://vip-16.coodns.com/query"
+DOH_RESCUE = OWN_DOH  # "" : no tier 0
 PUBLIC_DOH = os.environ.get("DOMAINNOVA_PUBLIC_DOH", "on").strip().lower() not in ("off", "0", "false", "no")
 
 DOH_PRIMARIES = [
@@ -149,7 +149,7 @@ DOH_FALLBACKS = [
 ]
 
 # Combined list (rescue + primaries + fallbacks) - for iteration/reference
-DOH_UPSTREAMS = [DOH_RESCUE] + DOH_PRIMARIES + DOH_FALLBACKS
+DOH_UPSTREAMS = ([DOH_RESCUE] if DOH_RESCUE else []) + DOH_PRIMARIES + DOH_FALLBACKS
 
 # Which upstreams support the edns_client_subnet query parameter?
 DOH_ECS_SUPPORT = {
@@ -1332,7 +1332,7 @@ def _resolve_rescue(domain: str, session: requests.Session) -> List[str]:
     Protected by a circuit breaker (see RESCUE_MAX_CONSECUTIVE_FAILURES).
     """
     global _rescue_mode
-    if _rescue_disabled:
+    if not DOH_RESCUE or _rescue_disabled:
         return []
     mode = _rescue_mode
     use_ecs = DOH_ECS_SUPPORT.get(DOH_RESCUE, False)
