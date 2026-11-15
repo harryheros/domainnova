@@ -1,8 +1,7 @@
 # DomainNova - HK domains
-# Generated: 2026-11-09T08:54:28Z
-# Count: 165
+# Generated: 2026-11-15T01:41:40Z
+# Count: 159
 163.net
-350abc.net
 3hk.hk
 99166.com
 aastocks.com
@@ -28,7 +27,6 @@ clp.com.hk
 cmab.gov.hk
 cmfwiper.com
 craer.com
-crcbank.com
 crhk.com.hk
 csb.gov.hk
 csl.com.hk
@@ -47,7 +45,6 @@ discuss.com.hk
 dragonfly.fm
 edb.gov.hk
 eduhk.hk
-fanuc.com.cn
 find853.com
 fortress.com.hk
 fso.gov.hk
@@ -122,7 +119,6 @@ on.cc
 openrice.com
 pccw.com
 polyu.edu.hk
-pythonheidong.com
 rthk.hk
 sb.gov.hk
 sc.com
@@ -131,6 +127,7 @@ sfc.hk
 sfu.edu.hk
 singtao.com
 smartone.com
+smc18.com
 staticfile.org
 sth.org.hk
 stheadline.com
@@ -140,7 +137,6 @@ taodocs.com
 three.com.hk
 tmall.hk
 tom.com
-tongniguoji.com
 tungwah.org.hk
 tvb.com
 twc.edu.hk
@@ -154,8 +150,6 @@ westkowloon.hk
 wharfholdings.com
 wheelockcompany.com
 winglungbank.com
-wnbsq.com
-xaygddc.com
 xckgq.com
 xmzgxcl.com
 xpcha.com

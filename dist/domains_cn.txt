@@ -1,6 +1,6 @@
 # DomainNova - CN domains
-# Generated: 2026-11-09T08:54:28Z
-# Count: 4329
+# Generated: 2026-11-15T01:41:40Z
+# Count: 4336
 0001000.xyz
 00063.caecp.cn
 00086.net
@@ -96,6 +96,7 @@
 0859qp.com
 0e5m1efueov.720yun.com
 0x9.me
+1.805188.vip
 10000.com
 10010.com
 10086.cn
@@ -440,6 +441,7 @@
 5k23rwfcxp.720yun.com
 5th.zone
 5twdfszeek.720yun.com
+6.805188.vip
 618xz.com
 61ff0.myhard.com
 643777.com
@@ -464,6 +466,7 @@
 8378888.com
 843777.com
 86656.net
+8686868.vip
 884358.com
 888255.com
 88gm.com
@@ -861,7 +864,6 @@ bcfeedback.taobao.com
 bdimg.com
 bds666.com
 bdstatic.com
-bdwork.com
 be6m4ff4lur.720yun.com
 bear20.com
 beautifulpicture.cn
@@ -1151,6 +1153,7 @@ chinadianming.com
 chinafiber.com
 chinafilm.com
 chinagoods.com
+chinahighlights.com
 chinaiol.com
 chinajianbanji.com
 chinalogo.cn
@@ -1169,6 +1172,7 @@ chinatelecom.com.cn
 chinattl.com
 chinaunicom.cn
 chinaunicom.com
+chinaunicom.com.cn
 chinawater.com
 chinaz.com
 chiphell.com
@@ -1637,7 +1641,6 @@ etocrm.com
 etoplive.com
 etrade.china-invs.cn
 etrade.epf.com.cn
-eul.zhihangwl.com
 euromatl.com
 evebattery.com
 everbright.com
@@ -1668,6 +1671,7 @@ fang.com
 fangan.elecfans.com
 fangchengbao.com
 fangdalaw.box.lenovo.com
+fanuc.com.cn
 fanwenbin.gitcafe.com
 fanyantao.com
 faq.yingjiesheng.com
@@ -1885,7 +1889,6 @@ gxjgjstzjt.com
 gxjlsc.com
 gxjmzg.com
 gxjsd56.com
-gxjyjs168.com
 gxkefei.com
 gxlcclean.com
 gxlcjsjt.com
@@ -1924,6 +1927,7 @@ gzst888.cn
 gzwyc.w36.mc-test.com
 gzyowin.com
 h3c.com
+h3c.com.cn
 h5.umx.art
 h5.vip.com.vipgslb.com
 h5.zjsnews.cn
@@ -1931,7 +1935,6 @@ h5cdn.izuiyou.com
 h5king.com
 h5zhifu.com
 haday.com.cn
-haha33.com
 haicnh.com
 haidegroup.com
 haidilao.com
@@ -2496,6 +2499,7 @@ le-wan.com
 leader.cn
 leadmedpharm.com
 leathergoods.com.cn
+lecaiwang.live
 lecloudapis.com
 leduimg.com
 leetcode.cn
@@ -2561,7 +2565,6 @@ lizheming.gitcafe.com
 lizhennan.w36.cndns5.com
 lizhi.fm
 lizhiyu.w36.mc-test.com
-llsstt.dpdns.org
 lmcw.art
 lmjcc.com
 ln.zaodianqi.com
@@ -3173,7 +3176,6 @@ rypower.cn
 rzfyu.com
 s.yingjiesheng.com
 s.yunresail-6.cn
-s.zylingxian.com
 s01.tianjimedia.com
 s3.javsee.cc
 saas.jieyixin.com.cn
@@ -3349,6 +3351,7 @@ sohu.com
 sohucs.com
 soicp.com
 songcwh.com
+soso.com
 southcn.com
 southernmindict.net
 sowang.com
@@ -3473,6 +3476,7 @@ tbsjmail.tsingtao.com.cn
 tcl.com
 tcloudfamily.com
 tclwxtwox.com
+tcorea.com
 tdrffh.com
 tdsjbj.com
 teambition.com
@@ -3942,6 +3946,7 @@ x3r6hmbayv.720yun.com
 x821.com
 x8sb.com
 xadayangzl.com
+xaygddc.com
 xayizhou.com
 xbaodi.com
 xcao.win
@@ -4027,6 +4032,7 @@ xpeng.com
 xpsup.com
 xs8.cn
 xsrm.com
+xt-gas.com
 xtep.com
 xthyjt.com
 xuanshitou.com
@@ -4256,6 +4262,7 @@ zhonghuilv.com
 zhongtaiedu.com.cn
 zhongtong.com.cn
 zhongzishiye.com
+zhouqinghuan.com
 zhrs.nwpu.edu.cn
 zhujiwanjia.com
 zhuluyy.com

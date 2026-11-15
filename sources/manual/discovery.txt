@@ -113,120 +113,26 @@
 # --- ip-neighbor:124.251.34.141 2026-11-03 ---
 
 # --- ip-neighbor:220.181.7.203 2026-11-03 ---
-dygdu.com
 ksf609.com
 
 # --- ip-neighbor:39.156.70.37 2026-11-03 ---
-27707.com
 cz6399.com
-linjing.ggff.net
-ltuztcapitale.com
 s1.cz6399.com
 showtime.linkpc.net
 
 # --- ip-neighbor:61.241.148.62 2026-11-03 ---
 
 # --- ip-neighbor:180.163.29.38 2026-11-03 ---
-1024paas.com
-155.cn
-1s1k.zqedu.net
-29xf.com
-36fengshui.com
-37cs.com.cn
-399dj.com
-3d66.com
-4dgamelab.com
-51txapp.com
-52n.cc
 93ppt.com
-aczhan.com
-ad.nur.cn
-addon.dz-x.net
-adm.elecfans.com
-admin.aitalker.vip
 ahtl.hly.com
-aiduoyou.com
-aoyacms.com
 app.lhzs.hly.com
-app.niceviewer.com
-app.pchome.net
-apps.mishangwo.com
-aqianniao.com
-arrivalogistics.com
-attachment.digitalfun.net
-banzhuti.com
-bbs.hly.com
-bbs.ihaiyan.com
-beautifulpicture.cn
-bfnyxb.imaaahs.ac.cn
 bhqsl.hly.com
-biddingx.com
-bijin.ink
-bio.jmdna.com
 bjzb.hly.com
-bkdy.cntheory.com
-blogbig.cn
-bonjour.ltd
-byshxx.zqedu.net
-bzdrs.cn
-campus.wanyantech.com
-ce-old.gtemc.cn
-cfsy.qixingtang.com
-cfzxxx.zqedu.net
-changjiang.huijiaoyun.cn
-chatu.pro
-chmlfrp.net
 chpay.site
-clawhome.cc
-client.jxnccd.com
-client.weixinhost.com
-cloud.coreyuan.cn
-cloud.i8-mc.cn
 cn.xreview.club
-code.minstreams.com
-console.i8-mc.cn
-coorw.com
-cqms.game2.cn
 cqry.hly.com
-csig.kechuangfu.com
-css.huijiaoyun.cn
-cvjandco.com
-cwsj.klwx.top
 d02.dancher.link
-d5techs.com
-daka.afugpt.cn
-ddcpc.cn
-deansel.com
-desaysv-xxzx.com
-diqian.com
-dismall.com
 dls.hly.com
-dnspod-vip2.beian.mydnspod.net
-dnspod-vip2.mydnspod.net
-dnspod-vip2.urlpod.cn
-docs.rustfs.com.cn
-dogame.com
-down.rayjoyscm.com
-dtsyxx.zqedu.net
-duotai.tech
-dzdkxx.zqedu.net
-eanic.cn
-eduecard.com
-efengqing.com
-elitebaike.com
-endermite.cn
-epic.sangfor.com
-erp.fineex.com
-etamicro.com
-exam.wangxiao.cn
-excelhome.net
-eyesnews.cn
-ezhou.huijiaoyun.cn
-f.ls114.cn
-fancygame.cn
-fangan.elecfans.com
-fc.shang.pub
-file-cn.liebaba.com
 
 # --- ip-neighbor:211.149.239.6 2026-11-03 ---
 ykwxfourk.com
@@ -447,3 +353,19 @@ everhub.cn
 0546dknk.com
 0551ysys.com
 0558job.com
+
+# --- ip-neighbor:60.191.123.44 2026-11-15 ---
+h3c.com.cn
+
+# --- ip-neighbor:122.14.229.58 2026-11-15 ---
+1.805188.vip
+6.805188.vip
+8686868.vip
+lecaiwang.live
+tcorea.com
+
+# --- ip-neighbor:101.126.56.164 2026-11-15 ---
+zhouqinghuan.com
+
+# --- ip-neighbor:120.52.99.224 2026-11-15 ---
+chinaunicom.com.cn
