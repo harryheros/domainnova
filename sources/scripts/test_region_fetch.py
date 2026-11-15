@@ -20,7 +20,7 @@ import ipaddress
 import sys
 import unittest
 from pathlib import Path
-from unittest.mock import MagicMock, patch
+from unittest.mock import MagicMock
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
@@ -49,8 +49,8 @@ def _mk_resp(text: str, status: int = 200) -> MagicMock:
 
 
 def _big_cidr_blob(prefix: int, n: int) -> str:
-    """Generate n distinct /32 CIDRs in a single /16 — easily exceeds the
-    50-line sanity threshold without colliding across test cases."""
+    """Generate n distinct /32 CIDRs in a single /16, enough to reach the
+    per-region sanity thresholds without colliding across test cases."""
     lines = [f"10.{prefix}.{i // 256}.{i % 256}/32" for i in range(n)]
     return "\n".join(lines) + "\n"
 
@@ -115,7 +115,7 @@ class TestFetchOneRegion(unittest.TestCase):
         self.assertEqual(nets, [])
 
     def test_sanity_fuse_below_threshold(self):
-        # 49 lines < IPNOVA_MIN_LINES (50) → empty
+        # 499 lines < the HK floor in IPNOVA_MIN_LINES_PER_BUCKET (500) → empty
         text = _big_cidr_blob(0, 499)
         session = MagicMock()
         session.get.return_value = _mk_resp(text)
@@ -123,7 +123,7 @@ class TestFetchOneRegion(unittest.TestCase):
         self.assertEqual(nets, [])
 
     def test_sanity_fuse_at_threshold(self):
-        # exactly 50 lines → passes
+        # exactly 500 lines (the HK floor) → passes
         text = _big_cidr_blob(0, 500)
         session = MagicMock()
         session.get.return_value = _mk_resp(text)

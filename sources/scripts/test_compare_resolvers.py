@@ -90,26 +90,27 @@ class OwnResolverSettings(unittest.TestCase):
         self.assertEqual(bd._rescue_mode, "wire")
         self.assertFalse(bd.PUBLIC_DOH)
         asked = []
-        with patch.object(bd, "_resolve_rescue", return_value=[]), \
+        with patch.object(bd, "_resolve_rescue_detail", return_value=([], False)), \
              patch.object(bd, "_do_resolve", side_effect=lambda d, u, s: asked.append(u) or ["1.0.1.1"]):
             self.assertEqual(bd._resolve_name("example.cn", None), [])
         self.assertEqual(asked, [], "public resolvers asked with DOMAINNOVA_PUBLIC_DOH=off")
 
     def test_own_resolver_asked_twice(self):
+        # asked again when the first try had no answer (see test_v37_own_resolver_retry)
         bd = self.reload({"DOMAINNOVA_DOH_URL": "https://dns.example/ecs-x", "DOMAINNOVA_PUBLIC_DOH": "off"})
-        answers = [[], ["1.0.1.1"]]
-        with patch.object(bd, "_resolve_rescue", side_effect=lambda d, s: answers.pop(0)):
+        answers = [([], False), (["1.0.1.1"], True)]
+        with patch.object(bd, "_resolve_rescue_detail", side_effect=lambda d, s: answers.pop(0)):
             self.assertEqual(bd._resolve_name("example.cn", None), ["1.0.1.1"])
         # without our own resolver configured, tier 0 is asked once (and has nothing)
         bd = self.reload({"DOMAINNOVA_DOH_URL": "", "DOMAINNOVA_PUBLIC_DOH": "off"})
         calls = []
-        with patch.object(bd, "_resolve_rescue", side_effect=lambda d, s: calls.append(d) or []):
+        with patch.object(bd, "_resolve_rescue_detail", side_effect=lambda d, s: calls.append(d) or ([], False)):
             bd._resolve_name("example.cn", None)
         self.assertEqual(len(calls), 1)
 
     def test_public_fallback_when_on(self):
         bd = self.reload({"DOMAINNOVA_DOH_URL": "https://dns.example/ecs-x", "DOMAINNOVA_PUBLIC_DOH": ""})
-        with patch.object(bd, "_resolve_rescue", return_value=[]), \
+        with patch.object(bd, "_resolve_rescue_detail", return_value=([], False)), \
              patch.object(bd, "_do_resolve", return_value=["1.0.1.1"]):
             self.assertEqual(bd._resolve_name("example.cn", None), ["1.0.1.1"])
 

@@ -1,53 +1,95 @@
-# Session Changelog
+# DomainNova Changelog
 
-## v3.6.1 — seed review without false alarms
+Releases, newest first. The weekly data updates are the
+`chore: auto-update` commits; current statistics are in
+[data/stats.json](./data/stats.json).
 
-  - `data/seed_review.json` listed CDN and API domains (`hdslb.com`,
-    `byteimg.com`, `douyinvod.com`, …) as unresolved: they publish
-    addresses only on subdomains, so all 32 entries in Nov 2026 were
-    false alarms. Listed seeds now get the NS check already used for
-    dead-domain detection; registered domains go to `subdomain_only`
-    (keep), and `domains` holds only names that do not exist (NXDOMAIN).
-  - Seed lists cleaned by hand: renamed domains updated, defunct names and
-    subdomains already covered by a listed parent (`*.gov.mo`, `*.gov.tw`)
-    removed.
+## 3.7.1 (2026-11-15)
 
-## Session 5 (v3.6.0 — discovery throughput and stable lists)
+- **Our own resolver is asked again only when it failed.** Since 3.7.0
+  every name was asked twice when the first answer had no address,
+  including NXDOMAIN and names that simply have no A record, so such a
+  name cost two lookups at our resolver, and with the `www.` fallback four,
+  before the public resolvers were asked. A second try is now made only
+  when there was no answer to use (no HTTP answer, SERVFAIL, REFUSED), the
+  case it exists for: a lossy path to a domain's name servers.
+- `constants.py`: removed tables that nothing used any more (carrier and
+  cloud ASNs, CN CDN providers, infrastructure keywords, non-mainland
+  countries). Some of their entries and comments were wrong, such as the
+  file header naming Alibaba as the holder of AS45090 (it is Tencent).
+- Release history moved from `docs/CHANGELOG_SESSION.md` to this file;
+  outdated comments corrected; unused imports and variables removed.
+- No change to scoring or to the published data.
 
-  - **Every discovery domain is checked on every build.** v3.5 checked a
-    rotating 300-domain sample, so a discovery domain was in `dist/` only
-    in the weeks it was sampled: between the July and October snapshots
-    ~150 domains left and ~100 joined the CN list for no reason other than
-    the rotation. Promotion needs 4 consecutive passes, which took
-    4 × len(discovery)/300 weeks (≈11 at 825 domains) and is now 4 weeks.
-  - **`www.` fallback.** A domain whose bare name has no address record
-    (common for government sites: `soumu.go.jp`, `dsat.gov.mo`) was treated
-    as unresolvable — seed health reported 35–70 % resolve failures for
-    CN/TW/JP/MO and such discovery/extended domains drifted towards the
-    dead-domain purge. The resolver now tries `www.<domain>`;
-    `seed_health.json` reports how many samples needed it (`via_www`).
-  - **Discovery intake.** The IP-neighbor agent runs weekly (was monthly).
-    Candidates covered by a known domain or a parent of one are skipped and
-    a leading `www.` is removed — about a third of discovery.txt was
-    subdomains of known domains. The CT-log agent is no longer scheduled
-    (it can only find such subdomains). `DISCOVERY_MAX` 2000 → 5000, now
-    defined once for the agents and checked against the build by a test.
-  - discovery.txt cleaned once: 307 entries that were subdomains of a
-    seed/extended domain (or of another discovery entry) were removed;
-    their parent domains already cover them. extended.txt is unchanged.
-  - **Seed review report.** `data/seed_review.json` lists seeds that
-    resolved to nothing (bare name and `www.`) for 3+ consecutive weekly
-    builds, e.g. names that are wrong or unused (`guangdong.gov.cn` — the
-    province uses `gd.gov.cn`). Seeds are curated by hand, so nothing is
-    changed automatically. `stats.json` gains `seeds_needing_review`.
-  - **Look-alike filter.** Discovery candidates with `--` inside a label
-    (not the `xn--` IDN prefix) are rejected, e.g. `xiaomi--kursk.online`.
-  - discovery.txt cleaned once more: 61 entries that resolved to nothing in
-    the 2026-10-27 build AND were obvious junk (look-alike `--` hosts,
-    random-string hosts such as `fc1k34xp.huanleu.com`, all-digit names,
-    vanity TLDs) were removed instead of waiting for the 6-run auto-purge.
+## 3.7.0 (2026-11-12)
 
-## Session 4 (v3.5.0 — pipeline reliability)
+- **Own resolver first.** With the repository secret `DOMAINNOVA_DOH_URL`
+  set, every domain is first resolved through a
+  [DNSNova](https://github.com/harryheros/dnsnova) server's
+  `ecs.client_path`, which resolves from the domain's own name servers
+  with our client subnet; Google and Quad9 (with client subnet) are asked
+  only when it has no answer. Without the secret (a fork, a local run) the
+  public resolvers are used directly. `DOMAINNOVA_PUBLIC_DOH=off` turns the
+  public resolvers off: a domain then keeps its last placement until our
+  resolver answers again.
+- The IP-neighbor discovery agent uses the same resolver when it is set.
+- Removed the third-party rescue DoH node (coodns).
+- `sources/scripts/compare_resolvers.py`: resolves every published domain
+  through our resolver and Google with the same client subnet and reports,
+  in `data/resolver_compare.json`, how often they agree on the region.
+- Commercial use now includes use inside a company beyond research;
+  inquiries go to [novaod.com/licensing](https://novaod.com/licensing).
+- The tagged commit still reported 3.6.1 in `constants.py`; corrected in
+  the next commit.
+
+## 3.6.1 (2026-11-03)
+
+- `data/seed_review.json` listed CDN and API domains (`hdslb.com`,
+  `byteimg.com`, `douyinvod.com`, …) as unresolved: they publish
+  addresses only on subdomains, so all 32 entries in Nov 2026 were
+  false alarms. Listed seeds now get the NS check already used for
+  dead-domain detection; registered domains go to `subdomain_only`
+  (keep), and `domains` holds only names that do not exist (NXDOMAIN).
+- Seed lists cleaned by hand: renamed domains updated, defunct names and
+  subdomains already covered by a listed parent (`*.gov.mo`, `*.gov.tw`)
+  removed.
+
+## 3.6.0 (2026-10-27)
+
+- **Every discovery domain is checked on every build.** v3.5 checked a
+  rotating 300-domain sample, so a discovery domain was in `dist/` only
+  in the weeks it was sampled: between the July and October snapshots
+  ~150 domains left and ~100 joined the CN list for no reason other than
+  the rotation. Promotion needs 4 consecutive passes, which took
+  4 × len(discovery)/300 weeks (≈11 at 825 domains) and is now 4 weeks.
+- **`www.` fallback.** A domain whose bare name has no address record
+  (common for government sites: `soumu.go.jp`, `dsat.gov.mo`) was treated
+  as unresolvable — seed health reported 35–70 % resolve failures for
+  CN/TW/JP/MO and such discovery/extended domains drifted towards the
+  dead-domain purge. The resolver now tries `www.<domain>`;
+  `seed_health.json` reports how many samples needed it (`via_www`).
+- **Discovery intake.** The IP-neighbor agent runs weekly (was monthly).
+  Candidates covered by a known domain or a parent of one are skipped and
+  a leading `www.` is removed — about a third of discovery.txt was
+  subdomains of known domains. The CT-log agent is no longer scheduled
+  (it can only find such subdomains). `DISCOVERY_MAX` 2000 → 5000, now
+  defined once for the agents and checked against the build by a test.
+- discovery.txt cleaned once: 307 entries that were subdomains of a
+  seed/extended domain (or of another discovery entry) were removed;
+  their parent domains already cover them. extended.txt is unchanged.
+- **Seed review report.** `data/seed_review.json` lists seeds that
+  resolved to nothing (bare name and `www.`) for 3+ consecutive weekly
+  builds, e.g. names that are wrong or unused (`guangdong.gov.cn` — the
+  province uses `gd.gov.cn`). Seeds are curated by hand, so nothing is
+  changed automatically. `stats.json` gains `seeds_needing_review`.
+- **Look-alike filter.** Discovery candidates with `--` inside a label
+  (not the `xn--` IDN prefix) are rejected, e.g. `xiaomi--kursk.online`.
+- discovery.txt cleaned once more: 61 entries that resolved to nothing in
+  the 2026-10-27 build AND were obvious junk (look-alike `--` hosts,
+  random-string hosts such as `fc1k34xp.huanleu.com`, all-digit names,
+  vanity TLDs) were removed instead of waiting for the 6-run auto-purge.
+
+## 3.5.0 (2026-09-25)
 
 CI / infrastructure:
   - Actions upgraded: checkout v4 → v7, setup-python v5 → v6 (Python 3.13,
@@ -105,7 +147,7 @@ Discovery lifecycle:
   - EXTENDED_MAX raised 3,000 -> 5,000. extended.txt (3,007) had passed the
     old cap, so auto-promote was suspended; it resumes with this release.
 
-## Session 3 (v3.4.0 — discovery source cleanup)
+## 3.4.0 (2026-06-08)
 
 Removed the upstream-list discovery agent and its lineage:
   - Deleted `agent_upstream_fetch.py` (pulled from v2fly/domain-list-community
@@ -129,15 +171,15 @@ Nova-toolkit table; reordered Use Cases so compliance / supply-chain / OSINT
 lead; restated "What this is" to make explicit this is a dataset, not a
 routing product, and that downstream use is the consumer's responsibility.
 
-Version: 3.3.0 → 3.4.0 (constants.py + README badge).
+## 3.3.0 and earlier
 
-## Session 1 (initialization)
+Seed lists (2026-04/05):
+
 seed.txt: 701 → 696 (moved alipay.hk / tmall.hk / jd.hk to seed_hk.txt;
 bytedance.com / wechat.com to seed_offshore.txt).
 Created: seed_hk.txt (3) / seed_mo.txt (empty) / seed_tw.txt (empty) /
 seed_offshore.txt (2).
 
-## Session 2 (seed expansion)
 seed_sg.txt: flat layout → categorized layout, added Regulatory,
 Infrastructure, Logistics sections.
   Added: acra / edb / enterprise / mas / judiciary / sgnic / sgix /
@@ -190,7 +232,8 @@ seed_offshore.txt: 2 → 7 domains.
   Added: tiktok / tiktokcdn / aliexpress / shein / temu;
   Added categorized layout.
 
-## Session 2 technical fixes
+Technical fixes:
+
 - seed.txt: removed foxconn.com (cross-region duplicate with seed_tw.txt;
   correct attribution is TW).
 - validate_manual_sources.py v2 → v3: added regional-seed validation,

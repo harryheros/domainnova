@@ -1,5 +1,10 @@
 # DomainNova Multi-Region Specification v1.1 (P1)
 
+> **Design record (2026-04).** Written when the dataset went from CN to
+> CN/HK/MO/TW; JP, KR and SG were added later the same month. Kept for the
+> reasoning behind the design. The current behaviour is described in the
+> [README](../README.md) and the [changelog](../CHANGELOG.md).
+
 > Status: P1 specification finalized at v1.1, revised.
 > Scope: `sources/scripts/build_domains.py`,
 >        `sources/scripts/constants.py`,

@@ -1,5 +1,9 @@
 # DomainNova P2.A Multi-Region Score Model Specification v1.0
 
+> **Design record (2026-04).** Kept for the reasoning behind the scoring.
+> The current behaviour is described in the [README](../README.md) and the
+> [changelog](../CHANGELOG.md).
+
 > **v1.1 update (2026-04)**: model extended to JP/KR/SG; all symmetric
 > signal logic applies equally to the new regions.
 

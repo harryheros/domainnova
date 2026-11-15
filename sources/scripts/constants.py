@@ -1,103 +1,16 @@
 """
-constants.py - Asia-Pacific Digital Asset Intelligence Database
+constants.py - shared settings of the DomainNova build pipeline.
 
-Categorizes ASNs and infrastructure for the DomainNova build pipeline.
-
-FIXES (v2):
-- Removed duplicate ASN keys in CN_BACKBONE ("24400" was both China Mobile
-  and CSTNET; Python silently kept only the last entry).
-- Removed duplicate ASN key in CN_CLOUD_ASNS ("45090" was both Alibaba and
-  Tencent; correct owner is Alibaba).
-- Added missing Tencent Cloud ASN (132203).
-- Expanded NON_MAINLAND_REGIONS to cover more common non-CN country codes
-  that appear in ip-api responses for HK/TW/overseas CDN pops.
+Project version, region buckets, the IPNova data URLs and their sanity
+thresholds, global CDN ASNs (provider detection) and TLD-to-region votes.
 """
 
 # DomainNova project version (SemVer). Bump on every release.
 # Single source of truth: README badge, workflow logs, any future
 # release tag scripts must read from here rather than embedding a
 # hard-coded literal.
-__version__ = "3.7.0"
+__version__ = "3.7.1"
 
-
-# ---------------------------------------------------------------------------
-# Tier 1 – State-Owned Backbone
-# ---------------------------------------------------------------------------
-CN_BACKBONE: dict[str, dict] = {
-    # China Telecom
-    "4134":  {"isp": "China Telecom", "name": "CHINANET-BACKBONE",      "level": "Core"},
-    "4809":  {"isp": "China Telecom", "name": "CN2-GIA",                "level": "Premium"},
-    "23724": {"isp": "China Telecom", "name": "CHINANET-IDC",           "level": "Core"},
-    "58563": {"isp": "China Telecom", "name": "CHINANET-HB",            "level": "Core"},
-    "24139": {"isp": "China Telecom", "name": "CHINANET-FJ",            "level": "Core"},
-    "4812":  {"isp": "China Telecom", "name": "CHINANET-SH",            "level": "Core"},
-    "4816":  {"isp": "China Telecom", "name": "CHINANET-GD",            "level": "Core"},
-
-    # China Unicom
-    "4837":  {"isp": "China Unicom",  "name": "CHINA-UNICOM-BACKBONE",  "level": "Core"},
-    "9929":  {"isp": "China Unicom",  "name": "CU-VIP",                 "level": "Premium"},
-    "4808":  {"isp": "China Unicom",  "name": "CU-BEIJING",             "level": "Core"},
-    "17621": {"isp": "China Unicom",  "name": "CU-SHANGHAI",            "level": "Core"},
-    "9800":  {"isp": "China Unicom",  "name": "CU-GUANGDONG",           "level": "Core"},
-
-    # China Mobile
-    "9808":  {"isp": "China Mobile",  "name": "CMNET-BACKBONE",         "level": "Core"},
-    "56048": {"isp": "China Mobile",  "name": "CMNET-IDC",              "level": "Core"},
-    "24400": {"isp": "China Mobile",  "name": "CMNET-GUANGDONG",        "level": "Core"},
-    # NOTE: ASN 58453 is CMNET-HK (Hong Kong PoP); excluded – HK is in NON_MAINLAND_REGIONS.
-
-    # Education & Research
-    "4538":  {"isp": "CERNET",        "name": "China Education Network","level": "Academic"},
-    "7497":  {"isp": "CSTNET",        "name": "China Science Network",  "level": "Research"},
-
-    # Sina
-    "37936": {"isp": "Sina",          "name": "SINA-CN",                "level": "Core"},
-}
-
-# ---------------------------------------------------------------------------
-# Tier 2 – Major Cloud Providers
-# ---------------------------------------------------------------------------
-CN_CLOUD_ASNS: dict[str, str] = {
-    # Alibaba Cloud
-    "45090":  "Tencent_CN",          # AS45090 holder is Tencent (was mislabeled as Alibaba)
-    "37963":  "Alibaba_Cloud_CN",
-
-    # Tencent Cloud
-    "132203": "Tencent_Cloud_CN",   # primary Tencent Cloud mainland ASN
-    "132132": "Tencent_Cloud_CN",
-
-    # Huawei Cloud
-    "55990":  "Huawei_Cloud_CN",
-
-    # Baidu Cloud
-    "38365":  "Baidu_Cloud_CN",
-
-    # JD Cloud
-    "131486": "JD_Cloud_CN",
-    "58807":  "JD_Cloud_CN",
-
-    # Other CN Clouds
-    "136188": "Kingsoft_Cloud_CN",
-    "135371": "UCloud_CN",
-    "23724":  "ChinaTelecom_Cloud_CN",
-}
-
-# ---------------------------------------------------------------------------
-# Tier 2.5 – CN CDN Providers
-# Used by build_domains.py provider enrichment to detect CDN-masked origins.
-# ---------------------------------------------------------------------------
-CN_CDN_PROVIDERS: dict[str, str] = {
-    "Wangsu":         "wangsu.com",       # Wangsu Science & Technology
-    "ChinaCache":     "chinacache.com",   # ChinaCache (Lanxun Communications)
-    "Baishan Cloud":  "baishancloud.com",
-    "Qiniu Cloud":    "qiniu.com",        # Qiniu
-    "Upyun":          "upyun.com",        # Upyun (Youpaiyun)
-    "Alibaba CDN":    "alicdn.com",
-    "Tencent CDN":    "qcloudcdn.com",
-    "Huawei CDN":     "huaweicloud.com",
-    "Baidu CDN":      "bdydns.com",
-    "ByteDance CDN":  "bytegslb.com",
-}
 
 # Global CDN providers — domains behind these are CDN-masked;
 # origin region cannot be determined from A records alone.
@@ -111,51 +24,18 @@ GLOBAL_CDN_ASNS: dict[int, str] = {
 }
 
 # ---------------------------------------------------------------------------
-# Tier 3 – Infrastructure Function Tags (keyword-based, used by 2_dns_check.py)
-# ---------------------------------------------------------------------------
-INFRA_KEYWORDS: dict[str, list[str]] = {
-    "CDN": ["wangsu", "chinacache", "baishan", "qiniu", "upyun", "fastweb"],
-    "GOV": ["government", "gov", "agency", "ministry", "state"],
-    "FIN": ["bank", "icbc", "ccb", "abc", "unionpay", "insurance"],
-}
-
-# ---------------------------------------------------------------------------
-# Geo-Fencing: Negative Signals (for the CN bucket only)
-#
-# Country codes that should NOT be counted as mainland CN even if ASN is CN.
-# As of P1 (multi-region), HK/MO/TW are REMOVED from this list — they are no
-# longer "negative" signals globally; they are positive signals for their own
-# buckets and only negative for the CN bucket. The CN scoring path treats this
-# whole list as "definitely-not-CN" countries; bucket assignment (decide_bucket)
-# uses HK/MO/TW positively.
-# ---------------------------------------------------------------------------
-NON_MAINLAND_REGIONS: list[str] = [
-    "US",  # United States
-    "JP",  # Japan
-    "SG",  # Singapore
-    "KR",  # South Korea
-    "DE",  # Germany
-    "GB",  # United Kingdom
-    "NL",  # Netherlands
-    "AU",  # Australia
-    "CA",  # Canada
-    "FR",  # France
-]
-
-# ---------------------------------------------------------------------------
-# P1 Multi-region: Bucket definitions
+# Region buckets
 # ---------------------------------------------------------------------------
 # The set of recognized region buckets. A domain is assigned to exactly one
-# of these (or to "" / unclassified). See docs/PROPOSAL_MULTI_REGION.md §2.
+# of these (or to "" / unclassified).
 REGION_BUCKETS: set[str] = {"CN", "HK", "MO", "TW", "JP", "KR", "SG"}
 
-# ipnova multi-region CIDR data source. Self-owned upstream → use main branch;
-# no supply-chain pinning required (see PROPOSAL §3.1).
+# IPNova multi-region CIDR data. Our own upstream, so the main branch is
+# used without pinning.
 IPNOVA_BASE: str = "https://raw.githubusercontent.com/harryheros/ipnova/main/output"
 
 REGION_CIDR_URLS: dict[str, str] = {
-    # Use plain/ variants (no comment headers) — ipnova v3.2.1+
-    # Falls back gracefully if line starts with '#' (parser already filters those)
+    # plain/ variants have no comment header (the parser skips '#' lines anyway)
     "CN": f"{IPNOVA_BASE}/plain/CN.txt",
     "HK": f"{IPNOVA_BASE}/plain/HK.txt",
     "MO": f"{IPNOVA_BASE}/plain/MO.txt",

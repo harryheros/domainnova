@@ -30,14 +30,12 @@ import json
 from collections import Counter
 from dataclasses import dataclass, asdict
 from pathlib import Path
-from typing import Iterable
 
 # Shared regex + iteration primitives (HEADER_RE, DOMAIN_RE, iter_source_entries).
 import sys as _sys
 _sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _source_parser import (  # noqa: E402
     DOMAIN_RE,
-    HEADER_RE,
     UNSECTIONED,
     iter_source_entries,
 )

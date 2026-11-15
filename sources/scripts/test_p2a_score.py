@@ -15,8 +15,6 @@ Run from repo root:
 """
 from __future__ import annotations
 
-import csv
-import io
 import ipaddress
 import sys
 import unittest

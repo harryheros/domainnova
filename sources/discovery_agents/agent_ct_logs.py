@@ -38,7 +38,6 @@ from typing import List, Set
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _common import (  # noqa: E402
     DOMAIN_RE,
-    USER_AGENT,
     append_to_discovery,
     DISCOVERY_MAX,
     discovery_count,

@@ -63,8 +63,8 @@ import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
-# P1 multi-region: bucket constants. Imported lazily-tolerant — if the script
-# is invoked from an unusual cwd, fall back to a path-based import.
+# Shared constants. If the script is run from another directory, fall back
+# to a path-based import.
 try:
     from constants import (
         TLD_TO_BUCKET,
@@ -73,7 +73,6 @@ try:
         IPNOVA_MIN_LINES,
         IPNOVA_MIN_LINES_PER_BUCKET,
         GLOBAL_CDN_ASNS,
-        CN_CLOUD_ASNS,
     )
 except ImportError:
     sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -84,7 +83,6 @@ except ImportError:
         IPNOVA_MIN_LINES,
         IPNOVA_MIN_LINES_PER_BUCKET,
         GLOBAL_CDN_ASNS,
-        CN_CLOUD_ASNS,
     )
 
 # ---------------------------------------------------------------------------
@@ -118,11 +116,7 @@ JITTER_MAX           = 0.15   # seconds
 # definition risked drift if one was updated and the other wasn't.
 IPNOVA_CN_URL = REGION_CIDR_URLS["CN"]
 
-# DoH upstreams - primary Google, fallback Cloudflare & Quad9 ECS
-# Note: Cloudflare (1.1.1.1) does NOT support custom edns_client_subnet param
-#       but is included as a fallback for availability; its CN PoPs still help.
-#       Quad9 ECS (dns11.quad9.net) follows Google's JSON schema and supports ECS.
-# DoH upstreams - tiered by ECS capability
+# DoH upstreams, tiered by EDNS Client Subnet support.
 # Tier 0: our own resolver, asked first, when DOMAINNOVA_DOH_URL is set (a
 #         repository secret): a DNSNova server's ecs.client_path, which
 #         resolves from each domain's own name servers and passes them our
@@ -131,8 +125,8 @@ IPNOVA_CN_URL = REGION_CIDR_URLS["CN"]
 #         No query goes to resolvers in mainland China either way.
 # Primary pool: public upstreams that honor our edns_client_subnet parameter,
 #               asked (round-robin) when tier 0 has no answer.
-# Fallback pool: upstreams that ignore ECS but still resolve DNS.
-#                Only used if ALL primaries fail for a given domain.
+# Fallback pool: Cloudflare, which ignores ECS but still resolves; used
+#                only if all primaries fail for a domain.
 # DOMAINNOVA_PUBLIC_DOH=off skips the primary and fallback pools: a domain
 # tier 0 cannot resolve keeps its last placement (sticky fallback).
 OWN_DOH = os.environ.get("DOMAINNOVA_DOH_URL", "").strip()
@@ -581,7 +575,7 @@ _STATIC_ASN_PROVIDER: dict[int, str] = {
     58807:  "JD Cloud",
     136188: "Kingsoft Cloud",
     135371: "UCloud",
-    # ── Backbone (from CN_BACKBONE) ──
+    # ── Carrier backbones ──
     4134:   "China Telecom",
     4809:   "China Telecom CN2",
     4837:   "China Unicom",
@@ -724,7 +718,7 @@ def fetch_ipnova_asn_lookup(session: requests.Session) -> dict[str, int]:
     cidr_asn: dict[str, int] = {}
     regions = data.get("regions", {})
     total_bgp = 0
-    for cc, payload in regions.items():
+    for payload in regions.values():
         for obj in payload.get("cidr_objects", []):
             if obj.get("source") == "bgp" and obj.get("asn"):
                 cidr_asn[obj["cidr"]] = int(obj["asn"])
@@ -1287,12 +1281,26 @@ def _resolve_via_json(domain: str, upstream: str, session: requests.Session,
         return False, []
 
 
+def _wire_rcode(data: bytes) -> Optional[int]:
+    """RCODE of a DNS wireformat response, or None if it is too short."""
+    if len(data) < 12:
+        return None
+    return data[3] & 0x0F
+
+
 def _resolve_via_wire(domain: str, upstream: str, session: requests.Session,
                       use_ecs: bool) -> Tuple[bool, List[str]]:
     """
     Query a DoH upstream using RFC 8484 wireformat (POST).
     Returns (http_ok, ips).
     """
+    ok, ips, _rcode = _resolve_via_wire_detail(domain, upstream, session, use_ecs)
+    return ok, ips
+
+
+def _resolve_via_wire_detail(domain: str, upstream: str, session: requests.Session,
+                             use_ecs: bool) -> Tuple[bool, List[str], Optional[int]]:
+    """As _resolve_via_wire, plus the response's RCODE (None without one)."""
     ecs = random_ecs_subnet() if use_ecs else None
     try:
         wire = _encode_dns_wire_query(domain, ecs_subnet=ecs)
@@ -1303,10 +1311,10 @@ def _resolve_via_wire(domain: str, upstream: str, session: requests.Session,
                                 "Content-Type": "application/dns-message",
                             })
         if resp.status_code != 200:
-            return False, []
-        return True, _decode_dns_wire_answer(resp.content)
+            return False, [], None
+        return True, _decode_dns_wire_answer(resp.content), _wire_rcode(resp.content)
     except requests.RequestException:
-        return False, []
+        return False, [], None
 
 
 def _rescue_record(ok: bool) -> None:
@@ -1326,25 +1334,35 @@ def _rescue_record(ok: bool) -> None:
 
 
 def _resolve_rescue(domain: str, session: requests.Session) -> List[str]:
+    """Query our own resolver (tier 0); the addresses found, if any."""
+    return _resolve_rescue_detail(domain, session)[0]
+
+
+def _resolve_rescue_detail(domain: str, session: requests.Session) -> Tuple[List[str], bool]:
     """
-    Query the rescue (self-hosted HK) DoH endpoint.
-    Auto-detects JSON vs wireformat mode on first successful call, then locks.
-    Protected by a circuit breaker (see RESCUE_MAX_CONSECUTIVE_FAILURES).
+    Query our own resolver (tier 0): (ips, answered).
+
+    answered is True when it gave a definite answer: addresses, NXDOMAIN, or
+    NOERROR without an A record. It is False when there was no answer to
+    use (no HTTP 200, SERVFAIL, REFUSED…), the only case worth a second try.
+    Wireformat by default (DNSNova speaks RFC 8484 only); a JSON endpoint
+    is auto-detected when the mode is not preset. Protected by a circuit
+    breaker (see RESCUE_MAX_CONSECUTIVE_FAILURES).
     """
     global _rescue_mode
     if not DOH_RESCUE or _rescue_disabled:
-        return []
+        return [], False
     mode = _rescue_mode
     use_ecs = DOH_ECS_SUPPORT.get(DOH_RESCUE, False)
 
     if mode == "json":
         ok, ips = _resolve_via_json(domain, DOH_RESCUE, session, use_ecs)
         _rescue_record(ok)
-        return ips
+        return ips, ok
     if mode == "wire":
-        ok, ips = _resolve_via_wire(domain, DOH_RESCUE, session, use_ecs)
+        ok, ips, rcode = _resolve_via_wire_detail(domain, DOH_RESCUE, session, use_ecs)
         _rescue_record(ok)
-        return ips
+        return ips, ok and rcode in (0, 3)  # NOERROR, NXDOMAIN
 
     # Mode not yet detected - try JSON first, then wire
     ok, ips = _resolve_via_json(domain, DOH_RESCUE, session, use_ecs)
@@ -1354,19 +1372,19 @@ def _resolve_rescue(domain: str, session: requests.Session) -> List[str]:
                 _rescue_mode = "json"
                 log("  [info] Rescue endpoint mode detected: JSON API")
         _rescue_record(True)
-        return ips
+        return ips, True
 
-    ok, ips = _resolve_via_wire(domain, DOH_RESCUE, session, use_ecs)
+    ok, ips, rcode = _resolve_via_wire_detail(domain, DOH_RESCUE, session, use_ecs)
     if ok:
         with _rescue_mode_lock:
             if _rescue_mode is None:
                 _rescue_mode = "wire"
                 log("  [info] Rescue endpoint mode detected: RFC 8484 wireformat")
         _rescue_record(True)
-        return ips
+        return ips, rcode in (0, 3)
 
     _rescue_record(False)
-    return []
+    return [], False
 
 
 def _do_resolve(domain: str, upstream: str, session: requests.Session) -> List[str]:
@@ -1381,13 +1399,15 @@ def _do_resolve(domain: str, upstream: str, session: requests.Session) -> List[s
 
 def _resolve_name(domain: str, session: requests.Session) -> List[str]:
     """Resolve one exact name through the upstream chain (no www fallback)."""
-    # Tier 0: our own resolver (tried first). It is asked twice: on a lossy
-    # path to a domain's name servers the first try can run out of time,
-    # and the second goes to the servers that answered (it has learnt
-    # which did not) with the zones' delegations already known.
-    ips = _resolve_rescue(domain, session)
-    if not ips and OWN_DOH:
-        ips = _resolve_rescue(domain, session)
+    # Tier 0: our own resolver (tried first). When it has no answer to use
+    # (SERVFAIL, no HTTP answer) it is asked again: on a lossy path to a
+    # domain's name servers the first try can run out of time, and the
+    # second goes to the servers that answered (it has learnt which did
+    # not) with the zones' delegations already known. NXDOMAIN or no
+    # address is an answer, and is not asked again.
+    ips, answered = _resolve_rescue_detail(domain, session)
+    if not ips and not answered and OWN_DOH:
+        ips, answered = _resolve_rescue_detail(domain, session)
     if ips:
         return ips
     if not PUBLIC_DOH:
@@ -2154,6 +2174,7 @@ def update_seed_review(repo_root: Path, rows: List[DomainRecord], today: str,
             registered = dict(zip(
                 (x["domain"] for x in listed),
                 executor.map(lambda x: _query_ns_record(x["domain"], session), listed),
+                strict=True,
             ))
         review = [x for x in listed if not registered[x["domain"]]]
         subdomain_only = [x for x in listed if registered[x["domain"]]]
@@ -2473,7 +2494,6 @@ def build(repo_root: Path) -> None:
 
     session     = make_session()
     cn_networks = fetch_cn_cidrs(session)
-    cidr_lookup = build_cidr_lookup(cn_networks)
 
     # v6.1: fetch IPNova data.json cidr_objects for CIDR→ASN→provider mapping.
     # Populates module-level _cidr_asn_map (dict, kept for backward compat) and

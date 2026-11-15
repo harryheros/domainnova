@@ -92,7 +92,7 @@ class TestRescueBreaker(unittest.TestCase):
 
     def test_dead_rescue_is_disabled_after_threshold(self):
         with mock.patch.object(bd, "_resolve_via_json", return_value=(False, [])) as j, \
-             mock.patch.object(bd, "_resolve_via_wire", return_value=(False, [])) as w, \
+             mock.patch.object(bd, "_resolve_via_wire_detail", return_value=(False, [], None)) as w, \
              mock.patch.object(bd, "log"):
             for _ in range(bd.RESCUE_MAX_CONSECUTIVE_FAILURES + 20):
                 self.assertEqual(bd._resolve_rescue("x.cn", None), [])
@@ -104,7 +104,7 @@ class TestRescueBreaker(unittest.TestCase):
     def test_success_resets_streak(self):
         results = [(False, [])] * (bd.RESCUE_MAX_CONSECUTIVE_FAILURES - 1) + [(True, ["1.1.1.1"])]
         with mock.patch.object(bd, "_resolve_via_json", side_effect=results + [(True, [])] * 50), \
-             mock.patch.object(bd, "_resolve_via_wire", return_value=(False, [])), \
+             mock.patch.object(bd, "_resolve_via_wire_detail", return_value=(False, [], None)), \
              mock.patch.object(bd, "log"):
             for _ in range(len(results)):
                 bd._resolve_rescue("x.cn", None)

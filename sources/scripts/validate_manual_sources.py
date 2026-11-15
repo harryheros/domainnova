@@ -22,7 +22,7 @@ from __future__ import annotations
 
 import json
 import sys
-from collections import Counter, defaultdict
+from collections import Counter
 from pathlib import Path
 
 # Shared regex + iteration primitives (DOMAIN_RE, HEADER_RE, UNSECTIONED,
@@ -31,7 +31,6 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _source_parser import (  # noqa: E402
     DOMAIN_RE,
-    HEADER_RE,
     UNSECTIONED,
     iter_source_entries,
 )
