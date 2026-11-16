@@ -1,8 +1,12 @@
 # Commercial Licensing — DomainNova
 
 DomainNova is open for non-commercial use under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
-
 Commercial use requires a separate written license agreement.
+
+This page explains how the author reads "NonCommercial" (Section 1(i) of
+the license) for DomainNova, and how to get permission for the uses below. It
+does not add terms to CC BY-NC-SA 4.0; where this page and the license text
+differ, the license text applies.
 
 ---
 
@@ -36,6 +40,14 @@ For commercial licensing inquiries, including enterprise plans, OEM rights, API 
 → Or write to licensing@novaod.com
 
 Please include a brief description of your intended use case: which data, what it is for, and roughly how widely it will be used.
+
+---
+
+## RuleNova
+
+[RuleNova](https://github.com/harryheros/rulenova)'s rule sets are generated
+from IPNova and DomainNova data. Commercial permission for RuleNova is part
+of a license for these datasets; ask for it in the same inquiry.
 
 ---
 
