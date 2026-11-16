@@ -113,12 +113,8 @@
 # --- ip-neighbor:124.251.34.141 2026-11-03 ---
 
 # --- ip-neighbor:220.181.7.203 2026-11-03 ---
-ksf609.com
 
 # --- ip-neighbor:39.156.70.37 2026-11-03 ---
-cz6399.com
-s1.cz6399.com
-showtime.linkpc.net
 
 # --- ip-neighbor:61.241.148.62 2026-11-03 ---
 
@@ -135,108 +131,8 @@ d02.dancher.link
 dls.hly.com
 
 # --- ip-neighbor:211.149.239.6 2026-11-03 ---
-ykwxfourk.com
-ykwxthreek.com
-yyjszzs.net
-zhongtaiedu.com.cn
-zhongzishiye.com
-zjhst.com
-zoomzipper.com
-zylxy.cn
-wwww.lypont.com
-wxdhdc.com
-xianjindz.com
-xn--xkrq9fxvfs1cxs9b6w7anih.com
-yidajob.com
-yuanshuichuli.com
-yxlmagnet.com
-yzlongbo.com
-zhonghuasunshi.com
-zlbqj.com
-zycard.com
-zyhmzx0936.com
-zzyushan.com
 
 # --- ip-neighbor:203.119.169.227 2026-11-03 ---
-0757jiafa.cn.alibaba.com
-07698388268.cn.alibaba.com
-108695.hotproduct-cn.alibaba.com
-13486411573.cn.alibaba.com
-168hongli.cn.alibaba.com
-2673191a.cn.alibaba.com
-3322ccpp11.cn.alibaba.com
-361steel.cn.alibaba.com
-3c.china.alibaba.com
-51gmcom.cn.alibaba.com
-5988002.cn.alibaba.com
-7366719.cn.alibaba.com
-8a88.cn.alibaba.com
-8led.cn.alibaba.com
-987richard.cn.alibaba.com
-a11y.alibaba.org
-a15915428783.cn.alibaba.com
-a20100817.cn.alibaba.com
-a445779961.cn.alibaba.com
-a461367373.cn.alibaba.com
-a910383622.cn.alibaba.com
-aa43216682.cn.alibaba.com
-aaamirror.cn.alibaba.com
-ab828ab.cn.alibaba.com
-abr168.cn.alibaba.com
-abrvsm.cn.alibaba.com
-acd339.cn.alibaba.com
-acrylicdisplays.cn.alibaba.com
-acryliceis.cn.alibaba.com
-addll.cn.alibaba.com
-adms.cn.alibaba.com
-adorebag.cn.alibaba.com
-adshow.cn.alibaba.com
-aebfhcl.cn.alibaba.com
-afdn.cn.alibaba.com
-afkvalve.cn.alibaba.com
-afuditan.cn.alibaba.com
-agla.alibaba.com
-agtlzyc.cn.alibaba.com
-ahhltc.cn.alibaba.com
-ahjinniu.cn.alibaba.com
-ahwhyp.cn.alibaba.com
-ahygzj.cn.alibaba.com
-aiden2012.cn.alibaba.com
-aideshusongshebei.cn.alibaba.com
-aidiesp.cn.alibaba.com
-aidyjf.cn.alibaba.com
-aixiyoufs.cn.alibaba.com
-aixmj.cn.alibaba.com
-ajsysp.cn.alibaba.com
-ajyongjian.cn.alibaba.com
-alainlisa.cn.alibaba.com
-ali0351.cn.alibaba.com
-ali2010880.cn.alibaba.com
-alibaba.cn.alibaba.com
-alimybaby.cn.alibaba.com
-aljbz.cn.alibaba.com
-allways2012.cn.alibaba.com
-alpamd.cn.alibaba.com
-alps8.cn.alibaba.com
-amanson2008.cn.alibaba.com
-ampelair88.cn.alibaba.com
-andazc.cn.alibaba.com
-andy19890607.cn.alibaba.com
-anglopower.cn.alibaba.com
-anwgb.cn.alibaba.com
-anxumachinery.cn.alibaba.com
-anyuesh.cn.alibaba.com
-anzishanghai.cn.alibaba.com
-aoeomo.cn.alibaba.com
-aohuadianzi.cn.alibaba.com
-aoinn888.cn.alibaba.com
-aokfloor.cn.alibaba.com
-aolicn01.cn.alibaba.com
-aolifa88.cn.alibaba.com
-aosuosy.cn.alibaba.com
-aotewj.cn.alibaba.com
-apsisjs.cn.alibaba.com
-apxhongyun.cn.alibaba.com
 
 # --- ip-neighbor:59.82.44.190 2026-11-09 ---
 eleme.cn
@@ -369,3 +265,113 @@ zhouqinghuan.com
 
 # --- ip-neighbor:120.52.99.224 2026-11-15 ---
 chinaunicom.com.cn
+
+# --- ip-neighbor:118.178.203.51 2026-11-16 ---
+appresource.xuexi.cn.w.alikunlun.com
+boot-source.xuexi.cn.w.alikunlun.com
+gz.xuexi.cn.w.alikunlun.com
+js.xuexi.cn.w.alikunlun.com
+
+# --- ip-neighbor:110.75.130.45 2026-11-16 ---
+51shumi.cn
+51shumi.com
+51shumi.com.cn
+a-amentor.com
+act-protocol.com
+ai-propeller.com
+aif3.cn
+aif4.cn
+aif5.cn
+alipay-corp.com
+alipay-inc.com
+alipay.cn
+alipay.com.cn
+alipay.net.cn
+alipaydesign.com
+alipaydns.cn
+alipaylog.com
+alipayobjects.cn
+ant-financial.com
+ant-ling.com
+ant-open.com
+antafu.com
+antaq.com
+antcloudservice.com
+antdigital-static.com
+antfin-inc.com
+antfortune.com
+antgroup-inc.cn
+antgroup-inc.net
+antlingguang.com
+antmuse.com
+antopenhealth.com
+antresearch.com
+cloudbaseapp.cn
+cloudrds.cn
+cloudstatic.cn
+codefuse.co
+deor.org.cn
+digital-engine.com
+fund123-corp.cn
+fund123.cn
+galacean.com
+huanxu.tech
+hzyx.com.cn
+idastore.cn
+inclusionconf.com
+kfp.cn
+lebuding.com
+lingguang.com
+lingguangcontent.com
+lingguangobjects.com
+linguang.com
+live-chats.cc
+lvchongchonglianglun0810.com
+mayidake.com
+mayilingguang.com
+mini-code.com
+misuan.com
+oceanbase.com
+qmuse.cn
+qmusespace.com
+robbyant.com
+secretflow.org.cn
+shengxin.com
+shumicdn.com
+shumiimg.com
+siminfra-inc.com
+siminfra-standby.com
+siminfradns.com
+tbox.cn
+tboxcontent.com
+tboxobjects.com
+trusple.com
+uniocontent.com
+xin.xin
+zhisheng.com
+zhixiaobao.com
+zkobjects.com
+zmyueding.com
+
+# --- ip-neighbor:111.124.204.233 2026-11-16 ---
+qiyukf.cn
+
+# --- ip-neighbor:47.106.90.124 2026-11-16 ---
+byd.cn
+byd.com.cn
+bydauto.com
+bydenergy.com
+
+# --- ip-neighbor:203.107.45.167 2026-11-16 ---
+0558jobs.com
+056600.vip
+0566rczp.com
+0571bj.com
+0574gps.com
+0578shop.com
+0579game.com
+0594.ltd
+05youxi.net
+060193.top
+06050.cn
+065400.com
