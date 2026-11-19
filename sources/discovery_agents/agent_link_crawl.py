@@ -108,7 +108,10 @@ def _allowed(session, site: str) -> bool:
         if r.status_code != 200:
             return True
         rp = robotparser.RobotFileParser()
-        rp.parse(r.text.splitlines())
+        try:
+            rp.parse(r.text.splitlines())
+        except Exception:
+            return True  # an unreadable robots.txt means allowed, as usual
         return rp.can_fetch(USER_AGENT, f"{scheme}://{site}/")
     return True
 
@@ -122,21 +125,38 @@ def _read(session, url: str) -> Optional[str]:
         if r.status_code != 200 or "html" not in r.headers.get("Content-Type", ""):
             return None
         data = b""
-        for chunk in r.iter_content(65536):
-            data += chunk
-            if len(data) >= MAX_PAGE_BYTES:
-                break
-        return data.decode(r.encoding or "utf-8", errors="replace")
+        try:
+            for chunk in r.iter_content(65536):
+                data += chunk
+                if len(data) >= MAX_PAGE_BYTES:
+                    break
+        except Exception:
+            # The body broke off mid-read (connection reset, bad chunking,
+            # read timeout). Keep what arrived: its links are still links.
+            pass
+        try:
+            return data.decode(r.encoding or "utf-8", errors="replace")
+        except LookupError:  # the server named an encoding Python lacks
+            return data.decode("utf-8", errors="replace")
     finally:
-        r.close()
+        try:
+            r.close()
+        except Exception:
+            pass
 
 
 def crawl_site(session, site: str) -> List[str]:
-    """Hosts linked from one site's home page ([] if disallowed or unreachable)."""
-    if not _allowed(session, site):
+    """Hosts linked from one site's home page ([] if disallowed or unreachable).
+    Never raises: a run reads thousands of sites, and one broken site must not
+    end it (v3.8.0's first full crawl stopped on a single dropped connection)."""
+    try:
+        if not _allowed(session, site):
+            return []
+        html = _read(session, f"https://{site}/") or _read(session, f"http://{site}/")
+        return hosts_in(html) if html else []
+    except Exception as exc:
+        print(f"  [warn] {site}: {type(exc).__name__}")
         return []
-    html = _read(session, f"https://{site}/") or _read(session, f"http://{site}/")
-    return hosts_in(html) if html else []
 
 
 def run(repo_root: Path, pages: int = PAGES_PER_RUN, max_new: int = MAX_NEW_PER_RUN,

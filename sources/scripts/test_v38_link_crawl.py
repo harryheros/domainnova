@@ -164,6 +164,47 @@ class Run(unittest.TestCase):
         self.assertNotIn("${{ github.event.inputs.full_crawl }}\n          then", wf)
         self.assertIn('if [ "$FULL_CRAWL" = "yes" ]', wf)
 
+    def test_a_connection_dropped_mid_page_does_not_stop_the_run(self):
+        # v3.8.0 full crawl: one site's chunked body broke off mid-read
+        # (urllib3 ProtocolError surfaced by iter_content) and the uncaught
+        # exception ended the whole run with nothing written.
+        import requests
+
+        class Broken(FakeResponse):
+            def iter_content(self, chunk_size=65536):
+                yield b"<a href='https://partial.cn/'>"
+                raise requests.exceptions.ChunkedEncodingError("Connection broken")
+
+        class BadEncoding(FakeResponse):
+            def __init__(self, *a, **k):
+                super().__init__(*a, **k)
+                self.encoding = "x-no-such-codec"
+
+        class Session(FakeSession):
+            def get(self, url, **kw):
+                if url == "https://seed-one.cn/":
+                    self.requested.append(url)
+                    return Broken(url, 200, "")
+                if url == "https://seed-two.hk/":
+                    self.requested.append(url)
+                    return BadEncoding(url, 200, PAGES.get(url, "<a href='https://enc.hk/'>"))
+                if url == "https://known.cn/robots.txt":
+                    raise requests.exceptions.ConnectionError("reset")
+                return super().get(url, **kw)
+
+        session = Session()
+        with patch.object(lc, "make_session", return_value=session), patch("builtins.print"):
+            lc.run(self.root, pages=10, week=0)
+        # every site was still visited, and the run finished
+        self.assertIn("https://seed-two.hk/", session.requested)
+        self.assertIn("https://known.cn/", session.requested)
+
+    def test_crawl_site_never_raises(self):
+        class Exploding(FakeSession):
+            def get(self, url, **kw):
+                raise RuntimeError("anything at all")
+        self.assertEqual(lc.crawl_site(Exploding(), "x.cn"), [])
+
     def test_regional_tlds_first(self):
         ordered = lc.prioritise(["a.com", "b.cn", "c.net", "d.com.hk", "e.jp"])
         self.assertEqual(ordered[:3], ["b.cn", "d.com.hk", "e.jp"])

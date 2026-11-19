@@ -39,7 +39,9 @@ Releases, newest first. The weekly data updates are the
   3,000 new candidates) instead of the weekly slice, which takes about ten
   weeks to cover the same sites. It is meant to refill discovery after the
   clean-up below; the etiquette is unchanged (one request per site,
-  robots.txt honoured).
+  robots.txt honoured). A site whose connection breaks off mid-page no
+  longer stops the run: the first full crawl ended on one such site with
+  nothing written, as the weekly 300-page slice had never met one.
 - **More global services are never added to discovery**: Google's tag,
   ad and API domains, LinkedIn, X, Wix, WordPress, GitHub and the common
   public CDNs. Pages embed them everywhere, and some resolve to in-country
