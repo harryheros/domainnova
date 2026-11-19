@@ -2507,3 +2507,13 @@ everhub.cn
 larkenterprise.com
 open.zjurl.cn
 zb-aserver-sopush.elemecdn.com
+
+# ===== Auto-promoted 2026-11-19 =====
+1.805188.vip
+6.805188.vip
+8686868.vip
+chinaunicom.com.cn
+h3c.com.cn
+lecaiwang.live
+tcorea.com
+zhouqinghuan.com

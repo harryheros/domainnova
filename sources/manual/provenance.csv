@@ -85,6 +85,7 @@ domain,origin,origin_detail,nominated
 0757jiafa.cn.alibaba.com,ip-neighbor,203.119.169.227,2026-11-03
 07698388268.cn.alibaba.com,ip-neighbor,203.119.169.227,2026-11-03
 0e5m1efueov.720yun.com,ip-neighbor,61.241.148.62,2026-11-03
+1.805188.vip,ip-neighbor,122.14.229.58,2026-11-15
 10099.com.cn,manual,added by hand,2026-03-28
 1024paas.com,ip-neighbor,180.163.29.38,2026-11-03
 1048.cc,ip-neighbor,220.181.7.203,2026-06-08
@@ -340,6 +341,7 @@ domain,origin,origin_detail,nominated
 5ecme4fy4en.720yun.com,ip-neighbor,61.241.148.62,2026-04-13
 5k23rwfcxp.720yun.com,ip-neighbor,61.241.148.62,2026-11-03
 5twdfszeek.720yun.com,ip-neighbor,61.241.148.62,2026-11-03
+6.805188.vip,ip-neighbor,122.14.229.58,2026-11-15
 618xz.com,ip-neighbor,120.48.6.179,2026-10-27
 61ff0.myhard.com,ip-neighbor,120.48.6.179,2026-10-27
 643777.com,ip-neighbor,39.156.70.37,2026-06-08
@@ -358,6 +360,7 @@ domain,origin,origin_detail,nominated
 7n.sudayijia.com,ip-neighbor,61.241.148.62,2026-11-03
 8378888.com,ip-neighbor,39.156.70.37,2026-06-08
 843777.com,ip-neighbor,39.156.70.37,2026-06-08
+8686868.vip,ip-neighbor,122.14.229.58,2026-11-15
 888255.com,ip-neighbor,39.156.70.37,2026-06-08
 88gm.com,ip-neighbor,211.149.239.6,2026-11-02
 898xy.com.720yun.com,ip-neighbor,116.153.78.163,2026-04-12
@@ -830,6 +833,7 @@ chinaso.com,manual,added by hand,2026-04-10
 chinastock.com,manual,"first extended.txt, curated by hand",2026-03-27
 chinatour.com,manual,"first extended.txt, curated by hand",2026-03-27
 chinattl.com,ip-neighbor,219.239.97.52,2026-10-27
+chinaunicom.com.cn,ip-neighbor,120.52.99.224,2026-11-15
 chinawater.com,ip-neighbor,211.100.61.67,2026-03-28
 chinaz.com,manual,added by hand,2026-03-28
 chiphell.com,manual,added by hand,2026-04-10
@@ -1219,6 +1223,7 @@ gzhuace.cn,ip-neighbor,114.80.156.219,2026-09-25
 gzrth.com,ip-neighbor,211.149.239.6,2026-11-02
 gzst888.cn,ip-neighbor,211.149.239.6,2026-11-02
 gzwyc.w36.mc-test.com,ip-neighbor,114.80.156.219,2026-09-25
+h3c.com.cn,ip-neighbor,60.191.123.44,2026-11-15
 h5.umx.art,ip-neighbor,203.107.45.167,2026-03-28
 h5.vip.com.vipgslb.com,ip-neighbor,14.119.64.131,2026-10-27
 h5.zjsnews.cn,ip-neighbor,183.60.240.56,2026-10-27
@@ -1493,6 +1498,7 @@ lazycal.gitcafe.com,ip-neighbor,42.192.175.15,2026-06-08
 lazyshare.art,ip-neighbor,203.107.45.167,2026-03-28
 leader.cn,manual,"first extended.txt, curated by hand",2026-03-27
 leathergoods.com.cn,ip-neighbor,211.149.239.6,2026-11-02
+lecaiwang.live,ip-neighbor,122.14.229.58,2026-11-15
 lefant.bbs.taobao.com,ip-neighbor,59.82.122.140,2026-03-28
 leituos.w36.cndns5.com,ip-neighbor,114.80.156.219,2026-09-25
 leju.com,manual,"first extended.txt, curated by hand",2026-03-27
@@ -2013,6 +2019,7 @@ tbcache.com,manual,"first extended.txt, curated by hand",2026-03-27
 tbsjmail.tsingtao.com.cn,ct-logs,%.cn,2026-07-01
 tcb-bank.com.tw,manual,added by hand,2026-04-21
 tclwxtwox.com,ip-neighbor,211.149.239.6,2026-11-02
+tcorea.com,ip-neighbor,122.14.229.58,2026-11-15
 tech.tianjimedia.com,ip-neighbor,120.48.6.179,2026-10-27
 technews.tw,manual,added by hand,2026-04-21
 tencentcs.com,manual,added by hand,2026-03-28
@@ -2414,6 +2421,7 @@ zhongtaiedu.com.cn,ip-neighbor,211.149.239.6,2026-11-03
 zhongtong.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 zhongzishiye.com,ip-neighbor,211.149.239.6,2026-11-03
 zhouheiya.com,manual,"first extended.txt, curated by hand",2026-03-27
+zhouqinghuan.com,ip-neighbor,101.126.56.164,2026-11-15
 zhrs.nwpu.edu.cn,ip-neighbor,202.117.80.223,2026-03-28
 zign.cn,ct-logs,%.cn,2026-07-01
 zigouzhan01.bbs.taobao.com,ip-neighbor,59.82.121.163,2026-03-28

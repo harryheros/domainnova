@@ -140,24 +140,14 @@ chpay.site
 # --- ip-neighbor:123.206.4.34 2026-11-09 ---
 
 # --- ip-neighbor:203.107.45.167 2026-11-09 ---
-007cfw.com
-007zf.com
 
 # --- ip-neighbor:60.191.123.44 2026-11-15 ---
-h3c.com.cn
 
 # --- ip-neighbor:122.14.229.58 2026-11-15 ---
-1.805188.vip
-6.805188.vip
-8686868.vip
-lecaiwang.live
-tcorea.com
 
 # --- ip-neighbor:101.126.56.164 2026-11-15 ---
-zhouqinghuan.com
 
 # --- ip-neighbor:120.52.99.224 2026-11-15 ---
-chinaunicom.com.cn
 
 # --- ip-neighbor:118.178.203.51 2026-11-16 ---
 appresource.xuexi.cn.w.alikunlun.com
@@ -980,3 +970,107 @@ minato-jf.jp
 sxi.cn
 kaipuyun.cn
 govwza.cn
+
+# --- ip-neighbor:111.13.149.108 2026-11-19 ---
+5016.cn
+epdg.com
+holiys.com
+huaweitest.cn
+reshbedysim.com
+up8.space
+
+# --- ip-neighbor:120.92.211.176 2026-11-19 ---
+2site.mysmth.net
+aakk.mysmth.net
+abelard.mysmth.net
+afra2005.mysmth.net
+ailsa.mysmth.net
+airmansmth.mysmth.net
+airylea.mysmth.net
+amei.mysmth.net
+amonad.mysmth.net
+antonis.mysmth.net
+aprilshine.mysmth.net
+ask0123.mysmth.net
+axw.mysmth.net
+ayaaya.mysmth.net
+balling.mysmth.net
+bg.mysmth.net
+blackjack.mysmth.net
+bobbycat.mysmth.net
+boylinyu.mysmth.net
+cbeam.mysmth.net
+cheekers.mysmth.net
+chinapizza.mysmth.net
+chipda.mysmth.net
+choral.mysmth.net
+cinason.mysmth.net
+cliffhui.mysmth.net
+cloudor.mysmth.net
+conanzy.mysmth.net
+cosfin.mysmth.net
+czq123.mysmth.net
+deerinwinter.mysmth.net
+dididar.mysmth.net
+dqdq.mysmth.net
+dreamweaver9.mysmth.net
+dti.mysmth.net
+dwill.mysmth.net
+easylinux.mysmth.net
+exceedfang.mysmth.net
+eyrelyn.mysmth.net
+fakemajia.mysmth.net
+feifocoon.mysmth.net
+fftinbbs.mysmth.net
+file.mysmth.net
+firefly2001.mysmth.net
+freejazz.mysmth.net
+gccq.mysmth.net
+glass.mysmth.net
+goldolphin.mysmth.net
+grandfather.mysmth.net
+group.communicationstudies.mysmth.net
+gudao.mysmth.net
+haifenger.mysmth.net
+hanssachs.mysmth.net
+helenred.mysmth.net
+hgoldfish.mysmth.net
+horse.mysmth.net
+huaze.mysmth.net
+huhh.mysmth.net
+illy.mysmth.net
+inking.mysmth.net
+inzoi.mysmth.net
+jesmine.mysmth.net
+jiang2000.mysmth.net
+joanpotter.mysmth.net
+kalvin.mysmth.net
+kaorulan.mysmth.net
+kgb.mysmth.net
+killfast.mysmth.net
+kites.mysmth.net
+kiwimiao.mysmth.net
+lakey.mysmth.net
+leafrain.mysmth.net
+lingernw.mysmth.net
+lisayan.mysmth.net
+lycurgus.mysmth.net
+m.mysmth.net
+magicknight.mysmth.net
+mainth.mysmth.net
+maomy.mysmth.net
+marine3.mysmth.net
+matchsticker.mysmth.net
+mayfish.mysmth.net
+meantime1984.mysmth.net
+miffyg.mysmth.net
+mikie.mysmth.net
+mixiumaqi.mysmth.net
+movieworm.mysmth.net
+mysmth.net
+mysmth2003.mysmth.net
+napolen.mysmth.net
+nathan.mysmth.net
+ncepujgr.mysmth.net
+nethorse.mysmth.net
+netwind.mysmth.net

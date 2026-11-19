@@ -1,5 +1,5 @@
 # DomainNova - KR domains
-# Generated: 2026-11-19T04:50:01Z
+# Generated: 2026-11-19T05:35:21Z
 # Count: 262
 11st.co.kr
 2028ulsanexpo.or.kr
