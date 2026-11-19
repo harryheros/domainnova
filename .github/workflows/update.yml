@@ -86,11 +86,11 @@ jobs:
           restore-keys: |
             domainnova-state-
 
-      # Discovery agent - every weekly build (v3.6; was monthly) or on demand.
-      # Only reverse-IP on IPNova's own CN ranges: the CT-log agent can only
-      # find subdomains of seed domains, which the suffix rules already
-      # cover, so it is no longer scheduled (see agent_ct_logs.py).
-      - name: Run discovery agent
+      # Discovery agents - every weekly build or on demand: reverse-IP on
+      # IPNova's own CN ranges, and links on known sites' home pages. The
+      # CT-log agent can only find subdomains of seed domains, which the
+      # suffix rules already cover, so it is not scheduled (agent_ct_logs.py).
+      - name: Run discovery agents
         if: |
           github.event.schedule == '0 2 * * 1' ||
           github.event.inputs.run_agents == 'yes'
@@ -102,7 +102,9 @@ jobs:
           DOMAINNOVA_DOH_URL: ${{ secrets.DOMAINNOVA_DOH_URL }}
         run: |
           echo "[+] Running IP neighbor agent..."
-          python sources/discovery_agents/agent_ip_neighbor.py
+          python sources/discovery_agents/agent_ip_neighbor.py || echo "[!] IP neighbor agent failed"
+          echo "[+] Running link crawl agent..."
+          python sources/discovery_agents/agent_link_crawl.py || echo "[!] Link crawl agent failed"
 
       - name: Build domain artifacts
         env:
@@ -146,7 +148,8 @@ jobs:
           # modified discovery/extended source files.
           git add data/ dist/ \
             sources/manual/discovery.txt \
-            sources/manual/extended.txt
+            sources/manual/extended.txt \
+            sources/manual/provenance.csv
           if git diff --cached --quiet; then
             echo "No changes detected. Skipping commit."
             exit 0

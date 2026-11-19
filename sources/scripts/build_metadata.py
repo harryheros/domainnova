@@ -7,6 +7,12 @@ This script is intentionally additive and non-invasive:
   - derives a metadata layer from section headers and domain patterns
   - emits machine-readable artifacts without altering DomainNova's worldview
 
+Every domain in the three tiers (seed, extended, discovery) gets a row, with
+its source tier and its origin: who first nominated it ("manual" for the
+seed files; the discovery agent or historical import for the others, from
+sources/manual/provenance.csv and the discovery.txt headers; see
+_provenance.py).
+
 Outputs:
   data/domains_metadata.json
   data/domains_metadata.yaml
@@ -39,6 +45,7 @@ from _source_parser import (  # noqa: E402
     UNSECTIONED,
     iter_source_entries,
 )
+import _provenance  # noqa: E402
 
 ROOT          = Path(__file__).resolve().parents[2]
 SEED_FILES = {
@@ -51,6 +58,7 @@ SEED_FILES = {
     "seed_sg": ROOT / "sources" / "manual" / "seed_sg.txt",
 }
 EXTENDED_FILE = ROOT / "sources" / "manual" / "extended.txt"
+DISCOVERY_FILE = ROOT / "sources" / "manual" / "discovery.txt"
 
 OUT_JSON       = ROOT / "data" / "domains_metadata.json"
 OUT_YAML       = ROOT / "data" / "domains_metadata.yaml"
@@ -106,12 +114,16 @@ class DomainMeta:
     ecosystem: str
     entity:    str
     category:  str
+    origin:        str = "unknown"  # who first nominated the domain (see _provenance.py)
+    origin_detail: str = ""         # e.g. the CT query or the IP whose neighbours were listed
 
 
 # ---------------------------------------------------------------------------
 # Parsing
 # ---------------------------------------------------------------------------
-def parse_source(path: Path, source_name: str) -> list[DomainMeta]:
+def parse_source(path: Path, source_name: str, origins: dict | None = None) -> list[DomainMeta]:
+    """Entries of one source file. origins maps domain -> (origin, detail, date);
+    seed files are manual curation."""
     if not path.exists():
         print(f"  [warn] {path} not found – skipping.")
         return []
@@ -128,6 +140,10 @@ def parse_source(path: Path, source_name: str) -> list[DomainMeta]:
             overrides = SECTION_OVERRIDES.get(section, {})
         if not DOMAIN_RE.match(domain):
             continue
+        if source_name.startswith("seed_"):
+            origin, detail = "manual", ""
+        else:
+            origin, detail, _ = (origins or {}).get(domain, ("unknown", "", ""))
 
         entries.append(
             DomainMeta(
@@ -137,6 +153,8 @@ def parse_source(path: Path, source_name: str) -> list[DomainMeta]:
                 ecosystem = overrides.get("ecosystem", "unknown"),
                 entity    = overrides.get("entity",    "Unknown"),
                 category  = overrides.get("category",  "uncategorized"),
+                origin    = origin,
+                origin_detail = detail,
             )
         )
 
@@ -192,6 +210,8 @@ def entries_to_yaml(entries: list[DomainMeta]) -> str:
         lines.append(f"  ecosystem: {_yaml_str(e.ecosystem)}")
         lines.append(f"  entity:    {_yaml_str(e.entity)}")
         lines.append(f"  category:  {_yaml_str(e.category)}")
+        lines.append(f"  origin:    {_yaml_str(e.origin)}")
+        lines.append(f"  origin_detail: {_yaml_str(e.origin_detail)}")
     return "\n".join(lines) + "\n"
 
 
@@ -204,7 +224,8 @@ def run(write_all: bool = True, validate_only: bool = False) -> None:
         for source, path in SEED_FILES.items()
     }
     seed_entries = [e for entries in seed_entries_by_source.values() for e in entries]
-    extended_entries = parse_source(EXTENDED_FILE, "extended")
+    extended_entries = parse_source(EXTENDED_FILE, "extended", _provenance.load(ROOT))
+    discovery_entries = parse_source(DISCOVERY_FILE, "discovery", _provenance.discovery_sections(DISCOVERY_FILE))
 
     # ---- Validation ----
     validation_report = {
@@ -238,10 +259,10 @@ def run(write_all: bool = True, validate_only: bool = False) -> None:
     if validate_only:
         return
 
-    # ---- Deduplicate (seed wins over extended) ----
+    # ---- Deduplicate (seed > extended > discovery, as in the build) ----
     seen:    set[str]       = set()
     entries: list[DomainMeta] = []
-    for e in seed_entries + extended_entries:
+    for e in seed_entries + extended_entries + discovery_entries:
         if e.domain not in seen:
             seen.add(e.domain)
             entries.append(e)
@@ -263,7 +284,7 @@ def run(write_all: bool = True, validate_only: bool = False) -> None:
 
     # CSV
     with OUT_CSV.open("w", encoding="utf-8", newline="") as fh:
-        writer = csv.DictWriter(fh, fieldnames=["domain","source","section","ecosystem","entity","category"])
+        writer = csv.DictWriter(fh, fieldnames=["domain","source","section","ecosystem","entity","category","origin","origin_detail"])
         writer.writeheader()
         for e in entries:
             writer.writerow(asdict(e))
@@ -278,9 +299,11 @@ def run(write_all: bool = True, validate_only: bool = False) -> None:
     eco_counts  = Counter(e.ecosystem for e in entries)
     cat_counts  = Counter(e.category  for e in entries)
     src_counts  = Counter(e.source    for e in entries)
+    origin_counts = Counter(e.origin  for e in entries)
     stats = {
         "total":      len(entries),
         "by_source":  dict(src_counts),
+        "by_origin":  dict(origin_counts.most_common()),
         "by_ecosystem": dict(eco_counts.most_common()),
         "by_category":  dict(cat_counts.most_common()),
     }

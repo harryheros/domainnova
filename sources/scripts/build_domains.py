@@ -84,6 +84,7 @@ except ImportError:
         IPNOVA_MIN_LINES_PER_BUCKET,
         GLOBAL_CDN_ASNS,
     )
+import _provenance  # noqa: E402  (sources/scripts is on sys.path by now)
 
 # ---------------------------------------------------------------------------
 # Hard limits (do not exceed these values)
@@ -243,6 +244,10 @@ class DomainRecord:
     dns_sg:        int = 0
     provider:      str = ""  # Cloud/CDN provider name if detected (e.g. "Alibaba Cloud", "Cloudflare")
     cdn_masked:    int = 0   # 1 if origin is hidden behind a global CDN (Cloudflare/Akamai/etc.)
+    # Resolver tier that answered in this build: "own" (our resolver),
+    # "public" (Google / Quad9 with client subnet), "fallback" (Cloudflare),
+    # "" (no answer this build; sticky rows keep their old signals).
+    resolver:      str = ""
 
 
 # ---------------------------------------------------------------------------
@@ -1397,8 +1402,26 @@ def _do_resolve(domain: str, upstream: str, session: requests.Session) -> List[s
     return ips
 
 
+# Tier of the last successful _resolve_name() call in this thread. The build
+# resolves domains on 20 threads; process_domain() reads it right after
+# resolving, on the same thread.
+_tier_local = threading.local()
+
+
+def last_resolver_tier() -> str:
+    return getattr(_tier_local, "tier", "")
+
+
 def _resolve_name(domain: str, session: requests.Session) -> List[str]:
-    """Resolve one exact name through the upstream chain (no www fallback)."""
+    """Resolve one exact name through the upstream chain (no www fallback).
+    Records the answering tier for last_resolver_tier()."""
+    ips, tier = _resolve_name_tier(domain, session)
+    if ips:
+        _tier_local.tier = tier
+    return ips
+
+
+def _resolve_name_tier(domain: str, session: requests.Session) -> Tuple[List[str], str]:
     # Tier 0: our own resolver (tried first). When it has no answer to use
     # (SERVFAIL, no HTTP answer) it is asked again: on a lossy path to a
     # domain's name servers the first try can run out of time, and the
@@ -1409,28 +1432,28 @@ def _resolve_name(domain: str, session: requests.Session) -> List[str]:
     if not ips and not answered and OWN_DOH:
         ips, answered = _resolve_rescue_detail(domain, session)
     if ips:
-        return ips
+        return ips, "own"
     if not PUBLIC_DOH:
-        return []
+        return [], ""
     # Tier 1: try ECS-capable primary (round-robin selection)
     primary = next_doh_upstream()
     ips = _do_resolve(domain, primary, session)
     if ips:
-        return ips
+        return ips, "public"
     # Tier 2: try the other ECS-capable primary
     for upstream in DOH_PRIMARIES:
         if upstream == primary:
             continue
         ips = _do_resolve(domain, upstream, session)
         if ips:
-            return ips
+            return ips, "public"
     # Tier 3: fallback to non-ECS upstreams (Cloudflare etc.)
     # These won't have GeoDNS accuracy but prevent total resolution failure.
     for upstream in DOH_FALLBACKS:
         ips = _do_resolve(domain, upstream, session)
         if ips:
-            return ips
-    return []
+            return ips, "fallback"
+    return [], ""
 
 
 # Bare domains that only resolved through www.<domain> in this run
@@ -1762,6 +1785,7 @@ def load_previous_rows(path: Path) -> Dict[str, DomainRecord]:
                         dns_sg=int(row.get("dns_sg", 0) or 0),
                         provider=row.get("provider", "") or "",
                         cdn_masked=int(row.get("cdn_masked", 0) or 0),
+                        resolver=row.get("resolver", "") or "",
                     )
                 except (ValueError, KeyError):
                     # Skip malformed row; never let one bad line break the build
@@ -1801,7 +1825,9 @@ def process_domain(
     updated: str,
     previous: Optional[Dict[str, DomainRecord]] = None,
 ) -> DomainRecord:
+    _tier_local.tier = ""
     ips = resolve_domain(domain, session)
+    resolver = last_resolver_tier() if ips else ""
     per_ip_buckets, region_dns_flags, dns_cn_count, dns_total, matched_cidr = \
         build_region_signals(ips, region_lookup)
 
@@ -1901,6 +1927,7 @@ def process_domain(
                     dns_sg=prev.dns_sg,
                     provider=getattr(prev, "provider", ""),
                     cdn_masked=getattr(prev, "cdn_masked", 0),
+                    resolver="",            # nothing answered in this build
                 )
 
     provider_name, cdn_masked_flag = detect_provider(ips)
@@ -1928,6 +1955,7 @@ def process_domain(
         dns_sg=dns_sg,
         provider=provider_name,
         cdn_masked=cdn_masked_flag,
+        resolver=resolver,
     )
 
 
@@ -2033,6 +2061,14 @@ def manage_discovery_lifecycle(
                 fail_counts.pop(domain, None)
 
     to_remove = set(purged) | set(promoted)
+
+    # Keep how each promoted domain was nominated (its discovery.txt header)
+    # before the domain leaves discovery.txt.
+    if promoted:
+        nominated = _provenance.discovery_sections(discovery_path)
+        _provenance.record(repo_root, [
+            (d, *nominated.get(d, ("unknown", "", ""))) for d in sorted(promoted)
+        ])
 
     # Rewrite discovery.txt
     if to_remove:
@@ -2476,6 +2512,13 @@ def write_stats(
         "score_bands":       dict(score_bands),
         "source_counts":     dict(source_counts),
         "buckets":           buckets_payload,
+        # Which resolver tier answered for each domain in this build.
+        "resolver": {
+            "own":        sum(1 for r in rows if r.resolver == "own"),
+            "public":     sum(1 for r in rows if r.resolver == "public"),
+            "fallback":   sum(1 for r in rows if r.resolver == "fallback"),
+            "unresolved": sum(1 for r in rows if not r.resolver),
+        },
         "generated_at":      time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         **extra,
     }

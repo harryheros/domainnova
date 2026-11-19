@@ -3,7 +3,7 @@
 > Self-evolving dataset of domains hosted on Asia-Pacific infrastructure, ranked by confidence.
 
 [![Update](https://github.com/harryheros/domainnova/actions/workflows/update.yml/badge.svg)](https://github.com/harryheros/domainnova/actions/workflows/update.yml)
-[![Version](https://img.shields.io/badge/version-v3.7.1-blue)](https://github.com/harryheros/domainnova/releases)
+[![Version](https://img.shields.io/badge/version-v3.8.0-blue)](https://github.com/harryheros/domainnova/releases)
 
 DomainNova answers one question: **is this domain's infrastructure physically hosted in region X?** — for CN, HK, TW, MO, JP, KR and SG. It attributes infrastructure, not corporate ownership, and it is a dataset, not a routing or filtering product.
 
@@ -19,8 +19,8 @@ Unlike static lists, it discovers, verifies and retires domains automatically ev
 |---|---|
 | `dist/domains_{cn,hk,tw,mo,jp,kr,sg}.txt` | One domain per line, score ≥ 60 |
 | `data/domains.csv` | Every domain with all signals, score, region, provider and CDN flag |
-| `data/domains_metadata.{json,yaml,csv}` | Entity, category and ecosystem per domain |
-| `data/stats.json` | Build statistics and lifecycle counters |
+| `data/domains_metadata.{json,yaml,csv}` | Every domain in the three tiers: tier, origin (how it was found), entity, category and ecosystem |
+| `data/stats.json` | Build statistics, lifecycle counters, and which resolver answered (`resolver`) |
 | `data/seed_review.json` | Curated domains whose name no longer exists, for manual review |
 
 ```text
@@ -64,8 +64,10 @@ weekly build: resolve → match IPNova ranges → score → dist/
                   fail 5 times → removed
 ```
 
-- **Discovery**: each week, reverse-IP lookups over IPNova's CN ranges (HackerTarget, optional ViewDNS API) find up to 100 new candidates. Subdomains of known domains are skipped, since suffix matching already covers them.
+- **Discovery**: each week, two agents find new candidates. Reverse-IP lookups over IPNova's CN ranges (HackerTarget, optional ViewDNS API) add up to 100; the links on the home pages of a rotating slice of known sites add up to 500 (robots.txt honoured, one request per site). Subdomains of known domains are skipped, since suffix matching already covers them. Every candidate is published only after passing the same checks as the rest.
 - Promotion pauses when `extended.txt` reaches 5000 domains.
+- **Provenance**: every domain records how it was first found, in the `origin` column of `domains_metadata.*`: `manual` (curated by hand), or the discovery agent that nominated it (`ip-neighbor`, `link-crawl`, `ct-logs`), with the IP, linking site or query in `origin_detail`. Origins of `extended.txt` domains are kept in [`sources/manual/provenance.csv`](sources/manual/provenance.csv); promotions add to it, and `backfill_provenance.py` rebuilt the history from git. Totals: `data/metadata_stats.json` → `by_origin`. Whatever the origin, a domain is published only on this build's own DNS and IP checks.
+- **Resolver**: `data/stats.json` → `resolver` counts the domains answered by our own resolver (`own`), by a public resolver (`public`) or the last-resort fallback (`fallback`) in the latest build; `data/domains.csv` has it per domain.
 - Seeds are never changed automatically. One that has no address for 3+ weeks is listed in `seed_review.json` if the name no longer exists; CDN and API domains that serve only subdomains are kept apart under `subdomain_only`.
 
 ---
@@ -85,7 +87,7 @@ Compliance and jurisdiction audits, vendor and supply-chain risk, OSINT and netw
 
 ## Contributing
 
-Add domains to `sources/manual/seed_{region}.txt` or `sources/manual/extended.txt` and open a pull request. `discovery.txt` is managed automatically; do not edit it by hand.
+Add domains to `sources/manual/seed_{region}.txt` or `sources/manual/extended.txt` and open a pull request; for `extended.txt`, add a `provenance.csv` row too (origin `manual`, and in `origin_detail` how you found it). `discovery.txt` is managed automatically; do not edit it by hand. By opening a pull request you agree that your contribution may be distributed under this repository's license and under the author's commercial licenses.
 
 Local tools: `python sources/scripts/build_domains.py`, `build_metadata.py --all`, `validate_manual_sources.py`. Tests: `cd sources/scripts && python -m unittest discover -p "test_*.py"`. Design records: [`docs/`](docs/).
 

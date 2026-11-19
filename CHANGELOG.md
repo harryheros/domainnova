@@ -4,6 +4,45 @@ Releases, newest first. The weekly data updates are the
 `chore: auto-update` commits; current statistics are in
 [data/stats.json](./data/stats.json).
 
+## 3.8.0 (2026-11-18)
+
+- **Every domain records how it was found.** `data/domains_metadata.*`
+  now covers all three tiers (discovery domains were missing, so about 200
+  published domains had no metadata row) and adds `origin` and
+  `origin_detail`: `manual` for domains curated by hand, or the discovery
+  agent that nominated them (`ip-neighbor` with the IP whose neighbours
+  were listed, `link-crawl` with the linking site, `ct-logs` with the
+  query). The origins of `extended.txt` domains are kept in
+  `sources/manual/provenance.csv`; each promotion adds its domains, with
+  the discovery.txt header they were listed under.
+- **The history was rebuilt from git** (`backfill_provenance.py`) for the
+  4,027 `extended.txt` domains: 774 curated by hand (the first version of
+  the file and later hand additions), 1,325 found by IP-neighbor discovery,
+  248 by CT logs, and 1,680 nominated between 2026-03-28 and 2026-05-07 by
+  a former agent that copied candidates from public proxy-routing lists
+  (v2fly/domain-list-community and felixonmars/dnsmasq-china-list).
+- **Those 1,680 domains are removed.** They had passed this dataset's own
+  checks, but a list made for proxy routing is not a source this dataset
+  wants to depend on. The published CN list goes from 4,436 to about 2,890
+  domains, HK loses 14 and SG 52; the other regions are unchanged. Any of
+  them that the dataset's own discovery finds again comes back under that
+  origin.
+- **New discovery agent, link crawl**
+  (`sources/discovery_agents/agent_link_crawl.py`): each week it reads the
+  home pages of a rotating slice of known sites (300 per run, robots.txt
+  honoured, one request per site) and adds up to 500 linked domains, under a
+  header naming the linking site. It runs with the IP-neighbor agent; one
+  failing no longer stops the other.
+- **Which resolver answered**: each domain in `data/domains.csv` has a
+  `resolver` column (`own`, `public`, `fallback`, or empty when nothing
+  answered in this build), and `data/stats.json` → `resolver` counts them.
+- Correction to 3.4.0: it said the lists behind the former upstream agent
+  had licenses incompatible with this dataset. dnsmasq-china-list is under
+  the WTFPL, which allows any use; the agent was removed because those lists
+  are made for proxy routing, which this dataset is not.
+- Contributing: pull requests are accepted under this repository's license
+  and the author's commercial licenses.
+
 ## 3.7.1 (2026-11-15)
 
 - **Our own resolver is asked again only when it failed.** Since 3.7.0
