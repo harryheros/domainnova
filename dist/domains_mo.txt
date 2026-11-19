@@ -1,6 +1,6 @@
 # DomainNova - MO domains
-# Generated: 2026-11-19T07:07:03Z
-# Count: 78
+# Generated: 2026-11-19T07:54:28Z
+# Count: 82
 abm.org.mo
 al.gov.mo
 amcm.gov.mo
@@ -26,8 +26,10 @@ dsi.gov.mo
 dsj.gov.mo
 dsscu.gov.mo
 dst.gov.mo
+esigntrust.com
 exmoo.com
 fdct.gov.mo
+freewifi.mo
 fsm.gov.mo
 galaxyentertainment.com
 galaxymacau.com
@@ -58,12 +60,14 @@ macauspin.mo
 macautourism.gov.mo
 mastvnet.com
 mfood.mo
+mif.com.mo
 mlm.com.mo
 monic.mo
 mpu.edu.mo
 mtel.mo
 must.edu.mo
 ocbc.com.mo
+platformchinaplp.mo
 sa.gov.mo
 sands.com.mo
 sandschina.com

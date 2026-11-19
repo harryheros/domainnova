@@ -1,9 +1,14 @@
 # DomainNova - HK domains
-# Generated: 2026-11-19T07:07:03Z
-# Count: 154
+# Generated: 2026-11-19T07:54:28Z
+# Count: 185
 163.net
+163vip.com
+3dmgame.hk
 3hk.hk
+57616.com
 aastocks.com
+academy-shopline.hk
+aidlab.hk
 alipay.hk
 alipayhk.com
 asia.ccb.com
@@ -12,16 +17,19 @@ baby-kingdom.com
 bastillepost.com
 bigbigchannel.com.hk
 bochk.com
+broadwaymacau.com.mo
 cathaypacific.com
 cedb.gov.hk
 centennialcollege.hku.hk
 ceo.gov.hk
 cepu.gov.hk
 checi.cn
+chiq.com
 citibank.com.hk
 cityu.edu.hk
 clp.com.hk
 cmab.gov.hk
+cnmp3.com
 crhk.com.hk
 csb.gov.hk
 csl.com.hk
@@ -29,17 +37,22 @@ cso.gov.hk
 cstb.gov.hk
 ctfe.com
 ctgoodjobs.hk
+cuclinic.hk
 cuhk.edu.hk
 cuhkmc.hk
 cxexpress.com
 dahsing.com
 dbs.com.hk
 dimbuy.com
+directel.mo
 discuss.com.hk
 dragonfly.fm
 edb.gov.hk
 eduhk.hk
+eoc.org.hk
+esurfingcloud.com
 find853.com
+flymeos.com
 fortress.com.hk
 fso.gov.hk
 fstb.gov.hk
@@ -53,13 +66,17 @@ headlinefinance.hk
 headlinejobs.hk
 hgc.com.hk
 hk01.com
+hk2a.com
 hkairport.com
 hkapa.edu
 hkbh.org.hk
 hkbn.net
 hkbu.edu.hk
 hkcd.com.hk
+hkcsl-5g.com
+hkcsl.com
 hkct.edu.hk
+hkdnr.hk
 hkeaa.edu.hk
 hkelectric.com
 hket.com
@@ -78,6 +95,7 @@ hksh-hospital.com
 hkstp.org
 hksyu.edu
 hkt.com
+hktv.com.hk
 hktvmall.com
 hku.hk
 hongkongairlines.com
@@ -98,6 +116,7 @@ job853.com
 jobsdb.com
 jytsdkj.com
 klook.com
+kudostat.com
 lcsd.gov.hk
 liangdiansiwang.com
 lihkg.com
@@ -117,7 +136,10 @@ on.cc
 openrice.com
 pccw.com
 polyu.edu.hk
+qbaobei.com
+qiuyi.cn
 rthk.hk
+sandingtv.com
 sb.gov.hk
 sc.com
 scmp.com
@@ -125,12 +147,15 @@ sfc.hk
 sfu.edu.hk
 singtao.com
 smartone.com
+snsnb.com
+starworldmacau.com
 staticfile.org
 sth.org.hk
 stheadline.com
 stpaul.org.hk
 takungpao.com
 taodocs.com
+theclub.com.hk
 three.com.hk
 tmall.hk
 tom.com
@@ -149,9 +174,15 @@ wenweipo.com
 westkowloon.hk
 wharfholdings.com
 wheelockcompany.com
+winbaicai.com
 winglungbank.com
+xiaohei.com
 xpcha.com
+xsjk.net
+xtep.com.hk
+yadvertising.com.hk
 yahoo.com.hk
 yata.hk
 yesstyle.com
+ys137.com
 za.group
