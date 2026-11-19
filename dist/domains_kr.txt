@@ -1,6 +1,6 @@
 # DomainNova - KR domains
-# Generated: 2026-11-19T05:35:21Z
-# Count: 262
+# Generated: 2026-11-19T06:17:47Z
+# Count: 265
 11st.co.kr
 2028ulsanexpo.or.kr
 abllife.co.kr
@@ -35,6 +35,7 @@ daegu.go.kr
 daejeon.go.kr
 danawa.com
 daum.net
+daumcorp.com
 dcinside.com
 debc.or.kr
 donga.com
@@ -84,6 +85,7 @@ jype.com
 kaist.ac.kr
 kakao.com
 kakaobank.com
+kakaocdn.net
 kakaot.com
 kakaotalk.com
 kbanknow.com
@@ -200,6 +202,7 @@ smilegate.com
 smtown.com
 snu.ac.kr
 sooplive.co.kr
+sooplive.com
 sos1379.go.kr
 spo.go.kr
 ssg.com

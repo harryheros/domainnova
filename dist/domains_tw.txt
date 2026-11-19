@@ -1,6 +1,6 @@
 # DomainNova - TW domains
-# Generated: 2026-11-19T05:35:21Z
-# Count: 169
+# Generated: 2026-11-19T06:17:47Z
+# Count: 178
 104.com.tw
 1111.com.tw
 518.com.tw
@@ -124,6 +124,7 @@ pts.org.tw
 ptt.cc
 quanta.com.tw
 railway.gov.tw
+richart.tw
 rti.org.tw
 ruten.com.tw
 scsb.com.tw
@@ -132,6 +133,8 @@ shopee.tw
 sinica.edu.tw
 sinopac.com
 sipa.gov.tw
+skbank.com.tw
+skl.com.tw
 storm.mg
 stsp.gov.tw
 t-cat.com.tw
@@ -140,6 +143,7 @@ tainan.gov.tw
 taipei.gov.tw
 taipower.com.tw
 taishinbank.com.tw
+taishinyouth.org.tw
 taitung.gov.tw
 taiwanlife.com
 taiwanmobile.com
@@ -150,13 +154,18 @@ tcb-bank.com.tw
 teema.org.tw
 thsrc.com.tw
 tku.edu.tw
+tsda.com.tw
+tsholdings.com.tw
+tsit.com.tw
 tsmc.com
+tssco.com.tw
 ttv.com.tw
 ttvshopping.com.tw
 tvbs.com.tw
 twdrp.tw
 twgrants.tw
 twia.org.tw
+twmsolution.com
 twnic.tw
 twse.com.tw
 udn.com

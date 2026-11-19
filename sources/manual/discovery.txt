@@ -4,13 +4,8 @@
 alikunlun.com
 
 # --- ip-neighbor:111.124.204.233 2026-11-16 ---
-qiyukf.cn
 
 # --- ip-neighbor:47.106.90.124 2026-11-16 ---
-byd.cn
-byd.com.cn
-bydauto.com
-bydenergy.com
 
 # --- ip-neighbor:171.109.103.144 2026-11-19 ---
 wsglb0.com
@@ -710,3 +705,506 @@ up8.space
 
 # --- ip-neighbor:120.92.211.176 2026-11-19 ---
 mysmth.net
+
+# --- ip-neighbor:101.226.4.13 2026-11-19 ---
+qihoo.com
+360qhcdn.com
+qh-cdn.com
+qh-lb.com
+qihoo.cn
+qihu.com
+qss-lb.com
+
+# --- ip-neighbor:106.15.148.44 2026-11-19 ---
+qianwenaiapi.com
+
+# --- ip-neighbor:203.107.63.81 2026-11-19 ---
+lingkou.com
+lingkou.xyz
+
+# --- ip-neighbor:120.53.130.158 2026-11-19 ---
+dou.bz
+douc.cc
+
+# --- ip-neighbor:103.107.217.28 2026-11-19 ---
+yximgs.com
+kspkg.com
+viviv.com
+
+# --- link-crawl:softbank.jp 2026-11-19 ---
+linemo.jp
+naver.jp
+
+# --- link-crawl:softonic.cn 2026-11-19 ---
+softonic.jp
+softonic.kr
+privacy-center.org
+sftcdn.net
+softonic-ar.com
+softonic.com
+softonic-id.com
+softonic.nl
+softonic.pl
+com.br
+softonic.ru
+softonic.se
+softonic-th.com
+com.tr
+yandex.ru
+clarity.ms
+t.me
+
+# --- link-crawl:sony.co.jp 2026-11-19 ---
+sony.jp
+nuro.jp
+cookielaw.org
+fonts.net
+marsflag.com
+sony.com
+sony.eu
+note.com
+socdm.com
+
+# --- link-crawl:sooplive.co.kr 2026-11-19 ---
+sooplive.com
+
+# --- link-crawl:souche.com 2026-11-19 ---
+dasouche.com
+
+# --- link-crawl:southcn.com 2026-11-19 ---
+nfncb.cn
+nfzz.net.cn
+gdjy.cn
+gdrd.cn
+gdzf.org.cn
+cnbayarea.org.cn
+gdjubao.cn
+gdpplgopss.org.cn
+gdftu.org.cn
+gdwomen.org.cn
+gdwcf.cn
+gdmj.org.cn
+gdzgd.cn
+gdmm.org.cn
+gdsredcross.org.cn
+gddpf.org.cn
+gddprc.org.cn
+gdicpa.org.cn
+gdql.org.cn
+geg.com.cn
+hangyun.com.cn
+rd.gz.cn
+fangxiaolaw.cn
+nfnews.com
+oeeee.com
+nfpeople.com
+newsgd.com
+nanfangdailypress.com
+gdszjgdj.org
+gdlqw.com
+gdsfxj.com
+southacademic.com
+gdccp.com
+gdairport.com
+gdghg.com
+gdhchina.com
+
+# --- link-crawl:spgroup.com.sg 2026-11-19 ---
+spservices.sg
+spmobility.sg
+spdigital.sg
+brightsparks.com.sg
+edutechonline.com
+jemena.com.au
+
+# --- link-crawl:sse.org.cn 2026-11-19 ---
+preipo.org.cn
+homeforsmes.com.cn
+chinahtz.com
+szte.com
+
+# --- link-crawl:starbucks.com.cn 2026-11-19 ---
+nestle.com.cn
+tb.cn
+sentry-cdn.com
+
+# --- link-crawl:starhub.com 2026-11-19 ---
+starhubtvplus.com
+
+# --- link-crawl:starteam.sg 2026-11-19 ---
+bookfo.com
+fresns.org
+starteamec.com
+
+# --- link-crawl:stheadline.com 2026-11-19 ---
+thestandard.com.hk
+pcmarket.com.hk
+jobmarket.com.hk
+headlinejobs.hk
+eduplus.hk
+headlinefinance.hk
+hkhl.hk
+sthlstatic.com
+chartbeat.com
+andbeyond.media
+my-magazine.me
+ohpama.com
+singtaonewscorp.com
+me-qr.com
+
+# --- link-crawl:stockstar.com 2026-11-19 ---
+ssimg.cn
+ssajax.cn
+qh168.com.cn
+cls.cn
+investorchina.cn
+iresearch.cn
+pedaily.cn
+cngold.com.cn
+smm.cn
+zhiding.cn
+ebicapital.cn
+666666.com.cn
+gtjaqh.com
+jwview.com
+chnfund.com
+investing.com
+gelonghui.com
+lanjinger.com
+weeklyonstocks.com
+fx678.com
+chanjingnet.com
+jin10.com
+aigbk.com
+gasgoo.com
+hxny.com
+bida24.com
+
+# --- link-crawl:storm.mg 2026-11-19 ---
+threads.com
+
+# --- link-crawl:straitstimes.com 2026-11-19 ---
+sphdigital.com.sg
+straitstimes.com.sg
+sph.com.sg
+stclassifieds.sg
+businesstimes.com.sg
+beritaharian.sg
+tamilmurasu.com.sg
+stomp.sg
+sphlabs.com
+visualwebsiteoptimizer.com
+sphdigital.com
+boltdns.net
+
+# --- link-crawl:streetdirectory.com 2026-11-19 ---
+adpushup.com
+sdimgs.com
+thesgfrstore.com
+streetdirectory.me
+street-directory.com
+com.my
+singaporejobsdb.com
+
+# --- link-crawl:suning.com 2026-11-19 ---
+cnsuning.com
+
+# --- link-crawl:sunmi.com 2026-11-19 ---
+m1page.com
+sunmi.tech
+
+# --- link-crawl:sunra.com 2026-11-19 ---
+typekit.net
+bandcamp.com
+sundazed.com
+strut-records.co.uk
+blogspot.com
+hamilton.edu
+wikipedia.org
+presspop.toys
+fantagraphics.com
+amazon.com
+thebeliever.net
+example7.com
+ayeaton.com
+
+# --- link-crawl:sunwoda.com 2026-11-19 ---
+depower.com.cn
+sunwodaenergy.com
+sunwinon.com
+sunwodafoundation.com
+codady.com
+liwinon.com
+sevb.com
+ycoem.net
+
+# --- link-crawl:sutd.edu.sg 2026-11-19 ---
+42singapore.sg
+parsely.com
+microsoftcrmportals.com
+goo.gl
+curator.io
+
+# --- link-crawl:suumo.jp 2026-11-19 ---
+suumocounter.jp
+recruit.co.jp
+rsc-web.jp
+toranet.jp
+r-staffing.co.jp
+hatalike.jp
+recruit-dc.co.jp
+rikunabi-yakuzaishi.jp
+hotpepper.jp
+studysapuri.jp
+airregi.jp
+tabroom.jp
+recruit-card.jp
+tempodas.com
+r-agent.com
+froma.com
+indeed.com
+jalan.net
+golf-jalan.net
+zexy.net
+carsensor.net
+shingakunet.com
+hokench.com
+isize.com
+
+# --- link-crawl:svolt.cn 2026-11-19 ---
+wowpop.cn
+yongsy.com
+
+# --- link-crawl:swu.edu.cn 2026-11-19 ---
+xxcb.cn
+cqrb.cn
+gmdaily.cn
+kjrb.com.cn
+eduwest.com
+cqbys.com
+cbgcloud.com
+ihwrm.com
+
+# --- link-crawl:sysu.edu.cn 2026-11-19 ---
+gzsys.org.cn
+
+# --- link-crawl:taetea.com 2026-11-19 ---
+spaceship-cdn.com
+spaceship.com
+
+# --- link-crawl:tailg.com.cn 2026-11-19 ---
+tailgvip.com
+tailg.com
+myfans.cc
+
+# --- link-crawl:taishinbank.com.tw 2026-11-19 ---
+tsbk.tw
+taishinholdings.com.tw
+tsholdings.com.tw
+tssco.com.tw
+tsit.com.tw
+tsda.com.tw
+taishinart.org.tw
+taishincharity.org.tw
+taishinyouth.org.tw
+skl.com.tw
+skbank.com.tw
+richart.tw
+
+# --- link-crawl:taiwanmobile.com 2026-11-19 ---
+twmsolution.com
+
+# --- link-crawl:takungpao.com 2026-11-19 ---
+tkww.hk
+hkstv.hk
+jdonline.com.hk
+mnw.cn
+hkcd.com
+crntt.com
+hxnews.com
+taihainet.com
+
+# --- link-crawl:talkingdata.com 2026-11-19 ---
+tdataspace.com
+
+# --- link-crawl:taobao.com 2026-11-19 ---
+dingtalk.jp
+tao.co
+
+# --- link-crawl:tapd.cn 2026-11-19 ---
+cnb.cool
+21kunpeng.com
+
+# --- link-crawl:tcl.com 2026-11-19 ---
+trustarc.com
+klaviyo.com
+shopifysvc.com
+pinterest.com
+
+# --- link-crawl:tech.gov.sg 2026-11-19 ---
+myworkdayjobs.com
+
+# --- link-crawl:technews.tw 2026-11-19 ---
+w.org
+flipboard.com
+feedly.com
+
+# --- link-crawl:temu.com 2026-11-19 ---
+kwcdn.com
+
+# --- link-crawl:tencentvideo.com 2026-11-19 ---
+abovedomains.com
+
+# --- link-crawl:tenda.com.cn 2026-11-19 ---
+tenda.cn
+xiekeyun.com
+
+# --- link-crawl:tgbus.com 2026-11-19 ---
+tagtic.cn
+g.com.cn
+scpiyao.org.cn
+sonkwo.com
+psnine.com
+gusaifei.com
+
+# --- link-crawl:thecorner.com.cn 2026-11-19 ---
+thecorner.com
+cloudinary.com
+
+# --- link-crawl:thenewslens.com 2026-11-19 ---
+chtf.org.tw
+inkmaginecms.com
+smartocto.com
+tnlmediagene.com
+tnlmedia.com
+ctbcantidrug.org
+skimresources.com
+
+# --- link-crawl:tianjimedia.com 2026-11-19 ---
+jikexiu.com
+
+# --- link-crawl:tibettravel.org 2026-11-19 ---
+tibet.cn
+wistia.net
+lonelyplanet.com
+tripadvisor.com
+forbes.com
+huffingtonpost.com
+onestep4ward.com
+roughguides.com
+tibetway.com
+tibetrundreisen.com
+travelchinaguide.com
+trustpilot.com
+
+# --- link-crawl:tieyou.com 2026-11-19 ---
+atobo.com.cn
+tripadvisor.cn
+zhuna.cn
+checi.cn
+bidcenter.com.cn
+yy8844.cn
+c-ctrip.com
+haiyunx.com
+zx110.org
+jobui.com
+tobosu.com
+kanzhun.com
+64365.com
+ltldgroup.com
+jiazhao.com
+tulaoshi.com
+17house.com
+hc360.com
+5fen.com
+99114.com
+chexun.com
+che.com
+zhe800.com
+keyunzhan.com
+go2map.com
+liebiao.com
+qianzhan.com
+lvmama.com
+lvping.com
+yododo.com
+mipang.com
+city8.com
+tech-food.com
+51sole.com
+mapbar.com
+mtv123.com
+huochepiao.com
+
+# --- link-crawl:tiktok.com 2026-11-19 ---
+tiktokcdn-us.com
+
+# --- link-crawl:timescar.jp 2026-11-19 ---
+bedore.jp
+timesbiz.jp
+timesclub.jp
+timessupport.co.jp
+btimes.jp
+timespay.jp
+timesmobi.co.jp
+park24.co.jp
+
+# --- link-crawl:tiseagles.cn 2026-11-19 ---
+tiseagles.com
+usefathom.com
+lifeplusworldwide.com
+cognia.org
+
+# --- link-crawl:tistory.com 2026-11-19 ---
+kakaocdn.net
+daumcorp.com
+
+# --- link-crawl:tmon.co.kr 2026-11-19 ---
+naverncp.com
+
+# --- link-crawl:tmtpost.com 2026-11-19 ---
+barrons.com.cn
+itvalue.com.cn
+chaindd.online
+texperts.com
+jdian.tv
+medium.com
+chaindd.net
+
+# --- link-crawl:todayonline.com 2026-11-19 ---
+mediacorp.sg
+vulnerability-disclosure.com
+addtoany.com
+embed.ly
+
+# --- link-crawl:tokyo-np.co.jp 2026-11-19 ---
+adingo.jp
+topmuseum.jp
+cincinnati-art2026.jp
+tokyo.jp
+tokyo-np.jp
+chunichi.co.jp
+heart-design.jp
+chunichi-shakaijigyo.jp
+nie.jp
+47news.jp
+dragons.jp
+unitag.jp
+nakanohito.jp
+sompo-museum.org
+tokyo-np.shop
+np-labo.com
+opecloud.com
+
+# --- link-crawl:tongji-hospital.com 2026-11-19 ---
+smaxit.cn
+adobe.com
+
+# --- link-crawl:wellaprofessionals.cn 2026-11-19 ---
+wella.co.jp
+wella.com
+bynder.com
+professionalstore.com
+wellacompany.com
+salonprofessional.pl
+wellaprofessionals.cz

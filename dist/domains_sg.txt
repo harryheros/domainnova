@@ -1,18 +1,20 @@
 # DomainNova - SG domains
-# Generated: 2026-11-19T05:35:21Z
-# Count: 98
+# Generated: 2026-11-19T06:17:47Z
+# Count: 103
 263.net
 8world.com
 99.co
 acra.gov.sg
 bianminwang.com
 biohyalux.com
+c-ctrip.com
 caas.gov.sg
 carousell.com
 carousell.sg
 changiairport.com
 channelnewsasia.com
 coldstorage.com.sg
+com.my
 comfortdelgro.com
 cpf.gov.sg
 csa.gov.sg
@@ -26,6 +28,7 @@ gov.sg
 grab.com
 gxrcu.com
 hdb.gov.sg
+hkcd.com
 hmsed.com
 ica.gov.sg
 imda.gov.sg
@@ -34,6 +37,7 @@ iras.gov.sg
 jobstreet.com.sg
 judiciary.gov.sg
 lazada.sg
+liebiao.com
 londonermacao.com
 lta.gov.sg
 m1.com.sg
@@ -84,10 +88,12 @@ smrt.com.sg
 smu.edu.sg
 souche.com
 spgroup.com.sg
+sphdigital.com.sg
 starhub.com
 straitstimes.com
 streetdirectory.com
 sutd.edu.sg
+tailg.com
 tech.gov.sg
 theplazamacao.com
 tieyou.com
@@ -96,6 +102,5 @@ uob.com.sg
 ura.gov.sg
 visitsingapore.com
 vivoglobal.com
-wp.jun2020.com
 xiecheng.com
 zaobao.com.sg

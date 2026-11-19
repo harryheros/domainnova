@@ -197,6 +197,10 @@ bthotels.com,manual,"first extended.txt, curated by hand",2026-03-27
 btime.com,manual,added by hand,2026-03-28
 buy123.com.tw,manual,added by hand,2026-04-21
 buydk.cn,ct-logs,%.cn,2026-07-01
+byd.cn,ip-neighbor,47.106.90.124,2026-11-16
+byd.com.cn,ip-neighbor,47.106.90.124,2026-11-16
+bydauto.com,ip-neighbor,47.106.90.124,2026-11-16
+bydenergy.com,ip-neighbor,47.106.90.124,2026-11-16
 bytecdn.cn,manual,added by hand,2026-03-28
 byted.org,manual,added by hand,2026-03-28
 bytedns.net,manual,added by hand,2026-03-28
@@ -801,6 +805,7 @@ qingting.fm,manual,"first extended.txt, curated by hand",2026-03-27
 qinyuan.cn,manual,"first extended.txt, curated by hand",2026-03-27
 qiqiuyun.net,ip-neighbor,116.153.78.163,2026-04-12
 qixin.com,manual,"first extended.txt, curated by hand",2026-03-27
+qiyukf.cn,ip-neighbor,111.124.204.233,2026-11-16
 qiyunwangluokeji.cn,ip-neighbor,39.156.70.37,2026-11-03
 qlogo.cn,manual,"first extended.txt, curated by hand",2026-03-27
 qno.cn,ct-logs,%.cn,2026-07-01

@@ -1164,3 +1164,10 @@ chinaunicom.com.cn
 h3c.com.cn
 tcorea.com
 zhouqinghuan.com
+
+# ===== Auto-promoted 2026-11-19 =====
+byd.cn
+byd.com.cn
+bydauto.com
+bydenergy.com
+qiyukf.cn
