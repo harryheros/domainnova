@@ -1,5 +1,5 @@
 # DomainNova - CN domains
-# Generated: 2026-11-19T07:54:28Z
+# Generated: 2026-11-19T08:41:13Z
 # Count: 3227
 002t.cn
 021east.com
@@ -76,7 +76,6 @@
 2345.com
 2345cdn.net
 263.com
-265.com
 2b2c.cn
 2b2c.com
 300.cn
@@ -1006,6 +1005,7 @@ dnsapi.cn
 dnsmsn.com
 dnspod.cn
 dnspod.com
+dnsv1.com
 doc88.com
 docer.com
 docin.com
@@ -1346,7 +1346,6 @@ golingo.cn
 gome.com.cn
 gomein.net.cn
 gongkaozhu.cn
-googleoptimize.com
 gotion.com.cn
 goubuli.com
 gov.cn
@@ -1739,7 +1738,6 @@ kaifu.com
 kaipuyun.cn
 kaiserkraft.cn
 kaiwentuoyy.com
-kalebooster.com
 kankanews.com
 kans.cn
 kanzhun.com
@@ -2271,6 +2269,7 @@ purekindfund.com
 py-axa.com
 pyamc.com
 q-house.cn
+q1.com
 qcc.com
 qcloud.com
 qcloudcdn.com
@@ -2569,6 +2568,7 @@ sohucs.com
 sonkwo.com
 sooce.cn
 sootoo.com
+soso.com
 soufun.com
 soufunimg.com
 southacademic.com

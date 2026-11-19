@@ -191,7 +191,6 @@ sinmungo.go.kr
 foodsafetykorea.go.kr
 ciss.go.kr
 sanghun.go.kr
-cha.go.kr
 klac.or.kr
 ccrs.or.kr
 xn--oy2b29bd3a601b.kr
@@ -239,7 +238,6 @@ uctf.or.kr
 usjahwal.or.kr
 khnp.co.kr
 korean.go.kr
-2050cnc.go.kr
 uepa.or.kr
 ulsanshinbo.co.kr
 bizinfo.go.kr
@@ -402,10 +400,8 @@ rhspz.com
 hshdluqiao.com
 moqiangwang.com
 hsrongheng.com
-hengshitaotong.com
 hqbpfh.com
 lanbaozhenkong.com
-leisenmuye.com
 lybuxiugangwang.com
 jmjx0534.com
 aphulan888.com
@@ -415,7 +411,6 @@ hszitong.com
 xrglqc.com
 weifasiwang.com
 kaiwentuoyy.com
-apsswy.com
 hengshuitaotong.com
 
 # --- link-crawl:waterclean.cn 2026-11-19 ---
@@ -590,7 +585,6 @@ xdygroup.net
 xdygroup.cc
 jxshoes.com
 hm-dn.com
-cnhcty.com
 nt-gt.com
 xhcarbon.com
 xatts.com

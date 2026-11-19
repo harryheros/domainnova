@@ -1,6 +1,6 @@
 # DomainNova - SG domains
-# Generated: 2026-11-19T07:54:28Z
-# Count: 149
+# Generated: 2026-11-19T08:41:13Z
+# Count: 146
 25pp.com
 263.net
 8264.com
@@ -99,7 +99,6 @@ posb.com.sg
 propertyguru.com.sg
 psa.sg
 pub.gov.sg
-q1.com
 qwencloud.com
 sandsmacao.com
 sandsresortsmacao.com
@@ -121,12 +120,10 @@ singtel.com
 sistic.com.sg
 smrt.com.sg
 smu.edu.sg
-soso.com
 souche.com
 spgroup.com.sg
 sphdigital.com.sg
 starhub.com
-stnn.cc
 straitstimes.com
 streetdirectory.com
 sutd.edu.sg

@@ -20479,14 +20479,6 @@
   category:  uncategorized
   origin:    link-crawl
   origin_detail: ulsan.go.kr
-- domain:    cha.go.kr
-  source:    discovery
-  section:   Unsectioned
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
-  origin:    link-crawl
-  origin_detail: ulsan.go.kr
 - domain:    klac.or.kr
   source:    discovery
   section:   Unsectioned
@@ -20856,14 +20848,6 @@
   origin:    link-crawl
   origin_detail: ulsan.go.kr
 - domain:    korean.go.kr
-  source:    discovery
-  section:   Unsectioned
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
-  origin:    link-crawl
-  origin_detail: ulsan.go.kr
-- domain:    2050cnc.go.kr
   source:    discovery
   section:   Unsectioned
   ecosystem: unknown
@@ -21783,14 +21767,6 @@
   category:  uncategorized
   origin:    link-crawl
   origin_detail: wanghuaxiangsu.com
-- domain:    hengshitaotong.com
-  source:    discovery
-  section:   Unsectioned
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
-  origin:    link-crawl
-  origin_detail: wanghuaxiangsu.com
 - domain:    hqbpfh.com
   source:    discovery
   section:   Unsectioned
@@ -21800,14 +21776,6 @@
   origin:    link-crawl
   origin_detail: wanghuaxiangsu.com
 - domain:    lanbaozhenkong.com
-  source:    discovery
-  section:   Unsectioned
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
-  origin:    link-crawl
-  origin_detail: wanghuaxiangsu.com
-- domain:    leisenmuye.com
   source:    discovery
   section:   Unsectioned
   ecosystem: unknown
@@ -21880,14 +21848,6 @@
   origin:    link-crawl
   origin_detail: wanghuaxiangsu.com
 - domain:    kaiwentuoyy.com
-  source:    discovery
-  section:   Unsectioned
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
-  origin:    link-crawl
-  origin_detail: wanghuaxiangsu.com
-- domain:    apsswy.com
   source:    discovery
   section:   Unsectioned
   ecosystem: unknown
@@ -22880,14 +22840,6 @@
   origin:    link-crawl
   origin_detail: www.china-hzz.com
 - domain:    hm-dn.com
-  source:    discovery
-  section:   Unsectioned
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
-  origin:    link-crawl
-  origin_detail: www.china-hzz.com
-- domain:    cnhcty.com
   source:    discovery
   section:   Unsectioned
   ecosystem: unknown
@@ -33215,14 +33167,6 @@
   category:  uncategorized
   origin:    link-crawl
   origin_detail: cfund.com.cn
-- domain:    googleoptimize.com
-  source:    discovery
-  section:   Unsectioned
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
-  origin:    link-crawl
-  origin_detail: cgtn.com
 - domain:    quora.com
   source:    discovery
   section:   Unsectioned
