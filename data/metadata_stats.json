@@ -1,5 +1,5 @@
 {
-  "total": 3325,
+  "total": 3340,
   "by_source": {
     "seed_cn": 578,
     "seed_hk": 126,
@@ -9,16 +9,16 @@
     "seed_kr": 162,
     "seed_sg": 73,
     "extended": 1121,
-    "discovery": 895
+    "discovery": 910
   },
   "by_origin": {
     "manual": 2083,
     "link-crawl": 860,
-    "ip-neighbor": 214,
+    "ip-neighbor": 229,
     "ct-logs": 168
   },
   "by_ecosystem": {
-    "unknown": 2372,
+    "unknown": 2387,
     "infrastructure-kr": 162,
     "infrastructure-jp": 155,
     "infrastructure-tw": 139,
@@ -44,7 +44,7 @@
     "developer-platforms": 4
   },
   "by_category": {
-    "uncategorized": 2372,
+    "uncategorized": 2387,
     "infrastructure": 731,
     "platform": 85,
     "government": 37,

@@ -1,6 +1,6 @@
 # DomainNova - CN domains
-# Generated: 2026-11-19T06:17:47Z
-# Count: 1807
+# Generated: 2026-11-19T07:07:03Z
+# Count: 1821
 002t.cn
 10000.com
 10010.com
@@ -191,6 +191,7 @@ auto-marketing.com.cn
 autohome.com.cn
 autonavi.com
 averydennison.com.cn
+avgroft.com
 awtmt.com
 babytree.com
 baic.com.cn
@@ -369,6 +370,7 @@ changyou.com
 chanjingnet.com
 che168.com
 chei.com.cn
+chenzhongtech.com
 chery.com.cn
 chexun.com
 childrenshospital.org.cn
@@ -414,6 +416,7 @@ chunmi.com
 cib.com.cn
 cille.cn
 citicbank.com
+citics.com
 cits.com.cn
 city8.com
 citylogic.cn
@@ -631,6 +634,7 @@ ersanli.cn
 escience.cn
 etao.com
 etax.chinatax.gov.cn
+etoote.com
 evebattery.com
 everbright.com
 everhub.cn
@@ -957,20 +961,27 @@ knownsec.com
 kongfz.com
 kongzhong.com
 konka.com
+kortatb.com
 koubei.com
 kpc.com.cn
 ksapisrv.com
 kspkg.com
 ksyun.com
+kts-tx-test.cn
+kuai-fei.com
 kuaidi100.com
 kuaidown.net
 kuaikanmanhua.com
+kuaishou.cn
 kuaishou.com
+kuaishouapp.com
 kugou.com
 kuishiba.com
 kuka.com.cn
 kunlun.com
 kuwo.cn
+kwai.net
+kwai666.com
 lagou.com
 lanhuapp.com
 lanjinger.com
@@ -1434,6 +1445,7 @@ ssimg.cn
 sspai.com
 sssip.com.cn
 starbucks.com.cn
+starci.cn
 staticfile.net
 stcn.com
 sto.cn
@@ -1570,6 +1582,7 @@ unipec.com.cn
 uniview.com
 up8.space
 upaiyun.com
+upshop8899.com
 upyun.com
 usamedicine.com.cn
 usebay.cn
@@ -1761,6 +1774,7 @@ yuque.com
 yurun.com
 yutong.com
 yximgs.com
+yxixy.com
 yy.com
 yy8844.cn
 yytv.com.cn

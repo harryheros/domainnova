@@ -1208,3 +1208,26 @@ professionalstore.com
 wellacompany.com
 salonprofessional.pl
 wellaprofessionals.cz
+
+# --- ip-neighbor:183.194.243.128 2026-11-19 ---
+upshop8899.com
+
+# --- ip-neighbor:202.106.93.170 2026-11-19 ---
+citics.com
+
+# --- ip-neighbor:103.107.217.26 2026-11-19 ---
+etoote.com
+avgroft.com
+kstv.com
+chenzhongtech.com
+kuaishouapp.com
+kwai666.com
+yxixy.com
+kuaishou.cn
+kuai-fei.com
+starci.cn
+kwai.net
+kortatb.com
+
+# --- ip-neighbor:103.102.202.125 2026-11-19 ---
+kts-tx-test.cn
