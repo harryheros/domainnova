@@ -1,9 +1,10 @@
 # DomainNova - JP domains
-# Generated: 2026-11-16T08:56:17Z
-# Count: 159
+# Generated: 2026-11-19T04:50:01Z
+# Count: 165
 amazon.co.jp
 ameba.jp
 ana.co.jp
+anime-manga.jp
 asahi.com
 au.com
 baixiang.com
@@ -51,6 +52,7 @@ jcci.or.jp
 jetro.go.jp
 jftc.go.jp
 jinji.go.jp
+jlpt.jp
 jma.go.jp
 jp-bank.japanpost.jp
 jp.indeed.com
@@ -71,6 +73,7 @@ kepco.co.jp
 kuronekoyamato.co.jp
 kyoto-u.ac.jp
 lawson.co.jp
+lin.ee
 line.me
 livedoor.jp
 lolipop.jp
@@ -106,6 +109,7 @@ ntt-west.co.jp
 ntt.co.jp
 nttcom.co.jp
 nttdocomo.co.jp
+nuflare.co.jp
 oricon.co.jp
 osaka-u.ac.jp
 panasonic.jp
@@ -148,6 +152,7 @@ townwork.net
 toyota.co.jp
 tsite.jp
 u-tokyo.ac.jp
+ujf.or.kr
 uniqlo.com
 waseda.jp
 weathernews.jp
@@ -155,6 +160,7 @@ westjr.co.jp
 xserver.ne.jp
 yahoo.co.jp
 yamada-denki.jp
+yjtag.jp
 ymobile.jp
 yodobashi.com
 yomiuri.co.jp

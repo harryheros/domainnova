@@ -119,136 +119,29 @@
 # --- ip-neighbor:61.241.148.62 2026-11-03 ---
 
 # --- ip-neighbor:180.163.29.38 2026-11-03 ---
-93ppt.com
-ahtl.hly.com
-app.lhzs.hly.com
-bhqsl.hly.com
-bjzb.hly.com
 chpay.site
-cn.xreview.club
-cqry.hly.com
-d02.dancher.link
-dls.hly.com
 
 # --- ip-neighbor:211.149.239.6 2026-11-03 ---
 
 # --- ip-neighbor:203.119.169.227 2026-11-03 ---
 
 # --- ip-neighbor:59.82.44.190 2026-11-09 ---
-eleme.cn
 
 # --- ip-neighbor:59.82.158.12 2026-11-09 ---
-alldomain.sopush.elemecdn.com
-dishonesty.rajax-inc.com
-ele.to
-element-cn.eleme.io
-zb-aserver-sopush.elemecdn.com
 
 # --- ip-neighbor:113.246.57.9 2026-11-09 ---
-54269d7eab566bba.qaxcloudwaf.com
 
 # --- ip-neighbor:123.56.218.176 2026-11-09 ---
-alipan.com
-alipan.top
-aliyundrive.cloud
-aliyundrive.net
 
 # --- ip-neighbor:101.126.58.133 2026-11-09 ---
-larkenterprise.com
 
 # --- ip-neighbor:122.14.236.76 2026-11-09 ---
-open.zjurl.cn
 
 # --- ip-neighbor:123.206.4.34 2026-11-09 ---
-app.everhub.cn
-app.yinxiangbiji.com
-everhub.cn
 
 # --- ip-neighbor:203.107.45.167 2026-11-09 ---
-0001000.xyz
-00063.caecp.cn
-000949.bailu.com
-0010.co
-001cf.cn
-001dnf.com
-0026.cc
-0037wan.com
-0066000.cc
 007cfw.com
-007la.com
 007zf.com
-008023.com
-009dz.com
-00qd.cn
-00wn.com
-01083531111.com
-010cmer.com
-010sjh.com
-012008.com
-01consulting.com
-01liebian.cn
-01px.com
-01wlkj.com
-01yunying.com
-0201398.com
-020zh.cn
-021-hr.com
-021360.net
-021ast.com
-021health.com
-021ljep.com
-021sound.com
-021starkey.com
-021ting.com
-021xjh.com
-022blt.cn
-022blt.com
-023jcsh.com
-023xlzx.com
-024120.cn
-02521.com
-027cy.com
-028bokda.com
-028dafa.com
-028dna.com
-028lyh.com
-028xuexi.com
-028ygkj.com
-029665.com
-029net.net
-029qj.com
-0310w.cn
-0310w.com
-0315wm.com
-0317sn.com
-0372.cc
-03xq.cn
-0426.cn
-0431goeseo.com
-0435shq.top
-04712523629.com
-0476love.com
-0512front.com.cn
-0512front.net.cn
-0513666.com
-051396111.com
-0513cy.com
-0513taxi.com
-0516168.com
-0516cn.com
-0517job.cn
-051985190582.com
-051vip.cn
-0530yun.com
-053217.com
-05333.com
-0536.group
-0536lq.com
-05370.com
-0537app.cn
-0546dknk.com
-0551ysys.com
-0558job.com
 
 # --- ip-neighbor:60.191.123.44 2026-11-15 ---
 h3c.com.cn
@@ -375,3 +268,720 @@ bydenergy.com
 060193.top
 06050.cn
 065400.com
+
+# --- ip-neighbor:171.109.103.144 2026-11-19 ---
+12371.cn.wsglb0.com
+585958.xyz
+ad.12306.cn.wscdns.com
+cx.12306.cn.wsglb0.com
+dianxing.12371.cn
+djcb.12371.cn
+djyj.12371.cn
+dwlm.12371.cn
+dygbjy.12371.cn
+dynamic.12306.cn.lxdns.com
+exservice.12306.cn.wsglb0.com
+fuwu.12371.cn
+hotel.12306.cn.wsglb0.com
+hzfw.12306.cn.wsglb0.com
+jiaoliu.12371.cn
+kxfz.12371.cn
+lxyz.12371.cn
+news.12371.cn
+p1.img.cctvpic.com
+s.12306.cn.wsglb0.com
+12371.cn
+12371.lxdns.com
+xuexi.12371.cn
+zxfb.12371.cn
+
+# --- ip-neighbor:106.11.43.160 2026-11-19 ---
+ddurl.to
+dingding.xin
+dingtalkapps.com
+
+# --- ip-neighbor:119.3.178.227 2026-11-19 ---
+changhong.cn
+
+# --- ip-neighbor:122.14.229.123 2026-11-19 ---
+365yg.com
+direct.xigua-lb-v3.lf.bytelb.net
+
+# --- ip-neighbor:47.93.219.89 2026-11-19 ---
+blog.xuyecan1919.tech
+
+# --- link-crawl:toshiba.com.cn 2026-11-19 ---
+toshiba-tec.com.cn
+nuflare.co.jp
+googletagmanager.com
+global.toshiba
+toshiba.com
+toshiba-thpc.com
+toshiba-semicon-storage.com
+kuishiba.com
+bmmetrix.com
+
+# --- link-crawl:tourismchina.org 2026-11-19 ---
+wixstatic.com
+parastorage.com
+tourismchina-ca.com
+
+# --- link-crawl:toutiao.com 2026-11-19 ---
+byted-static.com
+
+# --- link-crawl:tower.im 2026-11-19 ---
+ones.cn
+
+# --- link-crawl:townwork.net 2026-11-19 ---
+awswaf.com
+
+# --- link-crawl:trade.1234567.com.cn 2026-11-19 ---
+geotrust.com
+dfcfw.com
+
+# --- link-crawl:truliva.com.cn 2026-11-19 ---
+chinesestack.com
+
+# --- link-crawl:tsingtao.com 2026-11-19 ---
+leadongcdn.com
+googleapis.com
+
+# --- link-crawl:tsite.jp 2026-11-19 ---
+vpoint.co.jp
+ccclp.co.jp
+cccbiz.jp
+yjtag.jp
+adobedtm.com
+onelink.me
+lin.ee
+
+# --- link-crawl:ttv.com.tw 2026-11-19 ---
+tavis.tw
+goldenhorse.org.tw
+ttvshopping.com.tw
+ttvc.com.tw
+attnt.org.tw
+bootstrapcdn.com
+googlesyndication.com
+touchttv.com
+youtube-nocookie.com
+ttvshop.com
+
+# --- link-crawl:tungwah.org.hk 2026-11-19 ---
+google.com.hk
+gmpg.org
+
+# --- link-crawl:tv.surgerycast.com 2026-11-19 ---
+wanwang.xin
+
+# --- link-crawl:tvb.com 2026-11-19 ---
+tvbeventpower.com.hk
+doubleclick.net
+mytvsuper.com
+tvbanywhere.com
+neigbuy.com
+onesignal.com
+facebook.net
+
+# --- link-crawl:tvbs.com.tw 2026-11-19 ---
+trendyfood.com.tw
+tvbs.to
+vive.com
+
+# --- link-crawl:tving.com 2026-11-19 ---
+ftc.go.kr
+naver.net
+appsflyer.com
+daumcdn.net
+toast.com
+
+# --- link-crawl:twnic.tw 2026-11-19 ---
+twdrp.tw
+phishingcheck.tw
+twgrants.tw
+gstatic.com
+linkedin.com
+x.com
+
+# --- link-crawl:u8.cn 2026-11-19 ---
+afternic.com
+nameslink.com
+dynadot.com
+sedo.com
+
+# --- link-crawl:ucloud.cn 2026-11-19 ---
+mini1.cn
+12321.cn
+shjbzx.cn
+compshare.cn
+udelivrs.com
+jquery.com
+ucloudstack.com
+ucloud-global.com
+zhiye.com
+howxm.com
+
+# --- link-crawl:udn.com 2026-11-19 ---
+udn.com.tw
+linkingbooks.com.tw
+visionproject.org.tw
+udngroup.com.tw
+google-analytics.com
+googletagservices.com
+googlecode.com
+scorecardresearch.com
+line-scdn.net
+udnfunlife.com
+worldjournal.com
+cens.com
+unitas.me
+udndata.com
+udngroup.com
+bit.ly
+threads.net
+uniicreative.com
+
+# --- link-crawl:ufood.com.hk 2026-11-19 ---
+ulifestyle.com.hk
+ulapp.hk
+ugo-hk.com
+
+# --- link-crawl:uibe.edu.cn 2026-11-19 ---
+sce.com.cn
+osfipin.com
+
+# --- link-crawl:uliscom.gitcafe.com 2026-11-19 ---
+tencent-cloud.cn
+
+# --- link-crawl:ulsan.go.kr 2026-11-19 ---
+ujf.or.kr
+weather.go.kr
+epeople.go.kr
+cheongwon.go.kr
+safetyreport.go.kr
+clean.go.kr
+mfds.go.kr
+juminegov.go.kr
+open.go.kr
+elis.go.kr
+gosi.go.kr
+ulsanculture.kr
+2028ulsanexpo.or.kr
+ubpi.or.kr
+wetax.go.kr
+kidp.or.kr
+koshahub.or.kr
+sinmungo.go.kr
+foodsafetykorea.go.kr
+ciss.go.kr
+sanghun.go.kr
+cha.go.kr
+klac.or.kr
+ccrs.or.kr
+xn--oy2b29bd3a601b.kr
+childcare.go.kr
+ulsan.kr
+usfr.or.kr
+ulsan1365.or.kr
+ulsannamgu.go.kr
+kdca.go.kr
+comwel.or.kr
+me.go.kr
+koreapost.go.kr
+keei.re.kr
+energy.or.kr
+umca.co.kr
+usrc.kr
+uri.re.kr
+uic.or.kr
+usw.or.kr
+koroad.or.kr
+crms.go.kr
+spo.go.kr
+mof.go.kr
+utp.or.kr
+upa.or.kr
+ushg.co.kr
+lx.or.kr
+ex.co.kr
+ksure.or.kr
+hrdkorea.or.kr
+knoc.co.kr
+fira.or.kr
+kwdi.re.kr
+kead.or.kr
+kesco.or.kr
+kgs.or.kr
+kotra.or.kr
+kotsa.or.kr
+kosha.or.kr
+ndmi.go.kr
+w1.or.kr
+kcmf.or.kr
+gaok.or.kr
+uctf.or.kr
+usjahwal.or.kr
+khnp.co.kr
+korean.go.kr
+2050cnc.go.kr
+uepa.or.kr
+ulsanshinbo.co.kr
+bizinfo.go.kr
+sos1379.go.kr
+uipa.or.kr
+uhdc.kr
+debc.or.kr
+ultrade.kr
+enable-javascript.com
+whataulsan.com
+naver.me
+moaform.com
+grandculture.net
+korcham.net
+
+# --- link-crawl:um.edu.mo 2026-11-19 ---
+fontawesome.com
+
+# --- link-crawl:umeng.com 2026-11-19 ---
+google.cn
+agentone.cn
+lydaas.com
+alibabagroup.com
+woshipm.com
+qidianla.com
+
+# --- link-crawl:uowchk.edu.hk 2026-11-19 ---
+terminalfour.net
+direc.to
+uow.edu.au
+uowcollege.edu.au
+ac.ae
+uowglobalenterprises.com.au
+edu.my
+jsdelivr.net
+
+# --- link-crawl:upyun.com 2026-11-19 ---
+zhugeio.com
+github.com
+
+# --- link-crawl:ura.gov.sg 2026-11-19 ---
+wogaa.sg
+
+# --- link-crawl:ushi.cn 2026-11-19 ---
+emeritus.org
+hubspot.com
+hsforms.net
+
+# --- link-crawl:usj.edu.mo 2026-11-19 ---
+macauspin.mo
+usj.mo
+mailchimp.com
+uniaissist.com
+flickr.com
+
+# --- link-crawl:ustc.edu.cn 2026-11-19 ---
+conac.cn
+
+# --- link-crawl:utour.com 2026-11-19 ---
+iblueking.com
+bjlyw.com
+
+# --- link-crawl:uwants.com 2026-11-19 ---
+n2.hk
+uidapi.com
+anymind360.com
+adsrvr.org
+innity.com
+yahoo.com
+youtu.be
+googleadservices.com
+
+# --- link-crawl:uxin.com 2026-11-19 ---
+hongrenshuo.com.cn
+hongdoulive.com
+
+# --- link-crawl:venetianmacao.com 2026-11-19 ---
+sandsresortsmacao.cn
+sandsresortsmacao.com
+sandsrewards.com
+wistia.com
+londonermacao.com
+parisianmacao.com
+sandsmacao.com
+theplazamacao.com
+
+# --- link-crawl:vgtime.com 2026-11-19 ---
+zol-img.com.cn
+173183.com
+xm909.com
+danews.cc
+expreview.com
+tuwan.com
+qudong.com
+ikanchai.com
+fromgeek.com
+cctime.com
+gfan.com
+
+# --- link-crawl:vip.com 2026-11-19 ---
+vipstatic.com
+vpimg1.com
+vpimg2.com
+
+# --- link-crawl:vip.yingjiesheng.com 2026-11-19 ---
+51yes.com
+
+# --- link-crawl:visitbeijing.com.cn 2026-11-19 ---
+visitbeijing.or.kr
+beijingliwu.com.cn
+chnmuseum.cn
+nlc.cn
+dpm.org.cn
+cnfm.org.cn
+beikun.net.cn
+bjo.com.cn
+bjaa.com.cn
+clcn.net.cn
+bjxx.com.cn
+capdata.com.cn
+chncpa.org
+mutianyugreatwall.com
+bjlyjszx.com
+gridsumdissector.com
+
+# --- link-crawl:visitsingapore.com 2026-11-19 ---
+visitsingapore.com.cn
+onetrust.com
+dcube.cloud
+brightcove.net
+
+# --- link-crawl:vivo.com 2026-11-19 ---
+vivoglobal.com
+
+# --- link-crawl:vmall.com 2026-11-19 ---
+vmallres.com
+
+# --- link-crawl:volcengine.com 2026-11-19 ---
+bytegoofy.com
+gcloudcache.com
+bytednsdoc.com
+
+# --- link-crawl:wadiz.kr 2026-11-19 ---
+wadiz.io
+
+# --- link-crawl:wallstreetcn.com 2026-11-19 ---
+wscn.net
+awtmt.com
+
+# --- link-crawl:wanfangdata.com.cn 2026-11-19 ---
+firefox.com.cn
+wanfang.com.cn
+wjx.top
+7x24cc.com
+
+# --- link-crawl:wanghuaxiangsu.com 2026-11-19 ---
+zheyinwang.com.cn
+zhongjinsiwang.cn
+liangdiansiwang.com
+qianjiangxiangsu.com
+rhspz.com
+hshdluqiao.com
+moqiangwang.com
+hsrongheng.com
+hengshitaotong.com
+hqbpfh.com
+lanbaozhenkong.com
+leisenmuye.com
+lybuxiugangwang.com
+jmjx0534.com
+aphulan888.com
+zaoqianglanbao.com
+zjgebin.com
+hszitong.com
+xrglqc.com
+weifasiwang.com
+kaiwentuoyy.com
+apsswy.com
+hengshuitaotong.com
+
+# --- link-crawl:waterclean.cn 2026-11-19 ---
+knet.cn
+east.net
+
+# --- link-crawl:wbpic.ws.netease.com 2026-11-19 ---
+weiyang.cn
+yjwujian.cn
+wenming.cn
+bnia.cn
+piyao.org.cn
+mediav.com
+127.net
+lofter.com
+kada.com
+yixin.im
+harrypottermagicawakened.com
+bjjubao.org
+qianlong.com
+
+# --- link-crawl:weathernews.jp 2026-11-19 ---
+myshopify.com
+weathernews.com
+
+# --- link-crawl:wegame.com.cn 2026-11-19 ---
+wegame.com
+tencentmind.com
+
+# --- link-crawl:weidian.com 2026-11-19 ---
+geilicdn.com
+shangchetuan.com
+
+# --- link-crawl:weixin.com 2026-11-19 ---
+qq.com.cn
+wechat.design
+
+# --- link-crawl:weiyun.com 2026-11-19 ---
+cdn-go.cn
+
+# --- link-crawl:welink.huaweicloud.com 2026-11-19 ---
+hc-cdn.com
+
+# --- link-crawl:west.cn 2026-11-19 ---
+php.cn
+addlink.cn
+myhostadmin.net
+vhostgo.com
+yunyou.top
+yjz.top
+admin5.com
+vjshi.com
+juziseo.com
+ifabiao.com
+racent.com
+maitaowang.com
+internic.net
+
+# --- link-crawl:westlakeomics.com 2026-11-19 ---
+chatgpt.site
+nature.com
+
+# --- link-crawl:wey.com.cn 2026-11-19 ---
+mingdong.com
+nameschina.com
+
+# --- link-crawl:whirlpool.com.cn 2026-11-19 ---
+galanz.com.cn
+diqua.com
+whirlpool-china.com
+
+# --- link-crawl:whu.edu.cn 2026-11-19 ---
+news.cn
+cssn.cn
+
+# --- link-crawl:wk-tech.com.cn 2026-11-19 ---
+wk-tech.com
+xinycx.com
+
+# --- link-crawl:wk.yingjiesheng.com 2026-11-19 ---
+51jobcdn.com
+bootcdn.net
+
+# --- link-crawl:wooribank.com 2026-11-19 ---
+woorifs.co.kr
+wfri.re.kr
+wooriam.kr
+woorifoundation.or.kr
+woorimiso.or.kr
+myangel.co.kr
+abllife.co.kr
+wa.or.kr
+howsmyssl.com
+wooriwonmobile.com
+woorifg.com
+wooricredit.com
+wooricard.com
+woorifcapital.com
+wooripe.com
+wooriib.com
+woorifis.com
+wooriat.com
+woorisavingsbank.com
+
+# --- link-crawl:wps.cn 2026-11-19 ---
+wpscdn.cn
+lingxi.cn
+kdocs.cn
+wpspdf.cn
+kimxz.com
+51dzt.com
+
+# --- link-crawl:wssc.org.cn 2026-11-19 ---
+ipmchina.net
+hebnky.com
+cn-yaas.net
+wssa.net
+iwss.info
+weedscience.org
+cambridge.org
+wiley.com
+
+# --- link-crawl:wuba.com 2026-11-19 ---
+58che.com
+chinahr.com
+jxedt.com
+kaoshibao.com
+daojia.com
+viptijian.com
+
+# --- link-crawl:www.aaic.com.cn 2026-11-19 ---
+cj-pension.com.cn
+cpiccdn.com
+cpicfunds.com
+
+# --- link-crawl:www.antumai.com 2026-11-19 ---
+xy-copper.cn
+xtaicopper.com
+hlcarbon.com
+china-youbeng.com
+chinayuxiang.com
+chinayuxiang.net
+bsfz.com
+ntazyz.com
+cn-huahai.com
+hxblzt.com
+cabony.com
+jlhyth.com
+hckbb.com
+ntzhjxkj.com
+
+# --- link-crawl:www.boser.cn 2026-11-19 ---
+boser.com.cn
+boservision.com
+
+# --- link-crawl:www.bydauto.com.cn 2026-11-19 ---
+consentmanager.net
+mkms.io
+fdbatt.com
+bydglobal.com
+
+# --- link-crawl:www.cffex.com.cn 2026-11-19 ---
+e-cffex.com.cn
+cffexdt.com.cn
+cfachina.org
+trustutn.org
+
+# --- link-crawl:www.china-hzz.com 2026-11-19 ---
+shdy-cfc.com.cn
+shdy-cfc.cn
+jiteng.cn
+shdy-cfc.com
+xdygroup.net
+xdygroup.cc
+jxshoes.com
+hm-dn.com
+cnhcty.com
+nt-gt.com
+xhcarbon.com
+xatts.com
+xinshengtools.com
+china-hxwj.com
+hmsbty.com
+hmgecx.com
+zixianglong.com
+zcqw.com
+hmhcjb.com
+jsfeili.com
+haoyu-cn.com
+sucainiu.com
+
+# --- link-crawl:www.chsi.cn 2026-11-19 ---
+chei.com.cn
+gatzs.com.cn
+ncss.cn
+cedf.org.cn
+ctdf.org.cn
+wanfangtech.net
+hsehome.com
+
+# --- link-crawl:www.cnyuxiang.cn 2026-11-19 ---
+zxsun.cn
+ideamans.cn
+hmsed.com
+bootcss.com
+nthddt.com
+ntruntai.com
+ntjjb.com
+hldtools.com
+xinghuo-cn.com
+cn-shengyineedles.com
+nt-rz.com
+lyzkby.com
+fuliduo.com
+jshmhz.com
+china-qdzy.com
+zzzcms.com
+
+# --- link-crawl:www.coooto.cn 2026-11-19 ---
+xinlvyao.com
+
+# --- link-crawl:www.cpic.com.cn 2026-11-19 ---
+aaic.com.cn
+
+# --- link-crawl:www.cxtxl.com 2026-11-19 ---
+jyzjbg.com
+klqz.com
+jytsdkj.com
+yuanfayeya.com
+jybest.com
+
+# --- link-crawl:www.dintek.com.cn 2026-11-19 ---
+dintek.com.tw
+
+# --- link-crawl:www.el-range.com 2026-11-19 ---
+002t.cn
+template-help.com
+
+# --- link-crawl:www.forever21.cn 2026-11-19 ---
+forever21.com
+shopifycdn.com
+shop.app
+shopify.com
+
+# --- link-crawl:www.hengteli.com.cn 2026-11-19 ---
+faisco.cn
+
+# --- link-crawl:www.hmdwpt.com 2026-11-19 ---
+zhbxg.cn
+315e.cn
+
+# --- link-crawl:www.hmtpty.com 2026-11-19 ---
+lyzkby.cn
+lyzkkj.cn
+jhmc.com.cn
+
+# --- link-crawl:www.hsw.cn 2026-11-19 ---
+myhsw.cn
+shaanxijubao.cn
+sxdaily.com.cn
+ersanli.cn
+gjnews.cn
+xiancity.cn
+hebnews.cn
+ts.cn
+gywb.cn
+
+# --- link-crawl:www.ibg-china.com 2026-11-19 ---
+brightstars.com.cn
+
+# --- link-crawl:www.igeocn.com 2026-11-19 ---
+gsc.org.cn
+
+# --- link-crawl:www.jpfbj.cn 2026-11-19 ---
+jpf.go.jp
+jlpt.jp
+anime-manga.jp
+minato-jf.jp
+
+# --- link-crawl:www.lueyang.gov.cn 2026-11-19 ---
+sxi.cn
+kaipuyun.cn
+govwza.cn

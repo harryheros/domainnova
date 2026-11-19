@@ -1,6 +1,6 @@
 # DomainNova - MO domains
-# Generated: 2026-11-16T08:56:17Z
-# Count: 77
+# Generated: 2026-11-19T04:50:01Z
+# Count: 78
 abm.org.mo
 al.gov.mo
 amcm.gov.mo
@@ -54,6 +54,7 @@ macauhub.com
 macaumemory.mo
 macaupass.com
 macaupost.gov.mo
+macauspin.mo
 macautourism.gov.mo
 mastvnet.com
 mfood.mo

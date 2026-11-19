@@ -1,9 +1,8 @@
 # DomainNova - HK domains
-# Generated: 2026-11-16T08:56:17Z
-# Count: 159
+# Generated: 2026-11-19T04:50:01Z
+# Count: 150
 163.net
 3hk.hk
-99166.com
 aastocks.com
 aistar.cool
 alipay.hk
@@ -12,7 +11,6 @@ asia.ccb.com
 aswatson.com
 baby-kingdom.com
 bastillepost.com
-beileimaoedu.com
 bhzx.ncwfcgw.cn
 bigbigchannel.com.hk
 bochk.com
@@ -25,8 +23,6 @@ citibank.com.hk
 cityu.edu.hk
 clp.com.hk
 cmab.gov.hk
-cmfwiper.com
-craer.com
 crhk.com.hk
 csb.gov.hk
 csl.com.hk
@@ -37,7 +33,6 @@ ctgoodjobs.hk
 cuhk.edu.hk
 cuhkmc.hk
 cxexpress.com
-cyflscb.com
 dahsing.com
 dbs.com.hk
 dimbuy.com
@@ -52,7 +47,6 @@ fstb.gov.hk
 fwd.com.hk
 gcc.edu.hk
 gov.hk
-gxyzjc.com
 ha.org.hk
 hangseng.com
 hb.gov.hk
@@ -84,12 +78,12 @@ hksyu.edu
 hkt.com
 hktvmall.com
 hku.hk
-hngwzk.com
 hongkongairlines.com
 hongkongdaily.net
 hongkongpost.hk
 hsbc.com.hk
 huoche.net
+hxblzt.com
 hyab.gov.hk
 icac.org.hk
 info.gov.hk
@@ -99,8 +93,10 @@ jd.hk
 jiequ.art
 job853.com
 jobsdb.com
+jytsdkj.com
 klook.com
 lcsd.gov.hk
+liangdiansiwang.com
 lihkg.com
 ln.edu.hk
 lwb.gov.hk
@@ -111,7 +107,6 @@ missfresh.net
 mtr.com.hk
 new6.art
 newhua.com
-nnsqr.com
 nowtv.now.com
 oceanpark.com.hk
 octopus.com.hk
@@ -127,7 +122,6 @@ sfc.hk
 sfu.edu.hk
 singtao.com
 smartone.com
-smc18.com
 staticfile.org
 sth.org.hk
 stheadline.com
@@ -140,23 +134,20 @@ tom.com
 tungwah.org.hk
 tvb.com
 twc.edu.hk
+ucloud-global.com
 uowchk.edu.hk
 ust.hk
 uwants.com
 vtc.edu.hk
 watsons.com.hk
+weifasiwang.com
 wenweipo.com
 westkowloon.hk
 wharfholdings.com
 wheelockcompany.com
 winglungbank.com
-xckgq.com
-xmzgxcl.com
 xpcha.com
 yahoo.com.hk
 yata.hk
 yesstyle.com
 za.group
-zgbywl.com
-zgwlwx.com
-zhjxwh.com

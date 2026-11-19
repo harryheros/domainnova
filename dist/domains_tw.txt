@@ -1,6 +1,6 @@
 # DomainNova - TW domains
-# Generated: 2026-11-16T08:56:17Z
-# Count: 160
+# Generated: 2026-11-19T04:50:01Z
+# Count: 169
 104.com.tw
 1111.com.tw
 518.com.tw
@@ -10,6 +10,7 @@
 acer.com
 aptg.com.tw
 asus.com
+attnt.org.tw
 bcc.com.tw
 bnext.com.tw
 books.com.tw
@@ -114,6 +115,7 @@ pccu.edu.tw
 pchome.com.tw
 pcstore.com.tw
 penghu.gov.tw
+phishingcheck.tw
 pixnet.net
 post.gov.tw
 president.gov.tw
@@ -143,17 +145,24 @@ taiwanlife.com
 taiwanmobile.com
 tami.org.tw
 taoyuan-airport.com
+tavis.tw
 tcb-bank.com.tw
 teema.org.tw
 thsrc.com.tw
 tku.edu.tw
 tsmc.com
 ttv.com.tw
+ttvshopping.com.tw
 tvbs.com.tw
+twdrp.tw
+twgrants.tw
 twia.org.tw
 twnic.tw
 twse.com.tw
 udn.com
+udn.com.tw
+udngroup.com
+udngroup.com.tw
 water.gov.tw
 watsons.com.tw
 yahoo.com.tw
