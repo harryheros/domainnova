@@ -18,7 +18,10 @@ PAGES = {
         <a href="/local">local</a> <a href="https://known.cn/">k</a>
         <a href="https://sub.known.cn/">covered</a> <a href="https://www.google.com/">g</a>
         <a href="https://10.0.0.1/">ip</a> <a href="mailto:a@b.cn">m</a>
-        <a href="https://bad--lookalike.cn/">lookalike</a></html>""",
+        <a href="https://bad--lookalike.cn/">lookalike</a>
+        <script src="https://www.googletagmanager.com/gtm.js"></script>
+        <a href="https://www.linkedin.com/company/x">in</a>
+        <script src="//cdn.jsdelivr.net/npm/x.js"></script></html>""",
     "https://seed-two.hk/": '<a href="https://newsite.com.cn/">dup</a><a href="https://another.com.hk/">n</a>',
     "https://blocked.cn/": '<a href="https://never.cn/">should not be read</a>',
 }
@@ -112,7 +115,8 @@ class Run(unittest.TestCase):
         self.assertEqual(disc["other.cn"][:2], ("link-crawl", "seed-one.cn"))
         self.assertEqual(disc["third.com.hk"][:2], ("link-crawl", "seed-one.cn"))
         self.assertEqual(disc["another.com.hk"][:2], ("link-crawl", "seed-two.hk"))
-        for gone in ("known.cn", "google.com", "bad--lookalike.cn", "never.cn"):
+        for gone in ("known.cn", "google.com", "bad--lookalike.cn", "never.cn",
+                     "googletagmanager.com", "linkedin.com", "jsdelivr.net"):
             self.assertNotIn(gone, disc)
         self.assertEqual(added, 4)
         # robots.txt was honoured: the blocked page was never fetched

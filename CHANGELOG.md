@@ -32,7 +32,15 @@ Releases, newest first. The weekly data updates are the
   home pages of a rotating slice of known sites (300 per run, robots.txt
   honoured, one request per site) and adds up to 500 linked domains, under a
   header naming the linking site. It runs with the IP-neighbor agent; one
-  failing no longer stops the other.
+  failing no longer stops the other. Its first run added 500 candidates,
+  317 of which passed the checks at once (KR went from 165 to 262 domains).
+- **More global services are never added to discovery**: Google's tag,
+  ad and API domains, LinkedIn, X, Wix, WordPress, GitHub and the common
+  public CDNs. Pages embed them everywhere, and some resolve to in-country
+  edges for the region's users: the first link crawl placed
+  googletagmanager.com, googletagservices.com, googleadservices.com,
+  linkedin.com and google.cn in CN. Those five were taken out of
+  discovery.txt.
 - **Which resolver answered**: each domain in `data/domains.csv` has a
   `resolver` column (`own`, `public`, `fallback`, or empty when nothing
   answered in this build), and `data/stats.json` → `resolver` counts them.

@@ -313,7 +313,6 @@ blog.xuyecan1919.tech
 # --- link-crawl:toshiba.com.cn 2026-11-19 ---
 toshiba-tec.com.cn
 nuflare.co.jp
-googletagmanager.com
 global.toshiba
 toshiba.com
 toshiba-thpc.com
@@ -400,7 +399,6 @@ twdrp.tw
 phishingcheck.tw
 twgrants.tw
 gstatic.com
-linkedin.com
 x.com
 
 # --- link-crawl:u8.cn 2026-11-19 ---
@@ -427,7 +425,6 @@ linkingbooks.com.tw
 visionproject.org.tw
 udngroup.com.tw
 google-analytics.com
-googletagservices.com
 googlecode.com
 scorecardresearch.com
 line-scdn.net
@@ -543,7 +540,6 @@ korcham.net
 fontawesome.com
 
 # --- link-crawl:umeng.com 2026-11-19 ---
-google.cn
 agentone.cn
 lydaas.com
 alibabagroup.com
@@ -594,7 +590,6 @@ adsrvr.org
 innity.com
 yahoo.com
 youtu.be
-googleadservices.com
 
 # --- link-crawl:uxin.com 2026-11-19 ---
 hongrenshuo.com.cn

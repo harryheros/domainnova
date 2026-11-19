@@ -38980,16 +38980,6 @@
     "origin_detail": "toshiba.com.cn"
   },
   {
-    "domain": "googletagmanager.com",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "toshiba.com.cn"
-  },
-  {
     "domain": "global.toshiba",
     "source": "discovery",
     "section": "Unsectioned",
@@ -39550,16 +39540,6 @@
     "origin_detail": "twnic.tw"
   },
   {
-    "domain": "linkedin.com",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "twnic.tw"
-  },
-  {
     "domain": "x.com",
     "source": "discovery",
     "section": "Unsectioned",
@@ -39751,16 +39731,6 @@
   },
   {
     "domain": "google-analytics.com",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "udn.com"
-  },
-  {
-    "domain": "googletagservices.com",
     "source": "discovery",
     "section": "Unsectioned",
     "ecosystem": "unknown",
@@ -40800,16 +40770,6 @@
     "origin_detail": "um.edu.mo"
   },
   {
-    "domain": "google.cn",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "umeng.com"
-  },
-  {
     "domain": "agentone.cn",
     "source": "discovery",
     "section": "Unsectioned",
@@ -41141,16 +41101,6 @@
   },
   {
     "domain": "youtu.be",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "uwants.com"
-  },
-  {
-    "domain": "googleadservices.com",
     "source": "discovery",
     "section": "Unsectioned",
     "ecosystem": "unknown",

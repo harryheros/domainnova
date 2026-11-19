@@ -59,6 +59,19 @@ EXCLUDE_DOMAINS = frozenset({
     "bing.com", "microsoft.com", "apple.com", "icloud.com",
     "amazonaws.com", "cloudflare.com", "fastly.com",
     "akamai.com", "akamaiedge.net", "edgekey.net",
+    # Global services embedded in pages everywhere (analytics, ads, share
+    # buttons, page builders, public CDNs). The link-crawl agent meets them on
+    # every site; some resolve to in-country edges for the region's users,
+    # which would wrongly place them in a region.
+    "google.cn", "googleapis.com", "gstatic.com", "googleusercontent.com",
+    "googletagmanager.com", "googletagservices.com", "googleadservices.com",
+    "googlesyndication.com", "google-analytics.com", "doubleclick.net",
+    "linkedin.com", "licdn.com", "x.com", "twimg.com", "fbcdn.net",
+    "wix.com", "wixstatic.com", "parastorage.com", "squarespace.com",
+    "wordpress.com", "wordpress.org", "wp.com", "gravatar.com",
+    "github.com", "githubusercontent.com",
+    "cloudfront.net", "azureedge.net", "jsdelivr.net", "unpkg.com", "cdnjs.com",
+    "bootstrapcdn.com", "fontawesome.com", "w3.org",
 })
 
 
