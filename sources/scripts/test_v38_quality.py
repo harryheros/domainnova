@@ -76,6 +76,16 @@ class FilterCandidates(unittest.TestCase):
         self.assertEqual(got, ["alibaba.com", "huaweicloud.com", "example.cn"])
 
 
+class GlobalServices(unittest.TestCase):
+    def test_google_optimize_is_excluded(self):
+        # the full crawl placed it in CN (an in-country edge for CN users)
+        self.assertEqual(_common.filter_candidates(["www.googleoptimize.com"], set()), [])
+
+    def test_not_in_discovery(self):
+        disc = (HERE.parents[1] / "sources" / "manual" / "discovery.txt").read_text(encoding="utf-8")
+        self.assertNotIn("\ngoogleoptimize.com\n", disc)
+
+
 class SharedHost(unittest.TestCase):
     def test_is_shared_host(self):
         few = ["www.h3c.com.cn", "h3c.com.cn", "h3c.com", "mail.h3c.com"]

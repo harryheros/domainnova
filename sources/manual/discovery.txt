@@ -2277,7 +2277,6 @@ eol.cn
 onnoon.com
 
 # --- link-crawl:cgtn.com 2026-11-19 ---
-googleoptimize.com
 quora.com
 cctvplus.com
 

@@ -67,6 +67,7 @@ EXCLUDE_DOMAINS = frozenset({
     "google.cn", "googleapis.com", "gstatic.com", "googleusercontent.com",
     "googletagmanager.com", "googletagservices.com", "googleadservices.com",
     "googlesyndication.com", "google-analytics.com", "doubleclick.net",
+    "googleoptimize.com",
     "linkedin.com", "licdn.com", "x.com", "twimg.com", "fbcdn.net",
     "wix.com", "wixstatic.com", "parastorage.com", "squarespace.com",
     "wordpress.com", "wordpress.org", "wp.com", "gravatar.com",

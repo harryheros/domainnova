@@ -2562,6 +2562,79 @@ def write_stats(
 
 
 # ---------------------------------------------------------------------------
+# Foreign edges (v3.8.0)
+# ---------------------------------------------------------------------------
+# Global companies serve users in a region from addresses inside it, and some
+# of those addresses are registered there (Google's edge in China, AS24424,
+# sat in IPNova's CN list until IPNova 4.1.1). Their services then resolve "in
+# region" for the region's users: googletagmanager.com and googleoptimize.com
+# reached the CN list that way. Each build resolves these first-party sentinels
+# (never CDNs, whose in-country nodes also serve real regional sites); the
+# /24s of their in-region answers are foreign edges for this build.
+FOREIGN_SENTINELS = (
+    "www.google.com", "google.cn", "www.gstatic.com", "fonts.googleapis.com",
+    "ajax.googleapis.com", "www.googletagmanager.com", "www.google-analytics.com",
+    "www.googleadservices.com", "pagead2.googlesyndication.com",
+    "stats.g.doubleclick.net", "www.googleoptimize.com", "www.recaptcha.net",
+    "www.youtube.com", "www.linkedin.com", "static.licdn.com",
+    "www.facebook.com", "x.com", "abs.twimg.com",
+)
+
+
+def _slash24(ip: str) -> Optional[str]:
+    try:
+        return str(ipaddress.ip_network(f"{ipaddress.IPv4Address(ip)}/24", strict=False))
+    except ValueError:
+        return None
+
+
+def resolve_foreign_edges(region_lookup: RegionLookup) -> set:
+    """The /24s that FOREIGN_SENTINELS resolve to inside any region."""
+    edges = set()
+    for name in FOREIGN_SENTINELS:
+        try:
+            ips = resolve_domain(name, None)
+        except Exception:
+            continue
+        for ip in ips:
+            net = _slash24(ip)
+            if net and ip_to_bucket(ip, region_lookup) in REGION_ORDER:
+                edges.add(net)
+    return edges
+
+
+def apply_foreign_edge_filter(
+    rows: List[DomainRecord],
+    edges: set,
+    region_lookup: RegionLookup,
+) -> Tuple[List[str], set]:
+    """Set score 0 on non-seed rows that reach their region only through
+    foreign edges. A /24 that a seed domain also resolves to is a shared
+    network (a CDN serving regional sites too) and is not a foreign edge.
+    Returns (demoted domains, foreign /24s used)."""
+    seed_nets = {
+        _slash24(ip) for r in rows if r.source.startswith("seed_")
+        for ip in (r.resolved_ips or "").split("|") if ip
+    }
+    foreign = set(edges) - seed_nets
+    demoted: List[str] = []
+    if not foreign:
+        return demoted, foreign
+    for r in rows:
+        if r.source.startswith("seed_") or r.bucket not in REGION_ORDER or r.score < INCLUDE_THRESHOLD:
+            continue
+        ipv4 = [ip for ip in (r.resolved_ips or "").split("|") if _slash24(ip)]
+        if not ipv4 or not any(_slash24(ip) in foreign for ip in ipv4):
+            continue
+        hits = sum(1 for ip in ipv4
+                   if _slash24(ip) not in foreign and ip_to_bucket(ip, region_lookup) == r.bucket)
+        if hits / len(ipv4) < 0.60:
+            r.score = 0
+            demoted.append(r.domain)
+    return demoted, foreign
+
+
+# ---------------------------------------------------------------------------
 # Build
 # ---------------------------------------------------------------------------
 def build(repo_root: Path) -> None:
@@ -2646,6 +2719,14 @@ def build(repo_root: Path) -> None:
     source_order.update({"extended": 100, "discovery": 101})
     rows.sort(key=lambda r: (source_order.get(r.source, 9), r.domain))
 
+    # Global services' in-country edges are not regional evidence.
+    edges = resolve_foreign_edges(region_lookup)
+    foreign_demoted, foreign_nets = apply_foreign_edge_filter(rows, edges, region_lookup)
+    if foreign_demoted:
+        log(f"[+] {len(foreign_demoted)} domains resolve only to global services' "
+            f"in-region edges ({len(foreign_nets)} /24s), not published: "
+            f"{', '.join(sorted(foreign_demoted)[:20])}")
+
     # Discovery lifecycle
     purged, promoted = manage_discovery_lifecycle(repo_root, rows)
     if purged:
@@ -2678,6 +2759,8 @@ def build(repo_root: Path) -> None:
         "seeds_needing_review": len(seed_review),
         "state_restored":     state_restored,
         "rescue_disabled":    _rescue_disabled,
+        "foreign_edge":       {"networks": sorted(foreign_nets),
+                               "demoted": sorted(foreign_demoted)},
     }, bucket_counts=bucket_counts)
 
     total_dist = sum(bucket_counts.values())

@@ -41,14 +41,17 @@ Releases, newest first. The weekly data updates are the
   clean-up below; the etiquette is unchanged (one request per site,
   robots.txt honoured). A site whose connection breaks off mid-page no
   longer stops the run: the first full crawl ended on one such site with
-  nothing written, as the weekly 300-page slice had never met one.
+  nothing written, as the weekly 300-page slice had never met one. The
+  full crawl read 2,436 sites and added 3,000 candidates; the build after it
+  published 2,199 more domains (CN 1,407, KR 549, JP 88, TW 76, SG 44,
+  HK 31, MO 4), for 4,990 in all.
 - **More global services are never added to discovery**: Google's tag,
   ad and API domains, LinkedIn, X, Wix, WordPress, GitHub and the common
   public CDNs. Pages embed them everywhere, and some resolve to in-country
   edges for the region's users: the first link crawl placed
   googletagmanager.com, googletagservices.com, googleadservices.com,
-  linkedin.com and google.cn in CN. Those five were taken out of
-  discovery.txt.
+  linkedin.com and google.cn in CN, and the full crawl googleoptimize.com.
+  Those six were taken out of discovery.txt.
 - **What an agent may nominate.** A review of the first promotions found
   site farms, gambling and adult sites, and hundreds of unrelated small
   sites, almost all from IP-neighbor discovery on shared-hosting IPs. The
@@ -80,6 +83,17 @@ Releases, newest first. The weekly data updates are the
   IP-neighbor, 168 from CT logs). After the next build the published lists
   hold about 2,400 to 2,600 domains, about 1,500 to 1,700 of them in CN;
   outside CN, HK loses 4 and SG 1.
+- **Global services' in-country edges are not regional evidence.** Each
+  build resolves a few sentinel domains of global companies (Google,
+  YouTube, LinkedIn, Facebook, X; never CDNs) and treats the /24s of their
+  in-region answers as foreign edges, unless a seed domain also uses that
+  /24 (a shared CDN serves real regional sites too). A domain that reaches
+  its region only through foreign edges is not published, and the
+  discovery lifecycle counts it as a failure. `data/stats.json` →
+  `foreign_edge` lists the networks and the domains held back. This
+  catches the next case without anyone checking the lists by hand; the
+  root cause of the Google cases, Google's edge in China (AS24424) in
+  IPNova's CN list, is fixed in IPNova 4.1.1.
 - **Which resolver answered**: each domain in `data/domains.csv` has a
   `resolver` column (`own`, `public`, `fallback`, or empty when nothing
   answered in this build), and `data/stats.json` → `resolver` counts them.
