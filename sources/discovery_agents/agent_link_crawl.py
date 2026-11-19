@@ -42,6 +42,7 @@ from _common import (  # noqa: E402
     filter_candidates,
     load_existing,
     make_session,
+    registrable,
 )
 
 PAGES_PER_RUN = 300        # home pages read per run
@@ -52,35 +53,7 @@ TIMEOUT = (5, 10)          # connect, read (seconds)
 
 REGIONAL_TLDS = ("cn", "hk", "mo", "tw", "jp", "kr", "sg")
 
-# Second-level labels under which names are registered (public suffixes),
-# for the region's ccTLDs. Elsewhere the registrable domain is the last two
-# labels, which is right for the generic TLDs these pages mostly link to.
-_SECOND_LEVEL = {
-    "cn": {"ac", "com", "edu", "gov", "mil", "net", "org",
-           "ah", "bj", "cq", "fj", "gd", "gs", "gz", "gx", "ha", "hb", "he", "hi", "hk", "hl",
-           "hn", "jl", "js", "jx", "ln", "mo", "nm", "nx", "qh", "sc", "sd", "sh", "sn", "sx",
-           "tj", "tw", "xj", "xz", "yn", "zj"},
-    "hk": {"com", "edu", "gov", "idv", "net", "org"},
-    "mo": {"com", "edu", "gov", "net", "org"},
-    "tw": {"club", "com", "ebiz", "edu", "game", "gov", "idv", "mil", "net", "org"},
-    "jp": {"ac", "ad", "co", "ed", "go", "gr", "lg", "ne", "or"},
-    "kr": {"ac", "co", "es", "go", "hs", "kg", "mil", "ms", "ne", "or", "pe", "re", "sc"},
-    "sg": {"com", "edu", "gov", "net", "org", "per"},
-    "uk": {"ac", "co", "gov", "ltd", "me", "net", "org", "plc"},
-    "au": {"com", "edu", "gov", "net", "org"},
-}
-
 _LINK_RE = re.compile(r"""(?:href|src)\s*=\s*["']?(?:https?:)?//([^/"'\s?#>]+)""", re.IGNORECASE)
-
-
-def registrable(host: str) -> Optional[str]:
-    """news.sina.com.cn -> sina.com.cn; None for a bare suffix or no dot."""
-    labels = host.strip().lower().rstrip(".").split(".")
-    if len(labels) < 2 or not all(labels):
-        return None
-    if labels[-2] in _SECOND_LEVEL.get(labels[-1], ()):
-        return ".".join(labels[-3:]) if len(labels) >= 3 else None
-    return ".".join(labels[-2:])
 
 
 def hosts_in(html: str) -> List[str]:

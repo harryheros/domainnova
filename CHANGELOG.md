@@ -41,6 +41,37 @@ Releases, newest first. The weekly data updates are the
   googletagmanager.com, googletagservices.com, googleadservices.com,
   linkedin.com and google.cn in CN. Those five were taken out of
   discovery.txt.
+- **What an agent may nominate.** A review of the first promotions found
+  site farms, gambling and adult sites, and hundreds of unrelated small
+  sites, almost all from IP-neighbor discovery on shared-hosting IPs. The
+  rules are now (`sources/scripts/_quality.py`):
+  - every candidate is reduced to its registrable name
+    (`0757jiafa.cn.alibaba.com` → `alibaba.com`), as suffix matching
+    covers the subdomains;
+  - names under free subdomain and dynamic-DNS services (`dpdns.org`,
+    `3322.org`, `github.io` …), adult and gambling sites, and numeric
+    throwaway names on low-cost TLDs (`0026.cc`, `8686868.vip`) are
+    refused;
+  - the IP-neighbor agent skips an IP that serves 20 or more unrelated
+    registrable domains: its neighbours are strangers to the seed, not
+    the seed's own services.
+  A discovery domain that breaks these rules is purged instead of promoted.
+- **Promotion counts weeks, not runs.** A discovery domain's streak counts
+  at most one build per ISO week, so manual runs cannot promote a domain
+  early. Two manual runs on 2026-11-19 had promoted 8 domains seen for
+  less than a week, five of them from one shared server.
+- **The existing data was cleaned with the same rules**
+  (`clean_agent_domains.py`). Domains curated by hand were not touched.
+  From `extended.txt` and `discovery.txt`, 1,547 agent-nominated names were
+  removed: 801 from shared-hosting IPs, 704 subdomains already covered by
+  a listed domain, 20 numeric throwaway names, 12 under free subdomain
+  services and 10 adult or gambling sites. Another 182 subdomains were
+  replaced by their registrable name. Every removal and replacement is
+  logged, with its reason, in `sources/manual/removed.csv`.
+  `extended.txt` now holds 1,116 domains (774 by hand, 174 from
+  IP-neighbor, 168 from CT logs). After the next build the published lists
+  hold about 2,400 to 2,600 domains, about 1,500 to 1,700 of them in CN;
+  outside CN, HK loses 4 and SG 1.
 - **Which resolver answered**: each domain in `data/domains.csv` has a
   `resolver` column (`own`, `public`, `fallback`, or empty when nothing
   answered in this build), and `data/stats.json` → `resolver` counts them.

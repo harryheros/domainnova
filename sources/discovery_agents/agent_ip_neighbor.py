@@ -20,6 +20,10 @@ quota is exhausted and no ViewDNS key is configured, the run stops early.
 Safety limits:
   - Max IPs queried per run:       50
   - Max new domains added per run: 100
+  - Shared hosting skipped (v3.8): an IP serving SHARED_HOST_MIN or more
+    unrelated registrable domains is a virtual-hosting server, and its
+    neighbours are strangers to the seed (hundreds of small, unrelated
+    sites, many of them site farms); only IPs a few sites share are used
   - Passive only, no active scanning (never contacts the IPs themselves)
   - Run frequency: weekly (v3.6; was monthly)
 """
@@ -46,6 +50,7 @@ from _common import (  # noqa: E402
     filter_candidates,
     load_existing,
     make_session,
+    registrable,
 )
 
 import requests  # noqa: E402
@@ -56,6 +61,7 @@ import requests  # noqa: E402
 MAX_IPS_PER_RUN       = 50
 MAX_NEW_PER_RUN       = 100
 SLEEP_BETWEEN_QUERIES = 2.5
+SHARED_HOST_MIN       = 20   # distinct registrable neighbours => shared hosting
 
 DOH_URL    = "https://dns.google/resolve"
 ECS_SUBNET = "114.114.114.0/24"
@@ -287,6 +293,12 @@ def reverse_ip_lookup(ip: str, session: requests.Session) -> List[str]:
     return []
 
 
+def is_shared_host(neighbors: List[str]) -> bool:
+    """True when the neighbours span SHARED_HOST_MIN or more registrable
+    domains: a virtual-hosting server, not one organisation's machine."""
+    return len({registrable(d) or d for d in neighbors}) >= SHARED_HOST_MIN
+
+
 # ---------------------------------------------------------------------------
 # Discovery file helpers — provided by _common module.
 # ---------------------------------------------------------------------------
@@ -368,6 +380,12 @@ def run(repo_root: Path) -> None:
             print("[!] Reverse-IP quota exhausted and no VIEWDNS_APIKEY "
                   "configured; stopping early.")
             break
+
+        if is_shared_host(neighbors):
+            print(f"    Skipped {ip}: shared hosting "
+                  f"({len({registrable(d) or d for d in neighbors})} unrelated domains)")
+            time.sleep(SLEEP_BETWEEN_QUERIES)
+            continue
 
         new = filter_candidates(neighbors, existing)
 

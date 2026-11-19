@@ -46,6 +46,7 @@ from __future__ import annotations
 
 import concurrent.futures
 import csv
+import datetime as _dt
 import ipaddress
 import json
 import os
@@ -85,6 +86,7 @@ except ImportError:
         GLOBAL_CDN_ASNS,
     )
 import _provenance  # noqa: E402  (sources/scripts is on sys.path by now)
+import _quality  # noqa: E402
 
 # ---------------------------------------------------------------------------
 # Hard limits (do not exceed these values)
@@ -98,9 +100,9 @@ PURGE_AFTER_EMPTY    = 6      # consecutive dns_total=0 runs before purge
                                #  to tolerate genuine transient DoH outages, but
                                #  prevents dead/garbage domains from accumulating
                                #  indefinitely under the old "pass" exemption)
-PROMOTE_AFTER_PASSES = 4      # consecutive CN passes before promotion (= 4 weekly
-                               # builds, now that every discovery domain is
-                               # checked on every build)
+PROMOTE_AFTER_PASSES = 4      # consecutive CN passes before promotion: 4 weeks,
+                               # as a domain is counted at most once per ISO
+                               # week (v3.8), however often the build runs
 DEAD_STREAK_THRESHOLD = 6     # consecutive empty-DNS runs before NS confirmation
 STICKY_MAX_DAYS      = 28     # max days a domain may stay sticky without re-resolving
 SEED_REVIEW_AFTER    = 3      # consecutive runs a seed may resolve to nothing (bare
@@ -1981,12 +1983,29 @@ def save_discovery_stats(repo_root: Path, stats: dict) -> None:
     )
 
 
+def iso_week(day: Optional[_dt.date] = None) -> str:
+    """'2026-W47' for the ISO week containing `day` (default: today, UTC)."""
+    day = day or _dt.datetime.now(_dt.timezone.utc).date()
+    year, week, _ = day.isocalendar()
+    return f"{year}-W{week:02d}"
+
+
 def manage_discovery_lifecycle(
     repo_root: Path,
     rows: List[DomainRecord],
+    week: Optional[str] = None,
 ) -> Tuple[List[str], List[str]]:
     """
     Apply auto-purge and auto-promote rules to discovery domains.
+
+    v3.8: streaks count at most one run per ISO week (`week`, default the
+    current one). The thresholds are meant as weeks of evidence; v3.7
+    counted every run, so a few manual runs on one day could promote a
+    domain seen for a single day. A later run in the same week leaves the
+    domain's counters as they are.
+
+    v3.8: a domain is never promoted unless it is its own registrable name
+    and passes _quality.junk_reason(); one that fails is purged instead.
 
     Purge rules:
       - PURGE_AFTER_FAILURES consecutive CN failures -> remove from discovery.txt
@@ -2007,6 +2026,8 @@ def manage_discovery_lifecycle(
     hit_counts   = stats.get("hit_counts",   {})  # domain -> consecutive passes
     fail_counts  = stats.get("fail_counts",  {})  # domain -> consecutive signal failures
     empty_counts = stats.get("empty_counts", {})  # domain -> consecutive dns_total=0 runs
+    counted_week = stats.get("counted_week", {})  # domain -> ISO week last counted
+    week = week or iso_week()
 
     # Check extended capacity
     extended_domains = load_file_domains(extended_path)
@@ -2022,6 +2043,16 @@ def manage_discovery_lifecycle(
         if row.source != "discovery":
             continue
         domain = row.domain
+
+        if _quality.junk_reason(domain) or _quality.registrable(domain) != domain:
+            log(f"  [info] Purging discovery domain {domain} "
+                f"({_quality.junk_reason(domain) or 'not a registrable name'})")
+            purged.append(domain)
+            continue
+
+        if counted_week.get(domain) == week:
+            continue  # already counted this week
+        counted_week[domain] = week
 
         if row.bucket in REGION_ORDER and row.score >= INCLUDE_THRESHOLD:
             # Passed regional check
@@ -2113,6 +2144,9 @@ def manage_discovery_lifecycle(
     stats["hit_counts"]   = hit_counts
     stats["fail_counts"]  = fail_counts
     stats["empty_counts"] = empty_counts
+    # Only domains still in discovery.txt keep a week mark.
+    still = set(load_file_domains(discovery_path))
+    stats["counted_week"] = {d: w for d, w in counted_week.items() if d in still}
     save_discovery_stats(repo_root, stats)
 
     return purged, promoted

@@ -40,6 +40,7 @@ _SCRIPTS_DIR = Path(__file__).resolve().parents[1] / "scripts"
 if str(_SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS_DIR))
 from _source_parser import DOMAIN_RE  # noqa: E402  (re-exported)
+from _quality import junk_reason, registrable  # noqa: E402,F401  (re-exported)
 
 
 USER_AGENT = "DomainNova/DiscoveryAgent (+https://github.com/harryheros/domainnova)"
@@ -133,27 +134,32 @@ def is_covered(domain: str, known: Set[str]) -> bool:
 def filter_candidates(candidates: Iterable[str], known: Set[str]) -> List[str]:
     """Normalise and filter agent results before they enter discovery.txt.
 
-    - lower-case, trailing dot removed, a leading "www." removed (the bare
-      domain covers it; build_domains falls back to www.<domain> when the
-      bare name has no address record)
+    - lower-case, trailing dot removed
+    - reduced to its registrable domain (v3.8: a.b.example.cn ->
+      example.cn); the rule sets match by suffix, so the registrable name
+      covers every subdomain, and an agent that met one subdomain says
+      nothing about the others
     - must look like a domain, not excluded, no look-alike "--" labels, not
-      already covered by a known domain or one of its parents; duplicates
-      removed, order kept
+      junk (_quality.junk_reason: free subdomain services, adult and
+      gambling sites, numeric throwaway names), not already covered by a
+      known domain or one of its parents; duplicates removed, order kept
     """
     out: List[str] = []
     seen: Set[str] = set()
     for raw in candidates:
         d = str(raw).strip().lower().rstrip(".")
-        if d.startswith("www."):
-            d = d[4:]
-        if not d or "." not in d or d in seen:
-            continue
-        if d in EXCLUDE_DOMAINS or not DOMAIN_RE.match(d):
+        if not d or "." not in d or junk_reason(d):
             continue
         # "--" inside a label (not the xn-- IDN prefix) is the hallmark of
         # look-alike hosts such as xiaomi--kursk.online or
         # jd.com--vip999--huodong.example — never a real CN service name.
+        # Checked on the full name, before it is reduced.
         if any("--" in lab and not lab.startswith("xn--") for lab in d.split(".")):
+            continue
+        d = registrable(d) or ""
+        if not d or d in seen:
+            continue
+        if d in EXCLUDE_DOMAINS or not DOMAIN_RE.match(d):
             continue
         if is_covered(d, known):
             continue

@@ -1,240 +1,7 @@
 # DomainNova - Discovery Layer
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# --- ct-logs:Xiaomi 2026-03-28 ---
-
-
-
-
-
-
-
-
-
-# --- ip-neighbor:49.4.40.184 2026-06-08 ---
-
-
-# --- ip-neighbor:220.181.7.203 2026-06-08 ---
-
-# --- ip-neighbor:39.156.70.37 2026-06-08 ---
-
-
-
-
-# --- ip-neighbor:180.76.198.147 2026-06-16 ---
-
-# --- ip-neighbor:122.193.250.58 2026-06-16 ---
-
-
-# --- ip-neighbor:111.63.65.103 2026-06-16 ---
-
-# --- ct-logs:JD.com 2026-06-16 ---
-
-
-
-# --- ct-logs:%.cn 2026-07-01 ---
-
-# --- ip-neighbor:114.80.156.219 2026-09-25 ---
-
-# --- ip-neighbor:120.48.6.179 2026-10-01 ---
-
-# --- ip-neighbor:183.60.240.56 2026-10-27 ---
-
-# --- ip-neighbor:54.222.252.100 2026-10-27 ---
-
-# --- ip-neighbor:219.239.97.52 2026-10-27 ---
-
-# --- ip-neighbor:106.14.197.85 2026-10-27 ---
-
-# --- ip-neighbor:118.195.253.242 2026-10-27 ---
-
-# --- ip-neighbor:106.54.99.69 2026-10-27 ---
-
-# --- ip-neighbor:175.178.31.185 2026-10-27 ---
-
-# --- ip-neighbor:119.147.162.254 2026-10-27 ---
-
-# --- ip-neighbor:202.114.0.245 2026-10-27 ---
-
-# --- ip-neighbor:120.48.6.179 2026-10-27 ---
-
-# --- ip-neighbor:14.119.64.131 2026-10-27 ---
-
-# --- ip-neighbor:159.226.27.40 2026-10-28 ---
-
-# --- ip-neighbor:182.92.20.26 2026-10-28 ---
-
-# --- ip-neighbor:211.152.0.69 2026-10-28 ---
-
-# --- ip-neighbor:123.57.253.206 2026-10-28 ---
-
-# --- ip-neighbor:115.120.56.205 2026-10-28 ---
-
-# --- ip-neighbor:47.93.77.119 2026-10-28 ---
-
-# --- ip-neighbor:175.6.47.164 2026-10-28 ---
-
-# --- ip-neighbor:150.158.224.195 2026-10-28 ---
-
-# --- ip-neighbor:180.76.198.77 2026-10-28 ---
-
-# --- ip-neighbor:180.76.199.13 2026-10-28 ---
-
-# --- ip-neighbor:180.76.198.225 2026-10-28 ---
-
-# --- ip-neighbor:114.80.176.40 2026-10-28 ---
-
-# --- ip-neighbor:211.149.239.6 2026-11-02 ---
-
-# --- ip-neighbor:183.193.77.10 2026-11-03 ---
-
-# --- ip-neighbor:124.251.34.141 2026-11-03 ---
-
-# --- ip-neighbor:220.181.7.203 2026-11-03 ---
-
-# --- ip-neighbor:39.156.70.37 2026-11-03 ---
-
-# --- ip-neighbor:61.241.148.62 2026-11-03 ---
-
-# --- ip-neighbor:180.163.29.38 2026-11-03 ---
-chpay.site
-
-# --- ip-neighbor:211.149.239.6 2026-11-03 ---
-
-# --- ip-neighbor:203.119.169.227 2026-11-03 ---
-
-# --- ip-neighbor:59.82.44.190 2026-11-09 ---
-
-# --- ip-neighbor:59.82.158.12 2026-11-09 ---
-
-# --- ip-neighbor:113.246.57.9 2026-11-09 ---
-
-# --- ip-neighbor:123.56.218.176 2026-11-09 ---
-
-# --- ip-neighbor:101.126.58.133 2026-11-09 ---
-
-# --- ip-neighbor:122.14.236.76 2026-11-09 ---
-
-# --- ip-neighbor:123.206.4.34 2026-11-09 ---
-
-# --- ip-neighbor:203.107.45.167 2026-11-09 ---
-
-# --- ip-neighbor:60.191.123.44 2026-11-15 ---
-
-# --- ip-neighbor:122.14.229.58 2026-11-15 ---
-
-# --- ip-neighbor:101.126.56.164 2026-11-15 ---
-
-# --- ip-neighbor:120.52.99.224 2026-11-15 ---
-
 # --- ip-neighbor:118.178.203.51 2026-11-16 ---
-appresource.xuexi.cn.w.alikunlun.com
-boot-source.xuexi.cn.w.alikunlun.com
-gz.xuexi.cn.w.alikunlun.com
-js.xuexi.cn.w.alikunlun.com
-
-# --- ip-neighbor:110.75.130.45 2026-11-16 ---
-51shumi.cn
-51shumi.com
-51shumi.com.cn
-a-amentor.com
-act-protocol.com
-ai-propeller.com
-aif3.cn
-aif4.cn
-aif5.cn
-alipay-corp.com
-alipay-inc.com
-alipay.cn
-alipay.com.cn
-alipay.net.cn
-alipaydesign.com
-alipaydns.cn
-alipaylog.com
-alipayobjects.cn
-ant-financial.com
-ant-ling.com
-ant-open.com
-antafu.com
-antaq.com
-antcloudservice.com
-antdigital-static.com
-antfin-inc.com
-antfortune.com
-antgroup-inc.cn
-antgroup-inc.net
-antlingguang.com
-antmuse.com
-antopenhealth.com
-antresearch.com
-cloudbaseapp.cn
-cloudrds.cn
-cloudstatic.cn
-codefuse.co
-deor.org.cn
-digital-engine.com
-fund123-corp.cn
-fund123.cn
-galacean.com
-huanxu.tech
-hzyx.com.cn
-idastore.cn
-inclusionconf.com
-kfp.cn
-lebuding.com
-lingguang.com
-lingguangcontent.com
-lingguangobjects.com
-linguang.com
-live-chats.cc
-lvchongchonglianglun0810.com
-mayidake.com
-mayilingguang.com
-mini-code.com
-misuan.com
-oceanbase.com
-qmuse.cn
-qmusespace.com
-robbyant.com
-secretflow.org.cn
-shengxin.com
-shumicdn.com
-shumiimg.com
-siminfra-inc.com
-siminfra-standby.com
-siminfradns.com
-tbox.cn
-tboxcontent.com
-tboxobjects.com
-trusple.com
-uniocontent.com
-xin.xin
-zhisheng.com
-zhixiaobao.com
-zkobjects.com
-zmyueding.com
+alikunlun.com
 
 # --- ip-neighbor:111.124.204.233 2026-11-16 ---
 qiyukf.cn
@@ -245,45 +12,12 @@ byd.com.cn
 bydauto.com
 bydenergy.com
 
-# --- ip-neighbor:203.107.45.167 2026-11-16 ---
-0558jobs.com
-056600.vip
-0566rczp.com
-0571bj.com
-0574gps.com
-0578shop.com
-0579game.com
-0594.ltd
-05youxi.net
-060193.top
-06050.cn
-065400.com
-
 # --- ip-neighbor:171.109.103.144 2026-11-19 ---
-12371.cn.wsglb0.com
-585958.xyz
-ad.12306.cn.wscdns.com
-cx.12306.cn.wsglb0.com
-dianxing.12371.cn
-djcb.12371.cn
-djyj.12371.cn
-dwlm.12371.cn
-dygbjy.12371.cn
-dynamic.12306.cn.lxdns.com
-exservice.12306.cn.wsglb0.com
-fuwu.12371.cn
-hotel.12306.cn.wsglb0.com
-hzfw.12306.cn.wsglb0.com
-jiaoliu.12371.cn
-kxfz.12371.cn
-lxyz.12371.cn
-news.12371.cn
-p1.img.cctvpic.com
-s.12306.cn.wsglb0.com
+wsglb0.com
+wscdns.com
+lxdns.com
+cctvpic.com
 12371.cn
-12371.lxdns.com
-xuexi.12371.cn
-zxfb.12371.cn
 
 # --- ip-neighbor:106.11.43.160 2026-11-19 ---
 ddurl.to
@@ -295,10 +29,10 @@ changhong.cn
 
 # --- ip-neighbor:122.14.229.123 2026-11-19 ---
 365yg.com
-direct.xigua-lb-v3.lf.bytelb.net
+bytelb.net
 
 # --- ip-neighbor:47.93.219.89 2026-11-19 ---
-blog.xuyecan1919.tech
+xuyecan1919.tech
 
 # --- link-crawl:toshiba.com.cn 2026-11-19 ---
 toshiba-tec.com.cn
@@ -759,7 +493,6 @@ diqua.com
 whirlpool-china.com
 
 # --- link-crawl:whu.edu.cn 2026-11-19 ---
-news.cn
 cssn.cn
 
 # --- link-crawl:wk-tech.com.cn 2026-11-19 ---
@@ -818,7 +551,6 @@ daojia.com
 viptijian.com
 
 # --- link-crawl:www.aaic.com.cn 2026-11-19 ---
-cj-pension.com.cn
 cpiccdn.com
 cpicfunds.com
 
@@ -908,9 +640,6 @@ zzzcms.com
 # --- link-crawl:www.coooto.cn 2026-11-19 ---
 xinlvyao.com
 
-# --- link-crawl:www.cpic.com.cn 2026-11-19 ---
-aaic.com.cn
-
 # --- link-crawl:www.cxtxl.com 2026-11-19 ---
 jyzjbg.com
 klqz.com
@@ -980,97 +709,4 @@ reshbedysim.com
 up8.space
 
 # --- ip-neighbor:120.92.211.176 2026-11-19 ---
-2site.mysmth.net
-aakk.mysmth.net
-abelard.mysmth.net
-afra2005.mysmth.net
-ailsa.mysmth.net
-airmansmth.mysmth.net
-airylea.mysmth.net
-amei.mysmth.net
-amonad.mysmth.net
-antonis.mysmth.net
-aprilshine.mysmth.net
-ask0123.mysmth.net
-axw.mysmth.net
-ayaaya.mysmth.net
-balling.mysmth.net
-bg.mysmth.net
-blackjack.mysmth.net
-bobbycat.mysmth.net
-boylinyu.mysmth.net
-cbeam.mysmth.net
-cheekers.mysmth.net
-chinapizza.mysmth.net
-chipda.mysmth.net
-choral.mysmth.net
-cinason.mysmth.net
-cliffhui.mysmth.net
-cloudor.mysmth.net
-conanzy.mysmth.net
-cosfin.mysmth.net
-czq123.mysmth.net
-deerinwinter.mysmth.net
-dididar.mysmth.net
-dqdq.mysmth.net
-dreamweaver9.mysmth.net
-dti.mysmth.net
-dwill.mysmth.net
-easylinux.mysmth.net
-exceedfang.mysmth.net
-eyrelyn.mysmth.net
-fakemajia.mysmth.net
-feifocoon.mysmth.net
-fftinbbs.mysmth.net
-file.mysmth.net
-firefly2001.mysmth.net
-freejazz.mysmth.net
-gccq.mysmth.net
-glass.mysmth.net
-goldolphin.mysmth.net
-grandfather.mysmth.net
-group.communicationstudies.mysmth.net
-gudao.mysmth.net
-haifenger.mysmth.net
-hanssachs.mysmth.net
-helenred.mysmth.net
-hgoldfish.mysmth.net
-horse.mysmth.net
-huaze.mysmth.net
-huhh.mysmth.net
-illy.mysmth.net
-inking.mysmth.net
-inzoi.mysmth.net
-jesmine.mysmth.net
-jiang2000.mysmth.net
-joanpotter.mysmth.net
-kalvin.mysmth.net
-kaorulan.mysmth.net
-kgb.mysmth.net
-killfast.mysmth.net
-kites.mysmth.net
-kiwimiao.mysmth.net
-lakey.mysmth.net
-leafrain.mysmth.net
-lingernw.mysmth.net
-lisayan.mysmth.net
-lycurgus.mysmth.net
-m.mysmth.net
-magicknight.mysmth.net
-mainth.mysmth.net
-maomy.mysmth.net
-marine3.mysmth.net
-matchsticker.mysmth.net
-mayfish.mysmth.net
-meantime1984.mysmth.net
-miffyg.mysmth.net
-mikie.mysmth.net
-mixiumaqi.mysmth.net
-movieworm.mysmth.net
 mysmth.net
-mysmth2003.mysmth.net
-napolen.mysmth.net
-nathan.mysmth.net
-ncepujgr.mysmth.net
-nethorse.mysmth.net
-netwind.mysmth.net
