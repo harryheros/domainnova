@@ -1,6 +1,6 @@
 # DomainNova - SG domains
-# Generated: 2026-11-19T08:41:13Z
-# Count: 146
+# Generated: 2026-11-19T10:20:28Z
+# Count: 145
 25pp.com
 263.net
 8264.com
@@ -26,7 +26,6 @@ changiairport.com
 channelnewsasia.com
 chinatourdepot.com
 coldstorage.com.sg
-com.my
 comfortdelgro.com
 cpf.gov.sg
 csa.gov.sg

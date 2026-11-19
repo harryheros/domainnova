@@ -1,6 +1,6 @@
 # DomainNova - JP domains
-# Generated: 2026-11-19T08:41:13Z
-# Count: 280
+# Generated: 2026-11-19T10:20:28Z
+# Count: 278
 2023rokpisummit.kr
 2026wbc.jp
 4gamer.net
@@ -161,7 +161,6 @@ ntt.co.jp
 nttcom.co.jp
 nttdocomo.co.jp
 nuflare.co.jp
-nuro.jp
 ocs-js.co.jp
 onikuru.jp
 onseng.jp
@@ -195,7 +194,6 @@ ryokoyomiuri.co.jp
 s-artstage.com
 sagawa-exp.co.jp
 sakura.ad.jp
-sakura.ne.jp
 sankei.com
 sankeien.or.jp
 sasatto.jp

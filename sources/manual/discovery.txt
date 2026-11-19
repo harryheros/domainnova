@@ -683,7 +683,6 @@ govwza.cn
 epdg.com
 holiys.com
 huaweitest.cn
-reshbedysim.com
 up8.space
 
 # --- ip-neighbor:120.92.211.176 2026-11-19 ---

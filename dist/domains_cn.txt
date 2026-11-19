@@ -1,6 +1,6 @@
 # DomainNova - CN domains
-# Generated: 2026-11-19T08:41:13Z
-# Count: 3227
+# Generated: 2026-11-19T10:20:28Z
+# Count: 3228
 002t.cn
 021east.com
 10000.com
@@ -1738,6 +1738,7 @@ kaifu.com
 kaipuyun.cn
 kaiserkraft.cn
 kaiwentuoyy.com
+kalebooster.com
 kankanews.com
 kans.cn
 kanzhun.com

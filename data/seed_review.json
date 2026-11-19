@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T08:41:11Z",
+  "generated_at": "2026-11-19T10:20:27Z",
   "note": "Seeds that resolved to nothing (bare name and www.) for at least 3 consecutive weekly builds. 'domains': the name does not exist (NXDOMAIN) - fix or remove it by hand. 'subdomain_only': the domain is registered and serves only subdomains (CDN / API domains) - keep it. Nothing here is changed automatically.",
   "after_runs": 3,
   "count": 1,
@@ -7,7 +7,7 @@
     {
       "domain": "meituanmaicai.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 8,
+      "unresolved_runs": 9,
       "since": "2026-11-15"
     }
   ],
@@ -16,157 +16,157 @@
     {
       "domain": "alibabacloud.net",
       "file": "seed_cn.txt",
-      "unresolved_runs": 15,
+      "unresolved_runs": 16,
       "since": "2026-10-27"
     },
     {
       "domain": "aliyun-inc.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 15,
+      "unresolved_runs": 16,
       "since": "2026-10-27"
     },
     {
       "domain": "anhui.gov.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 15,
+      "unresolved_runs": 16,
       "since": "2026-10-27"
     },
     {
       "domain": "baidupcs.net",
       "file": "seed_cn.txt",
-      "unresolved_runs": 15,
+      "unresolved_runs": 16,
       "since": "2026-10-27"
     },
     {
       "domain": "bcebos.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 15,
+      "unresolved_runs": 16,
       "since": "2026-10-27"
     },
     {
       "domain": "bilibili.net",
       "file": "seed_cn.txt",
-      "unresolved_runs": 15,
+      "unresolved_runs": 16,
       "since": "2026-10-27"
     },
     {
       "domain": "biligame.net",
       "file": "seed_cn.txt",
-      "unresolved_runs": 15,
+      "unresolved_runs": 16,
       "since": "2026-10-27"
     },
     {
       "domain": "byteimg.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 15,
+      "unresolved_runs": 16,
       "since": "2026-10-27"
     },
     {
       "domain": "douyinstatic.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 15,
+      "unresolved_runs": 16,
       "since": "2026-10-27"
     },
     {
       "domain": "douyinvod.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 15,
+      "unresolved_runs": 16,
       "since": "2026-10-27"
     },
     {
       "domain": "hdslb.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 15,
+      "unresolved_runs": 16,
       "since": "2026-10-27"
     },
     {
       "domain": "jdcloudapi.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 15,
+      "unresolved_runs": 16,
       "since": "2026-10-27"
     },
     {
       "domain": "jdpay.com.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 15,
+      "unresolved_runs": 16,
       "since": "2026-10-27"
     },
     {
       "domain": "mi-img.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 15,
+      "unresolved_runs": 16,
       "since": "2026-10-27"
     },
     {
       "domain": "mipush.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 15,
+      "unresolved_runs": 16,
       "since": "2026-10-27"
     },
     {
       "domain": "mohurd.gov.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 6,
+      "unresolved_runs": 7,
       "since": "2026-11-19"
     },
     {
       "domain": "pddpic.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 15,
+      "unresolved_runs": 16,
       "since": "2026-10-27"
     },
     {
       "domain": "qianfan.cloud",
       "file": "seed_cn.txt",
-      "unresolved_runs": 15,
+      "unresolved_runs": 16,
       "since": "2026-10-27"
     },
     {
       "domain": "qq.net",
       "file": "seed_cn.txt",
-      "unresolved_runs": 15,
+      "unresolved_runs": 16,
       "since": "2026-10-27"
     },
     {
       "domain": "sfda.gov.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 15,
+      "unresolved_runs": 16,
       "since": "2026-10-27"
     },
     {
       "domain": "sinajs.cn",
       "file": "seed_cn.txt",
-      "unresolved_runs": 15,
+      "unresolved_runs": 16,
       "since": "2026-10-27"
     },
     {
       "domain": "taobao.net",
       "file": "seed_cn.txt",
-      "unresolved_runs": 15,
+      "unresolved_runs": 16,
       "since": "2026-10-27"
     },
     {
       "domain": "tencent.net",
       "file": "seed_cn.txt",
-      "unresolved_runs": 15,
+      "unresolved_runs": 16,
       "since": "2026-10-27"
     },
     {
       "domain": "tencentclb.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 15,
+      "unresolved_runs": 16,
       "since": "2026-10-27"
     },
     {
       "domain": "toutiaocloud.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 15,
+      "unresolved_runs": 16,
       "since": "2026-10-27"
     },
     {
       "domain": "volccdn.com",
       "file": "seed_cn.txt",
-      "unresolved_runs": 15,
+      "unresolved_runs": 16,
       "since": "2026-10-27"
     }
   ]

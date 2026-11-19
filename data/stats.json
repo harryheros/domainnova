@@ -1,14 +1,14 @@
 {
-  "total_domains": 6366,
-  "dist_domains": 4988,
+  "total_domains": 6331,
+  "dist_domains": 4985,
   "seed_domains": 1309,
-  "extended_domains": 1121,
-  "discovery_domains": 3936,
+  "extended_domains": 1120,
+  "discovery_domains": 3902,
   "score_bands": {
-    "cn_dns": 2852,
+    "cn_dns": 2853,
     "cn_tld": 312,
-    "seed_forced": 1824,
-    "non_cn": 1378
+    "seed_forced": 1820,
+    "non_cn": 1346
   },
   "source_counts": {
     "seed_cn": 578,
@@ -18,15 +18,15 @@
     "seed_jp": 155,
     "seed_kr": 162,
     "seed_sg": 73,
-    "extended": 1121,
-    "discovery": 3936
+    "extended": 1120,
+    "discovery": 3902
   },
   "buckets": {
     "cn": {
-      "included": 3227,
+      "included": 3228,
       "gray": 0,
       "no_signal": 11,
-      "total": 3238
+      "total": 3239
     },
     "hk": {
       "included": 185,
@@ -47,39 +47,39 @@
       "total": 424
     },
     "jp": {
-      "included": 280,
+      "included": 278,
       "gray": 0,
-      "no_signal": 133,
-      "total": 413
+      "no_signal": 131,
+      "total": 409
     },
     "kr": {
-      "included": 814,
+      "included": 813,
       "gray": 0,
-      "no_signal": 73,
-      "total": 887
+      "no_signal": 66,
+      "total": 879
     },
     "sg": {
-      "included": 146,
+      "included": 145,
       "gray": 0,
       "no_signal": 84,
-      "total": 230
+      "total": 229
     },
-    "unclassified": 859
+    "unclassified": 836
   },
   "resolver": {
-    "own": 5825,
-    "public": 127,
-    "fallback": 6,
-    "unresolved": 408
+    "own": 5822,
+    "public": 118,
+    "fallback": 2,
+    "unresolved": 389
   },
-  "generated_at": "2026-11-19T08:41:13Z",
+  "generated_at": "2026-11-19T10:20:28Z",
   "auto_purged": 0,
   "auto_promoted": 0,
-  "auto_dead_removed": 6,
+  "auto_dead_removed": 1,
   "processing_errors": 0,
-  "sticky_retained": 171,
+  "sticky_retained": 172,
   "workers": 20,
-  "discovery_checked": 3936,
+  "discovery_checked": 3902,
   "seeds_needing_review": 1,
   "state_restored": {
     "domains_csv": true,
@@ -92,8 +92,7 @@
       "180.163.151.0/24",
       "202.101.48.0/24",
       "220.181.174.0/24",
-      "52.131.37.0/24",
-      "58.63.233.0/24"
+      "52.131.37.0/24"
     ],
     "demoted": [
       "265.com"

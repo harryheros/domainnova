@@ -2192,7 +2192,6 @@ ilovegoogle.cn,extended,Auto-promoted 2026-10-27,unknown,Unknown,uncategorized,i
 ioooe.cn,extended,Auto-promoted 2026-10-27,unknown,Unknown,uncategorized,ip-neighbor,111.63.65.103
 chenguanserver.com,extended,Auto-promoted 2026-10-27,unknown,Unknown,uncategorized,ip-neighbor,211.95.70.193
 henanxuexi.com,extended,Auto-promoted 2026-10-27,unknown,Unknown,uncategorized,ip-neighbor,122.193.250.58
-ccwu.cc,extended,Auto-promoted 2026-10-27,unknown,Unknown,uncategorized,ip-neighbor,111.63.65.103
 msjyfund.com.cn,extended,Auto-promoted 2026-10-27,unknown,Unknown,uncategorized,ct-logs,%.com.cn
 lumosfun.com,extended,Auto-promoted 2026-10-27,unknown,Unknown,uncategorized,ip-neighbor,211.95.70.193
 oschina.cn,extended,Auto-promoted 2026-10-27,unknown,Unknown,uncategorized,ip-neighbor,180.76.198.147
@@ -2460,7 +2459,6 @@ geotrust.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,trad
 dfcfw.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,trade.1234567.com.cn
 chinesestack.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,truliva.com.cn
 leadongcdn.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,tsingtao.com
-googleapis.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,tsingtao.com
 vpoint.co.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,tsite.jp
 ccclp.co.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,tsite.jp
 cccbiz.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,tsite.jp
@@ -2520,7 +2518,6 @@ linkingbooks.com.tw,discovery,Unsectioned,unknown,Unknown,uncategorized,link-cra
 visionproject.org.tw,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,udn.com
 udngroup.com.tw,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,udn.com
 google-analytics.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,udn.com
-googlecode.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,udn.com
 scorecardresearch.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,udn.com
 line-scdn.net,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,udn.com
 udnfunlife.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,udn.com
@@ -2563,7 +2560,6 @@ klac.or.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,ulsan.
 ccrs.or.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,ulsan.go.kr
 xn--oy2b29bd3a601b.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,ulsan.go.kr
 childcare.go.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,ulsan.go.kr
-ulsan.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,ulsan.go.kr
 usfr.or.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,ulsan.go.kr
 ulsan1365.or.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,ulsan.go.kr
 ulsannamgu.go.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,ulsan.go.kr
@@ -2630,9 +2626,7 @@ terminalfour.net,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,
 direc.to,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,uowchk.edu.hk
 uow.edu.au,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,uowchk.edu.hk
 uowcollege.edu.au,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,uowchk.edu.hk
-ac.ae,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,uowchk.edu.hk
 uowglobalenterprises.com.au,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,uowchk.edu.hk
-edu.my,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,uowchk.edu.hk
 jsdelivr.net,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,uowchk.edu.hk
 zhugeio.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,upyun.com
 github.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,upyun.com
@@ -2747,7 +2741,6 @@ yixin.im,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,wbpic.ws
 harrypottermagicawakened.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,wbpic.ws.netease.com
 bjjubao.org,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,wbpic.ws.netease.com
 qianlong.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,wbpic.ws.netease.com
-myshopify.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,weathernews.jp
 weathernews.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,weathernews.jp
 wegame.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,wegame.com.cn
 tencentmind.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,wegame.com.cn
@@ -2770,7 +2763,6 @@ ifabiao.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,west.
 racent.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,west.cn
 maitaowang.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,west.cn
 internic.net,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,west.cn
-chatgpt.site,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,westlakeomics.com
 nature.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,westlakeomics.com
 mingdong.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,wey.com.cn
 nameschina.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,wey.com.cn
@@ -2932,7 +2924,6 @@ govwza.cn,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,www.lue
 epdg.com,discovery,Unsectioned,unknown,Unknown,uncategorized,ip-neighbor,111.13.149.108
 holiys.com,discovery,Unsectioned,unknown,Unknown,uncategorized,ip-neighbor,111.13.149.108
 huaweitest.cn,discovery,Unsectioned,unknown,Unknown,uncategorized,ip-neighbor,111.13.149.108
-reshbedysim.com,discovery,Unsectioned,unknown,Unknown,uncategorized,ip-neighbor,111.13.149.108
 up8.space,discovery,Unsectioned,unknown,Unknown,uncategorized,ip-neighbor,111.13.149.108
 mysmth.net,discovery,Unsectioned,unknown,Unknown,uncategorized,ip-neighbor,120.92.211.176
 qihoo.com,discovery,Unsectioned,unknown,Unknown,uncategorized,ip-neighbor,101.226.4.13
@@ -2961,11 +2952,9 @@ softonic.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,soft
 softonic-id.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,softonic.cn
 softonic.nl,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,softonic.cn
 softonic.pl,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,softonic.cn
-com.br,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,softonic.cn
 softonic.ru,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,softonic.cn
 softonic.se,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,softonic.cn
 softonic-th.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,softonic.cn
-com.tr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,softonic.cn
 yandex.ru,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,softonic.cn
 clarity.ms,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,softonic.cn
 t.me,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,softonic.cn
@@ -3091,7 +3080,6 @@ sdimgs.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,street
 thesgfrstore.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,streetdirectory.com
 streetdirectory.me,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,streetdirectory.com
 street-directory.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,streetdirectory.com
-com.my,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,streetdirectory.com
 singaporejobsdb.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,streetdirectory.com
 cnsuning.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,suning.com
 m1page.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,sunmi.com
@@ -3100,7 +3088,6 @@ typekit.net,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,sunra
 bandcamp.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,sunra.com
 sundazed.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,sunra.com
 strut-records.co.uk,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,sunra.com
-blogspot.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,sunra.com
 hamilton.edu,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,sunra.com
 wikipedia.org,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,sunra.com
 presspop.toys,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,sunra.com
@@ -3295,7 +3282,6 @@ embed.ly,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,todayonl
 adingo.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,tokyo-np.co.jp
 topmuseum.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,tokyo-np.co.jp
 cincinnati-art2026.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,tokyo-np.co.jp
-tokyo.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,tokyo-np.co.jp
 tokyo-np.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,tokyo-np.co.jp
 chunichi.co.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,tokyo-np.co.jp
 heart-design.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,tokyo-np.co.jp
@@ -3880,7 +3866,6 @@ astyle.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,ana.co.
 yimg.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,ana.co.jp
 abc.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,ana.co.jp
 placehold.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,ana.co.jp
-hlx.page,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,ana.co.jp
 anadf.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,ana.co.jp
 chooose.today,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,ana.co.jp
 staralliance.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,ana.co.jp
@@ -4263,7 +4248,6 @@ ocs-js.co.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,city
 otsukastone.co.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,city.yokohama.lg.jp
 benhouse-net.co.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,city.yokohama.lg.jp
 e-ninbai.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,city.yokohama.lg.jp
-kanagawa.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,city.yokohama.lg.jp
 taisyokustep.co.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,city.yokohama.lg.jp
 denwa-relay-service.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,city.yokohama.lg.jp
 j-server.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,city.yokohama.lg.jp
@@ -4313,8 +4297,6 @@ costco.com.au,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,cos
 costco.ca,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,costco.com.tw
 costco.fr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,costco.com.tw
 costco.is,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,costco.com.tw
-com.mx,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,costco.com.tw
-co.nz,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,costco.com.tw
 costco.es,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,costco.com.tw
 costco.se,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,costco.com.tw
 costco.co.uk,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,costco.com.tw
@@ -4939,8 +4921,6 @@ fjjfypt.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,fujia
 funshion.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,fun.tv
 gacgroup.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,gac.com.cn
 gac-international.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,gac.com.cn
-com.bd,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,gac.com.cn
-com.np,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,gac.com.cn
 gacsrilanka.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,gac.com.cn
 broadwaymacau.com.mo,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,galaxyentertainment.com
 starworldmacau.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,galaxyentertainment.com
@@ -5186,7 +5166,6 @@ sotong.go.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,gwan
 gjfez.go.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,gwangju.go.kr
 518archives.go.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,gwangju.go.kr
 donggu.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,gwangju.go.kr
-gwangju.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,gwangju.go.kr
 gwangsan.go.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,gwangju.go.kr
 gjto.or.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,gwangju.go.kr
 gmcc.co.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,gwangju.go.kr
@@ -5264,7 +5243,6 @@ loasis.co.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hanj
 bgdc.co.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hanjin.com
 hanjinkal.co.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hanjin.com
 kas.co.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hanjin.com
-azurewebsites.net,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hanjin.com
 hoottown.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hanjin.com
 k-fashionswoop.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hanjin.com
 pctc21.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hanjin.com
@@ -5276,7 +5254,6 @@ stclab.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hankyu
 wowtv.co.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hankyung.com
 arte.co.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hankyung.com
 hkseminar.co.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hankyung.com
-ai.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hankyung.com
 artetv.co.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hankyung.com
 tesat.or.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hankyung.com
 fortunehills.co.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hankyung.com
@@ -5296,7 +5273,6 @@ gqjapan.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hatena
 tbs.co.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hatena.ne.jp
 itmedia.co.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hatena.ne.jp
 impress.co.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hatena.ne.jp
-hatenadiary.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hatena.ne.jp
 classmethod.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hatena.ne.jp
 hatelabo.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hatena.ne.jp
 rakuten-sec.co.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hatena.ne.jp
@@ -5309,10 +5285,8 @@ togetter.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hate
 livedoor.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hatena.ne.jp
 nikkansports.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hatena.ne.jp
 zenn.dev,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hatena.ne.jp
-hatenablog.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hatena.ne.jp
 imaoto.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hatena.ne.jp
 washilog.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hatena.ne.jp
-hatenadiary.org,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hatena.ne.jp
 web.nhk,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hatena.ne.jp
 yapcjapan.org,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hatena.ne.jp
 fatenumberfor.com,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,hatena.ne.jp
@@ -5394,7 +5368,6 @@ jemulpo.go.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,inc
 yeongjong.go.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,incheon.go.kr
 icjg.go.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,incheon.go.kr
 icdonggu.go.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,incheon.go.kr
-incheon.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,incheon.go.kr
 yeonsu.go.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,incheon.go.kr
 namdong.go.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,incheon.go.kr
 icbp.go.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,incheon.go.kr
@@ -5720,7 +5693,6 @@ kcarbon.or.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,mot
 kips.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,motie.go.kr
 mofat.go.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,motie.go.kr
 smba.go.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,motie.go.kr
-chungbuk.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,motie.go.kr
 mtgroup.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,mt.co.kr
 unicornfactory.co.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,mt.co.kr
 mtcorp.co.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,mt.co.kr
@@ -6091,7 +6063,6 @@ ones.com.cn,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,segme
 sensenova.cn,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,sensetime.com
 sensecore.cn,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,sensetime.com
 sensefoundry.cn,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,sensetime.com
-seoul.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,seoul.go.kr
 si.re.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,seoul.go.kr
 i-sh.co.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,seoul.go.kr
 kaia.re.kr,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,seoul.go.kr
@@ -6344,7 +6315,6 @@ yuantalife.com.tw,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl
 yuantafutures.com.tw,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,yuantabank.com.tw
 yuanta-consulting.com.tw,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,yuantabank.com.tw
 yuantafinance.com.tw,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,yuantabank.com.tw
-sakura.ne.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,yuncha.com
 onikuru.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,yuncha.com
 iba-fes.jp,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,yuncha.com
 newslink.sg,discovery,Unsectioned,unknown,Unknown,uncategorized,link-crawl,zaobao.com.sg

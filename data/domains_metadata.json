@@ -21930,16 +21930,6 @@
     "origin_detail": "122.193.250.58"
   },
   {
-    "domain": "ccwu.cc",
-    "source": "extended",
-    "section": "Auto-promoted 2026-10-27",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "ip-neighbor",
-    "origin_detail": "111.63.65.103"
-  },
-  {
     "domain": "msjyfund.com.cn",
     "source": "extended",
     "section": "Auto-promoted 2026-10-27",
@@ -24610,16 +24600,6 @@
     "origin_detail": "tsingtao.com"
   },
   {
-    "domain": "googleapis.com",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "tsingtao.com"
-  },
-  {
     "domain": "vpoint.co.jp",
     "source": "discovery",
     "section": "Unsectioned",
@@ -25210,16 +25190,6 @@
     "origin_detail": "udn.com"
   },
   {
-    "domain": "googlecode.com",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "udn.com"
-  },
-  {
     "domain": "scorecardresearch.com",
     "source": "discovery",
     "section": "Unsectioned",
@@ -25631,16 +25601,6 @@
   },
   {
     "domain": "childcare.go.kr",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "ulsan.go.kr"
-  },
-  {
-    "domain": "ulsan.kr",
     "source": "discovery",
     "section": "Unsectioned",
     "ecosystem": "unknown",
@@ -26310,27 +26270,7 @@
     "origin_detail": "uowchk.edu.hk"
   },
   {
-    "domain": "ac.ae",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "uowchk.edu.hk"
-  },
-  {
     "domain": "uowglobalenterprises.com.au",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "uowchk.edu.hk"
-  },
-  {
-    "domain": "edu.my",
     "source": "discovery",
     "section": "Unsectioned",
     "ecosystem": "unknown",
@@ -27480,16 +27420,6 @@
     "origin_detail": "wbpic.ws.netease.com"
   },
   {
-    "domain": "myshopify.com",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "weathernews.jp"
-  },
-  {
     "domain": "weathernews.com",
     "source": "discovery",
     "section": "Unsectioned",
@@ -27708,16 +27638,6 @@
     "category": "uncategorized",
     "origin": "link-crawl",
     "origin_detail": "west.cn"
-  },
-  {
-    "domain": "chatgpt.site",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "westlakeomics.com"
   },
   {
     "domain": "nature.com",
@@ -29330,16 +29250,6 @@
     "origin_detail": "111.13.149.108"
   },
   {
-    "domain": "reshbedysim.com",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "ip-neighbor",
-    "origin_detail": "111.13.149.108"
-  },
-  {
     "domain": "up8.space",
     "source": "discovery",
     "section": "Unsectioned",
@@ -29620,16 +29530,6 @@
     "origin_detail": "softonic.cn"
   },
   {
-    "domain": "com.br",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "softonic.cn"
-  },
-  {
     "domain": "softonic.ru",
     "source": "discovery",
     "section": "Unsectioned",
@@ -29651,16 +29551,6 @@
   },
   {
     "domain": "softonic-th.com",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "softonic.cn"
-  },
-  {
-    "domain": "com.tr",
     "source": "discovery",
     "section": "Unsectioned",
     "ecosystem": "unknown",
@@ -30920,16 +30810,6 @@
     "origin_detail": "streetdirectory.com"
   },
   {
-    "domain": "com.my",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "streetdirectory.com"
-  },
-  {
     "domain": "singaporejobsdb.com",
     "source": "discovery",
     "section": "Unsectioned",
@@ -31001,16 +30881,6 @@
   },
   {
     "domain": "strut-records.co.uk",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "sunra.com"
-  },
-  {
-    "domain": "blogspot.com",
     "source": "discovery",
     "section": "Unsectioned",
     "ecosystem": "unknown",
@@ -32951,16 +32821,6 @@
   },
   {
     "domain": "cincinnati-art2026.jp",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "tokyo-np.co.jp"
-  },
-  {
-    "domain": "tokyo.jp",
     "source": "discovery",
     "section": "Unsectioned",
     "ecosystem": "unknown",
@@ -38810,16 +38670,6 @@
     "origin_detail": "ana.co.jp"
   },
   {
-    "domain": "hlx.page",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "ana.co.jp"
-  },
-  {
     "domain": "anadf.com",
     "source": "discovery",
     "section": "Unsectioned",
@@ -42640,16 +42490,6 @@
     "origin_detail": "city.yokohama.lg.jp"
   },
   {
-    "domain": "kanagawa.jp",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "city.yokohama.lg.jp"
-  },
-  {
     "domain": "taisyokustep.co.jp",
     "source": "discovery",
     "section": "Unsectioned",
@@ -43131,26 +42971,6 @@
   },
   {
     "domain": "costco.is",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "costco.com.tw"
-  },
-  {
-    "domain": "com.mx",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "costco.com.tw"
-  },
-  {
-    "domain": "co.nz",
     "source": "discovery",
     "section": "Unsectioned",
     "ecosystem": "unknown",
@@ -49400,26 +49220,6 @@
     "origin_detail": "gac.com.cn"
   },
   {
-    "domain": "com.bd",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "gac.com.cn"
-  },
-  {
-    "domain": "com.np",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "gac.com.cn"
-  },
-  {
     "domain": "gacsrilanka.com",
     "source": "discovery",
     "section": "Unsectioned",
@@ -51870,16 +51670,6 @@
     "origin_detail": "gwangju.go.kr"
   },
   {
-    "domain": "gwangju.kr",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "gwangju.go.kr"
-  },
-  {
     "domain": "gwangsan.go.kr",
     "source": "discovery",
     "section": "Unsectioned",
@@ -52650,16 +52440,6 @@
     "origin_detail": "hanjin.com"
   },
   {
-    "domain": "azurewebsites.net",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "hanjin.com"
-  },
-  {
     "domain": "hoottown.com",
     "source": "discovery",
     "section": "Unsectioned",
@@ -52761,16 +52541,6 @@
   },
   {
     "domain": "hkseminar.co.kr",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "hankyung.com"
-  },
-  {
-    "domain": "ai.kr",
     "source": "discovery",
     "section": "Unsectioned",
     "ecosystem": "unknown",
@@ -52970,16 +52740,6 @@
     "origin_detail": "hatena.ne.jp"
   },
   {
-    "domain": "hatenadiary.jp",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "hatena.ne.jp"
-  },
-  {
     "domain": "classmethod.jp",
     "source": "discovery",
     "section": "Unsectioned",
@@ -53100,16 +52860,6 @@
     "origin_detail": "hatena.ne.jp"
   },
   {
-    "domain": "hatenablog.com",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "hatena.ne.jp"
-  },
-  {
     "domain": "imaoto.com",
     "source": "discovery",
     "section": "Unsectioned",
@@ -53121,16 +52871,6 @@
   },
   {
     "domain": "washilog.com",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "hatena.ne.jp"
-  },
-  {
-    "domain": "hatenadiary.org",
     "source": "discovery",
     "section": "Unsectioned",
     "ecosystem": "unknown",
@@ -53941,16 +53681,6 @@
   },
   {
     "domain": "icdonggu.go.kr",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "incheon.go.kr"
-  },
-  {
-    "domain": "incheon.kr",
     "source": "discovery",
     "section": "Unsectioned",
     "ecosystem": "unknown",
@@ -57201,16 +56931,6 @@
   },
   {
     "domain": "smba.go.kr",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "motie.go.kr"
-  },
-  {
-    "domain": "chungbuk.kr",
     "source": "discovery",
     "section": "Unsectioned",
     "ecosystem": "unknown",
@@ -60920,16 +60640,6 @@
     "origin_detail": "sensetime.com"
   },
   {
-    "domain": "seoul.kr",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "seoul.go.kr"
-  },
-  {
     "domain": "si.re.kr",
     "source": "discovery",
     "section": "Unsectioned",
@@ -63448,16 +63158,6 @@
     "category": "uncategorized",
     "origin": "link-crawl",
     "origin_detail": "yuantabank.com.tw"
-  },
-  {
-    "domain": "sakura.ne.jp",
-    "source": "discovery",
-    "section": "Unsectioned",
-    "ecosystem": "unknown",
-    "entity": "Unknown",
-    "category": "uncategorized",
-    "origin": "link-crawl",
-    "origin_detail": "yuncha.com"
   },
   {
     "domain": "onikuru.jp",

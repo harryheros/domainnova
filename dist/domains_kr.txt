@@ -1,6 +1,6 @@
 # DomainNova - KR domains
-# Generated: 2026-11-19T08:41:13Z
-# Count: 814
+# Generated: 2026-11-19T10:20:28Z
+# Count: 813
 110.go.kr
 11st.co.kr
 120dasan.or.kr
@@ -794,7 +794,6 @@ wowtv.co.kr
 xn--oy2b29bd3a601b.kr
 yangju.go.kr
 yanolja.com
-ydp.go.kr
 yeoju.go.kr
 yeoncheon.go.kr
 yeongjong.go.kr
