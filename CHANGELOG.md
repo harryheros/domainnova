@@ -34,6 +34,12 @@ Releases, newest first. The weekly data updates are the
   header naming the linking site. It runs with the IP-neighbor agent; one
   failing no longer stops the other. Its first run added 500 candidates,
   317 of which passed the checks at once (KR went from 165 to 262 domains).
+- **One-off full crawl**: a manual run with `full_crawl=yes` makes link
+  crawl read the home page of every known site at once (`--all`, up to
+  3,000 new candidates) instead of the weekly slice, which takes about ten
+  weeks to cover the same sites. It is meant to refill discovery after the
+  clean-up below; the etiquette is unchanged (one request per site,
+  robots.txt honoured).
 - **More global services are never added to discovery**: Google's tag,
   ad and API domains, LinkedIn, X, Wix, WordPress, GitHub and the common
   public CDNs. Pages embed them everywhere, and some resolve to in-country

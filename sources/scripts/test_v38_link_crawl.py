@@ -131,6 +131,39 @@ class Run(unittest.TestCase):
             added, session = self.run_agent()
         self.assertEqual((added, session.requested), (0, []))
 
+    def test_all_sites_reads_every_known_site(self):
+        manual = self.root / "sources" / "manual"
+        many = [f"site{i:02d}.cn" for i in range(30)]
+        (manual / "extended.txt").write_text("# extended\n" + "\n".join(many) + "\n", encoding="utf-8")
+        session = FakeSession()
+        with patch.object(lc, "make_session", return_value=session), patch("builtins.print"):
+            lc.run(self.root, pages=3, week=0, all_sites=True)
+        read = {u.split("/")[2] for u in session.requested if not u.endswith("robots.txt")}
+        self.assertTrue(set(many) <= read)
+        # the weekly slice reads only `pages` sites
+        session = FakeSession()
+        with patch.object(lc, "make_session", return_value=session), patch("builtins.print"):
+            lc.run(self.root, pages=3, week=0)
+        read = {u.split("/")[2] for u in session.requested if not u.endswith("robots.txt")}
+        self.assertLessEqual(len(read), 3)
+
+    def test_main_all_flag(self):
+        with patch.object(lc, "run") as run:
+            lc.main(["--all"])
+        self.assertEqual(run.call_args.kwargs, {"max_new": lc.ALL_MAX_NEW, "all_sites": True})
+        with patch.object(lc, "run") as run:
+            lc.main([])
+        self.assertEqual(run.call_args.kwargs, {})
+
+    def test_workflow_full_crawl_input(self):
+        wf = (Path(__file__).resolve().parents[2] / ".github" / "workflows" / "update.yml").read_text()
+        self.assertIn("full_crawl:", wf)
+        self.assertIn("github.event.inputs.full_crawl == 'yes'", wf)
+        self.assertIn("agent_link_crawl.py --all", wf)
+        # the input reaches the shell through env, never interpolated into it
+        self.assertNotIn("${{ github.event.inputs.full_crawl }}\n          then", wf)
+        self.assertIn('if [ "$FULL_CRAWL" = "yes" ]', wf)
+
     def test_regional_tlds_first(self):
         ordered = lc.prioritise(["a.com", "b.cn", "c.net", "d.com.hk", "e.jp"])
         self.assertEqual(ordered[:3], ["b.cn", "d.com.hk", "e.jp"])

@@ -10,6 +10,10 @@ on:
         description: "Run discovery agents (yes/no)"
         required: false
         default: "no"
+      full_crawl:
+        description: "One-off: link crawl reads every known site, not the weekly slice (yes/no)"
+        required: false
+        default: "no"
 
 # Never let two dataset builds race on the same branch (manual + scheduled).
 concurrency:
@@ -93,18 +97,24 @@ jobs:
       - name: Run discovery agents
         if: |
           github.event.schedule == '0 2 * * 1' ||
-          github.event.inputs.run_agents == 'yes'
+          github.event.inputs.run_agents == 'yes' ||
+          github.event.inputs.full_crawl == 'yes'
         # A failing third-party API must not block the weekly data update.
         continue-on-error: true
         env:
           # Optional: set a repo secret to enable the ViewDNS JSON API fallback.
           VIEWDNS_APIKEY: ${{ secrets.VIEWDNS_APIKEY }}
           DOMAINNOVA_DOH_URL: ${{ secrets.DOMAINNOVA_DOH_URL }}
+          FULL_CRAWL: ${{ github.event.inputs.full_crawl }}
         run: |
           echo "[+] Running IP neighbor agent..."
           python sources/discovery_agents/agent_ip_neighbor.py || echo "[!] IP neighbor agent failed"
           echo "[+] Running link crawl agent..."
-          python sources/discovery_agents/agent_link_crawl.py || echo "[!] Link crawl agent failed"
+          if [ "$FULL_CRAWL" = "yes" ]; then
+            python sources/discovery_agents/agent_link_crawl.py --all || echo "[!] Link crawl agent failed"
+          else
+            python sources/discovery_agents/agent_link_crawl.py || echo "[!] Link crawl agent failed"
+          fi
 
       - name: Build domain artifacts
         env:

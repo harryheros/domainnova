@@ -75,7 +75,7 @@ weekly build: resolve → match IPNova ranges → score → dist/
 ## Schedule
 
 - Every Monday 02:00 UTC: discovery + full build. Thursday: cache keep-alive.
-- Manual runs build only, or also run discovery with `run_agents=yes`.
+- Manual runs build only, or also run discovery with `run_agents=yes`. `full_crawl=yes` is a one-off catch-up: link crawl reads every known site's home page in one run (up to 3,000 new candidates) instead of the weekly slice.
 
 ---
 

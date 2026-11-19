@@ -20,7 +20,14 @@ Etiquette:
     a few sites at a time, the agents' User-Agent with a contact URL
 
 Usage:
-    python sources/discovery_agents/agent_link_crawl.py
+    python sources/discovery_agents/agent_link_crawl.py          # weekly slice
+    python sources/discovery_agents/agent_link_crawl.py --all    # every site once
+
+--all reads the home page of every known site in one run, with a larger
+budget (ALL_MAX_NEW). It is a one-off catch-up, started by hand through the
+workflow's full_crawl input, after a clean-up has removed many domains; the
+weekly slice would take months to cover the same ground. The etiquette is
+unchanged: still one request per site, robots.txt honoured.
 """
 from __future__ import annotations
 
@@ -49,6 +56,8 @@ PAGES_PER_RUN = 300        # home pages read per run
 MAX_NEW_PER_RUN = 500      # new discovery domains per run
 MAX_PAGE_BYTES = 1_000_000
 WORKERS = 8
+ALL_MAX_NEW = 3000         # budget of a --all run (discovery capacity permitting)
+ALL_WORKERS = 16           # one request per site, so more sites at a time is fine
 TIMEOUT = (5, 10)          # connect, read (seconds)
 
 REGIONAL_TLDS = ("cn", "hk", "mo", "tw", "jp", "kr", "sg")
@@ -131,7 +140,7 @@ def crawl_site(session, site: str) -> List[str]:
 
 
 def run(repo_root: Path, pages: int = PAGES_PER_RUN, max_new: int = MAX_NEW_PER_RUN,
-        week: Optional[int] = None) -> int:
+        week: Optional[int] = None, all_sites: bool = False) -> int:
     budget = min(max_new, max(0, DISCOVERY_MAX - discovery_count(repo_root)))
     if budget == 0:
         print("[!] discovery.txt at capacity. Skipping.")
@@ -144,12 +153,15 @@ def run(repo_root: Path, pages: int = PAGES_PER_RUN, max_new: int = MAX_NEW_PER_
                         if l.strip() and not l.strip().startswith("#")]
     if week is None:
         week = _dt.date.today().isocalendar()[1]
-    sites = pick_pages(sorted(set(sources)), pages, week)
+    if all_sites:
+        sites = sorted(set(sources))
+    else:
+        sites = pick_pages(sorted(set(sources)), pages, week)
     print(f"[+] Reading {len(sites)} home pages (budget {budget} new domains)")
 
     session = make_session(total_retries=1)
     found: Dict[str, List[str]] = {}
-    with concurrent.futures.ThreadPoolExecutor(max_workers=WORKERS) as pool:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=ALL_WORKERS if all_sites else WORKERS) as pool:
         for site, hosts in zip(sites, pool.map(lambda s: crawl_site(session, s), sites), strict=True):
             found[site] = hosts
 
@@ -173,5 +185,19 @@ def run(repo_root: Path, pages: int = PAGES_PER_RUN, max_new: int = MAX_NEW_PER_
     return added
 
 
+def main(argv: Optional[List[str]] = None) -> int:
+    import argparse
+    ap = argparse.ArgumentParser(description="Find new domains in the links of known sites' home pages.")
+    ap.add_argument("--all", action="store_true",
+                    help=f"read every known site once (budget {ALL_MAX_NEW}), not the weekly slice")
+    args = ap.parse_args(argv)
+    root = Path(__file__).resolve().parents[2]
+    if args.all:
+        run(root, max_new=ALL_MAX_NEW, all_sites=True)
+    else:
+        run(root)
+    return 0
+
+
 if __name__ == "__main__":
-    run(Path(__file__).resolve().parents[2])
+    sys.exit(main())
