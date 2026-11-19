@@ -3,10 +3,6 @@
 # --- ip-neighbor:118.178.203.51 2026-11-16 ---
 alikunlun.com
 
-# --- ip-neighbor:111.124.204.233 2026-11-16 ---
-
-# --- ip-neighbor:47.106.90.124 2026-11-16 ---
-
 # --- ip-neighbor:171.109.103.144 2026-11-19 ---
 wsglb0.com
 wscdns.com
@@ -62,7 +58,6 @@ chinesestack.com
 
 # --- link-crawl:tsingtao.com 2026-11-19 ---
 leadongcdn.com
-googleapis.com
 
 # --- link-crawl:tsite.jp 2026-11-19 ---
 vpoint.co.jp
@@ -144,7 +139,6 @@ linkingbooks.com.tw
 visionproject.org.tw
 udngroup.com.tw
 google-analytics.com
-googlecode.com
 scorecardresearch.com
 line-scdn.net
 udnfunlife.com
@@ -195,7 +189,6 @@ klac.or.kr
 ccrs.or.kr
 xn--oy2b29bd3a601b.kr
 childcare.go.kr
-ulsan.kr
 usfr.or.kr
 ulsan1365.or.kr
 ulsannamgu.go.kr
@@ -268,9 +261,7 @@ terminalfour.net
 direc.to
 uow.edu.au
 uowcollege.edu.au
-ac.ae
 uowglobalenterprises.com.au
-edu.my
 jsdelivr.net
 
 # --- link-crawl:upyun.com 2026-11-19 ---
@@ -433,7 +424,6 @@ bjjubao.org
 qianlong.com
 
 # --- link-crawl:weathernews.jp 2026-11-19 ---
-myshopify.com
 weathernews.com
 
 # --- link-crawl:wegame.com.cn 2026-11-19 ---
@@ -470,7 +460,6 @@ maitaowang.com
 internic.net
 
 # --- link-crawl:westlakeomics.com 2026-11-19 ---
-chatgpt.site
 nature.com
 
 # --- link-crawl:wey.com.cn 2026-11-19 ---
@@ -739,11 +728,9 @@ softonic.com
 softonic-id.com
 softonic.nl
 softonic.pl
-com.br
 softonic.ru
 softonic.se
 softonic-th.com
-com.tr
 yandex.ru
 clarity.ms
 t.me
@@ -897,7 +884,6 @@ sdimgs.com
 thesgfrstore.com
 streetdirectory.me
 street-directory.com
-com.my
 singaporejobsdb.com
 
 # --- link-crawl:suning.com 2026-11-19 ---
@@ -912,7 +898,6 @@ typekit.net
 bandcamp.com
 sundazed.com
 strut-records.co.uk
-blogspot.com
 hamilton.edu
 wikipedia.org
 presspop.toys
@@ -1175,7 +1160,6 @@ embed.ly
 adingo.jp
 topmuseum.jp
 cincinnati-art2026.jp
-tokyo.jp
 tokyo-np.jp
 chunichi.co.jp
 heart-design.jp
@@ -1900,7 +1884,6 @@ astyle.jp
 yimg.jp
 abc.jp
 placehold.jp
-hlx.page
 anadf.com
 chooose.today
 staralliance.com
@@ -2435,7 +2418,6 @@ ocs-js.co.jp
 otsukastone.co.jp
 benhouse-net.co.jp
 e-ninbai.jp
-kanagawa.jp
 taisyokustep.co.jp
 denwa-relay-service.jp
 j-server.com
@@ -2513,8 +2495,6 @@ costco.com.au
 costco.ca
 costco.fr
 costco.is
-com.mx
-co.nz
 costco.es
 costco.se
 costco.co.uk
@@ -3313,8 +3293,6 @@ funshion.com
 # --- link-crawl:gac.com.cn 2026-11-19 ---
 gacgroup.com
 gac-international.com
-com.bd
-com.np
 gacsrilanka.com
 
 # --- link-crawl:galaxyentertainment.com 2026-11-19 ---
@@ -3600,7 +3578,6 @@ sotong.go.kr
 gjfez.go.kr
 518archives.go.kr
 donggu.kr
-gwangju.kr
 gwangsan.go.kr
 gjto.or.kr
 gmcc.co.kr
@@ -3686,7 +3663,6 @@ loasis.co.kr
 bgdc.co.kr
 hanjinkal.co.kr
 kas.co.kr
-azurewebsites.net
 hoottown.com
 k-fashionswoop.com
 pctc21.com
@@ -3702,7 +3678,6 @@ stclab.com
 wowtv.co.kr
 arte.co.kr
 hkseminar.co.kr
-ai.kr
 artetv.co.kr
 tesat.or.kr
 fortunehills.co.kr
@@ -3726,7 +3701,6 @@ gqjapan.jp
 tbs.co.jp
 itmedia.co.jp
 impress.co.jp
-hatenadiary.jp
 classmethod.jp
 hatelabo.jp
 rakuten-sec.co.jp
@@ -3739,10 +3713,8 @@ togetter.com
 livedoor.com
 nikkansports.com
 zenn.dev
-hatenablog.com
 imaoto.com
 washilog.com
-hatenadiary.org
 web.nhk
 yapcjapan.org
 fatenumberfor.com
@@ -3870,7 +3842,6 @@ jemulpo.go.kr
 yeongjong.go.kr
 icjg.go.kr
 icdonggu.go.kr
-incheon.kr
 yeonsu.go.kr
 namdong.go.kr
 icbp.go.kr
@@ -4318,7 +4289,6 @@ kcarbon.or.kr
 kips.kr
 mofat.go.kr
 smba.go.kr
-chungbuk.kr
 
 # --- link-crawl:mt.co.kr 2026-11-19 ---
 mtgroup.kr
@@ -4817,7 +4787,6 @@ sensecore.cn
 sensefoundry.cn
 
 # --- link-crawl:seoul.go.kr 2026-11-19 ---
-seoul.kr
 si.re.kr
 i-sh.co.kr
 kaia.re.kr
@@ -5148,7 +5117,6 @@ yuanta-consulting.com.tw
 yuantafinance.com.tw
 
 # --- link-crawl:yuncha.com 2026-11-19 ---
-sakura.ne.jp
 onikuru.jp
 iba-fes.jp
 

@@ -4,6 +4,38 @@ Releases, newest first. The weekly data updates are the
 `chore: auto-update` commits; current statistics are in
 [data/stats.json](./data/stats.json).
 
+## 3.8.1 (2026-11-19)
+
+- **Registrable names come from the Public Suffix List.** 3.8.0 reduced
+  every candidate to its registrable name with a hand-written table that
+  knew only a few ccTLDs (CN, HK, MO, TW, JP, KR, SG, UK, AU) and took the
+  last two labels elsewhere, so a link to `abc.com.my` was nominated as
+  `com.my`. Two such names were published: `com.my` in SG and
+  `sakura.ne.jp` (a shared-hosting suffix) in JP. The
+  [Public Suffix List](https://publicsuffix.org/) is now kept in the
+  repository (`sources/third_party/`, MPL-2.0) and read with the standard
+  library (`sources/scripts/_psl.py`), wildcard and exception rules
+  included: `www.city.nagoya.jp` reduces to `city.nagoya.jp`, which the
+  old table would have made `nagoya.jp`.
+- **A public suffix is never nominated or promoted**, nor is a name under
+  a suffix of the list's private section (`x.sakura.ne.jp`,
+  `shop.myshopify.com`, `x.ccwu.cc`): those are names that a hosting or
+  subdomain service hands out to its users, like the free subdomain
+  services already refused. A discovery name purged by these rules is also
+  left out of that build's lists; before, it was published once more on
+  its way out.
+- **The data was cleaned with the same rules** (`clean_agent_domains.py`):
+  29 agent-nominated public suffixes were removed, `ccwu.cc` from
+  `extended.txt` and 28 from `discovery.txt` (`com.my`, `sakura.ne.jp`,
+  `googleapis.com`, `myshopify.com`, `blogspot.com`, `com.br`, `com.tr`,
+  `edu.my`, `ac.ae`, `tokyo.jp` and others), each logged in
+  `sources/manual/removed.csv`. Domains curated by hand were not touched,
+  so `gov.cn`, `edu.cn`, `gov.hk`, `gov.mo`, `gov.sg`, `gov.tw` and
+  `edu.tw`, which are listed on purpose, stay. `com.my` and `sakura.ne.jp`
+  leave the published lists at the next build.
+- 3.8.0 entry below corrected: the clean-up came before the full crawl,
+  and its published totals are given as measured.
+
 ## 3.8.0 (2026-11-18)
 
 - **Every domain records how it was found.** `data/domains_metadata.*`
@@ -44,7 +76,7 @@ Releases, newest first. The weekly data updates are the
   nothing written, as the weekly 300-page slice had never met one. The
   full crawl read 2,436 sites and added 3,000 candidates; the build after it
   published 2,199 more domains (CN 1,407, KR 549, JP 88, TW 76, SG 44,
-  HK 31, MO 4), for 4,990 in all.
+  HK 31, MO 4), for 4,991 in all.
 - **More global services are never added to discovery**: Google's tag,
   ad and API domains, LinkedIn, X, Wix, WordPress, GitHub and the common
   public CDNs. Pages embed them everywhere, and some resolve to in-country
@@ -80,9 +112,11 @@ Releases, newest first. The weekly data updates are the
   replaced by their registrable name. Every removal and replacement is
   logged, with its reason, in `sources/manual/removed.csv`.
   `extended.txt` now holds 1,116 domains (774 by hand, 174 from
-  IP-neighbor, 168 from CT logs). After the next build the published lists
-  hold about 2,400 to 2,600 domains, about 1,500 to 1,700 of them in CN;
-  outside CN, HK loses 4 and SG 1.
+  IP-neighbor, 168 from CT logs). The clean-up came before the full crawl
+  above: the build after it published 2,777 domains (from 4,123), 1,807 of
+  them in CN (from 3,201), and the full crawl then brought the total to
+  4,991. (This entry first gave an estimate of 2,400 to 2,600 for the
+  clean-up and placed it after the crawl.)
 - **Global services' in-country edges are not regional evidence.** Each
   build resolves a few sentinel domains of global companies (Google,
   YouTube, LinkedIn, Facebook, X; never CDNs) and treats the /24s of their

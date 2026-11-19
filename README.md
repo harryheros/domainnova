@@ -3,7 +3,7 @@
 > Self-evolving dataset of domains hosted on Asia-Pacific infrastructure, ranked by confidence.
 
 [![Update](https://github.com/harryheros/domainnova/actions/workflows/update.yml/badge.svg)](https://github.com/harryheros/domainnova/actions/workflows/update.yml)
-[![Version](https://img.shields.io/badge/version-v3.8.0-blue)](https://github.com/harryheros/domainnova/releases)
+[![Version](https://img.shields.io/badge/version-v3.8.1-blue)](https://github.com/harryheros/domainnova/releases)
 
 DomainNova answers one question: **is this domain's infrastructure physically hosted in region X?** — for CN, HK, TW, MO, JP, KR and SG. It attributes infrastructure, not corporate ownership, and it is a dataset, not a routing or filtering product.
 
@@ -64,7 +64,7 @@ weekly build: resolve → match IPNova ranges → score → dist/
                   fail 5 times → removed
 ```
 
-- **Discovery**: each week, two agents find new candidates. Reverse-IP lookups over IPNova's CN ranges (HackerTarget, optional ViewDNS API) add up to 100; the links on the home pages of a rotating slice of known sites add up to 500 (robots.txt honoured, one request per site). Every candidate is reduced to its registrable name (suffix matching covers the subdomains), and names under free subdomain services, adult and gambling sites, and numeric throwaway names are refused; reverse-IP lookups skip shared-hosting IPs (20 or more unrelated domains). Global services that answer from in-region edges (sentinel domains of Google, LinkedIn, Meta and X are resolved each build to find them) are not counted as regional. Every candidate is published only after passing the same checks as the rest, and is promoted after passing in 4 different weeks, however often the build runs.
+- **Discovery**: each week, two agents find new candidates. Reverse-IP lookups over IPNova's CN ranges (HackerTarget, optional ViewDNS API) add up to 100; the links on the home pages of a rotating slice of known sites add up to 500 (robots.txt honoured, one request per site). Every candidate is reduced to its registrable name by the [Public Suffix List](https://publicsuffix.org/) (suffix matching covers the subdomains); public suffixes themselves (`com.my`), names under free subdomain and hosting services (the list's private section, such as `sakura.ne.jp`), adult and gambling sites, and numeric throwaway names are refused; reverse-IP lookups skip shared-hosting IPs (20 or more unrelated domains). Global services that answer from in-region edges (sentinel domains of Google, LinkedIn, Meta and X are resolved each build to find them) are not counted as regional. Every candidate is published only after passing the same checks as the rest, and is promoted after passing in 4 different weeks, however often the build runs.
 - Promotion pauses when `extended.txt` reaches 5000 domains.
 - **Provenance**: every domain records how it was first found, in the `origin` column of `domains_metadata.*`: `manual` (curated by hand), or the discovery agent that nominated it (`ip-neighbor`, `link-crawl`, `ct-logs`), with the IP, linking site or query in `origin_detail`. Origins of `extended.txt` domains are kept in [`sources/manual/provenance.csv`](sources/manual/provenance.csv); promotions add to it, and `backfill_provenance.py` rebuilt the history from git. Totals: `data/metadata_stats.json` → `by_origin`. Agent-nominated domains removed by a later review are logged with the reason in [`sources/manual/removed.csv`](sources/manual/removed.csv). Whatever the origin, a domain is published only on this build's own DNS and IP checks.
 - **Resolver**: `data/stats.json` → `resolver` counts the domains answered by our own resolver (`own`), by a public resolver (`public`) or the last-resort fallback (`fallback`) in the latest build; `data/domains.csv` has it per domain.
@@ -99,5 +99,6 @@ Release history: [CHANGELOG.md](./CHANGELOG.md).
 
 - **Non-commercial use**: permitted under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 - **Commercial use** (SaaS, API resale, redistribution, paid products, use inside a company beyond research): requires prior written authorization — see [COMMERCIAL_LICENSE.md](./COMMERCIAL_LICENSE.md), or ask at [novaod.com/licensing](https://novaod.com/licensing).
+- `sources/third_party/public_suffix_list.dat` is the [Public Suffix List](https://publicsuffix.org/), under the [Mozilla Public License 2.0](https://mozilla.org/MPL/2.0/); see [sources/third_party/README.md](sources/third_party/README.md).
 
 Part of the [Nova infrastructure toolkit](https://github.com/harryheros).

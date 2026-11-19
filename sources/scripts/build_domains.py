@@ -2048,6 +2048,10 @@ def manage_discovery_lifecycle(
             log(f"  [info] Purging discovery domain {domain} "
                 f"({_quality.junk_reason(domain) or 'not a registrable name'})")
             purged.append(domain)
+            # v3.8.1: and not published by this build either (3.8.0 wrote it
+            # to dist/ once more on its way out).
+            row.score = 0
+            row.bucket = ""
             continue
 
         if counted_week.get(domain) == week:
