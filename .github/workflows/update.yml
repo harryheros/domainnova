@@ -127,6 +127,9 @@ jobs:
       - name: Build metadata artifacts
         run: python sources/scripts/build_metadata.py --all
 
+      - name: Build quality page
+        run: python sources/scripts/build_quality_report.py
+
       - name: Show stats
         run: |
           echo "=== Stats ==="
@@ -149,6 +152,7 @@ jobs:
             echo "discovery.txt missing"
 
       - name: Commit and push if changed
+        id: commit
         shell: bash
         run: |
           set -euo pipefail
@@ -168,6 +172,7 @@ jobs:
           # The build takes a while; someone may have pushed meanwhile.
           for attempt in 1 2 3; do
             if git push; then
+              echo "pushed=true" >> "$GITHUB_OUTPUT"
               exit 0
             fi
             echo "::warning::push rejected (attempt $attempt), rebasing"
@@ -188,6 +193,15 @@ jobs:
             data/discovery_stats.json
             data/domains.csv
           key: domainnova-state-${{ github.run_id }}
+
+      # A fixed name for this version of the data: data-YYYY-MM-DD (a second
+      # build the same day: .2, .3 …). Tags are never moved, so a citation
+      # stays valid. After the state is saved: a failed tag must not make the
+      # next run redo promotions that were already pushed.
+      - name: Tag data version
+        if: success() && steps.commit.outputs.pushed == 'true'
+        continue-on-error: true
+        run: python sources/scripts/data_tag.py
 
   notify-failure:
     runs-on: ubuntu-latest

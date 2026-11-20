@@ -4,6 +4,69 @@ Releases, newest first. The weekly data updates are the
 `chore: auto-update` commits; current statistics are in
 [data/stats.json](./data/stats.json).
 
+## 3.9.0 (2026-11-19)
+
+- **Discovery looks for the smaller regions too.** The IP-neighbor agent
+  resolved only the CN seeds and kept only CN addresses, so all of its
+  reverse-IP lookups (about 50 a week, the free quota) went to CN
+  servers, and HK, MO, SG and TW grew only through link crawl. The
+  lookups are now shared between regions (CN 15, HK 10, SG 10, MO 6,
+  TW 6, JP 3): each region resolves its own seeds and keeps only
+  addresses in its own IPNova ranges; slots a region cannot fill go to
+  the others, and lookups alternate between regions so that one region
+  cannot spend the week's budget of new domains. Seeds of every region
+  are resolved with the same client subnet as the build, so the agent
+  only looks next to servers the build itself places in the region.
+- **Link crawl reads the smaller regions' sites more often.** 100 of the
+  300 home pages read each week are a rotating slice of the HK, MO, SG
+  and TW seeds (about 410 sites, so each is read every four weeks
+  instead of every eight; the other 2,000 or so known sites, every ten
+  weeks instead of eight), and candidates are queued by regional ccTLD,
+  scarcest region first (`.mo`, `.sg`, `.hk`, `.tw`, then `.jp`, `.kr`,
+  `.cn`), so the budget is not spent on `.cn` names first. A domain
+  linked from several sites is credited to the first site read, now
+  more often one of these seeds. `--all` is unchanged.
+- **On trial: the regional view (nothing published from it).** The
+  build resolves every domain as a client in China would, and asked that
+  way only 1 to 3 of every 20 sampled HK, MO, SG, TW, JP and KR seeds
+  land in their own region; the rest are there only because they are
+  curated. Each build now also asks seeds and names under those regions'
+  ccTLDs as a client in their own region (`_local_view.py`), through
+  public resolvers that pass the subnet on (Quad9, then Google; never
+  our own resolver, whose location would answer for every subnet when a
+  name server ignores it; skipped with `DOMAINNOVA_PUBLIC_DOH=off`).
+  A global service also answers from its node in the region asked that
+  way, so an answer counts only if it is not on a network where the
+  control names (global services, and global CDNs' customers) answer
+  that region, not on a global CDN, not placed elsewhere by the build,
+  and does not follow the asker (asked from a probe region, it answers
+  there), and only after two weeks in a row. The result goes to
+  `data/stats.json` → `local_view` and a section of `QUALITY.md`: how
+  many seeds the view finds, how many control checks get through (it
+  should be none), the verdicts, and what it would add. Whether it may
+  change the lists will be decided on that record.
+- **Every data version can be cited.** Each build that changes the data
+  is now tagged `data-YYYY-MM-DD` (UTC) after it is pushed, so a paper,
+  an audit or another tool can pin the exact lists it used:
+  `https://raw.githubusercontent.com/harryheros/domainnova/data-2026-11-23/dist/domains_cn.txt`.
+  Tags are never moved: a second build on the same day that changes the
+  data again gets `.2`, `.3` and so on. The tag message records the
+  published counts, the build time and the code version
+  (`sources/scripts/data_tag.py`). A failed tag push does not fail the
+  build.
+- **A public data-quality page, `data/QUALITY.md`**, rewritten by every
+  build from its own outputs (`build_quality_report.py`): published
+  domains by region and tier, how they were found (`origin`), which
+  resolver answered, the foreign-service networks and the domains held
+  back because of them, seed health, this build's promotions and
+  removals, and the domains removed on review by reason. As of the
+  2026-11-19 build: 4,985 published, 38.6% curated by hand and 53.4%
+  found by link crawl; our own resolver answered 92% of all domains
+  checked.
+- README: `data/domains.csv` was listed among the published files, but it
+  is the build's working file and is not committed; the README now says
+  so.
+
 ## 3.8.1 (2026-11-19)
 
 - **Registrable names come from the Public Suffix List.** 3.8.0 reduced

@@ -2,10 +2,21 @@
 """
 agent_ip_neighbor.py - Reverse IP neighbor discovery for DomainNova.
 
-Resolves seed domains to their CN IPs (through our own resolver when
-DOMAINNOVA_DOH_URL is set, else Google DoH, with a China Telecom client
-subnet), then queries Reverse IP APIs to find co-hosted domains on the
-same server.
+Resolves seed domains to their in-region IPs (through our own resolver
+when DOMAINNOVA_DOH_URL is set, else Google DoH, with the China Telecom
+client subnet), then queries Reverse IP APIs to find co-hosted domains on
+the same server.
+
+v3.9: every region in REGION_SLOTS, not only CN. The free reverse-IP quota
+allows about 50 queries a run; they used to go to CN servers only, so HK,
+MO, SG and TW grew only through link crawl. Each region now resolves its
+own seeds (seed_<region>.txt) and keeps only addresses in its own IPNova
+ranges; slots a region cannot fill go to the others, and queries alternate
+between regions so that one region cannot spend the whole budget of new
+domains. Seeds of every region are resolved with the same client subnet
+as the build: an address the build would not place in the region (a CDN
+edge that answers only clients there) would only find neighbours that
+fail the build's own check.
 
 Primary:  HackerTarget Reverse IP API (free tier, small daily quota)
 Fallback: ViewDNS.info Reverse IP **JSON API**, only when the
@@ -18,7 +29,7 @@ HackerTarget's quota ran out. It has been removed. When the HackerTarget
 quota is exhausted and no ViewDNS key is configured, the run stops early.
 
 Safety limits:
-  - Max IPs queried per run:       50
+  - Max IPs queried per run:       50, shared by region (REGION_SLOTS)
   - Max new domains added per run: 100
   - Shared hosting skipped (v3.8): an IP serving SHARED_HOST_MIN or more
     unrelated registrable domains is a virtual-hosting server, and its
@@ -38,7 +49,7 @@ import struct
 import sys
 import time
 from pathlib import Path
-from typing import List, Optional, Set
+from typing import Dict, List, Optional, Set, Tuple
 
 # Shared agent helpers.
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -55,6 +66,8 @@ from _common import (  # noqa: E402
 
 import requests  # noqa: E402
 
+import constants  # noqa: E402  (sources/scripts, put on sys.path by _common)
+
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
@@ -62,6 +75,18 @@ MAX_IPS_PER_RUN       = 50
 MAX_NEW_PER_RUN       = 100
 SLEEP_BETWEEN_QUERIES = 2.5
 SHARED_HOST_MIN       = 20   # distinct registrable neighbours => shared hosting
+
+# Reverse-IP queries per region (sum = MAX_IPS_PER_RUN). The smaller
+# regions get more than their share of the dataset; CN has the most seeds
+# and is also covered by link crawl. Unfilled slots go to other regions.
+REGION_SLOTS: Dict[str, int] = {
+    "CN": 15,
+    "HK": 10,
+    "SG": 10,
+    "MO": 6,
+    "TW": 6,
+    "JP": 3,
+}
 
 DOH_URL    = "https://dns.google/resolve"
 ECS_SUBNET = "114.114.114.0/24"
@@ -80,13 +105,14 @@ class QuotaExhausted(Exception):
 # ---------------------------------------------------------------------------
 # DoH resolution
 # ---------------------------------------------------------------------------
-def resolve_to_ipv4(domain: str, session: requests.Session) -> List[str]:
+def resolve_to_ipv4(domain: str, session: requests.Session,
+                    subnet: str = ECS_SUBNET) -> List[str]:
     if OWN_DOH:
-        return _resolve_own(domain, session)
+        return _resolve_own(domain, session, subnet)
     params = {
         "name":               domain,
         "type":               "A",
-        "edns_client_subnet": ECS_SUBNET,
+        "edns_client_subnet": subnet,
     }
     try:
         time.sleep(random.uniform(0.05, 0.15))
@@ -146,10 +172,11 @@ def _answer_ipv4(data: bytes) -> List[str]:
     return out
 
 
-def _resolve_own(domain: str, session: requests.Session) -> List[str]:
+def _resolve_own(domain: str, session: requests.Session,
+                 subnet: str = ECS_SUBNET) -> List[str]:
     try:
         time.sleep(random.uniform(0.05, 0.15))
-        resp = session.post(OWN_DOH, data=_wire_query(domain, ECS_SUBNET), timeout=10,
+        resp = session.post(OWN_DOH, data=_wire_query(domain, subnet), timeout=10,
                             headers={"Content-Type": "application/dns-message",
                                      "Accept": "application/dns-message"})
         if resp.status_code != 200:
@@ -162,12 +189,9 @@ def _resolve_own(domain: str, session: requests.Session) -> List[str]:
 # ---------------------------------------------------------------------------
 # ipnova CIDR check
 # ---------------------------------------------------------------------------
-def fetch_cn_cidrs(session: requests.Session) -> List[ipaddress.IPv4Network]:
-    # IPNova v3.2.1+ ships header-free CIDR lists under output/plain/.
-    # Older output/CN.txt still works (parser strips '#' lines), but the
-    # plain/ variant is the canonical post-v3.2 path; using it keeps this
-    # agent in lockstep with build_domains.py.
-    url = "https://raw.githubusercontent.com/harryheros/ipnova/main/output/plain/CN.txt"
+def fetch_region_cidrs(session: requests.Session, region: str) -> List[ipaddress.IPv4Network]:
+    # The same IPNova plain/ lists build_domains.py uses (constants).
+    url = constants.REGION_CIDR_URLS[region]
     resp = session.get(url, timeout=30)
     resp.raise_for_status()
     networks = []
@@ -182,10 +206,14 @@ def fetch_cn_cidrs(session: requests.Session) -> List[ipaddress.IPv4Network]:
     return networks
 
 
+def fetch_cn_cidrs(session: requests.Session) -> List[ipaddress.IPv4Network]:
+    return fetch_region_cidrs(session, "CN")
+
+
 _NET_INDEX: dict = {}
 
 
-def is_cn_ip(ip_str: str, networks: List[ipaddress.IPv4Network]) -> bool:
+def in_ranges(ip_str: str, networks: List[ipaddress.IPv4Network]) -> bool:
     """Binary-search membership test (v3.4 scanned ~5,600 networks per IP).
     The list is collapsed once and cached, so members are disjoint and the
     only candidate is the rightmost network starting at or below the IP."""
@@ -204,6 +232,46 @@ def is_cn_ip(ip_str: str, networks: List[ipaddress.IPv4Network]) -> bool:
     _, starts, ends = cached
     i = bisect.bisect_right(starts, addr) - 1
     return i >= 0 and ends[i] >= addr
+
+
+is_cn_ip = in_ranges  # the name before v3.9
+
+
+def pick_ips(seeds: Dict[str, List[str]],
+             networks: Dict[str, List[ipaddress.IPv4Network]],
+             session) -> List[Tuple[str, str]]:
+    """(region, ip) pairs to query, at most MAX_IPS_PER_RUN, alternating
+    between regions. Each region resolves its own seeds and keeps only
+    addresses in its own ranges, up to its slots; then regions with seeds
+    left fill the slots others could not."""
+    regions = [r for r in REGION_SLOTS if seeds.get(r) and networks.get(r)]
+    pending = {r: list(seeds[r]) for r in regions}
+    found: Dict[str, List[str]] = {r: [] for r in regions}
+    seen: Set[str] = set()
+
+    def take(region: str, want: int) -> None:
+        while len(found[region]) < want and pending[region]:
+            for ip in resolve_to_ipv4(pending[region].pop(0), session):
+                if len(found[region]) >= want:
+                    break
+                if ip not in seen and in_ranges(ip, networks[region]):
+                    seen.add(ip)
+                    found[region].append(ip)
+
+    for r in regions:
+        take(r, REGION_SLOTS[r])
+    left = MAX_IPS_PER_RUN - sum(len(v) for v in found.values())
+    for r in regions:  # slots another region could not fill
+        if left <= 0:
+            break
+        before = len(found[r])
+        take(r, before + left)
+        left -= len(found[r]) - before
+
+    picked: List[Tuple[str, str]] = []
+    for i in range(max((len(v) for v in found.values()), default=0)):
+        picked += [(r, found[r][i]) for r in regions if i < len(found[r])]
+    return picked[:MAX_IPS_PER_RUN]
 
 
 # ---------------------------------------------------------------------------
@@ -318,10 +386,6 @@ def append_to_discovery_ipn(
 def run(repo_root: Path) -> None:
     session = make_session()
 
-    print("[+] Fetching CN CIDR list from ipnova...")
-    cn_networks = fetch_cn_cidrs(session)
-    print(f"[+] Loaded {len(cn_networks)} CN CIDRs")
-
     existing     = load_existing(repo_root)
     current_disc = discovery_count(repo_root)
 
@@ -337,43 +401,45 @@ def run(repo_root: Path) -> None:
 
     print(f"[+] Budget: {budget} new domains")
 
-    seed_path = repo_root / "sources" / "manual" / "seed_cn.txt"
-    if not seed_path.exists():
-        print("[!] seed_cn.txt not found. Exiting.")
-        return
+    manual = repo_root / "sources" / "manual"
+    seeds: Dict[str, List[str]] = {}
+    networks: Dict[str, List[ipaddress.IPv4Network]] = {}
+    for region in REGION_SLOTS:
+        path = manual / f"seed_{region.lower()}.txt"
+        if not path.exists():
+            continue
+        try:
+            networks[region] = fetch_region_cidrs(session, region)
+        except (requests.RequestException, OSError, ValueError) as exc:
+            print(f"[!] {region} ranges unavailable ({exc}); skipping {region}")
+            continue
+        listed = [
+            l.strip().lower()
+            for l in path.read_text(encoding="utf-8").splitlines()
+            if l.strip() and not l.strip().startswith("#")
+        ]
+        random.shuffle(listed)
+        seeds[region] = listed
+        print(f"[+] {region}: {len(listed)} seeds, {len(networks[region])} ranges")
 
-    seed_domains = [
-        l.strip().lower()
-        for l in seed_path.read_text(encoding="utf-8").splitlines()
-        if l.strip() and not l.strip().startswith("#")
-    ]
-    random.shuffle(seed_domains)
+    print("[+] Resolving seed domains to find in-region IPs...")
+    targets = pick_ips(seeds, networks, session)
+    by_region: Dict[str, int] = {}
+    for r, _ in targets:
+        by_region[r] = by_region.get(r, 0) + 1
+    print(f"[+] Found {len(targets)} IPs to probe: "
+          + ", ".join(f"{r} {n}" for r, n in by_region.items()))
 
-    print("[+] Resolving seed domains to find CN IPs...")
-    cn_ips: List[str] = []
-    seen_ips: Set[str] = set()
-
-    for domain in seed_domains:
-        if len(cn_ips) >= MAX_IPS_PER_RUN:
-            break
-        ips = resolve_to_ipv4(domain, session)
-        for ip in ips:
-            if ip not in seen_ips and is_cn_ip(ip, cn_networks):
-                seen_ips.add(ip)
-                cn_ips.append(ip)
-
-    print(f"[+] Found {len(cn_ips)} CN IPs to probe")
-
-    if not cn_ips:
-        print("[!] No CN IPs found. Exiting.")
+    if not targets:
+        print("[!] No in-region IPs found. Exiting.")
         return
 
     total_added = 0
-    for ip in cn_ips:
+    for region, ip in targets:
         if total_added >= budget:
             break
 
-        print(f"  Querying neighbors of {ip}...")
+        print(f"  Querying neighbors of {ip} ({region})...")
         try:
             neighbors = reverse_ip_lookup(ip, session)
         except QuotaExhausted:

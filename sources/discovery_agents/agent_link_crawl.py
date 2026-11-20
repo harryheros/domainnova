@@ -11,7 +11,12 @@ new ones to discovery.txt under a header naming the page they were found on:
 
 Candidates go through the same weekly DNS and IP checks as every other
 discovery domain; being linked from a site in the region says nothing by
-itself. Regional ccTLDs are queued first.
+itself. Regional ccTLDs are queued first, the scarcest regions' first.
+
+v3.9: besides the weekly slice of all known sites, each run reads a
+rotating slice of the HK, MO, SG and TW seeds (FOCUS_PAGES of the
+PAGES_PER_RUN), so the smaller regions' own sites are read every few weeks
+instead of every two months.
 
 Etiquette:
   - robots.txt is honoured for "/" (no robots.txt, or an unreadable one,
@@ -60,7 +65,11 @@ ALL_MAX_NEW = 3000         # budget of a --all run (discovery capacity permittin
 ALL_WORKERS = 16           # one request per site, so more sites at a time is fine
 TIMEOUT = (5, 10)          # connect, read (seconds)
 
-REGIONAL_TLDS = ("cn", "hk", "mo", "tw", "jp", "kr", "sg")
+# Scarcest region first: candidates are queued in this order, so the
+# budget is not spent on .cn names before a .mo name gets a place.
+REGIONAL_TLDS = ("mo", "sg", "hk", "tw", "jp", "kr", "cn")
+FOCUS_REGIONS = ("hk", "mo", "sg", "tw")  # seed files read every week
+FOCUS_PAGES = 100                         # of PAGES_PER_RUN
 
 _LINK_RE = re.compile(r"""(?:href|src)\s*=\s*["']?(?:https?:)?//([^/"'\s?#>]+)""", re.IGNORECASE)
 
@@ -92,10 +101,10 @@ def pick_pages(domains: List[str], n: int, week: int) -> List[str]:
 
 
 def prioritise(domains: Iterable[str]) -> List[str]:
-    """Regional ccTLDs first (stable within each group)."""
-    domains = list(domains)
-    return [d for d in domains if d.rsplit(".", 1)[-1] in REGIONAL_TLDS] + \
-           [d for d in domains if d.rsplit(".", 1)[-1] not in REGIONAL_TLDS]
+    """Regional ccTLDs first, in REGIONAL_TLDS order, then the rest (stable
+    within each group)."""
+    rank = {t: i for i, t in enumerate(REGIONAL_TLDS)}
+    return sorted(domains, key=lambda d: rank.get(d.rsplit(".", 1)[-1], len(rank)))
 
 
 def _allowed(session, site: str) -> bool:
@@ -159,8 +168,16 @@ def crawl_site(session, site: str) -> List[str]:
         return []
 
 
+def _listed(path: Path) -> List[str]:
+    if not path.exists():
+        return []
+    return [l.strip().lower() for l in path.read_text(encoding="utf-8").splitlines()
+            if l.strip() and not l.strip().startswith("#")]
+
+
 def run(repo_root: Path, pages: int = PAGES_PER_RUN, max_new: int = MAX_NEW_PER_RUN,
-        week: Optional[int] = None, all_sites: bool = False) -> int:
+        week: Optional[int] = None, all_sites: bool = False,
+        focus_pages: int = FOCUS_PAGES) -> int:
     budget = min(max_new, max(0, DISCOVERY_MAX - discovery_count(repo_root)))
     if budget == 0:
         print("[!] discovery.txt at capacity. Skipping.")
@@ -168,15 +185,16 @@ def run(repo_root: Path, pages: int = PAGES_PER_RUN, max_new: int = MAX_NEW_PER_
     manual = repo_root / "sources" / "manual"
     sources = []
     for path in sorted(manual.glob("seed_*.txt")) + [manual / "extended.txt"]:
-        if path.exists():
-            sources += [l.strip().lower() for l in path.read_text(encoding="utf-8").splitlines()
-                        if l.strip() and not l.strip().startswith("#")]
+        sources += _listed(path)
     if week is None:
         week = _dt.date.today().isocalendar()[1]
     if all_sites:
         sites = sorted(set(sources))
     else:
-        sites = pick_pages(sorted(set(sources)), pages, week)
+        focus = sorted({d for r in FOCUS_REGIONS for d in _listed(manual / f"seed_{r}.txt")})
+        sites = pick_pages(focus, min(focus_pages, pages), week)
+        rest = sorted(set(sources) - set(focus))
+        sites += pick_pages(rest, pages - len(sites), week)
     print(f"[+] Reading {len(sites)} home pages (budget {budget} new domains)")
 
     session = make_session(total_retries=1)

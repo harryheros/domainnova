@@ -111,7 +111,9 @@ class Run(unittest.TestCase):
     def test_candidates_with_referrer(self):
         added, session = self.run_agent()
         disc = _provenance.discovery_sections(self.root / "sources" / "manual" / "discovery.txt")
-        self.assertEqual(disc["newsite.com.cn"][:2], ("link-crawl", "seed-one.cn"))
+        # linked from both; the first site read is the referrer, and since
+        # v3.9 the HK, MO, SG and TW seeds are read first
+        self.assertEqual(disc["newsite.com.cn"][:2], ("link-crawl", "seed-two.hk"))
         self.assertEqual(disc["other.cn"][:2], ("link-crawl", "seed-one.cn"))
         self.assertEqual(disc["third.com.hk"][:2], ("link-crawl", "seed-one.cn"))
         self.assertEqual(disc["another.com.hk"][:2], ("link-crawl", "seed-two.hk"))
@@ -207,7 +209,8 @@ class Run(unittest.TestCase):
 
     def test_regional_tlds_first(self):
         ordered = lc.prioritise(["a.com", "b.cn", "c.net", "d.com.hk", "e.jp"])
-        self.assertEqual(ordered[:3], ["b.cn", "d.com.hk", "e.jp"])
+        # v3.9: scarcest region first (test_v390_regions)
+        self.assertEqual(ordered[:3], ["d.com.hk", "e.jp", "b.cn"])
 
 
 class RealHTTP(unittest.TestCase):

@@ -104,9 +104,10 @@ class SharedHost(unittest.TestCase):
         (manual / "discovery.txt").write_text("# DomainNova - Discovery Layer\n", encoding="utf-8")
         neighbours = {"1.1.1.1": [f"farm{i}.com" for i in range(40)],
                       "2.2.2.2": ["sibling.cn", "www.sibling.cn"]}
-        with patch.object(ipn, "fetch_cn_cidrs", return_value=[]), \
+        # v3.9: ranges are fetched per region and checked with in_ranges
+        with patch.object(ipn, "fetch_region_cidrs", return_value=[ipn.ipaddress.ip_network("1.0.0.0/8")]), \
              patch.object(ipn, "resolve_to_ipv4", return_value=["1.1.1.1", "2.2.2.2"]), \
-             patch.object(ipn, "is_cn_ip", return_value=True), \
+             patch.object(ipn, "in_ranges", return_value=True), \
              patch.object(ipn, "reverse_ip_lookup", side_effect=lambda ip, s: neighbours[ip]), \
              patch.object(ipn, "make_session"), \
              patch.object(ipn.time, "sleep"):

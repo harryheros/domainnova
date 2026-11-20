@@ -85,7 +85,8 @@ except ImportError:
         IPNOVA_MIN_LINES_PER_BUCKET,
         GLOBAL_CDN_ASNS,
     )
-import _provenance  # noqa: E402  (sources/scripts is on sys.path by now)
+import _local_view  # noqa: E402  (sources/scripts is on sys.path by now)
+import _provenance  # noqa: E402
 import _quality  # noqa: E402
 
 # ---------------------------------------------------------------------------
@@ -314,9 +315,13 @@ def next_doh_upstream() -> str:
     return url
 
 
+_ecs_override = threading.local()
+
+
 def random_ecs_subnet() -> str:
-    """Pick a random CN ISP subnet for ECS to get region-accurate GeoDNS responses."""
-    return random.choice(ECS_SUBNETS)
+    """Pick a random CN ISP subnet for ECS to get region-accurate GeoDNS responses.
+    Inside resolve_public_with_subnet() the subnet asked for is used instead."""
+    return getattr(_ecs_override, "subnet", None) or random.choice(ECS_SUBNETS)
 
 
 # ---------------------------------------------------------------------------
@@ -1500,6 +1505,37 @@ def resolve_domain(domain: str, session: Optional[requests.Session]) -> List[str
     return resolve_domain_detail(domain, session)[0]
 
 
+# Public resolvers that pass a client subnet on, Quad9 first (v3.9 regional
+# view, _local_view.py). Cloudflare sends none and is never asked.
+SUBNET_UPSTREAMS = ("https://dns11.quad9.net/dns-query", "https://dns.google/resolve")
+
+
+def resolve_public_with_subnet(domain: str, subnet: str,
+                               session: Optional[requests.Session] = None) -> List[str]:
+    """`domain` (or www.<domain>) as answered for a client in `subnet`, from
+    public resolvers that forward the subnet to the domain's name servers.
+
+    Not our own resolver: it sits in one region, so a name server that
+    ignores the subnet would answer every subnet as if asked from there.
+    Through a public resolver such a server answers for the resolver's
+    location instead, which is not the subnet's region."""
+    if session is None:
+        session = get_thread_session()
+    domain = normalize_domain(domain)
+    if not domain:
+        return []
+    _ecs_override.subnet = subnet
+    try:
+        for name in (domain, "www." + domain) if not domain.startswith("www.") else (domain,):
+            for upstream in SUBNET_UPSTREAMS:
+                ips = _do_resolve(name, upstream, session)
+                if ips:
+                    return ips
+        return []
+    finally:
+        _ecs_override.subnet = None
+
+
 # ---------------------------------------------------------------------------
 # Signal aggregation
 # ---------------------------------------------------------------------------
@@ -2638,6 +2674,33 @@ def apply_foreign_edge_filter(
     return demoted, foreign
 
 
+def run_local_view(repo_root: Path, rows: List[DomainRecord],
+                   region_cidrs: Dict[str, List[ipaddress.IPv4Network]],
+                   region_lookup: RegionLookup, week: Optional[str] = None) -> dict:
+    """The regional view on trial (_local_view.py): recorded, never published.
+    Its two-week streaks live in discovery_stats.json under "local_view"."""
+    if not PUBLIC_DOH:
+        return {"mode": "shadow", "skipped": "public resolvers are off (DOMAINNOVA_PUBLIC_DOH)"}
+    subnets = _local_view.region_subnets(region_cidrs)
+    stats = load_discovery_stats(repo_root)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
+        report, state = _local_view.run(
+            rows, subnets,
+            resolve=lambda name, subnet: resolve_public_with_subnet(name, subnet),
+            bucket=lambda ip: ip_to_bucket(ip, region_lookup),
+            provider=detect_provider,
+            state=stats.get("local_view", {}),
+            week=week or iso_week(),
+            map_fn=pool.map,
+        )
+    stats["local_view"] = state
+    save_discovery_stats(repo_root, stats)
+    adds = sum(len(v) for v in report.get("would_add", {}).values())
+    log(f"[+] Regional view (trial, not published): {report.get('checked', 0)} checked, "
+        f"{adds} would be added, controls passed {report.get('controls', {}).get('passed', 0)}")
+    return report
+
+
 # ---------------------------------------------------------------------------
 # Build
 # ---------------------------------------------------------------------------
@@ -2749,6 +2812,8 @@ def build(repo_root: Path) -> None:
     if dead:
         log(f"[+] Removed {len(dead)} dead domains (NS confirmed non-existent)")
 
+    local_view = run_local_view(repo_root, rows, region_cidrs_extra, region_lookup)
+
     write_csv(data_csv, rows)
     bucket_counts = write_dist_buckets(dist_dir, rows)
     sticky_count = sum(1 for r in rows if r.sticky)
@@ -2765,6 +2830,7 @@ def build(repo_root: Path) -> None:
         "rescue_disabled":    _rescue_disabled,
         "foreign_edge":       {"networks": sorted(foreign_nets),
                                "demoted": sorted(foreign_demoted)},
+        "local_view":         local_view,
     }, bucket_counts=bucket_counts)
 
     total_dist = sum(bucket_counts.values())
