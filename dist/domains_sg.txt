@@ -1,6 +1,6 @@
 # DomainNova - SG domains
-# Generated: 2026-11-23T18:34:30Z
-# Count: 123
+# Generated: 2026-11-23T22:11:33Z
+# Count: 116
 8world.com
 99.co
 9939.com
@@ -24,7 +24,6 @@ cpf.gov.sg
 csa.gov.sg
 ctsho.com
 dbs.com.sg
-douxie.com
 edb.gov.sg
 fairprice.com.sg
 foodpanda.sg
@@ -35,7 +34,6 @@ grab.com
 gxrcu.com
 hangseng.com.cn
 hdb.gov.sg
-hkcd.com
 hsbcjt.cn
 huatian.net
 ica.gov.sg
@@ -61,17 +59,14 @@ mom.gov.sg
 mothership.sg
 msf.gov.sg
 mti.gov.sg
-mz6.net
 nameschina.com
 nea.gov.sg
-ngacn.cc
 ntu.edu.sg
 nus.edu.sg
 ocbc.com
 ocbc.com.cn
 ocbc.com.my
 ocbc.com.sg
-onnoon.com
 oschk.org
 parisianmacao.com
 police.gov.sg
@@ -86,7 +81,6 @@ sandsresortsmacao.com
 sandsrewards.com
 sbstransit.com.sg
 scdf.gov.sg
-sensemartgo.com
 sentosa.com.sg
 sgix.sg
 sgnic.sg
@@ -108,7 +102,6 @@ starhub.com
 straitstimes.com
 streetdirectory.com
 sutd.edu.sg
-szfw.org
 tailg.com
 tech.gov.sg
 tencentcloud.com

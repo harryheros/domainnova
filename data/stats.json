@@ -1,14 +1,14 @@
 {
   "total_domains": 6747,
-  "dist_domains": 5059,
+  "dist_domains": 5056,
   "seed_domains": 1309,
   "extended_domains": 1434,
   "discovery_domains": 4004,
   "score_bands": {
-    "cn_dns": 2930,
-    "cn_tld": 295,
-    "seed_forced": 1834,
-    "non_cn": 1688
+    "cn_dns": 2911,
+    "cn_tld": 298,
+    "seed_forced": 1847,
+    "non_cn": 1691
   },
   "source_counts": {
     "seed_cn": 578,
@@ -23,16 +23,16 @@
   },
   "buckets": {
     "cn": {
-      "included": 3285,
+      "included": 3274,
       "gray": 0,
-      "no_signal": 11,
-      "total": 3296
+      "no_signal": 7,
+      "total": 3281
     },
     "hk": {
-      "included": 196,
+      "included": 209,
       "gray": 0,
-      "no_signal": 45,
-      "total": 241
+      "no_signal": 44,
+      "total": 253
     },
     "mo": {
       "included": 82,
@@ -47,37 +47,37 @@
       "total": 433
     },
     "jp": {
-      "included": 278,
+      "included": 280,
       "gray": 0,
       "no_signal": 132,
-      "total": 410
+      "total": 412
     },
     "kr": {
       "included": 832,
       "gray": 0,
-      "no_signal": 66,
-      "total": 898
+      "no_signal": 67,
+      "total": 899
     },
     "sg": {
-      "included": 123,
+      "included": 116,
       "gray": 0,
-      "no_signal": 91,
-      "total": 214
+      "no_signal": 92,
+      "total": 208
     },
-    "unclassified": 1170
+    "unclassified": 1176
   },
   "resolver": {
     "own": 6321,
     "public": 16,
-    "fallback": 2,
-    "unresolved": 408
+    "fallback": 3,
+    "unresolved": 407
   },
-  "generated_at": "2026-11-23T18:34:30Z",
+  "generated_at": "2026-11-23T22:11:33Z",
   "auto_purged": 0,
   "auto_promoted": 0,
-  "auto_dead_removed": 0,
+  "auto_dead_removed": 16,
   "processing_errors": 0,
-  "sticky_retained": 174,
+  "sticky_retained": 173,
   "workers": 20,
   "discovery_checked": 4004,
   "seeds_needing_review": 1,
@@ -125,11 +125,11 @@
       "KR": 0,
       "SG": 0
     },
-    "checked": 1242,
+    "checked": 1238,
     "seeds": {
       "HK": {
         "checked": 126,
-        "local": 57
+        "local": 59
       },
       "MO": {
         "checked": 76,
@@ -137,7 +137,7 @@
       },
       "TW": {
         "checked": 139,
-        "local": 90
+        "local": 89
       },
       "JP": {
         "checked": 155,
@@ -149,19 +149,20 @@
       },
       "SG": {
         "checked": 73,
-        "local": 2
+        "local": 3
       }
     },
     "seed_verdicts": {
       "HK": {
-        "not-local": 69
+        "not-local": 67
       },
       "MO": {
         "not-local": 33,
         "follows-asker": 4
       },
       "TW": {
-        "not-local": 49
+        "not-local": 49,
+        "unresolved": 1
       },
       "JP": {
         "not-local": 115
@@ -170,7 +171,7 @@
         "not-local": 52
       },
       "SG": {
-        "not-local": 71
+        "not-local": 70
       }
     },
     "seed_examples": {
@@ -205,6 +206,9 @@
           "acer.com",
           "bnext.com.tw",
           "bot.com.tw"
+        ],
+        "unresolved": [
+          "matsu.gov.tw"
         ]
       },
       "JP": {
@@ -236,9 +240,9 @@
       }
     },
     "verdicts": {
-      "not-local": 454,
+      "not-local": 452,
       "unresolved": 43,
-      "cn-view-elsewhere": 14
+      "cn-view-elsewhere": 12
     },
     "controls": {
       "checked": 114,

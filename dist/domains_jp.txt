@@ -1,6 +1,6 @@
 # DomainNova - JP domains
-# Generated: 2026-11-23T18:34:30Z
-# Count: 278
+# Generated: 2026-11-23T22:11:33Z
+# Count: 280
 2023rokpisummit.kr
 2026wbc.jp
 4gamer.net
@@ -25,6 +25,7 @@ cao.go.jp
 capcom.co.jp
 carsensor.net
 cas.go.jp
+cfhpc.org
 chuden.co.jp
 chukoji.co.jp
 chunichi-shakaijigyo.jp
@@ -190,6 +191,7 @@ retailadconsortium.jp
 riken.jp
 rikunabi.com
 rsc-web.jp
+ruijie.co.jp
 ryokoyomiuri.co.jp
 s-artstage.com
 sagawa-exp.co.jp

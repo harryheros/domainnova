@@ -1,8 +1,9 @@
 # DomainNova - HK domains
-# Generated: 2026-11-23T18:34:30Z
-# Count: 196
+# Generated: 2026-11-23T22:11:33Z
+# Count: 209
 163.net
 163vip.com
+313.com
 3dmgame.hk
 3hk.hk
 57616.com
@@ -10,6 +11,7 @@
 aastocks.com
 academy-shopline.hk
 aidlab.hk
+ali213.hk
 alipay.hk
 alipayhk.com
 asia.ccb.com
@@ -48,6 +50,7 @@ dbs.com.hk
 dimbuy.com
 directel.mo
 discuss.com.hk
+douxie.com
 dps.org.hk
 dragonfly.fm
 edb.gov.hk
@@ -61,6 +64,7 @@ fortress.com.hk
 fso.gov.hk
 fstb.gov.hk
 fwd.com.hk
+gamersky.hk
 gcc.edu.hk
 gov.hk
 ha.org.hk
@@ -76,10 +80,12 @@ hkapa.edu
 hkbh.org.hk
 hkbn.net
 hkbu.edu.hk
+hkcd.com
 hkcd.com.hk
 hkcsl-5g.com
 hkcsl.com
 hkct.edu.hk
+hkctadmission.edu.hk
 hkdnr.hk
 hkeaa.edu.hk
 hkelectric.com
@@ -127,6 +133,7 @@ lcsd.gov.hk
 liangdiansiwang.com
 lihkg.com
 ln.edu.hk
+longzhu.com
 ltldgroup.com
 lwb.gov.hk
 mclcinema.com
@@ -134,12 +141,17 @@ mingpao.com
 missfresh.net
 moomoo.com
 mtr.com.hk
+mz6.net
+nameslink.com
+neigbuy.com
 new6.art
 newhua.com
+ngacn.cc
 nowtv.now.com
 oceanpark.com.hk
 octopus.com.hk
 on.cc
+onnoon.com
 openatom.org
 openrice.com
 paopaoche.net
@@ -162,6 +174,7 @@ staticfile.org
 sth.org.hk
 stheadline.com
 stpaul.org.hk
+szfw.org
 takungpao.com
 theclub.com.hk
 three.com.hk

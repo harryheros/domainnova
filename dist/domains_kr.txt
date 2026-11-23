@@ -1,5 +1,5 @@
 # DomainNova - KR domains
-# Generated: 2026-11-23T18:34:30Z
+# Generated: 2026-11-23T22:11:33Z
 # Count: 832
 110.go.kr
 11st.co.kr

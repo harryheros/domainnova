@@ -1,6 +1,6 @@
 # DomainNova - CN domains
-# Generated: 2026-11-23T18:34:30Z
-# Count: 3285
+# Generated: 2026-11-23T22:11:33Z
+# Count: 3274
 002t.cn
 021east.com
 10000.com
@@ -82,7 +82,6 @@
 2b2c.com
 300.cn
 3000.com
-313.com
 315e.cn
 32.cn
 3304399.net
@@ -613,7 +612,6 @@ cfca.com.cn
 cffex.com.cn
 cffexdt.com.cn
 cfgc.cn
-cfhpc.org
 cfis.cn
 cflac.org.cn
 cfmmc.com
@@ -686,7 +684,6 @@ chinadiplomacy.org.cn
 chinafeiheir.com
 chinafilm.com
 chinagate.cn
-chinahighlights.com
 chinahlj.cn
 chinahr.com
 chinahtz.com
@@ -1233,7 +1230,6 @@ forever21.cn
 forgame.com.cn
 fossilchina.cn
 fotile.com
-fotileglobal.com
 founderff.com
 foundersc.com
 foxitsoftware.cn
@@ -1477,7 +1473,6 @@ hichina.com
 hicloud.com
 hicn.cn
 higer.com.cn
-highlightstravel.com
 hikvision.com
 himd.com
 hinews.cn
@@ -1488,7 +1483,6 @@ hitool.top
 hjsilk.com.cn
 hjsxw.cn
 hkbchina.com
-hkctadmission.edu.hk
 hkstv.hk
 hljnews.cn
 hlunet.cn
@@ -1668,7 +1662,6 @@ ixigua.com
 ixzzcgl.com
 iytcdn.com
 jac.com.cn
-japanhighlights.com
 jd.com
 jdb.cn
 jdcdn.com
@@ -1758,7 +1751,6 @@ kaifu.com
 kaipuyun.cn
 kaiserkraft.cn
 kaiwentuoyy.com
-kalebooster.com
 kankanews.com
 kans.cn
 kanzhun.com
@@ -2074,7 +2066,6 @@ myvisionlink.cn
 myzaker.com
 n.cn
 n4a.cn
-nameslink.com
 nandu.com
 nanfangdailypress.com
 nanhuafunds.com
@@ -2417,7 +2408,6 @@ rsdown.cn
 rtfund.com
 ruc.edu.cn
 ruidaamc.com
-ruijie.co.jp
 ruijie.com.cn
 ruli.com
 runchina.org.cn
@@ -2752,7 +2742,6 @@ texperts.com
 tfzq.com
 tfzqam.com
 tgbus.com
-thailandhighlights.com
 thecorner.com.cn
 thecover.cn
 theorychina.org

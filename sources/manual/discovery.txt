@@ -1227,7 +1227,6 @@ feihuo.com
 linovel.net
 wanga.me
 265g.com
-1314.com
 kanjuqing.com
 
 # --- link-crawl:21jingji.com 2026-11-19 ---
@@ -1462,7 +1461,6 @@ game2.cn
 4gamer.net
 youxiniao.com
 gameres.com
-anruan.com
 moyoyo.com
 139y.com
 mz6.net
@@ -2776,7 +2774,6 @@ imobile.com.cn
 all4ad.cn
 rayli.com.cn
 pclady.com.cn
-taodaofa.com
 dudusou.com
 waasoo.com
 yiqifa.com
@@ -2787,20 +2784,15 @@ nba.com
 taodangpu.com
 needahand.org
 happy8.com
-taodao8.com
 zhulang.com
 1ting.com
 cnmp3.com
 yykc.com
-www.http
 yymp3.com
-tingyinge.com
 pps.tv
 ku6.com
-dydashi.com
 91wan.com
 7pk.com
-6wyx.com
 huacolor.com
 tiexue.net
 xilu.com
@@ -2813,7 +2805,6 @@ dayima.com
 kaixin001.com
 51.com
 xitek.com
-sc-cn.net
 123kmm.com
 shijue.me
 camera360.com
@@ -3259,7 +3250,6 @@ gmhc.kr
 hyotown.or.kr
 gjchild.kr
 sotong.go.kr
-gjfez.go.kr
 518archives.go.kr
 donggu.kr
 gwangsan.go.kr
@@ -3524,7 +3514,6 @@ ganghwa.go.kr
 ongjin.go.kr
 jemulpo.go.kr
 yeongjong.go.kr
-icjg.go.kr
 icdonggu.go.kr
 yeonsu.go.kr
 namdong.go.kr
@@ -3636,7 +3625,6 @@ jtbgaiarec.co.jp
 jtbcorp.jp
 
 # --- link-crawl:jtbc.co.kr 2026-11-19 ---
-mjtbc.co.kr
 
 # --- link-crawl:kbcard.com 2026-11-19 ---
 yessign.or.kr
@@ -3675,7 +3663,6 @@ event-us.kr
 
 # --- link-crawl:kist.re.kr 2026-11-19 ---
 zinemoa.co.kr
-kist-startup.re.kr
 hongneung.re.kr
 seoulbiohub.kr
 sciencestation.or.kr
@@ -3972,7 +3959,6 @@ kosti.or.kr
 kcarbon.or.kr
 kips.kr
 mofat.go.kr
-smba.go.kr
 
 # --- link-crawl:mt.co.kr 2026-11-19 ---
 mtgroup.kr
@@ -4068,7 +4054,6 @@ heho.com.tw
 taiwan.net.tw
 warnermusic.com.tw
 cmoney.tw
-sina.com.tw
 ticket.com.tw
 artsticket.com.tw
 kham.com.tw
@@ -4577,7 +4562,6 @@ indeed.com.sg
 monster.com.sg
 gv.com.sg
 shaw.sg
-cathaycineplexes.com.sg
 cinemaonline.sg
 incinemas.com.sg
 carnivalcinemas.sg

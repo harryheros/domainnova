@@ -28903,14 +28903,6 @@
   category:  uncategorized
   origin:    link-crawl
   origin_detail: 2144.cn
-- domain:    1314.com
-  source:    discovery
-  section:   Unsectioned
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
-  origin:    link-crawl
-  origin_detail: 2144.cn
 - domain:    kanjuqing.com
   source:    discovery
   section:   Unsectioned
@@ -30344,14 +30336,6 @@
   origin:    link-crawl
   origin_detail: a9vg.com
 - domain:    gameres.com
-  source:    discovery
-  section:   Unsectioned
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
-  origin:    link-crawl
-  origin_detail: a9vg.com
-- domain:    anruan.com
   source:    discovery
   section:   Unsectioned
   ecosystem: unknown
@@ -37999,14 +37983,6 @@
   category:  uncategorized
   origin:    link-crawl
   origin_detail: fg001.com
-- domain:    taodaofa.com
-  source:    discovery
-  section:   Unsectioned
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
-  origin:    link-crawl
-  origin_detail: fg001.com
 - domain:    dudusou.com
   source:    discovery
   section:   Unsectioned
@@ -38087,14 +38063,6 @@
   category:  uncategorized
   origin:    link-crawl
   origin_detail: fg001.com
-- domain:    taodao8.com
-  source:    discovery
-  section:   Unsectioned
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
-  origin:    link-crawl
-  origin_detail: fg001.com
 - domain:    zhulang.com
   source:    discovery
   section:   Unsectioned
@@ -38127,23 +38095,7 @@
   category:  uncategorized
   origin:    link-crawl
   origin_detail: fg001.com
-- domain:    www.http
-  source:    discovery
-  section:   Unsectioned
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
-  origin:    link-crawl
-  origin_detail: fg001.com
 - domain:    yymp3.com
-  source:    discovery
-  section:   Unsectioned
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
-  origin:    link-crawl
-  origin_detail: fg001.com
-- domain:    tingyinge.com
   source:    discovery
   section:   Unsectioned
   ecosystem: unknown
@@ -38167,14 +38119,6 @@
   category:  uncategorized
   origin:    link-crawl
   origin_detail: fg001.com
-- domain:    dydashi.com
-  source:    discovery
-  section:   Unsectioned
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
-  origin:    link-crawl
-  origin_detail: fg001.com
 - domain:    91wan.com
   source:    discovery
   section:   Unsectioned
@@ -38184,14 +38128,6 @@
   origin:    link-crawl
   origin_detail: fg001.com
 - domain:    7pk.com
-  source:    discovery
-  section:   Unsectioned
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
-  origin:    link-crawl
-  origin_detail: fg001.com
-- domain:    6wyx.com
   source:    discovery
   section:   Unsectioned
   ecosystem: unknown
@@ -38288,14 +38224,6 @@
   origin:    link-crawl
   origin_detail: fg001.com
 - domain:    xitek.com
-  source:    discovery
-  section:   Unsectioned
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
-  origin:    link-crawl
-  origin_detail: fg001.com
-- domain:    sc-cn.net
   source:    discovery
   section:   Unsectioned
   ecosystem: unknown
@@ -41303,14 +41231,6 @@
   category:  uncategorized
   origin:    link-crawl
   origin_detail: gwangju.go.kr
-- domain:    gjfez.go.kr
-  source:    discovery
-  section:   Unsectioned
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
-  origin:    link-crawl
-  origin_detail: gwangju.go.kr
 - domain:    518archives.go.kr
   source:    discovery
   section:   Unsectioned
@@ -42927,14 +42847,6 @@
   category:  uncategorized
   origin:    link-crawl
   origin_detail: incheon.go.kr
-- domain:    icjg.go.kr
-  source:    discovery
-  section:   Unsectioned
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
-  origin:    link-crawl
-  origin_detail: incheon.go.kr
 - domain:    icdonggu.go.kr
   source:    discovery
   section:   Unsectioned
@@ -43535,14 +43447,6 @@
   category:  uncategorized
   origin:    link-crawl
   origin_detail: jtb.co.jp
-- domain:    mjtbc.co.kr
-  source:    discovery
-  section:   Unsectioned
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
-  origin:    link-crawl
-  origin_detail: jtbc.co.kr
 - domain:    yessign.or.kr
   source:    discovery
   section:   Unsectioned
@@ -43744,14 +43648,6 @@
   origin:    link-crawl
   origin_detail: kisa.or.kr
 - domain:    zinemoa.co.kr
-  source:    discovery
-  section:   Unsectioned
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
-  origin:    link-crawl
-  origin_detail: kist.re.kr
-- domain:    kist-startup.re.kr
   source:    discovery
   section:   Unsectioned
   ecosystem: unknown
@@ -45535,14 +45431,6 @@
   category:  uncategorized
   origin:    link-crawl
   origin_detail: motie.go.kr
-- domain:    smba.go.kr
-  source:    discovery
-  section:   Unsectioned
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
-  origin:    link-crawl
-  origin_detail: motie.go.kr
 - domain:    mtgroup.kr
   source:    discovery
   section:   Unsectioned
@@ -46216,14 +46104,6 @@
   origin:    link-crawl
   origin_detail: mylink.com.tw
 - domain:    cmoney.tw
-  source:    discovery
-  section:   Unsectioned
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
-  origin:    link-crawl
-  origin_detail: mylink.com.tw
-- domain:    sina.com.tw
   source:    discovery
   section:   Unsectioned
   ecosystem: unknown
@@ -49264,14 +49144,6 @@
   origin:    link-crawl
   origin_detail: sgzhan.com
 - domain:    shaw.sg
-  source:    discovery
-  section:   Unsectioned
-  ecosystem: unknown
-  entity:    Unknown
-  category:  uncategorized
-  origin:    link-crawl
-  origin_detail: sgzhan.com
-- domain:    cathaycineplexes.com.sg
   source:    discovery
   section:   Unsectioned
   ecosystem: unknown
