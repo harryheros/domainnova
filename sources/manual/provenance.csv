@@ -1,4 +1,5 @@
 domain,origin,origin_detail,nominated
+002t.cn,link-crawl,www.el-range.com,2026-11-19
 10099.com.cn,manual,added by hand,2026-03-28
 100percentdesign.com.cn,ct-logs,%.cn,2026-07-01
 108down.com,ip-neighbor,120.48.6.179,2026-10-01
@@ -7,15 +8,19 @@ domain,origin,origin_detail,nominated
 115.com,manual,added by hand,2026-03-28
 120ask.com,manual,"first extended.txt, curated by hand",2026-03-27
 12309.gov.cn,ct-logs,%.gov.cn,2026-03-28
+12321.cn,link-crawl,ucloud.cn,2026-11-19
 1234567.com.cn,ct-logs,%.com.cn,2026-03-28
+12371.cn,ip-neighbor,171.109.103.144,2026-11-19
 12555.com,ip-neighbor,220.181.7.203,2026-06-08
 126.am,ip-neighbor,115.236.118.54,2026-03-28
 126.net,manual,added by hand,2026-03-28
+127.net,link-crawl,wbpic.ws.netease.com,2026-11-19
 128kb.cn,ip-neighbor,111.63.65.103,2026-06-16
 139.com,manual,"first extended.txt, curated by hand",2026-03-27
 158xiazai.com,ip-neighbor,120.48.6.179,2026-10-01
 163.net,manual,added by hand,2026-03-28
 17173.com,manual,"first extended.txt, curated by hand",2026-03-27
+173183.com,link-crawl,vgtime.com,2026-11-19
 178.com,manual,added by hand,2026-03-28
 17u.cn,ip-neighbor,43.132.140.66,2026-04-12
 17usoft.com,ip-neighbor,43.132.140.66,2026-04-12
@@ -23,6 +28,7 @@ domain,origin,origin_detail,nominated
 188.com,manual,"first extended.txt, curated by hand",2026-03-27
 1905.com,manual,"first extended.txt, curated by hand",2026-03-27
 1928888.com,ip-neighbor,39.156.70.37,2026-06-08
+2028ulsanexpo.or.kr,link-crawl,ulsan.go.kr,2026-11-19
 2144.cn,manual,added by hand,2026-04-10
 21cn.com,manual,"first extended.txt, curated by hand",2026-03-27
 2213.net,ip-neighbor,39.156.70.37,2026-06-08
@@ -30,6 +36,7 @@ domain,origin,origin_detail,nominated
 2345.com,manual,"first extended.txt, curated by hand",2026-03-27
 263.com,manual,"first extended.txt, curated by hand",2026-03-27
 263.net,manual,"first extended.txt, curated by hand",2026-03-27
+315e.cn,link-crawl,www.hmdwpt.com,2026-11-19
 360.com,manual,added by hand,2026-03-28
 360doc.cn,manual,added by hand,2026-03-28
 360doc.com,manual,added by hand,2026-03-28
@@ -37,6 +44,7 @@ domain,origin,origin_detail,nominated
 360jie.com,manual,"first extended.txt, curated by hand",2026-03-27
 360kan.com,manual,added by hand,2026-03-28
 361sport.com,manual,"first extended.txt, curated by hand",2026-03-27
+365yg.com,ip-neighbor,122.14.229.123,2026-11-19
 36kr.com,manual,added by hand,2026-04-10
 37703.com,ip-neighbor,39.156.70.37,2026-06-08
 37wan.com,manual,"first extended.txt, curated by hand",2026-03-27
@@ -46,11 +54,14 @@ domain,origin,origin_detail,nominated
 51.la,manual,added by hand,2026-03-28
 51credit.com,manual,"first extended.txt, curated by hand",2026-03-27
 51cto.com,manual,added by hand,2026-03-28
+51dzt.com,link-crawl,wps.cn,2026-11-19
 51jingying.cn,ip-neighbor,114.80.176.40,2026-10-28
 51jingying.com,ip-neighbor,114.80.176.40,2026-10-28
+51jobcdn.com,link-crawl,wk.yingjiesheng.com,2026-11-19
 51jobdns.com,ip-neighbor,114.80.176.40,2026-10-28
 56.com,manual,added by hand,2026-03-28
 58cdn.com.cn,manual,added by hand,2026-03-28
+58che.com,link-crawl,wuba.com,2026-11-19
 618xz.com,ip-neighbor,120.48.6.179,2026-10-27
 643777.com,ip-neighbor,39.156.70.37,2026-06-08
 720yun.com,ip-neighbor,116.153.78.163,2026-04-12
@@ -58,6 +69,7 @@ domain,origin,origin_detail,nominated
 7daysinn.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 7fresh.com,manual,"first extended.txt, curated by hand",2026-03-27
 7k7k.com,manual,"first extended.txt, curated by hand",2026-03-27
+7x24cc.com,link-crawl,wanfangdata.com.cn,2026-11-19
 8378888.com,ip-neighbor,39.156.70.37,2026-06-08
 843777.com,ip-neighbor,39.156.70.37,2026-06-08
 888255.com,ip-neighbor,39.156.70.37,2026-06-08
@@ -79,11 +91,15 @@ aaic.com.cn,ip-neighbor,116.236.67.182,2026-03-28
 aamacau.com,manual,added by hand,2026-04-29
 abb.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 abcfund.com,manual,"first extended.txt, curated by hand",2026-03-27
+abllife.co.kr,link-crawl,wooribank.com,2026-11-19
 acfun.cn,manual,added by hand,2026-03-28
 activestop.cn,ct-logs,%.cn,2026-07-01
 acxiom.cn,ct-logs,%.cn,2026-07-01
+addlink.cn,link-crawl,west.cn,2026-11-19
 admaster.com.cn,ct-logs,%.com.cn,2026-03-28
+admin5.com,link-crawl,west.cn,2026-11-19
 admincdn.com,manual,"first extended.txt, curated by hand",2026-03-27
+agentone.cn,link-crawl,umeng.com,2026-11-19
 ahrcu.com,manual,"first extended.txt, curated by hand",2026-03-27
 aia.com.cn,ct-logs,%.cn,2026-07-01
 aicdn.com,manual,added by hand,2026-03-28
@@ -119,6 +135,7 @@ amlhc.com,ip-neighbor,220.181.7.203,2026-06-08
 androidcn.com,ct-logs,%.cn,2026-07-01
 angelgroup.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 anheng.com.cn,ct-logs,%.com.cn,2026-03-28
+anime-manga.jp,link-crawl,www.jpfbj.cn,2026-11-19
 anjoyfood.com,manual,"first extended.txt, curated by hand",2026-03-27
 ansteel.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 antfin.com,manual,added by hand,2026-03-28
@@ -132,12 +149,14 @@ appvipshop.com,ip-neighbor,14.119.64.131,2026-10-27
 asd.cn,manual,"first extended.txt, curated by hand",2026-03-27
 asus.com.tw,manual,added by hand,2026-04-21
 atsivpro.cc,ip-neighbor,111.63.65.103,2026-06-16
+attnt.org.tw,link-crawl,ttv.com.tw,2026-11-19
 audividi.com.cn,ct-logs,%.cn,2026-07-01
 autelrobotics.com,manual,"first extended.txt, curated by hand",2026-03-27
 auto-marketing.com.cn,ct-logs,%.cn,2026-07-01
 autohome.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 autonavi.com,manual,"first extended.txt, curated by hand",2026-03-27
 averydennison.com.cn,ct-logs,%.cn,2026-07-01
+awtmt.com,link-crawl,wallstreetcn.com,2026-11-19
 babytree.com,manual,added by hand,2026-03-28
 baic.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 baidu.cn,ip-neighbor,39.156.70.37,2026-06-08
@@ -163,6 +182,8 @@ bear-electric.com,manual,"first extended.txt, curated by hand",2026-03-27
 bear20.com,ip-neighbor,120.48.6.179,2026-10-27
 beauty-works.cn,ct-logs,%.cn,2026-07-01
 beibei.com,manual,added by hand,2026-04-10
+beijingliwu.com.cn,link-crawl,visitbeijing.com.cn,2026-11-19
+beikun.net.cn,link-crawl,visitbeijing.com.cn,2026-11-19
 beingmate.com,manual,"first extended.txt, curated by hand",2026-03-27
 beisen.com,manual,"first extended.txt, curated by hand",2026-03-27
 benefitcosmetics.com.cn,ct-logs,%.cn,2026-07-01
@@ -178,21 +199,34 @@ bing.com.cn,ct-logs,%.com.cn,2026-03-28
 biohyalux.com,manual,"first extended.txt, curated by hand",2026-03-27
 biostime.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 bitauto.com,manual,"first extended.txt, curated by hand",2026-03-27
+bizinfo.go.kr,link-crawl,ulsan.go.kr,2026-11-19
+bjaa.com.cn,link-crawl,visitbeijing.com.cn,2026-11-19
+bjjubao.org,link-crawl,wbpic.ws.netease.com,2026-11-19
+bjlyjszx.com,link-crawl,visitbeijing.com.cn,2026-11-19
+bjlyw.com,link-crawl,utour.com,2026-11-19
 bjnews.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
+bjo.com.cn,link-crawl,visitbeijing.com.cn,2026-11-19
+bjxx.com.cn,link-crawl,visitbeijing.com.cn,2026-11-19
 blackiron.fun,ip-neighbor,220.181.7.203,2026-06-08
+bnia.cn,link-crawl,wbpic.ws.netease.com,2026-11-19
 bocd.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 bocfund.com,manual,"first extended.txt, curated by hand",2026-03-27
 boloni.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 boluomusic.com,ip-neighbor,116.153.78.163,2026-04-12
 bona.com,manual,"first extended.txt, curated by hand",2026-03-27
 bootcdn.cn,manual,added by hand,2026-03-28
+bootcss.com,link-crawl,www.cnyuxiang.cn,2026-11-19
 bosc.cn,manual,"first extended.txt, curated by hand",2026-03-27
 bosch-home.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
+boser.com.cn,link-crawl,www.boser.cn,2026-11-19
+boservision.com,link-crawl,www.boser.cn,2026-11-19
 boss.com,manual,"first extended.txt, curated by hand",2026-03-27
 bossfund.com,manual,"first extended.txt, curated by hand",2026-03-27
 bosszhipin.com,manual,added by hand,2026-03-28
+brightstars.com.cn,link-crawl,www.ibg-china.com,2026-11-19
 brilliance.net.cn,manual,"first extended.txt, curated by hand",2026-03-27
 bse.cn,manual,"first extended.txt, curated by hand",2026-03-27
+bsfz.com,link-crawl,www.antumai.com,2026-11-19
 bthotels.com,manual,"first extended.txt, curated by hand",2026-03-27
 btime.com,manual,added by hand,2026-03-28
 buy123.com.tw,manual,added by hand,2026-04-21
@@ -201,6 +235,7 @@ byd.cn,ip-neighbor,47.106.90.124,2026-11-16
 byd.com.cn,ip-neighbor,47.106.90.124,2026-11-16
 bydauto.com,ip-neighbor,47.106.90.124,2026-11-16
 bydenergy.com,ip-neighbor,47.106.90.124,2026-11-16
+bydglobal.com,link-crawl,www.bydauto.com.cn,2026-11-19
 bytecdn.cn,manual,added by hand,2026-03-28
 byted.org,manual,added by hand,2026-03-28
 bytedns.net,manual,added by hand,2026-03-28
@@ -215,6 +250,7 @@ camscanner.com,manual,added by hand,2026-03-28
 canstockphoto.cn,ct-logs,%.cn,2026-07-01
 caocao.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 capcut.com,manual,"first extended.txt, curated by hand",2026-03-27
+capdata.com.cn,link-crawl,visitbeijing.com.cn,2026-11-19
 cargofe.com.cn,ct-logs,%.cn,2026-07-01
 carrefour.com.tw,manual,added by hand,2026-04-21
 cartier.cn,ct-logs,%.cn,2026-07-01
@@ -226,15 +262,21 @@ ccbfund.com,manual,"first extended.txt, curated by hand",2026-03-27
 cccc.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 ccfund.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 ccic-net.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
+ccrs.or.kr,link-crawl,ulsan.go.kr,2026-11-19
+cctime.com,link-crawl,vgtime.com,2026-11-19
 cctvnews.cn,ip-neighbor,54.222.252.100,2026-10-27
 cde.org.cn,manual,"first extended.txt, curated by hand",2026-03-27
+cdn-go.cn,link-crawl,weiyun.com,2026-11-19
 cdn20.com,manual,"first extended.txt, curated by hand",2026-03-27
 cdnaaa.com,ip-neighbor,59.82.121.163,2026-03-28
 cdntips.com,manual,"first extended.txt, curated by hand",2026-03-27
 cdrcbank.com,manual,"first extended.txt, curated by hand",2026-03-27
 ce.cn,manual,added by hand,2026-03-28
+cedf.org.cn,link-crawl,www.chsi.cn,2026-11-19
+cfachina.org,link-crawl,www.cffex.com.cn,2026-11-19
 cfc.org.cn,manual,"first extended.txt, curated by hand",2026-03-27
 cfca.com.cn,ct-logs,%.com.cn,2026-03-28
+cffexdt.com.cn,link-crawl,www.cffex.com.cn,2026-11-19
 cfgc.cn,manual,"first extended.txt, curated by hand",2026-03-27
 cfmmc.com,manual,"first extended.txt, curated by hand",2026-03-27
 cfsi.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
@@ -247,14 +289,20 @@ chanet.com.cn,ct-logs,%.com.cn,2026-03-28
 changan.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 changba.com,manual,"first extended.txt, curated by hand",2026-03-27
 changhai.org,manual,"first extended.txt, curated by hand",2026-03-27
+changhong.cn,ip-neighbor,119.3.178.227,2026-11-19
 changyou.com,manual,"first extended.txt, curated by hand",2026-03-27
 che168.com,manual,"first extended.txt, curated by hand",2026-03-27
+chei.com.cn,link-crawl,www.chsi.cn,2026-11-19
 chenguanserver.com,ip-neighbor,211.95.70.193,2026-06-16
+cheongwon.go.kr,link-crawl,ulsan.go.kr,2026-11-19
+childcare.go.kr,link-crawl,ulsan.go.kr,2026-11-19
 childrenshospital.org.cn,manual,"first extended.txt, curated by hand",2026-03-27
+china-hxwj.com,link-crawl,www.china-hzz.com,2026-11-19
 china-invs.cn,ct-logs,%.cn,2026-07-01
 china.com,manual,"first extended.txt, curated by hand",2026-03-27
 chinafilm.com,manual,"first extended.txt, curated by hand",2026-03-27
 chinahighlights.com,manual,"first extended.txt, curated by hand",2026-03-27
+chinahr.com,link-crawl,wuba.com,2026-11-19
 chinanews.com.cn,manual,added by hand,2026-03-28
 chinapay.com,manual,added by hand,2026-03-28
 chinasilk.com,manual,"first extended.txt, curated by hand",2026-03-27
@@ -264,20 +312,27 @@ chinatour.com,manual,"first extended.txt, curated by hand",2026-03-27
 chinattl.com,ip-neighbor,219.239.97.52,2026-10-27
 chinaunicom.com.cn,ip-neighbor,120.52.99.224,2026-11-15
 chinaz.com,manual,added by hand,2026-03-28
+chinesestack.com,link-crawl,truliva.com.cn,2026-11-19
 chiphell.com,manual,added by hand,2026-04-10
+chnmuseum.cn,link-crawl,visitbeijing.com.cn,2026-11-19
 chsi.cn,ip-neighbor,36.110.136.74,2026-04-12
 chunmi.com,manual,"first extended.txt, curated by hand",2026-03-27
 cille.cn,manual,"first extended.txt, curated by hand",2026-03-27
+ciss.go.kr,link-crawl,ulsan.go.kr,2026-11-19
 cits.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 citylogic.cn,ct-logs,%.cn,2026-07-01
 cj-pension.com.cn,ip-neighbor,116.236.67.182,2026-03-28
+clcn.net.cn,link-crawl,visitbeijing.com.cn,2026-11-19
+clean.go.kr,link-crawl,ulsan.go.kr,2026-11-19
 cloudxns.net,manual,"first extended.txt, curated by hand",2026-03-27
 cmecloud.cn,manual,"first extended.txt, curated by hand",2026-03-27
 cmfchina.com,manual,"first extended.txt, curated by hand",2026-03-27
 cmlcloud.cn,ct-logs,%.cn,2026-07-01
 cmschina.com.cn,ct-logs,%.com.cn,2026-03-28
+cn-huahai.com,link-crawl,www.antumai.com,2026-11-19
 cnblogs.com,manual,added by hand,2026-03-28
 cncn.com,manual,added by hand,2026-03-28
+cnfm.org.cn,link-crawl,visitbeijing.com.cn,2026-11-19
 cnht.com.cn,ct-logs,%.cn,2026-07-01
 cninfo.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 cnstock.com,manual,"first extended.txt, curated by hand",2026-03-27
@@ -285,6 +340,9 @@ cntic.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 cntv.cn,manual,added by hand,2026-04-10
 cnzz.com,manual,added by hand,2026-03-28
 coconutpalm.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
+compshare.cn,link-crawl,ucloud.cn,2026-11-19
+comwel.or.kr,link-crawl,ulsan.go.kr,2026-11-19
+conac.cn,link-crawl,ustc.edu.cn,2026-11-19
 conba.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 coo8.com,manual,added by hand,2026-04-10
 coolapk.com,manual,added by hand,2026-03-28
@@ -292,6 +350,8 @@ coooto.cn,ct-logs,%.cn,2026-07-01
 cosco.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 coscoshipping.com,manual,"first extended.txt, curated by hand",2026-03-27
 costco.com.tw,manual,added by hand,2026-04-21
+cpiccdn.com,link-crawl,www.aaic.com.cn,2026-11-19
+cpicfunds.com,link-crawl,www.aaic.com.cn,2026-11-19
 cqrcb.com,manual,"first extended.txt, curated by hand",2026-03-27
 cqvip.com,manual,"first extended.txt, curated by hand",2026-03-27
 cr-land.com,manual,"first extended.txt, curated by hand",2026-03-27
@@ -301,6 +361,7 @@ crcc.cn,manual,"first extended.txt, curated by hand",2026-03-27
 create-e.org.cn,ct-logs,%.cn,2026-07-01
 crecg.com,manual,"first extended.txt, curated by hand",2026-03-27
 creditease.cn,manual,"first extended.txt, curated by hand",2026-03-27
+crms.go.kr,link-crawl,ulsan.go.kr,2026-11-19
 crsky.com,manual,added by hand,2026-04-10
 crystalnote.com,ip-neighbor,182.92.20.26,2026-10-28
 cs.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
@@ -308,10 +369,12 @@ cscec.com,manual,"first extended.txt, curated by hand",2026-03-27
 cscss.com.cn,ct-logs,%.cn,2026-07-01
 csic.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 csindex.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
+cssn.cn,link-crawl,whu.edu.cn,2026-11-19
 cstcloud.cn,ip-neighbor,159.226.27.40,2026-10-28
 cstcloud.org,ip-neighbor,159.226.27.40,2026-10-28
 cstnet.net.cn,ip-neighbor,159.226.27.40,2026-10-28
 ct10000.com,manual,added by hand,2026-03-28
+ctdf.org.cn,link-crawl,www.chsi.cn,2026-11-19
 ctgoodjobs.hk,manual,added by hand,2026-04-29
 ctgtravel.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 ctitv.com.tw,manual,added by hand,2026-04-21
@@ -327,21 +390,29 @@ dafund.com,manual,"first extended.txt, curated by hand",2026-03-27
 dahe.cn,manual,"first extended.txt, curated by hand",2026-03-27
 daikin-china.com.cn,ct-logs,%.cn,2026-07-01
 dali-foods.com,manual,"first extended.txt, curated by hand",2026-03-27
+danews.cc,link-crawl,vgtime.com,2026-11-19
 daohang.com,manual,"first extended.txt, curated by hand",2026-03-27
+daojia.com,link-crawl,wuba.com,2026-11-19
 daoxiangcun.com,manual,"first extended.txt, curated by hand",2026-03-27
 daphne.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 dayspay.com.cn,ct-logs,%.com.cn,2026-03-28
 dccnet.com.cn,ct-logs,%.cn,2026-07-01
 dcdapp.com,manual,added by hand,2026-03-28
+ddurl.to,ip-neighbor,106.11.43.160,2026-11-19
+debc.or.kr,link-crawl,ulsan.go.kr,2026-11-19
 deerma.com,manual,"first extended.txt, curated by hand",2026-03-27
 define.com.cn,ct-logs,%.cn,2026-07-01
 dela.net.cn,ip-neighbor,111.63.65.103,2026-06-16
 denza.com,ip-neighbor,47.106.90.124,2026-03-28
 desbgmr.cc,ip-neighbor,111.63.65.103,2026-06-16
+dfcfw.com,link-crawl,trade.1234567.com.cn,2026-11-19
 dict.cn,manual,added by hand,2026-04-10
 didialift.com,manual,added by hand,2026-03-28
 diditaxi.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 dimins.com.cn,ct-logs,%.com.cn,2026-03-28
+dingding.xin,ip-neighbor,106.11.43.160,2026-11-19
+dingtalkapps.com,ip-neighbor,106.11.43.160,2026-11-19
+diqua.com,link-crawl,whirlpool.com.cn,2026-11-19
 directhr.cn,ct-logs,%.cn,2026-07-01
 ditan.org.cn,manual,"first extended.txt, curated by hand",2026-03-27
 dmzj.com,manual,added by hand,2026-04-10
@@ -354,6 +425,7 @@ dongfeng.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 douguo.com,manual,added by hand,2026-03-28
 douyinpic.com,manual,added by hand,2026-03-28
 downza.cn,manual,added by hand,2026-04-10
+dpm.org.cn,link-crawl,visitbeijing.com.cn,2026-11-19
 dragonfly.fm,manual,"first extended.txt, curated by hand",2026-03-27
 dreambrother.cn,ct-logs,%.cn,2026-07-01
 driverdr.com,manual,added by hand,2026-04-10
@@ -365,6 +437,8 @@ duowan.com,manual,"first extended.txt, curated by hand",2026-03-27
 duxiu.com,manual,"first extended.txt, curated by hand",2026-03-27
 dyson.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 dzwww.com,manual,"first extended.txt, curated by hand",2026-03-27
+e-cffex.com.cn,link-crawl,www.cffex.com.cn,2026-11-19
+east.net,link-crawl,waterclean.cn,2026-11-19
 eastday.com,manual,"first extended.txt, curated by hand",2026-03-27
 easy-forex.cn,ct-logs,%.cn,2026-07-01
 eb.com.cn,ct-logs,%.cn,2026-07-01
@@ -376,25 +450,32 @@ electrolux.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 eleme.cn,ip-neighbor,59.82.44.190,2026-11-09
 eleme.io,ip-neighbor,59.82.158.12,2026-11-09
 elemecdn.com,ip-neighbor,59.82.158.12,2026-11-09
+elis.go.kr,link-crawl,ulsan.go.kr,2026-11-19
 elong.com,manual,"first extended.txt, curated by hand",2026-03-27
 eltinchina.cn,ip-neighbor,211.95.70.193,2026-06-16
 emerson.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 ems.com.cn,manual,added by hand,2026-04-10
+energy.or.kr,link-crawl,ulsan.go.kr,2026-11-19
 enlight.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 enn.cn,manual,"first extended.txt, curated by hand",2026-03-27
 enongxian.com,ip-neighbor,220.196.85.123,2026-03-28
 enorth.com.cn,manual,added by hand,2026-04-10
+epeople.go.kr,link-crawl,ulsan.go.kr,2026-11-19
 epf.com.cn,ct-logs,%.cn,2026-07-01
 epson.com.cn,ct-logs,%.cn,2026-07-01
 erke.com,manual,"first extended.txt, curated by hand",2026-03-27
+ersanli.cn,link-crawl,www.hsw.cn,2026-11-19
 escience.cn,ip-neighbor,159.226.27.40,2026-10-28
 esdlife.com,manual,added by hand,2026-04-29
 etao.com,manual,"first extended.txt, curated by hand",2026-03-27
 etmall.com.tw,manual,added by hand,2026-04-21
 evebattery.com,manual,"first extended.txt, curated by hand",2026-03-27
 everhub.cn,ip-neighbor,123.206.4.34,2026-11-09
+ex.co.kr,link-crawl,ulsan.go.kr,2026-11-19
 exam.gov.tw,manual,added by hand,2026-04-21
+expreview.com,link-crawl,vgtime.com,2026-11-19
 eztravel.com.tw,manual,added by hand,2026-04-21
+faisco.cn,link-crawl,www.hengteli.com.cn,2026-11-19
 faloo.com,manual,added by hand,2026-03-28
 familydoctor.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 fang.com,manual,"first extended.txt, curated by hand",2026-03-27
@@ -403,6 +484,7 @@ fanuc.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 fareastone.com.tw,manual,added by hand,2026-04-21
 fastcdn.com,manual,"first extended.txt, curated by hand",2026-03-27
 faw.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
+fdbatt.com,link-crawl,www.bydauto.com.cn,2026-11-19
 feihe.com,manual,"first extended.txt, curated by hand",2026-03-27
 feishu.net,manual,added by hand,2026-03-28
 feng.com,manual,added by hand,2026-03-28
@@ -411,12 +493,15 @@ fenjiu.com.cn,ct-logs,%.com.cn,2026-03-28
 fg001.com,manual,added by hand,2026-04-29
 fh21.com.cn,manual,added by hand,2026-04-10
 find853.com,manual,added by hand,2026-04-29
+fira.or.kr,link-crawl,ulsan.go.kr,2026-11-19
+firefox.com.cn,link-crawl,wanfangdata.com.cn,2026-11-19
 firstbank.com.tw,manual,added by hand,2026-04-21
 fishwantg.com,ip-neighbor,116.153.78.163,2026-04-12
 fiyta.com,manual,"first extended.txt, curated by hand",2026-03-27
 fjsen.com,manual,added by hand,2026-04-10
 flyme.cn,ip-neighbor,119.147.162.254,2026-10-27
 flyme.com,ip-neighbor,119.147.162.254,2026-10-27
+foodsafetykorea.go.kr,link-crawl,ulsan.go.kr,2026-11-19
 ford.com.cn,ct-logs,%.cn,2026-07-01
 forever21.cn,ct-logs,%.cn,2026-07-01
 forgame.com,manual,"first extended.txt, curated by hand",2026-03-27
@@ -426,36 +511,49 @@ foton.com,manual,"first extended.txt, curated by hand",2026-03-27
 foxmail.com.cn,ip-neighbor,175.178.31.185,2026-10-27
 fpg.com.tw,manual,added by hand,2026-04-21
 freshhema.com,manual,"first extended.txt, curated by hand",2026-03-27
+fromgeek.com,link-crawl,vgtime.com,2026-11-19
+ftc.go.kr,link-crawl,tving.com,2026-11-19
 ftv.com.tw,manual,added by hand,2026-04-21
 fubonchina.com,manual,added by hand,2026-03-28
 fun.tv,manual,added by hand,2026-03-28
 fuwapingping.cn,ct-logs,%.cn,2026-07-01
 gac.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 gadotbio.cn,ct-logs,%.cn,2026-07-01
+galanz.com.cn,link-crawl,whirlpool.com.cn,2026-11-19
 gamersky.com,manual,added by hand,2026-04-10
 ganfeng.com,manual,"first extended.txt, curated by hand",2026-03-27
 ganji.com,manual,"first extended.txt, curated by hand",2026-03-27
+gaok.or.kr,link-crawl,ulsan.go.kr,2026-11-19
 gatorade.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
+gatzs.com.cn,link-crawl,www.chsi.cn,2026-11-19
 gds-services.com,manual,"first extended.txt, curated by hand",2026-03-27
 geetest.com,manual,"first extended.txt, curated by hand",2026-03-27
+geilicdn.com,link-crawl,weidian.com,2026-11-19
 gemdale.com,manual,"first extended.txt, curated by hand",2026-03-27
 gewara.com,manual,"first extended.txt, curated by hand",2026-03-27
+gfan.com,link-crawl,vgtime.com,2026-11-19
 gigabyte.com,manual,added by hand,2026-04-21
 gitcafe.com,ip-neighbor,42.192.175.15,2026-06-08
 gitcode.com,manual,"first extended.txt, curated by hand",2026-03-27
 gitee-ai.com,ip-neighbor,180.76.198.225,2026-10-28
+gjnews.cn,link-crawl,www.hsw.cn,2026-11-19
 gleneagles.hk,manual,added by hand,2026-04-29
 gmarkting.cn,ct-logs,%.cn,2026-07-01
 godwithus.cn,ct-logs,%.cn,2026-07-01
 gog.cn,manual,added by hand,2026-04-10
 gogoslim.com.cn,ct-logs,%.cn,2026-07-01
 goldlion.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
+gosi.go.kr,link-crawl,ulsan.go.kr,2026-11-19
 gotion.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 goubuli.com,manual,"first extended.txt, curated by hand",2026-03-27
+govwza.cn,link-crawl,www.lueyang.gov.cn,2026-11-19
+grandculture.net,link-crawl,ulsan.go.kr,2026-11-19
 grandomics.com,manual,"first extended.txt, curated by hand",2026-03-27
 grcbank.com,manual,"first extended.txt, curated by hand",2026-03-27
 greenxf.com,manual,added by hand,2026-03-28
+gridsumdissector.com,link-crawl,visitbeijing.com.cn,2026-11-19
 growingio.com,manual,"first extended.txt, curated by hand",2026-03-27
+gsc.org.cn,link-crawl,www.igeocn.com,2026-11-19
 gsrcu.com,manual,"first extended.txt, curated by hand",2026-03-27
 gtimg.cn,manual,"first extended.txt, curated by hand",2026-03-27
 gtimg.com,manual,added by hand,2026-03-28
@@ -464,6 +562,7 @@ guangming.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 guazi.com,manual,"first extended.txt, curated by hand",2026-03-27
 guokr.com,manual,added by hand,2026-04-10
 gxrcu.com,manual,"first extended.txt, curated by hand",2026-03-27
+gywb.cn,link-crawl,www.hsw.cn,2026-11-19
 gzbank.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 h3c.com.cn,ip-neighbor,60.191.123.44,2026-11-15
 haday.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
@@ -473,11 +572,14 @@ hanfuxin.com,ip-neighbor,39.156.70.37,2026-11-03
 hanting.com,manual,"first extended.txt, curated by hand",2026-03-27
 haomenglvxing.cn,ip-neighbor,109.244.0.66,2026-03-28
 hapbc.com.cn,ct-logs,%.cn,2026-07-01
+harrypottermagicawakened.com,link-crawl,wbpic.ws.netease.com,2026-11-19
 harsco-i.cn,ct-logs,%.cn,2026-07-01
 haval.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 hazoon.com.cn,ct-logs,%.com.cn,2026-03-28
 hbbank.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 hbrc.gov.cn,ct-logs,%.gov.cn,2026-03-28
+hebnews.cn,link-crawl,www.hsw.cn,2026-11-19
+hebnky.com,link-crawl,wssc.org.cn,2026-11-19
 henanxuexi.com,ip-neighbor,122.193.250.58,2026-06-16
 hengdian.com,manual,"first extended.txt, curated by hand",2026-03-27
 herborist.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
@@ -491,11 +593,16 @@ hkbchina.com,manual,"first extended.txt, curated by hand",2026-03-27
 homeinns.com,manual,"first extended.txt, curated by hand",2026-03-27
 homelink.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 honeywell.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
+hongdoulive.com,link-crawl,uxin.com,2026-11-19
 hongkongdaily.net,manual,added by hand,2026-04-29
+hongrenshuo.com.cn,link-crawl,uxin.com,2026-11-19
 hongxiu.com,manual,added by hand,2026-03-28
 hortor-comic.com,manual,"first extended.txt, curated by hand",2026-03-27
 hotata.com,manual,"first extended.txt, curated by hand",2026-03-27
+howxm.com,link-crawl,ucloud.cn,2026-11-19
 hps.com.cn,ct-logs,%.com.cn,2026-03-28
+hrdkorea.or.kr,link-crawl,ulsan.go.kr,2026-11-19
+hsehome.com,link-crawl,www.chsi.cn,2026-11-19
 hsw.cn,ip-neighbor,122.193.250.58,2026-06-16
 htc.com,manual,added by hand,2026-04-21
 huajun.com,manual,added by hand,2026-04-10
@@ -510,26 +617,33 @@ huxiu.com,manual,added by hand,2026-04-10
 huzhujin.com,ip-neighbor,114.117.128.151,2026-07-01
 hwclouds-dns.com,ip-neighbor,115.120.56.205,2026-10-28
 hxb.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
+hxblzt.com,link-crawl,www.antumai.com,2026-11-19
 hyva.com.cn,ct-logs,%.com.cn,2026-03-28
 hzcsxm.com,ip-neighbor,59.82.121.163,2026-03-28
 ibishotels.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
+iblueking.com,link-crawl,utour.com,2026-11-19
 icestorm.cn,ct-logs,%.cn,2026-07-01
 iciba.com,manual,added by hand,2026-04-10
 icook.tw,manual,added by hand,2026-04-21
+ideamans.cn,link-crawl,www.cnyuxiang.cn,2026-11-19
 idqqimg.com,manual,"first extended.txt, curated by hand",2026-03-27
+ifabiao.com,link-crawl,west.cn,2026-11-19
 ifanr.com,manual,added by hand,2026-04-10
 ifeng.com,manual,added by hand,2026-03-28
 ifoodie.tw,manual,added by hand,2026-04-29
 igg.com,manual,"first extended.txt, curated by hand",2026-03-27
+ikanchai.com,link-crawl,vgtime.com,2026-11-19
 ikarox.cn,ip-neighbor,111.63.65.103,2026-06-16
 ilovegoogle.cn,ip-neighbor,111.63.65.103,2026-06-16
 inchinatraining.cn,ct-logs,%.cn,2026-07-01
 infzm.com,manual,added by hand,2026-03-28
+innity.com,link-crawl,uwants.com,2026-11-19
 inoherb.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 inside.com.tw,manual,added by hand,2026-04-21
 invesco.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 ioooe.cn,ip-neighbor,111.63.65.103,2026-06-16
 iosco2012.cn,ct-logs,%.cn,2026-07-01
+ipmchina.net,link-crawl,wssc.org.cn,2026-11-19
 irobot.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 it168.com,manual,added by hand,2026-03-28
 itc.cn,manual,"first extended.txt, curated by hand",2026-03-27
@@ -538,12 +652,15 @@ itrus.com.cn,ct-logs,%.com.cn,2026-03-28
 jac.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 jdb.cn,manual,"first extended.txt, curated by hand",2026-03-27
 jfdaily.com,manual,"first extended.txt, curated by hand",2026-03-27
+jhmc.com.cn,link-crawl,www.hmtpty.com,2026-11-19
 jianlibao.com,manual,"first extended.txt, curated by hand",2026-03-27
 jianshu.com,manual,added by hand,2026-03-28
 jiayuan.com,manual,added by hand,2026-03-28
 jiemian.com,manual,"first extended.txt, curated by hand",2026-03-27
+jiteng.cn,link-crawl,www.china-hzz.com,2026-11-19
 jiuxian.com,manual,added by hand,2026-04-10
 jjwxc.net,manual,added by hand,2026-03-28
+jlpt.jp,link-crawl,www.jpfbj.cn,2026-11-19
 jlrcu.com,manual,"first extended.txt, curated by hand",2026-03-27
 jmc.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 job853.com,manual,added by hand,2026-04-29
@@ -558,32 +675,65 @@ jstv5.cc,ip-neighbor,111.63.65.103,2026-06-16
 juewei.cn,manual,"first extended.txt, curated by hand",2026-03-27
 juhuasuan.com,manual,added by hand,2026-03-28
 jumei.com,manual,"first extended.txt, curated by hand",2026-03-27
+juminegov.go.kr,link-crawl,ulsan.go.kr,2026-11-19
 jun2020.com,ip-neighbor,43.137.211.13,2026-03-28
 junlebao.com,manual,"first extended.txt, curated by hand",2026-03-27
+juziseo.com,link-crawl,west.cn,2026-11-19
 jxcaict.com,ip-neighbor,219.239.97.52,2026-10-27
+jxedt.com,link-crawl,wuba.com,2026-11-19
 jxnews.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
+jybest.com,link-crawl,www.cxtxl.com,2026-11-19
+jytsdkj.com,link-crawl,www.cxtxl.com,2026-11-19
+kaipuyun.cn,link-crawl,www.lueyang.gov.cn,2026-11-19
 kaiserkraft.cn,ct-logs,%.cn,2026-07-01
+kaiwentuoyy.com,link-crawl,wanghuaxiangsu.com,2026-11-19
 kans.cn,manual,"first extended.txt, curated by hand",2026-03-27
 kaola.com,manual,"first extended.txt, curated by hand",2026-03-27
+kaoshibao.com,link-crawl,wuba.com,2026-11-19
+kcmf.or.kr,link-crawl,ulsan.go.kr,2026-11-19
+kdca.go.kr,link-crawl,ulsan.go.kr,2026-11-19
+kdocs.cn,link-crawl,wps.cn,2026-11-19
 ke.com,manual,"first extended.txt, curated by hand",2026-03-27
+kead.or.kr,link-crawl,ulsan.go.kr,2026-11-19
+keei.re.kr,link-crawl,ulsan.go.kr,2026-11-19
 keepout.cn,ct-logs,%.cn,2026-07-01
 kerrytj.com,manual,added by hand,2026-04-29
+kesco.or.kr,link-crawl,ulsan.go.kr,2026-11-19
 kgi.com,manual,added by hand,2026-04-21
+kgs.or.kr,link-crawl,ulsan.go.kr,2026-11-19
+khnp.co.kr,link-crawl,ulsan.go.kr,2026-11-19
+kidp.or.kr,link-crawl,ulsan.go.kr,2026-11-19
 kimi.com,manual,"first extended.txt, curated by hand",2026-03-27
 kimi.pub,manual,"first extended.txt, curated by hand",2026-03-27
+kimxz.com,link-crawl,wps.cn,2026-11-19
 kinglong.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 kingsoft.com,manual,added by hand,2026-03-28
+klac.or.kr,link-crawl,ulsan.go.kr,2026-11-19
 klook.com.tw,manual,added by hand,2026-04-21
+klqz.com,link-crawl,www.cxtxl.com,2026-11-19
+knet.cn,link-crawl,waterclean.cn,2026-11-19
+knoc.co.kr,link-crawl,ulsan.go.kr,2026-11-19
 kongzhong.com,manual,"first extended.txt, curated by hand",2026-03-27
+korcham.net,link-crawl,ulsan.go.kr,2026-11-19
+korean.go.kr,link-crawl,ulsan.go.kr,2026-11-19
+koreapost.go.kr,link-crawl,ulsan.go.kr,2026-11-19
+koroad.or.kr,link-crawl,ulsan.go.kr,2026-11-19
+kosha.or.kr,link-crawl,ulsan.go.kr,2026-11-19
+koshahub.or.kr,link-crawl,ulsan.go.kr,2026-11-19
+kotra.or.kr,link-crawl,ulsan.go.kr,2026-11-19
+kotsa.or.kr,link-crawl,ulsan.go.kr,2026-11-19
 koubei.com,manual,"first extended.txt, curated by hand",2026-03-27
 kpc.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
+ksure.or.kr,link-crawl,ulsan.go.kr,2026-11-19
 ksyuncdn.com,manual,added by hand,2026-03-28
 kuaidi100.com,manual,added by hand,2026-04-10
 kuaidown.net,ip-neighbor,120.48.6.179,2026-10-27
 kuaikanmanhua.com,manual,added by hand,2026-04-10
+kuishiba.com,link-crawl,toshiba.com.cn,2026-11-19
 kuka.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 kuku.me,manual,"first extended.txt, curated by hand",2026-03-27
 kunlun.com,manual,"first extended.txt, curated by hand",2026-03-27
+kwdi.re.kr,link-crawl,ulsan.go.kr,2026-11-19
 lagou.com,manual,added by hand,2026-03-28
 laoganma.com,manual,"first extended.txt, curated by hand",2026-03-27
 larkenterprise.com,ip-neighbor,101.126.58.133,2026-11-09
@@ -592,6 +742,7 @@ larryli.cn,ct-logs,%.cn,2026-07-01
 lbz.cn,ct-logs,%.cn,2026-07-01
 lcpinai.cn,ct-logs,%.cn,2026-07-01
 leader.cn,manual,"first extended.txt, curated by hand",2026-03-27
+leadongcdn.com,link-crawl,tsingtao.com,2026-11-19
 leedsworld.cn,ct-logs,%.cn,2026-07-01
 leju.com,manual,"first extended.txt, curated by hand",2026-03-27
 lelecha.com,manual,"first extended.txt, curated by hand",2026-03-27
@@ -602,12 +753,15 @@ lg.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 li-auto.com,manual,"first extended.txt, curated by hand",2026-03-27
 li-ning.com,ip-neighbor,106.14.197.85,2026-10-27
 li-ning.com.cn,ip-neighbor,106.14.197.85,2026-10-27
+liangdiansiwang.com,link-crawl,wanghuaxiangsu.com,2026-11-19
 liangpinpuzi.com,manual,"first extended.txt, curated by hand",2026-03-27
 licaitong.com,manual,"first extended.txt, curated by hand",2026-03-27
 liepin.com,manual,"first extended.txt, curated by hand",2026-03-27
 limauto.com,manual,"first extended.txt, curated by hand",2026-03-27
+lin.ee,link-crawl,tsite.jp,2026-11-19
 line.me,manual,added by hand,2026-04-29
 lingbo.tv,ip-neighbor,116.153.78.163,2026-04-12
+lingxi.cn,link-crawl,wps.cn,2026-11-19
 lining.cn,ip-neighbor,106.14.197.85,2026-10-27
 liontravel.com,manual,added by hand,2026-04-21
 lipton.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
@@ -616,6 +770,8 @@ liugong.com,manual,"first extended.txt, curated by hand",2026-03-27
 lizhi.fm,manual,"first extended.txt, curated by hand",2026-03-27
 llloo.cn,ct-logs,%.cn,2026-07-01
 lnrcu.com,manual,"first extended.txt, curated by hand",2026-03-27
+lofter.com,link-crawl,wbpic.ws.netease.com,2026-11-19
+londonermacao.com,link-crawl,venetianmacao.com,2026-11-19
 longzhu.com,manual,"first extended.txt, curated by hand",2026-03-27
 lonking.com,manual,"first extended.txt, curated by hand",2026-03-27
 lotour.com,manual,"first extended.txt, curated by hand",2026-03-27
@@ -625,13 +781,20 @@ lufax.com,manual,"first extended.txt, curated by hand",2026-03-27
 lumosfun.com,ip-neighbor,211.95.70.193,2026-06-16
 luyuan.cn,manual,"first extended.txt, curated by hand",2026-03-27
 luzhou-laojiao.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
+lx.or.kr,link-crawl,ulsan.go.kr,2026-11-19
 ly.com,manual,added by hand,2026-03-28
+lybuxiugangwang.com,link-crawl,wanghuaxiangsu.com,2026-11-19
+lydaas.com,link-crawl,umeng.com,2026-11-19
+lyzkby.cn,link-crawl,www.hmtpty.com,2026-11-19
+lyzkkj.cn,link-crawl,www.hmtpty.com,2026-11-19
 macaobusiness.com,manual,added by hand,2026-04-29
 macaodaily.com,manual,added by hand,2026-04-29
 macauhr.com,manual,added by hand,2026-04-29
 macaushopping.com,manual,added by hand,2026-04-29
+macauspin.mo,link-crawl,usj.edu.mo,2026-11-19
 mafengwo.com,ip-neighbor,109.244.0.66,2026-03-28
 mafengwo.net,ip-neighbor,109.244.0.66,2026-03-28
+maitaowang.com,link-crawl,west.cn,2026-11-19
 maitian.com,manual,"first extended.txt, curated by hand",2026-03-27
 makoya.cn,ct-logs,%.cn,2026-07-01
 mama.cn,manual,added by hand,2026-04-10
@@ -645,6 +808,7 @@ markor.com,manual,"first extended.txt, curated by hand",2026-03-27
 marubi.cn,manual,"first extended.txt, curated by hand",2026-03-27
 masterkong.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 mclcinema.com,manual,added by hand,2026-04-29
+mediav.com,link-crawl,wbpic.ws.netease.com,2026-11-19
 meicai.cn,manual,"first extended.txt, curated by hand",2026-03-27
 meilishuo.com,manual,"first extended.txt, curated by hand",2026-03-27
 meitu.com,manual,added by hand,2026-03-28
@@ -653,6 +817,7 @@ mengniu.cn,ct-logs,%.cn,2026-07-01
 metersbonwe.com,manual,"first extended.txt, curated by hand",2026-03-27
 metlife.com.cn,ct-logs,%.com.cn,2026-03-28
 metro.taipei,manual,added by hand,2026-04-21
+mfds.go.kr,link-crawl,ulsan.go.kr,2026-11-19
 mi.cn,ip-neighbor,124.251.34.141,2026-11-03
 mi.xn--fiqs8s,ip-neighbor,124.251.34.141,2026-11-03
 miaopai.com,manual,added by hand,2026-03-28
@@ -662,6 +827,8 @@ migu.cn,manual,"first extended.txt, curated by hand",2026-03-27
 miguvideo.com,manual,added by hand,2026-04-10
 mincdn.com,manual,"first extended.txt, curated by hand",2026-03-27
 mindray.com,manual,"first extended.txt, curated by hand",2026-03-27
+mingdong.com,link-crawl,wey.com.cn,2026-11-19
+mini1.cn,link-crawl,ucloud.cn,2026-11-19
 minimaxi.com,manual,"first extended.txt, curated by hand",2026-03-27
 mipay.com,manual,"first extended.txt, curated by hand",2026-03-27
 mirrormedia.mg,manual,added by hand,2026-04-21
@@ -674,6 +841,7 @@ mlily.com,manual,"first extended.txt, curated by hand",2026-03-27
 mmstat.com,manual,"first extended.txt, curated by hand",2026-03-27
 mnews.tw,manual,added by hand,2026-04-21
 mobage.cn,ct-logs,%.cn,2026-07-01
+mof.go.kr,link-crawl,ulsan.go.kr,2026-11-19
 mogujie.com,manual,"first extended.txt, curated by hand",2026-03-27
 monster-energy.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 moonbasa.com,manual,added by hand,2026-04-10
@@ -685,7 +853,9 @@ msjyfund.com.cn,ct-logs,%.com.cn,2026-03-28
 mtime.com,manual,"first extended.txt, curated by hand",2026-03-27
 mulanos.cn,ip-neighbor,180.76.198.147,2026-06-05
 music.163.com,manual,"first extended.txt, curated by hand",2026-03-27
+mutianyugreatwall.com,link-crawl,visitbeijing.com.cn,2026-11-19
 mxic.com.cn,ct-logs,%.com.cn,2026-03-28
+myangel.co.kr,link-crawl,wooribank.com,2026-11-19
 myapp.com,manual,"first extended.txt, curated by hand",2026-03-27
 mybank.com.tw,manual,added by hand,2026-04-21
 mybiz888.cn,ct-logs,%.cn,2026-07-01
@@ -693,18 +863,26 @@ mybus.com.cn,ct-logs,%.com.cn,2026-03-28
 mydown.com,ip-neighbor,120.48.6.179,2026-10-27
 mydrivers.com,manual,added by hand,2026-04-10
 myhard.com,ip-neighbor,120.48.6.179,2026-10-01
+myhostadmin.net,link-crawl,west.cn,2026-11-19
+myhsw.cn,link-crawl,www.hsw.cn,2026-11-19
 myqcloud.com,manual,added by hand,2026-03-28
 mysolostar.com.cn,ct-logs,%.cn,2026-07-01
 myvisionlink.cn,ct-logs,%.cn,2026-07-01
+nameschina.com,link-crawl,wey.com.cn,2026-11-19
+nameslink.com,link-crawl,u8.cn,2026-11-19
 nandu.com,manual,"first extended.txt, curated by hand",2026-03-27
 naura.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 naveco.com.cn,ct-logs,%.cn,2026-07-01
+naver.me,link-crawl,ulsan.go.kr,2026-11-19
+naver.net,link-crawl,tving.com,2026-11-19
 nayuki.com,manual,"first extended.txt, curated by hand",2026-03-27
 nbbank.cn,manual,"first extended.txt, curated by hand",2026-03-27
 nbd.com.cn,manual,added by hand,2026-04-10
 nbk1560-chn.com.cn,ct-logs,%.cn,2026-07-01
 nchu.edu.tw,manual,added by hand,2026-04-21
+ncss.cn,link-crawl,www.chsi.cn,2026-11-19
 nctu.edu.tw,manual,added by hand,2026-04-21
+ndmi.go.kr,link-crawl,ulsan.go.kr,2026-11-19
 neeq.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 nen.com.cn,manual,added by hand,2026-04-10
 neoremind.com,manual,"first extended.txt, curated by hand",2026-03-27
@@ -724,10 +902,13 @@ nextapple.com,manual,added by hand,2026-04-21
 nffund.com,manual,"first extended.txt, curated by hand",2026-03-27
 ngacn.cc,manual,added by hand,2026-03-28
 nhncorp.cn,ct-logs,%.cn,2026-07-01
+nlc.cn,link-crawl,visitbeijing.com.cn,2026-11-19
 nmgrcu.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 nokia.com.cn,ct-logs,%.cn,2026-07-01
 nowcoder.com,manual,added by hand,2026-03-28
+nt-gt.com,link-crawl,www.china-hzz.com,2026-11-19
 ntnu.edu.tw,manual,added by hand,2026-04-21
+nuflare.co.jp,link-crawl,toshiba.com.cn,2026-11-19
 nuke666.cn,ip-neighbor,39.156.70.37,2026-06-08
 nuomi.com,manual,"first extended.txt, curated by hand",2026-03-27
 nvc-lighting.com,manual,"first extended.txt, curated by hand",2026-03-27
@@ -740,11 +921,14 @@ olami.ai,manual,"first extended.txt, curated by hand",2026-03-27
 olay.com.cn,ct-logs,%.com.cn,2026-03-28
 omicshare.com,manual,"first extended.txt, curated by hand",2026-03-27
 omicshare.net,manual,"first extended.txt, curated by hand",2026-03-27
+ones.cn,link-crawl,tower.im,2026-11-19
 onlinedown.net,manual,added by hand,2026-04-10
+open.go.kr,link-crawl,ulsan.go.kr,2026-11-19
 openrice.com.tw,manual,added by hand,2026-04-21
 oppein.com,manual,"first extended.txt, curated by hand",2026-03-27
 opple.com,manual,"first extended.txt, curated by hand",2026-03-27
 oschina.cn,ip-neighbor,180.76.198.147,2026-06-05
+osfipin.com,link-crawl,uibe.edu.cn,2026-11-19
 othink.cn,ip-neighbor,116.153.78.163,2026-04-12
 ottcn.com,ip-neighbor,116.153.78.163,2026-04-12
 ovi.com.cn,ct-logs,%.cn,2026-07-01
@@ -756,6 +940,7 @@ paike-site.cc,ip-neighbor,111.63.65.103,2026-06-16
 pak.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 panasonic.cn,ct-logs,%.cn,2026-07-01
 panasonic.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
+parisianmacao.com,link-crawl,venetianmacao.com,2026-11-19
 parkplaza.cn,ct-logs,%.cn,2026-07-01
 payeasy.com.tw,manual,added by hand,2026-04-21
 pc6.com,manual,added by hand,2026-04-10
@@ -769,12 +954,15 @@ perfectworld.com,manual,"first extended.txt, curated by hand",2026-03-27
 pfizermedicalinformation.cn,ct-logs,%.cn,2026-07-01
 pgconnectdevelop.cn,ct-logs,%.cn,2026-07-01
 philips.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
+phishingcheck.tw,link-crawl,twnic.tw,2026-11-19
+php.cn,link-crawl,west.cn,2026-11-19
 pic.cn,manual,added by hand,2026-03-28
 piclink.cn,ct-logs,%.cn,2026-07-01
 pingdtx.cn,ct-logs,%.cn,2026-07-01
 pinwan.cool,ip-neighbor,47.93.77.119,2026-10-28
 pipi.cn,manual,added by hand,2026-04-10
 pipix.com,manual,added by hand,2026-04-10
+piyao.org.cn,link-crawl,wbpic.ws.netease.com,2026-11-19
 pjbest.com,ip-neighbor,14.119.64.131,2026-10-27
 plurk.com,manual,added by hand,2026-04-21
 pocari.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
@@ -793,10 +981,13 @@ q-house.cn,manual,"first extended.txt, curated by hand",2026-03-27
 qaxcloudwaf.com,ip-neighbor,113.246.57.9,2026-11-09
 qcloudcdn.com,manual,added by hand,2026-03-28
 qhimg.com,manual,"first extended.txt, curated by hand",2026-03-27
+qianjiangxiangsu.com,link-crawl,wanghuaxiangsu.com,2026-11-19
+qianlong.com,link-crawl,wbpic.ws.netease.com,2026-11-19
 qianxun.com,ip-neighbor,211.152.0.69,2026-10-28
 qiaqia.com,manual,"first extended.txt, curated by hand",2026-03-27
 qidan.com.cn,ct-logs,%.cn,2026-07-01
 qidian.com,manual,added by hand,2026-03-28
+qidianla.com,link-crawl,umeng.com,2026-11-19
 qihucdn.com,manual,added by hand,2026-03-28
 qilu.com,manual,"first extended.txt, curated by hand",2026-03-27
 qingdao.gov.cn,ct-logs,%.gov.cn,2026-03-28
@@ -808,10 +999,13 @@ qiyukf.cn,ip-neighbor,111.124.204.233,2026-11-16
 qiyunwangluokeji.cn,ip-neighbor,39.156.70.37,2026-11-03
 qlogo.cn,manual,"first extended.txt, curated by hand",2026-03-27
 qno.cn,ct-logs,%.cn,2026-07-01
+qq.com.cn,link-crawl,weixin.com,2026-11-19
 qqcdn.com,manual,"first extended.txt, curated by hand",2026-03-27
 qqmail.com,manual,"first extended.txt, curated by hand",2026-03-27
+qudong.com,link-crawl,vgtime.com,2026-11-19
 qyer.com,manual,added by hand,2026-03-28
 qzone.com,manual,"first extended.txt, curated by hand",2026-03-27
+racent.com,link-crawl,west.cn,2026-11-19
 railway.gov.tw,manual,added by hand,2026-04-21
 rajax-inc.com,ip-neighbor,59.82.158.12,2026-11-09
 rakuten.com.tw,manual,added by hand,2026-04-21
@@ -838,6 +1032,7 @@ rossini.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 runoob.com,manual,added by hand,2026-03-28
 rxzq.com.cn,ct-logs,%.cn,2026-07-01
 sac.net.cn,manual,"first extended.txt, curated by hand",2026-03-27
+safetyreport.go.kr,link-crawl,ulsan.go.kr,2026-11-19
 sahu.net,ip-neighbor,59.82.44.240,2026-03-28
 saic-gm.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 saicmotor.com,manual,"first extended.txt, curated by hand",2026-03-27
@@ -845,8 +1040,14 @@ salala.com.cn,ct-logs,%.com.cn,2026-03-28
 samsung.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 samsungshop.com.cn,ct-logs,%.com.cn,2026-03-28
 sandpay.com.cn,ct-logs,%.com.cn,2026-03-28
+sandsmacao.com,link-crawl,venetianmacao.com,2026-11-19
+sandsresortsmacao.cn,link-crawl,venetianmacao.com,2026-11-19
+sandsresortsmacao.com,link-crawl,venetianmacao.com,2026-11-19
+sandsrewards.com,link-crawl,venetianmacao.com,2026-11-19
 sangfordns.com,ip-neighbor,175.6.47.164,2026-10-28
+sanghun.go.kr,link-crawl,ulsan.go.kr,2026-11-19
 sasa.com,manual,added by hand,2026-04-29
+sce.com.cn,link-crawl,uibe.edu.cn,2026-11-19
 schneider-electric.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 scol.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 scsb.com.tw,manual,added by hand,2026-04-21
@@ -858,11 +1059,16 @@ semir.com,manual,"first extended.txt, curated by hand",2026-03-27
 sensorsdata.cn,manual,"first extended.txt, curated by hand",2026-03-27
 sgcarmart.com,manual,added by hand,2026-04-29
 sgzhan.com,manual,added by hand,2026-04-29
+shaanxijubao.cn,link-crawl,www.hsw.cn,2026-11-19
+shangchetuan.com,link-crawl,weidian.com,2026-11-19
 shantui.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 shclearing.com,manual,"first extended.txt, curated by hand",2026-03-27
+shdy-cfc.cn,link-crawl,www.china-hzz.com,2026-11-19
+shdy-cfc.com.cn,link-crawl,www.china-hzz.com,2026-11-19
 shengjingbank.com.cn,ct-logs,%.com.cn,2026-03-28
 shengqu.com,manual,"first extended.txt, curated by hand",2026-03-27
 shineway.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
+shjbzx.cn,link-crawl,ucloud.cn,2026-11-19
 shjian.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 shobserver.com,manual,"first extended.txt, curated by hand",2026-03-27
 shopline.hk,manual,added by hand,2026-04-29
@@ -874,6 +1080,7 @@ siemens.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 siempelkamp.com.cn,ct-logs,%.cn,2026-07-01
 singaporealive.com.cn,ct-logs,%.cn,2026-07-01
 singdown.com,ip-neighbor,120.48.6.179,2026-10-27
+sinmungo.go.kr,link-crawl,ulsan.go.kr,2026-11-19
 sinohydro.com,manual,"first extended.txt, curated by hand",2026-03-27
 skccsystems.cn,ct-logs,%.cn,2026-07-01
 skycn.com,manual,added by hand,2026-04-10
@@ -891,10 +1098,12 @@ sogou.com,manual,"first extended.txt, curated by hand",2026-03-27
 sogoucdn.com,manual,"first extended.txt, curated by hand",2026-03-27
 sohu.com,manual,"first extended.txt, curated by hand",2026-03-27
 sohucs.com,manual,"first extended.txt, curated by hand",2026-03-27
+sos1379.go.kr,link-crawl,ulsan.go.kr,2026-11-19
 soso.com,manual,added by hand,2026-04-10
 souche.com,manual,"first extended.txt, curated by hand",2026-03-27
 southcn.com,manual,added by hand,2026-04-10
 spacemit.com,manual,"first extended.txt, curated by hand",2026-03-27
+spo.go.kr,link-crawl,ulsan.go.kr,2026-11-19
 sse.org.cn,ip-neighbor,183.193.77.10,2026-11-03
 sspai.com,manual,added by hand,2026-03-28
 sssip.com.cn,ct-logs,%.com.cn,2026-03-28
@@ -920,6 +1129,8 @@ suofeiya.com,manual,"first extended.txt, curated by hand",2026-03-27
 surgerycast.com,ip-neighbor,116.153.78.163,2026-04-12
 svolt.cn,manual,"first extended.txt, curated by hand",2026-03-27
 swsc.com.cn,ct-logs,%.cn,2026-07-01
+sxdaily.com.cn,link-crawl,www.hsw.cn,2026-11-19
+sxi.cn,link-crawl,www.lueyang.gov.cn,2026-11-19
 sxrb.com,manual,added by hand,2026-04-10
 synear.cn,manual,"first extended.txt, curated by hand",2026-03-27
 szitic.com,manual,"first extended.txt, curated by hand",2026-03-27
@@ -935,16 +1146,20 @@ taodocs.com,manual,added by hand,2026-03-28
 taojike.com.cn,ip-neighbor,116.153.78.163,2026-04-12
 taopiaopiao.com,manual,"first extended.txt, curated by hand",2026-03-27
 taptap.com,manual,added by hand,2026-04-10
+tavis.tw,link-crawl,ttv.com.tw,2026-11-19
 tbcache.com,manual,"first extended.txt, curated by hand",2026-03-27
 tcb-bank.com.tw,manual,added by hand,2026-04-21
 tcorea.com,ip-neighbor,122.14.229.58,2026-11-15
 tebon.com.cn,ct-logs,%.cn,2026-07-01
 technews.tw,manual,added by hand,2026-04-21
+tencent-cloud.cn,link-crawl,uliscom.gitcafe.com,2026-11-19
 tencentcs.com,manual,added by hand,2026-03-28
+tencentmind.com,link-crawl,wegame.com.cn,2026-11-19
 tengshiauto.com,ip-neighbor,47.107.51.11,2026-03-28
 tgbus.com,manual,added by hand,2026-04-10
 thecorner.com.cn,ct-logs,%.cn,2026-07-01
 thenewslens.com,manual,added by hand,2026-04-21
+theplazamacao.com,link-crawl,venetianmacao.com,2026-11-19
 three-squirrels.com,manual,"first extended.txt, curated by hand",2026-03-27
 tianjimedia.com,ip-neighbor,120.48.6.179,2026-10-27
 tianjinzhongxin.com,manual,"first extended.txt, curated by hand",2026-03-27
@@ -958,6 +1173,7 @@ tiseagles.cn,ct-logs,%.cn,2026-07-01
 tixcraft.com,manual,added by hand,2026-04-29
 tmtpost.com,manual,added by hand,2026-04-10
 tnn.cn,manual,"first extended.txt, curated by hand",2026-03-27
+toast.com,link-crawl,tving.com,2026-11-19
 tobetopone.com,ip-neighbor,211.95.70.108,2026-04-12
 tom.com,manual,"first extended.txt, curated by hand",2026-03-27
 tommy.com.cn,ct-logs,%.com.cn,2026-03-28
@@ -965,6 +1181,9 @@ tongchengbx.com,ip-neighbor,43.132.140.66,2026-04-12
 tongji-hospital.com,manual,"first extended.txt, curated by hand",2026-03-27
 topsec.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 topuoo.com,ip-neighbor,116.153.78.163,2026-04-12
+toshiba-semicon-storage.com,link-crawl,toshiba.com.cn,2026-11-19
+toshiba-tec.com.cn,link-crawl,toshiba.com.cn,2026-11-19
+toshiba-thpc.com,link-crawl,toshiba.com.cn,2026-11-19
 toshiba.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 tourismchina.org,manual,"first extended.txt, curated by hand",2026-03-27
 toutiaocdn.com,manual,added by hand,2026-03-28
@@ -972,22 +1191,54 @@ tp-link.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 trcbank.com.cn,ct-logs,%.cn,2026-07-01
 trendmicro.com.cn,ct-logs,%.cn,2026-07-01
 truliva.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
+trustutn.org,link-crawl,www.cffex.com.cn,2026-11-19
+ts.cn,link-crawl,www.hsw.cn,2026-11-19
 tsingtao.com.cn,ct-logs,%.com.cn,2026-03-28
 ttv.com.tw,manual,added by hand,2026-04-21
+ttvshopping.com.tw,link-crawl,ttv.com.tw,2026-11-19
 tudou.com,manual,added by hand,2026-03-28
+tuwan.com,link-crawl,vgtime.com,2026-11-19
+twdrp.tw,link-crawl,twnic.tw,2026-11-19
+twgrants.tw,link-crawl,twnic.tw,2026-11-19
 tyzq.com.cn,ct-logs,%.cn,2026-07-01
 u8.cn,manual,"first extended.txt, curated by hand",2026-03-27
+ubpi.or.kr,link-crawl,ulsan.go.kr,2026-11-19
 uc.cn,manual,added by hand,2026-03-28
+ucloud-global.com,link-crawl,ucloud.cn,2026-11-19
+ucloudstack.com,link-crawl,ucloud.cn,2026-11-19
+uctf.or.kr,link-crawl,ulsan.go.kr,2026-11-19
+udn.com.tw,link-crawl,udn.com,2026-11-19
+udngroup.com,link-crawl,udn.com,2026-11-19
+udngroup.com.tw,link-crawl,udn.com,2026-11-19
+uepa.or.kr,link-crawl,ulsan.go.kr,2026-11-19
 ufood.com.hk,manual,added by hand,2026-04-29
+uhdc.kr,link-crawl,ulsan.go.kr,2026-11-19
+uic.or.kr,link-crawl,ulsan.go.kr,2026-11-19
+uipa.or.kr,link-crawl,ulsan.go.kr,2026-11-19
+ujf.or.kr,link-crawl,ulsan.go.kr,2026-11-19
+ulsan1365.or.kr,link-crawl,ulsan.go.kr,2026-11-19
+ulsanculture.kr,link-crawl,ulsan.go.kr,2026-11-19
+ulsannamgu.go.kr,link-crawl,ulsan.go.kr,2026-11-19
+ulsanshinbo.co.kr,link-crawl,ulsan.go.kr,2026-11-19
+ultrade.kr,link-crawl,ulsan.go.kr,2026-11-19
+umca.co.kr,link-crawl,ulsan.go.kr,2026-11-19
 uni-power.com.cn,ct-logs,%.cn,2026-07-01
 uni-president.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 unipec.com.cn,ct-logs,%.cn,2026-07-01
 uniqlo.com.tw,manual,added by hand,2026-04-21
+upa.or.kr,link-crawl,ulsan.go.kr,2026-11-19
+uri.re.kr,link-crawl,ulsan.go.kr,2026-11-19
 usamedicine.com.cn,ct-logs,%.cn,2026-07-01
 usebay.cn,ct-logs,%.cn,2026-07-01
+usfr.or.kr,link-crawl,ulsan.go.kr,2026-11-19
+ushg.co.kr,link-crawl,ulsan.go.kr,2026-11-19
 ushi.cn,ct-logs,%.cn,2026-07-01
+usjahwal.or.kr,link-crawl,ulsan.go.kr,2026-11-19
 usmile.com,manual,"first extended.txt, curated by hand",2026-03-27
+usrc.kr,link-crawl,ulsan.go.kr,2026-11-19
+usw.or.kr,link-crawl,ulsan.go.kr,2026-11-19
 utour.com,manual,"first extended.txt, curated by hand",2026-03-27
+utp.or.kr,link-crawl,ulsan.go.kr,2026-11-19
 uxin.com,manual,"first extended.txt, curated by hand",2026-03-27
 vancl.com,manual,added by hand,2026-04-10
 vcom.cn,manual,added by hand,2026-04-10
@@ -995,63 +1246,111 @@ veove.cn,ct-logs,%.cn,2026-07-01
 verycloud.cn,ct-logs,%.cn,2026-07-01
 vgc.com.cn,ct-logs,%.com.cn,2026-03-28
 vipgslb.com,ip-neighbor,14.119.64.131,2026-10-27
+vipstatic.com,link-crawl,vip.com,2026-11-19
+viptijian.com,link-crawl,wuba.com,2026-11-19
 visitbeijing.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
+visitsingapore.com.cn,link-crawl,visitsingapore.com,2026-11-19
 vivabiotech.com.cn,ct-logs,%.cn,2026-07-01
+vivoglobal.com,link-crawl,vivo.com,2026-11-19
+vjshi.com,link-crawl,west.cn,2026-11-19
 vnet.cn,manual,"first extended.txt, curated by hand",2026-03-27
 vpai.cn,ct-logs,%.cn,2026-07-01
+vpimg1.com,link-crawl,vip.com,2026-11-19
+vpimg2.com,link-crawl,vip.com,2026-11-19
+w1.or.kr,link-crawl,ulsan.go.kr,2026-11-19
+wa.or.kr,link-crawl,wooribank.com,2026-11-19
 wallstreetcn.com,manual,added by hand,2026-04-10
 wanda.com,manual,"first extended.txt, curated by hand",2026-03-27
 wandafilm.com,manual,"first extended.txt, curated by hand",2026-03-27
 wandoujia.com,manual,added by hand,2026-04-10
+wanfang.com.cn,link-crawl,wanfangdata.com.cn,2026-11-19
+wanfangtech.net,link-crawl,www.chsi.cn,2026-11-19
 wangwang.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 watsons.com.cn,ct-logs,%.com.cn,2026-03-28
+weather.go.kr,link-crawl,ulsan.go.kr,2026-11-19
+wechat.design,link-crawl,weixin.com,2026-11-19
+wegame.com,link-crawl,wegame.com.cn,2026-11-19
 wegame.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 weichai.com.cn,ct-logs,%.cn,2026-07-01
 weichuan.com,manual,"first extended.txt, curated by hand",2026-03-27
 weidian.com,manual,added by hand,2026-03-28
+weifasiwang.com,link-crawl,wanghuaxiangsu.com,2026-11-19
+weiyang.cn,link-crawl,wbpic.ws.netease.com,2026-11-19
 weiyun.com,manual,"first extended.txt, curated by hand",2026-03-27
 wellaprofessionals.cn,ct-logs,%.cn,2026-07-01
+wenming.cn,link-crawl,wbpic.ws.netease.com,2026-11-19
 westlakeomics.com,manual,"first extended.txt, curated by hand",2026-03-27
+wetax.go.kr,link-crawl,ulsan.go.kr,2026-11-19
 wey.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
+whataulsan.com,link-crawl,ulsan.go.kr,2026-11-19
+whirlpool-china.com,link-crawl,whirlpool.com.cn,2026-11-19
 whirlpool.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 windowsazure.cn,ct-logs,%.cn,2026-07-01
 winona.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
+wjx.top,link-crawl,wanfangdata.com.cn,2026-11-19
 wnsr66.cc,ip-neighbor,111.63.65.103,2026-06-16
 wo.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 woaiwojia.com,manual,"first extended.txt, curated by hand",2026-03-27
+wooriam.kr,link-crawl,wooribank.com,2026-11-19
+wooriat.com,link-crawl,wooribank.com,2026-11-19
+wooricard.com,link-crawl,wooribank.com,2026-11-19
+wooricredit.com,link-crawl,wooribank.com,2026-11-19
+woorifcapital.com,link-crawl,wooribank.com,2026-11-19
+woorifg.com,link-crawl,wooribank.com,2026-11-19
+woorifis.com,link-crawl,wooribank.com,2026-11-19
+woorifoundation.or.kr,link-crawl,wooribank.com,2026-11-19
+woorifs.co.kr,link-crawl,wooribank.com,2026-11-19
+wooriib.com,link-crawl,wooribank.com,2026-11-19
+woorimiso.or.kr,link-crawl,wooribank.com,2026-11-19
+wooripe.com,link-crawl,wooribank.com,2026-11-19
+woorisavingsbank.com,link-crawl,wooribank.com,2026-11-19
+wooriwonmobile.com,link-crawl,wooribank.com,2026-11-19
+woshipm.com,link-crawl,umeng.com,2026-11-19
 wostore.cn,manual,"first extended.txt, curated by hand",2026-03-27
 wow-diamond.com.cn,ct-logs,%.com.cn,2026-03-28
 woyaozuojihua.com,ip-neighbor,116.153.78.163,2026-04-12
 wps.cn,manual,added by hand,2026-03-28
+wpscdn.cn,link-crawl,wps.cn,2026-11-19
+wpspdf.cn,link-crawl,wps.cn,2026-11-19
 wrating.com,ip-neighbor,123.57.253.206,2026-10-28
 wuba.com,manual,"first extended.txt, curated by hand",2026-03-27
+xatts.com,link-crawl,www.china-hzz.com,2026-11-19
 xcar.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 xed222.com,ip-neighbor,39.156.70.37,2026-06-08
 xgimi.net,manual,"first extended.txt, curated by hand",2026-03-27
+xhcarbon.com,link-crawl,www.china-hzz.com,2026-11-19
 xhs.cn,ip-neighbor,106.54.99.69,2026-10-27
 xhslink.cn,ip-neighbor,118.195.253.242,2026-10-27
 xiabu.com,manual,"first extended.txt, curated by hand",2026-03-27
 xiaguan.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
+xiancity.cn,link-crawl,www.hsw.cn,2026-11-19
 xiaoduxz.com,ip-neighbor,120.48.6.179,2026-10-27
 xiaomi.org,ip-neighbor,124.251.34.141,2026-11-03
 xiaomiev.com,ct-logs,Xiaomi,2026-03-28
 xiaomoxz.com,ip-neighbor,120.48.6.179,2026-10-27
 xiecheng.com,manual,"first extended.txt, curated by hand",2026-03-27
+xinghuo-cn.com,link-crawl,www.cnyuxiang.cn,2026-11-19
 xinjiangtravel.com,manual,"first extended.txt, curated by hand",2026-03-27
+xinlvyao.com,link-crawl,www.coooto.cn,2026-11-19
+xinycx.com,link-crawl,wk-tech.com.cn,2026-11-19
 xitongzhijia.net,manual,added by hand,2026-03-28
 xjkunlun.gov.cn,ct-logs,%.gov.cn,2026-03-28
 xkaka.cn,ct-logs,%.cn,2026-07-01
 xldoet.com,ip-neighbor,116.153.78.163,2026-04-12
+xm909.com,link-crawl,vgtime.com,2026-11-19
 xn--blq284eb6emsm8gb.xn--vuq861b,ip-neighbor,219.239.97.52,2026-10-27
 xn--boq62d51cv6mulib5gtq9aboevs9begt.xn--fiqs8s,ip-neighbor,124.251.34.141,2026-11-03
+xn--oy2b29bd3a601b.kr,link-crawl,ulsan.go.kr,2026-11-19
 xn--yus254n.com,ip-neighbor,202.114.0.245,2026-10-27
 xpcha.com,manual,added by hand,2026-03-28
+xrglqc.com,link-crawl,wanghuaxiangsu.com,2026-11-19
 xtep.com,manual,"first extended.txt, curated by hand",2026-03-27
 xuanwuhospital.com,manual,"first extended.txt, curated by hand",2026-03-27
 xueqiu.com,manual,added by hand,2026-03-28
 xuite.net,manual,added by hand,2026-04-21
 xunlei.com,manual,added by hand,2026-03-28
 xxzt.com.cn,ct-logs,%.cn,2026-07-01
+xy-copper.cn,link-crawl,www.antumai.com,2026-11-19
 xywy.com,manual,"first extended.txt, curated by hand",2026-03-27
 yadea.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 yanghe.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
@@ -1075,33 +1374,45 @@ yinxiangbiji.com,ip-neighbor,123.206.4.34,2026-11-09
 yinyuetai.com,manual,"first extended.txt, curated by hand",2026-03-27
 yipincm365.com,ip-neighbor,116.153.78.163,2026-04-12
 yirendai.com,manual,"first extended.txt, curated by hand",2026-03-27
+yixin.im,link-crawl,wbpic.ws.netease.com,2026-11-19
 yiyaojd.com,ct-logs,JD.com,2026-06-16
 yizumi.com,manual,"first extended.txt, curated by hand",2026-03-27
+yjtag.jp,link-crawl,tsite.jp,2026-11-19
+yjwujian.cn,link-crawl,wbpic.ws.netease.com,2026-11-19
+yjz.top,link-crawl,west.cn,2026-11-19
 ykimg.com,manual,"first extended.txt, curated by hand",2026-03-27
 ymatou.com,manual,"first extended.txt, curated by hand",2026-03-27
 ynrcu.com,manual,"first extended.txt, curated by hand",2026-03-27
 youdao.com,manual,"first extended.txt, curated by hand",2026-03-27
 youzan.com,manual,added by hand,2026-03-28
+yuanfayeya.com,link-crawl,www.cxtxl.com,2026-11-19
 yuanfudao.com,manual,added by hand,2026-03-28
 yuantabank.com.tw,manual,added by hand,2026-04-21
 yuncha.com,manual,"first extended.txt, curated by hand",2026-03-27
 yunnan.cn,manual,added by hand,2026-04-10
 yunyang.gov.cn,ct-logs,%.gov.cn,2026-03-28
+yunyou.top,link-crawl,west.cn,2026-11-19
 yurun.com,manual,"first extended.txt, curated by hand",2026-03-27
 yutong.com,manual,"first extended.txt, curated by hand",2026-03-27
 yy.com,manual,"first extended.txt, curated by hand",2026-03-27
 yytv.com.cn,manual,added by hand,2026-04-10
+zaoqianglanbao.com,link-crawl,wanghuaxiangsu.com,2026-11-19
 zbbank.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 zbom.com,manual,"first extended.txt, curated by hand",2026-03-27
 zgbmw.com.cn,ip-neighbor,111.63.65.103,2026-06-16
 zgzbb.com,ip-neighbor,122.14.229.64,2026-04-13
 zhanqi.tv,manual,"first extended.txt, curated by hand",2026-03-27
+zhbxg.cn,link-crawl,www.hmdwpt.com,2026-11-19
+zheyinwang.com.cn,link-crawl,wanghuaxiangsu.com,2026-11-19
 zhiding.com.cn,ip-neighbor,114.80.176.40,2026-10-28
 zhimi.com,manual,"first extended.txt, curated by hand",2026-03-27
+zhiye.com,link-crawl,ucloud.cn,2026-11-19
+zhongjinsiwang.cn,link-crawl,wanghuaxiangsu.com,2026-11-19
 zhongrong.com,manual,"first extended.txt, curated by hand",2026-03-27
 zhongtong.com.cn,manual,"first extended.txt, curated by hand",2026-03-27
 zhouheiya.com,manual,"first extended.txt, curated by hand",2026-03-27
 zhouqinghuan.com,ip-neighbor,101.126.56.164,2026-11-15
+zhugeio.com,link-crawl,upyun.com,2026-11-19
 zign.cn,ct-logs,%.cn,2026-07-01
 ziroom.com,manual,"first extended.txt, curated by hand",2026-03-27
 zitian.cn,ct-logs,%.cn,2026-07-01
@@ -1111,6 +1422,7 @@ zjks.com,manual,added by hand,2026-03-28
 zjlib.com,manual,added by hand,2026-03-28
 zjol.com.cn,manual,added by hand,2026-03-28
 zjurl.cn,ip-neighbor,122.14.236.76,2026-11-09
+zol-img.com.cn,link-crawl,vgtime.com,2026-11-19
 zol.com.cn,manual,added by hand,2026-04-10
 zongheng.com,manual,added by hand,2026-03-28
 zoomlion.com,manual,"first extended.txt, curated by hand",2026-03-27
@@ -1119,3 +1431,5 @@ ztgameaf.cn,ct-logs,%.cn,2026-07-01
 zto56.com,manual,added by hand,2026-03-28
 ztore.com,manual,added by hand,2026-04-29
 zxnet.com.cn,ct-logs,%.com.cn,2026-03-28
+zxsun.cn,link-crawl,www.cnyuxiang.cn,2026-11-19
+zzzcms.com,link-crawl,www.cnyuxiang.cn,2026-11-19

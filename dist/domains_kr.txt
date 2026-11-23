@@ -1,6 +1,6 @@
 # DomainNova - KR domains
-# Generated: 2026-11-19T10:20:28Z
-# Count: 813
+# Generated: 2026-11-23T10:14:24Z
+# Count: 832
 110.go.kr
 11st.co.kr
 120dasan.or.kr
@@ -35,6 +35,7 @@ better.go.kr
 bgdc.co.kr
 bgnmh.go.kr
 bhc.co.kr
+bikeseoul.com
 bitgaram.go.kr
 bitown.or.kr
 bizinfo.go.kr
@@ -136,7 +137,6 @@ eum.go.kr
 evaluation.go.kr
 ex.co.kr
 export119.go.kr
-familyseoul.or.kr
 fez.go.kr
 finnq.com
 fira.or.kr
@@ -154,6 +154,7 @@ gangbuk.go.kr
 gangdong.go.kr
 ganghwa.go.kr
 gangnam.go.kr
+gangseo.seoul.kr
 gaok.or.kr
 garak.co.kr
 gb.go.kr
@@ -285,6 +286,7 @@ hanwha.co.kr
 hanyang.ac.kr
 hbrkorea.com
 hcinnovation.co.kr
+heemangstudio.org
 helloarchive.co.kr
 heritage.go.kr
 hgbus.co.kr
@@ -362,6 +364,7 @@ jongno.go.kr
 joongang.co.kr
 jtbc.co.kr
 juminegov.go.kr
+junggu.seoul.kr
 jungnang.go.kr
 jype.com
 k-his.or.kr
@@ -466,6 +469,7 @@ koreanair.com
 koreancenter.or.kr
 koreanextweb.kr
 koreapost.go.kr
+koreasmartcard.com
 koroad.or.kr
 kosha.or.kr
 koshahub.or.kr
@@ -636,6 +640,7 @@ rda.go.kr
 reb.or.kr
 recycling-info.or.kr
 redcross.or.kr
+redwhistle.org
 ruliweb.com
 saemangeum.go.kr
 safe182.go.kr
@@ -651,6 +656,7 @@ sanghun.go.kr
 saramin.co.kr
 sb.go.kr
 sba.kr
+sba.seoul.kr
 sbs.co.kr
 sciencestation.or.kr
 scourt.go.kr
@@ -666,9 +672,12 @@ seongnam.go.kr
 seoul.go.kr
 seoul1366.or.kr
 seoulaihub.kr
+seoulbiennale.org
 seoulbiohub.kr
+seoulchildrensmuseum.org
 seouldesign.or.kr
 seoulfc.or.kr
+seoulfoodstartup.org
 seoulfuture.or.kr
 seoulhanbumo.or.kr
 seoulmc.or.kr
@@ -692,6 +701,7 @@ sinmungo.go.kr
 sinunse.com
 sisul.or.kr
 sjarip.or.kr
+sk-inc.com
 sk.co.kr
 sk.com
 skbroadband.com
@@ -699,12 +709,17 @@ skku.ac.kr
 skplanet.com
 skstoa.com
 sktelecom.com
+smc.seoul.kr
+smile.seoul.kr
 smilegate.com
 smpa.go.kr
 smtown.com
+smtownandstore.com
 snu.ac.kr
 snu.or.kr
 snua.or.kr
+snumall.com
+snumoa.org
 socialservice.or.kr
 songpa.go.kr
 sooplive.co.kr
@@ -763,12 +778,15 @@ usrc.kr
 usw.or.kr
 utp.or.kr
 visitkorea.or.kr
+visitseoul.net
 w-shopping.co.kr
 w1.or.kr
 wa.or.kr
 wadiz.kr
 weather.go.kr
+webtoons.com
 webwatch.or.kr
+welfare.seoul.kr
 wemakeprice.com
 wetax.go.kr
 whataulsan.com
@@ -794,6 +812,7 @@ wowtv.co.kr
 xn--oy2b29bd3a601b.kr
 yangju.go.kr
 yanolja.com
+ydp.go.kr
 yeoju.go.kr
 yeoncheon.go.kr
 yeongjong.go.kr

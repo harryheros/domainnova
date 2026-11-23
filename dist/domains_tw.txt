@@ -1,12 +1,13 @@
 # DomainNova - TW domains
-# Generated: 2026-11-19T10:20:28Z
-# Count: 254
+# Generated: 2026-11-23T10:14:24Z
+# Count: 263
 100.com.tw
 104.com.tw
 1111.com.tw
 1111edu.com.tw
 1111job.com.tw
 1111tc.com.tw
+17life.com
 518.com.tw
 591.com.tw
 7-11.com.tw
@@ -58,6 +59,7 @@ e7play.com.tw
 easycard.com.tw
 easytravel.com.tw
 edu.tw
+eltaott.tv
 emic.com.tw
 eprice.com.tw
 eslite.com
@@ -78,7 +80,9 @@ fpg.com.tw
 freeway.gov.tw
 fsc.gov.tw
 fubon.com
+fubonguardians.com
 gamer.com.tw
+ggogo.com
 gigabyte.com
 gov.tw
 hccg.gov.tw
@@ -96,6 +100,7 @@ ieatpe.org.tw
 immigration.gov.tw
 jobforum.tw
 jobsalary.com.tw
+jorsindo.com
 judicial.gov.tw
 kbro.com.tw
 kcg.gov.tw
@@ -130,6 +135,7 @@ mof.gov.tw
 moi.gov.tw
 momo.com.tw
 momoshop.com.tw
+moneydj.com
 moneyweekly.com.tw
 mops.twse.com.tw
 motc.gov.tw
@@ -166,10 +172,12 @@ phototaiwan.com
 piapp.com.tw
 pixnet.net
 post.gov.tw
+ppt.cc
 president.gov.tw
 pthg.gov.tw
 pts.org.tw
 ptt.cc
+ptt2.cc
 quanta.com.tw
 railway.gov.tw
 rakuya.com.tw
@@ -221,6 +229,7 @@ tsholdings.com.tw
 tsit.com.tw
 tsmc.com
 tssco.com.tw
+tstartel.com
 ttv.com.tw
 ttvshopping.com.tw
 tvbs.com.tw
