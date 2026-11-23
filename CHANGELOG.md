@@ -80,13 +80,12 @@ Releases, newest first. The weekly data updates are the
   change the lists will be decided on that record.
 - **Every data version can be cited.** Each build that changes the data
   is now tagged `data-YYYY-MM-DD` (UTC) after it is pushed, so a paper,
-  an audit or another tool can pin the exact lists it used:
-  `https://raw.githubusercontent.com/harryheros/domainnova/data-2026-11-23/dist/domains_cn.txt`.
-  Tags are never moved: a second build on the same day that changes the
-  data again gets `.2`, `.3` and so on. The tag message records the
-  published counts, the build time and the code version
+  an audit or another tool can pin the exact lists it used. Tags are
+  never moved: a second build on the same day that changes the data
+  again gets `.2`, `.3` and so on. The tag message records the published
+  counts, the build time and the code version
   (`sources/scripts/data_tag.py`). A failed tag push does not fail the
-  build.
+  build. (Removed in 3.9.2: data versions are pinned by commit.)
 - **A public data-quality page, `data/QUALITY.md`**, rewritten by every
   build from its own outputs (`build_quality_report.py`): published
   domains by region and tier, how they were found (`origin`), which
@@ -401,9 +400,53 @@ Nova-toolkit table; reordered Use Cases so compliance / supply-chain / OSINT
 lead; restated "What this is" to make explicit this is a dataset, not a
 routing product, and that downstream use is the consumer's responsibility.
 
-## 3.3.0 and earlier
+## 3.3.0 (2026-05-26)
 
-Seed lists (2026-04/05):
+- **One domain-name rule and one source parser.** The build, the
+  metadata builder, the source validator and the discovery agents each
+  had their own pattern for a valid domain; one RFC 1123 pattern and one
+  parser of the source files (`_source_parser.py`) now serve them all.
+- The discovery agents share one HTTP session with the same retry
+  policy and one way of adding to `discovery.txt`
+  (`discovery_agents/_common.py`).
+- IPNova's schema version is compared as numbers, so a future 3.10 is
+  not read as older than 3.9.
+- Address-to-CIDR and address-to-ASN lookups use binary search.
+- A domain whose provider's ASN is a global CDN is marked `cdn_masked`,
+  and seed health reports the worse of its consistency and resolution
+  status.
+- New tests: domain pattern, provider lookup, schema version and version
+  consistency.
+
+## 3.2.0 (2026-05-07)
+
+- **Hosting provider and CDN fields.** `data/domains.csv` gains
+  `provider`, the cloud or CDN provider found from IPNova's per-CIDR ASN
+  data (with a static table where IPNova has none), and `cdn_masked`, 1
+  when a global CDN hides the origin region.
+- Seed health counts HK and SG institutions served from global CDNs
+  (government portals, central banks, exchanges, telecoms, public
+  transport) as consistent, through a curated list of domains and
+  suffixes such as `.gov.hk` and `.gov.sg`.
+- A failed weekly update opens a GitHub issue.
+- The weekly commit includes only the published files, by name.
+
+## 3.1.0 (2026-04-30)
+
+First tagged release.
+
+- **Seven regions, scored one by one**: CN, HK, MO, TW, JP, KR and SG,
+  each published as `dist/domains_<cc>.txt`. A domain scores 60 in a
+  region when at least 60% of its resolved addresses fall in that
+  region's IPNova ranges, with a bonus for the region's own ccTLD; the
+  lists hold domains scoring 60 or more.
+- Three tiers: hand-curated seeds, a reliable extended list and
+  automatically discovered candidates, all verified on every build.
+- Names are resolved over DNS-over-HTTPS with a client subnet in China,
+  so answers follow geographic DNS without querying resolvers in China.
+- License: CC BY-NC-SA 4.0, with commercial licenses available.
+
+Seed lists at this release:
 
 seed.txt: 701 → 696 (moved alipay.hk / tmall.hk / jd.hk to seed_hk.txt;
 bytedance.com / wechat.com to seed_offshore.txt).
@@ -470,3 +513,8 @@ Technical fixes:
   cross-region duplicate detection, and CN ∩ regional conflict checks.
 - update.yml: stats output expanded to all 7 regions (previously displayed
   only cn / hk / mo / tw and silently omitted jp / kr / sg).
+
+## Before 3.1.0
+
+Versions 2.0 (2026-03-28) and 3.0 (2026-04-21) have no release; their
+changes are in the git history.
