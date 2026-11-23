@@ -21,6 +21,11 @@ Releases, newest first. The weekly data updates are the
   `data/stats.json` → `local_view.seed_examples` lists a few of each, so
   the next build shows where the view goes wrong instead of only how
   often. Nothing from the view is published yet.
+- README reorganised: the data and how to pin a version first, then how
+  a domain is placed, how it is resolved and how the dataset evolves, with
+  the build's settings under "Run it yourself". The scoring table listed
+  the +20 ccTLD bonus for `.hk`, `.mo` and `.tw` only; `.jp`, `.kr` and
+  `.sg` have it too.
 
 ## 3.9.0 (2026-11-19)
 
