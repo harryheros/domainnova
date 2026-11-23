@@ -4,6 +4,16 @@ Releases, newest first. The weekly data updates are the
 `chore: auto-update` commits; current statistics are in
 [data/stats.json](./data/stats.json).
 
+## 3.9.2 (2026-11-23)
+
+- **Data versions are pinned by commit, not by tag.** 3.9.0 tagged every
+  build that changed the data `data-YYYY-MM-DD`, adding a tag per build
+  (three on 2026-11-23 alone) next to the release tags. A weekly update's
+  commit pins the lists just as well, so the tags are no longer made
+  (`data_tag.py` and its workflow step are removed), and the README and
+  `data/QUALITY.md` say how to pin a version by commit. The three tags made
+  so far were deleted; their commits are b5d4e10, 59f6b3d and 3bbf795.
+
 ## 3.9.1 (2026-11-23)
 
 - **The regional view asks from where the region's people are.** Its

@@ -2,7 +2,7 @@
 
 > Self-evolving dataset of domains hosted on Asia-Pacific infrastructure, ranked by confidence.
 
-[![Version](https://img.shields.io/badge/version-v3.9.1-blue)](https://github.com/harryheros/domainnova/releases)
+[![Version](https://img.shields.io/badge/version-v3.9.2-blue)](https://github.com/harryheros/domainnova/releases)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg)](#license)
 [![Data](https://img.shields.io/badge/data-updated%20weekly-brightgreen)](data/QUALITY.md)
 [![Weekly build](https://img.shields.io/github/actions/workflow/status/harryheros/domainnova/update.yml?label=weekly%20build)](https://github.com/harryheros/domainnova/actions/workflows/update.yml)
@@ -21,13 +21,13 @@ One list per region, one domain per line: [CN](dist/domains_cn.txt) · [HK](dist
 https://raw.githubusercontent.com/harryheros/domainnova/main/dist/domains_cn.txt
 ```
 
-To pin the exact lists a paper, an audit or a tool used, take a data version. Every build that changes the data is tagged `data-YYYY-MM-DD` (UTC; a second build that day gets `.2`, `.3` …), and tags are never moved:
+To pin the exact lists a paper, an audit or a tool used, use the commit of that week's update. Each data update is one `chore: auto-update` commit ([history of `dist/`](https://github.com/harryheros/domainnova/commits/main/dist)), and its `data/QUALITY.md` and `data/stats.json` describe that build:
 
 ```text
-https://raw.githubusercontent.com/harryheros/domainnova/data-2026-11-23/dist/domains_cn.txt
+https://raw.githubusercontent.com/harryheros/domainnova/<commit>/dist/domains_cn.txt
 ```
 
-All data versions are the [tags starting with `data-`](https://github.com/harryheros/domainnova/tags); each tag's message records the published counts, the build time and the code version. Release tags (`vX.Y.Z`) mark code changes, not data.
+Release tags (`vX.Y.Z`) mark code changes, not data.
 
 Files:
 

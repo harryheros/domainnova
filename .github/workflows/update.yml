@@ -194,15 +194,6 @@ jobs:
             data/domains.csv
           key: domainnova-state-${{ github.run_id }}
 
-      # A fixed name for this version of the data: data-YYYY-MM-DD (a second
-      # build the same day: .2, .3 …). Tags are never moved, so a citation
-      # stays valid. After the state is saved: a failed tag must not make the
-      # next run redo promotions that were already pushed.
-      - name: Tag data version
-        if: success() && steps.commit.outputs.pushed == 'true'
-        continue-on-error: true
-        run: python sources/scripts/data_tag.py
-
   notify-failure:
     runs-on: ubuntu-latest
     needs: update

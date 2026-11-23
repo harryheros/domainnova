@@ -102,7 +102,7 @@ def build(root: Path = ROOT) -> str:
         "(`build_quality_report.py`). Do not edit by hand."),
         "",
         f"- Build: {stats.get('generated_at', 'unknown')}",
-        "- Every build that changes the data is also tagged `data-YYYY-MM-DD`; see the README to cite one version.",
+        "- To cite this version of the data, use this build's commit; see the README.",
         "",
         "## Published domains, by tier",
         "",
