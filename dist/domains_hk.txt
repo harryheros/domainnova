@@ -1,6 +1,6 @@
 # DomainNova - HK domains
-# Generated: 2026-11-23T10:14:24Z
-# Count: 186
+# Generated: 2026-11-23T18:34:30Z
+# Count: 196
 163.net
 163vip.com
 3dmgame.hk
@@ -19,6 +19,7 @@ bastillepost.com
 bigbigchannel.com.hk
 bochk.com
 broadwaymacau.com.mo
+capdata.com.cn
 cathaypacific.com
 cedb.gov.hk
 centennialcollege.hku.hk
@@ -47,11 +48,13 @@ dbs.com.hk
 dimbuy.com
 directel.mo
 discuss.com.hk
+dps.org.hk
 dragonfly.fm
 edb.gov.hk
 eduhk.hk
 eoc.org.hk
 esurfingcloud.com
+fhyx.hk
 find853.com
 flymeos.com
 fortress.com.hk
@@ -116,7 +119,9 @@ jiazhao.com
 job853.com
 jobsdb.com
 jytsdkj.com
+kboxgame.com
 klook.com
+kuai8.com
 kudostat.com
 lcsd.gov.hk
 liangdiansiwang.com
@@ -127,6 +132,7 @@ lwb.gov.hk
 mclcinema.com
 mingpao.com
 missfresh.net
+moomoo.com
 mtr.com.hk
 new6.art
 newhua.com
@@ -134,7 +140,9 @@ nowtv.now.com
 oceanpark.com.hk
 octopus.com.hk
 on.cc
+openatom.org
 openrice.com
+paopaoche.net
 pccw.com
 polyu.edu.hk
 qbaobei.com
@@ -177,6 +185,7 @@ wharfholdings.com
 wheelockcompany.com
 winbaicai.com
 winglungbank.com
+wse.org
 xiaohei.com
 xpcha.com
 xsjk.net
@@ -187,3 +196,4 @@ yata.hk
 yesstyle.com
 ys137.com
 za.group
+zz123.com

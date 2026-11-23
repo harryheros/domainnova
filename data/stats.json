@@ -1,14 +1,14 @@
 {
-  "total_domains": 6748,
+  "total_domains": 6747,
   "dist_domains": 5059,
   "seed_domains": 1309,
-  "extended_domains": 1120,
-  "discovery_domains": 4319,
+  "extended_domains": 1434,
+  "discovery_domains": 4004,
   "score_bands": {
-    "cn_dns": 2890,
-    "cn_tld": 312,
-    "seed_forced": 1857,
-    "non_cn": 1689
+    "cn_dns": 2930,
+    "cn_tld": 295,
+    "seed_forced": 1834,
+    "non_cn": 1688
   },
   "source_counts": {
     "seed_cn": 578,
@@ -18,21 +18,21 @@
     "seed_jp": 155,
     "seed_kr": 162,
     "seed_sg": 73,
-    "extended": 1120,
-    "discovery": 4319
+    "extended": 1434,
+    "discovery": 4004
   },
   "buckets": {
     "cn": {
-      "included": 3265,
+      "included": 3285,
       "gray": 0,
-      "no_signal": 12,
-      "total": 3277
+      "no_signal": 11,
+      "total": 3296
     },
     "hk": {
-      "included": 186,
+      "included": 196,
       "gray": 0,
       "no_signal": 45,
-      "total": 231
+      "total": 241
     },
     "mo": {
       "included": 82,
@@ -55,31 +55,31 @@
     "kr": {
       "included": 832,
       "gray": 0,
-      "no_signal": 68,
-      "total": 900
+      "no_signal": 66,
+      "total": 898
     },
     "sg": {
-      "included": 153,
+      "included": 123,
       "gray": 0,
-      "no_signal": 92,
-      "total": 245
+      "no_signal": 91,
+      "total": 214
     },
-    "unclassified": 1167
+    "unclassified": 1170
   },
   "resolver": {
-    "own": 6300,
-    "public": 36,
-    "fallback": 4,
+    "own": 6321,
+    "public": 16,
+    "fallback": 2,
     "unresolved": 408
   },
-  "generated_at": "2026-11-23T10:14:24Z",
+  "generated_at": "2026-11-23T18:34:30Z",
   "auto_purged": 0,
-  "auto_promoted": 314,
-  "auto_dead_removed": 1,
+  "auto_promoted": 0,
+  "auto_dead_removed": 0,
   "processing_errors": 0,
-  "sticky_retained": 172,
+  "sticky_retained": 174,
   "workers": 20,
-  "discovery_checked": 4319,
+  "discovery_checked": 4004,
   "seeds_needing_review": 1,
   "state_restored": {
     "domains_csv": true,
@@ -88,11 +88,12 @@
   "rescue_disabled": false,
   "foreign_edge": {
     "networks": [
-      "180.163.150.0/24",
+      "113.108.239.0/24",
       "180.163.151.0/24",
       "202.101.48.0/24",
       "220.181.174.0/24",
-      "52.131.37.0/24"
+      "52.131.37.0/24",
+      "58.63.233.0/24"
     ],
     "demoted": [
       "265.com"
@@ -101,12 +102,20 @@
   "local_view": {
     "mode": "shadow",
     "subnets": {
-      "HK": "63.216.0.0/24",
+      "HK": "113.252.0.0/24",
       "MO": "60.246.0.0/24",
-      "TW": "120.96.0.0/24",
-      "JP": "133.0.0.0/24",
+      "TW": "1.160.0.0/24",
+      "JP": "126.0.0.0/24",
       "KR": "121.128.0.0/24",
-      "SG": "43.0.0.0/24"
+      "SG": "116.14.0.0/24"
+    },
+    "subnet_kind": {
+      "HK": "consumer ISP",
+      "MO": "consumer ISP",
+      "TW": "consumer ISP",
+      "JP": "consumer ISP",
+      "KR": "consumer ISP",
+      "SG": "consumer ISP"
     },
     "foreign_networks": {
       "HK": 0,
@@ -116,15 +125,15 @@
       "KR": 0,
       "SG": 0
     },
-    "checked": 1244,
+    "checked": 1242,
     "seeds": {
       "HK": {
         "checked": 126,
-        "local": 41
+        "local": 57
       },
       "MO": {
         "checked": 76,
-        "local": 38
+        "local": 39
       },
       "TW": {
         "checked": 139,
@@ -143,10 +152,93 @@
         "local": 2
       }
     },
+    "seed_verdicts": {
+      "HK": {
+        "not-local": 69
+      },
+      "MO": {
+        "not-local": 33,
+        "follows-asker": 4
+      },
+      "TW": {
+        "not-local": 49
+      },
+      "JP": {
+        "not-local": 115
+      },
+      "KR": {
+        "not-local": 52
+      },
+      "SG": {
+        "not-local": 71
+      }
+    },
+    "seed_examples": {
+      "HK": {
+        "not-local": [
+          "alipay.hk",
+          "alipayhk.com",
+          "aswatson.com",
+          "baby-kingdom.com",
+          "bastillepost.com"
+        ]
+      },
+      "MO": {
+        "not-local": [
+          "abm.org.mo",
+          "amcm.gov.mo",
+          "bcm.com.mo",
+          "chengpou.com.mo",
+          "cityu.edu.mo"
+        ],
+        "follows-asker": [
+          "dsat.gov.mo",
+          "dsi.gov.mo",
+          "gcs.gov.mo",
+          "iam.gov.mo"
+        ]
+      },
+      "TW": {
+        "not-local": [
+          "104.com.tw",
+          "7-11.com.tw",
+          "acer.com",
+          "bnext.com.tw",
+          "bot.com.tw"
+        ]
+      },
+      "JP": {
+        "not-local": [
+          "amazon.co.jp",
+          "ameba.jp",
+          "ana.co.jp",
+          "asahi.com",
+          "bandainamco.co.jp"
+        ]
+      },
+      "KR": {
+        "not-local": [
+          "11st.co.kr",
+          "aladin.co.kr",
+          "baemin.com",
+          "banksalad.com",
+          "bunjang.co.kr"
+        ]
+      },
+      "SG": {
+        "not-local": [
+          "8world.com",
+          "99.co",
+          "acra.gov.sg",
+          "caas.gov.sg",
+          "carousell.com"
+        ]
+      }
+    },
     "verdicts": {
-      "not-local": 453,
-      "unresolved": 44,
-      "cn-view-elsewhere": 16
+      "not-local": 454,
+      "unresolved": 43,
+      "cn-view-elsewhere": 14
     },
     "controls": {
       "checked": 114,

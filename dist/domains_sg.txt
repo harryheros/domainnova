@@ -1,25 +1,17 @@
 # DomainNova - SG domains
-# Generated: 2026-11-23T10:14:24Z
-# Count: 153
-25pp.com
-263.net
-8264.com
+# Generated: 2026-11-23T18:34:30Z
+# Count: 123
 8world.com
 99.co
 9939.com
-aabb.com
 acra.gov.sg
 agoda.com
 alibabacloud.com
 ant-intl.com
 antom.com
 bettrfinance.com
-bianminwang.com
-biohyalux.com
 boloniglobal.com
-c-ctrip.com
 caas.gov.sg
-caixindata.com
 carnivalcinemas.sg
 carousell.com
 carousell.sg
@@ -33,7 +25,6 @@ csa.gov.sg
 ctsho.com
 dbs.com.sg
 douxie.com
-dps.org.hk
 edb.gov.sg
 fairprice.com.sg
 foodpanda.sg
@@ -43,9 +34,7 @@ gov.sg
 grab.com
 gxrcu.com
 hangseng.com.cn
-hcmiraefund.com
 hdb.gov.sg
-hhtravel.com
 hkcd.com
 hsbcjt.cn
 huatian.net
@@ -55,29 +44,20 @@ incinemas.com.sg
 innity.com
 iras.gov.sg
 jobstreet.com.sg
-js.design
 judiciary.gov.sg
-kboxgame.com
-kuai8.com
 lazada.sg
-liebiao.com
-linovel.net
 londonermacao.com
 lta.gov.sg
 m1.com.sg
-males120.com
 marmot-cloud.com
 mas.gov.sg
 mfa.gov.sg
 mha.gov.sg
 mingdong.com
-minimax.cn
-minimaxi.com
 moe.gov.sg
 mof.gov.sg
 moh.gov.sg
 mom.gov.sg
-moomoo.com
 mothership.sg
 msf.gov.sg
 mti.gov.sg
@@ -92,10 +72,7 @@ ocbc.com.cn
 ocbc.com.my
 ocbc.com.sg
 onnoon.com
-openatom.org
 oschk.org
-osfipin.com
-paopaoche.net
 parisianmacao.com
 police.gov.sg
 posb.com.sg
@@ -109,7 +86,6 @@ sandsresortsmacao.com
 sandsrewards.com
 sbstransit.com.sg
 scdf.gov.sg
-segmentfault.com
 sensemartgo.com
 sentosa.com.sg
 sgix.sg
@@ -126,7 +102,6 @@ singtel.com
 sistic.com.sg
 smrt.com.sg
 smu.edu.sg
-souche.com
 spgroup.com.sg
 sphdigital.com.sg
 starhub.com
@@ -140,17 +115,12 @@ tencentcloud.com
 theplazamacao.com
 tibetpermit.com
 tibettour.com
-tieyou.com
 todayonline.com
 trip.com
 uob.com.sg
 ura.gov.sg
-uzai.com
 visitsingapore.com
 vivoglobal.com
 wingontravel.com
-wse.org
 xiecheng.com
 zaobao.com.sg
-zxxk.com
-zz123.com
