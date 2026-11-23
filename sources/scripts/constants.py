@@ -9,7 +9,7 @@ thresholds, global CDN ASNs (provider detection) and TLD-to-region votes.
 # Single source of truth: README badge, workflow logs, any future
 # release tag scripts must read from here rather than embedding a
 # hard-coded literal.
-__version__ = "3.9.0"
+__version__ = "3.9.1"
 
 
 # Global CDN providers — domains behind these are CDN-masked;

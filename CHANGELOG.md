@@ -4,6 +4,24 @@ Releases, newest first. The weekly data updates are the
 `chore: auto-update` commits; current statistics are in
 [data/stats.json](./data/stats.json).
 
+## 3.9.1 (2026-11-23)
+
+- **The regional view asks from where the region's people are.** Its
+  first build asked each region from the first /24 of its largest IPNova
+  range, which for SG was a cloud provider's 43.0.0.0/9 and for HK a
+  transit operator's 63.216.0.0/13: addresses used worldwide, so
+  geographic DNS answered as for a client somewhere else, and only 2 of
+  73 SG seeds (and 41 of 126 HK seeds) were found in their own region.
+  Each region is now asked from a block of its main consumer ISP (HK
+  113.252.0.0/14, MO 60.246.0.0/16, TW 1.160.0.0/12, JP 126.0.0.0/8, KR
+  121.128.0.0/10, SG 116.14.0.0/15) while IPNova has it in the region,
+  and from the largest range otherwise; QUALITY.md says which.
+- **Why seeds are not found.** The calibration table on QUALITY.md now
+  says which guard stopped the seeds that were not found, and
+  `data/stats.json` → `local_view.seed_examples` lists a few of each, so
+  the next build shows where the view goes wrong instead of only how
+  often. Nothing from the view is published yet.
+
 ## 3.9.0 (2026-11-19)
 
 - **Discovery looks for the smaller regions too.** The IP-neighbor agent

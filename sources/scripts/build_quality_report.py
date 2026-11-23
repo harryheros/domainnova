@@ -173,12 +173,21 @@ def build(root: Path = ROOT) -> str:
             L += [f"Skipped in this build: {lv['skipped']}."]
         else:
             seeds = lv.get("seeds", {})
+            why = lv.get("seed_verdicts", {})
             if seeds:
                 L += ["Seeds found in their own region (calibration: they are curated as being there):", ""]
-                L += _table(["Region", "Seeds checked", "Found in region", "Share"],
-                            [[r, _n(v["checked"]), _n(v["local"]), _pct(v["local"], v["checked"])]
+                L += _table(["Region", "Seeds checked", "Found in region", "Share", "Not found: why"],
+                            [[r, _n(v["checked"]), _n(v["local"]), _pct(v["local"], v["checked"]),
+                              ", ".join(f"`{k}` {_n(c)}" for k, c in why.get(r, {}).items()) or "–"]
                              for r, v in seeds.items()])
                 L += [""]
+            subnets = lv.get("subnets", {})
+            if subnets:
+                kind = lv.get("subnet_kind", {})
+                fallback = [r for r in subnets if kind.get(r) == "largest range"]
+                L += ["- Asked from: " + ", ".join(f"{r} `{s}`" for r, s in subnets.items())
+                      + (f" ({', '.join(fallback)}: largest IPNova range, no consumer ISP block)"
+                         if fallback else "")]
             ctl = lv.get("controls", {})
             L += [f"- Global services used as controls: {_n(ctl.get('passed', 0))} of "
                   f"{_n(ctl.get('checked', 0))} checks passed the guards (should be 0)"

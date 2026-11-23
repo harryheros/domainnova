@@ -8,8 +8,9 @@ to a mainland CDN and its own users to its servers in Hong Kong. Of every
 20 HK, MO, SG and TW seeds checked, only 1 or 2 resolve in their own region
 this way; the rest are placed only because they are curated.
 
-The regional view asks again with a client subnet inside the region. Asked
-that way, though, a global service also answers from its node in the
+The regional view asks again with a client subnet inside the region: a
+block of the region's main consumer ISP (CONSUMER_BLOCKS), whose users the
+region's geographic DNS and CDNs certainly place there. Asked that way, though, a global service also answers from its node in the
 region, so a domain found "local" this way must pass every guard below
 before it counts, and for now nothing counts: each build only records what
 the view would add and what the guards stopped (`data/stats.json` →
@@ -35,7 +36,8 @@ Verdicts, in order (the first that applies):
                      this confirms it)
 
 A domain is added to `would_add` only after being `local` in two different
-ISO weeks with no other verdict in between.
+ISO weeks with no other verdict in between. For seeds the report also says
+why the others were not found (`seed_verdicts`, with a few `seed_examples`).
 """
 from __future__ import annotations
 
@@ -46,6 +48,20 @@ from typing import Callable, Dict, Iterable, List, Optional, Tuple
 REGIONS = ("HK", "MO", "TW", "JP", "KR", "SG")   # CN keeps the build's own view
 CCTLD_REGION = {r.lower(): r for r in REGIONS}
 PROBE_REGION = {"HK": "SG", "MO": "SG", "TW": "SG", "JP": "SG", "KR": "SG", "SG": "HK"}
+# Each region is asked from a block of its main consumer ISP. A region's
+# largest IPNova range, used before v3.9.1 and still the fallback when IPNova
+# no longer has the block in the region, can belong to a cloud or transit
+# operator whose addresses are used worldwide: SG's was a cloud provider's
+# 43.0.0.0/9 and HK's a transit operator's 63.216.0.0/13, so geographic DNS
+# answered as for a client elsewhere (2 of 73 SG seeds found in SG).
+CONSUMER_BLOCKS = {
+    "HK": "113.252.0.0/14",   # HKT (Netvigator)
+    "MO": "60.246.0.0/16",    # CTM
+    "TW": "1.160.0.0/12",     # Chunghwa Telecom (HiNet)
+    "JP": "126.0.0.0/8",      # SoftBank
+    "KR": "121.128.0.0/10",   # KT
+    "SG": "116.14.0.0/15",    # Singtel (SingNet)
+}
 THRESHOLD = 0.60
 REQUIRED_WEEKS = 2
 MAX_CHECKS = 3000
@@ -68,17 +84,31 @@ Provider = Callable[[List[str]], Tuple[str, int]]   # ips -> (provider, cdn_mask
 
 
 def region_subnets(region_cidrs: Dict[str, List[ipaddress.IPv4Network]]) -> Dict[str, str]:
-    """One client subnet per region: the first /24 of its largest IPNova
-    range (lowest address on a tie), so it stays the same between builds."""
+    """One client subnet per region, the same between builds: the first /24
+    of its consumer ISP's block (CONSUMER_BLOCKS) while IPNova has that /24
+    in the region; otherwise the first /24 of its largest IPNova range
+    (lowest address on a tie)."""
     out = {}
     for r in REGIONS:
         nets = [n for n in region_cidrs.get(r) or [] if n.version == 4]
         if not nets:
             continue
+        own = next(ipaddress.ip_network(CONSUMER_BLOCKS[r]).subnets(new_prefix=24))
+        if any(own.subnet_of(n) for n in nets):
+            out[r] = str(own)
+            continue
         big = min(nets, key=lambda n: (n.prefixlen, int(n.network_address)))
         sub = next(big.subnets(new_prefix=24)) if big.prefixlen <= 24 else big.supernet(new_prefix=24)
         out[r] = str(sub)
     return out
+
+
+def subnet_kind(region: str, subnet: str) -> str:
+    """"consumer ISP" when the subnet is in the region's consumer block."""
+    block = CONSUMER_BLOCKS.get(region)
+    if block and ipaddress.ip_network(subnet).subnet_of(ipaddress.ip_network(block)):
+        return "consumer ISP"
+    return "largest range"
 
 
 def _slash24(ip: str) -> Optional[str]:
@@ -160,7 +190,8 @@ def run(rows, subnets: Dict[str, str], resolve: Resolve, bucket: Bucket, provide
         state: dict, week: str, map_fn: Callable = map) -> Tuple[dict, dict]:
     """Classify every hinted row and the controls; (report, new state).
     `rows` are DomainRecords after the build's own placement; untouched."""
-    report: dict = {"mode": "shadow", "subnets": dict(subnets)}
+    report: dict = {"mode": "shadow", "subnets": dict(subnets),
+                    "subnet_kind": {r: subnet_kind(r, s) for r, s in subnets.items()}}
     if not subnets:
         report["skipped"] = "no regional ranges"
         return report, state
@@ -189,16 +220,25 @@ def run(rows, subnets: Dict[str, str], resolve: Resolve, bucket: Bucket, provide
     results = {(j[0], j[1]): v for j, v in zip(jobs, verdicts, strict=True)}
 
     seeds: Dict[str, Dict[str, int]] = {}
+    why: Dict[str, Counter] = {}                     # seeds not found: verdicts
+    examples: Dict[str, Dict[str, List[str]]] = {}   # ... and a few of them
     others: Counter = Counter()
-    for (_d, r, _b, _sc, seed), v in zip(jobs, verdicts, strict=True):
+    for (d, r, _b, _sc, seed), v in zip(jobs, verdicts, strict=True):
         if seed:
             s = seeds.setdefault(r, {"checked": 0, "local": 0})
             s["checked"] += 1
             s["local"] += v == "local"
+            if v != "local":
+                why.setdefault(r, Counter())[v] += 1
+                ex = examples.setdefault(r, {}).setdefault(v, [])
+                if len(ex) < 5:
+                    ex.append(d)
         else:
             others[v] += 1
     report["checked"] = len(jobs)
     report["seeds"] = {r: seeds[r] for r in REGIONS if r in seeds}
+    report["seed_verdicts"] = {r: dict(why[r].most_common()) for r in REGIONS if r in why}
+    report["seed_examples"] = {r: examples[r] for r in REGIONS if r in examples}
     report["verdicts"] = dict(others.most_common())
 
     passed = []
