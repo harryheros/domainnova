@@ -37,7 +37,7 @@ Releases, newest first. The weekly data updates are the
   the +20 ccTLD bonus for `.hk`, `.mo` and `.tw` only; `.jp`, `.kr` and
   `.sg` have it too.
 
-## 3.9.0 (2026-11-19)
+## 3.9.0 (2026-11-20)
 
 - **Discovery looks for the smaller regions too.** The IP-neighbor agent
   resolved only the CN seeds and kept only CN addresses, so all of its
@@ -131,7 +131,7 @@ Releases, newest first. The weekly data updates are the
 - 3.8.0 entry below corrected: the clean-up came before the full crawl,
   and its published totals are given as measured.
 
-## 3.8.0 (2026-11-18)
+## 3.8.0 (2026-11-19)
 
 - **Every domain records how it was found.** `data/domains_metadata.*`
   now covers all three tiers (discovery domains were missing, so about 200
@@ -382,7 +382,9 @@ Removed the upstream-list discovery agent and its lineage:
   - Deleted `agent_upstream_fetch.py` (pulled from v2fly/domain-list-community
     and felixonmars/dnsmasq-china-list). Those lists originate as proxy-routing
     rule sources, and their upstream licenses are not compatible with
-    redistribution inside this CC BY-NC-SA dataset.
+    redistribution inside this CC BY-NC-SA dataset. (Corrected in 3.8.0:
+    dnsmasq-china-list allows any use; the agent was removed because the
+    lists are made for proxy routing.)
   - Purged 1975 upstream-sourced candidates from `discovery.txt`
     (2165 → 91 lines); kept the 25 candidates from neutral sources
     (IP-neighbor + CT logs). Already-promoted domains in extended.txt / dist
@@ -448,71 +450,56 @@ First tagged release.
 
 Seed lists at this release:
 
-seed.txt: 701 → 696 (moved alipay.hk / tmall.hk / jd.hk to seed_hk.txt;
-bytedance.com / wechat.com to seed_offshore.txt).
-Created: seed_hk.txt (3) / seed_mo.txt (empty) / seed_tw.txt (empty) /
-seed_offshore.txt (2).
-
-seed_sg.txt: flat layout → categorized layout, added Regulatory,
-Infrastructure, Logistics sections.
-  Added: acra / edb / enterprise / mas / judiciary / sgnic / sgix /
-         spgroup / pub / psa / caas / tech / csa / smrt / sbstransit (+14).
-
-seed_tw.txt: expanded from ~65 → 125 domains.
-  Added: twnic / edu.tw registry anchors; all 22 county/city governments;
-         science parks; B2B industry-association hubs;
-         7-eleven / hi-life / familymart retail; mediatek / acer / foxconn /
-         quanta manufacturing; fubon restored; ndc / msa central government.
-
-seed_kr.txt: ~80 → 111 domains.
-  Added: kisa registry; kepco / kwater / korail / airport.kr infrastructure;
-         gyeonggi / sejong local government; skbroadband telecom; nate portal;
-         lotteon / cjlogistics / hanjin e-commerce + logistics;
-         edaily / mt.co.kr media; krx / kofia / kfb finance;
-         kia / posco / hanwha / doosan manufacturing;
-         etri / kist R&D; hanyang / skku.ac.kr education;
-         hybecorp / jype / smtown / ygfamily entertainment;
-         moef / nhis government supplements.
-  Fixed: skku.edu → skku.ac.kr (wrong domain); removed krnic.or.kr
-         (merged into KISA).
-
-seed_jp.txt: ~85 → 120 domains.
-  Added: jprs / jpix IXP backbone; fsa (Financial Services Agency);
-         tepco / kepco / chuden electric utilities; tokyogas energy;
-         kuronekoyamato / sagawa / nipponexpress / jr-central / jreast / westjr
-         logistics and rail; tokyometro / jal / ana transport and aviation;
-         jpx (Japan Exchange); nec / fujitsu / mitsubishielectric / hitachi /
-         canon / toshiba manufacturing; keidanren / jetro / jcci business
-         associations; isct.ac.jp (new domain for Tokyo Institute of Science);
-         riken research.
-  Fixed: removed duplicate chuden.co.jp; removed internet.ne.jp
-         (not infrastructure).
-
-seed_hk.txt: flat ~70 → categorized 85 domains.
-  Fixed: removed non-existent hknic.hk; hke.com.hk → hkelectric.com;
-         removed incorrect bankofchina.com.hk.
-  Restored: octopus / aastocks / hkstp / fwd / winglungbank / yesstyle;
-            added hongkongairlines.
-
-seed_mo.txt: flat ~65 → categorized 68 domains.
-  Fixed: removed bankofchina.com.hk (HK domain leaked in);
-         removed turbojet.com.hk (cross-border domain).
-  Restored: ipim / mbe / ces / ocm;
-  Added: gaming-inspection.gov.mo; new Gaming / Hospitality section
-         (sands / galaxyentertainment).
-
-seed_offshore.txt: 2 → 7 domains.
-  Added: tiktok / tiktokcdn / aliexpress / shein / temu;
-  Added categorized layout.
+- `seed.txt`: 701 → 696 (alipay.hk, tmall.hk and jd.hk moved to
+  `seed_hk.txt`; bytedance.com and wechat.com to `seed_offshore.txt`).
+  New files: `seed_hk.txt` (3), `seed_mo.txt` (empty), `seed_tw.txt`
+  (empty), `seed_offshore.txt` (2).
+- `seed_sg.txt`: flat layout → categorized, with Regulatory,
+  Infrastructure and Logistics sections. Added acra, edb, enterprise, mas,
+  judiciary, sgnic, sgix, spgroup, pub, psa, caas, tech, csa, smrt and
+  sbstransit.
+- `seed_tw.txt`: ~65 → 125 domains. Added the twnic and edu.tw registry
+  anchors, all 22 county and city governments, science parks, B2B
+  industry-association hubs, retail (7-eleven, hi-life, familymart),
+  manufacturing (mediatek, acer, foxconn, quanta), ndc and msa central
+  government; fubon restored.
+- `seed_kr.txt`: ~80 → 111 domains. Added the kisa registry;
+  infrastructure (kepco, kwater, korail, airport.kr); local government
+  (gyeonggi, sejong); telecom and portal (skbroadband, nate); e-commerce
+  and logistics (lotteon, cjlogistics, hanjin); media (edaily,
+  mt.co.kr); finance (krx, kofia, kfb); manufacturing (kia, posco,
+  hanwha, doosan); R&D (etri, kist); education (hanyang, skku.ac.kr);
+  entertainment (hybecorp, jype, smtown, ygfamily); government (moef,
+  nhis). Fixed skku.edu → skku.ac.kr; removed krnic.or.kr (merged into
+  KISA).
+- `seed_jp.txt`: ~85 → 120 domains. Added jprs and the jpix exchange;
+  fsa (Financial Services Agency); utilities and energy (tepco, kepco,
+  chuden, tokyogas); logistics and rail (kuronekoyamato, sagawa,
+  nipponexpress, jr-central, jreast, westjr); transport and aviation
+  (tokyometro, jal, ana); jpx (Japan Exchange); manufacturing (nec,
+  fujitsu, mitsubishielectric, hitachi, canon, toshiba); business
+  associations (keidanren, jetro, jcci); isct.ac.jp (new domain of the
+  Tokyo Institute of Science); riken. Removed a duplicate chuden.co.jp
+  and internet.ne.jp (not infrastructure).
+- `seed_hk.txt`: flat ~70 → categorized 85 domains. Removed the
+  non-existent hknic.hk and the incorrect bankofchina.com.hk; hke.com.hk
+  → hkelectric.com; restored octopus, aastocks, hkstp, fwd,
+  winglungbank and yesstyle; added hongkongairlines.
+- `seed_mo.txt`: flat ~65 → categorized 68 domains. Removed
+  bankofchina.com.hk (an HK domain) and turbojet.com.hk (cross-border);
+  restored ipim, mbe, ces and ocm; added gaming-inspection.gov.mo and a
+  Gaming / Hospitality section (sands, galaxyentertainment).
+- `seed_offshore.txt`: 2 → 7 domains, categorized: added tiktok,
+  tiktokcdn, aliexpress, shein and temu.
 
 Technical fixes:
 
-- seed.txt: removed foxconn.com (cross-region duplicate with seed_tw.txt;
-  correct attribution is TW).
-- validate_manual_sources.py v2 → v3: added regional-seed validation,
+- `seed.txt`: removed foxconn.com (also in `seed_tw.txt`; it belongs to
+  TW).
+- `validate_manual_sources.py` v2 → v3: regional seed validation,
   cross-region duplicate detection, and CN ∩ regional conflict checks.
-- update.yml: stats output expanded to all 7 regions (previously displayed
-  only cn / hk / mo / tw and silently omitted jp / kr / sg).
+- `update.yml`: the stats output covers all 7 regions (it showed only
+  cn, hk, mo and tw and silently left out jp, kr and sg).
 
 ## Before 3.1.0
 

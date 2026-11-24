@@ -4,16 +4,15 @@ test_version_consistency.py — pin the DomainNova version single-source.
 
 Three things historically drifted:
   - constants.__version__  (now the source of truth)
-  - README.md shields badge `version-vX.Y-blue`
+  - README.md version badge (now the latest-release badge, which cannot drift)
   - workflow / log banner strings (no such literals at the moment, but if
     any are added in future, they must read from constants.__version__).
 
-This test catches the README divergence at CI time so the badge is never
-stale relative to the released code.
+The README badge follows the latest GitHub release, so it no longer needs
+a hand edit; the test keeps a hand-written badge from coming back.
 """
 from __future__ import annotations
 
-import re
 import sys
 import unittest
 from pathlib import Path
@@ -36,31 +35,12 @@ class TestVersionConsistency(unittest.TestCase):
             f"__version__ must be SemVer (got {constants.__version__!r})",
         )
 
-    def test_readme_badge_matches_version(self):
+    def test_readme_badge_cannot_go_stale(self):
+        # The badge shows the latest GitHub release, so it never needs a
+        # hand edit; a hand-written `version-vX.Y.Z` badge used to drift.
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
-        # Match either full SemVer (vX.Y.Z) or the two-segment shorthand
-        # (vX.Y) some projects use. We then compare against the appropriate
-        # slice of constants.__version__ so both styles remain valid.
-        m = re.search(r"version-v(\d+\.\d+(?:\.\d+)?)-blue", readme)
-        self.assertIsNotNone(m, "README must contain a version badge")
-        badge = m.group(1)
-        actual = constants.__version__
-        if badge.count(".") == 2:
-            # Full SemVer badge — exact match required.
-            self.assertEqual(
-                badge, actual,
-                f"README badge {badge!r} disagrees with "
-                f"constants.__version__ {actual!r}",
-            )
-        else:
-            # Two-segment shorthand — match the leading major.minor.
-            actual_prefix = ".".join(actual.split(".")[:2])
-            self.assertEqual(
-                badge, actual_prefix,
-                f"README badge {badge!r} disagrees with "
-                f"constants.__version__ {actual!r}",
-            )
-
+        self.assertIn("img.shields.io/github/v/release/harryheros/domainnova", readme)
+        self.assertNotIn("img.shields.io/badge/version-", readme)
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
