@@ -92,9 +92,17 @@ class TestReadme(unittest.TestCase):
                     if lengths[-1] > 30:
                         self.assertGreaterEqual(median, 0.4 * lengths[-1], cells)
 
-    def test_version_badge_follows_the_latest_release(self):
-        self.assertIn(f"img.shields.io/github/v/release/harryheros/{REPO}", self.text)
-        self.assertNotIn("img.shields.io/badge/version-", self.text)
+    def test_version_badge_matches_the_changelog(self):
+        # A static badge, updated with each release. Badges that make
+        # shields.io query GitHub on every view (github/v/release,
+        # github/actions/...) showed as broken images on GitHub; static
+        # badges and GitHub's own workflow badges always render.
+        changelog = (ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+        newest = re.search(
+            r"^## v?(\d+\.\d+(?:\.\d+)?) \(", changelog, re.MULTILINE
+        ).group(1)
+        self.assertIn(f"img.shields.io/badge/version-v{newest}-blue", self.text)
+        self.assertNotIn("img.shields.io/github/", self.text)
 
     def test_ends_with_the_toolkit_line(self):
         self.assertEqual(self.text.rstrip().splitlines()[-1], TOOLKIT_LINE)

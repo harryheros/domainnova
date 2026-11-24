@@ -2,9 +2,9 @@
 
 > Dataset of domains hosted on Asia-Pacific infrastructure, discovered, verified and retired every week.
 
-[![Version](https://img.shields.io/github/v/release/harryheros/domainnova?label=version&color=blue)](https://github.com/harryheros/domainnova/releases)
+[![Version](https://img.shields.io/badge/version-v3.9.2-blue.svg)](https://github.com/harryheros/domainnova/releases)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg)](#license)
-[![Weekly build](https://img.shields.io/github/actions/workflow/status/harryheros/domainnova/update.yml?label=weekly%20build)](https://github.com/harryheros/domainnova/actions/workflows/update.yml)
+[![Weekly build](https://github.com/harryheros/domainnova/actions/workflows/update.yml/badge.svg)](https://github.com/harryheros/domainnova/actions/workflows/update.yml)
 [![Data quality](https://img.shields.io/badge/data-quality%20report-brightgreen)](data/QUALITY.md)
 
 [Get the data](#get-the-data) · [How a domain is placed](#how-a-domain-is-placed) · [How it works](#how-it-works) · [Changelog](./CHANGELOG.md) · [License](#license)
