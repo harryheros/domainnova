@@ -44,10 +44,14 @@ What each build publishes:
 
 Each domain is scored separately for every region; 60 points or more publishes it there.
 
-- **60** — `dns_xx`: 60% or more of its addresses are in the region's [IPNova](https://github.com/harryheros/ipnova) ranges.
-- **+20** — `xx_tld`: the region's ccTLD (`.hk` `.mo` `.tw` `.jp` `.kr` `.sg`), together with `dns_xx`.
-- **+10** — `cn_tld`: `.cn`, together with `dns_cn`.
-- **60** — `.cn` fallback: `.cn` without a DNS match, since ICP filing is a strong signal. Only `.cn` has a fallback: no other region has a mandatory filing system.
+| Signal | Points | When |
+|---|---|---|
+| `dns_xx` | 60 | 60% or more of its addresses in the region's [IPNova](https://github.com/harryheros/ipnova) ranges |
+| `xx_tld` | +20 | The region's ccTLD, together with `dns_xx` |
+| `cn_tld` | +10 | `.cn`, together with `dns_cn` |
+| `.cn` fallback | 60 | `.cn` without a DNS match |
+
+The ccTLDs are `.hk` `.mo` `.tw` `.jp` `.kr` `.sg`. Only `.cn` has a fallback: ICP filing is a strong signal, and no other region has a mandatory filing system.
 
 A domain under 60 stays in the build's working file `data/domains.csv` (every domain with all signals, score, region, provider and CDN flag), which a local run writes and the repository does not publish.
 

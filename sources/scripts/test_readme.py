@@ -46,6 +46,27 @@ def links(text: str) -> list[str]:
     )
 
 
+def tables(text: str) -> list[list[list[str]]]:
+    """Markdown tables outside code blocks, as rows of visible cell text."""
+    out, current, in_code = [], [], False
+    for line in [*text.splitlines(), ""]:
+        if line.startswith("```"):
+            in_code = not in_code
+        if not in_code and line.startswith("|"):
+            cells = line.strip().strip("|").split(" | ")
+            visible = [re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", c) for c in cells]
+            current.append(
+                [
+                    v.replace("`", "").replace("*", "").replace("\\|", "|").strip()
+                    for v in visible
+                ]
+            )
+        elif current:
+            out.append(current)
+            current = []
+    return out
+
+
 class TestReadme(unittest.TestCase):
     def setUp(self):
         self.text = (ROOT / "README.md").read_text(encoding="utf-8")
@@ -56,23 +77,20 @@ class TestReadme(unittest.TestCase):
         self.assertTrue(self.text.startswith("# " + NAME + "\n\n> "))
         self.assertNotIn("<div", self.text)
 
-    def test_table_cells_are_short(self):
-        # Tables only for short, grid-like data; a long cell leaves wide
-        # blank areas in the other columns, so longer text goes in lists.
-        in_code = False
-        for line in self.text.splitlines():
-            if line.startswith("```"):
-                in_code = not in_code
-            if in_code or not line.startswith("|") or re.match(r"^\|[-|: ]+\|$", line):
-                continue
-            for cell in line.strip("|").split(" | "):
-                visible = (
-                    re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", cell)
-                    .replace("`", "")
-                    .replace("*", "")
-                )
-                with self.subTest(cell=cell):
-                    self.assertLessEqual(len(visible.strip()), 40)
+    def test_tables_are_even(self):
+        # A table reads well when its cells are short and alike in length: one
+        # long cell widens its column and leaves blank space in every other
+        # row. So no cell over 60 characters, and in a column whose longest
+        # cell is over 30, the typical (median) cell is at least 40% of it.
+        for table in tables(self.text):
+            body = [row for row in table[2:] if len(row) == len(table[0])]
+            for col, cells in enumerate(zip(*body)):
+                lengths = sorted(len(cell) for cell in cells)
+                median = lengths[len(lengths) // 2]
+                with self.subTest(header=table[0], column=col):
+                    self.assertLessEqual(lengths[-1], 60, cells)
+                    if lengths[-1] > 30:
+                        self.assertGreaterEqual(median, 0.4 * lengths[-1], cells)
 
     def test_version_badge_follows_the_latest_release(self):
         self.assertIn(f"img.shields.io/github/v/release/harryheros/{REPO}", self.text)
