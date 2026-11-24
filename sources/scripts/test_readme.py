@@ -15,7 +15,6 @@ ROOT = Path(__file__).resolve().parents[2]
 REPO = "domainnova"
 NAME = "DomainNova"
 COMMERCIAL = True  # sold under a commercial license through novaod
-CENTERED = True  # Nova family header
 EXTRA_DOCS = ["docs/how-it-works.md"]  # other Markdown files whose links are checked
 TOOLKIT_LINE = (
     "Part of the [Nova infrastructure toolkit](https://github.com/harryheros)."
@@ -51,13 +50,29 @@ class TestReadme(unittest.TestCase):
     def setUp(self):
         self.text = (ROOT / "README.md").read_text(encoding="utf-8")
 
-    def test_header(self):
-        if CENTERED:
-            self.assertTrue(
-                self.text.startswith('<div align="center">\n\n# ' + NAME + "\n")
-            )
-        else:
-            self.assertTrue(self.text.startswith("# " + NAME + "\n"))
+    def test_header_is_left_aligned(self):
+        # Title, a one-line blockquote, then badges: aligned left, as the
+        # owner prefers (a centered header was tried and dropped).
+        self.assertTrue(self.text.startswith("# " + NAME + "\n\n> "))
+        self.assertNotIn("<div", self.text)
+
+    def test_table_cells_are_short(self):
+        # Tables only for short, grid-like data; a long cell leaves wide
+        # blank areas in the other columns, so longer text goes in lists.
+        in_code = False
+        for line in self.text.splitlines():
+            if line.startswith("```"):
+                in_code = not in_code
+            if in_code or not line.startswith("|") or re.match(r"^\|[-|: ]+\|$", line):
+                continue
+            for cell in line.strip("|").split(" | "):
+                visible = (
+                    re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", cell)
+                    .replace("`", "")
+                    .replace("*", "")
+                )
+                with self.subTest(cell=cell):
+                    self.assertLessEqual(len(visible.strip()), 40)
 
     def test_version_badge_follows_the_latest_release(self):
         self.assertIn(f"img.shields.io/github/v/release/harryheros/{REPO}", self.text)

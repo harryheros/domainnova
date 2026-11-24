@@ -1,8 +1,6 @@
-<div align="center">
-
 # DomainNova
 
-**Dataset of domains hosted on Asia-Pacific infrastructure, discovered, verified and retired every week.**
+> Dataset of domains hosted on Asia-Pacific infrastructure, discovered, verified and retired every week.
 
 [![Version](https://img.shields.io/github/v/release/harryheros/domainnova?label=version&color=blue)](https://github.com/harryheros/domainnova/releases)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg)](#license)
@@ -10,8 +8,6 @@
 [![Data quality](https://img.shields.io/badge/data-quality%20report-brightgreen)](data/QUALITY.md)
 
 [Get the data](#get-the-data) · [How a domain is placed](#how-a-domain-is-placed) · [How it works](#how-it-works) · [Changelog](./CHANGELOG.md) · [License](#license)
-
-</div>
 
 DomainNova answers one question: **is this domain's infrastructure hosted in region X?** — for CN, HK, TW, MO, JP, KR and SG. It attributes infrastructure, not corporate ownership, and it is a dataset, not a routing or filtering product.
 
@@ -36,28 +32,26 @@ https://raw.githubusercontent.com/harryheros/domainnova/<commit>/dist/domains_cn
 
 Release tags (`vX.Y.Z`) mark code changes, not data.
 
-| File | Contents |
-|---|---|
-| `dist/domains_{region}.txt` | The published lists (score ≥ 60) |
-| `data/domains_metadata.{json,yaml,csv}` | Every domain in the three tiers: tier, origin (how it was found), entity, category and ecosystem |
-| `data/QUALITY.md` | The quality page: published domains by tier and origin, resolver shares, foreign edges held back, seed health, removals |
-| `data/stats.json` | Build statistics, lifecycle counters, and which resolver answered (`resolver`) |
-| `data/seed_review.json` | Curated domains whose name no longer exists, for manual review |
+What each build publishes:
+
+- `dist/domains_{region}.txt`: the published lists (score 60 or more).
+- `data/domains_metadata.{json,yaml,csv}`: every domain in the three tiers, with its tier, origin (how it was found), entity, category and ecosystem.
+- `data/QUALITY.md`: the quality page — published domains by tier and origin, resolver shares, foreign edges held back, seed health, removals.
+- `data/stats.json`: build statistics, lifecycle counters, and which resolver answered (`resolver`).
+- `data/seed_review.json`: curated domains whose name no longer exists, for manual review.
 
 ## How a domain is placed
 
-Each domain is scored separately for every region; 60 or more publishes it there.
+Each domain is scored separately for every region; 60 points or more publishes it there.
 
-| Signal | Points | Meaning |
-|---|---|---|
-| `dns_xx` | 60 | 60% or more of its addresses in the region's [IPNova](https://github.com/harryheros/ipnova) ranges |
-| `xx_tld` | +20 | The region's ccTLD (`.hk` `.mo` `.tw` `.jp` `.kr` `.sg`), with `dns_xx` |
-| `cn_tld` | +10 | `.cn`, with `dns_cn` |
-| `.cn` fallback | 60 | `.cn` without a DNS match: ICP filing is a strong signal |
+- **60** — `dns_xx`: 60% or more of its addresses are in the region's [IPNova](https://github.com/harryheros/ipnova) ranges.
+- **+20** — `xx_tld`: the region's ccTLD (`.hk` `.mo` `.tw` `.jp` `.kr` `.sg`), together with `dns_xx`.
+- **+10** — `cn_tld`: `.cn`, together with `dns_cn`.
+- **60** — `.cn` fallback: `.cn` without a DNS match, since ICP filing is a strong signal. Only `.cn` has a fallback: no other region has a mandatory filing system.
 
-- Only `.cn` has a fallback: no other region has a mandatory filing system.
-- A domain under 60 stays in the build's working file `data/domains.csv` (every domain with all signals, score, region, provider and CDN flag), which a local run writes and the repository does not publish.
-- **Seeds**, curated by hand in `sources/manual/seed_{region}.txt`, are placed in their own region directly, so a single misattributed address cannot move a well-known domain. Each week a sample of every seed list is checked against IPNova and recorded in `data/seed_health.json`; seeds are never moved automatically.
+A domain under 60 stays in the build's working file `data/domains.csv` (every domain with all signals, score, region, provider and CDN flag), which a local run writes and the repository does not publish.
+
+**Seeds**, curated by hand in `sources/manual/seed_{region}.txt`, are placed in their own region directly, so a single misattributed address cannot move a well-known domain. Each week a sample of every seed list is checked against IPNova and recorded in `data/seed_health.json`; seeds are never moved automatically.
 
 ## How it works
 
